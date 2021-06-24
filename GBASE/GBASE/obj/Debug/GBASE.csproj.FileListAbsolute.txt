@@ -1,0 +1,68 @@
+C:\glite\Bin\GBASE.exe
+C:\glite\Bin\GBASE.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+E:\glite\Bin\GBASE.exe
+E:\glite\Bin\GBASE.pdb
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+E:\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\glite\Bin\GBASE.exe.config
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csprojResolveAssemblyReference.cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses

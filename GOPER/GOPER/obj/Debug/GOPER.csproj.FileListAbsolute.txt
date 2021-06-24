@@ -1,0 +1,79 @@
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\bin\Debug\GOPER.exe
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\bin\Debug\GOPER.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\glite\Bin\GOPER.exe
+C:\glite\Bin\GOPER.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\glite\Bin\GOPER.exe
+C:\Users\glite\Bin\GOPER.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+E:\glite\Bin\GOPER.exe
+E:\glite\Bin\GOPER.pdb
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+E:\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\glite\Bin\GOPER.exe.config
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csprojResolveAssemblyReference.cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.Cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb

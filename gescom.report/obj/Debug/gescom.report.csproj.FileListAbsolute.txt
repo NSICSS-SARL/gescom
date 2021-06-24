@@ -1,0 +1,222 @@
+C:\glite\gescom.report.dll
+C:\glite\gescom.report.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\glite\gescom.report.dll.config
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.XtraBillet.resources
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\glite\Bin\gescom.report.dll.config
+C:\glite\Bin\gescom.report.dll
+C:\glite\Bin\gescom.report.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb
+E:\glite\Bin\gescom.report.dll.config
+E:\glite\Bin\gescom.report.dll
+E:\glite\Bin\gescom.report.pdb
+E:\Projects\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
+E:\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+E:\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+E:\Projects\gescom.report\obj\Debug\gescom.report.dll
+E:\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.Cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb

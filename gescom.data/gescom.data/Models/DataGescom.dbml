@@ -1,0 +1,1409 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GESCOM" Class="DataGescomDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=THINK;Initial Catalog=GESCOM;Integrated Security=True" SettingsObjectName="gescom.data.Properties.Settings" SettingsPropertyName="GESCOMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EventsItem" Member="EventsItems">
+    <Type Name="EventsItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Dv" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Da" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Vid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Cid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FamilleItem" Member="FamilleItems">
+    <Type Name="FamilleItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HorsItem" Member="HorsItems">
+    <Type Name="HorsItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Achat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Revient" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Gros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Detail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Special" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Extra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MargeItem" Member="MargeItems">
+    <Type Name="MargeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Achat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Revient" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Gros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Detail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Special" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Extra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaxeItem" Member="TaxeItems">
+    <Type Name="TaxeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Achat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Revient" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Gros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Detail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Special" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Extra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UniteItem" Member="UniteItems">
+    <Type Name="UniteItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailItem" Member="DetailItems">
+    <Type Name="DetailItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QEntre" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QSort" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceItem" Member="InvoiceItems">
+    <Type Name="InvoiceItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Percu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Rendu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationItem" Member="LocationItems">
+    <Type Name="LocationItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsReserved" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlaceItem" Member="PlaceItems">
+    <Type Name="PlaceItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsReserved" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrintItem" Member="PrintItems">
+    <Type Name="PrintItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Titre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DistItem" Member="DistItems">
+    <Type Name="DistItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.XmlItem" Member="XmlItems">
+    <Type Name="XmlItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Reference" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommandeItem" Member="CommandeItems">
+    <Type Name="CommandeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MagPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TvaItem" Member="TvaItems">
+    <Type Name="TvaItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Taux" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrimeItem" Member="PrimeItems">
+    <Type Name="PrimeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Achat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Revient" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Gros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Detail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Special" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Extra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ArticleItem" Member="ArticleItems">
+    <Type Name="ArticleItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Catalogue" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ig" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Iu" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Seuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="State" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="CCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeclItem" Member="DeclItems">
+    <Type Name="DeclItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Prix" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntryItem" Member="EntryItems">
+    <Type Name="EntryItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MoveItem" Member="MoveItems">
+    <Type Name="MoveItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExitItem" Member="ExitItems">
+    <Type Name="ExitItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImpotItem" Member="ImpotItems">
+    <Type Name="ImpotItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AchatExo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AchatTaxable" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Deductible" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VenteExo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VenteTaxable" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VenteTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Collecte" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TAF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TVF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Taux" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonItem" Member="PersonItems">
+    <Type Name="PersonItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeopleItem" Member="PeopleItems">
+    <Type Name="PeopleItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Solde" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LitteralType" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonnelItem" Member="PersonnelItems">
+    <Type Name="PersonnelItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Daty" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Wid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Montant2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonReparation" Member="PersonReparations">
+    <Type Name="PersonReparation">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GROSSITE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TITRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerItem" Member="CustomerItems">
+    <Type Name="CustomerItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VendorItem" Member="VendorItems">
+    <Type Name="VendorItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkerItem" Member="WorkerItems">
+    <Type Name="WorkerItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Stat" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nif" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Compte" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GROSSITE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TITRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Localite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DayItem" Member="DayItems">
+    <Type Name="DayItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Titre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PersonName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Info" Type="System.String" DbType="NVarChar(528)" CanBeNull="true" />
+      <Column Name="Printed" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompItem" Member="CompItems">
+    <Type Name="CompItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LongName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Mode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Obs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Reste" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ForNew" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ForChange" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExternItem" Member="ExternItems">
+    <Type Name="ExternItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Vid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Reference" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdUnite" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Correspond" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BonusItem" Member="BonusItems">
+    <Type Name="BonusItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Wid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiaryItem" Member="DiaryItems">
+    <Type Name="DiaryItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Printed" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RetailView" Member="RetailViews">
+    <Type Name="RetailView">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Produit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="CodeVente" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BoxItem" Member="BoxItems">
+    <Type Name="BoxItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="O1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="T2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="O2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Percu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Rendu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompteItem" Member="CompteItems">
+    <Type Name="CompteItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Libelle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Debit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Credit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LastItem" Member="LastItems">
+    <Type Name="LastItem">
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Solde" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LitteralType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SoldeItem" Member="SoldeItems">
+    <Type Name="SoldeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Libelle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Debit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Credit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Activite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FormelItem" Member="FormelItems">
+    <Type Name="FormelItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VenteExo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VenteTaxable" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Collecte" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="O1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Frais" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TicketItem" Member="TicketItems">
+    <Type Name="TicketItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Printed" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TicketView" Member="TicketViews">
+    <Type Name="TicketView">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Produit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="CodeVente" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RetailItem" Member="RetailItems">
+    <Type Name="RetailItem">
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Price" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="NomKil" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdrKil" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Produit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Percu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Rendu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Daty" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Terminal" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Codes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CodeVente" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NomClient" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdresseClient" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiaryReceipt" Member="DiaryReceipts">
+    <Type Name="DiaryReceipt">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Printed" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrintHelp" Member="PrintHelps">
+    <Type Name="PrintHelp">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CashTemp" Member="CashTemps">
+    <Type Name="CashTemp">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Refce" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Prix" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Produit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="CodeVente" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Unite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProdItem" Member="ProdItems">
+    <Type Name="ProdItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Iu" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Rq" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Etat" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProdShort" Member="ProdShorts">
+    <Type Name="ProdShort">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Iu" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Rq" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Etat" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaxableItem" Member="TaxableItems">
+    <Type Name="TaxableItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Achat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Revient" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Gros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Detail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Special" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Extra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniteFrns" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceModern" Member="InvoiceModerns">
+    <Type Name="InvoiceModern">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Doc" Type="System.String" DbType="VarChar(92)" CanBeNull="true" />
+      <Column Name="Heure" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Paiement" Type="System.String" DbType="VarChar(92)" CanBeNull="true" />
+      <Column Name="Caissier" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Percu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Rendu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BonTemp" Member="BonTemps">
+    <Type Name="BonTemp">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Refce" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Prix" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Produit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="CodeVente" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Unite" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TicketTemp" Member="TicketTemps">
+    <Type Name="TicketTemp">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Refce" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Prix" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Produit" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="CodeVente" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Detail2" Member="Detail2s">
+    <Type Name="Detail2">
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DATY" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Travail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QEntre" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QSort" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Tiers" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Info" Type="System.String" DbType="NVarChar(778)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailMag" Member="DetailMags">
+    <Type Name="DetailMag">
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DATY" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Travail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tache" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QEntre" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QSort" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Groupe" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Tiers" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Info" Type="System.String" DbType="NVarChar(778)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CasherIn" Member="CasherIns">
+    <Type Name="CasherIn">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Percu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Rendu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Printed" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hote" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Receveur" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CashElement" Member="CashElements">
+    <Type Name="CashElement">
+      <Column Name="Rang" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Quantite" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Produit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refce" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Printers" Member="Printers">
+    <Type Name="Printer">
+      <Column Name="PrinterId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PrinterName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BoxGroup" Member="BoxGroups">
+    <Type Name="BoxGroup">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Percu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Rendu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Operateur" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DuoItem" Member="DuoItems">
+    <Type Name="DuoItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Faster" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OperationAuto" Member="OperationAutos">
+    <Type Name="OperationAuto">
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(510)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pachat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Previent" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QStock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomvers" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nomfrns" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Vstock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DateVente" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DateAchat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Frs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Clt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Qachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RCode" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Catalog" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Observation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QSeuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Magpref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdPlace" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdCat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdrPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComplPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PrimGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateCommande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Usr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CDF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fcode" Type="System.String" DbType="NVarChar(266)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OperationEntry" Member="OperationEntries">
+    <Type Name="OperationEntry">
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(510)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pachat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UNT_FRNS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Previent" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Px" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Refuse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomvers" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QStock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomfrns" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Vstock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DateVente" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DateAchat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Frs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Clt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Qachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RCode" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Catalog" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Observation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QSeuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Magpref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdPlace" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdCat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdrPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComplPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PrimGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateCommande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Usr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CDF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Fcode" Type="System.String" DbType="NVarChar(266)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OperationDispo" Member="OperationDispos">
+    <Type Name="OperationDispo">
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(510)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pachat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UNT_FRNS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Previent" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Refuse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomvers" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QStock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomfrns" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Vstock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DateVente" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DateAchat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Frs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Clt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Qachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RCode" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Catalog" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Observation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QSeuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Magpref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdPlace" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdCat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdrPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComplPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PrimGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateCommande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Usr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CDF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Fcode" Type="System.String" DbType="NVarChar(266)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OperationCommande" Member="OperationCommandes">
+    <Type Name="OperationCommande">
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(510)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pachat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Previent" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="QEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomvers" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QStock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Nomfrns" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Vstock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DateVente" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DateAchat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Frs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Clt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Qachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RCode" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Catalog" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Observation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QSeuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Magpref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdPlace" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdCat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdrPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComplPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PrimGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateCommande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Usr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CDF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Fcode" Type="System.String" DbType="NVarChar(266)" CanBeNull="true" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActeItem" Member="ActeItems">
+    <Type Name="ActeItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Danger" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Super" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Placer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Verif" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cause" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Couleur" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Priter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Entrer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qcder" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoirItem" Member="VoirItems">
+    <Type Name="VoirItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CheckCommande" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirEntre" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPrix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPrior" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPlace" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirVerif" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCom" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertAch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertVte" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StateItem" Member="StateItems">
+    <Type Name="StateItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Danger" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Placer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Verif" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckCommande" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirEntre" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPrix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPrior" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirPlace" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirVerif" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Priter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Entrer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qcder" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AlertCom" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertAch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertVte" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SituationItem" Member="SituationItems">
+    <Type Name="SituationItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Commerce" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Fournisseur" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OperationItem" Member="OperationItems">
+    <Type Name="OperationItem">
+      <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Refers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Forme" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Taxable" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CompleteCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QStock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="CATALOG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Observation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QSeuil" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Pachat" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UNT_FRNS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Previent" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Refuse" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PEstime" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nomfrns" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateVente" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DateAchat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Frs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Clt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Qachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vachat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vavoir" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vercpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vdefect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Qvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vvol" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Magpref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdPlace" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IdCat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RCode" Type="System.String" DbType="NVarChar(511)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(510)" CanBeNull="true" />
+      <Column Name="Vstock" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Fcode" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="Nomvers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IdUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Q" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="S2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="B1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="C1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="T1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="B2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Actif" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fait" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="APrix" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Faster" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="L" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AEntre" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Drapeau" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdrPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComplPref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel1Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel2Pref" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PrimGros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimDetail" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimSpecial" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="PrimExtra" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="StateCommande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Usr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CDF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Localite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Auto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Arret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Epuise" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Etat0" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Etat1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Etat2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoirVerif" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VoirPlace" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VoirPrior" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VoirPrix" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VoirEntre" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CheckCommande" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Verif" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Placer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Qcder" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AlertCom" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertAch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlertVte" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Commerce" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Fournisseur" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

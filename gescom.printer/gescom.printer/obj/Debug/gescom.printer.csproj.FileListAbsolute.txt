@@ -1,0 +1,176 @@
+C:\glite\gescom.printer.dll
+C:\glite\gescom.printer.pdb
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\glite\gescom.printer.dll.config
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraInvoice.resources
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraTicket.resources
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+D:\Log\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2013\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104.000\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\glite\Bin\gescom.printer.dll.config
+C:\Users\glite\Bin\gescom.printer.dll
+C:\Users\glite\Bin\gescom.printer.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\glite\Bin\gescom.printer.dll.config
+C:\glite\Bin\gescom.printer.dll
+C:\glite\Bin\gescom.printer.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+E:\glite\Bin\gescom.printer.dll.config
+E:\glite\Bin\gescom.printer.dll
+E:\glite\Bin\gescom.printer.pdb
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+E:\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.ReportBonDir.resources
+C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csprojResolveAssemblyReference.cache
+C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.ReportBonDir.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.ReportBonDir.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Recu.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.Report58.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.ReportBonus.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.TicketDirect.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonCommande.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraBonus.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraCommandes.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraDocument.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Reports.XtraRecu.resources
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.GenerateResource.Cache
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll.licenses
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
+C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb

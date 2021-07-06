@@ -437,3 +437,45 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.create\gescom.cre
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.create\gescom.create\obj\Debug\gescom.create.dll
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.create\gescom.create\obj\Debug\gescom.create.pdb
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.create\gescom.create\obj\Debug\gescom.create.csprojResolveAssemblyReference.cache
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.AssemblyReference.cache
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Properties.Resources.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.CustomerAdress.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListGlobal.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListPerson.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListResume.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListState.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraArticle.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraCaisse.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraChoice.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraChoix.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraComment.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraCompte.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraDeclaration.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraDetail.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraDiary.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraDispatch.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraDist.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraEntree.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraFind.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraFusion.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraGlobal.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraGroup.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraJournal.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraMag.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraMessage.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraOperation.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraOrder.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraPaiement.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraPeriode.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraPerson.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraPrime.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraPrint.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraProd.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraRegBonus.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraVente.resources
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.GenerateResource.cache
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.dll.licenses
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.CoreCompileInputs.cache
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.dll
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.pdb
+C:\Users\User\source\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.CopyComplete

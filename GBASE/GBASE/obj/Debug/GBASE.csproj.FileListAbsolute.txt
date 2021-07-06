@@ -66,3 +66,12 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GB
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.Cache
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.AssemblyReference.cache
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.cache
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CoreCompileInputs.cache
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CopyComplete
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.pdb

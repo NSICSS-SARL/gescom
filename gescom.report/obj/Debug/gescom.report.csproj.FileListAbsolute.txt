@@ -220,3 +220,21 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll.licenses
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.dll
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.cache
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.CoreCompileInputs.cache
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.CopyComplete
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.pdb
+C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.AssemblyReference.cache

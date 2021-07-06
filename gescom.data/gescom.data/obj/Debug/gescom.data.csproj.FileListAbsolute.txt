@@ -63,3 +63,6 @@ C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.data\ges
 C:\Users\patdimby.PHOTO104\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.dll
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
+C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.dll
+C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.pdb

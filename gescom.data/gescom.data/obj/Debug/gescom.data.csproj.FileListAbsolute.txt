@@ -44,9 +44,6 @@ C:\Users\sa\Documents\Visual Studio 2017\Projects\gescom.data\gescom.data\obj\De
 C:\Users\sa\Documents\Visual Studio 2017\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
 C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.dll
 C:\Users\sa\Documents\Visual Studio 2015\Projects\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
-C:\glite\Bin\gescom.data.dll.config
-C:\glite\Bin\gescom.data.dll
-C:\glite\Bin\gescom.data.pdb
 C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.dll
 C:\Users\sa\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
 C:\inetpub\wwwroot\bin\gescom.data.dll.config
@@ -66,3 +63,9 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.data\gescom.data\
 C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.csproj.CoreCompileInputs.cache
 C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.dll
 C:\Users\User\source\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
+C:\glite\Bin\gescom.data.dll.config
+C:\glite\Bin\gescom.data.dll
+C:\glite\Bin\gescom.data.pdb
+C:\Users\PC\source\repos\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.dll
+C:\Users\PC\source\repos\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.pdb

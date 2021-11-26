@@ -29,9 +29,6 @@ C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.rep
 C:\Users\Administrator.PHOTO104\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.pdb
 C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportBillet.resources
 C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
-C:\glite\Bin\gescom.report.dll.config
-C:\glite\Bin\gescom.report.dll
-C:\glite\Bin\gescom.report.pdb
 C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.csprojResolveAssemblyReference.cache
 C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
 C:\Users\patdimby\Documents\Visual Studio 2013\Projects\gescom.report\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
@@ -238,3 +235,24 @@ C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.CopyCom
 C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.dll
 C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.pdb
 C:\Users\User\source\gescom\gescom.report\obj\Debug\gescom.report.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCaisse.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCompte.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportCustomer.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDeclare.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDetail.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportDiary.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportFacture.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportGlobal.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportJournal.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportPerson.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.Reports.ReportStock.resources
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.dll.licenses
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.csproj.CoreCompileInputs.cache
+C:\glite\Bin\gescom.report.dll.config
+C:\glite\Bin\gescom.report.dll
+C:\glite\Bin\gescom.report.pdb
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.csproj.CopyComplete
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.dll
+C:\Users\PC\source\repos\gescom\gescom.report\obj\Debug\gescom.report.pdb

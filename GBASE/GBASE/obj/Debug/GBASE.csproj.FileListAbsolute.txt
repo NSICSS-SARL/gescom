@@ -75,3 +75,12 @@ C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CoreCompileInputs
 C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CopyComplete
 C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.exe
 C:\Users\User\source\gescom\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.MainForm.resources
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.Properties.Resources.resources
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.exe.licenses
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.exe
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\PC\source\repos\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CopyComplete

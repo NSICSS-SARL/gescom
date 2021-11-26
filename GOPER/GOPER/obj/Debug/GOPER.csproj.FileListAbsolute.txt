@@ -77,3 +77,11 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GO
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.exe
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CopyComplete

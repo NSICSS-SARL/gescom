@@ -75,11 +75,19 @@ namespace gescom.create.Models
             f.ShowDialog();
         }
 
+        public static void SeeDate(OperationItem item)
+        {
+            var f = new DxDate(item);
+            f.ShowDialog();
+        }
+
         public static void DetaillerArticle(long id)
         {
             var f = new XtraArticle(id);
             f.ShowDialog();
-        }        
+        }
+
+        
 
         public static void DetaillerCustomerCompte(long id, string text)
         {

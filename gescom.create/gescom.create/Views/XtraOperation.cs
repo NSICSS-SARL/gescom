@@ -18,7 +18,7 @@ namespace gescom.create.Views
             InitializeComponent();
             _list = new List<OperationCommande>();
             _modifiedRows = new List<int>();
-        }
+        }     
 
         private void SetRefresh()
         {
@@ -125,6 +125,22 @@ namespace gescom.create.Views
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void GetDates(object sender, EventArgs e)
+        {
+            string text = myNum.Text;
+            if (text == null)
+            {
+                return;
+            }
+            long id = long.Parse(text);
+            if (id <= 0)
+            {
+                return;
+            }
+            var item = _list.FirstOrDefault(p => p.Ndx == id);
+           
         }
     }
 }

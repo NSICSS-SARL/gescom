@@ -3,6 +3,7 @@ using gescom.create.Models;
 using gescom.data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace gescom.create.Views
 {
@@ -52,6 +53,17 @@ namespace gescom.create.Views
                 return;
             }
             CreateHelpers.Globalize(id);
+        }
+
+        private void daterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            long id = GetX();
+            if (id == 0)
+            {
+                return;
+            }
+            var item = _list.FirstOrDefault(m => m.Ndx == id);
+            CreateHelpers.SeeDate(item);
         }
 
         private void XtraComment_Activated(object sender, EventArgs e)

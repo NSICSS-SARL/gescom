@@ -551,7 +551,7 @@ namespace gescom.create.Views
 
         private void CheckSituation(long id)
         {
-           /* var state = SituationHelpers.Get(id);
+            var state = SituationHelpers.Get(id);
             var commerce = state.Commerce;
             switch (commerce)
             {
@@ -567,7 +567,7 @@ namespace gescom.create.Views
                 case "Epuisé": radioPuise.Checked = true; break;
                 case "B.BLM": radioBB.Checked = true; break;
                 default: radioRS.Checked = true; break;
-            } */
+            }
         }
 
         public void SituationSave()

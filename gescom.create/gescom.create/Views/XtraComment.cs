@@ -40,10 +40,8 @@ namespace gescom.create.Views
             return x;
         }
 
-        private void créationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CreateHelpers.NewArticle();
-        }
+        private void créationToolStripMenuItem_Click(object sender, EventArgs e)=> CreateHelpers.NewArticle();
+        
 
         private void comparerToolStripMenuItem_Click(object sender, EventArgs e)
         {

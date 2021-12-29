@@ -218,6 +218,7 @@
             this.radioMoyen.Properties.Caption = "DMSQ";
             this.radioMoyen.Size = new System.Drawing.Size(48, 19);
             this.radioMoyen.TabIndex = 24;
+            this.radioMoyen.Visible = false;
             // 
             // checkPrior
             // 

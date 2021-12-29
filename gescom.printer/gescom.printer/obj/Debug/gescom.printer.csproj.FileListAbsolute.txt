@@ -212,7 +212,6 @@ C:\glite\Bin\gescom.printer.pdb
 C:\Users\PC\source\repos\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.CopyComplete
 C:\Users\PC\source\repos\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
 C:\Users\PC\source\repos\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.AssemblyReference.cache
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.BonDirect.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.ReportBonDir.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.Drafts.Ticket.resources

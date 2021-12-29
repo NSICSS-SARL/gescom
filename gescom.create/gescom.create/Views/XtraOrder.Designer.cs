@@ -141,7 +141,7 @@
             this.obs.FieldName = "B1";
             this.obs.Name = "obs";
             this.obs.Visible = true;
-            this.obs.VisibleIndex = 7;
+            this.obs.VisibleIndex = 6;
             this.obs.Width = 89;
             // 
             // place
@@ -163,7 +163,7 @@
             this.rmq.FieldName = "S2";
             this.rmq.Name = "rmq";
             this.rmq.Visible = true;
-            this.rmq.VisibleIndex = 15;
+            this.rmq.VisibleIndex = 14;
             this.rmq.Width = 215;
             // 
             // nom
@@ -174,7 +174,7 @@
             this.nom.FieldName = "Designation";
             this.nom.Name = "nom";
             this.nom.Visible = true;
-            this.nom.VisibleIndex = 3;
+            this.nom.VisibleIndex = 2;
             this.nom.Width = 457;
             // 
             // coliPr
@@ -185,7 +185,7 @@
             this.coliPr.FieldName = "VoirPrix";
             this.coliPr.Name = "coliPr";
             this.coliPr.Visible = true;
-            this.coliPr.VisibleIndex = 12;
+            this.coliPr.VisibleIndex = 11;
             // 
             // prix
             // 
@@ -198,7 +198,7 @@
             this.prix.Name = "prix";
             this.prix.OptionsColumn.AllowFocus = false;
             this.prix.Visible = true;
-            this.prix.VisibleIndex = 5;
+            this.prix.VisibleIndex = 4;
             this.prix.Width = 87;
             // 
             // unite
@@ -209,7 +209,7 @@
             this.unite.FieldName = "Unite";
             this.unite.Name = "unite";
             this.unite.Visible = true;
-            this.unite.VisibleIndex = 16;
+            this.unite.VisibleIndex = 15;
             this.unite.Width = 72;
             // 
             // disponible
@@ -229,7 +229,7 @@
             this.disponible.Name = "disponible";
             this.disponible.OptionsColumn.AllowFocus = false;
             this.disponible.Visible = true;
-            this.disponible.VisibleIndex = 4;
+            this.disponible.VisibleIndex = 3;
             this.disponible.Width = 86;
             // 
             // colQ1
@@ -245,7 +245,7 @@
             this.colQ1.Name = "colQ1";
             this.colQ1.OptionsColumn.AllowFocus = false;
             this.colQ1.Visible = true;
-            this.colQ1.VisibleIndex = 8;
+            this.colQ1.VisibleIndex = 7;
             this.colQ1.Width = 68;
             // 
             // colQ2
@@ -259,7 +259,7 @@
             this.colQ2.Name = "colQ2";
             this.colQ2.OptionsColumn.AllowFocus = false;
             this.colQ2.Visible = true;
-            this.colQ2.VisibleIndex = 9;
+            this.colQ2.VisibleIndex = 8;
             this.colQ2.Width = 68;
             // 
             // colB2
@@ -270,7 +270,7 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 14;
+            this.colB2.VisibleIndex = 13;
             this.colB2.Width = 156;
             // 
             // colEnt
@@ -281,7 +281,7 @@
             this.colEnt.FieldName = "VoirEntre";
             this.colEnt.Name = "colEnt";
             this.colEnt.Visible = true;
-            this.colEnt.VisibleIndex = 6;
+            this.colEnt.VisibleIndex = 5;
             // 
             // gridRapide
             // 
@@ -292,7 +292,7 @@
             this.gridRapide.Name = "gridRapide";
             this.gridRapide.OptionsColumn.AllowEdit = false;
             this.gridRapide.Visible = true;
-            this.gridRapide.VisibleIndex = 10;
+            this.gridRapide.VisibleIndex = 9;
             // 
             // colomL
             // 
@@ -305,8 +305,6 @@
             this.colomL.Caption = "MSQ";
             this.colomL.FieldName = "L";
             this.colomL.Name = "colomL";
-            this.colomL.Visible = true;
-            this.colomL.VisibleIndex = 2;
             this.colomL.Width = 39;
             // 
             // colPlacer
@@ -317,7 +315,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 13;
+            this.colPlacer.VisibleIndex = 12;
             // 
             // colVerif
             // 
@@ -327,7 +325,7 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 11;
+            this.colVerif.VisibleIndex = 10;
             // 
             // myNum
             // 

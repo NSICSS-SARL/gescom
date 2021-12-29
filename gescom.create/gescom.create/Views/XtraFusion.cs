@@ -13,7 +13,7 @@ namespace gescom.create.Views
         private DuoItem _duo;
         private long _numeroPlace;
         private long _p = 0;
-        private long? _t;
+        //private long? _t;
 
         //
         private long _v = 0;
@@ -30,7 +30,7 @@ namespace gescom.create.Views
             InitializeComponent();
             _item = new DistItem();
             _duo = new DuoItem();
-            _t = null;
+           // _t = null;
         }
 
         public XtraFusion(long id)
@@ -81,7 +81,7 @@ namespace gescom.create.Views
                 _voir.VoirPrior = false;
                 _z = 1;
             }
-            if (_t == 1)
+          /*  if (_t == 1)
             {
                 if (!radioMoyen.Checked)
                 {
@@ -92,13 +92,13 @@ namespace gescom.create.Views
             {
                 _t = null;
             }
-
+            */
             if (!string.IsNullOrEmpty(q1.Text))
             {
                 quantite = float.Parse(q1.Text);
             }
             var message = s1.Text;
-            ArticleHelpers.UpdateFusion(_id, "tache", message, b1.Text, b2.Text, _x, _y, quantite, _z, _t);
+            ArticleHelpers.UpdateFusion(_id, "tache", message, b1.Text, b2.Text, _x, _y, quantite, _z);
             _item.Numero = PlaceHelpers.GetId(distNewPlace.Text);
             if (_item.Numero == null) return;
             var n = (long)_item.Numero;
@@ -138,11 +138,11 @@ namespace gescom.create.Views
             _x = 0;
             _y = 0;
             _z = 0;
-            if (_duo.L == 1)
+          /*  if (_duo.L == 1)
             {
                 _t = 1;
                 radioMoyen.Checked = true;
-            }
+            }*/
             if (_voir.VoirEntre)
             {
                 checkEntre.Checked = true;

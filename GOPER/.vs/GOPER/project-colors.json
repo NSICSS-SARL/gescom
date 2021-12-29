@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "aa27e95f-d1d4-411e-a1c4-ba59ae51527b": {
+      "ProjectGuid": "aa27e95f-d1d4-411e-a1c4-ba59ae51527b",
+      "DisplayName": "GOPER",
+      "ColorIndex": 0
+    },
+    "c8cf1fe3-044b-43b4-b6cb-cda7eeb7314d": {
+      "ProjectGuid": "c8cf1fe3-044b-43b4-b6cb-cda7eeb7314d",
+      "DisplayName": "gescom.create",
+      "ColorIndex": 1
+    },
+    "f8a2e6b3-bff3-4781-8e09-cb01b67d6479": {
+      "ProjectGuid": "f8a2e6b3-bff3-4781-8e09-cb01b67d6479",
+      "DisplayName": "gescom.data",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

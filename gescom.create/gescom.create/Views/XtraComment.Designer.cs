@@ -34,7 +34,6 @@
             this.clicDroit = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.créationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comparerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.daterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grilleView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlace = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,7 +81,10 @@
             this.colSign = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProj = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colACA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colComm = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFourniss = new DevExpress.XtraGrid.Columns.GridColumn();
             this.myNum = new DevExpress.XtraEditors.LabelControl();
+            this.datertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilleView)).BeginInit();
@@ -109,7 +111,7 @@
             this.clicDroit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.créationToolStripMenuItem,
             this.comparerToolStripMenuItem,
-            this.daterMenuItem});
+            this.datertoolStripMenuItem});
             this.clicDroit.Name = "clicDroit";
             this.clicDroit.Size = new System.Drawing.Size(191, 70);
             // 
@@ -126,13 +128,6 @@
             this.comparerToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.comparerToolStripMenuItem.Text = "&Modification générale";
             this.comparerToolStripMenuItem.Click += new System.EventHandler(this.comparerToolStripMenuItem_Click);
-            // 
-            // daterMenuItem
-            // 
-            this.daterMenuItem.Name = "daterMenuItem";
-            this.daterMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.daterMenuItem.Text = "&Dateur";
-            this.daterMenuItem.Click += new System.EventHandler(this.daterToolStripMenuItem_Click);
             // 
             // grilleView
             // 
@@ -182,7 +177,9 @@
             this.colVers,
             this.colSign,
             this.colProj,
-            this.colACA});
+            this.colACA,
+            this.colComm,
+            this.colFourniss});
             this.grilleView.GridControl = this.gridActions;
             this.grilleView.Name = "grilleView";
             this.grilleView.OptionsFilter.AllowFilterEditor = false;
@@ -209,7 +206,7 @@
             this.colCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Codage", "{0:n0}")});
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 14;
+            this.colCode.VisibleIndex = 7;
             // 
             // colPlace
             // 
@@ -219,7 +216,7 @@
             this.colPlace.FieldName = "Place";
             this.colPlace.Name = "colPlace";
             this.colPlace.Visible = true;
-            this.colPlace.VisibleIndex = 15;
+            this.colPlace.VisibleIndex = 8;
             this.colPlace.Width = 100;
             // 
             // colName
@@ -230,7 +227,7 @@
             this.colName.FieldName = "Designation";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 16;
+            this.colName.VisibleIndex = 9;
             this.colName.Width = 300;
             // 
             // colPrix
@@ -243,7 +240,7 @@
             this.colPrix.FieldName = "PDetail";
             this.colPrix.Name = "colPrix";
             this.colPrix.Visible = true;
-            this.colPrix.VisibleIndex = 19;
+            this.colPrix.VisibleIndex = 12;
             // 
             // colStock
             // 
@@ -263,7 +260,7 @@
             this.colStock.OptionsColumn.AllowFocus = false;
             this.colStock.OptionsColumn.FixedWidth = true;
             this.colStock.Visible = true;
-            this.colStock.VisibleIndex = 22;
+            this.colStock.VisibleIndex = 15;
             this.colStock.Width = 59;
             // 
             // colEst
@@ -277,7 +274,7 @@
             this.colEst.Name = "colEst";
             this.colEst.OptionsColumn.AllowFocus = false;
             this.colEst.Visible = true;
-            this.colEst.VisibleIndex = 35;
+            this.colEst.VisibleIndex = 33;
             // 
             // colPerv
             // 
@@ -290,7 +287,7 @@
             this.colPerv.Name = "colPerv";
             this.colPerv.OptionsColumn.AllowFocus = false;
             this.colPerv.Visible = true;
-            this.colPerv.VisibleIndex = 37;
+            this.colPerv.VisibleIndex = 35;
             // 
             // OtherInfo
             // 
@@ -300,7 +297,7 @@
             this.OtherInfo.FieldName = "OtherInfo";
             this.OtherInfo.Name = "OtherInfo";
             this.OtherInfo.Visible = true;
-            this.OtherInfo.VisibleIndex = 41;
+            this.OtherInfo.VisibleIndex = 43;
             this.OtherInfo.Width = 83;
             // 
             // colMag
@@ -311,7 +308,7 @@
             this.colMag.FieldName = "Magpref";
             this.colMag.Name = "colMag";
             this.colMag.Visible = true;
-            this.colMag.VisibleIndex = 33;
+            this.colMag.VisibleIndex = 31;
             this.colMag.Width = 106;
             // 
             // colCa
@@ -327,7 +324,7 @@
             this.colCa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qachat", "{0:n0}")});
             this.colCa.Visible = true;
-            this.colCa.VisibleIndex = 20;
+            this.colCa.VisibleIndex = 13;
             this.colCa.Width = 82;
             // 
             // colCv
@@ -343,7 +340,7 @@
             this.colCv.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qvente", "{0:n0}")});
             this.colCv.Visible = true;
-            this.colCv.VisibleIndex = 21;
+            this.colCv.VisibleIndex = 14;
             this.colCv.Width = 85;
             // 
             // colUnt
@@ -354,7 +351,7 @@
             this.colUnt.FieldName = "Unite";
             this.colUnt.Name = "colUnt";
             this.colUnt.Visible = true;
-            this.colUnt.VisibleIndex = 23;
+            this.colUnt.VisibleIndex = 16;
             this.colUnt.Width = 60;
             // 
             // colUF
@@ -365,7 +362,7 @@
             this.colUF.FieldName = "UNT_FRNS";
             this.colUF.Name = "colUF";
             this.colUF.Visible = true;
-            this.colUF.VisibleIndex = 36;
+            this.colUF.VisibleIndex = 34;
             // 
             // colDate
             // 
@@ -375,7 +372,7 @@
             this.colDate.FieldName = "T1";
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
-            this.colDate.VisibleIndex = 26;
+            this.colDate.VisibleIndex = 19;
             this.colDate.Width = 68;
             // 
             // colMessage
@@ -386,7 +383,7 @@
             this.colMessage.FieldName = "S1";
             this.colMessage.Name = "colMessage";
             this.colMessage.Visible = true;
-            this.colMessage.VisibleIndex = 29;
+            this.colMessage.VisibleIndex = 27;
             this.colMessage.Width = 154;
             // 
             // colReponse
@@ -397,7 +394,7 @@
             this.colReponse.FieldName = "S2";
             this.colReponse.Name = "colReponse";
             this.colReponse.Visible = true;
-            this.colReponse.VisibleIndex = 30;
+            this.colReponse.VisibleIndex = 28;
             this.colReponse.Width = 135;
             // 
             // colQte
@@ -410,7 +407,7 @@
             this.colQte.FieldName = "Q1";
             this.colQte.Name = "colQte";
             this.colQte.Visible = true;
-            this.colQte.VisibleIndex = 31;
+            this.colQte.VisibleIndex = 29;
             // 
             // colComptage
             // 
@@ -422,7 +419,7 @@
             this.colComptage.FieldName = "Q2";
             this.colComptage.Name = "colComptage";
             this.colComptage.Visible = true;
-            this.colComptage.VisibleIndex = 32;
+            this.colComptage.VisibleIndex = 30;
             // 
             // colB1
             // 
@@ -432,7 +429,7 @@
             this.colB1.FieldName = "B1";
             this.colB1.Name = "colB1";
             this.colB1.Visible = true;
-            this.colB1.VisibleIndex = 27;
+            this.colB1.VisibleIndex = 20;
             // 
             // colB2
             // 
@@ -442,7 +439,7 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 42;
+            this.colB2.VisibleIndex = 44;
             this.colB2.Width = 91;
             // 
             // colRem
@@ -453,7 +450,7 @@
             this.colRem.FieldName = "Remark";
             this.colRem.Name = "colRem";
             this.colRem.Visible = true;
-            this.colRem.VisibleIndex = 24;
+            this.colRem.VisibleIndex = 17;
             // 
             // colRq
             // 
@@ -463,7 +460,7 @@
             this.colRq.FieldName = "Remarque";
             this.colRq.Name = "colRq";
             this.colRq.Visible = true;
-            this.colRq.VisibleIndex = 25;
+            this.colRq.VisibleIndex = 18;
             // 
             // colObs
             // 
@@ -473,7 +470,7 @@
             this.colObs.FieldName = "Observation";
             this.colObs.Name = "colObs";
             this.colObs.Visible = true;
-            this.colObs.VisibleIndex = 39;
+            this.colObs.VisibleIndex = 38;
             // 
             // gridComment
             // 
@@ -487,7 +484,7 @@
             this.gridComment.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Vstock", "TOTAL={0:n0}")});
             this.gridComment.Visible = true;
-            this.gridComment.VisibleIndex = 45;
+            this.gridComment.VisibleIndex = 47;
             // 
             // gridLocal
             // 
@@ -497,7 +494,7 @@
             this.gridLocal.FieldName = "Localite";
             this.gridLocal.Name = "gridLocal";
             this.gridLocal.Visible = true;
-            this.gridLocal.VisibleIndex = 44;
+            this.gridLocal.VisibleIndex = 46;
             // 
             // colFrName
             // 
@@ -507,7 +504,7 @@
             this.colFrName.FieldName = "Nomfrns";
             this.colFrName.Name = "colFrName";
             this.colFrName.Visible = true;
-            this.colFrName.VisibleIndex = 34;
+            this.colFrName.VisibleIndex = 32;
             // 
             // colVoir
             // 
@@ -519,7 +516,7 @@
             this.colVoir.FieldName = "VoirPrix";
             this.colVoir.Name = "colVoir";
             this.colVoir.Visible = true;
-            this.colVoir.VisibleIndex = 9;
+            this.colVoir.VisibleIndex = 24;
             // 
             // colPrice
             // 
@@ -531,7 +528,7 @@
             this.colPrice.FieldName = "VoirEntre";
             this.colPrice.Name = "colPrice";
             this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 7;
+            this.colPrice.VisibleIndex = 25;
             // 
             // colopAch
             // 
@@ -543,7 +540,7 @@
             this.colopAch.FieldName = "Pachat";
             this.colopAch.Name = "colopAch";
             this.colopAch.Visible = true;
-            this.colopAch.VisibleIndex = 18;
+            this.colopAch.VisibleIndex = 11;
             // 
             // colCMD
             // 
@@ -560,7 +557,7 @@
             this.colCMD.OptionsColumn.AllowFocus = false;
             this.colCMD.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colCMD.Visible = true;
-            this.colCMD.VisibleIndex = 6;
+            this.colCMD.VisibleIndex = 39;
             // 
             // colTT
             // 
@@ -576,7 +573,7 @@
             this.colTT.OptionsColumn.AllowEdit = false;
             this.colTT.OptionsColumn.AllowFocus = false;
             this.colTT.Visible = true;
-            this.colTT.VisibleIndex = 11;
+            this.colTT.VisibleIndex = 22;
             // 
             // colRUPT
             // 
@@ -592,7 +589,7 @@
             this.colRUPT.OptionsColumn.AllowEdit = false;
             this.colRUPT.OptionsColumn.AllowFocus = false;
             this.colRUPT.Visible = true;
-            this.colRUPT.VisibleIndex = 0;
+            this.colRUPT.VisibleIndex = 41;
             // 
             // colSTOP
             // 
@@ -608,7 +605,7 @@
             this.colSTOP.OptionsColumn.AllowEdit = false;
             this.colSTOP.OptionsColumn.AllowFocus = false;
             this.colSTOP.Visible = true;
-            this.colSTOP.VisibleIndex = 1;
+            this.colSTOP.VisibleIndex = 42;
             // 
             // Familier
             // 
@@ -618,7 +615,7 @@
             this.Familier.FieldName = "Categorie";
             this.Familier.Name = "Familier";
             this.Familier.Visible = true;
-            this.Familier.VisibleIndex = 43;
+            this.Familier.VisibleIndex = 45;
             // 
             // RefCol
             // 
@@ -628,7 +625,7 @@
             this.RefCol.FieldName = "Refuse";
             this.RefCol.Name = "RefCol";
             this.RefCol.Visible = true;
-            this.RefCol.VisibleIndex = 40;
+            this.RefCol.VisibleIndex = 37;
             // 
             // cataCol
             // 
@@ -638,7 +635,7 @@
             this.cataCol.FieldName = "CATALOG";
             this.cataCol.Name = "cataCol";
             this.cataCol.Visible = true;
-            this.cataCol.VisibleIndex = 28;
+            this.cataCol.VisibleIndex = 21;
             // 
             // colMtestime
             // 
@@ -654,7 +651,7 @@
             this.colMtestime.UnboundExpression = "[PEstime] * [QEstime]";
             this.colMtestime.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.colMtestime.Visible = true;
-            this.colMtestime.VisibleIndex = 38;
+            this.colMtestime.VisibleIndex = 36;
             // 
             // coLumn
             // 
@@ -679,7 +676,7 @@
             this.coLumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "L", "{0}")});
             this.coLumn.Visible = true;
-            this.coLumn.VisibleIndex = 12;
+            this.coLumn.VisibleIndex = 3;
             this.coLumn.Width = 41;
             // 
             // gridColCheck
@@ -697,7 +694,7 @@
             this.gridColCheck.FieldName = "CheckCommande";
             this.gridColCheck.Name = "gridColCheck";
             this.gridColCheck.Visible = true;
-            this.gridColCheck.VisibleIndex = 2;
+            this.gridColCheck.VisibleIndex = 40;
             this.gridColCheck.Width = 53;
             // 
             // colPlacer
@@ -708,7 +705,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 8;
+            this.colPlacer.VisibleIndex = 26;
             // 
             // colVerif
             // 
@@ -718,17 +715,22 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 10;
+            this.colVerif.VisibleIndex = 23;
             // 
             // colState
             // 
+            this.colState.AppearanceCell.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.colState.AppearanceCell.Options.UseForeColor = true;
+            this.colState.AppearanceHeader.ForeColor = System.Drawing.Color.Green;
+            this.colState.AppearanceHeader.Options.UseForeColor = true;
             this.colState.AppearanceHeader.Options.UseTextOptions = true;
             this.colState.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colState.Caption = "SITUATION";
+            this.colState.Caption = "S.PDT";
             this.colState.FieldName = "State";
             this.colState.Name = "colState";
             this.colState.Visible = true;
-            this.colState.VisibleIndex = 13;
+            this.colState.VisibleIndex = 4;
+            this.colState.Width = 46;
             // 
             // colVers
             // 
@@ -740,7 +742,7 @@
             this.colVers.FieldName = "Nomvers";
             this.colVers.Name = "colVers";
             this.colVers.Visible = true;
-            this.colVers.VisibleIndex = 17;
+            this.colVers.VisibleIndex = 10;
             // 
             // colSign
             // 
@@ -750,7 +752,7 @@
             this.colSign.FieldName = "AlertVte";
             this.colSign.Name = "colSign";
             this.colSign.Visible = true;
-            this.colSign.VisibleIndex = 3;
+            this.colSign.VisibleIndex = 0;
             this.colSign.Width = 61;
             // 
             // colProj
@@ -761,7 +763,7 @@
             this.colProj.FieldName = "AlertCom";
             this.colProj.Name = "colProj";
             this.colProj.Visible = true;
-            this.colProj.VisibleIndex = 5;
+            this.colProj.VisibleIndex = 2;
             this.colProj.Width = 66;
             // 
             // colACA
@@ -770,8 +772,34 @@
             this.colACA.FieldName = "AlertAch";
             this.colACA.Name = "colACA";
             this.colACA.Visible = true;
-            this.colACA.VisibleIndex = 4;
+            this.colACA.VisibleIndex = 1;
             this.colACA.Width = 61;
+            // 
+            // colComm
+            // 
+            this.colComm.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.colComm.AppearanceCell.Options.UseForeColor = true;
+            this.colComm.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.colComm.AppearanceHeader.Options.UseForeColor = true;
+            this.colComm.Caption = "S.CMD";
+            this.colComm.FieldName = "Commerce";
+            this.colComm.Name = "colComm";
+            this.colComm.Visible = true;
+            this.colComm.VisibleIndex = 5;
+            this.colComm.Width = 42;
+            // 
+            // colFourniss
+            // 
+            this.colFourniss.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.colFourniss.AppearanceCell.Options.UseForeColor = true;
+            this.colFourniss.AppearanceHeader.ForeColor = System.Drawing.Color.Blue;
+            this.colFourniss.AppearanceHeader.Options.UseForeColor = true;
+            this.colFourniss.Caption = "S.FRNS";
+            this.colFourniss.FieldName = "Fournisseur";
+            this.colFourniss.Name = "colFourniss";
+            this.colFourniss.Visible = true;
+            this.colFourniss.VisibleIndex = 6;
+            this.colFourniss.Width = 42;
             // 
             // myNum
             // 
@@ -785,6 +813,13 @@
             this.myNum.Size = new System.Drawing.Size(6, 13);
             this.myNum.TabIndex = 6;
             this.myNum.Text = "0";
+            // 
+            // datertoolStripMenuItem
+            // 
+            this.datertoolStripMenuItem.Name = "datertoolStripMenuItem";
+            this.datertoolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.datertoolStripMenuItem.Text = "Dateur";
+            this.datertoolStripMenuItem.Click += new System.EventHandler(this.daterToolStripMenuItem_Click);
             // 
             // XtraComment
             // 
@@ -863,6 +898,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSign;
         private DevExpress.XtraGrid.Columns.GridColumn colProj;
         private DevExpress.XtraGrid.Columns.GridColumn colACA;
-        private System.Windows.Forms.ToolStripMenuItem daterMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colComm;
+        private DevExpress.XtraGrid.Columns.GridColumn colFourniss;
+        private System.Windows.Forms.ToolStripMenuItem datertoolStripMenuItem;
     }
 }

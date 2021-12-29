@@ -16,7 +16,9 @@ namespace gescom.create.Views
             InitializeComponent();
             Text = item.Designation;
             cdf.Text = item.CompleteCode;
-            nombre.Text = item.Ndx.ToString();
+            achatCtrl.Text=item.Qvente.ToString();
+            venteCtrl.Text=item.Qachat.ToString();
+            stockCtrl.Text=item.QStock.ToString();
             DateAchat.DateTime = (DateTime)item.DateAchat;
             DateVente.DateTime = (DateTime)item.DateVente;
         }

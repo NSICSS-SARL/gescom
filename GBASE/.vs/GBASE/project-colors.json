@@ -1,5 +1,11 @@
 {
   "Version": 1,
-  "ProjectMap": {},
-  "NextColorIndex": 0
+  "ProjectMap": {
+    "c8cf1fe3-044b-43b4-b6cb-cda7eeb7314d": {
+      "ProjectGuid": "c8cf1fe3-044b-43b4-b6cb-cda7eeb7314d",
+      "DisplayName": "gescom.create",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
 }

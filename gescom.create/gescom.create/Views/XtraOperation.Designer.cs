@@ -71,12 +71,7 @@
             this.myNum = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.dateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
-            this.splitContainerControl1.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
-            this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
@@ -90,15 +85,9 @@
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            // 
-            // splitContainerControl1.Panel1
-            // 
             this.splitContainerControl1.Panel1.Controls.Add(this.gridActions);
             this.splitContainerControl1.Panel1.Controls.Add(this.myNum);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            // 
-            // splitContainerControl1.Panel2
-            // 
             this.splitContainerControl1.Panel2.Controls.Add(this.simpleButton2);
             this.splitContainerControl1.Panel2.Controls.Add(this.simpleButton1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
@@ -127,10 +116,9 @@
             // 
             this.clicDroit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.créationToolStripMenuItem,
-            this.comparerToolStripMenuItem,
-            this.dateurToolStripMenuItem});
+            this.comparerToolStripMenuItem});
             this.clicDroit.Name = "clicDroit";
-            this.clicDroit.Size = new System.Drawing.Size(191, 92);
+            this.clicDroit.Size = new System.Drawing.Size(191, 48);
             // 
             // créationToolStripMenuItem
             // 
@@ -629,13 +617,6 @@
             this.simpleButton1.Text = "Enregi&trer";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // dateurToolStripMenuItem
-            // 
-            this.dateurToolStripMenuItem.Name = "dateurToolStripMenuItem";
-            this.dateurToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.dateurToolStripMenuItem.Text = "Dateur";
-            this.dateurToolStripMenuItem.Click += new System.EventHandler(this.GetDates);
-            // 
             // XtraOperation
             // 
             this.AcceptButton = this.simpleButton1;
@@ -643,7 +624,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1908, 861);
             this.Controls.Add(this.splitContainerControl1);
-            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraOperation.IconOptions.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Office 2013";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "XtraOperation";
@@ -651,11 +632,6 @@
             this.Text = "COMMANDE";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.XtraOperation_Activated);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
-            this.splitContainerControl1.Panel1.ResumeLayout(false);
-            this.splitContainerControl1.Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
-            this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).EndInit();
@@ -708,6 +684,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn Catalan;
         private DevExpress.XtraGrid.Columns.GridColumn valeursto;
         private DevExpress.XtraGrid.Columns.GridColumn colMtEstime;
-        private System.Windows.Forms.ToolStripMenuItem dateurToolStripMenuItem;
     }
 }

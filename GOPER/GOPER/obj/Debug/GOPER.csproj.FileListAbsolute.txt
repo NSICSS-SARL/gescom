@@ -85,3 +85,12 @@ C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CoreCompileIn
 C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.exe
 C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.pdb
 C:\Users\PC\source\repos\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CopyComplete
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.MainForm.resources
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.Properties.Resources.resources
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.GenerateResource.cache
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.exe.licenses
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CoreCompileInputs.cache
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.exe
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.pdb
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.AssemblyReference.cache
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CopyComplete

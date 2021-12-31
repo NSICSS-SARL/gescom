@@ -132,6 +132,7 @@ namespace gescom.create.Views
             }
 
             pdetail.Text = StdCalcul.AfficherPrix(prDetail);
+            pdetail2.Text = StdCalcul.AfficherPrix(prDetail);
             pspecial.Text = StdCalcul.AfficherPrix(prSpec);
             pgros.Text = StdCalcul.AfficherPrix(prGros);
             vprime.Text = StdCalcul.AfficherPrix(myprime);
@@ -502,6 +503,7 @@ namespace gescom.create.Views
             {
                 case "CMD":
                     commCMD.Checked = true;
+                    cmdCheck.Checked = true;
                     break;
                 case "SPD":
                     radioSPD.Checked = true;
@@ -537,6 +539,7 @@ namespace gescom.create.Views
             var cce = "";
             var frns = "";
             if (commCMD.Checked) cce = "CMD";
+            if (cmdCheck.Checked) cce = "CMD";
             if (radioSPD.Checked) cce = "SPD";
             if (dangerBtn.Checked) cce = "STOP";
             if (radioRupt.Checked) frns = "En rupture";

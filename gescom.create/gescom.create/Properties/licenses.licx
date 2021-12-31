@@ -1,5 +1,6 @@
 DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 Telerik.WinControls.Themes.TelerikMetroTheme, Telerik.WinControls.Themes.TelerikMetro, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e

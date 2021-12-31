@@ -58,6 +58,9 @@
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.radPanel3 = new Telerik.WinControls.UI.RadPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bigSplitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bigSplitter.Panel1)).BeginInit();
+            this.bigSplitter.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bigSplitter.Panel2)).BeginInit();
             this.bigSplitter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.divisConteneur)).BeginInit();
             this.divisConteneur.Panel1.SuspendLayout();
@@ -86,10 +89,16 @@
             this.bigSplitter.IsSplitterFixed = true;
             this.bigSplitter.Location = new System.Drawing.Point(0, 0);
             this.bigSplitter.Name = "bigSplitter";
+            // 
+            // bigSplitter.Panel1
+            // 
             this.bigSplitter.Panel1.Controls.Add(this.divisConteneur);
             this.bigSplitter.Panel1.Controls.Add(this.ultraPanel1);
             this.bigSplitter.Panel1.Controls.Add(this.panelHeader);
             this.bigSplitter.Panel1.Text = "Panel1";
+            // 
+            // bigSplitter.Panel2
+            // 
             this.bigSplitter.Panel2.Text = "Panel2";
             this.bigSplitter.Size = new System.Drawing.Size(847, 634);
             this.bigSplitter.SplitterPosition = 826;
@@ -305,72 +314,62 @@
             this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCode.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(23, 2);
-            this.txtCode.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(77, 22);
-            this.txtCode.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.txtCode.TabIndex = 0;
             this.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCode.ThemeName = "Default";
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_ValueChanged);
             // 
             // txtStock
             // 
-            this.txtStock.BackGroundColor = System.Drawing.SystemColors.Window;
             this.txtStock.BeforeTouchSize = new System.Drawing.Size(86, 22);
             this.txtStock.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStock.DoubleValue = 0D;
             this.txtStock.Enabled = false;
             this.txtStock.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(697, 3);
-            this.txtStock.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtStock.Name = "txtStock";
-            this.txtStock.NullString = "";
             this.txtStock.ReadOnly = true;
             this.txtStock.SelectAllOnFocus = false;
             this.txtStock.Size = new System.Drawing.Size(113, 22);
-            this.txtStock.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.txtStock.TabIndex = 5;
             this.txtStock.Text = "0,00";
             this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtStock.ThemeName = "Default";
             this.txtStock.Visible = false;
             // 
             // txtPrix
             // 
-            this.txtPrix.BackGroundColor = System.Drawing.SystemColors.Window;
             this.txtPrix.BeforeTouchSize = new System.Drawing.Size(86, 22);
             this.txtPrix.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrix.DoubleValue = 0D;
             this.txtPrix.Enabled = false;
             this.txtPrix.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrix.Location = new System.Drawing.Point(521, 3);
-            this.txtPrix.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtPrix.Name = "txtPrix";
-            this.txtPrix.NullString = "";
             this.txtPrix.ReadOnly = true;
             this.txtPrix.SelectAllOnFocus = false;
             this.txtPrix.Size = new System.Drawing.Size(82, 22);
-            this.txtPrix.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.txtPrix.TabIndex = 4;
             this.txtPrix.Text = "0,00";
             this.txtPrix.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrix.ThemeName = "Default";
             this.txtPrix.Visible = false;
             // 
             // txtQte
             // 
-            this.txtQte.BackGroundColor = System.Drawing.SystemColors.Window;
             this.txtQte.BeforeTouchSize = new System.Drawing.Size(86, 22);
             this.txtQte.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQte.DoubleValue = 0D;
             this.txtQte.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQte.Location = new System.Drawing.Point(430, 3);
-            this.txtQte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtQte.Name = "txtQte";
-            this.txtQte.NullString = "";
             this.txtQte.Size = new System.Drawing.Size(86, 22);
-            this.txtQte.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.txtQte.TabIndex = 3;
             this.txtQte.Text = "0,00";
             this.txtQte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtQte.ThemeName = "Default";
             this.txtQte.Visible = false;
             // 
             // txtNom
@@ -508,7 +507,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell";
             this.Load += new System.EventHandler(this.XtraVente_Load);
-            this.Shown += new System.EventHandler(this.XtraVente_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.bigSplitter.Panel1)).EndInit();
+            this.bigSplitter.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bigSplitter.Panel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bigSplitter)).EndInit();
             this.bigSplitter.ResumeLayout(false);
             this.divisConteneur.Panel1.ResumeLayout(false);

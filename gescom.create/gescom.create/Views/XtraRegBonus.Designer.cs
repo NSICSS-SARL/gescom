@@ -189,6 +189,28 @@
             this.suspendBtn = new System.Windows.Forms.RadioButton();
             this.stopBtn = new System.Windows.Forms.RadioButton();
             this.percText = new System.Windows.Forms.TextBox();
+            this.cadreNew = new DevExpress.XtraEditors.PanelControl();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.prixCommande = new DevExpress.XtraEditors.TextEdit();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.pdetail2 = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            this.cmdCheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
@@ -260,6 +282,24 @@
             this.visibleBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkEpuise.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).BeginInit();
+            this.cadreNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prixCommande.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdetail2)).BeginInit();
             this.SuspendLayout();
             // 
             // tete
@@ -557,7 +597,7 @@
             // 
             // formel
             // 
-            this.formel.Location = new System.Drawing.Point(400, 98);
+            this.formel.Location = new System.Drawing.Point(373, 101);
             this.formel.Name = "formel";
             this.formel.Properties.Caption = "&Formel";
             this.formel.Size = new System.Drawing.Size(60, 20);
@@ -568,7 +608,7 @@
             // 
             // taxable
             // 
-            this.taxable.Location = new System.Drawing.Point(307, 99);
+            this.taxable.Location = new System.Drawing.Point(307, 100);
             this.taxable.Name = "taxable";
             this.taxable.Properties.Caption = "&Taxable";
             this.taxable.Size = new System.Drawing.Size(60, 20);
@@ -672,7 +712,7 @@
             // 
             // vprime
             // 
-            this.vprime.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.vprime.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.vprime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.vprime.Enabled = false;
             this.vprime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -699,7 +739,7 @@
             // 
             // pextra
             // 
-            this.pextra.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.pextra.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.pextra.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pextra.Enabled = false;
             this.pextra.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -717,7 +757,7 @@
             // 
             // pspecial
             // 
-            this.pspecial.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.pspecial.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.pspecial.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pspecial.Enabled = false;
             this.pspecial.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -734,7 +774,7 @@
             // 
             // pdetail
             // 
-            this.pdetail.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.pdetail.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.pdetail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pdetail.Enabled = false;
             this.pdetail.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -752,7 +792,7 @@
             // 
             // pgros
             // 
-            this.pgros.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.pgros.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.pgros.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pgros.Enabled = false;
             this.pgros.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -769,7 +809,7 @@
             // 
             // revient
             // 
-            this.revient.BeforeTouchSize = new System.Drawing.Size(113, 21);
+            this.revient.BeforeTouchSize = new System.Drawing.Size(72, 21);
             this.revient.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.revient.Enabled = false;
             this.revient.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1073,20 +1113,15 @@
             this.prodCadre.Controls.Add(this.prodVend);
             this.prodCadre.Controls.Add(this.prodLabelS);
             this.prodCadre.Controls.Add(this.codeF);
-            this.prodCadre.Controls.Add(this.prodPrix);
-            this.prodCadre.Controls.Add(this.prodLabelSeuil);
             this.prodCadre.Controls.Add(this.taxable);
-            this.prodCadre.Controls.Add(this.prodQte);
-            this.prodCadre.Controls.Add(this.prodUnity);
             this.prodCadre.Controls.Add(this.prodRefce);
             this.prodCadre.Controls.Add(this.prodNom);
-            this.prodCadre.Controls.Add(this.prodLabelUnite);
             this.prodCadre.Controls.Add(this.prodLabelRef);
             this.prodCadre.Controls.Add(this.prodLabelNom);
             this.prodCadre.Location = new System.Drawing.Point(626, 51);
             this.prodCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.prodCadre.Name = "prodCadre";
-            this.prodCadre.Size = new System.Drawing.Size(617, 147);
+            this.prodCadre.Size = new System.Drawing.Size(617, 133);
             this.prodCadre.TabIndex = 2;
             // 
             // katalog
@@ -1107,7 +1142,7 @@
             // 
             // prodDesk
             // 
-            this.prodDesk.Location = new System.Drawing.Point(206, 73);
+            this.prodDesk.Location = new System.Drawing.Point(131, 73);
             this.prodDesk.Name = "prodDesk";
             this.prodDesk.Size = new System.Drawing.Size(189, 20);
             this.prodDesk.TabIndex = 4;
@@ -1132,7 +1167,7 @@
             // 
             // codeF
             // 
-            this.codeF.Location = new System.Drawing.Point(400, 73);
+            this.codeF.Location = new System.Drawing.Point(328, 74);
             this.codeF.Name = "codeF";
             this.codeF.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.codeF.Properties.Appearance.Options.UseForeColor = true;
@@ -1143,7 +1178,7 @@
             // prodPrix
             // 
             this.prodPrix.EditValue = "0";
-            this.prodPrix.Location = new System.Drawing.Point(204, 123);
+            this.prodPrix.Location = new System.Drawing.Point(270, 35);
             this.prodPrix.Name = "prodPrix";
             this.prodPrix.Size = new System.Drawing.Size(71, 20);
             this.prodPrix.TabIndex = 10;
@@ -1151,16 +1186,16 @@
             // 
             // prodLabelSeuil
             // 
-            this.prodLabelSeuil.Location = new System.Drawing.Point(13, 127);
+            this.prodLabelSeuil.Location = new System.Drawing.Point(117, 5);
             this.prodLabelSeuil.Name = "prodLabelSeuil";
-            this.prodLabelSeuil.Size = new System.Drawing.Size(40, 13);
+            this.prodLabelSeuil.Size = new System.Drawing.Size(18, 13);
             this.prodLabelSeuil.TabIndex = 13;
-            this.prodLabelSeuil.Text = "Qté/Prix";
+            this.prodLabelSeuil.Text = "Qté";
             // 
             // prodQte
             // 
             this.prodQte.EditValue = "0";
-            this.prodQte.Location = new System.Drawing.Point(130, 123);
+            this.prodQte.Location = new System.Drawing.Point(92, 35);
             this.prodQte.Name = "prodQte";
             this.prodQte.Size = new System.Drawing.Size(71, 20);
             this.prodQte.TabIndex = 8;
@@ -1171,7 +1206,7 @@
             this.prodUnity.DisplayMember = "NOM";
             this.prodUnity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prodUnity.FormattingEnabled = true;
-            this.prodUnity.Location = new System.Drawing.Point(130, 73);
+            this.prodUnity.Location = new System.Drawing.Point(182, 34);
             this.prodUnity.Name = "prodUnity";
             this.prodUnity.Size = new System.Drawing.Size(72, 21);
             this.prodUnity.TabIndex = 3;
@@ -1194,7 +1229,7 @@
             // 
             // prodLabelUnite
             // 
-            this.prodLabelUnite.Location = new System.Drawing.Point(13, 78);
+            this.prodLabelUnite.Location = new System.Drawing.Point(202, 5);
             this.prodLabelUnite.Name = "prodLabelUnite";
             this.prodLabelUnite.Size = new System.Drawing.Size(25, 13);
             this.prodLabelUnite.TabIndex = 10;
@@ -1246,7 +1281,7 @@
             this.distCadre.Controls.Add(this.distLabelRef);
             this.distCadre.Controls.Add(this.distLabelNom);
             this.distCadre.Controls.Add(this.labelControl8);
-            this.distCadre.Location = new System.Drawing.Point(626, 246);
+            this.distCadre.Location = new System.Drawing.Point(626, 237);
             this.distCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.distCadre.Name = "distCadre";
             this.distCadre.Size = new System.Drawing.Size(617, 166);
@@ -1380,7 +1415,7 @@
             this.dernier.Controls.Add(this.annuler);
             this.dernier.Controls.Add(this.creer);
             this.dernier.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dernier.Location = new System.Drawing.Point(0, 628);
+            this.dernier.Location = new System.Drawing.Point(0, 794);
             this.dernier.Name = "dernier";
             this.dernier.Size = new System.Drawing.Size(1246, 30);
             this.dernier.TabIndex = 9;
@@ -1885,7 +1920,7 @@
             this.groupBleu.Controls.Add(this.radioRS);
             this.groupBleu.Controls.Add(this.radioRupt);
             this.groupBleu.Controls.Add(this.radioPuise);
-            this.groupBleu.Location = new System.Drawing.Point(630, 200);
+            this.groupBleu.Location = new System.Drawing.Point(630, 189);
             this.groupBleu.Name = "groupBleu";
             this.groupBleu.Size = new System.Drawing.Size(387, 43);
             this.groupBleu.TabIndex = 4;
@@ -2101,13 +2136,245 @@
             this.percText.Size = new System.Drawing.Size(61, 21);
             this.percText.TabIndex = 11;
             // 
+            // cadreNew
+            // 
+            this.cadreNew.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cadreNew.Controls.Add(this.cmdCheck);
+            this.cadreNew.Controls.Add(this.pdetail2);
+            this.cadreNew.Controls.Add(this.textEdit9);
+            this.cadreNew.Controls.Add(this.textEdit10);
+            this.cadreNew.Controls.Add(this.comboBox3);
+            this.cadreNew.Controls.Add(this.textEdit12);
+            this.cadreNew.Controls.Add(this.textEdit8);
+            this.cadreNew.Controls.Add(this.textEdit5);
+            this.cadreNew.Controls.Add(this.textEdit6);
+            this.cadreNew.Controls.Add(this.comboBox2);
+            this.cadreNew.Controls.Add(this.textEdit7);
+            this.cadreNew.Controls.Add(this.labelControl16);
+            this.cadreNew.Controls.Add(this.textEdit4);
+            this.cadreNew.Controls.Add(this.dateEdit2);
+            this.cadreNew.Controls.Add(this.prixCommande);
+            this.cadreNew.Controls.Add(this.labelControl15);
+            this.cadreNew.Controls.Add(this.labelControl14);
+            this.cadreNew.Controls.Add(this.comboBox1);
+            this.cadreNew.Controls.Add(this.textEdit2);
+            this.cadreNew.Controls.Add(this.textEdit1);
+            this.cadreNew.Controls.Add(this.dateEdit1);
+            this.cadreNew.Controls.Add(this.prodQte);
+            this.cadreNew.Controls.Add(this.prodLabelSeuil);
+            this.cadreNew.Controls.Add(this.prodUnity);
+            this.cadreNew.Controls.Add(this.prodPrix);
+            this.cadreNew.Controls.Add(this.prodLabelUnite);
+            this.cadreNew.Location = new System.Drawing.Point(7, 631);
+            this.cadreNew.LookAndFeel.SkinName = "Office 2013";
+            this.cadreNew.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.cadreNew.Name = "cadreNew";
+            this.cadreNew.Size = new System.Drawing.Size(1236, 158);
+            this.cadreNew.TabIndex = 13;
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(353, 35);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.AllowFocused = false;
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(90, 20);
+            this.dateEdit1.TabIndex = 15;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(458, 35);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(189, 20);
+            this.textEdit1.TabIndex = 16;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.EditValue = "0";
+            this.textEdit2.Location = new System.Drawing.Point(93, 66);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Size = new System.Drawing.Size(71, 20);
+            this.textEdit2.TabIndex = 17;
+            this.textEdit2.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DisplayMember = "NOM";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(182, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(72, 21);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(294, 5);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(18, 13);
+            this.labelControl14.TabIndex = 19;
+            this.labelControl14.Text = "Prix";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(380, 6);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(23, 13);
+            this.labelControl15.TabIndex = 20;
+            this.labelControl15.Text = "Date";
+            // 
+            // prixCommande
+            // 
+            this.prixCommande.EditValue = "0";
+            this.prixCommande.Location = new System.Drawing.Point(271, 67);
+            this.prixCommande.Name = "prixCommande";
+            this.prixCommande.Size = new System.Drawing.Size(71, 20);
+            this.prixCommande.TabIndex = 21;
+            this.prixCommande.ToolTip = "Prix d\'achat unitaire";
+            // 
+            // dateEdit2
+            // 
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(353, 67);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.AllowFocused = false;
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Size = new System.Drawing.Size(90, 20);
+            this.dateEdit2.TabIndex = 22;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(458, 67);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Size = new System.Drawing.Size(189, 20);
+            this.textEdit4.TabIndex = 23;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(533, 5);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(29, 13);
+            this.labelControl16.TabIndex = 24;
+            this.labelControl16.Text = "Libellé";
+            // 
+            // textEdit5
+            // 
+            this.textEdit5.Location = new System.Drawing.Point(351, 97);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Size = new System.Drawing.Size(94, 20);
+            this.textEdit5.TabIndex = 29;
+            // 
+            // textEdit6
+            // 
+            this.textEdit6.EditValue = "0";
+            this.textEdit6.Location = new System.Drawing.Point(272, 97);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Size = new System.Drawing.Size(71, 20);
+            this.textEdit6.TabIndex = 27;
+            this.textEdit6.ToolTip = "Prix d\'achat unitaire";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DisplayMember = "NOM";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(183, 96);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(72, 21);
+            this.comboBox2.TabIndex = 26;
+            // 
+            // textEdit7
+            // 
+            this.textEdit7.EditValue = "0";
+            this.textEdit7.Location = new System.Drawing.Point(94, 96);
+            this.textEdit7.Name = "textEdit7";
+            this.textEdit7.Size = new System.Drawing.Size(71, 20);
+            this.textEdit7.TabIndex = 25;
+            this.textEdit7.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // textEdit8
+            // 
+            this.textEdit8.Location = new System.Drawing.Point(458, 97);
+            this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Size = new System.Drawing.Size(189, 20);
+            this.textEdit8.TabIndex = 30;
+            // 
+            // textEdit9
+            // 
+            this.textEdit9.Location = new System.Drawing.Point(458, 127);
+            this.textEdit9.Name = "textEdit9";
+            this.textEdit9.Size = new System.Drawing.Size(189, 20);
+            this.textEdit9.TabIndex = 35;
+            // 
+            // textEdit10
+            // 
+            this.textEdit10.Location = new System.Drawing.Point(351, 127);
+            this.textEdit10.Name = "textEdit10";
+            this.textEdit10.Size = new System.Drawing.Size(94, 20);
+            this.textEdit10.TabIndex = 34;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DisplayMember = "NOM";
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(183, 126);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(72, 21);
+            this.comboBox3.TabIndex = 32;
+            // 
+            // textEdit12
+            // 
+            this.textEdit12.EditValue = "0";
+            this.textEdit12.Location = new System.Drawing.Point(94, 126);
+            this.textEdit12.Name = "textEdit12";
+            this.textEdit12.Size = new System.Drawing.Size(71, 20);
+            this.textEdit12.TabIndex = 31;
+            this.textEdit12.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // pdetail2
+            // 
+            this.pdetail2.BeforeTouchSize = new System.Drawing.Size(72, 21);
+            this.pdetail2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pdetail2.Enabled = false;
+            this.pdetail2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pdetail2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.pdetail2.IntegerValue = ((long)(0));
+            this.pdetail2.Location = new System.Drawing.Point(270, 126);
+            this.pdetail2.MinimumSize = new System.Drawing.Size(4, 18);
+            this.pdetail2.Name = "pdetail2";
+            this.pdetail2.ReadOnly = true;
+            this.pdetail2.SelectAllOnFocus = false;
+            this.pdetail2.Size = new System.Drawing.Size(72, 21);
+            this.pdetail2.TabIndex = 36;
+            this.pdetail2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pdetail2.ThemeName = "Default";
+            // 
+            // cmdCheck
+            // 
+            this.cmdCheck.AutoSize = true;
+            this.cmdCheck.Location = new System.Drawing.Point(13, 35);
+            this.cmdCheck.Name = "cmdCheck";
+            this.cmdCheck.Size = new System.Drawing.Size(48, 17);
+            this.cmdCheck.TabIndex = 37;
+            this.cmdCheck.Text = "CMD";
+            this.cmdCheck.UseVisualStyleBackColor = true;
+            // 
             // XtraRegBonus
             // 
             this.AcceptButton = this.creer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
-            this.ClientSize = new System.Drawing.Size(1246, 658);
+            this.ClientSize = new System.Drawing.Size(1246, 824);
+            this.Controls.Add(this.cadreNew);
             this.Controls.Add(this.percText);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelAvDern);
@@ -2215,6 +2482,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEpuise.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).EndInit();
+            this.cadreNew.ResumeLayout(false);
+            this.cadreNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prixCommande.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdetail2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2382,5 +2668,27 @@
         private System.Windows.Forms.RadioButton stopBtn;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox percText;
+        private DevExpress.XtraEditors.PanelControl cadreNew;
+        private Syncfusion.Windows.Forms.Tools.IntegerTextBox pdetail2;
+        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit textEdit10;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.TextEdit prixCommande;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private System.Windows.Forms.CheckBox cmdCheck;
     }
 }

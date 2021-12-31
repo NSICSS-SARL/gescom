@@ -387,9 +387,5 @@ namespace gescom.create.Views
 
             _myList = OperationHelpers.GetCart(_person, _wid).ToList();
         }
-
-        private void XtraVente_Shown(object sender, EventArgs e)
-        {
-        }
     }
 }

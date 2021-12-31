@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraReports.UI;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.report.Reports
 {
@@ -21,7 +21,7 @@ namespace gescom.report.Reports
             fin.Text = null;
             tous.Text = @"TOUS";
             SetPerson(pid);
-            List<SoldeText> listText = CompteHelpers.GetSoldeTexts(liste);
+            var listText = CompteHelpers.GetSoldeTexts(liste);
             DataSource = listText;
             Id.DataBindings.Add("Text", listText, "Id");
             Datum.DataBindings.Add("Text", listText, "Daty");
@@ -31,12 +31,13 @@ namespace gescom.report.Reports
             Credit.DataBindings.Add("Text", listText, "Credit");
             float totDebit = 0;
             float totCredit = 0;
-            foreach (SoldeItem item in liste)
+            foreach (var item in liste)
             {
                 totDebit += item.Debit;
                 totCredit += item.Credit;
             }
-            float tSolde = totDebit - totCredit;
+
+            var tSolde = totDebit - totCredit;
             totalDebit.Text = StdCalcul.DoubleToSpaceFormat(totDebit);
             totalCredit.Text = StdCalcul.DoubleToSpaceFormat(totCredit);
             solde.Text = StdCalcul.DoubleToSpaceFormat(tSolde);
@@ -49,7 +50,7 @@ namespace gescom.report.Reports
             debut.Text = dateDebut.ToString("d");
             fin.Text = dateFin.ToString("d");
             SetPerson(pid);
-            List<SoldeText> listText = CompteHelpers.GetSoldeTexts(liste);
+            var listText = CompteHelpers.GetSoldeTexts(liste);
             DataSource = listText;
             Id.DataBindings.Add("Text", listText, "Id");
             Datum.DataBindings.Add("Text", listText, "Daty");
@@ -59,16 +60,17 @@ namespace gescom.report.Reports
             Credit.DataBindings.Add("Text", listText, "Credit");
             float totDebit = 0;
             float totCredit = 0;
-            foreach (SoldeItem item in liste)
+            foreach (var item in liste)
             {
                 totDebit += item.Debit;
                 totCredit += item.Credit;
             }
-            float tSolde = totDebit - totCredit;
+
+            var tSolde = totDebit - totCredit;
             totalDebit.Text = StdCalcul.DoubleToSpaceFormat(totDebit);
             totalCredit.Text = StdCalcul.DoubleToSpaceFormat(totCredit);
             solde.Text = StdCalcul.DoubleToSpaceFormat(tSolde);
-            float anterior = CompteHelpers.GetAnteriorSolde(liste, dateDebut);
+            var anterior = CompteHelpers.GetAnteriorSolde(liste, dateDebut);
             if (anterior > 0)
             {
                 reporting.Visible = true;
@@ -83,26 +85,17 @@ namespace gescom.report.Reports
 
         private void SetInfo()
         {
-            PersonModel p = PersonHelpers.Get(1);
+            var p = PersonHelpers.Get(1);
             nom.Text = p.Nom;
             adresse.Text = p.Adresse;
         }
 
         private void SetPerson(long pid)
         {
-            PersonModel p = PersonHelpers.Get(pid);
-            if (p.Groupe == 0)
-            {
-                Typage.Text = "FOURNISSEUR";
-            }
-            if (p.Groupe == 5)
-            {
-                Typage.Text = "PERSONNEL";
-            }
-            if ((p.Groupe > 0) && (p.Groupe < 5))
-            {
-                Typage.Text = "CLIENT";
-            }
+            var p = PersonHelpers.Get(pid);
+            if (p.Groupe == 0) Typage.Text = "FOURNISSEUR";
+            if (p.Groupe == 5) Typage.Text = "PERSONNEL";
+            if (p.Groupe > 0 && p.Groupe < 5) Typage.Text = "CLIENT";
             Numero.Text = StdCalcul.DoubleToSpaceFormat(p.Id);
             Noms.Text = p.Nom;
             Adresses.Text = p.Adresse;

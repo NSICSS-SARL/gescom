@@ -1,21 +1,21 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Collections.Generic;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
-using System.Collections.Generic;
 
 namespace gescom.create.Views
 {
     public partial class XtraChoix : XtraForm
     {
         private readonly long _index;
-        private List<PersonItem> members;
         private long _group;
         private long _id;
-        private long _pid;
-        private long _wid;
-        private string _tiers;
         private PersonItem _person;
+        private long _pid;
+        private string _tiers;
+        private long _wid;
+        private readonly List<PersonItem> members;
 
         public XtraChoix()
         {
@@ -40,9 +40,8 @@ namespace gescom.create.Views
         {
             var result = new PersonItem();
             foreach (var p in members)
-            {
-                if (p.Id == id) { result = p; }
-            }
+                if (p.Id == id)
+                    result = p;
             return result;
         }
 
@@ -56,38 +55,40 @@ namespace gescom.create.Views
                 textNum.SelectAll();
                 return;
             }
-            long id = long.Parse(textNum.Text);
-            if ((_group == 0) && (_index != 1))
+
+            var id = long.Parse(textNum.Text);
+            if (_group == 0 && _index != 1)
             {
                 CreateHelpers.EffectuerEntree(id);
                 Close();
             }
+
             if (_index == 1)
             {
                 CreateHelpers.EffectuerAvoir(id, new PersonModel(_person));
                 Close();
             }
+
             if (_index == 2)
             {
-                long wid = long.Parse(textRec.Text);
+                var wid = long.Parse(textRec.Text);
                 CreateHelpers.EffectuerVente(id, worker.Text, wid);
                 Close();
             }
+
             if (_index == -9)
             {
                 CreateHelpers.EffectuerSimulation(id);
                 Close();
             }
+
             Close();
         }
 
         private void Init(string text)
         {
             Text = text;
-            if (_index != 2)
-            {
-                return;
-            }
+            if (_index != 2) return;
             labelRec.Visible = true;
             textRec.Visible = true;
             worker.Visible = true;
@@ -95,16 +96,10 @@ namespace gescom.create.Views
 
         private void OnReceptChange()
         {
-            if (!labelRec.Visible)
-            {
-                return;
-            }
+            if (!labelRec.Visible) return;
             worker.Text = null;
-            string s = textRec.Text;
-            if (string.IsNullOrEmpty(s))
-            {
-                return;
-            }
+            var s = textRec.Text;
+            if (string.IsNullOrEmpty(s)) return;
             long id;
             try
             {
@@ -114,10 +109,8 @@ namespace gescom.create.Views
             {
                 return;
             }
-            if (id <= 1)
-            {
-                return;
-            }
+
+            if (id <= 1) return;
             _person = Get(id);
             _group = _person.Groupe;
             if (_group == 5)
@@ -130,15 +123,9 @@ namespace gescom.create.Views
 
         private void OnChange()
         {
-            if (creer.Enabled)
-            {
-                creer.Enabled = false;
-            }
-            string s = textNum.Text;
-            if (string.IsNullOrEmpty(s))
-            {
-                return;
-            }
+            if (creer.Enabled) creer.Enabled = false;
+            var s = textNum.Text;
+            if (string.IsNullOrEmpty(s)) return;
             long id;
             try
             {
@@ -148,38 +135,40 @@ namespace gescom.create.Views
             {
                 return;
             }
-            if (id <= 1)
-            {
-                return;
-            }
+
+            if (id <= 1) return;
             _person = Get(id);
             _group = _person.Groupe;
-            if ((_index == 1) && (_group == 2))
+            if (_index == 1 && _group == 2)
             {
                 Text = @"AVOIR:" + _person.Nom;
                 creer.Enabled = true;
                 return;
             }
-            if ((_index == 0) && (_group == 0))
+
+            if (_index == 0 && _group == 0)
             {
                 Text = _person.Nom;
                 labelNum.Text = @"ID FOURNISSEUR";
                 creer.Enabled = true;
                 return;
             }
-            if ((_index == 0) || (_group <= 0)) return;
+
+            if (_index == 0 || _group <= 0) return;
             if (_index == -9)
             {
                 Text = @"DEMANDE PRIX:" + _person.Nom;
                 creer.Enabled = true;
                 return;
             }
+
             if (_index != 2) return;
-            if ((_group > 4) || (_group <= 0))
+            if (_group > 4 || _group <= 0)
             {
                 Text = @"FACTURE:";
                 return;
             }
+
             _tiers = _person.Nom;
             _pid = _person.Id;
             Text = @"FACTURE:" + _tiers;
@@ -188,11 +177,8 @@ namespace gescom.create.Views
 
         private long Verify()
         {
-            string s = textRec.Text;
-            if (string.IsNullOrEmpty(s))
-            {
-                return -1;
-            }
+            var s = textRec.Text;
+            if (string.IsNullOrEmpty(s)) return -1;
             long id;
             try
             {
@@ -202,32 +188,30 @@ namespace gescom.create.Views
             {
                 return -1;
             }
-            if (id <= 0)
-            {
-                return -1;
-            }
-            if (_index == 1)
-            {
-                return 0;
-            }
+
+            if (id <= 0) return -1;
+            if (_index == 1) return 0;
             _person = Get(id);
             if (_person == null)
             {
                 _group = -1;
                 return _group;
             }
+
             _group = _person.Groupe;
-            if ((_group > 0) && (_index > 0) && (_group < 5))
+            if (_group > 0 && _index > 0 && _group < 5)
             {
                 _id = id;
                 return _group;
             }
-            if ((_group > 0) && (_index == -9))
+
+            if (_group > 0 && _index == -9)
             {
                 _id = id;
                 return _group;
             }
-            if ((_group != 0) || (_index != 0)) return _group;
+
+            if (_group != 0 || _index != 0) return _group;
             _id = id;
             return _group;
         }

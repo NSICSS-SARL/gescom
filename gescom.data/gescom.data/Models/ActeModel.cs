@@ -18,7 +18,6 @@ namespace gescom.data.Models
             return repo.Get(id);
         }
 
-       
 
         public static bool Update(ActeModel model)
         {
@@ -41,7 +40,7 @@ namespace gescom.data.Models
             return repo.Get(id);
         }
 
-       
+
         public static bool Update(VoirModel model)
         {
             var repo = new VoirItemRepository();
@@ -85,16 +84,29 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        
+        public int Count()
+        {
+            return _context.ActeItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
 
         public void Add(ActeItem item)
         {
             _context.ActeItems.InsertOnSubmit(item);
-        }
-
-        public int Count()
-        {
-            return _context.ActeItems.Count();
         }
 
         public bool Create(long id)
@@ -109,32 +121,19 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
-        
 
         public ActeItem Get(long id)
         {
             return _context.ActeItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool Update(ActeModel model)
         {
-            ActeItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {
@@ -160,7 +159,7 @@ namespace gescom.data.Models
             Id = item.Id;
             Copy(item);
         }
-      
+
 
         public int Cause { get; set; }
         public string Couleur { get; set; }
@@ -186,29 +185,17 @@ namespace gescom.data.Models
             Couleur = item.Couleur;
             State = item.State;
             if (item.Qcder != null)
-            {
-                Qcder = (double)item.Qcder;
-            }
+                Qcder = (double) item.Qcder;
             else
-            {
                 Qcder = 0;
-            }
             if (item.Entrer != null)
-            {
-                Entrer = (int)item.Entrer;
-            }
+                Entrer = (int) item.Entrer;
             else
-            {
                 Entrer = 0;
-            }
             if (item.Priter != null)
-            {
-                Priter = (int)item.Priter;
-            }
+                Priter = (int) item.Priter;
             else
-            {
                 Priter = 0;
-            }
         }
     }
 
@@ -247,14 +234,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(VoirItem item)
-        {
-            _context.VoirItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.VoirItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(VoirItem item)
+        {
+            _context.VoirItems.InsertOnSubmit(item);
         }
 
         public bool Create(long id)
@@ -269,32 +270,19 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
-       
 
         public VoirItem Get(long id)
         {
             return _context.VoirItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool Update(VoirModel model)
         {
-            VoirItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {
@@ -306,7 +294,6 @@ namespace gescom.data.Models
                 return false;
             }
         }
-       
     }
 
     public class VoirModel
@@ -325,7 +312,6 @@ namespace gescom.data.Models
             AlertVte = false;
         }
 
-     
 
         public VoirModel(VoirItem item)
         {
@@ -353,37 +339,21 @@ namespace gescom.data.Models
             VoirPlace = item.VoirPlace;
             VoirVerif = item.VoirVerif;
             if (item.AlertAch == null)
-            {
                 item.AlertAch = false;
-            }
             else
-            {
-                AlertAch = (bool)item.AlertAch;
-            }
+                AlertAch = (bool) item.AlertAch;
             if (item.AlertVte == null)
-            {
                 item.AlertVte = false;
-            }
             else
-            {
-                AlertVte = (bool)item.AlertVte;
-            }
+                AlertVte = (bool) item.AlertVte;
             if (item.AlertCom == null)
-            {
                 item.AlertCom = false;
-            }
             else
-            {
-                AlertCom = (bool)item.AlertCom;
-            }
+                AlertCom = (bool) item.AlertCom;
             if (item.AlertVte == null)
-            {
                 item.AlertVte = false;
-            }
             else
-            {
-                AlertVte = (bool)item.AlertVte;
-            }
+                AlertVte = (bool) item.AlertVte;
         }
     }
 }

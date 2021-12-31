@@ -8,10 +8,7 @@ namespace gescom.data.Models
     {
         public static void Cancel(long id)
         {
-            if (!SellToAnnulation(id))
-            {
-                return;
-            }
+            if (!SellToAnnulation(id)) return;
             ActionHelpers.Cancel(id);
             CashHelpers.Cancel(id);
         }
@@ -25,10 +22,7 @@ namespace gescom.data.Models
 
         public static void CancelPrintErrors()
         {
-            foreach (var item in GetDiaryForPrint())
-            {
-                UpdateErrorPrint(item.Id);
-            }
+            foreach (var item in GetDiaryForPrint()) UpdateErrorPrint(item.Id);
         }
 
         public static DiaryItem Create(DiaryModel model)
@@ -41,7 +35,7 @@ namespace gescom.data.Models
         public static IEnumerable<DayItem> FilterByDate(IEnumerable<DayItem> liste, DateTime debut, DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return liste.Where(item => (item.Datum <= fin) && (item.Datum >= debut));
+            return liste.Where(item => item.Datum <= fin && item.Datum >= debut);
         }
 
         public static DiaryItem Get(long id)
@@ -62,7 +56,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<DayItem> GetByGroup(IEnumerable<DayItem> liste, long group)
         {
-            return liste.Where(model => model.Groupe == @group).ToList();
+            return liste.Where(model => model.Groupe == group).ToList();
         }
 
         public static IEnumerable<DayItem> GetByPid(long id)
@@ -72,12 +66,12 @@ namespace gescom.data.Models
 
         public static IEnumerable<DiaryItem> GetDiaryForPrint()
         {
-            return GetDiaryItems().Where(item => (item.Printed == null) && (item.Groupe == 2));
+            return GetDiaryItems().Where(item => item.Printed == null && item.Groupe == 2);
         }
 
         public static IEnumerable<DiaryReceipt> GetReceiptForPrint()
         {
-            DataGescomDataContext context = new DataGescomDataContext();
+            var context = new DataGescomDataContext();
             return context.DiaryReceipts;
         }
 
@@ -85,13 +79,13 @@ namespace gescom.data.Models
         {
             var item = Get(id);
             long groupe = -1;
-            if (item.Groupe != null) groupe = (long)item.Groupe;
+            if (item.Groupe != null) groupe = (long) item.Groupe;
             return groupe;
         }
 
         public static IEnumerable<DiaryItem> GetDiaryItems()
         {
-            DataGescomDataContext context = new DataGescomDataContext();
+            var context = new DataGescomDataContext();
             return context.DiaryItems;
         }
 
@@ -111,7 +105,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<DayItem> GetItems()
         {
-            DataGescomDataContext context = new DataGescomDataContext();
+            var context = new DataGescomDataContext();
             return context.DayItems;
         }
 
@@ -126,13 +120,13 @@ namespace gescom.data.Models
         public static void ReglerBonus(long id, float montant)
         {
             var p = PersonHelpers.Get(id);
-            if (p == null) { return; }
-            if (montant <= 0) { return; }
+            if (p == null) return;
+            if (montant <= 0) return;
             var day = new DiaryModel(17, id);
             var repository = new DiaryRepository();
             var diary = repository.CreatePrimePayement(day);
             var maxPay = DateHelpers.GetAmountPrime(id);
-            if (montant > maxPay) { return; }
+            if (montant > maxPay) return;
             var item = new BonusItem
             {
                 Rang = diary.Id,
@@ -142,7 +136,7 @@ namespace gescom.data.Models
                 Groupe = 17
             };
             var reptory = new BonusRepository();
-            int count = reptory.Count();
+            var count = reptory.Count();
             item.Id = count + 1;
             reptory.Add(item);
             reptory.Save();
@@ -227,24 +221,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(DayItem item)
-        {
-            _context.DayItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.DayItems.Count();
-        }
-
-        public IQueryable<DayItem> Days()
-        {
-            return _context.DayItems;
-        }
-
-        public DayItem Get(long id)
-        {
-            return _context.DayItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -257,7 +236,23 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(DayItem item)
+        {
+            _context.DayItems.InsertOnSubmit(item);
+        }
+
+        public IQueryable<DayItem> Days()
+        {
+            return _context.DayItems;
+        }
+
+        public DayItem Get(long id)
+        {
+            return _context.DayItems.SingleOrDefault(d => d.Id == id);
         }
     }
 
@@ -330,7 +325,7 @@ namespace gescom.data.Models
             Hote = item.Hote;
             Tache = item.Tache;
             Groupe = item.Groupe;
-            Montant = (float)item.Montant;
+            Montant = (float) item.Montant;
             PersonName = item.PersonName;
             Titre = item.Titre;
             Info = item.Info;
@@ -400,12 +395,12 @@ namespace gescom.data.Models
         public void Copy(DiaryItem item)
         {
             Id = item.Id;
-            if (item.Pid != null) Pid = (long)item.Pid;
-            if (item.Datum != null) Datum = (DateTime)item.Datum;
+            if (item.Pid != null) Pid = (long) item.Pid;
+            if (item.Datum != null) Datum = (DateTime) item.Datum;
             Nom = item.Nom;
             Hote = item.Hote;
             Tache = item.Tache;
-            if (item.Groupe != null) Groupe = (long)item.Groupe;
+            if (item.Groupe != null) Groupe = (long) item.Groupe;
             Montant = item.Montant;
             PersonName = item.PersonName;
             Info = item.Info;
@@ -436,14 +431,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(DiaryItem taxe)
-        {
-            _context.DiaryItems.InsertOnSubmit(taxe);
-        }
-
         public int Count()
         {
             return _context.DiaryItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(DiaryItem taxe)
+        {
+            _context.DiaryItems.InsertOnSubmit(taxe);
         }
 
         public DiaryItem Create(DiaryModel model)
@@ -485,28 +494,16 @@ namespace gescom.data.Models
 
         public bool ModifyTask(long id, string task)
         {
-            bool result = false;
-            DiaryItem item = Get(id);
+            var result = false;
+            var item = Get(id);
             if (item.Groupe == 2)
             {
                 item.SetTask(8);
                 _context.SubmitChanges();
                 result = true;
             }
-            return result;
-        }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
+            return result;
         }
 
         public void Update(long id, long printed)

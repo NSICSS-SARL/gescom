@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Globalization;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.create.Properties;
 using gescom.data.Models;
-using System;
-using System.Globalization;
 
 namespace gescom.create.Views
 {
@@ -32,24 +32,24 @@ namespace gescom.create.Views
 
         private void Save()
         {
-            string mycode = code.Text;
-            string name = nom.Text;
+            var mycode = code.Text;
+            var name = nom.Text;
             if (string.IsNullOrEmpty(name))
             {
                 ErrorHelpers.ShowNameError();
                 nom.Focus();
                 return;
             }
+
             if (string.IsNullOrEmpty(mycode))
-            {
                 if (_index < 2)
                 {
                     ErrorHelpers.ShowCodeError();
                     code.Focus();
                     return;
                 }
-            }
-            int reserved = 0;
+
+            var reserved = 0;
             if (_id == 0)
             {
                 if (_index == 0)
@@ -60,6 +60,7 @@ namespace gescom.create.Views
                     nom.Focus();
                     return;
                 }
+
                 if (_index == 1)
                 {
                     UniteHelpers.Create(mycode, name);
@@ -68,39 +69,27 @@ namespace gescom.create.Views
                     nom.Focus();
                     return;
                 }
+
                 reserved = 0;
-                if (reserve.Checked)
-                {
-                    reserved = 1;
-                }
+                if (reserve.Checked) reserved = 1;
                 PlaceHelpers.Create(name, mycode, reserved);
                 code.Text = "";
                 nom.Text = "";
                 nom.Focus();
                 return;
             }
-            bool testError = true;
-            if (_index == 0)
-            {
-                testError = FamilleHelpers.Update(_id, mycode, name);
-            }
-            if (_index == 1)
-            {
-                testError = UniteHelpers.Update(_id, mycode, name);
-            }
-            if (reserve.Checked)
-            {
-                reserved = 1;
-            }
-            if (_index == 2)
-            {
-                testError = PlaceHelpers.Update(_id, name, mycode, reserved);
-            }
+
+            var testError = true;
+            if (_index == 0) testError = FamilleHelpers.Update(_id, mycode, name);
+            if (_index == 1) testError = UniteHelpers.Update(_id, mycode, name);
+            if (reserve.Checked) reserved = 1;
+            if (_index == 2) testError = PlaceHelpers.Update(_id, name, mycode, reserved);
             if (!testError)
             {
                 ErrorHelpers.ShowErrorDuplicate();
                 return;
             }
+
             Close();
         }
 
@@ -124,8 +113,10 @@ namespace gescom.create.Views
                         Text = Resources.XtraGlobal_Init_Nouvelle_catégorie;
                         break;
                 }
+
                 return;
             }
+
             creer.Text = Resources.XtraGlobal_Init__Modifier;
             creer.ToolTip = Resources.XtraGlobal_Init_Modifier_l_entité_en_cours;
             numero.Visible = true;
@@ -133,7 +124,7 @@ namespace gescom.create.Views
             switch (_index)
             {
                 case 1:
-                    UniteItem unite = UniteHelpers.Get(_id);
+                    var unite = UniteHelpers.Get(_id);
                     code.Text = unite.Code;
                     nom.Text = unite.Nom;
                     Text = @"UNITE: " + nom.Text;
@@ -142,7 +133,7 @@ namespace gescom.create.Views
 
                 case 2:
                     placeBox.Visible = true;
-                    PlaceItem place = PlaceHelpers.Get(_id);
+                    var place = PlaceHelpers.Get(_id);
                     labelNom.Text = "Prémière place";
                     labelCode.Text = "Séconde place";
                     code.Text = place.Nom;
@@ -151,17 +142,13 @@ namespace gescom.create.Views
                     nom.Focus();
                     placeBox.Enabled = true;
                     if (place.IsReserved > 0)
-                    {
                         reserve.Checked = true;
-                    }
                     else
-                    {
                         libre.Checked = true;
-                    }
                     break;
 
                 default:
-                    FamilleItem famille = FamilleHelpers.Get(_id);
+                    var famille = FamilleHelpers.Get(_id);
                     code.Text = famille.Code;
                     nom.Text = famille.Nom;
                     Text = @"FAMILLE: " + nom.Text;

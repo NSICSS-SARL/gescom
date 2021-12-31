@@ -1,10 +1,10 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace gescom.create.Views
 {
@@ -47,7 +47,7 @@ namespace gescom.create.Views
 
         private DateModel SetDate()
         {
-            DateModel date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
+            var date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
             return date;
         }
 
@@ -103,16 +103,10 @@ namespace gescom.create.Views
 
         private void gridActions_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.DetaillerOperation(id);
         }
 
@@ -131,6 +125,7 @@ namespace gescom.create.Views
                     SetData();
                     return;
                 }
+
                 {
                     Indexer(_index);
                 }

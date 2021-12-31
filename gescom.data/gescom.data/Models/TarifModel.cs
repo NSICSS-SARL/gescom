@@ -16,8 +16,6 @@ namespace gescom.data.Models
 
     public class TarifItem
     {
-        public MssqlQuery _query { get; set; }
-
         public TarifItem(string tableName)
         {
             Init(tableName);
@@ -29,8 +27,8 @@ namespace gescom.data.Models
         }
 
         public TarifItem(float prixAchat, float coeffficient, float margeGros, float margeDetail,
-             float margeSpecial,
-             float margeExtra)
+            float margeSpecial,
+            float margeExtra)
         {
             Achat = prixAchat;
             Revient = coeffficient;
@@ -41,7 +39,7 @@ namespace gescom.data.Models
         }
 
         public TarifItem(float prixAchat, decimal coeffficient, decimal margeGros, decimal margeDetail,
-           decimal margeSpecial, decimal margeExtra)
+            decimal margeSpecial, decimal margeExtra)
         {
             Achat = prixAchat;
             Revient = StdCalcul.DecimalToFloat(coeffficient);
@@ -50,6 +48,8 @@ namespace gescom.data.Models
             Special = StdCalcul.DecimalToFloat(margeSpecial);
             Extra = StdCalcul.DecimalToFloat(margeExtra);
         }
+
+        public MssqlQuery _query { get; set; }
 
         public float Achat { get; set; }
         public string UniteFrns { get; set; }
@@ -86,66 +86,63 @@ namespace gescom.data.Models
         public void Copy(TaxableItem item)
         {
             Id = item.Id;
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Gros != null) Gros = (float)item.Gros;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Special != null) Special = (float)item.Special;
-            if (item.Extra != null) Extra = (float)item.Extra;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Gros != null) Gros = (float) item.Gros;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Special != null) Special = (float) item.Special;
+            if (item.Extra != null) Extra = (float) item.Extra;
             UniteFrns = item.UniteFrns;
         }
 
         public void Copy(MargeItem item)
         {
             Id = item.Id;
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Gros != null) Gros = (float)item.Gros;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Special != null) Special = (float)item.Special;
-            if (item.Extra != null) Extra = (float)item.Extra;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Gros != null) Gros = (float) item.Gros;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Special != null) Special = (float) item.Special;
+            if (item.Extra != null) Extra = (float) item.Extra;
         }
 
         public void Copy(HorsItem item)
         {
             Id = item.Id;
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Gros != null) Gros = (float)item.Gros;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Special != null) Special = (float)item.Special;
-            if (item.Extra != null) Extra = (float)item.Extra;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Gros != null) Gros = (float) item.Gros;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Special != null) Special = (float) item.Special;
+            if (item.Extra != null) Extra = (float) item.Extra;
         }
 
         public void Copy(PrimeItem item)
         {
             Id = item.Id;
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Gros != null) Gros = (float)item.Gros;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Special != null) Special = (float)item.Special;
-            if (item.Extra != null) Extra = (float)item.Extra;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Gros != null) Gros = (float) item.Gros;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Special != null) Special = (float) item.Special;
+            if (item.Extra != null) Extra = (float) item.Extra;
         }
 
         public void Copy(TaxeItem item)
         {
             Id = item.Id;
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Gros != null) Gros = (float)item.Gros;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Special != null) Special = (float)item.Special;
-            if (item.Extra != null) Extra = (float)item.Extra;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Gros != null) Gros = (float) item.Gros;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Special != null) Special = (float) item.Special;
+            if (item.Extra != null) Extra = (float) item.Extra;
         }
 
         public bool Read(long id)
         {
-            if (!VerifierExistence(id))
-            {
-                return false;
-            }
-            string[] reader = _query.Reader(id, 7);
+            if (!VerifierExistence(id)) return false;
+            var reader = _query.Reader(id, 7);
             Achat = float.Parse(reader[0]);
             Revient = float.Parse(reader[1]);
             Gros = float.Parse(reader[2]);
@@ -158,7 +155,7 @@ namespace gescom.data.Models
 
         public void ReadFast(long id)
         {
-            string[] reader = _query.Reader(id, 7);
+            var reader = _query.Reader(id, 7);
             Achat = float.Parse(reader[0]);
             Revient = float.Parse(reader[1]);
             Gros = float.Parse(reader[2]);
@@ -182,8 +179,8 @@ namespace gescom.data.Models
             sb.Append("INSERT INTO TaxableItem (Id, Achat, Revient, Gros, Detail, ");
             sb.Append("Special, Extra, Quantite, UniteFrns) VALUES ('");
             sb.Append(Id + "','" + Achat + "','" + Revient + "','" + Gros + "','" + Detail + "','" +
-            Special + "','" + Extra + "','" + Quantite + "','" + UniteFrns + "')");
-            string commande = sb.ToString();
+                      Special + "','" + Extra + "','" + Quantite + "','" + UniteFrns + "')");
+            var commande = sb.ToString();
             Console.WriteLine(commande);
             query.Command.CommandText = commande;
             query.ExecuterQuery();
@@ -219,7 +216,8 @@ namespace gescom.data.Models
             // paramètres en insertion***/
             InsParams = "(@ID, @ACHAT, @REVIENT, @GROS, @DETAIL, @SPECIAL, @EXTRA, @QUANTITE);";
             // paramètres de mise à jour***/
-            UpdParams = "ACHAT = @ACHAT, REVIENT = @REVIENT, GROS = @GROS, DETAIL = @DETAIL, SPECIAL = @SPECIAL, EXTRA = @EXTRA , QUANTITE = @QUANTITE WHERE ID = @ID";
+            UpdParams =
+                "ACHAT = @ACHAT, REVIENT = @REVIENT, GROS = @GROS, DETAIL = @DETAIL, SPECIAL = @SPECIAL, EXTRA = @EXTRA , QUANTITE = @QUANTITE WHERE ID = @ID";
             // paramètres SqlConnections dans SqlConnection class.***/
             var p = new Query(tableName, InsParams, UpdParams);
             _query = new MssqlQuery(p);
@@ -231,7 +229,8 @@ namespace gescom.data.Models
             // paramètres en insertion***/
             InsParams = "(@ID, @ACHAT, @REVIENT, @GROS, @DETAIL, @SPECIAL, @EXTRA, @QUANTITE, @UNITEFRNS);";
             // paramètres de mise à jour***/
-            UpdParams = "ACHAT = @ACHAT, REVIENT = @REVIENT, GROS = @GROS, DETAIL = @DETAIL, SPECIAL = @SPECIAL, EXTRA = @EXTRA , QUANTITE = @QUANTITE WHERE ID = @ID";
+            UpdParams =
+                "ACHAT = @ACHAT, REVIENT = @REVIENT, GROS = @GROS, DETAIL = @DETAIL, SPECIAL = @SPECIAL, EXTRA = @EXTRA , QUANTITE = @QUANTITE WHERE ID = @ID";
             // paramètres SqlConnections dans SqlConnection class.***/
             var p = new Query(TableName, InsParams, UpdParams);
             _query = new MssqlQuery(p);
@@ -251,11 +250,8 @@ namespace gescom.data.Models
 
         private bool VerifierExistence(long id)
         {
-            int count = _query.CountRecordsById(id);
-            if (count > 0)
-            {
-                return true;
-            }
+            var count = _query.CountRecordsById(id);
+            if (count > 0) return true;
             return false;
         }
     }
@@ -318,10 +314,7 @@ namespace gescom.data.Models
 
         public void Create()
         {
-            if (Marge.Achat <= 0)
-            {
-                return;
-            }
+            if (Marge.Achat <= 0) return;
             Marge.SafeCreate();
             Exonere.SafeCreate();
             Taxe.SafeCreate();
@@ -333,10 +326,7 @@ namespace gescom.data.Models
         public bool Read(long id)
         {
             var item = ArticleHelpers.Get(id);
-            if (item == null)
-            {
-                return false;
-            }
+            if (item == null) return false;
             ReadFast(id);
             return true;
         }
@@ -362,10 +352,7 @@ namespace gescom.data.Models
 
         public void SetId(long id)
         {
-            if (id <= 0)
-            {
-                return;
-            }
+            if (id <= 0) return;
             Id = id;
             Exonere.Id = id;
             Marge.Id = id;
@@ -389,7 +376,7 @@ namespace gescom.data.Models
         }
 
         public void SetMarge(long id, float prixAchat, decimal coefficient, decimal margeGros, decimal margeDetail,
-          decimal margeSpecial, decimal margeExtra, bool isTaxable, float primeRate)
+            decimal margeSpecial, decimal margeExtra, bool isTaxable, float primeRate)
         {
             SetId(id);
             Marge.Achat = prixAchat;
@@ -404,7 +391,7 @@ namespace gescom.data.Models
 
         private void CreateItems()
         {
-            ArticleItem article = ArticleHelpers.Get(Id);
+            var article = ArticleHelpers.Get(Id);
             ActeHelpers.Create(Id);
             var query = new MssqlQuery();
             var sb = new StringBuilder();
@@ -418,7 +405,7 @@ namespace gescom.data.Models
             sb.Append("','");
             sb.Append(article.Iu);
             sb.Append("','-1','0','NB','0','rq','0','0','-1','-1','0','0','0');");
-            string commande = sb.ToString();
+            var commande = sb.ToString();
             query.Command.CommandText = commande;
             query.ExecuterQuery();
             sb.Clear();
@@ -462,35 +449,20 @@ namespace gescom.data.Models
         private void SetPrime(float primeRate)
         {
             Prime.Achat = primeRate;
-            if (primeRate <= 0)
-            {
-                return;
-            }
+            if (primeRate <= 0) return;
             Prime.Revient = Exonere.Revient;
             Prime.Gros = (Exonere.Gros - Prime.Revient) * primeRate / 100;
             Prime.Gros = StdCalcul.LissagePrixF(Prime.Gros);
-            if (Prime.Gros < 0)
-            {
-                Prime.Gros = 0;
-            }
+            if (Prime.Gros < 0) Prime.Gros = 0;
             Prime.Detail = (Exonere.Detail - Prime.Revient) * primeRate / 100;
             Prime.Detail = StdCalcul.LissagePrixF(Prime.Detail);
-            if (Prime.Detail < 0)
-            {
-                Prime.Detail = 0;
-            }
+            if (Prime.Detail < 0) Prime.Detail = 0;
             Prime.Special = (Exonere.Special - Prime.Revient) * primeRate / 100;
             Prime.Special = StdCalcul.LissagePrixF(Prime.Special);
-            if (Prime.Special < 0)
-            {
-                Prime.Special = 0;
-            }
+            if (Prime.Special < 0) Prime.Special = 0;
             Prime.Extra = (Exonere.Extra - Prime.Revient) * primeRate / 100;
             Prime.Extra = StdCalcul.LissagePrixF(Prime.Extra);
-            if (Prime.Extra < 0)
-            {
-                Prime.Extra = 0;
-            }
+            if (Prime.Extra < 0) Prime.Extra = 0;
         }
 
         private void SetTarif(float primeRate)
@@ -506,10 +478,7 @@ namespace gescom.data.Models
             Exonere.Extra = StdCalcul.GetCompleteLisseF(Exonere.Revient, Marge.Extra);
             Taxable.Copy(Exonere);
             SetPrime(primeRate);
-            if (!IsTaxable)
-            {
-                return;
-            }
+            if (!IsTaxable) return;
             var taux = PriceHelpers.GetTaxe();
             Taxable.Gros = StdCalcul.GetCompleteLisseF(Exonere.Gros, taux);
             Taxable.Detail = StdCalcul.GetCompleteLisseF(Exonere.Detail, taux);
@@ -532,10 +501,7 @@ namespace gescom.data.Models
             Exonere.Special = StdCalcul.GetCompleteLisseF(Exonere.Revient, Marge.Special);
             Exonere.Extra = StdCalcul.GetCompleteLisseF(Exonere.Revient, Marge.Extra);
             Taxable.Copy(Exonere);
-            if (!IsTaxable)
-            {
-                return;
-            }
+            if (!IsTaxable) return;
             var taux = PriceHelpers.GetTaxe();
             Taxable.Gros = StdCalcul.GetCompleteLisseF(Exonere.Gros, taux);
             Taxable.Detail = StdCalcul.GetCompleteLisseF(Exonere.Detail, taux);

@@ -1,12 +1,13 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraReports.UI;
 using gescom.create.Views;
 using gescom.data.Models;
 using gescom.printer;
 using gescom.report.Extensions;
 using gescom.report.Reports;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace gescom.create.Models
 {
@@ -26,8 +27,8 @@ namespace gescom.create.Models
 
         public static void Init()
         {
-           /* DataHelpers.SaveGeneral();
-            DataHelpers.SaveLocal(); */
+            /* DataHelpers.SaveGeneral();
+             DataHelpers.SaveLocal(); */
         }
 
         public static void RecapitulerCaisse()
@@ -38,11 +39,11 @@ namespace gescom.create.Models
         public static void AdminSearch()
         {
             var f = new XtraFind();
-            f.nom.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Default;
+            f.nom.OptionsFilter.AutoFilterCondition = AutoFilterCondition.Default;
             f.SetProtect();
             f.Show();
         }
-        
+
         public static void Comparer()
         {
             var f = new XtraOrder();
@@ -55,7 +56,7 @@ namespace gescom.create.Models
             form.ShowDialog();
         }
 
-       
+
         public static void ConsulteDetailCaisse(long id)
         {
             var f = new XtraDetail(id);
@@ -87,7 +88,6 @@ namespace gescom.create.Models
             f.ShowDialog();
         }
 
-        
 
         public static void DetaillerCustomerCompte(long id, string text)
         {
@@ -97,6 +97,7 @@ namespace gescom.create.Models
                 ErrorHelpers.SignalEmptyList();
                 return;
             }
+
             f.ShowDialog();
         }
 
@@ -138,6 +139,7 @@ namespace gescom.create.Models
                 ErrorHelpers.SignalEmptyList();
                 return;
             }
+
             f.ShowDialog();
         }
 
@@ -146,8 +148,8 @@ namespace gescom.create.Models
             var f = new XtraDiary();
             f.ShowDialog();
         }
-       
-        
+
+
         public static void Ecrire(long id)
         {
             var form = new XtraComptable(id);
@@ -167,12 +169,9 @@ namespace gescom.create.Models
 
         public static void EffectuerEntree(long id)
         {
-            PersonModel person = PersonHelpers.Get(id);
-            var f = new XtraEntree(person) { Text = @"ENTREE: " + person.Nom };
-            if (person.Groupe == 0)
-            {
-                f.IsValid = true;
-            }
+            var person = PersonHelpers.Get(id);
+            var f = new XtraEntree(person) {Text = @"ENTREE: " + person.Nom};
+            if (person.Groupe == 0) f.IsValid = true;
             f.Show();
         }
 
@@ -185,8 +184,8 @@ namespace gescom.create.Models
 
         public static void EffectuerSimulation(long id)
         {
-            PersonModel person = PersonHelpers.Get(id);
-            var f = new XtraVente(person, -9) { Text = @"DEMANDE PRIX: " + person.Nom };
+            var person = PersonHelpers.Get(id);
+            var f = new XtraVente(person, -9) {Text = @"DEMANDE PRIX: " + person.Nom};
             if (person.Groupe <= 0) return;
             f.IsValid = true;
             f.Show();
@@ -195,8 +194,8 @@ namespace gescom.create.Models
         public static void EffectuerVente(long id, string receive, long wid)
         {
             var p = PersonHelpers.Get(id);
-            string title = p.Nom + @" - " + receive;
-            var f = new XtraVente(p, wid, id) { Text = @"VENTE: " + title };
+            var title = p.Nom + @" - " + receive;
+            var f = new XtraVente(p, wid, id) {Text = @"VENTE: " + title};
             if (p.Groupe <= 0) return;
             f.IsValid = true;
             f.Show();
@@ -235,6 +234,7 @@ namespace gescom.create.Models
                 rep1.ShowPreview();
                 return;
             }
+
             var report = new ReportCompte(liste, pid, dateDebut, dateFin);
             report.ShowPreview();
         }
@@ -247,40 +247,33 @@ namespace gescom.create.Models
 
         public static void ImprimerDetails(long id)
         {
-            DiaryItem diary = DiaryHelpers.Get(id);
+            var diary = DiaryHelpers.Get(id);
             if (diary.Groupe == 2)
             {
                 var f = new XtraPrint(id);
                 f.ShowDialog();
                 return;
             }
+
             if (diary.Groupe == 6)
             {
-                DiaryItem item = DiaryHelpers.Get(id);
-                if (item == null)
-                {
-                    return;
-                }
+                var item = DiaryHelpers.Get(id);
+                if (item == null) return;
                 PrintHelpers.ImprimerCommande(id);
                 return;
             }
+
             var report = new ReportDetail(id);
             report.ShowPreview();
         }
 
         public static void ImprimerFacture(long id)
         {
-            BoxItem invoice = CashHelpers.GetBoxItem(id);
+            var invoice = CashHelpers.GetBoxItem(id);
             double r = 0;
-            if (invoice.Percu != null) r = (double)invoice.Percu;
-            if (r <= 0)
-            {
-                ReportHelpers.ImprimerFactureBon(id);
-            }
-            if (r > 0)
-            {
-                ReportHelpers.ImprimerFactureRegle(id);
-            }
+            if (invoice.Percu != null) r = (double) invoice.Percu;
+            if (r <= 0) ReportHelpers.ImprimerFactureBon(id);
+            if (r > 0) ReportHelpers.ImprimerFactureRegle(id);
         }
 
         public static void ImprimerFiche(long id)
@@ -315,6 +308,7 @@ namespace gescom.create.Models
                 ErrorHelpers.SignalEmptyList();
                 return;
             }
+
             report.SetTitle(title, name);
             report.ShowPreview();
         }
@@ -333,6 +327,7 @@ namespace gescom.create.Models
                 ErrorHelpers.SignalEmptyList();
                 return;
             }
+
             report.ShowPreview();
         }
 
@@ -486,11 +481,13 @@ namespace gescom.create.Models
                     name = PlaceHelpers.GetName(id);
                     break;
             }
+
             if (list.Count == 0)
             {
                 ErrorHelpers.SignalEmptyList();
                 return;
             }
+
             var f = new XtraGroup(list);
             f.SetTitle(title, name);
             f.ShowDialog();
@@ -516,11 +513,8 @@ namespace gescom.create.Models
 
         public static void ShowFormels()
         {
-            List<FormelModel> liste = FormelHelpers.GetOutFormels().ToList();
-            if (liste.Count == 0)
-            {
-                return;
-            }
+            var liste = FormelHelpers.GetOutFormels().ToList();
+            if (liste.Count == 0) return;
             var f = new XtraDispatch(liste);
             f.ShowDialog();
         }

@@ -1,11 +1,11 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -13,9 +13,9 @@ namespace gescom.create.Views
     {
         private readonly PersonModel _person;
         private List<ElementModel> _elements;
-        private long _pid;
         private long _index;
         private List<OperationModel> _myList;
+        private long _pid;
 
         public XtraEntree(PersonModel person)
         {
@@ -32,6 +32,8 @@ namespace gescom.create.Views
             InitializeComponent();
         }
 
+        public bool IsValid { get; set; }
+
         public void SetEntre()
         {
             IsValid = true;
@@ -41,8 +43,6 @@ namespace gescom.create.Views
             _elements = new List<ElementModel>();
             _myList = OperationHelpers.GetEntryList().ToList();
         }
-
-        public bool IsValid { get; set; }
 
         private void Init()
         {
@@ -56,13 +56,13 @@ namespace gescom.create.Views
 
         private void Add()
         {
-            string text = txtCode.Text;
-            float quantite = float.Parse(txtQte.Text);
-            OperationModel item = OperationHelpers.GetShortCode(_myList, text);
+            var text = txtCode.Text;
+            var quantite = float.Parse(txtQte.Text);
+            var item = OperationHelpers.GetShortCode(_myList, text);
             var element = new ElementModel(item.Ndx);
             element.Copy(item);
             element.Pid = item.Pid;
-            ElementModel newElement = ElementHelpers.Get(_elements, item.Ndx);
+            var newElement = ElementHelpers.Get(_elements, item.Ndx);
             ElementHelpers.Remove(_elements, item.Ndx);
             txtNum.DataBindings.Clear();
             gridActions.DataSource = null;
@@ -76,7 +76,8 @@ namespace gescom.create.Views
                 txtCode.Text = "";
                 return;
             }
-            float newQuantite = newElement.Quantite + quantite;
+
+            var newQuantite = newElement.Quantite + quantite;
             element.Quantite = newQuantite;
             _elements.Add(element);
             RefreshData();
@@ -87,7 +88,7 @@ namespace gescom.create.Views
         {
             if (txtQte.Visible)
             {
-                float quantite = float.Parse(txtQte.Text);
+                var quantite = float.Parse(txtQte.Text);
                 if (quantite <= 0)
                 {
                     if (txtQte.Focused)
@@ -99,19 +100,19 @@ namespace gescom.create.Views
                     {
                         txtQte.Focus();
                     }
+
                     return;
                 }
+
                 Add();
                 return;
             }
+
             if (_elements.Count <= 0) return;
 
-            DialogResult msg = MessageBox.Show(this, @"ENREGISTRER OPERATION?", @"ENTREE", MessageBoxButtons.YesNo,
+            var msg = MessageBox.Show(this, @"ENREGISTRER OPERATION?", @"ENTREE", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (msg != DialogResult.Yes)
-            {
-                return;
-            }
+            if (msg != DialogResult.Yes) return;
             Save();
         }
 
@@ -134,12 +135,9 @@ namespace gescom.create.Views
             txtPrix.Visible = false;
             txtStock.Visible = false;
             txtQte.Visible = false;
-            string text = txtCode.Text;
-            OperationModel item = OperationHelpers.GetShortCode(_myList, text);
-            if (item.Designation == null)
-            {
-                return;
-            }
+            var text = txtCode.Text;
+            var item = OperationHelpers.GetShortCode(_myList, text);
+            if (item.Designation == null) return;
             textQuest.Visible = true;
             textRep.Visible = true;
             txtUnite.Visible = true;
@@ -161,35 +159,20 @@ namespace gescom.create.Views
             gridActions.DataSource = _elements;
             txtQte.Text = @"0";
             txtCode.Focus();
-            if (_elements.Count <= 0)
-            {
-                return;
-            }
+            if (_elements.Count <= 0) return;
             txtNum.DataBindings.Add("Text", _elements, "Id");
         }
 
         private void Remove()
         {
-            string text = txtNum.Text;
-            if (string.IsNullOrEmpty(text))
-            {
-                return;
-            }
-            if (text == "0")
-            {
-                return;
-            }
-            if (_elements.Count == 0)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            DialogResult msg = MessageBox.Show(ElementHelpers.Get(_elements, id).Nom, @"SUPPRIMER ARTICLE?",
+            var text = txtNum.Text;
+            if (string.IsNullOrEmpty(text)) return;
+            if (text == "0") return;
+            if (_elements.Count == 0) return;
+            var id = long.Parse(text);
+            var msg = MessageBox.Show(ElementHelpers.Get(_elements, id).Nom, @"SUPPRIMER ARTICLE?",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (msg != DialogResult.OK)
-            {
-                return;
-            }
+            if (msg != DialogResult.OK) return;
             ElementHelpers.Remove(_elements, id);
             gridActions.DataSource = null;
             txtNum.DataBindings.Clear();
@@ -198,17 +181,11 @@ namespace gescom.create.Views
 
         private void Save()
         {
-            if (_elements.Count == 0)
-            {
-                return;
-            }
+            if (_elements.Count == 0) return;
 
             if (_index > 0)
             {
-                foreach (var elementModel in _elements)
-                {
-                    ActionHelpers.DoBuy2(elementModel);
-                }
+                foreach (var elementModel in _elements) ActionHelpers.DoBuy2(elementModel);
                 Close();
             }
         }

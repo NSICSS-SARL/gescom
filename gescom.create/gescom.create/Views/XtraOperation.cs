@@ -1,17 +1,18 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Base;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
     public partial class XtraOperation : XtraForm
     {
-        private List<OperationCommande> _list;
         private readonly List<int> _modifiedRows;
+        private List<OperationCommande> _list;
 
         public XtraOperation()
         {
@@ -22,16 +23,10 @@ namespace gescom.create.Views
 
         private void SetRefresh()
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id <= 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id <= 0) return;
             CreateHelpers.Detailler(id);
         }
 
@@ -42,15 +37,9 @@ namespace gescom.create.Views
 
         private long GetX()
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return 0;
-            }
-            if (myNum.Text == @"0")
-            {
-                return 0;
-            }
-            long x = long.Parse(myNum.Text);
+            if (string.IsNullOrEmpty(myNum.Text)) return 0;
+            if (myNum.Text == @"0") return 0;
+            var x = long.Parse(myNum.Text);
             return x;
         }
 
@@ -59,15 +48,13 @@ namespace gescom.create.Views
             var actualListe = OperationHelpers.CommandAuto().ToList();
             if (actualListe.Count > 0)
             {
-                DialogResult msg = MessageBox.Show(this, @"Envoyer les commandes automatiques?", @"COMMANDE",
+                var msg = MessageBox.Show(this, @"Envoyer les commandes automatiques?", @"COMMANDE",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                if (msg != DialogResult.Yes)
-                {
-                    return null;
-                }
+                if (msg != DialogResult.Yes) return null;
             }
-            List<ElementModel> elements = ActionHelpers.GetElements(actualListe);
+
+            var elements = ActionHelpers.GetElements(actualListe);
             ProdHelpers.SetManual(actualListe);
             return elements;
         }
@@ -79,31 +66,23 @@ namespace gescom.create.Views
 
         private void comparerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            long id = GetX();
-            if (id == 0)
-            {
-                return;
-            }
+            var id = GetX();
+            if (id == 0) return;
             CreateHelpers.Globalize(id);
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             var auto = SetInit();
-            var actualListe = _modifiedRows.Select(i => grilleView.GetRowCellValue(i, "Ndx")).Select(value => (long)value).ToList();
+            var actualListe = _modifiedRows.Select(i => grilleView.GetRowCellValue(i, "Ndx"))
+                .Select(value => (long) value).ToList();
             var liste = OperationHelpers.GetQuantified(actualListe);
-            DialogResult msg = MessageBox.Show(this, @"Enregistrer les modifications?", @"SUPPRESSION",
+            var msg = MessageBox.Show(this, @"Enregistrer les modifications?", @"SUPPRESSION",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (msg != DialogResult.Yes)
-            {
-                return;
-            }
+            if (msg != DialogResult.Yes) return;
             var elements = ActionHelpers.GetElements(liste);
-            if (auto != null)
-            {
-                elements.AddRange(auto);
-            }
+            if (auto != null) elements.AddRange(auto);
             OperationHelpers.SaveCommandes(elements);
             _modifiedRows.Clear();
         }
@@ -116,7 +95,7 @@ namespace gescom.create.Views
             myNum.DataBindings.Add("Text", _list, "Ndx");
         }
 
-        private void grilleView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        private void grilleView_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             if (!_modifiedRows.Contains(e.RowHandle))
                 _modifiedRows.Add(e.RowHandle);

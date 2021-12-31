@@ -19,7 +19,7 @@ namespace gescom.data.Models
         public static int GetArticleIdByName(string nom)
         {
             var query = new MssqlQuery("ArticleItem");
-            int result = query.SelectIdByName(nom);
+            var result = query.SelectIdByName(nom);
             return result;
         }
 
@@ -42,9 +42,10 @@ namespace gescom.data.Models
                 Console.WriteLine("Unable to connect to server.");
                 return false;
             }
+
             var conn = new MssqlConnection();
             conn.Open();
-            bool result = conn.GetState();
+            var result = conn.GetState();
             conn.Close();
             return result;
         }
@@ -56,20 +57,33 @@ namespace gescom.data.Models
             string prefix = null;
             long groupe = -1;
             groupe = item.Groupe;
-            if (groupe < 0) { return null; }
+            if (groupe < 0) return null;
             switch (groupe)
             {
-                case 0: prefix = "F"; break;
-                case 1: prefix = "G"; break;
-                case 2: prefix = "D"; break;
-                case 3: prefix = "S"; break;
-                case 4: prefix = "E"; break;
-                case 5: prefix = "P"; break;
+                case 0:
+                    prefix = "F";
+                    break;
+                case 1:
+                    prefix = "G";
+                    break;
+                case 2:
+                    prefix = "D";
+                    break;
+                case 3:
+                    prefix = "S";
+                    break;
+                case 4:
+                    prefix = "E";
+                    break;
+                case 5:
+                    prefix = "P";
+                    break;
             }
+
             string suffix = null;
-            if (item.Forme == 1) { suffix = " -F"; }
-            if (item.Forme == 0) { suffix = " -I"; }
-            string s = query.CountRecordsByGroup(groupe).ToString();
+            if (item.Forme == 1) suffix = " -F";
+            if (item.Forme == 0) suffix = " -I";
+            var s = query.CountRecordsByGroup(groupe).ToString();
             s += suffix;
             return prefix + s;
         }
@@ -77,33 +91,30 @@ namespace gescom.data.Models
         public static bool IsNameDuplicate(string tableName, string nom)
         {
             var query = new MssqlQuery(tableName);
-            int count = query.CountByName(nom);
-            if (count <= 0)
-            {
-                return false;
-            }
+            var count = query.CountByName(nom);
+            if (count <= 0) return false;
             return true;
         }
 
         public static void SaveGeneral()
         {
             var conn = ConnForXml();
-            if (!conn.GetState()) { return; }
+            if (!conn.GetState()) return;
             conn.WriteResearch();
         }
 
         public static void SaveLocal()
         {
             var conn = ConnForXml();
-            if (!conn.GetState()) { return; }
+            if (!conn.GetState()) return;
             conn.WriteData();
         }
 
         public static void WriteBackupXml()
         {
             var conn = ConnForXml();
-            if (!conn.GetState()) { return; }
-            string hote = Environment.MachineName;
+            if (!conn.GetState()) return;
+            var hote = Environment.MachineName;
             conn.WriteStock();
             conn.WriteDisponible();
             conn.Close();
@@ -112,15 +123,15 @@ namespace gescom.data.Models
         public static void WriteCommand(long id)
         {
             var conn = ConnForXml();
-            if (!conn.GetState()) { return; }
+            if (!conn.GetState()) return;
             conn.WriteCommande(id);
             conn.Close();
         }
 
         public static void WriteXmlFile()
         {
-            if (!GetConnection()) { return; }
-            string hote = Environment.MachineName;
+            if (!GetConnection()) return;
+            var hote = Environment.MachineName;
             var conn = new MssqlConnection();
             conn.WriteStock();
             conn.WriteDisponible();
@@ -139,6 +150,7 @@ namespace gescom.data.Models
             {
                 Console.WriteLine("Unable to connect to server.");
             }
+
             var result = new MssqlConnection();
             result.Open();
             return result;
@@ -147,6 +159,12 @@ namespace gescom.data.Models
 
     public class MontantModel
     {
+        public MontantModel(string percu, string rendu)
+        {
+            Percu = ValueFormatString(percu);
+            Rendu = ValueFormatString(rendu);
+        }
+
         public string Percu { get; set; }
         public string Rendu { get; set; }
 
@@ -158,13 +176,8 @@ namespace gescom.data.Models
                 var result = StdCalcul.DoubleToSpaceFormat(x);
                 return result;
             }
-            return "0";
-        }
 
-        public MontantModel(string percu, string rendu)
-        {
-            Percu = ValueFormatString(percu);
-            Rendu = ValueFormatString(rendu);
+            return "0";
         }
     }
 
@@ -187,7 +200,7 @@ namespace gescom.data.Models
             string user, string password)
         {
             Init();
-            string cstr =
+            var cstr =
                 string.Format(
                     "server = {0}; User Id = {1};Password = {2} ; Persist Security Info = True; database = {3};", host,
                     user, password, database);
@@ -217,7 +230,6 @@ namespace gescom.data.Models
         public void Close()
         {
             if (State)
-            {
                 try
                 {
                     _conn.Close();
@@ -227,16 +239,12 @@ namespace gescom.data.Models
                 {
                     State = true;
                 }
-            }
         }
 
         public bool EcrireXml(string sqlCommand, string path)
         {
-            bool result = Open();
-            if (!result)
-            {
-                return false;
-            }
+            var result = Open();
+            if (!result) return false;
             try
             {
                 File.Delete(path);
@@ -245,6 +253,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             // Create SqlDataAdapter
             var da = new SqlDataAdapter(sqlCommand, _conn);
             // Create DataSet
@@ -270,7 +279,6 @@ namespace gescom.data.Models
         {
             /* Pour MySql state = Open pour true, pour ls autres db changer.*/
             if (State == false)
-            {
                 try
                 {
                     _conn.Open();
@@ -280,7 +288,7 @@ namespace gescom.data.Models
                 {
                     State = false;
                 }
-            }
+
             return State;
         }
 
@@ -297,15 +305,15 @@ namespace gescom.data.Models
 
         public bool WriteCommande(long id)
         {
-            string sqlCommmand = "SELECT * FROM CommandView WHERE Rang = " + id;
+            var sqlCommmand = "SELECT * FROM CommandView WHERE Rang = " + id;
             const string path = "c:\\glite\\Commande.xml";
             return EcrireXml(sqlCommmand, path);
         }
 
         public bool WriteData()
         {
-            string sqlCommmand = "SELECT * FROM XMLITEM WHERE QUANTITE > 0";
-            string path = "C:\\glite\\Bin\\Dispo.xml";
+            var sqlCommmand = "SELECT * FROM XMLITEM WHERE QUANTITE > 0";
+            var path = "C:\\glite\\Bin\\Dispo.xml";
             EcrireXml(sqlCommmand, path);
             sqlCommmand = "SELECT * FROM XMLITEM WHERE L IS NULL OR L = 1";
             path = "C:\\glite\\Bin\\Data.xml";
@@ -314,8 +322,8 @@ namespace gescom.data.Models
 
         public bool WriteResearch()
         {
-            string sqlCommmand = "SELECT * FROM OperationItem WHERE QStock > 0";
-            string path = "C:\\glite\\Bin\\Disponible.xml";
+            var sqlCommmand = "SELECT * FROM OperationItem WHERE QStock > 0";
+            var path = "C:\\glite\\Bin\\Disponible.xml";
             EcrireXml(sqlCommmand, path);
             sqlCommmand = "SELECT * FROM OperationItem WHERE L IS NULL OR L = 1";
             path = "C:\\glite\\Bin\\Tout.xml";
@@ -362,7 +370,6 @@ namespace gescom.data.Models
         private SqlDataReader _reader;
 
         // séléction.***/
-        private string _selParams;
 
         private int[] _serie;
 
@@ -422,14 +429,11 @@ namespace gescom.data.Models
 
         public MssqlConnection Connection { get; set; }
 
-        public string SelParams
-        {
-            get { return _selParams; }
-        }
+        public string SelParams { get; private set; }
 
         public void ActivateById(int id)
         {
-            string commande = string.Format("UPDATE {0} SET ENABLED = TRUE WHERE ID = {1}"
+            var commande = string.Format("UPDATE {0} SET ENABLED = TRUE WHERE ID = {1}"
                 , _tableName, id);
             InitCommande(commande);
             ExecuteUpdate();
@@ -439,7 +443,7 @@ namespace gescom.data.Models
         public void BeforeUpdate()
         {
             ClearParameters();
-            string commande = string.Format("UPDATE {0} SET {1}", _tableName, _updParams);
+            var commande = string.Format("UPDATE {0} SET {1}", _tableName, _updParams);
             InitCommande(commande);
         }
 
@@ -459,8 +463,8 @@ namespace gescom.data.Models
         // effacer toutes les données de la table **/
         public void ClearTable()
         {
-            string commande = "DELETE * FROM " + _tableName;
-            System.Console.WriteLine(commande);
+            var commande = "DELETE * FROM " + _tableName;
+            Console.WriteLine(commande);
             InitCommande(commande);
             ExecuteUpdate();
         }
@@ -475,7 +479,7 @@ namespace gescom.data.Models
         // compter les occurences de code***/
         public int CodeCounter(string code)
         {
-            int result = TexteCounter("CODE", code);
+            var result = TexteCounter("CODE", code);
             return result;
         }
 
@@ -491,82 +495,82 @@ namespace gescom.data.Models
         public int Count(string commande)
         {
             ExecuteSelect(commande);
-            int result = GetTable().Rows.Count;
+            var result = GetTable().Rows.Count;
             return result;
         }
 
         public int CountByCode(string code)
         {
-            string commande = "SELECT IA FROM " + _tableName + " WHERE CODE = '" + code + "'";
-            int result = Count(commande);
+            var commande = "SELECT IA FROM " + _tableName + " WHERE CODE = '" + code + "'";
+            var result = Count(commande);
             return result;
         }
 
         public int CountByName(string nom)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE NOM = '" + nom + "'";
-            int result = Count(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE NOM = '" + nom + "'";
+            var result = Count(commande);
             return result;
         }
 
         public int CountByNameState(string nom)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE (NOM = '" + nom + "') AND (STATE = 0)";
-            int result = Count(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE (NOM = '" + nom + "') AND (STATE = 0)";
+            var result = Count(commande);
             return result;
         }
 
         public int CountRecords()
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName;
-            int result = ExecuteScalar(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName;
+            var result = ExecuteScalar(commande);
             return result;
         }
 
         // compter occurence table, clé autre que Id.***/
         public int CountRecords(string colName)
         {
-            string s = colName.ToUpper();
-            string commande = string.Format("SELECT COUNT({0}) FROM {1}", s, _tableName);
+            var s = colName.ToUpper();
+            var commande = string.Format("SELECT COUNT({0}) FROM {1}", s, _tableName);
             return ExecuteScalar(commande);
         }
 
         // compter les occurences d' une table, Id entier long paramètre primaire.***/
         public int CountRecordsByGroup(long groupe)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE GROUPE = '" + groupe + "'";
-            int result = ExecuteScalar(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE GROUPE = '" + groupe + "'";
+            var result = ExecuteScalar(commande);
             return result;
         }
 
         // compter les occurences d' une table, Id entier court paramètre primaire.***/
         public int CountRecordsById(int id)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE ID = '" + id + "'";
-            int result = ExecuteScalar(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE ID = '" + id + "'";
+            var result = ExecuteScalar(commande);
             return result;
         }
 
         // compter les occurences d' une table, Id entier long paramètre primaire.***/
         public int CountRecordsById(long id)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE ID = '" + id + "'";
-            int result = ExecuteScalar(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE ID = '" + id + "'";
+            var result = ExecuteScalar(commande);
             return result;
         }
 
         // compter les occurences d' une table, Id entier long paramètre primaire.***/
         public int CountRecordsByNumero(long numero)
         {
-            string commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE NUMERO = '" + numero + "'";
-            int result = ExecuteScalar(commande);
+            var commande = "SELECT COUNT(ID) FROM " + _tableName + " WHERE NUMERO = '" + numero + "'";
+            var result = ExecuteScalar(commande);
             return result;
         }
 
         // désactiver enregistrement, index id.***/
         public void DeActivateById(int id)
         {
-            string commande = string.Format("UPDATE {0} SET ENABLED = FALSE WHERE ID = {1}"
+            var commande = string.Format("UPDATE {0} SET ENABLED = FALSE WHERE ID = {1}"
                 , _tableName, id);
             InitCommande(commande);
             ExecuteUpdate();
@@ -574,7 +578,7 @@ namespace gescom.data.Models
 
         public void DeleteAllByName(string nom)
         {
-            string commande = "DELETE FROM " + _tableName + " WHERE NOM = '" + nom + "'";
+            var commande = "DELETE FROM " + _tableName + " WHERE NOM = '" + nom + "'";
             InitCommande(commande);
             ExecuteUpdate();
         }
@@ -582,7 +586,7 @@ namespace gescom.data.Models
         // supprimer enregistrement, index id.***/
         public void DeleteById(int id)
         {
-            string commande = string.Format("DELETE FROM {0} WHERE ID = {1}"
+            var commande = string.Format("DELETE FROM {0} WHERE ID = {1}"
                 , _tableName, id);
             InitCommande(commande);
             ExecuteUpdate();
@@ -592,7 +596,7 @@ namespace gescom.data.Models
         public void DeleteIntBy(string colName, int key)
         {
             colName = colName.ToUpper();
-            string commande = String.Format("DELETE FROM {0} WHERE {1} = {2}", _tableName, colName, key);
+            var commande = string.Format("DELETE FROM {0} WHERE {1} = {2}", _tableName, colName, key);
             InitCommande(commande);
             ExecuteUpdate();
         }
@@ -601,7 +605,7 @@ namespace gescom.data.Models
         public void DeleteLongBy(string colName, long key)
         {
             colName = colName.ToUpper();
-            string commande = String.Format("DELETE FROM {0} WHERE {1} = {2}", _tableName, colName, key);
+            var commande = string.Format("DELETE FROM {0} WHERE {1} = {2}", _tableName, colName, key);
             InitCommande(commande);
             ExecuteUpdate();
         }
@@ -610,7 +614,7 @@ namespace gescom.data.Models
         public void DeleteStringBy(string colName, string key)
         {
             colName = colName.ToUpper();
-            string commande = String.Format("DELETE FROM {0} WHERE {1} = '{2}'", _tableName, colName, key);
+            var commande = string.Format("DELETE FROM {0} WHERE {1} = '{2}'", _tableName, colName, key);
             InitCommande(commande);
             ExecuteUpdate();
         }
@@ -627,7 +631,7 @@ namespace gescom.data.Models
         // éxécuter réquete ne retournant pas résultat. ***/
         public int ExecuterQuery()
         {
-            int result = 0;
+            var result = 0;
             try
             {
                 Connection.Open();
@@ -644,17 +648,18 @@ namespace gescom.data.Models
             {
                 Connection.Close();
             }
+
             return result;
         }
 
         // retourne un jeu unique de résultat***/
         public int ExecuteScalar(string commande)
         {
-            int result = 0;
+            var result = 0;
             InitCommande(commande);
             try
             {
-                result = (int)Command.ExecuteScalar();
+                result = (int) Command.ExecuteScalar();
             }
             catch (SqlException)
             {
@@ -665,6 +670,7 @@ namespace gescom.data.Models
             {
                 Connection.Close();
             }
+
             return result;
         }
 
@@ -679,7 +685,7 @@ namespace gescom.data.Models
 
         public void ExecuteSelect()
         {
-            string commande = Command.CommandText;
+            var commande = Command.CommandText;
             InitCommande(commande);
             _adapter.SelectCommand = Command;
             _adapter.Fill(_dataSet);
@@ -696,7 +702,7 @@ namespace gescom.data.Models
         // la commande est déjà configurée dans une autre classe.***/
         public int ExecuteUpdate()
         {
-            int result = ExecuterQuery();
+            var result = ExecuterQuery();
             return result;
         }
 
@@ -710,6 +716,7 @@ namespace gescom.data.Models
                     Command.CommandText = selectCommand;
                     _adapter.SelectCommand = Command;
                 }
+
                 _adapter.Fill(_dataSet, tableName);
             }
         }
@@ -751,7 +758,7 @@ namespace gescom.data.Models
             var childAdapter = new SqlDataAdapter();
             // la commande en question
             SqlCommand orderCommand;
-            using (orderCommand = new SqlCommand { Connection = Connection.GetConnection() })
+            using (orderCommand = new SqlCommand {Connection = Connection.GetConnection()})
             {
                 orderCommand.CommandText = masterCommand;
                 masterAdapter.SelectCommand = orderCommand;
@@ -759,9 +766,9 @@ namespace gescom.data.Models
                 orderCommand.CommandText = childCommand;
                 childAdapter.SelectCommand = orderCommand;
                 childAdapter.Fill(_dataSet, "Childs");
-                DataColumn masterIndex = _dataSet.Tables["Masters"].Columns[0];
-                DataColumn childIndex = _dataSet.Tables["Childs"].Columns[0];
-                int rowCount = _dataSet.Tables["Childs"].Rows.Count;
+                var masterIndex = _dataSet.Tables["Masters"].Columns[0];
+                var childIndex = _dataSet.Tables["Childs"].Columns[0];
+                var rowCount = _dataSet.Tables["Childs"].Rows.Count;
                 if (rowCount > 0)
                 {
                     var relation = new DataRelation("MTC", masterIndex, childIndex);
@@ -773,7 +780,7 @@ namespace gescom.data.Models
         // lecture de la table, les contrôles détérminants mode de lecture.***/
         public DataView GetDataView(string commande)
         {
-            DataView result = GetTableView(commande);
+            var result = GetTableView(commande);
             result.AllowEdit = true;
             result.AllowDelete = true;
             result.AllowNew = true;
@@ -783,28 +790,28 @@ namespace gescom.data.Models
         // compter les articles déjà existants par famille, et estimer le nouveau rang.***/
         public string GetNewArticleCodeByFamilies(string prefix, string colName, int index)
         {
-            string c = colName.ToUpper();
-            string commande = String.Format("SELECT COUNT({0}) FROM {1} WHERE {0} = {2}", c, _tableName, index);
-            int i = ExecuteScalar(commande);
+            var c = colName.ToUpper();
+            var commande = string.Format("SELECT COUNT({0}) FROM {1} WHERE {0} = {2}", c, _tableName, index);
+            var i = ExecuteScalar(commande);
             i++;
             _maxRangGrouped = i;
-            string result = string.Format("{0} {1}", prefix.ToUpper(), i);
+            var result = string.Format("{0} {1}", prefix.ToUpper(), i);
             return result;
         }
 
         // obtenir un nouveau code***/
         public string GetNewCode()
         {
-            string result = GetNewKeyCategorized("CODE");
+            var result = GetNewKeyCategorized("CODE");
             return result;
         }
 
         // obtenir nouveau code selon code catégorie***/
         public string GetNewCodeCategorized(string code)
         {
-            int id = GetNewKeyRecord("CODE");
-            string s = code.ToUpper() + " ";
-            string result = s + id;
+            var id = GetNewKeyRecord("CODE");
+            var s = code.ToUpper() + " ";
+            var result = s + id;
             return result;
         }
 
@@ -812,14 +819,14 @@ namespace gescom.data.Models
         public string GetNewCodeGrouped(string prefix,
             int ig)
         {
-            string result = GetNewKeyGrouped(prefix, "ID", ig);
+            var result = GetNewKeyGrouped(prefix, "ID", ig);
             return result;
         }
 
         // obtenir id nouvel enregistrement, clé primaire Id.***/
         public int GetNewIdRecord()
         {
-            int result = CountRecords();
+            var result = CountRecords();
             result++;
             return result;
         }
@@ -827,26 +834,26 @@ namespace gescom.data.Models
         // obtenir nouveau clé selon catégorie***/
         public string GetNewKeyCategorized(string colName)
         {
-            int id = GetNewKeyRecord(colName);
-            string s = colName.ToUpper();
-            string result = s + id;
+            var id = GetNewKeyRecord(colName);
+            var s = colName.ToUpper();
+            var result = s + id;
             return result;
         }
 
         public string GetNewKeyGrouped(string prefix,
             string colName, int index)
         {
-            string commande = String.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = {2}", _tableName, colName, index);
-            int i = ExecuteScalar(commande);
+            var commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = {2}", _tableName, colName, index);
+            var i = ExecuteScalar(commande);
             i++;
-            string result = string.Format("{0} {1}", prefix.ToUpper(), i);
+            var result = string.Format("{0} {1}", prefix.ToUpper(), i);
             return result;
         }
 
         // obtenir id nouvel enregistrement, clé primaire chaîne.***/
         public int GetNewKeyRecord(string colName)
         {
-            int result = CountRecords(colName);
+            var result = CountRecords(colName);
             result++;
             return result;
         }
@@ -854,9 +861,9 @@ namespace gescom.data.Models
         // obtenir une nouvelle réference.***/
         public string GetNewRefce(string colName)
         {
-            string s = _tableName.Substring(0, 1);
+            var s = _tableName.Substring(0, 1);
             s = s.ToUpper();
-            string result = string.Format("{0}{1}", s, GetNewKeyRecord(colName));
+            var result = string.Format("{0}{1}", s, GetNewKeyRecord(colName));
             return result;
         }
 
@@ -869,7 +876,7 @@ namespace gescom.data.Models
         public SqlDataReader GetRecord(string commande)
         {
             InitCommande(commande);
-            SqlDataReader reader = Command.ExecuteReader();
+            var reader = Command.ExecuteReader();
             return reader;
         }
 
@@ -904,7 +911,7 @@ namespace gescom.data.Models
             _adapter.SelectCommand = Command;
             _adapter.Fill(_dataSet);
             _dataSet.Tables[0].TableName = _tableName;
-            DataTable dtb = GetTable();
+            var dtb = GetTable();
             var dtView = new DataView(dtb);
             return dtView;
         }
@@ -918,14 +925,8 @@ namespace gescom.data.Models
         public void InitCommande(string commande)
         {
             Command.CommandText = commande;
-            if (Connection.GetState() == false)
-            {
-                Connection.Open();
-            }
-            if (Connection.GetState())
-            {
-                Connection.Refresh();
-            }
+            if (Connection.GetState() == false) Connection.Open();
+            if (Connection.GetState()) Connection.Refresh();
         }
 
         // requête insertion, clé pimaire Id.***/
@@ -933,8 +934,8 @@ namespace gescom.data.Models
         {
             // récupèrer record Id.***/
             ClearParameters();
-            int result = GetNewIdRecord();
-            string commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
+            var result = GetNewIdRecord();
+            var commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
             InitCommande(commande);
             SetIdParam(result);
             return result;
@@ -944,7 +945,7 @@ namespace gescom.data.Models
         public void InsertOutId()
         {
             ClearParameters();
-            string commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
+            var commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
             InitCommande(commande);
         }
 
@@ -952,8 +953,8 @@ namespace gescom.data.Models
         public int InsertRecord(string colName)
         {
             ClearParameters();
-            int result = GetNewKeyRecord(colName);
-            string commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
+            var result = GetNewKeyRecord(colName);
+            var commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
             InitCommande(commande);
             SetIntParam(colName, result);
             return result;
@@ -963,7 +964,7 @@ namespace gescom.data.Models
         public void InsertWithoutId(int id)
         {
             ClearParameters();
-            string commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
+            var commande = string.Format("INSERT INTO {0} VALUES {1}", _tableName, _insParams);
             InitCommande(commande);
             SetIdParam(id);
         }
@@ -971,57 +972,57 @@ namespace gescom.data.Models
         // éviter doublon de code***/
         public bool IsCodeSingle(string code)
         {
-            bool result = IsTexteSingle("CODE", code);
+            var result = IsTexteSingle("CODE", code);
             return result;
         }
 
         // éviter doublons de index.***/
         public bool IsIdSingle(int id)
         {
-            string s = id.ToString(CultureInfo.InvariantCulture);
-            string commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE ID = {1}", _tableName, s);
-            int i = ExecuteScalar(commande);
-            bool result = i == 0;
+            var s = id.ToString(CultureInfo.InvariantCulture);
+            var commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE ID = {1}", _tableName, s);
+            var i = ExecuteScalar(commande);
+            var result = i == 0;
             return result;
         }
 
         // éviter doublon de noms***/
         public bool IsNameSingle(string nom)
         {
-            bool result = IsTexteSingle("NOM", nom);
+            var result = IsTexteSingle("NOM", nom);
             return result;
         }
 
         // éviter doublon de référence***/
         public bool IsRefSingle(string refce)
         {
-            bool result = IsTexteSingle("REFCE", refce);
+            var result = IsTexteSingle("REFCE", refce);
             return result;
         }
 
         //éviter doublon pour une colonne donnée, valeur textuelle, clé primaire Id.***/
         public bool IsTexteSingle(string colName, string text)
         {
-            string commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = '{2}'", _tableName, colName, text);
-            int i = ExecuteScalar(commande);
-            bool result = i <= 0;
+            var commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = '{2}'", _tableName, colName, text);
+            var i = ExecuteScalar(commande);
+            var result = i <= 0;
             return result;
         }
 
         //éviter doublon pour une colonne donnée, valeur textuelle, clé primaire autre.****/
         public bool IsTexteSingle(string key, string colName, string text)
         {
-            string commande = string.Format(string.Format("SELECT COUNT({0}) FROM {{0}} WHERE {{1}} = '{{2}}'", key),
+            var commande = string.Format(string.Format("SELECT COUNT({0}) FROM {{0}} WHERE {{1}} = '{{2}}'", key),
                 _tableName, colName, text);
-            int i = ExecuteScalar(commande);
-            bool result = !(i > 0);
+            var i = ExecuteScalar(commande);
+            var result = !(i > 0);
             return result;
         }
 
         // obtenir la liste.***/
         public DataView Lister()
         {
-            DataView result = SelectOrdered();
+            var result = SelectOrdered();
             return result;
         }
 
@@ -1029,16 +1030,15 @@ namespace gescom.data.Models
         public DataView ListerCustomer()
         {
             _tableName = "_CUSTOMER";
-            DataView result = SelectOrdered();
+            var result = SelectOrdered();
             return result;
         }
 
         /**liste des familles d'articles.***/
-
         public DataView ListerFamille()
         {
             _tableName = "_FAMILLE";
-            DataView result = SelectOrdered();
+            var result = SelectOrdered();
             return result;
         }
 
@@ -1051,7 +1051,7 @@ namespace gescom.data.Models
                                     "dbo._EMPLACEMENT.T AS OCCUPATION FROM dbo._PLACE INNER JOIN " +
                                     "dbo._RESERVATION ON dbo._PLACE.ID = dbo._RESERVATION.ID LEFT OUTER JOIN " +
                                     "dbo._EMPLACEMENT ON dbo._PLACE.ID = dbo._EMPLACEMENT.ID WHERE (dbo._RESERVATION.T < 0) ORDER BY NOMS ";
-            DataView view = GetDataView(commande);
+            var view = GetDataView(commande);
             return view;
         }
 
@@ -1060,7 +1060,7 @@ namespace gescom.data.Models
         {
             _tableName = "_PREFERENCE";
             const string commande = "SELECT DISTINCT dbo._REMARQUE.NOM AS NOMS FROM dbo._REMARQUE ORDER BY NOMS ASC";
-            DataView view = GetDataView(commande);
+            var view = GetDataView(commande);
             return view;
         }
 
@@ -1068,7 +1068,7 @@ namespace gescom.data.Models
         public DataView ListerUnite()
         {
             _tableName = "_UNITE";
-            DataView result = SelectOrdered();
+            var result = SelectOrdered();
             return result;
         }
 
@@ -1076,14 +1076,14 @@ namespace gescom.data.Models
         public DataView ListerVendor()
         {
             _tableName = "_VENDOR";
-            DataView result = SelectOrdered();
+            var result = SelectOrdered();
             return result;
         }
 
         // compter les occurences de nom****/
         public int NameCounter(string nom)
         {
-            int result = TexteCounter("NOM", nom);
+            var result = TexteCounter("NOM", nom);
             return result;
         }
 
@@ -1098,10 +1098,7 @@ namespace gescom.data.Models
         {
             string result = null;
             _reader = SelectById(id);
-            while (_reader.Read())
-            {
-                result = _reader[i].ToString();
-            }
+            while (_reader.Read()) result = _reader[i].ToString();
             return result;
         }
 
@@ -1110,12 +1107,8 @@ namespace gescom.data.Models
             var result = new string[count];
             _reader = SelectById(id);
             while (_reader.Read())
-            {
-                for (int i = 0; i < count; i++)
-                {
+                for (var i = 0; i < count; i++)
                     result[i] = _reader[i + 1].ToString();
-                }
-            }
             Close();
             return result;
         }
@@ -1125,12 +1118,8 @@ namespace gescom.data.Models
             var result = new string[count];
             _reader = SelectById(id);
             while (_reader.Read())
-            {
-                for (int i = 0; i < count; i++)
-                {
+                for (var i = 0; i < count; i++)
                     result[i] = _reader[i + 1].ToString();
-                }
-            }
             Close();
             return result;
         }
@@ -1138,16 +1127,17 @@ namespace gescom.data.Models
         public void Reader(string code)
         {
             _reader = SelectByCode(code);
-            int count = GetTable().Rows.Count;
+            var count = GetTable().Rows.Count;
             _serie = new int[count];
-            int i = 0;
+            var i = 0;
             while (_reader.Read())
             {
-                string s = _reader[0].ToString();
-                int r = int.Parse(s);
+                var s = _reader[0].ToString();
+                var r = int.Parse(s);
                 _serie[i] = r;
                 i++;
             }
+
             Close();
         }
 
@@ -1155,14 +1145,15 @@ namespace gescom.data.Models
         {
             _reader = SelectByIa(id);
             _serie = new int[2];
-            int i = 0;
+            var i = 0;
             while (_reader.Read())
             {
-                string s = _reader[0].ToString();
-                int r = int.Parse(s);
+                var s = _reader[0].ToString();
+                var r = int.Parse(s);
                 _serie[i] = r;
                 i++;
             }
+
             Close();
         }
 
@@ -1171,12 +1162,8 @@ namespace gescom.data.Models
             SetReader(commande);
             _line = new string[count];
             while (_reader.Read())
-            {
-                for (int i = 0; i < count; i++)
-                {
+                for (var i = 0; i < count; i++)
                     _line[i] = _reader[i].ToString();
-                }
-            }
             Close();
             return _line;
         }
@@ -1184,13 +1171,13 @@ namespace gescom.data.Models
         // séléctionne et lit enregistrement, index code. **/
         public SqlDataReader ReaderSelectByName(string nom)
         {
-            string commande = "SELECT ID FROM " + _tableName + " WHERE NOM = '" + nom + "'";
+            var commande = "SELECT ID FROM " + _tableName + " WHERE NOM = '" + nom + "'";
             GetTableView(commande);
-            SqlDataReader reader = GetRecord(commande);
+            var reader = GetRecord(commande);
             return reader;
         }
 
-        public String ReadStringRecord(int id)
+        public string ReadStringRecord(int id)
         {
             return _line[id];
         }
@@ -1198,7 +1185,7 @@ namespace gescom.data.Models
         // compter les occurences de référence***/
         public int RefCounter(string refce)
         {
-            int result = TexteCounter("REFCE", refce);
+            var result = TexteCounter("REFCE", refce);
             return result;
         }
 
@@ -1213,49 +1200,49 @@ namespace gescom.data.Models
         // séléctionner tout.***/
         public DataView SelectAll()
         {
-            string commande = "SELECT * FROM " + _tableName;
-            DataView view = GetDataView(commande);
+            var commande = "SELECT * FROM " + _tableName;
+            var view = GetDataView(commande);
             return view;
         }
 
         // séléctionne et lit enregistrement, index code. **/
         public SqlDataReader SelectByCode(string code)
         {
-            string commande = "SELECT ID FROM " + _tableName + " WHERE CODE = '" + code + "'";
+            var commande = "SELECT ID FROM " + _tableName + " WHERE CODE = '" + code + "'";
             GetTableView(commande);
-            SqlDataReader reader = GetRecord(commande);
+            var reader = GetRecord(commande);
             return reader;
         }
 
         // séléctionner emplacements**/
         public SqlDataReader SelectByIa(int ia)
         {
-            string commande = string.Format("SELECT ID, IA, IE, T FROM {0} WHERE IA = '{1}'", _tableName, ia);
-            SqlDataReader reader = GetRecord(commande);
+            var commande = string.Format("SELECT ID, IA, IE, T FROM {0} WHERE IA = '{1}'", _tableName, ia);
+            var reader = GetRecord(commande);
             return reader;
         }
 
         // séléctionne et lit enregistrement, index id. **/
         public SqlDataReader SelectById(int id)
         {
-            string commande = string.Format("SELECT * FROM {0} WHERE ID = {1}", _tableName, id);
-            SqlDataReader reader = GetRecord(commande);
+            var commande = string.Format("SELECT * FROM {0} WHERE ID = {1}", _tableName, id);
+            var reader = GetRecord(commande);
             return reader;
         }
 
         // séléctionne et lit enregistrement, index id. **/
         public SqlDataReader SelectById(long id)
         {
-            string commande = string.Format("SELECT * FROM {0} WHERE ID = {1}", _tableName, id);
-            SqlDataReader reader = GetRecord(commande);
+            var commande = string.Format("SELECT * FROM {0} WHERE ID = {1}", _tableName, id);
+            var reader = GetRecord(commande);
             return reader;
         }
 
         // séléction par nom.***/
         public DataView SelectByName()
         {
-            string commande = string.Format("SELECT * FROM {0} ORDER BY NOM", _tableName);
-            DataView view = GetDataView(commande);
+            var commande = string.Format("SELECT * FROM {0} ORDER BY NOM", _tableName);
+            var view = GetDataView(commande);
             return view;
         }
 
@@ -1269,12 +1256,9 @@ namespace gescom.data.Models
             string code = null;
             ClearParameters();
             _tableName = table;
-            string commande = String.Format("SELECT CODE FROM {0} WHERE ID = {1}", _tableName, id);
-            SqlDataReader reader = GetRecord(commande);
-            while (reader.Read())
-            {
-                code = reader[0].ToString();
-            }
+            var commande = string.Format("SELECT CODE FROM {0} WHERE ID = {1}", _tableName, id);
+            var reader = GetRecord(commande);
+            while (reader.Read()) code = reader[0].ToString();
             Connection.Close();
             return code;
         }
@@ -1283,31 +1267,29 @@ namespace gescom.data.Models
         {
             string code = null;
             ClearParameters();
-            string commande = String.Format("SELECT CODE FROM {0} WHERE ID = {1}", _tableName, id);
-            SqlDataReader reader = GetRecord(commande);
-            while (reader.Read())
-            {
-                code = reader[0].ToString();
-            }
+            var commande = string.Format("SELECT CODE FROM {0} WHERE ID = {1}", _tableName, id);
+            var reader = GetRecord(commande);
+            while (reader.Read()) code = reader[0].ToString();
             Connection.Close();
             return code;
         }
 
         public int SelectId(string colName, string valeur)
         {
-            int result = -1;
-            int i = valeur.Length;
+            var result = -1;
+            var i = valeur.Length;
             ClearParameters();
-            string commande = string.Format("SELECT ID FROM {0} WHERE {1} = '{2}'", _tableName, colName, valeur);
+            var commande = string.Format("SELECT ID FROM {0} WHERE {1} = '{2}'", _tableName, colName, valeur);
             if (i != 0)
             {
-                SqlDataReader reader = GetRecord(commande);
+                var reader = GetRecord(commande);
                 while (reader.Read())
                 {
-                    string id = reader[0].ToString();
+                    var id = reader[0].ToString();
                     result = int.Parse(id);
                 }
             }
+
             Connection.Close();
             return result;
         }
@@ -1331,8 +1313,8 @@ namespace gescom.data.Models
         {
             var query = new MssqlQuery();
             query.FillProcedural(procedure, tableName);
-            DataSet dataSet = query.GetDataSet();
-            DataTable result = dataSet.Tables[0];
+            var dataSet = query.GetDataSet();
+            var result = dataSet.Tables[0];
             return result;
         }
 
@@ -1340,8 +1322,8 @@ namespace gescom.data.Models
         {
             var query = new MssqlQuery();
             query.FillProceduralCode(procedure, tableName, code);
-            DataSet dataSet = query.GetDataSet();
-            DataTable result = dataSet.Tables[0];
+            var dataSet = query.GetDataSet();
+            var result = dataSet.Tables[0];
             return result;
         }
 
@@ -1349,8 +1331,8 @@ namespace gescom.data.Models
         {
             var query = new MssqlQuery();
             query.FillProceduralId(procedure, tableName, id);
-            DataSet dataSet = query.GetDataSet();
-            DataTable result = dataSet.Tables[0];
+            var dataSet = query.GetDataSet();
+            var result = dataSet.Tables[0];
             return result;
         }
 
@@ -1358,12 +1340,9 @@ namespace gescom.data.Models
         {
             string nom = null;
             ClearParameters();
-            string commande = String.Format("SELECT NOM FROM {0} WHERE ID = {1}", _tableName, id);
-            SqlDataReader reader = GetRecord(commande);
-            while (reader.Read())
-            {
-                nom = reader[0].ToString();
-            }
+            var commande = string.Format("SELECT NOM FROM {0} WHERE ID = {1}", _tableName, id);
+            var reader = GetRecord(commande);
+            while (reader.Read()) nom = reader[0].ToString();
             Connection.Close();
             return nom;
         }
@@ -1371,21 +1350,21 @@ namespace gescom.data.Models
         // séléctionner ordonnée.***/
         public DataView SelectOrdered()
         {
-            string commande = string.Format("SELECT * FROM {0} ORDER BY ID ASC", _tableName);
-            DataView view = GetDataView(commande);
+            var commande = string.Format("SELECT * FROM {0} ORDER BY ID ASC", _tableName);
+            var view = GetDataView(commande);
             return view;
         }
 
         // séléctionner code user.
         public int SelectUserCode(int ia)
         {
-            int result = -1;
+            var result = -1;
             ClearParameters();
-            string commande = "SELECT MAX(ID) FROM " + _tableName + " WHERE IA = '" + ia + "'";
-            SqlDataReader reader = GetRecord(commande);
+            var commande = "SELECT MAX(ID) FROM " + _tableName + " WHERE IA = '" + ia + "'";
+            var reader = GetRecord(commande);
             while (reader.Read())
             {
-                string id = reader[0].ToString();
+                var id = reader[0].ToString();
                 try
                 {
                     result = int.Parse(id);
@@ -1395,6 +1374,7 @@ namespace gescom.data.Models
                     result = 0;
                 }
             }
+
             Connection.Close();
             return result;
         }
@@ -1402,16 +1382,16 @@ namespace gescom.data.Models
         // selectionne avec paramètre nom ou autre***/
         public DataView SelectWhere(string colName, string valeur)
         {
-            string commande = string.Format("SELECT * FROM {0} WHERE  {1} = '{2}'", _tableName, colName, valeur);
-            DataView view = GetDataView(commande);
+            var commande = string.Format("SELECT * FROM {0} WHERE  {1} = '{2}'", _tableName, colName, valeur);
+            var view = GetDataView(commande);
             return view;
         }
 
         // paramètrage booléen.***/
         public void SetBoolParam(string colName, bool valeur)
         {
-            int v = valeur ? 1 : 0;
-            string s = "@" + colName.ToUpper();
+            var v = valeur ? 1 : 0;
+            var s = "@" + colName.ToUpper();
             Command.Parameters.Add(s, SqlDbType.Int);
             Command.Parameters[s].Value = v;
         }
@@ -1426,7 +1406,7 @@ namespace gescom.data.Models
         // date avec autre nom de colonne***/
         public void SetDateParam(string colName, DateTime date)
         {
-            string s = "@" + colName.ToUpper();
+            var s = "@" + colName.ToUpper();
             Command.Parameters.Add(s, SqlDbType.DateTime);
             Command.Parameters[s].Value = date;
         }
@@ -1434,7 +1414,7 @@ namespace gescom.data.Models
         // paramètrage réel***/
         public void SetDoubleParam(string colName, double valeur)
         {
-            string s = "@" + colName.ToUpper();
+            var s = "@" + colName.ToUpper();
             Command.Parameters.Add(s, SqlDbType.Float);
             Command.Parameters[s].Value = valeur;
         }
@@ -1454,7 +1434,7 @@ namespace gescom.data.Models
         // paramètrage entier.***/
         public void SetIntParam(string colName, int valeur)
         {
-            string s = "@" + colName.ToUpper();
+            var s = "@" + colName.ToUpper();
             Command.Parameters.Add(s, SqlDbType.Int);
             Command.Parameters[s].Value = valeur;
         }
@@ -1462,7 +1442,7 @@ namespace gescom.data.Models
         // paramètrage entier long.***/
         public void SetLongParam(string colName, long valeur)
         {
-            string s = "@" + colName.ToUpper();
+            var s = "@" + colName.ToUpper();
             Command.Parameters.Add(s, SqlDbType.BigInt);
             Command.Parameters[s].Value = valeur;
         }
@@ -1476,7 +1456,7 @@ namespace gescom.data.Models
         // ajout avec paramètrage activation.***/
         public void SetStateParam(bool state)
         {
-            int v = state ? 1 : 0;
+            var v = state ? 1 : 0;
             Command.Parameters.Add("@STATE", SqlDbType.Int);
             Command.Parameters["@STATE"].Value = v;
         }
@@ -1484,7 +1464,7 @@ namespace gescom.data.Models
         // paramètrage réquête en tant que variable chaîne.***/
         public void SetStringParam(string colName, string valeur)
         {
-            int len = valeur != null ? valeur.Length : 0;
+            var len = valeur != null ? valeur.Length : 0;
             colName = colName.ToUpper();
             colName = "@" + colName;
             Command.Parameters.Add(colName, SqlDbType.VarChar, 200);
@@ -1499,8 +1479,8 @@ namespace gescom.data.Models
 
         public int TexteCounter(string colName, string text)
         {
-            string commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = '{2}'", _tableName, colName, text);
-            int result = ExecuteScalar(commande);
+            var commande = string.Format("SELECT COUNT(ID) FROM {0} WHERE {1} = '{2}'", _tableName, colName, text);
+            var result = ExecuteScalar(commande);
             return result;
         }
 
@@ -1515,7 +1495,7 @@ namespace gescom.data.Models
         internal void FillProceduralCode(string commande, string tableName, string code)
         {
             Command.CommandText = commande;
-            SqlParameter inputParameter = Command.Parameters.Add("@CODE", SqlDbType.NChar, 25);
+            var inputParameter = Command.Parameters.Add("@CODE", SqlDbType.NChar, 25);
             inputParameter.Value = code;
             Command.CommandType = CommandType.StoredProcedure;
             _adapter.SelectCommand = Command;
@@ -1525,7 +1505,7 @@ namespace gescom.data.Models
         internal void FillProceduralId(string commande, string tableName, int id)
         {
             Command.CommandText = commande;
-            SqlParameter inputParameter = Command.Parameters.Add("@ID", SqlDbType.Int);
+            var inputParameter = Command.Parameters.Add("@ID", SqlDbType.Int);
             inputParameter.Value = id;
             Command.CommandType = CommandType.StoredProcedure;
             _adapter.SelectCommand = Command;
@@ -1537,7 +1517,7 @@ namespace gescom.data.Models
             Connection = query.Connection;
             Command = query.Command;
             _insParams = query._insParams;
-            _selParams = query._selParams;
+            SelParams = query.SelParams;
             _tableName = query._tableName;
             _updParams = query._updParams;
         }

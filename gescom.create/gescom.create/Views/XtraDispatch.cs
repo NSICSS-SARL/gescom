@@ -1,16 +1,17 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
     public partial class XtraDispatch : XtraForm
     {
-        private List<FormelModel> _list;
-        private readonly int _index;
         private readonly XtraPeriode _fPeriode;
+        private readonly int _index;
+        private List<FormelModel> _list;
 
         public XtraDispatch()
         {
@@ -49,27 +50,21 @@ namespace gescom.create.Views
             Text = _index >= 0 ? @"REPARTITION TAXE" : @"VENTILATION CA";
         }
 
-        private void fermer_Click(object sender, System.EventArgs e)
+        private void fermer_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void grillage_DoubleClick(object sender, System.EventArgs e)
+        private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.DetaillerOperation(id);
         }
 
-        private void détaillerToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void détaillerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (_fPeriode.Showing)
             {
@@ -87,7 +82,7 @@ namespace gescom.create.Views
             }
         }
 
-        private void XtraDispatch_Activated(object sender, System.EventArgs e)
+        private void XtraDispatch_Activated(object sender, EventArgs e)
         {
             imprimer.Enabled = false;
             if (!_fPeriode.Showing) return;

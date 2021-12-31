@@ -1,9 +1,11 @@
-﻿using gescom.create.Models;
+﻿using System;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
 using gescom.data.Models;
 
 namespace gescom.create.Views
 {
-    public partial class XtraComptable : DevExpress.XtraEditors.XtraForm
+    public partial class XtraComptable : XtraForm
     {
         private readonly long _id;
 
@@ -27,28 +29,30 @@ namespace gescom.create.Views
             Typage.Text = p.LitteralType;
             if (p.Pid != null)
             {
-                var pid = (long)p.Pid;
+                var pid = (long) p.Pid;
                 Numero.Text = StdCalcul.DoubleToSpaceFormat(pid);
             }
+
             if (p.Solde == null) return;
-            var sold = (long)p.Solde;
+            var sold = (long) p.Solde;
             solde.Text = StdCalcul.AfficherPrix(sold);
         }
 
-        private void fermer_Click(object sender, System.EventArgs e)
+        private void fermer_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void creer_Click(object sender, System.EventArgs e)
+        private void creer_Click(object sender, EventArgs e)
         {
-            bool isDebit = debit.Checked;
+            var isDebit = debit.Checked;
             var error = CompteHelpers.Create(isDebit, _id, textRefce.Text, textLibelle.Text, textMontant.Text);
             if (!error)
             {
                 ErrorHelpers.ShowError("DONNEES INCOMPLETES");
                 return;
             }
+
             Close();
         }
     }

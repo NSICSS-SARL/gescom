@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
 
 namespace gescom.create.Views
 {
@@ -62,72 +62,55 @@ namespace gescom.create.Views
 
         private void personGrid_DoubleClick(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(numero.Text))
-            {
-                return;
-            }
-            if (numero.Text == @"0")
-            {
-                return;
-            }
-            int id = int.Parse(numero.Text);
+            if (string.IsNullOrEmpty(numero.Text)) return;
+            if (numero.Text == @"0") return;
+            var id = int.Parse(numero.Text);
             CreateHelpers.DetaillerPerson(_index, id);
         }
 
         private void imprimer_Click(object sender, EventArgs e)
         {
-            if (_index <= 0)
-            {
-                return;
-            }
+            if (_index <= 0) return;
             CreateHelpers.ImprimerPerson(_index);
         }
 
         private void détailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(numero.Text))
-            {
-                return;
-            }
-            if (numero.Text == @"0")
-            {
-                return;
-            }
-            int id = int.Parse(numero.Text);
-            PersonModel p = PersonHelpers.Get(id);
-            if (p == null)
-            {
-                return;
-            }
+            if (string.IsNullOrEmpty(numero.Text)) return;
+            if (numero.Text == @"0") return;
+            var id = int.Parse(numero.Text);
+            var p = PersonHelpers.Get(id);
+            if (p == null) return;
             if (p.Groupe <= 0)
             {
                 CreateHelpers.DetaillerVendorCompte(id, id);
                 return;
             }
+
             if (p.Groupe < 5)
             {
                 CreateHelpers.DetaillerCustomerCompte(id, p.Nom);
                 return;
             }
+
             CreateHelpers.DetaillerPrimeCompte(id);
         }
 
         private void règlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_index < 3) { return; }
-            if (string.IsNullOrEmpty(numero.Text))
+            if (_index < 3) return;
+            if (string.IsNullOrEmpty(numero.Text)) return;
+            if (numero.Text == @"0") return;
+            var id = int.Parse(numero.Text);
+            var amount = DateHelpers.GetAmountPrime(id);
+            var p = PersonHelpers.Get(id);
+            if (p.Groupe < 5) return;
+            if (amount <= 0)
             {
+                ErrorHelpers.ShowError("AUCUN BONUS!");
                 return;
             }
-            if (numero.Text == @"0")
-            {
-                return;
-            }
-            int id = int.Parse(numero.Text);
-            float amount = DateHelpers.GetAmountPrime(id);
-            PersonModel p = PersonHelpers.Get(id);
-            if (p.Groupe < 5) { return; }
-            if (amount <= 0) { ErrorHelpers.ShowError("AUCUN BONUS!"); return; }
+
             CreateHelpers.ReglerBonus(id);
         }
 

@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraEditors;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Globalization;
+using DevExpress.XtraEditors;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -9,17 +9,18 @@ namespace gescom.create.Views
     {
         private readonly long _id;
         private readonly DistItem _item;
-        private ActeModel _acte;
+        private readonly ActeModel _acte;
         private DuoItem _duo;
         private long _numeroPlace;
-        private long _p = 0;
+
+        private long _p;
         //private long? _t;
 
         //
-        private long _v = 0;
+        private long _v;
 
         //
-        private VoirItem _voir;
+        private readonly VoirItem _voir;
 
         private long _x;
         private long _y;
@@ -30,7 +31,7 @@ namespace gescom.create.Views
             InitializeComponent();
             _item = new DistItem();
             _duo = new DuoItem();
-           // _t = null;
+            // _t = null;
         }
 
         public XtraFusion(long id)
@@ -47,16 +48,18 @@ namespace gescom.create.Views
 
         private void ActeSave()
         {
-            if ((!checkVerif.Checked) && (_v < 0))
+            if (!checkVerif.Checked && _v < 0)
             {
                 _acte.Verif = 1;
                 _voir.VoirVerif = false;
             }
-            if ((!checkPlace.Checked) && (_p < 0))
+
+            if (!checkPlace.Checked && _p < 0)
             {
                 _acte.Placer = 1;
                 _voir.VoirPlace = false;
             }
+
             ActeHelpers.Update(_acte);
             VoirHelpers.Update(new VoirModel(_voir));
         }
@@ -70,52 +73,51 @@ namespace gescom.create.Views
                 _voir.VoirEntre = false;
                 _acte.Entrer = 1;
             }
+
             if (!checkPrix.Checked && _y == -1)
             {
                 _y = 1;
                 _voir.VoirPrix = false;
                 _acte.Priter = 1;
             }
+
             if (!checkPrior.Checked && _z == -1)
             {
                 _voir.VoirPrior = false;
                 _z = 1;
             }
-          /*  if (_t == 1)
-            {
-                if (!radioMoyen.Checked)
-                {
-                    _t = null;
-                }
-            }
-            else
-            {
-                _t = null;
-            }
-            */
-            if (!string.IsNullOrEmpty(q1.Text))
-            {
-                quantite = float.Parse(q1.Text);
-            }
+
+            /*  if (_t == 1)
+              {
+                  if (!radioMoyen.Checked)
+                  {
+                      _t = null;
+                  }
+              }
+              else
+              {
+                  _t = null;
+              }
+              */
+            if (!string.IsNullOrEmpty(q1.Text)) quantite = float.Parse(q1.Text);
             var message = s1.Text;
             ArticleHelpers.UpdateFusion(_id, "tache", message, b1.Text, b2.Text, _x, _y, quantite, _z);
             _item.Numero = PlaceHelpers.GetId(distNewPlace.Text);
             if (_item.Numero == null) return;
-            var n = (long)_item.Numero;
+            var n = (long) _item.Numero;
             var place = PlaceHelpers.Get(n);
             if (place.IsReserved != null)
             {
-                var i = (long)place.IsReserved;
-                if (i == 1)
-                {
-                    _item.Numero = _numeroPlace;
-                }
+                var i = (long) place.IsReserved;
+                if (i == 1) _item.Numero = _numeroPlace;
             }
+
             ActeSave();
             if (DistHelpers.Update(_item))
             {
                 // ErrorHelpers.ShowErrorDuplicate();return;
             }
+
             PlaceHelpers.Fill(n);
             Close();
         }
@@ -138,38 +140,43 @@ namespace gescom.create.Views
             _x = 0;
             _y = 0;
             _z = 0;
-          /*  if (_duo.L == 1)
-            {
-                _t = 1;
-                radioMoyen.Checked = true;
-            }*/
+            /*  if (_duo.L == 1)
+              {
+                  _t = 1;
+                  radioMoyen.Checked = true;
+              }*/
             if (_voir.VoirEntre)
             {
                 checkEntre.Checked = true;
                 _acte.Entrer = -1;
                 _x = -1;
             }
+
             if (_voir.VoirPrix)
             {
                 checkPrix.Checked = true;
                 _acte.Priter = -1;
                 _y = -1;
             }
+
             if (_voir.VoirPrior)
             {
                 checkPrior.Checked = true;
                 _z = -1;
             }
+
             if (_voir.VoirPlace)
             {
                 _p = -1;
                 checkPlace.Checked = true;
             }
+
             if (_voir.VoirVerif)
             {
                 _v = -1;
                 checkVerif.Checked = true;
             }
+
             s.Text = _duo.S2;
             q.Text = StdCalcul.DoubleToSpaceFormat(_duo.Q2);
             s1.Text = _duo.S1;
@@ -183,18 +190,15 @@ namespace gescom.create.Views
             nombre.Text = StdCalcul.Spacing(_item.Id.ToString(CultureInfo.InvariantCulture));
             var article = ArticleHelpers.Get(_item.Id);
             leNom.Text = article.Nom;
-            int n = article.Code.Length;
+            var n = article.Code.Length;
             var fcode = article.Code.Substring(n - 1, 1) + article.Code.Substring(0, n - 1);
             codage.Text = fcode;
             if (_item.Numero == null) return;
-            var id = (long)_item.Numero;
+            var id = (long) _item.Numero;
             _numeroPlace = id;
             var place = PlaceHelpers.GetIndex(id);
             labelPlace.Text = place.Code;
-            foreach (var variable in PlaceHelpers.GetList())
-            {
-                placement.Items.Add(variable);
-            }
+            foreach (var variable in PlaceHelpers.GetList()) placement.Items.Add(variable);
             placement.Text = place.Code;
             distNewPlace.Text = place.Code;
             secondPlace.Text = place.Nom;

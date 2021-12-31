@@ -33,7 +33,7 @@ namespace gescom.data.Models
         {
             var invRepository = new InvoiceRepository();
             invRepository.Create(model);
-            if ((model.Groupe != 2) && (model.Groupe != 0)) return model.Id;
+            if (model.Groupe != 2 && model.Groupe != 0) return model.Id;
             var boxReptory = new BoxRepository();
             boxReptory.Create(model);
             return model.Id;
@@ -50,7 +50,7 @@ namespace gescom.data.Models
             DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return liste.Where(text => (text.Datum <= fin) && (text.Datum >= debut));
+            return liste.Where(text => text.Datum <= fin && text.Datum >= debut);
         }
 
         public static InvoiceItem Get(long id)
@@ -72,21 +72,19 @@ namespace gescom.data.Models
         public static List<InvoiceModel> GetBills()
         {
             var result = new List<InvoiceModel>();
-            foreach (InvoiceItem item in GetItems())
+            foreach (var item in GetItems())
             {
                 var model = new InvoiceModel();
                 if (item.Groupe == 2) continue;
-                var p = (float)item.Percu;
-                if (p <= 0)
-                {
-                    item.InfoFin = null;
-                }
+                var p = (float) item.Percu;
+                if (p <= 0) item.InfoFin = null;
                 model.Copy(item);
                 model.Montant2 = StdCalcul.DoubleToSpaceFormat(model.Montant);
                 model.DetailModel = RetailHelpers.GetModel(item.Id);
                 model.Set();
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -108,24 +106,19 @@ namespace gescom.data.Models
             {
                 item.SetTime();
                 if (item.Montant == null) continue;
-                if (item.Rendu == null)
-                {
-                    item.Rendu = 0;
-                }
-                if (item.Percu == null)
-                {
-                    item.Percu = 0;
-                }
-                item.Debit = (float)item.Montant;
+                if (item.Rendu == null) item.Rendu = 0;
+                if (item.Percu == null) item.Percu = 0;
+                item.Debit = (float) item.Montant;
                 item.Solde = item.Debit;
-                var credit = (float)item.Percu;
+                var credit = (float) item.Percu;
                 item.Credit = credit;
                 item.Solde = item.Debit - credit;
                 item.Id2 = StdCalcul.DoubleToSpaceFormat(item.Id);
-                var m = (float)item.Montant;
+                var m = (float) item.Montant;
                 item.Montant2 = StdCalcul.DoubleToSpaceFormat(m);
                 boxes.Add(item);
             }
+
             return boxes;
         }
 
@@ -134,37 +127,32 @@ namespace gescom.data.Models
             foreach (var item in GetBoxItems())
             {
                 float x = 0;
-                if (item.Percu != null) x = (float)item.Percu;
-                if (x > 0)
-                {
-                    yield return item;
-                }
+                if (item.Percu != null) x = (float) item.Percu;
+                if (x > 0) yield return item;
             }
         }
 
         public static IEnumerable<InvoiceText> GetDatedTexts(IEnumerable<InvoiceText> liste, DateTime debut,
             DateTime fin)
         {
-            return liste.Where(text => (text.Datum <= fin) && (text.Datum >= debut));
+            return liste.Where(text => text.Datum <= fin && text.Datum >= debut);
         }
 
         public static List<InvoiceModel> GetInvoices()
         {
             var result = new List<InvoiceModel>();
-            foreach (InvoiceItem item in GetItems())
+            foreach (var item in GetItems())
             {
                 var model = new InvoiceModel();
                 if (item.Groupe != 2) continue;
-                var p = (float)item.Percu;
-                if (p <= 0)
-                {
-                    item.InfoFin = null;
-                }
+                var p = (float) item.Percu;
+                if (p <= 0) item.InfoFin = null;
                 model.Copy(item);
                 model.Montant2 = StdCalcul.DoubleToSpaceFormat(model.Montant);
                 model.Set();
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -181,43 +169,46 @@ namespace gescom.data.Models
         public static IEnumerable<InvoiceText> GetInvoiceTexts(List<InvoiceModel> invoices)
         {
             var result = new List<InvoiceText>();
-            foreach (InvoiceModel invoice in invoices)
+            foreach (var invoice in invoices)
             {
                 var text = new InvoiceText();
                 text.Copy(invoice);
                 result.Add(text);
             }
+
             return result;
         }
 
         public static IEnumerable<InvoiceText> GetInvoiceTexts()
         {
             var result = new List<InvoiceText>();
-            foreach (InvoiceModel model in GetUnpaid())
+            foreach (var model in GetUnpaid())
             {
                 var item = new InvoiceText();
                 item.Copy(model);
                 result.Add(item);
             }
+
             return result;
         }
 
         public static IEnumerable<InvoiceItem> GetItems()
         {
             var result = new List<InvoiceItem>();
-            foreach (BoxItem item in GetBoxItems())
+            foreach (var item in GetBoxItems())
             {
                 var invoice = new InvoiceItem();
                 invoice.Copy(item);
                 result.Add(invoice);
             }
+
             return result;
         }
 
         public static CashModel GetModel(long id)
         {
             var repository = new InvoiceRepository();
-            InvoiceItem item = repository.Get(id);
+            var item = repository.Get(id);
             var model = new CashModel();
             model.Copy(item);
             return model;
@@ -231,24 +222,26 @@ namespace gescom.data.Models
         public static IEnumerable<InvoiceText> GetPayedTexts()
         {
             var result = new List<InvoiceText>();
-            foreach (InvoiceModel model in GetPaid())
+            foreach (var model in GetPaid())
             {
                 var item = new InvoiceText();
                 item.Copy(model);
                 result.Add(item);
             }
+
             return result;
         }
 
         public static IEnumerable<InvoiceText> GetTexts()
         {
             var result = new List<InvoiceText>();
-            foreach (InvoiceModel model in GetInvoices())
+            foreach (var model in GetInvoices())
             {
                 var text = new InvoiceText();
                 text.Copy(model);
                 result.Add(text);
             }
+
             return result;
         }
 
@@ -259,31 +252,28 @@ namespace gescom.data.Models
 
         public static List<BoxItem> GetUnpaidBox()
         {
-            return GetBoxItems().Where(boxItem => (boxItem.Groupe == 2) && boxItem.Percu == 0).ToList();
+            return GetBoxItems().Where(boxItem => boxItem.Groupe == 2 && boxItem.Percu == 0).ToList();
         }
 
         public static float GetValue(long id)
         {
             float result = 0;
-            foreach (CashModel value in GetValues())
-            {
+            foreach (var value in GetValues())
                 if (value.Id == id)
-                {
                     result = value.Montant;
-                }
-            }
             return result;
         }
 
         public static List<CashModel> GetValues()
         {
             var result = new List<CashModel>();
-            foreach (BoxItem item in GetBoxItems())
+            foreach (var item in GetBoxItems())
             {
                 var model = new CashModel();
                 model.Copy(item);
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -302,24 +292,19 @@ namespace gescom.data.Models
             {
                 item.SetTime();
                 if (item.Montant == null) continue;
-                if (item.Rendu == null)
-                {
-                    item.Rendu = 0;
-                }
-                if (item.Percu == null)
-                {
-                    item.Percu = 0;
-                }
-                item.Debit = (float)item.Montant;
+                if (item.Rendu == null) item.Rendu = 0;
+                if (item.Percu == null) item.Percu = 0;
+                item.Debit = (float) item.Montant;
                 item.Solde = item.Debit;
-                var credit = (float)item.Percu;
+                var credit = (float) item.Percu;
                 item.Credit = credit;
                 item.Solde = item.Debit - credit;
                 item.Id2 = StdCalcul.DoubleToSpaceFormat(item.Id);
-                var m = (float)item.Montant;
+                var m = (float) item.Montant;
                 item.Montant2 = StdCalcul.DoubleToSpaceFormat(m);
                 boxes.Add(item);
             }
+
             return boxes;
         }
 
@@ -327,20 +312,11 @@ namespace gescom.data.Models
         {
             var reptory = new BoxRepository();
             var box = reptory.Get(id);
-            if (box == null)
-            {
-                return;
-            }
-            if (box.Percu > 0)
-            {
-                return;
-            }
+            if (box == null) return;
+            if (box.Percu > 0) return;
             if (!(percu >= box.Montant)) return;
-            if (box.Montant == null)
-            {
-                return;
-            }
-            var montant = (float)box.Montant;
+            if (box.Montant == null) return;
+            var montant = (float) box.Montant;
             var rendu = percu - montant;
             Update(id, percu, rendu);
         }
@@ -366,29 +342,14 @@ namespace gescom.data.Models
 
         public static void Update(InvoiceText invoice)
         {
-            if (string.IsNullOrEmpty(invoice?.Id))
-            {
-                return;
-            }
-            if (string.IsNullOrEmpty(invoice.Percu))
-            {
-                return;
-            }
-            if (string.IsNullOrEmpty(invoice.Rendu))
-            {
-                return;
-            }
-            long id = long.Parse(invoice.Id);
-            if (id <= 0)
-            {
-                return;
-            }
-            float percu = float.Parse(invoice.Percu);
-            if (percu <= 0)
-            {
-                return;
-            }
-            float rendu = float.Parse(invoice.Rendu);
+            if (string.IsNullOrEmpty(invoice?.Id)) return;
+            if (string.IsNullOrEmpty(invoice.Percu)) return;
+            if (string.IsNullOrEmpty(invoice.Rendu)) return;
+            var id = long.Parse(invoice.Id);
+            if (id <= 0) return;
+            var percu = float.Parse(invoice.Percu);
+            if (percu <= 0) return;
+            var rendu = float.Parse(invoice.Rendu);
             Update(id, percu, rendu);
         }
 
@@ -416,10 +377,7 @@ namespace gescom.data.Models
         {
             var reptory = new BoxRepository();
             var box = reptory.Get(id);
-            if (box == null)
-            {
-                return false;
-            }
+            if (box == null) return false;
             Update(id, percu);
             return true;
         }
@@ -477,20 +435,17 @@ namespace gescom.data.Models
 
         public void SetTime()
         {
-            DiaryModel diary = DiaryHelpers.GetReference(Id);
+            var diary = DiaryHelpers.GetReference(Id);
             D1 = diary.Datum;
             Pid = diary.Pid;
             Operateur = diary.Nom;
             Hote = diary.Hote;
             Tache = diary.Tache;
-            var d1 = (DateTime)D1;
+            var d1 = (DateTime) D1;
             InfoDebut = StdCalcul.SetInfo(d1, Hote, Operateur);
-            if (Percu == null)
-            {
-                return;
-            }
+            if (Percu == null) return;
             var d2 = new DateTime();
-            if (D2 != null) d2 = (DateTime)D2;
+            if (D2 != null) d2 = (DateTime) D2;
             InfoFin = StdCalcul.SetInfo(d2, Hote, Operateur);
         }
     }
@@ -499,22 +454,36 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
+        public int Count()
+        {
+            return _context.BoxItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void Add(BoxItem item)
         {
             _context.BoxItems.InsertOnSubmit(item);
         }
 
-       
+
         public void Cancel(long id)
         {
-            BoxItem item = Get(id);
+            var item = Get(id);
             item.Groupe = -1;
             _context.SubmitChanges();
-        }
-
-        public int Count()
-        {
-            return _context.BoxItems.Count();
         }
 
         public void Create(CashModel model)
@@ -527,6 +496,7 @@ namespace gescom.data.Models
                 item.Percu = 0;
                 item.Rendu = 0;
             }
+
             Add(item);
             _context.SubmitChanges();
         }
@@ -541,22 +511,9 @@ namespace gescom.data.Models
             return _context.BoxItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public void Update(BoxItem item)
         {
-            BoxItem element = Get(item.Id);
+            var element = Get(item.Id);
             element.Copy(item);
             if (item.Percu >= item.Rendu)
             {
@@ -569,7 +526,6 @@ namespace gescom.data.Models
     public class CashModel
     {
         /** numéro de table.*/
-
         public CashModel()
         {
             /***/
@@ -596,7 +552,7 @@ namespace gescom.data.Models
             Datum = diary.Datum;
             Nom = item.Nom;
             Adresse = item.Adresse;
-            if (item.Forme != null) Forme = (long)item.Forme;
+            if (item.Forme != null) Forme = (long) item.Forme;
         }
 
         public CashModel(DiaryModel diary, long pid, float total)
@@ -614,6 +570,7 @@ namespace gescom.data.Models
                 Adresse = p.Adresse;
                 Forme = p.Forme;
             }
+
             Montant = total;
         }
 
@@ -628,7 +585,7 @@ namespace gescom.data.Models
             Nom = item.Nom;
             Adresse = item.Adresse;
             Montant = total;
-            if (item.Forme != null) Forme = (long)item.Forme;
+            if (item.Forme != null) Forme = (long) item.Forme;
         }
 
         public CashModel(DiaryModel diary, float total)
@@ -699,13 +656,13 @@ namespace gescom.data.Models
         public void Copy(BoxItem item)
         {
             Id = item.Id;
-            if (item.Montant != null) Montant = (float)item.Montant;
-            if (item.Rendu != null) Rendu = (float)item.Rendu;
-            if (item.Percu != null) Percu = (float)item.Percu;
-            if (item.D1 != null) Datum = (DateTime)item.D1;
+            if (item.Montant != null) Montant = (float) item.Montant;
+            if (item.Rendu != null) Rendu = (float) item.Rendu;
+            if (item.Percu != null) Percu = (float) item.Percu;
+            if (item.D1 != null) Datum = (DateTime) item.D1;
             Nom = item.Nom;
             Adresse = item.Adresse;
-            if (item.Montant != null) Montant = (float)item.Montant;
+            if (item.Montant != null) Montant = (float) item.Montant;
             Debit = item.Debit;
             Credit = item.Credit;
             Solde = item.Solde;
@@ -721,19 +678,13 @@ namespace gescom.data.Models
 
         public void Copy(InvoiceItem item)
         {
-            if (item == null)
-            {
-                return;
-            }
-            if (item.Id == 0)
-            {
-                return;
-            }
+            if (item == null) return;
+            if (item.Id == 0) return;
             Id = item.Id;
-            Montant = (float)item.Montant;
-            Rendu = (float)item.Rendu;
-            Percu = (float)item.Percu;
-            if (item.Datum != null) Datum = (DateTime)item.Datum;
+            Montant = (float) item.Montant;
+            Rendu = (float) item.Rendu;
+            Percu = (float) item.Percu;
+            if (item.Datum != null) Datum = (DateTime) item.Datum;
             Nom = item.Nom;
             Adresse = item.Adresse;
             Debit = item.Debit;
@@ -759,26 +710,21 @@ namespace gescom.data.Models
         {
             Invoices = new List<InvoiceItem>();
             var repository = new InvoiceRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
-            foreach (InvoiceItem item in repository.Invoices())
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var item in repository.Invoices())
             {
                 SetTime(item);
-                item.Debit = (float)item.Montant;
+                item.Debit = (float) item.Montant;
                 item.Solde = item.Debit;
                 if (item.Rendu > 0)
                 {
-                    var credit = (float)item.Montant;
+                    var credit = (float) item.Montant;
                     item.Credit = credit;
                     item.Solde = item.Debit - credit;
                 }
-                if ((item.Nom != null) && (item.Montant > 0))
-                {
-                    Invoices.Add(item);
-                }
+
+                if (item.Nom != null && item.Montant > 0) Invoices.Add(item);
             }
         }
 
@@ -796,7 +742,7 @@ namespace gescom.data.Models
 
         private void SetTime(InvoiceItem item)
         {
-            DiaryModel diary = DiaryHelpers.GetReference(item.Id);
+            var diary = DiaryHelpers.GetReference(item.Id);
             item.Datum = diary.Datum;
             item.Pid = diary.Pid;
             item.Operateur = diary.Nom;
@@ -880,23 +826,23 @@ namespace gescom.data.Models
         public void Copy(BoxItem item)
         {
             Id = item.Id;
-            if (item.Montant != null) Montant = (double)item.Montant;
-            if (item.Rendu != null) Rendu = (double)item.Rendu;
-            if (item.Percu != null) Percu = (double)item.Percu;
+            if (item.Montant != null) Montant = (double) item.Montant;
+            if (item.Rendu != null) Rendu = (double) item.Rendu;
+            if (item.Percu != null) Percu = (double) item.Percu;
             Nom = item.Nom;
             Datum = item.D1;
             Adresse = item.Adresse;
             Pid = item.Pid;
             Operateur = item.Operateur;
             Hote = item.Hote;
-            if (item.D1 != null) D1 = (DateTime)item.D1;
-            if (item.D2 != null) D2 = (DateTime)item.D2;
+            if (item.D1 != null) D1 = (DateTime) item.D1;
+            if (item.D2 != null) D2 = (DateTime) item.D2;
             O1 = item.O1;
             O2 = item.O2;
             T1 = item.T1;
             T2 = item.T2;
             InfoDebut = item.InfoDebut;
-            if (item.Groupe != null) Groupe = (long)item.Groupe;
+            if (item.Groupe != null) Groupe = (long) item.Groupe;
             InfoFin = item.InfoFin;
             Credit = item.Credit;
             Debit = item.Debit;
@@ -959,15 +905,15 @@ namespace gescom.data.Models
         public void Copy(InvoiceItem item)
         {
             Id = item.Id;
-            Montant = (float)item.Montant;
-            Rendu = (float)item.Rendu;
-            Percu = (float)item.Percu;
+            Montant = (float) item.Montant;
+            Rendu = (float) item.Rendu;
+            Percu = (float) item.Percu;
             Nom = item.Nom;
             Adresse = item.Adresse;
             Debit = item.Debit;
             Credit = item.Credit;
             Solde = item.Solde;
-            if (item.Datum != null) Datum = (DateTime)item.Datum;
+            if (item.Datum != null) Datum = (DateTime) item.Datum;
             Pid = item.Pid;
             Operateur = item.Operateur;
             Hote = item.Hote;
@@ -1000,7 +946,7 @@ namespace gescom.data.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("Id=" + Id.ToString() + " Date=" + Datum.ToOADate());
+            sb.Append("Id=" + Id + " Date=" + Datum.ToOADate());
             return sb.ToString();
         }
 
@@ -1015,6 +961,25 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
+        public int Count()
+        {
+            return _context.InvoiceItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void Add(InvoiceItem item)
         {
             _context.InvoiceItems.InsertOnSubmit(item);
@@ -1023,16 +988,8 @@ namespace gescom.data.Models
         public void Cancel(long id)
         {
             var item = Get(id);
-            if (item == null)
-            {
-                return;
-            }
+            if (item == null) return;
             Delete(item);
-        }
-
-        public int Count()
-        {
-            return _context.InvoiceItems.Count();
         }
 
         public void Create(CashModel model)
@@ -1060,22 +1017,9 @@ namespace gescom.data.Models
             return _context.InvoiceItems;
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public void Update(long id, string nom, string adresse)
         {
-            InvoiceItem item = Get(id);
+            var item = Get(id);
             item.Nom = nom;
             item.Adresse = adresse;
             Save();
@@ -1083,7 +1027,7 @@ namespace gescom.data.Models
 
         public CashModel Update(CashModel model)
         {
-            InvoiceItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Percu = model.Percu;
             item.Rendu = model.Rendu;
             item.Datum = DateTime.Now;
@@ -1093,6 +1037,7 @@ namespace gescom.data.Models
                 model.Copy(item);
                 return model;
             }
+
             return null;
         }
     }

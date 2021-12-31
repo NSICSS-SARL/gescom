@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
 
 namespace gescom.create.Views
 {
@@ -15,14 +15,8 @@ namespace gescom.create.Views
 
         private long GetX()
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return 0;
-            }
-            if (myNum.Text == @"0")
-            {
-                return 0;
-            }
+            if (string.IsNullOrEmpty(myNum.Text)) return 0;
+            if (myNum.Text == @"0") return 0;
             var x = long.Parse(myNum.Text);
             return x;
         }
@@ -43,25 +37,16 @@ namespace gescom.create.Views
         private void modifStripMenuItem_Click(object sender, EventArgs e)
         {
             var id = GetX();
-            if (id == 0)
-            {
-                return;
-            }
+            if (id == 0) return;
             CreateHelpers.Fusion(id);
         }
 
         private void gridActions_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.DetaillerEntree(id);
         }
 

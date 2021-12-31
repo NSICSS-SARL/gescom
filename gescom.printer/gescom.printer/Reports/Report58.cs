@@ -1,8 +1,9 @@
-﻿using gescom.data.Models;
+﻿using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.printer.Reports
 {
-    public partial class Report58 : DevExpress.XtraReports.UI.XtraReport
+    public partial class Report58 : XtraReport
     {
         public Report58()
         {

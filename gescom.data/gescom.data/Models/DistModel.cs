@@ -16,10 +16,7 @@ namespace gescom.data.Models
         public static long GetId(string name)
         {
             long result = -1;
-            foreach (DistItem item in GetList().Where(item => item.Nom == name))
-            {
-                result = item.Id;
-            }
+            foreach (var item in GetList().Where(item => item.Nom == name)) result = item.Id;
             return result;
         }
 
@@ -42,31 +39,24 @@ namespace gescom.data.Models
         public static string GetName(long id)
         {
             string result = null;
-            foreach (DistItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item.Nom;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item.Nom;
             return result;
         }
 
         public static long GetPlaceNumber(long id)
         {
             long result = -1;
-            foreach (DistItem item in GetList().Where(item => item.Id == id))
-            {
-                if (item.Numero != null) result = (long)item.Numero;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id))
+                if (item.Numero != null)
+                    result = (long) item.Numero;
             return result;
         }
 
         public static void PutDescription(long id, string text)
         {
             var repository = new DistRepository();
-            DistItem item = repository.Get(id);
-            if (string.IsNullOrEmpty(text))
-            {
-                return;
-            }
+            var item = repository.Get(id);
+            if (string.IsNullOrEmpty(text)) return;
             item.Description = text;
             repository.Save();
         }
@@ -86,14 +76,11 @@ namespace gescom.data.Models
         {
             Dists = new List<DistItem>();
             var repository = new DistRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Dists())
             {
-                return;
-            }
-            foreach (DistItem element in repository.Dists())
-            {
-                DistItem item = element;
+                var item = element;
                 Dists.Add(item);
             }
         }
@@ -153,19 +140,16 @@ namespace gescom.data.Models
         {
             Id = item.Id;
             Nom = item.Nom;
-            if (item.Numero != null) Numero = (long)item.Numero;
+            if (item.Numero != null) Numero = (long) item.Numero;
             DuplicateError = item.DuplicateError;
             Description = item.Description;
             Place = item.Place;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
         }
 
         public void HasError()
         {
-            if (Nom == null)
-            {
-                IsValid = false;
-            }
+            if (Nom == null) IsValid = false;
         }
     }
 
@@ -188,6 +172,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -210,6 +195,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -230,7 +216,7 @@ namespace gescom.data.Models
 
         public bool Update(DistModel model)
         {
-            DistItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
 
             try

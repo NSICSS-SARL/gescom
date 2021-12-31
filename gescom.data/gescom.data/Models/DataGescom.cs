@@ -1,6 +1,6 @@
 namespace gescom.data
 {
-    partial class DataGescomDataContext
+    internal class DataGescomDataContext
     {
     }
 }

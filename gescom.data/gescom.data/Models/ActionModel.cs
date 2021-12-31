@@ -10,7 +10,7 @@ namespace gescom.data.Models
     {
         public static void Cancel(long id)
         {
-            List<ExitItem> liste = CancelExits(id);
+            var liste = CancelExits(id);
             CancelReturn(liste);
         }
 
@@ -18,63 +18,62 @@ namespace gescom.data.Models
         {
             var detailCart = new DetailCart();
             var detailRept = new DetailRepository();
-            foreach (DetailItem detail in detailCart.Where(detail => detail.Rang == id))
+            foreach (var detail in detailCart.Where(detail => detail.Rang == id))
             {
                 detailRept.Cancel(detail.Id);
                 detailRept.Save();
             }
+
             var moveCart = new MoveCart();
             var moveRept = new MoveRepository();
-            foreach (MoveItem move in moveCart.Moves)
-            {
+            foreach (var move in moveCart.Moves)
                 if (move.Rang == id)
                 {
-                    MoveItem mItem = moveRept.Get(move.Id);
+                    var mItem = moveRept.Get(move.Id);
                     mItem.Quantite = 0;
                     moveRept.Save();
                     CancelTaxeAndBonus(move.Id);
                 }
-            }
+
             var cart = new ExitCart();
             var result = new List<ExitItem>();
-            DiaryItem diary = DiaryHelpers.Get(id);
+            var diary = DiaryHelpers.Get(id);
             long pid = -1;
-            if (diary.Pid != null) pid = (long)diary.Pid;
+            if (diary.Pid != null) pid = (long) diary.Pid;
             var exitReptory = new ExitRepository();
-            foreach (ExitItem item in cart.Where(item => item.Rang == id))
+            foreach (var item in cart.Where(item => item.Rang == id))
             {
                 item.Pid = pid;
                 result.Add(item);
-                ExitItem item1 = exitReptory.Get(item.Id);
+                var item1 = exitReptory.Get(item.Id);
                 item1.Groupe = 8;
                 item1.Quantite = 0;
                 exitReptory.Save();
             }
+
             return result;
         }
 
         public static void CancelReturn(List<ExitItem> liste)
         {
-            if (liste.Count == 0)
-            {
-                return;
-            }
-            long pid = liste[0].Pid;
+            if (liste.Count == 0) return;
+            var pid = liste[0].Pid;
             var model = new DiaryModel(10, pid);
-            DiaryItem diary = DiaryHelpers.Create(model);
-            foreach (ExitItem item in liste)
+            var diary = DiaryHelpers.Create(model);
+            foreach (var item in liste)
             {
                 item.Rang = diary.Id;
                 item.Groupe = 10;
                 float quantite = 0;
-                if (item.Quantite != null) quantite = (float)item.Quantite;
+                if (item.Quantite != null) quantite = (float) item.Quantite;
                 long numero = 0;
-                if (item.Numero != null) numero = (long)item.Numero;
+                if (item.Numero != null) numero = (long) item.Numero;
                 ArticleHelpers.Add(numero, quantite);
             }
+
             var entryRept = new EntryRepository();
             var moveRept = new MoveRepository();
-            foreach (ExitItem item in liste)
+            foreach (var item in liste)
             {
                 entryRept.Add(item);
                 entryRept.Save();
@@ -88,9 +87,10 @@ namespace gescom.data.Models
             var reptory = new BonusRepository();
             if (item.Prix != null)
             {
-                var prix = (float)item.Prix;
+                var prix = (float) item.Prix;
                 item.Prix = StdCalcul.GetSimpleLisseF(prix);
             }
+
             reptory.Add(item);
         }
 
@@ -99,10 +99,11 @@ namespace gescom.data.Models
             var reptory = new DeclRepository();
             if (item.Prix != null)
             {
-                var prix = (float)item.Prix;
+                var prix = (float) item.Prix;
                 item.Prix = prix;
             }
-            DeclItem result = reptory.Add(item);
+
+            var result = reptory.Add(item);
             return result;
         }
 
@@ -114,7 +115,7 @@ namespace gescom.data.Models
 
         public static long DoActions(List<ElementModel> elements, long index)
         {
-            long i = -1 * index;
+            var i = -1 * index;
             long result = 0;
             switch (i)
             {
@@ -130,6 +131,7 @@ namespace gescom.data.Models
                     result = DoSteal(elements);
                     break;
             }
+
             return result;
         }
 
@@ -137,7 +139,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(6);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item1 => ToCommand(item1, diary));
+            var total = elements.Sum(item1 => ToCommand(item1, diary));
             var model = new CashModel(diary, -1, total);
             return CashHelpers.Create(model);
         }
@@ -147,22 +149,17 @@ namespace gescom.data.Models
             var diary = new DiaryModel(0, item.Id);
             DiaryHelpers.Create(diary);
             float total = 0;
-            float taxe = PriceHelpers.GetTaxe() / 100;
-            foreach (ElementModel elementModel in elements)
+            var taxe = PriceHelpers.GetTaxe() / 100;
+            foreach (var elementModel in elements)
             {
                 ToAdd(elementModel, diary);
-                float prix = PriceHelpers.GetPAchat(elementModel.Id);
-                if (elementModel.Taxable == 0)
-                {
-                    total += prix * elementModel.Quantite;
-                }
-                if (elementModel.Taxable == 1)
-                {
-                    total += (1 + taxe) * prix * elementModel.Quantite;
-                }
+                var prix = PriceHelpers.GetPAchat(elementModel.Id);
+                if (elementModel.Taxable == 0) total += prix * elementModel.Quantite;
+                if (elementModel.Taxable == 1) total += (1 + taxe) * prix * elementModel.Quantite;
                 ProdHelpers.RealizedCommande(elementModel.Id, elementModel.Quantite);
             }
-            var model = new CashModel(diary, item, total) { Groupe = 0 };
+
+            var model = new CashModel(diary, item, total) {Groupe = 0};
             return CashHelpers.Create(model);
         }
 
@@ -171,19 +168,13 @@ namespace gescom.data.Models
             var diary = new DiaryModel(0, elementModel.Pid);
             DiaryHelpers.Create(diary);
             float total = 0;
-            float taxe = PriceHelpers.GetTaxe() / 100;
+            var taxe = PriceHelpers.GetTaxe() / 100;
             ToAdd(elementModel, diary);
-            float prix = PriceHelpers.GetPAchat(elementModel.Id);
-            if (elementModel.Taxable == 0)
-            {
-                total += prix * elementModel.Quantite;
-            }
-            if (elementModel.Taxable == 1)
-            {
-                total += (1 + taxe) * prix * elementModel.Quantite;
-            }
+            var prix = PriceHelpers.GetPAchat(elementModel.Id);
+            if (elementModel.Taxable == 0) total += prix * elementModel.Quantite;
+            if (elementModel.Taxable == 1) total += (1 + taxe) * prix * elementModel.Quantite;
             ProdHelpers.RealizedCommande(elementModel.Id, elementModel.Quantite);
-            var model = new CashModel(diary, elementModel.Pid, total) { Groupe = 0 };
+            var model = new CashModel(diary, elementModel.Pid, total) {Groupe = 0};
             return CashHelpers.Create(model);
         }
 
@@ -191,7 +182,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(6, item.Id);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item1 => ToCommand(item1, diary));
+            var total = elements.Sum(item1 => ToCommand(item1, diary));
             var model = new CashModel(diary, item, total);
             return CashHelpers.Create(model);
         }
@@ -200,7 +191,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(4);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item => ToDefect(item, diary));
+            var total = elements.Sum(item => ToDefect(item, diary));
             var model = new CashModel(diary, total);
             return CashHelpers.Create(model);
         }
@@ -209,7 +200,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(3);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item => ToDefect(item, diary));
+            var total = elements.Sum(item => ToDefect(item, diary));
             var model = new CashModel(diary, total);
             return CashHelpers.Create(model);
         }
@@ -218,7 +209,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(1, -1);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item => ToAdd(item, diary));
+            var total = elements.Sum(item => ToAdd(item, diary));
             var model = new CashModel(diary, total);
             return CashHelpers.Create(model);
         }
@@ -227,8 +218,8 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(2, item.Id);
             var c = DiaryHelpers.Create(diary);
-            float total = elements.Sum(item1 => ToSell(item1, diary));
-            var model = new CashModel(diary, item, total) { Groupe = 2 };
+            var total = elements.Sum(item1 => ToSell(item1, diary));
+            var model = new CashModel(diary, item, total) {Groupe = 2};
             CashHelpers.Create(model);
             model.Id = c.Id;
             return model;
@@ -237,8 +228,8 @@ namespace gescom.data.Models
         public static long DoSimulate(List<ElementModel> elements, PersonItem item)
         {
             var diary = new DiaryModel(9, item.Id);
-            DiaryItem diary1 = DiaryHelpers.Create(diary);
-            float total = elements.Sum(item1 => ToSimulate(item1, diary));
+            var diary1 = DiaryHelpers.Create(diary);
+            var total = elements.Sum(item1 => ToSimulate(item1, diary));
             var model = new CashModel(diary, item, total);
             CashHelpers.CreateNoBox(model);
             return diary1.Id;
@@ -248,7 +239,7 @@ namespace gescom.data.Models
         {
             var diary = new DiaryModel(5);
             DiaryHelpers.Create(diary);
-            float total = elements.Sum(item => ToDefect(item, diary));
+            var total = elements.Sum(item => ToDefect(item, diary));
             var model = new CashModel(diary, total);
             return CashHelpers.Create(model);
         }
@@ -256,15 +247,15 @@ namespace gescom.data.Models
         public static IEnumerable<Detail2> FilterByDate(IEnumerable<Detail2> liste, DateTime debut, DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return liste.Where(item => (item.DATY <= fin) && (item.DATY >= debut));
+            return liste.Where(item => item.DATY <= fin && item.DATY >= debut);
         }
 
         public static float GetAmountedBonus(long id)
         {
             return
                 GetBonusById(id)
-                    .Where(item => (item.Prix != null) && (item.Quantite != null))
-                    .Sum(item => (float)(item.Prix * item.Quantite));
+                    .Where(item => item.Prix != null && item.Quantite != null)
+                    .Sum(item => (float) (item.Prix * item.Quantite));
         }
 
         public static IEnumerable<BonusItem> GetBonusById(long id)
@@ -276,24 +267,25 @@ namespace gescom.data.Models
         public static IEnumerable<DetailItem> GetDatedItems(long id, DateTime debut, DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return GetDetails(id).Where(item => (item.Daty <= fin) && (item.Daty >= debut));
+            return GetDetails(id).Where(item => item.Daty <= fin && item.Daty >= debut);
         }
 
         public static IEnumerable<DetailText> GetDatedTexts(long id, DateTime debut, DateTime fin)
         {
             var result = new List<DetailText>();
-            foreach (DetailItem item in GetDatedItems(id, debut, fin))
+            foreach (var item in GetDatedItems(id, debut, fin))
             {
                 var text = new DetailText();
                 text.Copy(item);
                 result.Add(text);
             }
+
             return result;
         }
 
         public static IEnumerable<DetailItem> GetDetails(long id)
         {
-            return GetDetails().Where(item => (item.Numero == id) && (item.Groupe >= 0));
+            return GetDetails().Where(item => item.Numero == id && item.Groupe >= 0);
         }
 
         public static IEnumerable<DetailItem> GetDetails()
@@ -322,24 +314,26 @@ namespace gescom.data.Models
         public static List<ElementModel> GetElements(IEnumerable<OperationItem> liste)
         {
             var elements = new List<ElementModel>();
-            foreach (OperationItem item in liste)
+            foreach (var item in liste)
             {
                 var element = new ElementModel();
                 element.Copy(item);
                 elements.Add(element);
             }
+
             return elements;
         }
 
         public static List<ElementModel> GetElements(IEnumerable<OperationAuto> liste)
         {
             var elements = new List<ElementModel>();
-            foreach (OperationAuto item in liste)
+            foreach (var item in liste)
             {
                 var element = new ElementModel();
                 element.Copy(item);
                 elements.Add(element);
             }
+
             return elements;
         }
 
@@ -352,7 +346,7 @@ namespace gescom.data.Models
         public static IEnumerable<DetailText> GetTexts(long id)
         {
             var result = new List<DetailText>();
-            foreach (DetailItem item in GetDetails(id))
+            foreach (var item in GetDetails(id))
             {
                 var text = new DetailText();
                 text.Copy(item);
@@ -360,12 +354,10 @@ namespace gescom.data.Models
                 text.Tache = d.Tache;
                 text.Operateur = d.Nom;
                 var da = d.Datum;
-                if (da != null)
-                {
-                    text.Daty = (DateTime)da;
-                }
+                if (da != null) text.Daty = (DateTime) da;
                 result.Add(text);
             }
+
             return result;
         }
 
@@ -403,7 +395,7 @@ namespace gescom.data.Models
         {
             element.Cid = diary.Pid;
             element.Groupe = 2;
-            var model = new ActionModel(diary) { Groupe = 2, Wid = element.Wid };
+            var model = new ActionModel(diary) {Groupe = 2, Wid = element.Wid};
             element.Pid = diary.Pid;
             var repository = new ExitRepository();
             return repository.Remove(model, element);
@@ -413,7 +405,7 @@ namespace gescom.data.Models
         {
             element.Cid = diary.Pid;
             element.Groupe = 9;
-            var model = new ActionModel(diary) { Groupe = 9 };
+            var model = new ActionModel(diary) {Groupe = 9};
             element.Pid = diary.Pid;
             var repository = new ExitRepository();
             return repository.Simulate(model, element);
@@ -576,11 +568,8 @@ namespace gescom.data.Models
         {
             Bonus = new List<BonusItem>();
             var repository = new BonusRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
+            var count = repository.Count();
+            if (count == 0) return;
             Parallel.ForEach(repository.Bonus(), item => Bonus.Add(item));
         }
 
@@ -599,15 +588,13 @@ namespace gescom.data.Models
 
     public partial class BonusItem
     {
-       
-
         public long Pid { get; set; }
 
         public float Rx { get; set; }
 
         public int Taxable { get; set; }
 
-       
+
         public void Copy(MoveItem item)
         {
             Id = item.Id;
@@ -626,49 +613,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(BonusItem item)
-        {
-            _context.BonusItems.InsertOnSubmit(item);
-            Save();
-        }
-
-        public void Add(MoveItem item)
-        {
-            if (item?.Groupe != 2)
-            {
-                return;
-            }
-            var element = new BonusItem();
-            element.Copy(item);
-            Add(element);
-        }
-
-        public IQueryable<BonusItem> Bonus()
-        {
-            return _context.BonusItems;
-        }
-
-        public void Cancel(long id)
-        {
-            BonusItem item = Get(id);
-            if (item == null)
-            {
-                return;
-            }
-            item.Quantite = 0;
-            Save();
-        }
-
         public int Count()
         {
             return _context.BonusItems.Count();
-        }
-
-        
-
-        public BonusItem Get(long id)
-        {
-            return _context.BonusItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -681,7 +628,41 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(BonusItem item)
+        {
+            _context.BonusItems.InsertOnSubmit(item);
+            Save();
+        }
+
+        public void Add(MoveItem item)
+        {
+            if (item?.Groupe != 2) return;
+            var element = new BonusItem();
+            element.Copy(item);
+            Add(element);
+        }
+
+        public IQueryable<BonusItem> Bonus()
+        {
+            return _context.BonusItems;
+        }
+
+        public void Cancel(long id)
+        {
+            var item = Get(id);
+            if (item == null) return;
+            item.Quantite = 0;
+            Save();
+        }
+
+
+        public BonusItem Get(long id)
+        {
+            return _context.BonusItems.SingleOrDefault(d => d.Id == id);
         }
     }
 
@@ -691,12 +672,9 @@ namespace gescom.data.Models
         {
             Declares = new List<DeclItem>();
             var repository = new DeclRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
-            foreach (DeclItem element in repository.Decls())
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Decls())
             {
                 var item = new DeclItem();
                 item.Copy(element);
@@ -719,7 +697,6 @@ namespace gescom.data.Models
 
     public partial class DeclItem
     {
-       
         public long Pid { get; set; }
 
         public float Rx { get; set; }
@@ -744,107 +721,29 @@ namespace gescom.data.Models
             Taxable = item.Taxable;
         }
 
-       
 
         public void Copy(MoveItem item)
         {
             Id = item.Id;
-            if (item.Rang != null) Rang = (long)item.Rang;
-            if (item.Numero != null) Numero = (long)item.Numero;
-            if (item.Prix != null) Prix = (float)item.Prix;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Groupe != null) Groupe = (long)item.Groupe;
+            if (item.Rang != null) Rang = (long) item.Rang;
+            if (item.Numero != null) Numero = (long) item.Numero;
+            if (item.Prix != null) Prix = (float) item.Prix;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Groupe != null) Groupe = (long) item.Groupe;
             Pid = item.Pid;
             Rx = item.Rx;
             Forme = item.Forme;
             Taxable = item.Taxable;
         }
-
-      
     }
 
     public class DeclRepository : IData
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public bool Add(DeclItem item)
-        {
-            try
-            {
-                _context.DeclItems.InsertOnSubmit(item);
-                Save();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        public DeclItem Add(MoveItem item)
-        {
-            var element = new DeclItem();
-            if (item == null)
-            {
-                return null;
-            }
-            element.Copy(item);
-            float prix = 0;
-            if (item.Groupe == 0)
-            {
-                prix = PriceHelpers.GetPAchat(element.Numero);
-                float taux = PriceHelpers.GetTaxe() / 100;
-                if (element.Taxable == 1)
-                {
-                    prix = prix * taux;
-                }
-                else
-                {
-                    prix = 0;
-                }
-                element.Prix = prix;
-                Add(element);
-                return element;
-            }
-            if ((element.Groupe != 1) && (element.Groupe != 2) && (element.Groupe != 8)) return null;
-            if (item.Prix != null) prix = (float)item.Prix;
-            element.Prix = 0;
-            if (element.Taxable == 1)
-            {
-                prix = PriceHelpers.CalculReboursTva(prix);
-                element.Prix = prix;
-            }
-            Add(element);
-            return element;
-        }
-
-        public void Cancel(long id)
-        {
-            DeclItem item = Get(id);
-            if (item == null)
-            {
-                return;
-            }
-            item.Quantite = 0;
-            Save();
-        }
-
         public int Count()
         {
             return _context.DeclItems.Count();
-        }
-
-        public IQueryable<DeclItem> Decls()
-        {
-            return _context.DeclItems;
-        }
-
-      
-
-       
-        public DeclItem Get(long id)
-        {
-            return _context.DeclItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -857,7 +756,74 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public bool Add(DeclItem item)
+        {
+            try
+            {
+                _context.DeclItems.InsertOnSubmit(item);
+                Save();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public DeclItem Add(MoveItem item)
+        {
+            var element = new DeclItem();
+            if (item == null) return null;
+            element.Copy(item);
+            float prix = 0;
+            if (item.Groupe == 0)
+            {
+                prix = PriceHelpers.GetPAchat(element.Numero);
+                var taux = PriceHelpers.GetTaxe() / 100;
+                if (element.Taxable == 1)
+                    prix = prix * taux;
+                else
+                    prix = 0;
+                element.Prix = prix;
+                Add(element);
+                return element;
+            }
+
+            if (element.Groupe != 1 && element.Groupe != 2 && element.Groupe != 8) return null;
+            if (item.Prix != null) prix = (float) item.Prix;
+            element.Prix = 0;
+            if (element.Taxable == 1)
+            {
+                prix = PriceHelpers.CalculReboursTva(prix);
+                element.Prix = prix;
+            }
+
+            Add(element);
+            return element;
+        }
+
+        public void Cancel(long id)
+        {
+            var item = Get(id);
+            if (item == null) return;
+            item.Quantite = 0;
+            Save();
+        }
+
+        public IQueryable<DeclItem> Decls()
+        {
+            return _context.DeclItems;
+        }
+
+
+        public DeclItem Get(long id)
+        {
+            return _context.DeclItems.SingleOrDefault(d => d.Id == id);
         }
     }
 
@@ -867,24 +833,22 @@ namespace gescom.data.Models
         {
             Details = new List<DetailItem>();
             var repository = new DetailRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Details())
             {
-                return;
-            }
-            foreach (DetailItem element in repository.Details())
-            {
-                DetailItem item = element;
+                var item = element;
                 if (element.Rang != null)
                 {
-                    var id = (long)element.Rang;
-                    DiaryModel day = DiaryHelpers.GetReference(id);
+                    var id = (long) element.Rang;
+                    var day = DiaryHelpers.GetReference(id);
                     item.Daty = day.Datum;
                     item.Tache = day.Tache;
                     item.Operateur = day.Nom;
                     item.Info = item.Daty + "-" + item.Operateur;
                     SetMontant(item);
                 }
+
                 Details.Add(item);
             }
         }
@@ -903,38 +867,23 @@ namespace gescom.data.Models
 
         private void SetMontant(DetailItem item)
         {
-            if (item?.Prix == null)
-            {
-                return;
-            }
-            var prix = (float)item.Prix;
+            if (item?.Prix == null) return;
+            var prix = (float) item.Prix;
             float q1 = 0;
             float q2 = 0;
-            if (item.QEntre != null)
-            {
-                q1 = (float)item.QEntre;
-            }
-            if (item.QSort != null)
-            {
-                q2 = (float)item.QSort;
-            }
+            if (item.QEntre != null) q1 = (float) item.QEntre;
+            if (item.QSort != null) q2 = (float) item.QSort;
             item.Quantite = q1 + q2;
             item.Montant = prix * item.Quantite;
-            if (q1 <= 0)
-            {
-                item.QEntre = null;
-            }
-            if (q2 <= 0)
-            {
-                item.QSort = null;
-            }
+            if (q1 <= 0) item.QEntre = null;
+            if (q2 <= 0) item.QSort = null;
         }
     }
 
     public partial class DetailItem
     {
         public DateTime Daty { get; set; }
-        
+
 
         public long Forme { get; set; }
 
@@ -956,7 +905,6 @@ namespace gescom.data.Models
 
         public int Taxable { get; set; }
 
-       
 
         public void Copy(ActionModel model)
         {
@@ -979,59 +927,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(DetailItem item)
-        {
-            _context.DetailItems.InsertOnSubmit(item);
-        }
-
-        public void Cancel(long id)
-        {
-            DetailItem detail = Get(id);
-            detail.QSort = null;
-            detail.Groupe = -1;
-            detail.QEntre = null;
-            Save();
-        }
-
         public int Count()
         {
             return _context.DetailItems.Count();
-        }
-
-        public void Create(ActionModel model)
-        {
-            if (model.Groupe < 0)
-            {
-                return;
-            }
-            if (model.Groupe > 5)
-            {
-                return;
-            }
-            var item = new DetailItem();
-            item.Copy(model);
-            item.Id = Count() + 1;
-            if ((item.Groupe >= 0) && (item.Groupe < 2))
-            {
-                item.QEntre = model.Quantite;
-                Add(item);
-                _context.SubmitChanges();
-                return;
-            }
-            item.QSort = model.Quantite;
-            Add(item);
-            _context.SubmitChanges();
-        }
-       
-
-        public IQueryable<DetailItem> Details()
-        {
-            return _context.DetailItems;
-        }
-
-        public DetailItem Get(long id)
-        {
-            return _context.DetailItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -1044,7 +942,53 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(DetailItem item)
+        {
+            _context.DetailItems.InsertOnSubmit(item);
+        }
+
+        public void Cancel(long id)
+        {
+            var detail = Get(id);
+            detail.QSort = null;
+            detail.Groupe = -1;
+            detail.QEntre = null;
+            Save();
+        }
+
+        public void Create(ActionModel model)
+        {
+            if (model.Groupe < 0) return;
+            if (model.Groupe > 5) return;
+            var item = new DetailItem();
+            item.Copy(model);
+            item.Id = Count() + 1;
+            if (item.Groupe >= 0 && item.Groupe < 2)
+            {
+                item.QEntre = model.Quantite;
+                Add(item);
+                _context.SubmitChanges();
+                return;
+            }
+
+            item.QSort = model.Quantite;
+            Add(item);
+            _context.SubmitChanges();
+        }
+
+
+        public IQueryable<DetailItem> Details()
+        {
+            return _context.DetailItems;
+        }
+
+        public DetailItem Get(long id)
+        {
+            return _context.DetailItems.SingleOrDefault(d => d.Id == id);
         }
     }
 
@@ -1052,7 +996,6 @@ namespace gescom.data.Models
     {
         public DateTime Daty { get; set; }
 
-      
 
         public long Groupe { get; set; }
 
@@ -1060,7 +1003,6 @@ namespace gescom.data.Models
 
         public string Info { get; set; }
 
-       
 
         public string Montant { get; set; }
 
@@ -1076,15 +1018,11 @@ namespace gescom.data.Models
 
         public string QSort { get; set; }
 
-      
 
         public string Rang { get; set; }
 
         public string Tache { get; set; }
 
-     
-
-       
 
         public void Copy(DetailItem item)
         {
@@ -1093,29 +1031,34 @@ namespace gescom.data.Models
             Id = StdCalcul.DoubleToSpaceFormat(item.Id);
             if (item.Rang != null)
             {
-                var r = (double)item.Rang;
+                var r = (double) item.Rang;
                 Rang = StdCalcul.DoubleToSpaceFormat(r);
             }
+
             if (item.Numero != null)
             {
-                var n = (double)item.Numero;
+                var n = (double) item.Numero;
                 Numero = StdCalcul.DoubleToSpaceFormat(n);
             }
+
             if (item.Prix != null)
             {
-                var p = (double)item.Prix;
+                var p = (double) item.Prix;
                 Prix = StdCalcul.DoubleToSpaceFormat(p);
             }
+
             if (item.QEntre != null)
             {
-                var e = (double)item.QEntre;
+                var e = (double) item.QEntre;
                 QEntre = StdCalcul.DoubleToSpaceFormat(e);
             }
+
             if (item.QSort != null)
             {
-                var q = (double)item.QSort;
+                var q = (double) item.QSort;
                 QSort = StdCalcul.DoubleToSpaceFormat(q);
             }
+
             Montant = StdCalcul.DoubleToSpaceFormat(item.Montant);
             Operateur = item.Operateur;
             Info = item.Info;
@@ -1129,14 +1072,11 @@ namespace gescom.data.Models
         {
             Entrees = new List<EntryItem>();
             var repository = new EntryRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Entrees())
             {
-                return;
-            }
-            foreach (EntryItem element in repository.Entrees())
-            {
-                EntryItem item = element;
+                var item = element;
                 Entrees.Add(item);
             }
         }
@@ -1156,14 +1096,13 @@ namespace gescom.data.Models
 
     public partial class EntryItem
     {
-      
         public long Pid { get; set; }
 
         public float Rx { get; set; }
 
         public int Taxable { get; set; }
 
-       
+
         public void Copy(ActionModel model)
         {
             Id = model.Id;
@@ -1197,6 +1136,26 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
+        public int Count()
+        {
+            return _context.EntryItems.Count();
+        }
+
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public float Add(ActionModel model, ElementModel element)
         {
             // crée l'entrée.
@@ -1207,21 +1166,18 @@ namespace gescom.data.Models
             // augmente le stock de l'identifiant.
             ArticleHelpers.Add(element.Id, element.Quantite);
             // mise à jour de la date d'achat.
-            if (element.Pid >= 0)
-            {
-                EventsHelper.UpdateOnBuy(element.Id, element.Vid);
-            }
+            if (element.Pid >= 0) EventsHelper.UpdateOnBuy(element.Id, element.Vid);
             // crée le mouvement.
             var moveRepository = new MoveRepository();
             moveRepository.Create(model, element);
-            float montant = element.Prix * element.Quantite;
+            var montant = element.Prix * element.Quantite;
             return montant;
         }
 
         public void Add(ExitItem item)
         {
             if (item.Numero == null) return;
-            var numero = (long)item.Numero;
+            var numero = (long) item.Numero;
             var element = new EntryItem();
             element.Copy(item);
             element.Prix = PriceHelpers.GetPRevient(numero);
@@ -1240,34 +1196,14 @@ namespace gescom.data.Models
             Create(model, element);
             var moveRepository = new MoveRepository();
             moveRepository.Create(model, element);
-            float montant = element.Prix * element.Quantite;
+            var montant = element.Prix * element.Quantite;
             return montant;
         }
 
-        public int Count()
-        {
-            return _context.EntryItems.Count();
-        }
 
-       
         public IQueryable<EntryItem> Entrees()
         {
             return _context.EntryItems;
-        }
-
-       
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         private void Create(ActionModel model, ElementModel element)
@@ -1288,14 +1224,11 @@ namespace gescom.data.Models
         {
             Sorties = new List<ExitItem>();
             var repository = new ExitRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Sorties())
             {
-                return;
-            }
-            foreach (ExitItem element in repository.Sorties())
-            {
-                ExitItem item = element;
+                var item = element;
                 Sorties.Add(item);
             }
         }
@@ -1315,15 +1248,12 @@ namespace gescom.data.Models
 
     public partial class ExitItem
     {
-       
-
         public long Pid { get; set; }
 
         public float Rx { get; set; }
 
         public int Taxable { get; set; }
 
-       
 
         public void Copy(ActionModel model)
         {
@@ -1338,27 +1268,37 @@ namespace gescom.data.Models
             Forme = model.Forme;
             Taxable = model.Taxable;
         }
-
-       
     }
 
     public class ExitRepository : IData
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(ExitItem item)
-        {
-            _context.ExitItems.InsertOnSubmit(item);
-        }
-
-      
 
         public int Count()
         {
             return _context.ExitItems.Count();
         }
 
-      
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(ExitItem item)
+        {
+            _context.ExitItems.InsertOnSubmit(item);
+        }
+
 
         public ExitItem Get(long id)
         {
@@ -1376,8 +1316,8 @@ namespace gescom.data.Models
             // mise à jour date vente.
             EventsHelper.UpdateOnSold(element.Id, element.Cid);
             // crée le mouvement.
-            float quantite = element.Quantite;
-            float prix = element.Prix;
+            var quantite = element.Quantite;
+            var prix = element.Prix;
             var moveRepository = new MoveRepository();
             element.Quantite = quantite;
             moveRepository.Create(model, element);
@@ -1398,23 +1338,10 @@ namespace gescom.data.Models
             Create(model, element);
             // crée le mouvement.
             var moveRepository = new MoveRepository();
-            float quantite = element.Quantite;
+            var quantite = element.Quantite;
             element.Quantite = quantite;
             moveRepository.Create(model, element);
             return quantite * element.Prix;
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         // demande prix.
@@ -1425,7 +1352,7 @@ namespace gescom.data.Models
             element.Prix = GetPrice(element.Id, element.Pid);
             Create(model, element);
             var moveRepository = new MoveRepository();
-            float quantite = element.Quantite;
+            var quantite = element.Quantite;
             element.Quantite = quantite;
             moveRepository.Create(model, element);
             return quantite * element.Prix;
@@ -1450,7 +1377,7 @@ namespace gescom.data.Models
         private float GetPrice(long id, long pid)
         {
             float result;
-            long groupe = PersonHelpers.GetGroup(pid);
+            var groupe = PersonHelpers.GetGroup(pid);
             switch (groupe)
             {
                 case 2:
@@ -1469,6 +1396,7 @@ namespace gescom.data.Models
                     result = PriceHelpers.GetPGros(id);
                     break;
             }
+
             return result;
         }
     }
@@ -1479,19 +1407,16 @@ namespace gescom.data.Models
         {
             Moves = new List<MoveItem>();
             var repository = new MoveRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
-            foreach (MoveItem element in repository.Moves())
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Moves())
             {
                 float p = 0;
-                if (element.Prix != null) p = (float)element.Prix;
+                if (element.Prix != null) p = (float) element.Prix;
                 float q = 0;
-                if (element.Quantite != null) q = (float)element.Quantite;
+                if (element.Quantite != null) q = (float) element.Quantite;
                 element.Montant = p * q;
-                MoveItem item = element;
+                var item = element;
                 Moves.Add(item);
             }
         }
@@ -1511,8 +1436,6 @@ namespace gescom.data.Models
 
     public partial class MoveItem
     {
-     
-
         public float Montant { get; set; }
 
         public long Pid { get; set; }
@@ -1551,13 +1474,30 @@ namespace gescom.data.Models
             Forme = item.Forme;
             Taxable = item.Taxable;
         }
-
-      
     }
 
     public class MoveRepository : IData
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
+
+        public int Count()
+        {
+            return _context.MoveItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
 
         public void Add(MoveItem item)
         {
@@ -1567,7 +1507,7 @@ namespace gescom.data.Models
         public void Add(ExitItem item)
         {
             if (item.Numero == null) return;
-            var numero = (long)item.Numero;
+            var numero = (long) item.Numero;
             var element = new MoveItem();
             element.Copy(item);
             element.Prix = PriceHelpers.GetPRevient(numero);
@@ -1577,18 +1517,10 @@ namespace gescom.data.Models
 
         public void Cancel(long id)
         {
-            MoveItem item = Get(id);
-            if (item == null)
-            {
-                return;
-            }
+            var item = Get(id);
+            if (item == null) return;
             item.Quantite = 0;
             Save();
-        }
-
-        public int Count()
-        {
-            return _context.MoveItems.Count();
         }
 
         public void Create(ActionModel model, ElementModel element)
@@ -1603,7 +1535,7 @@ namespace gescom.data.Models
             ActionHelpers.CreateBonus(item);
         }
 
-       
+
         public void Delete(MoveItem item)
         {
             _context.MoveItems.DeleteOnSubmit(item);
@@ -1617,19 +1549,6 @@ namespace gescom.data.Models
         public IQueryable<MoveItem> Moves()
         {
             return _context.MoveItems;
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

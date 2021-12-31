@@ -1,11 +1,12 @@
-﻿using gescom.data.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.report.Reports
 {
-    public partial class ReportStock : DevExpress.XtraReports.UI.XtraReport
+    public partial class ReportStock : XtraReport
     {
-        private int _count;
+        private readonly int _count;
 
         public ReportStock()
         {

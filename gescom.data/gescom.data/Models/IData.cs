@@ -18,11 +18,11 @@ namespace gescom.data.Models
     {
         public static void Create(CashModel model)
         {
-            PersonModel p = PersonHelpers.Get(model.Pid);
-            long groupe = model.Groupe;
-            string s = DiaryHelpers.GetTask(groupe);
-            string refce = model.Id.ToString("D");
-            string libelle = s + @" -" + refce + @"- " + p.Nom;
+            var p = PersonHelpers.Get(model.Pid);
+            var groupe = model.Groupe;
+            var s = DiaryHelpers.GetTask(groupe);
+            var refce = model.Id.ToString("D");
+            var libelle = s + @" -" + refce + @"- " + p.Nom;
             var item = new CompteItem
             {
                 Id = model.Id,
@@ -39,6 +39,7 @@ namespace gescom.data.Models
                 reptory.Add(item);
                 return;
             }
+
             item.Credit = 0;
             item.Debit = model.Montant;
             reptory.Add(item);
@@ -46,11 +47,11 @@ namespace gescom.data.Models
 
         public static void Create(DiaryItem diary, long pid, float montant)
         {
-            string s = DiaryHelpers.GetTask(17);
-            long id = diary.Id;
-            string refce = id.ToString("D");
-            PersonModel p = PersonHelpers.Get(pid);
-            string libelle = s + @" -" + refce + @"- " + p.Nom;
+            var s = DiaryHelpers.GetTask(17);
+            var id = diary.Id;
+            var refce = id.ToString("D");
+            var p = PersonHelpers.Get(pid);
+            var libelle = s + @" -" + refce + @"- " + p.Nom;
             var item = new CompteItem
             {
                 Id = id,
@@ -67,20 +68,14 @@ namespace gescom.data.Models
 
         public static void Create(long id)
         {
-            float montant = ActionHelpers.GetAmountedBonus(id);
-            if (montant <= 0)
-            {
-                return;
-            }
-            string s = DiaryHelpers.GetTask(20);
-            string refce = id.ToString("D");
-            PersonnelItem p = DateHelpers.GetPersonnelItem(id);
-            string libelle = s + @" -" + refce + @"- " + p.Nom;
+            var montant = ActionHelpers.GetAmountedBonus(id);
+            if (montant <= 0) return;
+            var s = DiaryHelpers.GetTask(20);
+            var refce = id.ToString("D");
+            var p = DateHelpers.GetPersonnelItem(id);
+            var libelle = s + @" -" + refce + @"- " + p.Nom;
             long wid = 0;
-            if (p.Wid != null)
-            {
-                wid = (long)p.Wid;
-            }
+            if (p.Wid != null) wid = (long) p.Wid;
             var item = new CompteItem
             {
                 Numero = id,
@@ -90,7 +85,7 @@ namespace gescom.data.Models
             };
             var reptory = new CompteRepository();
             var diary1 = new DiaryModel(20, wid);
-            DiaryItem d1 = DiaryHelpers.Create(diary1);
+            var d1 = DiaryHelpers.Create(diary1);
             item.Id = d1.Id;
             item.Debit = 0;
             item.Credit = montant;
@@ -99,18 +94,9 @@ namespace gescom.data.Models
 
         public static bool Create(bool isDebit, long pid, string refce, string libelle, string valeur)
         {
-            if (string.IsNullOrEmpty(refce))
-            {
-                return false;
-            }
-            if (string.IsNullOrEmpty(libelle))
-            {
-                return false;
-            }
-            if (pid <= 0)
-            {
-                return false;
-            }
+            if (string.IsNullOrEmpty(refce)) return false;
+            if (string.IsNullOrEmpty(libelle)) return false;
+            if (pid <= 0) return false;
             float montant;
             try
             {
@@ -120,10 +106,8 @@ namespace gescom.data.Models
             {
                 return false;
             }
-            if (montant <= 0)
-            {
-                return false;
-            }
+
+            if (montant <= 0) return false;
             float debit;
             float credit;
             if (isDebit)
@@ -136,7 +120,8 @@ namespace gescom.data.Models
                 credit = montant;
                 debit = 0;
             }
-            PersonModel p = PersonHelpers.Get(pid);
+
+            var p = PersonHelpers.Get(pid);
             long groupe;
             switch (p.Groupe)
             {
@@ -152,6 +137,7 @@ namespace gescom.data.Models
                     groupe = 19;
                     break;
             }
+
             var item = new CompteItem
             {
                 Libelle = libelle,
@@ -162,7 +148,7 @@ namespace gescom.data.Models
             };
             var reptory = new CompteRepository();
             var diary1 = new DiaryModel(groupe, p.Id);
-            DiaryItem d1 = DiaryHelpers.Create(diary1);
+            var d1 = DiaryHelpers.Create(diary1);
             item.Id = d1.Id;
             reptory.Add(item);
             return true;
@@ -170,38 +156,20 @@ namespace gescom.data.Models
 
         public static void Create(long id, float montant)
         {
-            DiaryItem diary = DiaryHelpers.Get(id);
-            if (diary == null)
-            {
-                return;
-            }
+            var diary = DiaryHelpers.Get(id);
+            if (diary == null) return;
             long pid = 0;
-            if (diary.Pid != null)
-            {
-                pid = (long)diary.Pid;
-            }
-            PersonModel p = PersonHelpers.Get(pid);
-            if (p == null)
-            {
-                return;
-            }
-            long groupe = p.Groupe;
+            if (diary.Pid != null) pid = (long) diary.Pid;
+            var p = PersonHelpers.Get(pid);
+            if (p == null) return;
+            var groupe = p.Groupe;
             long g = 0;
-            if (groupe == 0)
-            {
-                g = 18;
-            }
-            if ((groupe > 0) && (groupe < 5))
-            {
-                g = 11;
-            }
-            if (groupe == 5)
-            {
-                g = 20;
-            }
-            string s = DiaryHelpers.GetTask(g);
-            string refce = id.ToString("D");
-            string libelle = s + @" -" + refce + @"- " + p.Nom;
+            if (groupe == 0) g = 18;
+            if (groupe > 0 && groupe < 5) g = 11;
+            if (groupe == 5) g = 20;
+            var s = DiaryHelpers.GetTask(g);
+            var refce = id.ToString("D");
+            var libelle = s + @" -" + refce + @"- " + p.Nom;
             var item = new CompteItem
             {
                 Numero = id,
@@ -215,39 +183,31 @@ namespace gescom.data.Models
                 item.Debit = 0;
                 item.Credit = montant;
                 var diary1 = new DiaryModel(g, p.Id);
-                DiaryItem d1 = DiaryHelpers.Create(diary1);
+                var d1 = DiaryHelpers.Create(diary1);
                 item.Id = d1.Id;
                 reptory.Add(item);
                 return;
             }
+
             item.Credit = 0;
             item.Debit = montant;
             var diary2 = new DiaryModel(g, p.Id);
-            DiaryItem d2 = DiaryHelpers.Create(diary2);
+            var d2 = DiaryHelpers.Create(diary2);
             item.Id = d2.Id;
             reptory.Add(item);
         }
 
         public static void DoReturn(DiaryItem diary, float montant)
         {
-            if (diary == null)
-            {
-                return;
-            }
-            long id = diary.Id;
+            if (diary == null) return;
+            var id = diary.Id;
             long pid = 0;
-            if (diary.Pid != null)
-            {
-                pid = (long)diary.Pid;
-            }
-            PersonModel p = PersonHelpers.Get(pid);
-            if (p == null)
-            {
-                return;
-            }
-            string s = DiaryHelpers.GetTask(1);
-            string refce = id.ToString("D");
-            string libelle = s + @" -" + refce + @"- " + p.Nom;
+            if (diary.Pid != null) pid = (long) diary.Pid;
+            var p = PersonHelpers.Get(pid);
+            if (p == null) return;
+            var s = DiaryHelpers.GetTask(1);
+            var refce = id.ToString("D");
+            var libelle = s + @" -" + refce + @"- " + p.Nom;
             var item = new CompteItem
             {
                 Id = id,
@@ -265,17 +225,14 @@ namespace gescom.data.Models
         public static List<SoldeItem> FilterSoldeByDate(IEnumerable<SoldeItem> liste, DateTime debut,
             DateTime fin)
         {
-            return liste.Where(text => (text.Datum <= fin.Date) && (text.Datum >= debut.Date)).ToList();
+            return liste.Where(text => text.Datum <= fin.Date && text.Datum >= debut.Date).ToList();
         }
 
         public static float GetAnteriorSolde(IEnumerable<SoldeItem> liste, DateTime fin)
         {
             var debut = new DateTime(2015, 05, 01);
-            if (debut.Date >= fin.Date)
-            {
-                return 0;
-            }
-            List<SoldeItem> myList = FilterSoldeByDate(liste, debut, fin);
+            if (debut.Date >= fin.Date) return 0;
+            var myList = FilterSoldeByDate(liste, debut, fin);
             return myList.Count == 0 ? 0 : myList.Sum(item => item.Debit - item.Credit);
         }
 
@@ -294,24 +251,22 @@ namespace gescom.data.Models
         public static float GetSolde(long pid)
         {
             var cart = new SoldeCart();
-            float solde = cart.Soldes.Where(item => item.Pid == pid).Sum(item => item.Credit - item.Debit);
-            PersonModel p = PersonHelpers.Get(pid);
-            if ((p.Groupe > 0) && (p.Groupe < 5))
-            {
-                solde = -1 * solde;
-            }
+            var solde = cart.Soldes.Where(item => item.Pid == pid).Sum(item => item.Credit - item.Debit);
+            var p = PersonHelpers.Get(pid);
+            if (p.Groupe > 0 && p.Groupe < 5) solde = -1 * solde;
             return solde;
         }
 
         public static List<SoldeText> GetSoldeTexts(List<SoldeItem> liste)
         {
             var result = new List<SoldeText>();
-            foreach (SoldeItem item in liste)
+            foreach (var item in liste)
             {
                 var text = new SoldeText();
                 text.Copy(item);
                 result.Add(text);
             }
+
             return result;
         }
     }
@@ -322,7 +277,7 @@ namespace gescom.data.Models
             DateTime fin)
         {
             //debut = debut.AddDays(-1);
-            return liste.Where(prime => (prime.D1.Date <= fin.Date) && (prime.D1.Date >= debut.Date));
+            return liste.Where(prime => prime.D1.Date <= fin.Date && prime.D1.Date >= debut.Date);
         }
 
         public static IEnumerable<FormelModel> GetFormalisme()
@@ -339,13 +294,14 @@ namespace gescom.data.Models
         public static IEnumerable<FormelModel> GetOutFormels()
         {
             var result = new List<FormelModel>();
-            foreach (FormelModel model in GetFormels())
+            foreach (var model in GetFormels())
             {
                 model.Taxable -= model.Frais;
                 model.Collecte = model.Taxable * PriceHelpers.GetTaxe() / 100;
                 model.Exo = model.Total - model.Taxable;
                 result.Add(model);
             }
+
             return result;
         }
     }
@@ -365,7 +321,7 @@ namespace gescom.data.Models
                 try
                 {
                     var fluxInfos = new StreamWriter(@"c:\glite\bin\test.txt", true);
-                    string line = message + ": " + DateTime.Now.ToString("G");
+                    var line = message + ": " + DateTime.Now.ToString("G");
                     fluxInfos.WriteLine(line);
                     fluxInfos.Close();
                 }
@@ -374,8 +330,10 @@ namespace gescom.data.Models
                     Console.WriteLine("File write error : " + e.Message);
                     return false;
                 }
+
                 return true;
             }
+
             {
                 try
                 {
@@ -402,7 +360,7 @@ namespace gescom.data.Models
                 {
                     try
                     {
-                        string line = @"The Elapsed event was raised at " + DateTime.Now.ToString("G");
+                        var line = @"The Elapsed event was raised at " + DateTime.Now.ToString("G");
                         fluxInfos.WriteLine(line);
                     }
                     catch (Exception e)
@@ -411,8 +369,10 @@ namespace gescom.data.Models
                         return false;
                     }
                 }
+
                 return true;
             }
+
             {
                 try
                 {
@@ -505,6 +465,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }
@@ -515,12 +476,9 @@ namespace gescom.data.Models
         {
             Formels = new List<FormelModel>();
             var repository = new FormelRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
-            foreach (FormelItem item in repository.Formels())
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var item in repository.Formels())
             {
                 var model = new FormelModel();
                 model.Copy(item);
@@ -576,45 +534,39 @@ namespace gescom.data.Models
             Adresse = item.Adresse;
             if (item.D1 != null)
             {
-                D1 = (DateTime)item.D1;
+                D1 = (DateTime) item.D1;
                 if (item.D1 != null)
                 {
-                    var date = (DateTime)item.D1;
+                    var date = (DateTime) item.D1;
                     Reference = date.ToString("d") + "-" + item.T1 + "-" + item.O1;
                 }
             }
+
             if (item.Collecte != null)
             {
-                var coll = (float)item.Collecte;
+                var coll = (float) item.Collecte;
                 Collecte = coll;
                 IsTaxable = !(Collecte <= 0);
             }
+
             float taxed = 0;
             float exo = 0;
-            if (item.VenteTaxable != null)
-            {
-                taxed = (float)item.VenteTaxable;
-            }
-            if (item.VenteExo != null)
-            {
-                exo = (float)item.VenteExo;
-            }
-            if (exo <= 0)
-            {
-                exo = 0;
-            }
+            if (item.VenteTaxable != null) taxed = (float) item.VenteTaxable;
+            if (item.VenteExo != null) exo = (float) item.VenteExo;
+            if (exo <= 0) exo = 0;
             Exo = exo;
             Taxable = taxed;
             Total = Exo + Taxable;
-            if (item.Profit != null) Profit = (float)item.Profit;
-            if (item.Frais != null) Frais = (float)item.Frais;
+            if (item.Profit != null) Profit = (float) item.Profit;
+            if (item.Frais != null) Frais = (float) item.Frais;
             long forme = 0;
-            if (item.Forme != null) forme = (long)item.Forme;
+            if (item.Forme != null) forme = (long) item.Forme;
             if (forme == 0)
             {
                 IsFormel = false;
                 return;
             }
+
             IsFormel = true;
         }
     }
@@ -660,6 +612,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }
@@ -672,7 +625,10 @@ namespace gescom.data.Models
             var repository = new LastRepository();
             Parallel.ForEach(repository.Lasts().ToList(), item =>
             {
-                lock (Lasts) Lasts.Add(item);
+                lock (Lasts)
+                {
+                    Lasts.Add(item);
+                }
             });
         }
 
@@ -730,6 +686,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }
@@ -742,7 +699,10 @@ namespace gescom.data.Models
             var repository = new SoldeRepository();
             Parallel.ForEach(repository.Soldes().ToList(), item =>
             {
-                lock (Soldes) Soldes.Add(item);
+                lock (Soldes)
+                {
+                    Soldes.Add(item);
+                }
             });
         }
 
@@ -795,6 +755,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -827,9 +788,10 @@ namespace gescom.data.Models
             Credit = StdCalcul.DoubleToSpaceFormat(item.Credit);
             if (item.Datum != null)
             {
-                Datum = (DateTime)item.Datum;
+                Datum = (DateTime) item.Datum;
                 Daty = Datum.ToString("d");
             }
+
             Refce = item.Refce;
             Libelle = item.Libelle;
         }

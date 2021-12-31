@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
 
 namespace gescom.create.Views
 {
@@ -30,16 +30,13 @@ namespace gescom.create.Views
         {
             if (ticket.Checked)
             {
-                CashModel model = CashHelpers.GetModel(_id);
+                var model = CashHelpers.GetModel(_id);
                 DateHelpers.CreatePrinting(model);
                 Close();
             }
-            if (!facture.Checked)
-            {
-                Close();
-            }
-            if (!ticket.Checked)
-            { CreateHelpers.ImprimerFacture(_id); }
+
+            if (!facture.Checked) Close();
+            if (!ticket.Checked) CreateHelpers.ImprimerFacture(_id);
             Close();
         }
     }

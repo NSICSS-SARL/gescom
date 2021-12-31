@@ -55,12 +55,13 @@
             this.buttonDemande = new DevExpress.XtraBars.BarButtonItem();
             this.buttonVente = new DevExpress.XtraBars.BarButtonItem();
             this.buttonGrave = new DevExpress.XtraBars.BarButtonItem();
+            this.buttonNormal = new DevExpress.XtraBars.BarButtonItem();
             this.Accueil = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.basePage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.resumePage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageActe = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tiersPage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.buttonNormal = new DevExpress.XtraBars.BarButtonItem();
+            this.destockBtn = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,22 +95,24 @@
             this.buttonDemande,
             this.buttonVente,
             this.buttonGrave,
-            this.buttonNormal});
+            this.buttonNormal,
+            this.ribbonControl1.SearchEditItem,
+            this.destockBtn});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 33;
+            this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.Accueil});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1612, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(1612, 158);
             // 
             // buttonArticle
             // 
             this.buttonArticle.Caption = "Articles";
             this.buttonArticle.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonArticle.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonArticle.Glyph")));
             this.buttonArticle.Id = 1;
-            this.buttonArticle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonArticle.LargeGlyph")));
+            this.buttonArticle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonArticle.ImageOptions.Image")));
+            this.buttonArticle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonArticle.ImageOptions.LargeImage")));
             this.buttonArticle.Name = "buttonArticle";
             this.buttonArticle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonArticle_ItemClick);
             // 
@@ -117,9 +120,9 @@
             // 
             this.buttonCustomer.Caption = "Clients";
             this.buttonCustomer.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonCustomer.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonCustomer.Glyph")));
             this.buttonCustomer.Id = 2;
-            this.buttonCustomer.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonCustomer.LargeGlyph")));
+            this.buttonCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomer.ImageOptions.Image")));
+            this.buttonCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonCustomer.ImageOptions.LargeImage")));
             this.buttonCustomer.Name = "buttonCustomer";
             this.buttonCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCustomer_ItemClick);
             // 
@@ -127,9 +130,9 @@
             // 
             this.buttonVendor.Caption = "Fournisseurs";
             this.buttonVendor.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonVendor.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonVendor.Glyph")));
             this.buttonVendor.Id = 3;
-            this.buttonVendor.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonVendor.LargeGlyph")));
+            this.buttonVendor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonVendor.ImageOptions.Image")));
+            this.buttonVendor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonVendor.ImageOptions.LargeImage")));
             this.buttonVendor.Name = "buttonVendor";
             this.buttonVendor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonVendor_ItemClick);
             // 
@@ -137,9 +140,9 @@
             // 
             this.buttonUnite.Caption = "Unités";
             this.buttonUnite.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonUnite.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonUnite.Glyph")));
             this.buttonUnite.Id = 4;
-            this.buttonUnite.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonUnite.LargeGlyph")));
+            this.buttonUnite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonUnite.ImageOptions.Image")));
+            this.buttonUnite.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonUnite.ImageOptions.LargeImage")));
             this.buttonUnite.Name = "buttonUnite";
             this.buttonUnite.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonUnite_ItemClick);
             // 
@@ -147,9 +150,9 @@
             // 
             this.buttonFamille.Caption = "Catégories";
             this.buttonFamille.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonFamille.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonFamille.Glyph")));
             this.buttonFamille.Id = 5;
-            this.buttonFamille.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonFamille.LargeGlyph")));
+            this.buttonFamille.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonFamille.ImageOptions.Image")));
+            this.buttonFamille.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonFamille.ImageOptions.LargeImage")));
             this.buttonFamille.Name = "buttonFamille";
             this.buttonFamille.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonFamille_ItemClick);
             // 
@@ -157,9 +160,9 @@
             // 
             this.buttonInfo.Caption = "Informations";
             this.buttonInfo.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonInfo.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonInfo.Glyph")));
             this.buttonInfo.Id = 6;
-            this.buttonInfo.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonInfo.LargeGlyph")));
+            this.buttonInfo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo.ImageOptions.Image")));
+            this.buttonInfo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonInfo.ImageOptions.LargeImage")));
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonInfo_ItemClick);
             // 
@@ -167,9 +170,9 @@
             // 
             this.buttonPlace.Caption = "Emplacements";
             this.buttonPlace.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonPlace.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonPlace.Glyph")));
             this.buttonPlace.Id = 7;
-            this.buttonPlace.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonPlace.LargeGlyph")));
+            this.buttonPlace.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlace.ImageOptions.Image")));
+            this.buttonPlace.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonPlace.ImageOptions.LargeImage")));
             this.buttonPlace.Name = "buttonPlace";
             this.buttonPlace.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonPlace_ItemClick);
             // 
@@ -177,9 +180,9 @@
             // 
             this.buttonJournal.Caption = "Journal";
             this.buttonJournal.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonJournal.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonJournal.Glyph")));
             this.buttonJournal.Id = 8;
-            this.buttonJournal.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonJournal.LargeGlyph")));
+            this.buttonJournal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonJournal.ImageOptions.Image")));
+            this.buttonJournal.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonJournal.ImageOptions.LargeImage")));
             this.buttonJournal.Name = "buttonJournal";
             this.buttonJournal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonJournal_ItemClick);
             // 
@@ -187,9 +190,9 @@
             // 
             this.buttonStock.Caption = "Disponibilité";
             this.buttonStock.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonStock.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonStock.Glyph")));
             this.buttonStock.Id = 9;
-            this.buttonStock.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonStock.LargeGlyph")));
+            this.buttonStock.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonStock.ImageOptions.Image")));
+            this.buttonStock.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonStock.ImageOptions.LargeImage")));
             this.buttonStock.Name = "buttonStock";
             this.buttonStock.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonStock_ItemClick);
             // 
@@ -197,10 +200,10 @@
             // 
             this.buttonRecap.Caption = "Recapitulations";
             this.buttonRecap.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonRecap.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonRecap.Glyph")));
             this.buttonRecap.Id = 10;
-            this.buttonRecap.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonRecap.LargeGlyph")));
-            this.buttonRecap.LargeGlyphDisabled = global::GBASE.Properties.Resources.shipping8;
+            this.buttonRecap.ImageOptions.DisabledLargeImage = global::GBASE.Properties.Resources.shipping8;
+            this.buttonRecap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonRecap.ImageOptions.Image")));
+            this.buttonRecap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonRecap.ImageOptions.LargeImage")));
             this.buttonRecap.Name = "buttonRecap";
             this.buttonRecap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonRecap_ItemClick);
             // 
@@ -208,9 +211,9 @@
             // 
             this.buttonCommande.Caption = "Commande";
             this.buttonCommande.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonCommande.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonCommande.Glyph")));
             this.buttonCommande.Id = 11;
-            this.buttonCommande.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonCommande.LargeGlyph")));
+            this.buttonCommande.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonCommande.ImageOptions.Image")));
+            this.buttonCommande.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonCommande.ImageOptions.LargeImage")));
             this.buttonCommande.Name = "buttonCommande";
             this.buttonCommande.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCommande_ItemClick);
             // 
@@ -218,9 +221,9 @@
             // 
             this.buttonCaisse.Caption = "Caisse";
             this.buttonCaisse.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonCaisse.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonCaisse.Glyph")));
             this.buttonCaisse.Id = 13;
-            this.buttonCaisse.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonCaisse.LargeGlyph")));
+            this.buttonCaisse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonCaisse.ImageOptions.Image")));
+            this.buttonCaisse.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonCaisse.ImageOptions.LargeImage")));
             this.buttonCaisse.Name = "buttonCaisse";
             this.buttonCaisse.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCaisse_ItemClick);
             // 
@@ -228,17 +231,17 @@
             // 
             this.createButton.Caption = "Produits";
             this.createButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.createButton.Glyph = ((System.Drawing.Image)(resources.GetObject("createButton.Glyph")));
             this.createButton.Id = 14;
+            this.createButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("createButton.ImageOptions.Image")));
             this.createButton.Name = "createButton";
             // 
             // buttonCompter
             // 
             this.buttonCompter.Caption = "Inventaire-Comptage";
             this.buttonCompter.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonCompter.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonCompter.Glyph")));
             this.buttonCompter.Id = 15;
-            this.buttonCompter.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonCompter.LargeGlyph")));
+            this.buttonCompter.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonCompter.ImageOptions.Image")));
+            this.buttonCompter.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonCompter.ImageOptions.LargeImage")));
             this.buttonCompter.Name = "buttonCompter";
             this.buttonCompter.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCompter_ItemClick);
             // 
@@ -246,9 +249,9 @@
             // 
             this.buttonEntree.Caption = "Entrée";
             this.buttonEntree.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonEntree.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonEntree.Glyph")));
             this.buttonEntree.Id = 21;
-            this.buttonEntree.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonEntree.LargeGlyph")));
+            this.buttonEntree.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonEntree.ImageOptions.Image")));
+            this.buttonEntree.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonEntree.ImageOptions.LargeImage")));
             this.buttonEntree.Name = "buttonEntree";
             this.buttonEntree.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonEntree_ItemClick);
             // 
@@ -256,9 +259,9 @@
             // 
             this.buttonAvoir.Caption = "Avoir";
             this.buttonAvoir.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonAvoir.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonAvoir.Glyph")));
             this.buttonAvoir.Id = 22;
-            this.buttonAvoir.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonAvoir.LargeGlyph")));
+            this.buttonAvoir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonAvoir.ImageOptions.Image")));
+            this.buttonAvoir.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonAvoir.ImageOptions.LargeImage")));
             this.buttonAvoir.Name = "buttonAvoir";
             this.buttonAvoir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonAvoir_ItemClick);
             // 
@@ -266,9 +269,9 @@
             // 
             this.buttonComptage.Caption = "Erreur comptage";
             this.buttonComptage.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonComptage.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonComptage.Glyph")));
             this.buttonComptage.Id = 23;
-            this.buttonComptage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonComptage.LargeGlyph")));
+            this.buttonComptage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonComptage.ImageOptions.Image")));
+            this.buttonComptage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonComptage.ImageOptions.LargeImage")));
             this.buttonComptage.Name = "buttonComptage";
             this.buttonComptage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonComptage_ItemClick);
             // 
@@ -276,9 +279,9 @@
             // 
             this.buttonDefect.Caption = "Rebut defection";
             this.buttonDefect.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonDefect.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonDefect.Glyph")));
             this.buttonDefect.Id = 24;
-            this.buttonDefect.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonDefect.LargeGlyph")));
+            this.buttonDefect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonDefect.ImageOptions.Image")));
+            this.buttonDefect.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonDefect.ImageOptions.LargeImage")));
             this.buttonDefect.Name = "buttonDefect";
             this.buttonDefect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonDefect_ItemClick);
             // 
@@ -286,9 +289,9 @@
             // 
             this.buttonVol.Caption = "Rebut vol";
             this.buttonVol.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonVol.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonVol.Glyph")));
             this.buttonVol.Id = 25;
-            this.buttonVol.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonVol.LargeGlyph")));
+            this.buttonVol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonVol.ImageOptions.Image")));
+            this.buttonVol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonVol.ImageOptions.LargeImage")));
             this.buttonVol.Name = "buttonVol";
             this.buttonVol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonVol_ItemClick);
             // 
@@ -296,9 +299,9 @@
             // 
             this.buttonWorker.Caption = "Personnels";
             this.buttonWorker.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonWorker.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonWorker.Glyph")));
             this.buttonWorker.Id = 26;
-            this.buttonWorker.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonWorker.LargeGlyph")));
+            this.buttonWorker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonWorker.ImageOptions.Image")));
+            this.buttonWorker.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonWorker.ImageOptions.LargeImage")));
             this.buttonWorker.Name = "buttonWorker";
             this.buttonWorker.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonWorker_ItemClick);
             // 
@@ -307,7 +310,7 @@
             this.buttonPrime.Caption = "Primes";
             this.buttonPrime.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
             this.buttonPrime.Id = 27;
-            this.buttonPrime.LargeGlyph = global::GBASE.Properties.Resources.mone;
+            this.buttonPrime.ImageOptions.LargeImage = global::GBASE.Properties.Resources.mone;
             this.buttonPrime.Name = "buttonPrime";
             // 
             // buttonTaxe
@@ -315,7 +318,7 @@
             this.buttonTaxe.Caption = "Déclaration";
             this.buttonTaxe.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
             this.buttonTaxe.Id = 28;
-            this.buttonTaxe.LargeGlyph = global::GBASE.Properties.Resources.devis;
+            this.buttonTaxe.ImageOptions.LargeImage = global::GBASE.Properties.Resources.devis;
             this.buttonTaxe.Name = "buttonTaxe";
             this.buttonTaxe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonTaxe_ItemClick);
             // 
@@ -323,9 +326,9 @@
             // 
             this.buttonDemande.Caption = "Demande";
             this.buttonDemande.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonDemande.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonDemande.Glyph")));
             this.buttonDemande.Id = 29;
-            this.buttonDemande.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonDemande.LargeGlyph")));
+            this.buttonDemande.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonDemande.ImageOptions.Image")));
+            this.buttonDemande.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonDemande.ImageOptions.LargeImage")));
             this.buttonDemande.Name = "buttonDemande";
             this.buttonDemande.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonDemande_ItemClick);
             // 
@@ -333,9 +336,9 @@
             // 
             this.buttonVente.Caption = "Vente";
             this.buttonVente.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonVente.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonVente.Glyph")));
             this.buttonVente.Id = 30;
-            this.buttonVente.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonVente.LargeGlyph")));
+            this.buttonVente.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonVente.ImageOptions.Image")));
+            this.buttonVente.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonVente.ImageOptions.LargeImage")));
             this.buttonVente.Name = "buttonVente";
             this.buttonVente.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonVente_ItemClick);
             // 
@@ -343,11 +346,21 @@
             // 
             this.buttonGrave.Caption = "CA";
             this.buttonGrave.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonGrave.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonGrave.Glyph")));
             this.buttonGrave.Id = 31;
-            this.buttonGrave.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonGrave.LargeGlyph")));
+            this.buttonGrave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonGrave.ImageOptions.Image")));
+            this.buttonGrave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonGrave.ImageOptions.LargeImage")));
             this.buttonGrave.Name = "buttonGrave";
             this.buttonGrave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonFormel_ItemClick);
+            // 
+            // buttonNormal
+            // 
+            this.buttonNormal.Caption = "Normalisme";
+            this.buttonNormal.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.buttonNormal.Id = 32;
+            this.buttonNormal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonNormal.ImageOptions.Image")));
+            this.buttonNormal.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonNormal.ImageOptions.LargeImage")));
+            this.buttonNormal.Name = "buttonNormal";
+            this.buttonNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonNormal_ItemClick);
             // 
             // Accueil
             // 
@@ -377,14 +390,15 @@
             this.resumePage.ItemLinks.Add(this.buttonStock);
             this.resumePage.ItemLinks.Add(this.buttonCaisse);
             this.resumePage.ItemLinks.Add(this.buttonCompter);
+            this.resumePage.ItemLinks.Add(this.buttonCommande);
             this.resumePage.Name = "resumePage";
             this.resumePage.Text = "RECAPITULATION";
             // 
             // pageActe
             // 
-            this.pageActe.ItemLinks.Add(this.buttonCommande);
             this.pageActe.ItemLinks.Add(this.buttonComptage);
             this.pageActe.ItemLinks.Add(this.buttonDefect);
+            this.pageActe.ItemLinks.Add(this.destockBtn);
             this.pageActe.ItemLinks.Add(this.buttonVol);
             this.pageActe.ItemLinks.Add(this.buttonAvoir);
             this.pageActe.ItemLinks.Add(this.buttonEntree);
@@ -402,15 +416,13 @@
             this.tiersPage.Name = "tiersPage";
             this.tiersPage.Text = "EXTERNES";
             // 
-            // buttonNormal
+            // destockBtn
             // 
-            this.buttonNormal.Caption = "Normalisme";
-            this.buttonNormal.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.buttonNormal.Glyph = ((System.Drawing.Image)(resources.GetObject("buttonNormal.Glyph")));
-            this.buttonNormal.Id = 32;
-            this.buttonNormal.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("buttonNormal.LargeGlyph")));
-            this.buttonNormal.Name = "buttonNormal";
-            this.buttonNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonNormal_ItemClick);
+            this.destockBtn.Caption = "Destockage";
+            this.destockBtn.Id = 33;
+            this.destockBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.Image")));
+            this.destockBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.LargeImage")));
+            this.destockBtn.Name = "destockBtn";
             // 
             // MainForm
             // 
@@ -419,7 +431,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1612, 360);
             this.Controls.Add(this.ribbonControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("MainForm.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
@@ -466,6 +478,7 @@
         private DevExpress.XtraBars.BarButtonItem buttonVente;
         private DevExpress.XtraBars.BarButtonItem buttonGrave;
         private DevExpress.XtraBars.BarButtonItem buttonNormal;
+        private DevExpress.XtraBars.BarButtonItem destockBtn;
     }
 }
 

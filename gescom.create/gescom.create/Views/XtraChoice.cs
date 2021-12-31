@@ -1,11 +1,12 @@
-﻿using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
-    public partial class XtraChoice : DevExpress.XtraEditors.XtraForm
+    public partial class XtraChoice : XtraForm
     {
         public XtraChoice()
         {
@@ -18,15 +19,9 @@ namespace gescom.create.Views
 
         private void creer_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return;
-            }
-            long id = long.Parse(myNum.Text);
-            if (id <= 0)
-            {
-                return;
-            }
+            if (string.IsNullOrEmpty(myNum.Text)) return;
+            var id = long.Parse(myNum.Text);
+            if (id <= 0) return;
             CreateHelpers.EffectuerEntree(id);
         }
     }

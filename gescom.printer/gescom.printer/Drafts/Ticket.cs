@@ -1,9 +1,10 @@
-﻿using gescom.data.Models;
-using System;
+﻿using System;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.printer.Drafts
 {
-    public partial class Ticket : DevExpress.XtraReports.UI.XtraReport
+    public partial class Ticket : XtraReport
     {
         public Ticket()
         {

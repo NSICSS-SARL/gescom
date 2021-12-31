@@ -27,17 +27,17 @@ namespace gescom.data.Models
         }
 
         public static IEnumerable<ImpotItem> FilterImpots(IEnumerable<ImpotItem> liste, DateTime debut,
-           DateTime fin)
+            DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return liste.Where(prime => (prime.D2 <= fin) && (prime.D2 >= debut));
+            return liste.Where(prime => prime.D2 <= fin && prime.D2 >= debut);
         }
 
         public static IEnumerable<PersonnelItem> FilterPrimes(IEnumerable<PersonnelItem> liste, DateTime debut,
             DateTime fin)
         {
             debut = debut.AddDays(-1);
-            return liste.Where(prime => (prime.Daty <= fin) && (prime.Daty >= debut));
+            return liste.Where(prime => prime.Daty <= fin && prime.Daty >= debut);
         }
 
         public static DateModel Get(DateTime debut, DateTime fin, bool showing)
@@ -63,12 +63,10 @@ namespace gescom.data.Models
             foreach (var item in GetPrime(id))
             {
                 float r = 0;
-                if (item.Montant != null)
-                {
-                    r = (float)item.Montant;
-                }
+                if (item.Montant != null) r = (float) item.Montant;
                 total += r;
             }
+
             return total;
         }
 
@@ -78,12 +76,10 @@ namespace gescom.data.Models
             foreach (var item in liste)
             {
                 float r = 0;
-                if (item.Montant != null)
-                {
-                    r = (float)item.Montant;
-                }
+                if (item.Montant != null) r = (float) item.Montant;
                 total += r;
             }
+
             return total;
         }
 
@@ -119,12 +115,9 @@ namespace gescom.data.Models
         {
             var reptory = new BonusRepository();
             var item = reptory.Get(id);
-            if (item == null)
-            {
-                return null;
-            }
+            if (item == null) return null;
             long numero = 0;
-            if (item.Numero != null) numero = (long)item.Numero;
+            if (item.Numero != null) numero = (long) item.Numero;
             return PersonHelpers.GetName(numero);
         }
 
@@ -136,7 +129,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<PrintItem> GetPrimaryList()
         {
-            return GetList().Where(printItem => (printItem.Groupe == 2) || (printItem.Groupe == 9));
+            return GetList().Where(printItem => printItem.Groupe == 2 || printItem.Groupe == 9);
         }
 
         public static IEnumerable<PersonnelItem> GetPrime(long id)
@@ -181,19 +174,17 @@ namespace gescom.data.Models
         {
             Commandes = new List<CommandeItem>();
             var repository = new CommandeRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Commandes())
             {
-                return;
-            }
-            foreach (CommandeItem element in repository.Commandes())
-            {
-                CommandeItem item = element;
+                var item = element;
                 if (element.Rang != null)
                 {
-                    var r = (long)element.Rang;
+                    var r = (long) element.Rang;
                     item.Ndx = StdCalcul.AfficherPrix(element.Id) + @"-" + StdCalcul.AfficherPrix(r);
                 }
+
                 Commandes.Add(item);
             }
         }
@@ -220,48 +211,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(CommandeItem item)
-        {
-            _context.CommandeItems.InsertOnSubmit(item);
-        }
-
-        public IQueryable<CommandeItem> Commandes()
-        {
-            return _context.CommandeItems;
-        }
-
         public int Count()
         {
             return _context.CommandeItems.Count();
-        }
-
-        public bool Delete(long id)
-        {
-            CommandeItem item = Get(id);
-            if (item == null)
-            {
-                return false;
-            }
-            try
-            {
-                _context.CommandeItems.DeleteOnSubmit(item);
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        public void Delete(CommandeItem item)
-        {
-            _context.CommandeItems.DeleteOnSubmit(item);
-        }
-
-        public CommandeItem Get(long id)
-        {
-            return _context.CommandeItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -274,7 +226,45 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(CommandeItem item)
+        {
+            _context.CommandeItems.InsertOnSubmit(item);
+        }
+
+        public IQueryable<CommandeItem> Commandes()
+        {
+            return _context.CommandeItems;
+        }
+
+        public bool Delete(long id)
+        {
+            var item = Get(id);
+            if (item == null) return false;
+            try
+            {
+                _context.CommandeItems.DeleteOnSubmit(item);
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Delete(CommandeItem item)
+        {
+            _context.CommandeItems.DeleteOnSubmit(item);
+        }
+
+        public CommandeItem Get(long id)
+        {
+            return _context.CommandeItems.SingleOrDefault(d => d.Id == id);
         }
     }
 
@@ -293,24 +283,23 @@ namespace gescom.data.Models
         {
             Impots = new List<ImpotItem>();
             var repository = new ImpotRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Impots())
             {
-                return;
-            }
-            foreach (ImpotItem element in repository.Impots())
-            {
-                ImpotItem item = element;
-                if ((item.VenteExo > 0) && (item.VenteExo < 250))
+                var item = element;
+                if (item.VenteExo > 0 && item.VenteExo < 250)
                 {
                     item.VenteTaxable += item.VenteExo;
                     item.VenteExo = 0;
                 }
+
                 if (item.VenteExo < 0)
                 {
                     item.VenteTotal = item.VenteTaxable;
                     item.VenteExo = 0;
                 }
+
                 Impots.Add(item);
             }
         }
@@ -332,23 +321,34 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(ImpotItem item)
-        {
-            _context.ImpotItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.ImpotItems.Count();
         }
 
-        public bool Delete(long id)
+        public bool Save()
         {
-            ImpotItem item = Get(id);
-            if (item == null)
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
             {
                 return false;
             }
+
+            return true;
+        }
+
+        public void Add(ImpotItem item)
+        {
+            _context.ImpotItems.InsertOnSubmit(item);
+        }
+
+        public bool Delete(long id)
+        {
+            var item = Get(id);
+            if (item == null) return false;
             try
             {
                 Delete(item);
@@ -357,6 +357,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -375,19 +376,6 @@ namespace gescom.data.Models
         {
             return _context.ImpotItems;
         }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 
     public class PersonnelCart : IEnumerable<PersonnelItem>
@@ -396,13 +384,10 @@ namespace gescom.data.Models
         {
             Personnels = new List<PersonnelItem>();
             var reptory = new PersonnelRepository();
-            foreach (PersonnelItem item in reptory.Personnels())
+            foreach (var item in reptory.Personnels())
             {
                 float montant = 0;
-                if (item.Montant != null)
-                {
-                    montant = (float)item.Montant;
-                }
+                if (item.Montant != null) montant = (float) item.Montant;
                 item.Primus = StdCalcul.DoubleToSpaceFormat(montant);
                 Personnels.Add(item);
             }
@@ -477,14 +462,11 @@ namespace gescom.data.Models
         {
             Prints = new List<PrintItem>();
             var repository = new PrintRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Prints())
             {
-                return;
-            }
-            foreach (PrintItem element in repository.Prints())
-            {
-                PrintItem item = element;
+                var item = element;
                 Prints.Add(item);
             }
         }
@@ -507,14 +489,14 @@ namespace gescom.data.Models
         public void Copy(DiaryItem item)
         {
             Id = item.Id;
-            if (item.Groupe != null) Groupe = (long)item.Groupe;
+            if (item.Groupe != null) Groupe = (long) item.Groupe;
             Titre = item.Titre;
             Tache = item.Tache;
         }
 
         public void Copy(CashModel model)
         {
-            DiaryItem diary = DiaryHelpers.Get(model.Id);
+            var diary = DiaryHelpers.Get(model.Id);
             Id = diary.Id;
             Groupe = model.Groupe;
             Titre = diary.Titre;
@@ -531,14 +513,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(PrintItem item)
-        {
-            _context.PrintItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.PrintItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(PrintItem item)
+        {
+            _context.PrintItems.InsertOnSubmit(item);
         }
 
         public bool Create(CashModel model)
@@ -554,6 +550,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -570,12 +567,13 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
         public bool Create(long id, long groupe)
         {
-            var item = new PrintItem { Id = id, Groupe = groupe };
+            var item = new PrintItem {Id = id, Groupe = groupe};
             Add(item);
             try
             {
@@ -585,6 +583,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -603,16 +602,14 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
         public bool Delete(long id)
         {
-            PrintItem item = Get(id);
-            if (item == null)
-            {
-                return false;
-            }
+            var item = Get(id);
+            if (item == null) return false;
             try
             {
                 _context.PrintItems.DeleteOnSubmit(item);
@@ -622,6 +619,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -640,26 +638,10 @@ namespace gescom.data.Models
             return _context.PrintItems;
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public void UpdateGroup(long id, long group)
         {
             var item = Get(id);
-            if (item == null)
-            {
-                return;
-            }
+            if (item == null) return;
             item.Groupe = group;
             item.Tache = "RG";
             if (group == 11)
@@ -667,6 +649,7 @@ namespace gescom.data.Models
                 item.Tache = "AR";
                 item.Titre = "ATTENTE";
             }
+
             item.Titre = "PAIEMENT";
             Save();
         }
@@ -677,10 +660,7 @@ namespace gescom.data.Models
         public XmlCart()
         {
             var reptory = new XmlRepository();
-            foreach (XmlItem item in reptory.Xmls())
-            {
-                Xmls.Add(item);
-            }
+            foreach (var item in reptory.Xmls()) Xmls.Add(item);
         }
 
         public List<XmlItem> Xmls { get; set; }

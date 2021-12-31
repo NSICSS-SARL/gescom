@@ -1,6 +1,6 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System.Globalization;
+using DevExpress.XtraReports.UI;
 using gescom.data.Models;
-using System.Globalization;
 
 namespace gescom.printer.Reports
 {
@@ -26,7 +26,7 @@ namespace gescom.printer.Reports
 
         private void Init()
         {
-            PersonModel owner = PersonHelpers.Get(1);
+            var owner = PersonHelpers.Get(1);
             nom.Text = owner.Nom;
             adresse.Text = owner.Adresse;
             complement.Text = owner.Complement;

@@ -9,7 +9,7 @@ namespace gescom.data.Models
     {
         public static bool Create(string code, string nom, int reserved)
         {
-            var model = new PlaceModel { Code = code, Nom = nom, IsReserved = reserved };
+            var model = new PlaceModel {Code = code, Nom = nom, IsReserved = reserved};
             var repository = new PlaceRepository();
             return repository.Create(model);
         }
@@ -37,20 +37,14 @@ namespace gescom.data.Models
         public static long GetId(string code)
         {
             long result = -1;
-            foreach (PlaceItem item in GetList().Where(item => item.Code == code))
-            {
-                result = item.Id;
-            }
+            foreach (var item in GetList().Where(item => item.Code == code)) result = item.Id;
             return result;
         }
 
         public static PlaceItem GetIndex(long id)
         {
             var result = new PlaceItem();
-            foreach (PlaceItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item;
             return result;
         }
 
@@ -68,10 +62,7 @@ namespace gescom.data.Models
         public static string GetName(long id)
         {
             string result = null;
-            foreach (PlaceItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item.Nom;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item.Nom;
             return result;
         }
 
@@ -93,7 +84,7 @@ namespace gescom.data.Models
 
         public static bool Update(long id, string code, string nom, int reserved)
         {
-            var model = new PlaceModel { Id = id, Code = code, Nom = nom, IsReserved = reserved };
+            var model = new PlaceModel {Id = id, Code = code, Nom = nom, IsReserved = reserved};
             var repository = new PlaceRepository();
             return repository.Update(model);
         }
@@ -105,14 +96,11 @@ namespace gescom.data.Models
         {
             Places = new List<PlaceItem>();
             var repository = new PlaceRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Places())
             {
-                return;
-            }
-            foreach (PlaceItem element in repository.Places())
-            {
-                PlaceItem item = element;
+                var item = element;
                 item.Combined = item.Code + " " + item.Nom;
                 item.Rang = StdCalcul.DoubleToSpaceFormat(item.Id);
                 item.Full = item.Occupation > 0;
@@ -163,14 +151,8 @@ namespace gescom.data.Models
 
         public void HasError()
         {
-            if (Code == null)
-            {
-                IsValid = false;
-            }
-            if (Nom == null)
-            {
-                IsValid = false;
-            }
+            if (Code == null) IsValid = false;
+            if (Nom == null) IsValid = false;
         }
     }
 
@@ -219,7 +201,7 @@ namespace gescom.data.Models
             Id = item.Id;
             Code = item.Code;
             Nom = item.Nom;
-            if (item.IsReserved != null) IsReserved = (int)item.IsReserved;
+            if (item.IsReserved != null) IsReserved = (int) item.IsReserved;
             Description = item.Description;
             DuplicateError = item.DuplicateError;
             IsValid = item.IsValid;
@@ -250,6 +232,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -276,6 +259,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -286,11 +270,8 @@ namespace gescom.data.Models
 
         public PlaceItem Get(long id)
         {
-            PlaceItem item = _context.PlaceItems.SingleOrDefault(d => d.Id == id);
-            if (item == null)
-            {
-                return null;
-            }
+            var item = _context.PlaceItems.SingleOrDefault(d => d.Id == id);
+            if (item == null) return null;
             return item;
         }
 
@@ -301,7 +282,7 @@ namespace gescom.data.Models
 
         public bool Update(PlaceModel model)
         {
-            PlaceItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {

@@ -51,14 +51,12 @@ namespace gescom.data.Models
             var list = new List<CustomerItem>();
             foreach (var item in context.CustomerItems)
             {
-                if (item.Groupe == 1)
-                {
-                    item.Grossiste = true;
-                }
+                if (item.Groupe == 1) item.Grossiste = true;
                 item.Set();
                 item.IsFormel = item.Forme == 1;
                 list.Add(item);
             }
+
             return list;
         }
 
@@ -104,7 +102,7 @@ namespace gescom.data.Models
             sb.Append(model.CodeVente + "', '");
             sb.Append(rang + "', ");
             sb.Append(DateTime.Now.ToString("yyyy-MM-dd") + ");");
-            string commande = sb.ToString();
+            var commande = sb.ToString();
             query.Command.CommandText = commande;
             query.ExecuterQuery();
             sb.Clear();
@@ -169,6 +167,7 @@ namespace gescom.data.Models
                     result.Add(element);
                 }
             }
+
             return result;
         }
 
@@ -181,6 +180,7 @@ namespace gescom.data.Models
                 item.IsFormel = item.Forme == 1;
                 list.Add(item);
             }
+
             return list;
         }
 
@@ -224,6 +224,25 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
+        public int Count()
+        {
+            return _context.CompItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void Add(CompItem item)
         {
             _context.CompItems.InsertOnSubmit(item);
@@ -232,11 +251,6 @@ namespace gescom.data.Models
         public IQueryable<CompItem> Complements()
         {
             return _context.CompItems;
-        }
-
-        public int Count()
-        {
-            return _context.CompItems.Count();
         }
 
         public bool Create(CompItem item)
@@ -250,6 +264,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -263,22 +278,9 @@ namespace gescom.data.Models
             return _context.CompItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool Update(CompItem item)
         {
-            CompItem element = Get(item.Id);
+            var element = Get(item.Id);
             element.Copy(item);
             try
             {
@@ -319,14 +321,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(ExternItem item)
-        {
-            _context.ExternItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.ExternItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(ExternItem item)
+        {
+            _context.ExternItems.InsertOnSubmit(item);
         }
 
         public bool Create(ExternItem item)
@@ -340,6 +356,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -356,19 +373,6 @@ namespace gescom.data.Models
         public ExternItem Get(long id)
         {
             return _context.ExternItems.SingleOrDefault(d => d.Id == id);
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         public bool Update(ExternItem item)
@@ -391,14 +395,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(PrintHelp item)
-        {
-            _context.PrintHelps.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.PrintHelps.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(PrintHelp item)
+        {
+            _context.PrintHelps.InsertOnSubmit(item);
         }
 
         public bool Create(PrintHelp item)
@@ -412,6 +430,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -429,19 +448,6 @@ namespace gescom.data.Models
         public IQueryable<PrintHelp> PrintHelpements()
         {
             return _context.PrintHelps;
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         public bool Update(PrintHelp item)
@@ -492,7 +498,7 @@ namespace gescom.data.Models
 
         public override string ToString()
         {
-            string result = Quantite + "|" + Fcode + "|" + Refce + "|" + Produit;
+            var result = Quantite + "|" + Fcode + "|" + Refce + "|" + Produit;
             return result;
         }
 
@@ -504,7 +510,7 @@ namespace gescom.data.Models
             var dist = DistHelpers.Get(id).Numero;
             if (dist != null)
             {
-                var numero = (long)dist;
+                var numero = (long) dist;
                 var place = PlaceHelpers.Get(numero);
                 // CodeVente = article.Code + "-" + place.Code;
                 LongCode = place.Code + " " + Fcode;

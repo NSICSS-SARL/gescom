@@ -1,9 +1,10 @@
-﻿using gescom.data.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.report.Reports
 {
-    public partial class ReportDiary : DevExpress.XtraReports.UI.XtraReport
+    public partial class ReportDiary : XtraReport
     {
         public ReportDiary()
         {

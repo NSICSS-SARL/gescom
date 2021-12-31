@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -51,15 +51,9 @@ namespace gescom.create.Views
 
         private long GetX()
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return 0;
-            }
-            if (myNum.Text == @"0")
-            {
-                return 0;
-            }
-            long x = long.Parse(myNum.Text);
+            if (string.IsNullOrEmpty(myNum.Text)) return 0;
+            if (myNum.Text == @"0") return 0;
+            var x = long.Parse(myNum.Text);
             return x;
         }
 
@@ -70,6 +64,7 @@ namespace gescom.create.Views
                 CreateHelpers.Detailler(GetX());
                 return;
             }
+
             if (_index != 0) return;
             CreateHelpers.Remarquer(GetX(), false);
         }

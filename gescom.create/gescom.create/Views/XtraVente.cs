@@ -1,24 +1,24 @@
-﻿using gescom.create.Models;
-using gescom.data.Models;
-using gescom.printer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using gescom.create.Models;
+using gescom.data.Models;
+using gescom.printer;
 
 namespace gescom.create.Views
 {
     public partial class XtraVente : Form
     {
-        private List<ElementModel> _elements;
-        private OperationModel _item;
-        private OperationElem _oper;
-        private List<OperationModel> _myList;
-        private PersonModel _person;
         private readonly long _wid;
+        private List<ElementModel> _elements;
 
         private long _index;
+        private OperationModel _item;
+        private List<OperationModel> _myList;
+        private OperationElem _oper;
+        private PersonModel _person;
 
         private string _title;
 
@@ -27,15 +27,6 @@ namespace gescom.create.Views
             InitializeComponent();
             Initialiser();
             _index = 0;
-        }
-
-        private void Initialiser()
-        {
-            _person = new PersonModel();
-            _myList = new List<OperationModel>();
-            _elements = new List<ElementModel>();
-            _oper = new OperationElem();
-            _item = new OperationModel();
         }
 
         public XtraVente(PersonModel person, long wid, long id)
@@ -64,6 +55,15 @@ namespace gescom.create.Views
         }
 
         public bool IsValid { get; set; }
+
+        private void Initialiser()
+        {
+            _person = new PersonModel();
+            _myList = new List<OperationModel>();
+            _elements = new List<ElementModel>();
+            _oper = new OperationElem();
+            _item = new OperationModel();
+        }
 
         public void Init()
         {
@@ -109,12 +109,12 @@ namespace gescom.create.Views
 
         private void Add()
         {
-            string text = txtCode.Text;
-            float quantite = float.Parse(txtQte.Text);
+            var text = txtCode.Text;
+            var quantite = float.Parse(txtQte.Text);
             _item = OperationHelpers.GetShortCode(_myList, text);
             var element = new ElementModel(_item.Ndx);
             element.Copy(_item);
-            ElementModel newElement = ElementHelpers.Get(_elements, _item.Ndx);
+            var newElement = ElementHelpers.Get(_elements, _item.Ndx);
             ElementHelpers.Remove(_elements, _item.Ndx);
             txtNum.DataBindings.Clear();
             gridActions.DataSource = null;
@@ -123,10 +123,8 @@ namespace gescom.create.Views
                 element.Id = _item.Ndx;
                 element.Quantite = quantite;
                 if (_person?.Groupe > 0)
-                {
                     if (_item.QStock < quantite)
-                    {
-                        if ((_index > -6) && (_index != -1))
+                        if (_index > -6 && _index != -1)
                         {
                             ErrorHelpers.ShowDepassError(quantite, _item.QStock, element.Quantite, element.Nom);
                             _elements.Add(element);
@@ -134,8 +132,6 @@ namespace gescom.create.Views
                             txtQte.SelectAll();
                             return;
                         }
-                    }
-                }
 
                 _elements.Add(element);
                 RefreshData();
@@ -143,11 +139,9 @@ namespace gescom.create.Views
                 return;
             }
 
-            float newQuantite = newElement.Quantite + quantite;
+            var newQuantite = newElement.Quantite + quantite;
             if (_person?.Groupe > 0)
-            {
                 if (_index > -6)
-                {
                     if (_item.QStock < newQuantite)
                     {
                         element.Quantite = newElement.Quantite;
@@ -158,8 +152,6 @@ namespace gescom.create.Views
                         ErrorHelpers.ShowDepassError(quantite, _item.QStock, newElement.Quantite, element.Nom);
                         return;
                     }
-                }
-            }
 
             element.Quantite = newQuantite;
             _elements.Add(element);
@@ -171,7 +163,7 @@ namespace gescom.create.Views
         {
             if (txtQte.Visible)
             {
-                float quantite = float.Parse(txtQte.Text);
+                var quantite = float.Parse(txtQte.Text);
                 if (quantite <= 0)
                 {
                     if (txtQte.Focused)
@@ -187,11 +179,9 @@ namespace gescom.create.Views
                     return;
                 }
 
-                float dispo = float.Parse(txtStock.Text);
+                var dispo = float.Parse(txtStock.Text);
                 if (_person?.Groupe > 0)
-                {
-                    if ((_index > -6) && (_index != -1))
-                    {
+                    if (_index > -6 && _index != -1)
                         if (quantite > dispo)
                         {
                             ErrorHelpers.ShowDepassError(txtQte.Text, txtStock.Text, null, txtNom.Text);
@@ -199,25 +189,17 @@ namespace gescom.create.Views
                             txtQte.SelectAll();
                             return;
                         }
-                    }
-                }
 
                 Add();
                 return;
             }
 
             if (_elements.Count <= 0) return;
-            if (string.IsNullOrEmpty(_title))
-            {
-                _title = Text;
-            }
+            if (string.IsNullOrEmpty(_title)) _title = Text;
 
-            DialogResult msg = MessageBox.Show(this, @"ENREGISTRER OPERATION?", _title, MessageBoxButtons.YesNo,
+            var msg = MessageBox.Show(this, @"ENREGISTRER OPERATION?", _title, MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (msg != DialogResult.Yes)
-            {
-                return;
-            }
+            if (msg != DialogResult.Yes) return;
 
             _title = null;
             Save();
@@ -240,12 +222,9 @@ namespace gescom.create.Views
             txtPrix.Visible = false;
             txtStock.Visible = false;
             txtQte.Visible = false;
-            string text = txtCode.Text;
+            var text = txtCode.Text;
             _item = OperationHelpers.GetShortCode(_myList, text);
-            if (_item.Designation == null)
-            {
-                return;
-            }
+            if (_item.Designation == null) return;
 
             txtUnite.Visible = true;
             txtNom.Visible = true;
@@ -263,38 +242,23 @@ namespace gescom.create.Views
             gridActions.DataSource = _elements;
             txtQte.Text = @"0";
             txtCode.Focus();
-            if (_elements.Count <= 0)
-            {
-                return;
-            }
+            if (_elements.Count <= 0) return;
             txtNum.DataBindings.Add("Text", _elements, "Id");
         }
 
         private void Remove()
         {
-            string text = txtNum.Text;
-            if (string.IsNullOrEmpty(text))
-            {
-                return;
-            }
+            var text = txtNum.Text;
+            if (string.IsNullOrEmpty(text)) return;
 
-            if (text == "0")
-            {
-                return;
-            }
+            if (text == "0") return;
 
-            if (_elements.Count == 0)
-            {
-                return;
-            }
+            if (_elements.Count == 0) return;
 
-            long id = long.Parse(text);
-            DialogResult msg = MessageBox.Show(ElementHelpers.Get(_elements, id).Nom, @"SUPPRIMER OPERATION",
+            var id = long.Parse(text);
+            var msg = MessageBox.Show(ElementHelpers.Get(_elements, id).Nom, @"SUPPRIMER OPERATION",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (msg != DialogResult.OK)
-            {
-                return;
-            }
+            if (msg != DialogResult.OK) return;
 
             ElementHelpers.Remove(_elements, id);
             gridActions.DataSource = null;
@@ -304,31 +268,26 @@ namespace gescom.create.Views
 
         private void Save()
         {
-            if (_elements.Count == 0)
-            {
-                return;
-            }
+            if (_elements.Count == 0) return;
 
-            if ((_index >= -7) && (_index <= -3))
+            if (_index >= -7 && _index <= -3)
             {
                 ActionHelpers.DoActions(_elements, _index);
                 Close();
             }
 
             if (_person == null) return;
-            if ((_person.Groupe > 0) && (_index != -9) && (_index != -1))
+            if (_person.Groupe > 0 && _index != -9 && _index != -1)
             {
-                List<ElementModel> liste = ElementHelpers.ShowInvalidate(_elements);
+                var liste = ElementHelpers.ShowInvalidate(_elements);
                 if (liste != null)
                 {
                     var c = liste.Count;
                     if (c <= 0) return;
-                    foreach (ElementModel model in liste)
+                    foreach (var model in liste)
                     {
-                        {
-                            var qstock = ArticleHelpers.GetDisponible(model.Id);
-                            ErrorHelpers.ShowDepassError(model.Quantite, qstock, model.Nom);
-                        }
+                        var qstock = ArticleHelpers.GetDisponible(model.Id);
+                        ErrorHelpers.ShowDepassError(model.Quantite, qstock, model.Nom);
                     }
 
                     return;
@@ -345,15 +304,15 @@ namespace gescom.create.Views
                     Close();
                 }
 
-                if ((_person.Groupe > 0) && (_index == 2))
+                if (_person.Groupe > 0 && _index == 2)
                 {
-                    CashModel model = ActionHelpers.DoSell(_elements, person);
-                    long id = model.Id;
+                    var model = ActionHelpers.DoSell(_elements, person);
+                    var id = model.Id;
                     CreateHelpers.CompleteInfoCustomer(model);
                     var elems = ElementHelpers.GetElements(_elements);
                     var liste = ReparationHelpers.GetTicketLines(elems);
                     float total = 0;
-                    int count = 0;
+                    var count = 0;
                     foreach (var elt in liste)
                     {
                         elt.Prix = PriceHelpers.GetPrixItem(elt.Id);
@@ -378,13 +337,13 @@ namespace gescom.create.Views
                 }
             }
 
-            if ((_index == -1) && (_person.Groupe == 2))
+            if (_index == -1 && _person.Groupe == 2)
             {
                 ActionHelpers.DoReturn(_elements);
                 Close();
             }
 
-            if ((_index != -9) || (_person.Groupe <= 0)) return;
+            if (_index != -9 || _person.Groupe <= 0) return;
             ActionHelpers.DoSimulate(_elements, person);
             Close();
         }
@@ -396,13 +355,13 @@ namespace gescom.create.Views
 
         private void XtraVente_Load(object sender, EventArgs e)
         {
-            if ((_index <= -3) && (_index >= -7))
+            if (_index <= -3 && _index >= -7)
             {
                 _myList = OperationHelpers.GetModelList().ToList();
                 return;
             }
 
-            if ((_index <= -1) && (_index != -9) && (_index != 0)) return;
+            if (_index <= -1 && _index != -9 && _index != 0) return;
 
             if (_wid == 0)
             {

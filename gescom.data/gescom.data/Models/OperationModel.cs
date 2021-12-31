@@ -16,7 +16,7 @@ namespace gescom.data.Models
         public static OperationModel Get(long id)
         {
             var repository = new OperationRepository();
-            OperationItem item = repository.Get(id);
+            var item = repository.Get(id);
             var model = new OperationModel();
             model.Copy(item);
             return model;
@@ -30,6 +30,7 @@ namespace gescom.data.Models
                 item.Init();
                 liste.Add(item);
             }
+
             return liste;
         }
 
@@ -42,10 +43,12 @@ namespace gescom.data.Models
                 var element = new OperationModel();
                 element.Copy(item);
                 float x = 0;
-                if (item.PDetail != null) { x = (float)item.PDetail; }
+                if (item.PDetail != null) x = (float) item.PDetail;
+
                 element.Px = x;
                 result.Add(element);
             }
+
             return result;
         }
 
@@ -67,19 +70,20 @@ namespace gescom.data.Models
         public static IEnumerable<OperationModel> GetCart(PersonModel item, long wid)
         {
             var result = new List<OperationModel>();
-            foreach (OperationModel element in GetCart(item))
+            foreach (var element in GetCart(item))
             {
                 element.Wid = wid;
                 result.Add(element);
             }
+
             return result;
         }
 
         public static IEnumerable<OperationModel> GetCart(PersonModel item)
         {
             var result = new List<OperationModel>();
-            long g = item.Groupe;
-            foreach (OperationModel model in GetForGenerals())
+            var g = item.Groupe;
+            foreach (var model in GetForGenerals())
             {
                 var element = new OperationModel();
                 element.Copy(model);
@@ -110,8 +114,10 @@ namespace gescom.data.Models
                         element.Rx = model.PrimExtra;
                         break;
                 }
+
                 result.Add(element);
             }
+
             return result;
         }
 
@@ -120,12 +126,13 @@ namespace gescom.data.Models
             var result = new List<OperationModel>();
             var context = new DataGescomDataContext();
             var liste = context.OperationEntries.ToList();
-            foreach (OperationEntry item in liste)
+            foreach (var item in liste)
             {
                 var model = new OperationModel();
                 model.Copy(item);
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -137,11 +144,12 @@ namespace gescom.data.Models
         public static IEnumerable<OperationModel> GetForGenerals(long wid)
         {
             var result = new List<OperationModel>();
-            foreach (OperationModel model in GetForGenerals())
+            foreach (var model in GetForGenerals())
             {
                 model.Wid = wid;
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -149,15 +157,17 @@ namespace gescom.data.Models
         {
             var result = new List<OperationModel>();
             var context = new DataGescomDataContext();
-            foreach (OperationDispo model in context.OperationDispos)
+            foreach (var model in context.OperationDispos)
             {
                 var element = new OperationModel();
                 element.Copy(model);
                 float x = 0;
-                if (model.PDetail != null) { x = (float)model.PDetail; }
+                if (model.PDetail != null) x = (float) model.PDetail;
+
                 element.Px = x;
                 result.Add(element);
             }
+
             return result;
         }
 
@@ -165,23 +175,21 @@ namespace gescom.data.Models
         {
             var context = new DataGescomDataContext();
             var result = context.OperationItems.ToList();
-          /*  foreach(var r in result)
-            {
-                SituationHelpers.Create(r.Ndx);
-            }*/
+            /*  foreach(var r in result)
+              {
+                  SituationHelpers.Create(r.Ndx);
+              }*/
             return result;
         }
 
         public static IEnumerable<OperationItem> GetPublicList()
         {
-           foreach(var item in GetList())
-            {
+            foreach (var item in GetList())
                 if (item.QStock > 0)
                 {
                     item.Dispo = "Disponible";
                     yield return item;
                 }
-            }
         }
 
         public static IEnumerable<OperationCommande> GetList2()
@@ -193,6 +201,7 @@ namespace gescom.data.Models
                 c.Init();
                 result.Add(c);
             }
+
             return result;
         }
 
@@ -203,7 +212,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<OperationItem> GetListCmdble()
         {
-            return GetList().Where(item => (item.QStock <= item.QEstime) && (item.Qvente > 0));
+            return GetList().Where(item => item.QStock <= item.QEstime && item.Qvente > 0);
         }
 
         public static IEnumerable<OperationItem> GetListCommands()
@@ -218,7 +227,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<OperationItem> GetListRupt()
         {
-            return GetList().Where(item => (item.Qvente > 0) && (item.QStock == 0));
+            return GetList().Where(item => item.Qvente > 0 && item.QStock == 0);
         }
 
         public static IEnumerable<OperationItem> GetListSeuil()
@@ -228,7 +237,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<OperationItem> GetListStagne()
         {
-            return GetList().Where(item => (item.QStock == item.Qachat) && (item.Qvente == 0));
+            return GetList().Where(item => item.QStock == item.Qachat && item.Qvente == 0);
         }
 
         public static List<OperationItem> GetMagList()
@@ -239,24 +248,26 @@ namespace gescom.data.Models
         public static OperationModel GetModel(IEnumerable<OperationModel> liste, OperationModel model)
         {
             var result = new OperationModel();
-            foreach (OperationModel element in liste.Where(operationItem => operationItem.Ndx == model.Ndx))
+            foreach (var element in liste.Where(operationItem => operationItem.Ndx == model.Ndx))
             {
                 element.IsValid = true;
                 result = element;
             }
+
             return result;
         }
 
         public static IEnumerable<OperationModel> GetModelList()
         {
             var result = new List<OperationModel>();
-            foreach (OperationItem item in GetList())
+            foreach (var item in GetList())
             {
                 var model = new OperationModel();
                 model.Copy(item);
                 model.Px = model.PDetail;
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -267,13 +278,13 @@ namespace gescom.data.Models
 
         public static IEnumerable<OperationModel> GetModelList2(PersonModel model)
         {
-            return GetModelList().Where(item => (item.Forme == model.Forme) && (item.Pid == model.Id));
+            return GetModelList().Where(item => item.Forme == model.Forme && item.Pid == model.Id);
         }
 
         public static IEnumerable<ProdItem> GetprodForCommand()
         {
             var repo = new DataGescomDataContext();
-            return repo.ProdItems.Where(item => (item.Arret) && (item.Epuise) && (item.Quantite > 0));
+            return repo.ProdItems.Where(item => item.Arret && item.Epuise && item.Quantite > 0);
         }
 
         public static List<OperationItem> GetQuantified(List<long> modifiedRows)
@@ -288,16 +299,15 @@ namespace gescom.data.Models
                 element.Qte = qte;
                 result.Add(element);
             }
+
             return result;
         }
 
         public static OperationModel GetShortCode(IEnumerable<OperationModel> liste, string code)
         {
             var result = new OperationModel();
-            foreach (OperationModel item in GetShCode(liste, code).ToList())
-            {
-                result = item;
-            }
+            foreach (var item in GetShCode(liste, code).ToList()) result = item;
+
             return result;
         }
 
@@ -314,7 +324,7 @@ namespace gescom.data.Models
             foreach (var elem in elements)
             {
                 var b = repo.IsCommandValid(elem.Id);
-                if (b) { yield return elem; }
+                if (b) yield return elem;
             }
         }
 
@@ -329,7 +339,7 @@ namespace gescom.data.Models
         public static IEnumerable<OperationText> SetTexts(List<OperationItem> liste)
         {
             var result = new List<OperationText>();
-            foreach (OperationItem item in liste)
+            foreach (var item in liste)
             {
                 var text = new OperationText();
                 var model = new OperationModel();
@@ -337,6 +347,7 @@ namespace gescom.data.Models
                 text.Copy(model);
                 result.Add(text);
             }
+
             return result;
         }
 
@@ -352,40 +363,28 @@ namespace gescom.data.Models
         {
             Operations = new List<OperationItem>();
             var repository = new OperationRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+
+            foreach (var element in repository.Operations())
             {
-                return;
-            }
-            foreach (OperationItem element in repository.Operations())
-            {
-                OperationItem item = element;
-                if ((item.QEstime == null) || (item.QEstime == 0))
-                {
-                    item.StateCommande = "ARRIVAGE";
-                }
-                if (item.QEstime == -1)
-                {
-                    item.StateCommande = "EN COURS";
-                }
-                if (item.QEstime > 0)
-                {
-                    item.StateCommande = "COMMANDABLE";
-                }
+                var item = element;
+                if (item.QEstime == null || item.QEstime == 0) item.StateCommande = "ARRIVAGE";
+
+                if (item.QEstime == -1) item.StateCommande = "EN COURS";
+
+                if (item.QEstime > 0) item.StateCommande = "COMMANDABLE";
+
                 item.Cview = item.Codage + "-I";
                 if (item.Forme == 1)
                 {
                     item.Formel = true;
                     item.Cview = item.Codage + "-X";
-                    if (item.Taxable == 1)
-                    {
-                        item.Cview = item.Codage + "-T";
-                    }
+                    if (item.Taxable == 1) item.Cview = item.Codage + "-T";
                 }
-                if (item.Taxable == 1)
-                {
-                    item.Taxed = true;
-                }
+
+                if (item.Taxable == 1) item.Taxed = true;
+
                 Operations.Add(item);
             }
         }
@@ -410,14 +409,15 @@ namespace gescom.data.Models
 
         public void Init()
         {
-            int n = CompleteCode.Length;
-            string suffix = "-" + CompleteCode.Substring(n - 1, 1);
+            var n = CompleteCode.Length;
+            var suffix = "-" + CompleteCode.Substring(n - 1, 1);
             SupCode = Fcode + suffix;
         }
     }
 
     public partial class OperationDispo
     {
+        public string NewCode { get; set; }
         public bool Acder { get; set; }
         public bool Attente { get; set; }
         public bool Commander { get; set; }
@@ -440,6 +440,7 @@ namespace gescom.data.Models
     public partial class OperationEntry
     {
         public bool Signal { get; set; }
+        public string NewCode { get; set; }
     }
 
     public partial class OperationItem
@@ -461,6 +462,7 @@ namespace gescom.data.Models
         public string SupCode { get; set; }
         public bool Taxed { get; set; }
         public float Vrebut { get; set; }
+        public string NewCode { get; set; }
         public long Wid { get; set; }
 
         public void Copy(OperationDispo model)
@@ -534,82 +536,12 @@ namespace gescom.data.Models
             APrix = model.APrix;
         }
 
-        public void Copy(OperationModel model)
-        {
-            StateCommande = model.StateCommande;
-            Ndx = model.Ndx;
-            Codage = model.Codage;
-            Place = model.Place;
-            Designation = model.Designation;
-            Pachat = model.Pachat;
-            Previent = model.Previent;
-            PGros = model.PGros;
-            PDetail = model.PDetail;
-            PSpecial = model.PSpecial;
-            PExtra = model.PExtra;
-            QEstime = model.QEstime;
-            PEstime = model.PEstime;
-            Magpref = model.Magpref;
-            Nomvers = model.Nomvers;
-            Categorie = model.Categorie;
-            Unite = model.Unite;
-            QStock = model.QStock;
-            Nomfrns = model.Nomfrns;
-            Vstock = model.Vstock;
-            DateVente = model.DateVente;
-            DateAchat = model.DateAchat;
-            Frs = model.Frs;
-            Pid = model.Pid;
-            Clt = model.Clt;
-            Remark = model.Remark;
-            Observation = model.Observation;
-            Remarque = model.Remarque;
-            Qachat = model.Qachat;
-            Vachat = model.Vachat;
-            Qavoir = model.Qavoir;
-            Vavoir = model.Vavoir;
-            Qvente = model.Qvente;
-            Vvente = model.Vvente;
-            Qercpt = model.Qercpt;
-            Vercpt = model.Vercpt;
-            Qdefect = model.Qdefect;
-            Vdefect = model.Vdefect;
-            Qvol = model.Qvol;
-            Vvol = model.Vvol;
-            Qte = model.Qte;
-            Px = model.Px;
-            IsValid = model.IsValid;
-            Refers = model.Refers;
-            Qrebut = model.Qrebut;
-            Vrebut = model.Vrebut;
-            IdUnit = model.IdUnit;
-            S1 = model.S1;
-            S2 = model.S2;
-            Q = model.Q;
-            Q1 = model.Q1;
-            Q2 = model.Q2;
-            D1 = model.D1;
-            D2 = model.D2;
-            B1 = model.B1;
-            B2 = model.B2;
-            PrimGros = model.PrimGros;
-            PrimDetail = model.PrimDetail;
-            PrimSpecial = model.PrimSpecial;
-            PrimExtra = model.PrimExtra;
-            Forme = model.Forme;
-            Taxable = model.Taxable;
-            Formel = model.Formel;
-            Taxed = model.Taxed;
-            Cview = model.Cview;
-            AEntre = model.AEntre;
-            APrix = model.APrix;
-            Signal = model.Signal;
-        }
-
         public void Init()
         {
-            int n = CompleteCode.Length;
-            string suffix = "-" + CompleteCode.Substring(n - 1, 1);
+            var n = CompleteCode.Length;
+            var suffix = "-" + CompleteCode.Substring(n - 1, 1);
+            var arr = CompleteCode.Substring(n - 3).Split('-');
+            NewCode = arr[0] + Ndx + arr[1];
             SupCode = Fcode + suffix;
         }
     }
@@ -700,13 +632,12 @@ namespace gescom.data.Models
         public float Vvol { get; set; }
         public long Wid { get; set; }
         public string CompleteCode { get; set; }
+        public string NewCode { get; set; }
 
         public void Copy(OperationEntry item)
         {
-            if (item == null)
-            {
-                return;
-            }
+            if (item == null) return;
+
             CompleteCode = item.CompleteCode;
             Signal = item.Signal;
             StateCommande = item.StateCommande;
@@ -725,96 +656,99 @@ namespace gescom.data.Models
             D1 = item.D1;
             D2 = item.D2;
             B1 = item.B1;
-            if (item.Pid != null) Pid = (long)item.Pid;
+            if (item.Pid != null) Pid = (long) item.Pid;
             Remark = item.Remark;
             Observation = item.Observation;
             Remarque = item.Remarque;
             B2 = item.B2;
-            if (item.Pachat != null) Pachat = (float)item.Pachat;
-            if (item.Previent != null) Previent = (float)item.Previent;
-            if (item.PGros != null) PGros = (float)item.PGros;
-            if (item.PSpecial != null) PSpecial = (float)item.PSpecial;
-            if (item.PExtra != null) PExtra = (float)item.PExtra;
-            if (item.QEstime != null) QEstime = (float)item.QEstime;
-            if (item.PEstime != null) PEstime = (float)item.PEstime;
-            if (item.AEntre != null) AEntre = (long)item.AEntre;
-            if (item.APrix != null) APrix = (long)item.APrix;
+            if (item.Pachat != null) Pachat = (float) item.Pachat;
+            if (item.Previent != null) Previent = (float) item.Previent;
+            if (item.PGros != null) PGros = (float) item.PGros;
+            if (item.PSpecial != null) PSpecial = (float) item.PSpecial;
+            if (item.PExtra != null) PExtra = (float) item.PExtra;
+            if (item.QEstime != null) QEstime = (float) item.QEstime;
+            if (item.PEstime != null) PEstime = (float) item.PEstime;
+            if (item.AEntre != null) AEntre = (long) item.AEntre;
+            if (item.APrix != null) APrix = (long) item.APrix;
             Magpref = item.Magpref;
             Nomvers = item.Nomvers;
             Categorie = item.Categorie;
             Unite = item.Unite;
-            if (item.QStock != null) QStock = (float)item.QStock;
+            if (item.QStock != null) QStock = (float) item.QStock;
             Nomfrns = item.Nomfrns;
-            if (item.Vstock != null) Vstock = (float)item.Vstock;
-            if (item.DateVente != null) DateVente = (DateTime)item.DateVente;
-            if (item.DateAchat != null) DateAchat = (DateTime)item.DateAchat;
+            if (item.Vstock != null) Vstock = (float) item.Vstock;
+            if (item.DateVente != null) DateVente = (DateTime) item.DateVente;
+            if (item.DateAchat != null) DateAchat = (DateTime) item.DateAchat;
             Frs = item.Frs;
             Clt = item.Clt;
             if (item.Qachat != null)
             {
-                Qachat = (float)item.Qachat;
-                Vachat = (float)item.Vachat;
+                Qachat = (float) item.Qachat;
+                Vachat = (float) item.Vachat;
             }
+
             if (item.Qavoir != null)
             {
-                Qavoir = (float)item.Qavoir;
-                Vavoir = (float)item.Vavoir;
+                Qavoir = (float) item.Qavoir;
+                Vavoir = (float) item.Vavoir;
             }
+
             if (item.Qvente != null)
             {
-                Qvente = (float)item.Qvente;
-                Vvente = (float)item.Vvente;
+                Qvente = (float) item.Qvente;
+                Vvente = (float) item.Vvente;
             }
+
             if (item.Qercpt != null)
             {
-                Qercpt = (float)item.Qercpt;
-                Vercpt = (float)item.Vercpt;
+                Qercpt = (float) item.Qercpt;
+                Vercpt = (float) item.Vercpt;
             }
+
             if (item.Qdefect != null)
             {
-                Qdefect = (float)item.Qdefect;
-                Vdefect = (float)item.Vdefect;
+                Qdefect = (float) item.Qdefect;
+                Vdefect = (float) item.Vdefect;
             }
+
             if (item.Qvol != null)
             {
-                Qvol = (float)item.Qvol;
-                Vvol = (float)item.Vvol;
+                Qvol = (float) item.Qvol;
+                Vvol = (float) item.Vvol;
             }
-            if (item.Px != null)
-            {
-                Px = (float)item.Px;
-            }
-            if (item.QSeuil == null)
-            {
-                return;
-            }
-            QSeuil = (float)item.QSeuil;
+
+            if (item.Px != null) Px = (float) item.Px;
+
+            if (item.QSeuil == null) return;
+
+            QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
             Qrebut = Qvol + Qdefect;
             Vrebut = Vvol + Vdefect;
-            IdCat = (long)item.IdCat;
-            if (item.IdUnit == null) { item.IdUnit = 20; }
-            IdUnit = (long)item.IdUnit;
+            IdCat = (long) item.IdCat;
+            if (item.IdUnit == null) item.IdUnit = 20;
+
+            IdUnit = (long) item.IdUnit;
             if (item.IdPlace == null)
             {
                 IdPlace = 0;
                 return;
             }
-            IdPlace = (long)item.IdPlace;
-            PrimGros = (float)item.PrimGros;
-            PrimDetail = (float)item.PrimDetail;
-            PrimSpecial = (float)item.PrimSpecial;
-            PrimExtra = (float)item.PrimExtra;
-            Forme = (long)item.Forme;
-            Taxable = (int)item.Taxable;
+
+            IdPlace = (long) item.IdPlace;
+            PrimGros = (float) item.PrimGros;
+            PrimDetail = (float) item.PrimDetail;
+            PrimSpecial = (float) item.PrimSpecial;
+            PrimExtra = (float) item.PrimExtra;
+            Forme = (long) item.Forme;
+            Taxable = (int) item.Taxable;
         }
 
         public void Copy(OperationItem item)
         {
-            if (item == null)
-            {
-                return;
-            }
+            if (item == null) return;
+
+            NewCode = item.NewCode;
             CompleteCode = item.CompleteCode;
             Fcode = item.Fcode;
             StateCommande = item.StateCommande;
@@ -832,107 +766,107 @@ namespace gescom.data.Models
             D1 = item.D1;
             D2 = item.D2;
             B1 = item.B1;
-            if (item.Pid != null) Pid = (long)item.Pid;
+            if (item.Pid != null) Pid = (long) item.Pid;
             Remark = item.Remark;
             Observation = item.Observation;
             Remarque = item.Remarque;
             Cview = item.Cview;
             B2 = item.B2;
             IsValid = item.IsValid;
-            if (item.Pachat != null) Pachat = (float)item.Pachat;
-            if (item.Previent != null) Previent = (float)item.Previent;
-            if (item.PGros != null) PGros = (float)item.PGros;
-            if (item.PDetail != null) PDetail = (float)item.PDetail;
-            if (item.PSpecial != null) PSpecial = (float)item.PSpecial;
-            if (item.PExtra != null) PExtra = (float)item.PExtra;
-            if (item.QEstime != null) QEstime = (float)item.QEstime;
-            if (item.PEstime != null) PEstime = (float)item.PEstime;
-            if (item.AEntre != null) AEntre = (long)item.AEntre;
-            if (item.APrix != null) APrix = (long)item.APrix;
+            if (item.Pachat != null) Pachat = (float) item.Pachat;
+            if (item.Previent != null) Previent = (float) item.Previent;
+            if (item.PGros != null) PGros = (float) item.PGros;
+            if (item.PDetail != null) PDetail = (float) item.PDetail;
+            if (item.PSpecial != null) PSpecial = (float) item.PSpecial;
+            if (item.PExtra != null) PExtra = (float) item.PExtra;
+            if (item.QEstime != null) QEstime = (float) item.QEstime;
+            if (item.PEstime != null) PEstime = (float) item.PEstime;
+            if (item.AEntre != null) AEntre = (long) item.AEntre;
+            if (item.APrix != null) APrix = (long) item.APrix;
             Magpref = item.Magpref;
             Nomvers = item.Nomvers;
             Categorie = item.Categorie;
             Unite = item.Unite;
-            if (item.QStock != null) QStock = (float)item.QStock;
+            if (item.QStock != null) QStock = (float) item.QStock;
             Nomfrns = item.Nomfrns;
-            if (item.Vstock != null) Vstock = (float)item.Vstock;
-            if (item.DateVente != null) DateVente = (DateTime)item.DateVente;
-            if (item.DateAchat != null) DateAchat = (DateTime)item.DateAchat;
+            if (item.Vstock != null) Vstock = (float) item.Vstock;
+            if (item.DateVente != null) DateVente = (DateTime) item.DateVente;
+            if (item.DateAchat != null) DateAchat = (DateTime) item.DateAchat;
             Frs = item.Frs;
             Clt = item.Clt;
             if (item.Qachat != null)
             {
-                Qachat = (float)item.Qachat;
-                Vachat = (float)item.Vachat;
+                Qachat = (float) item.Qachat;
+                Vachat = (float) item.Vachat;
             }
+
             if (item.Qavoir != null)
             {
-                Qavoir = (float)item.Qavoir;
-                Vavoir = (float)item.Vavoir;
+                Qavoir = (float) item.Qavoir;
+                Vavoir = (float) item.Vavoir;
             }
+
             if (item.Qvente != null)
             {
-                Qvente = (float)item.Qvente;
-                Vvente = (float)item.Vvente;
+                Qvente = (float) item.Qvente;
+                Vvente = (float) item.Vvente;
             }
+
             if (item.Qercpt != null)
             {
-                Qercpt = (float)item.Qercpt;
-                Vercpt = (float)item.Vercpt;
+                Qercpt = (float) item.Qercpt;
+                Vercpt = (float) item.Vercpt;
             }
+
             if (item.Qdefect != null)
             {
-                Qdefect = (float)item.Qdefect;
-                Vdefect = (float)item.Vdefect;
+                Qdefect = (float) item.Qdefect;
+                Vdefect = (float) item.Vdefect;
             }
+
             if (item.Qvol != null)
             {
-                Qvol = (float)item.Qvol;
-                Vvol = (float)item.Vvol;
+                Qvol = (float) item.Qvol;
+                Vvol = (float) item.Vvol;
             }
+
             Qte = item.Qte;
             Px = item.Px;
-            if (item.QSeuil == null)
-            {
-                return;
-            }
-            QSeuil = (float)item.QSeuil;
+            if (item.QSeuil == null) return;
+
+            QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
             Qrebut = Qvol + Qdefect;
             Vrebut = Vvol + Vdefect;
-            IdCat = (long)item.IdCat;
-            if (item.IdUnit == null) { item.IdUnit = 20; }
-            IdUnit = (long)item.IdUnit;
+            IdCat = (long) item.IdCat;
+            if (item.IdUnit == null) item.IdUnit = 20;
+
+            IdUnit = (long) item.IdUnit;
             if (item.IdPlace == null)
             {
                 IdPlace = 0;
                 return;
             }
-            IdPlace = (long)item.IdPlace;
-            PrimGros = (float)item.PrimGros;
-            PrimDetail = (float)item.PrimDetail;
-            PrimSpecial = (float)item.PrimSpecial;
-            PrimExtra = (float)item.PrimExtra;
-            Forme = (long)item.Forme;
-            Taxable = (int)item.Taxable;
+
+            IdPlace = (long) item.IdPlace;
+            PrimGros = (float) item.PrimGros;
+            PrimDetail = (float) item.PrimDetail;
+            PrimSpecial = (float) item.PrimSpecial;
+            PrimExtra = (float) item.PrimExtra;
+            Forme = (long) item.Forme;
+            Taxable = (int) item.Taxable;
             Formel = item.Formel;
             Taxed = item.Taxed;
             if (item.Qcder == null)
-            {
                 Qcder = 0;
-            }
             else
-            {
-                Qcder = (double)item.Qcder;
-            }
+                Qcder = (double) item.Qcder;
         }
 
         public void Copy(OperationDispo item)
         {
-            if (item == null)
-            {
-                return;
-            }
+            if (item == null) return;
+
             CompleteCode = item.CompleteCode;
             Fcode = item.Fcode;
             StateCommande = item.StateCommande;
@@ -950,89 +884,95 @@ namespace gescom.data.Models
             D1 = item.D1;
             D2 = item.D2;
             B1 = item.B1;
-            if (item.Pid != null) Pid = (long)item.Pid;
+            if (item.Pid != null) Pid = (long) item.Pid;
             Remark = item.Remark;
             Observation = item.Observation;
             Remarque = item.Remarque;
             Cview = item.Cview;
             B2 = item.B2;
             IsValid = item.IsValid;
-            if (item.Pachat != null) Pachat = (float)item.Pachat;
-            if (item.Previent != null) Previent = (float)item.Previent;
-            if (item.PGros != null) PGros = (float)item.PGros;
-            if (item.PDetail != null) PDetail = (float)item.PDetail;
-            if (item.PSpecial != null) PSpecial = (float)item.PSpecial;
-            if (item.PExtra != null) PExtra = (float)item.PExtra;
-            if (item.QEstime != null) QEstime = (float)item.QEstime;
-            if (item.PEstime != null) PEstime = (float)item.PEstime;
-            if (item.AEntre != null) AEntre = (long)item.AEntre;
-            if (item.APrix != null) APrix = (long)item.APrix;
+            if (item.Pachat != null) Pachat = (float) item.Pachat;
+            if (item.Previent != null) Previent = (float) item.Previent;
+            if (item.PGros != null) PGros = (float) item.PGros;
+            if (item.PDetail != null) PDetail = (float) item.PDetail;
+            if (item.PSpecial != null) PSpecial = (float) item.PSpecial;
+            if (item.PExtra != null) PExtra = (float) item.PExtra;
+            if (item.QEstime != null) QEstime = (float) item.QEstime;
+            if (item.PEstime != null) PEstime = (float) item.PEstime;
+            if (item.AEntre != null) AEntre = (long) item.AEntre;
+            if (item.APrix != null) APrix = (long) item.APrix;
             Magpref = item.Magpref;
             Nomvers = item.Nomvers;
             Categorie = item.Categorie;
             Unite = item.Unite;
-            if (item.QStock != null) QStock = (float)item.QStock;
+            if (item.QStock != null) QStock = (float) item.QStock;
             Nomfrns = item.Nomfrns;
-            if (item.Vstock != null) Vstock = (float)item.Vstock;
-            if (item.DateVente != null) DateVente = (DateTime)item.DateVente;
-            if (item.DateAchat != null) DateAchat = (DateTime)item.DateAchat;
+            if (item.Vstock != null) Vstock = (float) item.Vstock;
+            if (item.DateVente != null) DateVente = (DateTime) item.DateVente;
+            if (item.DateAchat != null) DateAchat = (DateTime) item.DateAchat;
             Frs = item.Frs;
             Clt = item.Clt;
             if (item.Qachat != null)
             {
-                Qachat = (float)item.Qachat;
-                Vachat = (float)item.Vachat;
+                Qachat = (float) item.Qachat;
+                Vachat = (float) item.Vachat;
             }
+
             if (item.Qavoir != null)
             {
-                Qavoir = (float)item.Qavoir;
-                Vavoir = (float)item.Vavoir;
+                Qavoir = (float) item.Qavoir;
+                Vavoir = (float) item.Vavoir;
             }
+
             if (item.Qvente != null)
             {
-                Qvente = (float)item.Qvente;
-                Vvente = (float)item.Vvente;
+                Qvente = (float) item.Qvente;
+                Vvente = (float) item.Vvente;
             }
+
             if (item.Qercpt != null)
             {
-                Qercpt = (float)item.Qercpt;
-                Vercpt = (float)item.Vercpt;
+                Qercpt = (float) item.Qercpt;
+                Vercpt = (float) item.Vercpt;
             }
+
             if (item.Qdefect != null)
             {
-                Qdefect = (float)item.Qdefect;
-                Vdefect = (float)item.Vdefect;
+                Qdefect = (float) item.Qdefect;
+                Vdefect = (float) item.Vdefect;
             }
+
             if (item.Qvol != null)
             {
-                Qvol = (float)item.Qvol;
-                Vvol = (float)item.Vvol;
+                Qvol = (float) item.Qvol;
+                Vvol = (float) item.Vvol;
             }
+
             Qte = item.Qte;
             Px = item.Px;
-            if (item.QSeuil == null)
-            {
-                return;
-            }
-            QSeuil = (float)item.QSeuil;
+            if (item.QSeuil == null) return;
+
+            QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
             Qrebut = Qvol + Qdefect;
             Vrebut = Vvol + Vdefect;
-            IdCat = (long)item.IdCat;
-            if (item.IdUnit == null) { item.IdUnit = 20; }
-            IdUnit = (long)item.IdUnit;
+            IdCat = (long) item.IdCat;
+            if (item.IdUnit == null) item.IdUnit = 20;
+
+            IdUnit = (long) item.IdUnit;
             if (item.IdPlace == null)
             {
                 IdPlace = 0;
                 return;
             }
-            IdPlace = (long)item.IdPlace;
-            PrimGros = (float)item.PrimGros;
-            PrimDetail = (float)item.PrimDetail;
-            PrimSpecial = (float)item.PrimSpecial;
-            PrimExtra = (float)item.PrimExtra;
-            Forme = (long)item.Forme;
-            Taxable = (int)item.Taxable;
+
+            IdPlace = (long) item.IdPlace;
+            PrimGros = (float) item.PrimGros;
+            PrimDetail = (float) item.PrimDetail;
+            PrimSpecial = (float) item.PrimSpecial;
+            PrimExtra = (float) item.PrimExtra;
+            Forme = (long) item.Forme;
+            Taxable = (int) item.Taxable;
             Formel = item.Formel;
             Taxed = item.Taxed;
         }
@@ -1040,6 +980,7 @@ namespace gescom.data.Models
         public void Copy(OperationModel model)
         {
             Ndx = model.Ndx;
+            NewCode = model.NewCode;
             CompleteCode = model.CompleteCode;
             StateCommande = model.StateCommande;
             OtherInfo = model.OtherInfo;
@@ -1119,30 +1060,11 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(OperationItem operation)
-        {
-            _context.OperationItems.InsertOnSubmit(operation);
-        }
-
         public int Count()
         {
             return _context.OperationItems.Count();
         }
 
-        public void Delete(OperationItem operation)
-        {
-            _context.OperationItems.DeleteOnSubmit(operation);
-        }
-
-        public OperationItem Get(long id)
-        {
-            return _context.OperationItems.SingleOrDefault(d => d.Ndx == id);
-        }
-
-        public IQueryable<OperationItem> Operations()
-        {
-            return _context.OperationItems;
-        }
 
         public bool Save()
         {
@@ -1154,12 +1076,33 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(OperationItem operation)
+        {
+            _context.OperationItems.InsertOnSubmit(operation);
+        }
+
+        public OperationItem Get(long id)
+        {
+            var item = _context.OperationItems.SingleOrDefault(d => d.Ndx == id);
+            if (item == null) return null;
+            var arr = item.CompleteCode.Substring(item.CompleteCode.Length - 3).Split('-');
+            item.NewCode = arr[0] + item.Ndx + "-" + arr[1];
+            return item;
+        }
+
+        public IQueryable<OperationItem> Operations()
+        {
+            return _context.OperationItems;
         }
     }
 
     public class OperationText
     {
+        public string NewCode { get; set; }
         public string B1 { get; set; }
 
         public string B2 { get; set; }

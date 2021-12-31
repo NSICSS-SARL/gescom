@@ -16,6 +16,12 @@ namespace gescom.printer.Reports
             Init(id);
         }
 
+        public XtraBonCommande(CashModel model)
+        {
+            InitializeComponent();
+            Init(model.Id);
+        }
+
         private void Init(long id)
         {
             title.Text = id.ToString("#,#");
@@ -26,16 +32,10 @@ namespace gescom.printer.Reports
             // get seller name
             // personnel.Text = ActionHelpers.GetSellerName(id);
             if (d.Pid == null) return;
-            var j = (long)d.Pid;
+            var j = (long) d.Pid;
             var p = PersonHelpers.Get(j);
             nomclient.Text = p.Nom;
             adrclient.Text = p.Adresse;
-        }
-
-        public XtraBonCommande(CashModel model)
-        {
-            InitializeComponent();
-            Init(model.Id);
         }
     }
 }

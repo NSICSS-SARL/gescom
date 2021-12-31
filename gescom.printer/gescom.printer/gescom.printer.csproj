@@ -1,279 +1,279 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{664E0B46-4425-42AD-A8C5-25179AE39C98}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>gescom.printer</RootNamespace>
-    <AssemblyName>gescom.printer</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\glite\Bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\glite\Bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="gescom.data">
-      <HintPath>..\..\..\..\..\..\..\..\glite\Bin\gescom.data.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DataReport.cs">
-      <DependentUpon>DataReport.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataReport.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataReport.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Drafts\BonDirect.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Drafts\BonDirect.Designer.cs">
-      <DependentUpon>BonDirect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Drafts\ReportBonDir.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Drafts\ReportBonDir.Designer.cs">
-      <DependentUpon>ReportBonDir.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Drafts\Ticket.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Drafts\Ticket.Designer.cs">
-      <DependentUpon>Ticket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Recu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Recu.Designer.cs">
-      <DependentUpon>Recu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Report58.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Report58.Designer.cs">
-      <DependentUpon>Report58.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\ReportBonus.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\ReportBonus.Designer.cs">
-      <DependentUpon>ReportBonus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrintModel.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TicketDirect.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TicketDirect.Designer.cs">
-      <DependentUpon>TicketDirect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraBonCommande.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraBonCommande.Designer.cs">
-      <DependentUpon>XtraBonCommande.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraBonus.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraBonus.Designer.cs">
-      <DependentUpon>XtraBonus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraCommandes.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraCommandes.Designer.cs">
-      <DependentUpon>XtraCommandes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraDemande.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraDemande.Designer.cs">
-      <DependentUpon>XtraDemande.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraRecu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraRecu.Designer.cs">
-      <DependentUpon>XtraRecu.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Drafts\BonDirect.resx">
-      <DependentUpon>BonDirect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Drafts\ReportBonDir.resx">
-      <DependentUpon>ReportBonDir.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Drafts\Ticket.resx">
-      <DependentUpon>Ticket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Recu.resx">
-      <DependentUpon>Recu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Report58.resx">
-      <DependentUpon>Report58.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ReportBonus.resx">
-      <DependentUpon>ReportBonus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Reports\TicketDirect.resx">
-      <DependentUpon>TicketDirect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraBonCommande.resx">
-      <DependentUpon>XtraBonCommande.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraBonus.resx">
-      <DependentUpon>XtraBonus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraCommandes.resx">
-      <DependentUpon>XtraCommandes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraDemande.resx">
-      <DependentUpon>XtraDemande.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraRecu.resx">
-      <DependentUpon>XtraRecu.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="DataReport.xsc">
-      <DependentUpon>DataReport.xsd</DependentUpon>
-    </None>
-    <None Include="DataReport.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataReport.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataReport.xss">
-      <DependentUpon>DataReport.xsd</DependentUpon>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{664E0B46-4425-42AD-A8C5-25179AE39C98}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>gescom.printer</RootNamespace>
+        <AssemblyName>gescom.printer</AssemblyName>
+        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <TargetFrameworkProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\..\..\..\..\..\glite\Bin\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>..\..\..\..\..\..\..\glite\Bin\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"/>
+        <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"/>
+        <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="gescom.data">
+            <HintPath>..\..\..\..\..\..\..\..\glite\Bin\gescom.data.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data.Linq"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="DataReport.cs">
+            <DependentUpon>DataReport.xsd</DependentUpon>
+        </Compile>
+        <Compile Include="DataReport.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>DataReport.xsd</DependentUpon>
+        </Compile>
+        <Compile Include="Drafts\BonDirect.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Drafts\BonDirect.Designer.cs">
+            <DependentUpon>BonDirect.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Drafts\ReportBonDir.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Drafts\ReportBonDir.Designer.cs">
+            <DependentUpon>ReportBonDir.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Drafts\Ticket.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Drafts\Ticket.Designer.cs">
+            <DependentUpon>Ticket.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\Recu.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\Recu.Designer.cs">
+            <DependentUpon>Recu.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\Report58.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\Report58.Designer.cs">
+            <DependentUpon>Report58.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\ReportBonus.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\ReportBonus.Designer.cs">
+            <DependentUpon>ReportBonus.cs</DependentUpon>
+        </Compile>
+        <Compile Include="PrintModel.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+            <DependentUpon>Settings.settings</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\TicketDirect.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\TicketDirect.Designer.cs">
+            <DependentUpon>TicketDirect.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\XtraBonCommande.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\XtraBonCommande.Designer.cs">
+            <DependentUpon>XtraBonCommande.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\XtraBonus.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\XtraBonus.Designer.cs">
+            <DependentUpon>XtraBonus.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\XtraCommandes.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\XtraCommandes.Designer.cs">
+            <DependentUpon>XtraCommandes.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\XtraDemande.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\XtraDemande.Designer.cs">
+            <DependentUpon>XtraDemande.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Reports\XtraRecu.cs">
+            <SubType>Component</SubType>
+        </Compile>
+        <Compile Include="Reports\XtraRecu.Designer.cs">
+            <DependentUpon>XtraRecu.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Drafts\BonDirect.resx">
+            <DependentUpon>BonDirect.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Drafts\ReportBonDir.resx">
+            <DependentUpon>ReportBonDir.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Drafts\Ticket.resx">
+            <DependentUpon>Ticket.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\Recu.resx">
+            <DependentUpon>Recu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\Report58.resx">
+            <DependentUpon>Report58.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\ReportBonus.resx">
+            <DependentUpon>ReportBonus.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\licenses.licx"/>
+        <EmbeddedResource Include="Reports\TicketDirect.resx">
+            <DependentUpon>TicketDirect.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\XtraBonCommande.resx">
+            <DependentUpon>XtraBonCommande.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\XtraBonus.resx">
+            <DependentUpon>XtraBonus.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\XtraCommandes.resx">
+            <DependentUpon>XtraCommandes.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\XtraDemande.resx">
+            <DependentUpon>XtraDemande.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Reports\XtraRecu.resx">
+            <DependentUpon>XtraRecu.cs</DependentUpon>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="app.config"/>
+        <None Include="DataReport.xsc">
+            <DependentUpon>DataReport.xsd</DependentUpon>
+        </None>
+        <None Include="DataReport.xsd">
+            <SubType>Designer</SubType>
+            <Generator>MSDataSetGenerator</Generator>
+            <LastGenOutput>DataReport.Designer.cs</LastGenOutput>
+        </None>
+        <None Include="DataReport.xss">
+            <DependentUpon>DataReport.xsd</DependentUpon>
+        </None>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+    </ItemGroup>
+    <ItemGroup/>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
 </Project>

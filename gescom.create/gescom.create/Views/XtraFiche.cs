@@ -1,18 +1,18 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
     public partial class XtraFiche : XtraForm
     {
         private readonly XtraPeriode _fPeriode;
+        private readonly long _pid;
         private bool _created;
         private List<SoldeItem> _list;
-        private readonly long _pid;
 
         public XtraFiche()
         {
@@ -42,10 +42,7 @@ namespace gescom.create.Views
 
         private void creer_Click(object sender, EventArgs e)
         {
-            if (_pid <= 0)
-            {
-                return;
-            }
+            if (_pid <= 0) return;
             CreateHelpers.Ecrire(_pid);
         }
 
@@ -56,24 +53,12 @@ namespace gescom.create.Views
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return;
-            }
-            if (myNum.Text == @"0")
-            {
-                return;
-            }
-            int id = int.Parse(myNum.Text);
-            if (id <= 0)
-            {
-                return;
-            }
-            List<RetailModel> list = RetailHelpers.GetRetail(id).ToList();
-            if (list.Count == 0)
-            {
-                return;
-            }
+            if (string.IsNullOrEmpty(myNum.Text)) return;
+            if (myNum.Text == @"0") return;
+            var id = int.Parse(myNum.Text);
+            if (id <= 0) return;
+            var list = RetailHelpers.GetRetail(id).ToList();
+            if (list.Count == 0) return;
             CreateHelpers.DetaillerOperation(id);
         }
 
@@ -82,11 +67,8 @@ namespace gescom.create.Views
             grillage.DataSource = _list;
             myNum.DataBindings.Clear();
             myNum.DataBindings.Add("Text", _list, "Numero");
-            PersonModel person = PersonHelpers.Get(_pid);
-            if (person == null)
-            {
-                return;
-            }
+            var person = PersonHelpers.Get(_pid);
+            if (person == null) return;
             Text = person.Nom;
         }
 
@@ -124,6 +106,7 @@ namespace gescom.create.Views
                 ErrorHelpers.ShowError("IMPRESSION NULLE");
                 return;
             }
+
             CreateHelpers.ImprimerCompte(_created, _list, _pid, _fPeriode.Debut, _fPeriode.Fin);
         }
     }

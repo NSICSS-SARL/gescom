@@ -1,6 +1,6 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System;
+using DevExpress.XtraReports.UI;
 using gescom.data.Models;
-using System;
 
 namespace gescom.printer.Reports
 {
@@ -9,7 +9,7 @@ namespace gescom.printer.Reports
         public XtraBonus()
         {
             InitializeComponent();
-            PersonModel p = PersonHelpers.Get(1);
+            var p = PersonHelpers.Get(1);
             nom.Text = p.Nom;
             adresse.Text = p.Adresse;
         }
@@ -17,7 +17,7 @@ namespace gescom.printer.Reports
         public XtraBonus(DateTime debut1, DateTime fin1)
         {
             InitializeComponent();
-            PersonModel p = PersonHelpers.Get(1);
+            var p = PersonHelpers.Get(1);
             nom.Text = p.Nom;
             adresse.Text = p.Adresse;
             DateDebut.Value = debut1.AddDays(-1);

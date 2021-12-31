@@ -9,7 +9,7 @@ namespace gescom.data.Models
     {
         public static bool Create(string code, string nom)
         {
-            var model = new UniteModel { Code = code, Nom = nom };
+            var model = new UniteModel {Code = code, Nom = nom};
             var repository = new UniteRepository();
             return repository.Create(model);
         }
@@ -18,32 +18,22 @@ namespace gescom.data.Models
         public static UniteItem Get(long id)
         {
             var result = new UniteItem();
-            foreach (UniteItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item;
             return result;
         }
 
         /** modification de unite**/
-
         public static string GetCode(long id)
         {
             string result = null;
-            foreach (UniteItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item.Code;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item.Code;
             return result;
         }
 
         public static long GetId(string name)
         {
             long result = -1;
-            foreach (UniteItem item in GetList().Where(item => item.Nom == name))
-            {
-                result = item.Id;
-            }
+            foreach (var item in GetList().Where(item => item.Nom == name)) result = item.Id;
             return result;
         }
 
@@ -61,16 +51,13 @@ namespace gescom.data.Models
         public static string GetName(long id)
         {
             string result = null;
-            foreach (UniteItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item.Nom;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item.Nom;
             return result;
         }
 
         public static bool Update(long id, string code, string nom)
         {
-            var model = new UniteModel { Id = id, Code = code, Nom = nom };
+            var model = new UniteModel {Id = id, Code = code, Nom = nom};
             var repository = new UniteRepository();
             return repository.Update(model);
         }
@@ -82,14 +69,11 @@ namespace gescom.data.Models
         {
             Unites = new List<UniteItem>();
             var repository = new UniteRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Unites())
             {
-                return;
-            }
-            foreach (UniteItem element in repository.Unites())
-            {
-                UniteItem item = element;
+                var item = element;
                 item.Rang = StdCalcul.DoubleToSpaceFormat(item.Id);
                 Unites.Add(item);
             }
@@ -127,14 +111,8 @@ namespace gescom.data.Models
 
         public void HasError()
         {
-            if (Code == null)
-            {
-                IsValid = false;
-            }
-            if (Nom == null)
-            {
-                IsValid = false;
-            }
+            if (Code == null) IsValid = false;
+            if (Nom == null) IsValid = false;
         }
     }
 
@@ -192,6 +170,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -214,6 +193,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 

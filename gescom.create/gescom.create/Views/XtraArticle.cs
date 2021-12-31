@@ -1,10 +1,10 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Drawing;
+using System.Globalization;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.create.Properties;
 using gescom.data.Models;
-using System;
-using System.Drawing;
-using System.Globalization;
 
 namespace gescom.create.Views
 {
@@ -40,46 +40,26 @@ namespace gescom.create.Views
         {
             creer.Enabled = false;
             double taux = PriceHelpers.GetTaxe() / 100;
-            if (string.IsNullOrEmpty(nom.Text) || string.IsNullOrEmpty(refce.Text) || string.IsNullOrEmpty(prix.Text))
-            {
-                return;
-            }
+            if (string.IsNullOrEmpty(nom.Text) || string.IsNullOrEmpty(refce.Text) ||
+                string.IsNullOrEmpty(prix.Text)) return;
             pdetail.PositiveColor = Color.Black;
-            if (coeff.Value <= 0)
-            {
-                return;
-            }
-            double prAch = double.Parse(prix.Text);
-            double rate = StdCalcul.DecimalToDouble(coeff.Value);
-            double prRevient = StdCalcul.GetPrixComplete(prAch, rate);
+            if (coeff.Value <= 0) return;
+            var prAch = double.Parse(prix.Text);
+            var rate = StdCalcul.DecimalToDouble(coeff.Value);
+            var prRevient = StdCalcul.GetPrixComplete(prAch, rate);
             prRevient = StdCalcul.GetSimpleLisse(prRevient);
             revient.Text = StdCalcul.AfficherPrix(prRevient);
-            if (prRevient <= 0)
-            {
-                return;
-            }
+            if (prRevient <= 0) return;
             rate = StdCalcul.DecimalToDouble(mgros.Value);
-            double prGros = StdCalcul.GetPrixComplete(prRevient, rate);
-            if (mgros.Value == 0)
-            {
-                prGros = StdCalcul.GetPrixLisse(prGros) + 100;
-            }
-            if (taxable.Checked)
-            {
-                prGros = (1 + taux) * prGros;
-            }
+            var prGros = StdCalcul.GetPrixComplete(prRevient, rate);
+            if (mgros.Value == 0) prGros = StdCalcul.GetPrixLisse(prGros) + 100;
+            if (taxable.Checked) prGros = (1 + taux) * prGros;
             prGros = StdCalcul.GetPrixLisse(prGros);
             pgros.Text = StdCalcul.AfficherPrix(prGros);
             rate = StdCalcul.DecimalToDouble(mdetail.Value);
-            double prDetail = StdCalcul.GetPrixComplete(prRevient, rate);
-            if (mdetail.Value == 0)
-            {
-                prDetail = StdCalcul.GetPrixLisse(prDetail) + 100;
-            }
-            if (taxable.Checked)
-            {
-                prDetail = (1 + taux) * prDetail;
-            }
+            var prDetail = StdCalcul.GetPrixComplete(prRevient, rate);
+            if (mdetail.Value == 0) prDetail = StdCalcul.GetPrixLisse(prDetail) + 100;
+            if (taxable.Checked) prDetail = (1 + taux) * prDetail;
             prDetail = StdCalcul.GetPrixLisse(prDetail);
             pdetail.Text = StdCalcul.AfficherPrix(prDetail);
             if (prGros > prDetail)
@@ -87,38 +67,28 @@ namespace gescom.create.Views
                 pdetail.PositiveColor = Color.Crimson;
                 return;
             }
+
             rate = StdCalcul.DecimalToDouble(mSpecial.Value);
-            double prSpec = StdCalcul.GetPrixComplete(prRevient, rate);
-            if (mSpecial.Value == 0)
-            {
-                prSpec = StdCalcul.GetPrixLisse(prSpec) + 100;
-            }
-            if (taxable.Checked)
-            {
-                prSpec = (1 + taux) * prSpec;
-            }
+            var prSpec = StdCalcul.GetPrixComplete(prRevient, rate);
+            if (mSpecial.Value == 0) prSpec = StdCalcul.GetPrixLisse(prSpec) + 100;
+            if (taxable.Checked) prSpec = (1 + taux) * prSpec;
             prSpec = StdCalcul.GetPrixLisse(prSpec);
             pspecial.Text = StdCalcul.AfficherPrix(prSpec);
             rate = StdCalcul.DecimalToDouble(mExtra.Value);
-            double prExtra = StdCalcul.GetPrixComplete(prRevient, rate);
-            if (mExtra.Value == 0)
-            {
-                prExtra = StdCalcul.GetPrixLisse(prExtra) + 100;
-            }
-            if (taxable.Checked)
-            {
-                prExtra = (1 + taux) * prExtra;
-            }
+            var prExtra = StdCalcul.GetPrixComplete(prRevient, rate);
+            if (mExtra.Value == 0) prExtra = StdCalcul.GetPrixLisse(prExtra) + 100;
+            if (taxable.Checked) prExtra = (1 + taux) * prExtra;
             prExtra = StdCalcul.GetPrixLisse(prExtra);
             pextra.Text = StdCalcul.AfficherPrix(prExtra);
-            double prime = prDetail - prRevient;
+            var prime = prDetail - prRevient;
             double myprime = 0;
             if (prime > 0)
             {
-                float primerate = StdCalcul.DecimalToFloat(txPrime.Value) / 100;
+                var primerate = StdCalcul.DecimalToFloat(txPrime.Value) / 100;
                 myprime = primerate * prime;
                 myprime = StdCalcul.GetPrixLisse(myprime);
             }
+
             vprime.Text = StdCalcul.AfficherPrix(myprime);
             creer.Enabled = true;
         }
@@ -151,10 +121,7 @@ namespace gescom.create.Views
         protected void CheckChange()
         {
             if (!taxable.Checked) return;
-            if (!formel.Checked)
-            {
-                formel.Checked = true;
-            }
+            if (!formel.Checked) formel.Checked = true;
         }
 
         private void annuler_Click(object sender, EventArgs e)
@@ -186,7 +153,6 @@ namespace gescom.create.Views
                 Seuil = 0
             };
             if (!string.IsNullOrEmpty(plancher.Text))
-            {
                 try
                 {
                     model.Seuil = float.Parse(plancher.Text);
@@ -196,23 +162,18 @@ namespace gescom.create.Views
                     ErrorHelpers.ShowError("SEUIL INVALIDE");
                     return;
                 }
-            }
+
             // rendre l'article taxable ou pas.**/
-            if (taxable.Checked)
-            {
-                model.Taxable = 1;
-            }
-            if (formel.Checked)
-            {
-                model.Forme = 1;
-            }
-            bool isArticleCreated = _articleRepository.CreateWin(model);
+            if (taxable.Checked) model.Taxable = 1;
+            if (formel.Checked) model.Forme = 1;
+            var isArticleCreated = _articleRepository.CreateWin(model);
             if (!isArticleCreated)
             {
                 ErrorHelpers.ShowError("REF ET/OU NOM DEJA EXISTANTE(S)!");
                 return;
             }
-            float primeRate = StdCalcul.DecimalToFloat(txPrime.Value);
+
+            var primeRate = StdCalcul.DecimalToFloat(txPrime.Value);
             _model.SetMarge(model.Id, float.Parse(prix.Text), coeff.Value, mgros.Value, mdetail.Value, mSpecial.Value,
                 mExtra.Value, taxable.Checked, primeRate);
             _model.Create();
@@ -221,17 +182,15 @@ namespace gescom.create.Views
 
         private void creer_Click(object sender, EventArgs e)
         {
-            if (!IsValid)
-            {
-                Close();
-            }
+            if (!IsValid) Close();
             if (Id == 0)
             {
                 Create();
                 return;
             }
+
             // ici modification de tarifs.
-            float primeRate = StdCalcul.DecimalToFloat(txPrime.Value);
+            var primeRate = StdCalcul.DecimalToFloat(txPrime.Value);
             _model.UniteFrns = unity.Text;
             _model.SetMarge(_model.Id, float.Parse(prix.Text), coeff.Value, mgros.Value, mdetail.Value, mSpecial.Value,
                 mExtra.Value, taxable.Checked, primeRate);
@@ -243,24 +202,19 @@ namespace gescom.create.Views
             _item.Iu = StdCalcul.GetUnityId(unity.Text);
             _item.Taxable = taxable.Checked ? 1 : 0;
             _item.Forme = formel.Checked ? 1 : 0;
-            if (!string.IsNullOrEmpty(plancher.Text))
-            {
-                _item.Seuil = float.Parse(plancher.Text);
-            }
+            if (!string.IsNullOrEmpty(plancher.Text)) _item.Seuil = float.Parse(plancher.Text);
             // cf doublon.
-            int otherId = DataHelpers.GetArticleIdByName(nom.Text);
-            if ((_model.Id != otherId) && (otherId > 0))
+            var otherId = DataHelpers.GetArticleIdByName(nom.Text);
+            if (_model.Id != otherId && otherId > 0)
             {
                 ErrorHelpers.ShowErrorDuplicate();
                 nom.Focus();
                 nom.SelectAll();
                 return;
             }
-            bool b = _articleRepository.Update();
-            if (!b)
-            {
-                return;
-            }
+
+            var b = _articleRepository.Update();
+            if (!b) return;
             // Close();
         }
 
@@ -278,14 +232,8 @@ namespace gescom.create.Views
 
         private void formel_CheckedChanged(object sender, EventArgs e)
         {
-            if (taxable.Checked)
-            {
-                formel.Checked = true;
-            }
-            if ((formel.Checked) && (!taxable.Checked))
-            {
-                taxable.Checked = true;
-            }
+            if (taxable.Checked) formel.Checked = true;
+            if (formel.Checked && !taxable.Checked) taxable.Checked = true;
         }
 
         private void Init(long id)
@@ -300,45 +248,32 @@ namespace gescom.create.Views
             }
 
             _item = _articleRepository.Get(id);
-            if (_item.Ig == null)
-            {
-                return;
-            }
-            int index = -1;
-            int count = 0;
-            var i = (long)_item.Ig;
-            string name = FamilleHelpers.GetName(i);
-            foreach (string variable in FamilleHelpers.GetListFamilles())
+            if (_item.Ig == null) return;
+            var index = -1;
+            var count = 0;
+            var i = (long) _item.Ig;
+            var name = FamilleHelpers.GetName(i);
+            foreach (var variable in FamilleHelpers.GetListFamilles())
             {
                 family.Items.Add(variable);
                 count++;
-                if (variable == name)
-                {
-                    index = count;
-                }
+                if (variable == name) index = count;
             }
+
             family.SelectedIndex = index - 1;
-            if (_item.Iu == null)
-            {
-                return;
-            }
-            i = (long)_item.Iu;
+            if (_item.Iu == null) return;
+            i = (long) _item.Iu;
             name = UniteHelpers.GetName(i);
             index = -1;
             count = 0;
-            foreach (string variable in UniteHelpers.GetListUnites())
+            foreach (var variable in UniteHelpers.GetListUnites())
             {
                 unity.Items.Add(variable);
                 count++;
-                if (variable == name)
-                {
-                    index = count;
-                }
+                if (variable == name) index = count;
             }
-            if (_item.Forme == 1)
-            {
-                formel.Checked = true;
-            }
+
+            if (_item.Forme == 1) formel.Checked = true;
             unity.SelectedIndex = index - 1;
             Text = @"MODIFICATION ARTICLE";
             nom.Text = _item.Nom;
@@ -371,10 +306,8 @@ namespace gescom.create.Views
                 ErrorHelpers.ShowError("AUCUNE FAMILLE EXISTANTE.");
                 return;
             }
-            foreach (string variable in FamilleHelpers.GetListFamilles())
-            {
-                family.Items.Add(variable);
-            }
+
+            foreach (var variable in FamilleHelpers.GetListFamilles()) family.Items.Add(variable);
             family.SelectedIndex = 0;
             var uniteRepository = new UniteRepository();
             if (uniteRepository.Count() == 0)
@@ -383,10 +316,8 @@ namespace gescom.create.Views
                 ErrorHelpers.ShowError("AUCUNE UNITE EXISTANTE.");
                 return;
             }
-            foreach (string variable in UniteHelpers.GetListUnites())
-            {
-                unity.Items.Add(variable);
-            }
+
+            foreach (var variable in UniteHelpers.GetListUnites()) unity.Items.Add(variable);
             unity.SelectedIndex = 0;
             Text = @"NOUVEAU ARTICLE";
         }
@@ -418,10 +349,7 @@ namespace gescom.create.Views
 
         private void plancher_EditValueChanged(object sender, EventArgs e)
         {
-            if (Id > 0)
-            {
-                VerifierAvantCreation();
-            }
+            if (Id > 0) VerifierAvantCreation();
         }
 
         private void prix_EditValueChanged(object sender, EventArgs e)

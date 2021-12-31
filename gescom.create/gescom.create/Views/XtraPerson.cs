@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Globalization;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.create.Properties;
 using gescom.data.Models;
-using System;
-using System.Globalization;
 
 namespace gescom.create.Views
 {
@@ -50,23 +50,14 @@ namespace gescom.create.Views
 
         private void creer_Click(object sender, EventArgs e)
         {
-            if (tvaValue.Visible)
-            {
-                PriceHelpers.UpdateTaxe(StdCalcul.DecimalToFloat(tvaValue.Value));
-            }
-            PersonModel p = Initialiser();
-            if (p.IsValid)
-            {
-                Save(p);
-            }
+            if (tvaValue.Visible) PriceHelpers.UpdateTaxe(StdCalcul.DecimalToFloat(tvaValue.Value));
+            var p = Initialiser();
+            if (p.IsValid) Save(p);
         }
 
         private void Init()
         {
-            if (_index == 3)
-            {
-                formel.Visible = false;
-            }
+            if (_index == 3) formel.Visible = false;
             if (_id < 0)
             {
                 switch (_index)
@@ -90,32 +81,37 @@ namespace gescom.create.Views
                         Text = Resources.XtraPerson_Init_Informations_générales;
                         break;
                 }
+
                 return;
             }
+
             Read();
         }
 
         private PersonModel Initialiser()
         {
-            var model = new PersonModel { IsValid = true };
+            var model = new PersonModel {IsValid = true};
             if (string.IsNullOrEmpty(txtVille.Text))
             {
                 ErrorHelpers.ShowError("VILLE REQUISE.");
                 txtVille.Focus();
                 model.IsValid = false;
             }
+
             if (string.IsNullOrEmpty(txtAdresse.Text))
             {
                 ErrorHelpers.ShowError("ADRESSE REQUISE.");
                 txtAdresse.Focus();
                 model.IsValid = false;
             }
+
             if (string.IsNullOrEmpty(txtNom.Text))
             {
                 ErrorHelpers.ShowError("NOM REQUIS.");
                 txtNom.Focus();
                 model.IsValid = false;
             }
+
             model.Nom = txtNom.Text;
             model.Localite = textLocale.Text;
             model.Activite = txtActivite.Text;
@@ -137,7 +133,7 @@ namespace gescom.create.Views
         {
             creer.Text = Resources.XtraPerson_Read__Modifier;
             var p = new PersonModel();
-            PersonModel person = PersonHelpers.Get(_id);
+            var person = PersonHelpers.Get(_id);
             switch (_index)
             {
                 case 1:
@@ -158,6 +154,7 @@ namespace gescom.create.Views
                     Text = @"PERSONNEL: " + person.Nom;
                     break;
             }
+
             p.Copy(person);
             if (_index == 2)
             {
@@ -181,10 +178,8 @@ namespace gescom.create.Views
                         break;
                 }
             }
-            if (person.Forme == 1)
-            {
-                formel.Checked = true;
-            }
+
+            if (person.Forme == 1) formel.Checked = true;
             textLocale.Text = p.Localite;
             txtActivite.Text = p.Activite;
             txtAdresse.Text = p.Adresse;
@@ -222,7 +217,7 @@ namespace gescom.create.Views
             tvaLabel.Visible = true;
             tvaValue.Visible = true;
             creer.Text = Resources.XtraPerson_Read__Modifier;
-            float t = PriceHelpers.GetTaxe();
+            var t = PriceHelpers.GetTaxe();
             tvaValue.Value = StdCalcul.DoubleToDecimal(t);
         }
 
@@ -230,31 +225,14 @@ namespace gescom.create.Views
         {
             if (_index == 2)
             {
-                if (chkGros.Checked)
-                {
-                    model.Groupe = 1;
-                }
-                if (chkDetail.Checked)
-                {
-                    model.Groupe = 2;
-                }
-                if (chkSpecial.Checked)
-                {
-                    model.Groupe = 3;
-                }
-                if (chkExtra.Checked)
-                {
-                    model.Groupe = 4;
-                }
+                if (chkGros.Checked) model.Groupe = 1;
+                if (chkDetail.Checked) model.Groupe = 2;
+                if (chkSpecial.Checked) model.Groupe = 3;
+                if (chkExtra.Checked) model.Groupe = 4;
             }
-            if (_index == 3)
-            {
-                model.Groupe = 5;
-            }
-            if (_index == 1)
-            {
-                model.Groupe = 0;
-            }
+
+            if (_index == 3) model.Groupe = 5;
+            if (_index == 1) model.Groupe = 0;
             if (_id < 0)
             {
                 switch (_index)
@@ -269,18 +247,18 @@ namespace gescom.create.Views
                         Clear();
                         return;
                 }
+
                 PersonHelpers.CreateVendor(model);
                 Clear();
                 return;
             }
+
             if (formel.Visible)
             {
                 model.Forme = 0;
-                if (formel.Checked)
-                {
-                    model.Forme = 1;
-                }
+                if (formel.Checked) model.Forme = 1;
             }
+
             model.Id = _id;
             PersonHelpers.Update(model);
             Close();

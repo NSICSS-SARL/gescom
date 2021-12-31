@@ -16,13 +16,13 @@ namespace gescom.printer.Reports
             InitializeComponent();
             Id.Value = id;
             Init();
-            DiaryItem diary = DiaryHelpers.Get(id);
+            var diary = DiaryHelpers.Get(id);
             Daty.Text = diary.Datum.ToString();
         }
 
         private void Init()
         {
-            PersonModel p = PersonHelpers.Get(1);
+            var p = PersonHelpers.Get(1);
             nom.Text = p.Nom;
             adresse.Text = p.Adresse;
             complement.Text = p.Complement;

@@ -70,7 +70,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<PersonModel> GetCustomers()
         {
-            return GetList().Where(model => (model.Groupe > 0) && (model.Groupe < 5));
+            return GetList().Where(model => model.Groupe > 0 && model.Groupe < 5);
         }
 
         public static long GetGroup(long id)
@@ -97,6 +97,7 @@ namespace gescom.data.Models
                 model.Prime = DateHelpers.GetAmountPrime(model.Id);
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -112,7 +113,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<PersonModel> GetVendors()
         {
-            return GetList().Where(model => (model.Groupe == 0) && (model.Id > 1));
+            return GetList().Where(model => model.Groupe == 0 && model.Id > 1);
         }
 
         public static IEnumerable<VendorItem> GetVendorsList()
@@ -167,6 +168,7 @@ namespace gescom.data.Models
                     titre = "Extra";
                     break;
             }
+
             LitteralType = titre;
         }
 
@@ -207,19 +209,13 @@ namespace gescom.data.Models
         {
             Persons = new List<PersonItem>();
             var repository = new PersonRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Persons())
             {
-                return;
-            }
-            foreach (PersonItem element in repository.Persons())
-            {
-                PersonItem item = element;
+                var item = element;
                 item.Rang = StdCalcul.DoubleToSpaceFormat(item.Id);
-                if (item.Groupe == 1)
-                {
-                    item.Grossiste = true;
-                }
+                if (item.Groupe == 1) item.Grossiste = true;
                 item.IsFormel = item.Forme == 1;
                 SetLitteral(item);
                 Persons.Add(item);
@@ -240,7 +236,7 @@ namespace gescom.data.Models
 
         private void SetLitteral(PersonItem item)
         {
-            long g = item.Groupe;
+            var g = item.Groupe;
             string titre = null;
             switch (g)
             {
@@ -269,6 +265,7 @@ namespace gescom.data.Models
                     titre = "EXTRA";
                     break;
             }
+
             item.LitteralType = titre;
         }
     }
@@ -323,14 +320,8 @@ namespace gescom.data.Models
 
         public void HasError()
         {
-            if (Nom == null)
-            {
-                IsValid = false;
-            }
-            if (Adresse == null)
-            {
-                IsValid = false;
-            }
+            if (Nom == null) IsValid = false;
+            if (Adresse == null) IsValid = false;
         }
 
         public void SetParameters()
@@ -372,6 +363,7 @@ namespace gescom.data.Models
                 Code = Prenom + "-F";
                 return;
             }
+
             Code = Prenom + "-I";
         }
     }
@@ -433,14 +425,8 @@ namespace gescom.data.Models
 
         public void Copy(PersonItem item)
         {
-            if (item == null)
-            {
-                return;
-            }
-            if (item.Id <= 0)
-            {
-                return;
-            }
+            if (item == null) return;
+            if (item.Id <= 0) return;
             Id = item.Id;
             Localite = item.Localite;
             Nom = item.Nom;
@@ -465,20 +451,14 @@ namespace gescom.data.Models
             Solde = item.Solde;
             Grossiste = item.Grossiste;
             LitteralType = item.LitteralType;
-            if (item.Forme != null) Forme = (long)item.Forme;
+            if (item.Forme != null) Forme = (long) item.Forme;
             IsFormel = item.IsFormel;
         }
 
         public void Copy(CustomerItem item)
         {
-            if (item == null)
-            {
-                return;
-            }
-            if (item.Id <= 0)
-            {
-                return;
-            }
+            if (item == null) return;
+            if (item.Id <= 0) return;
             Id = item.Id;
             Localite = item.Localite;
             Nom = item.Nom;
@@ -499,7 +479,7 @@ namespace gescom.data.Models
             Description = item.Description;
             Grossiste = item.Grossiste;
             LitteralType = item.LitteralType;
-            if (item.Forme != null) Forme = (long)item.Forme;
+            if (item.Forme != null) Forme = (long) item.Forme;
             IsFormel = item.IsFormel;
         }
 
@@ -542,14 +522,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(PersonItem item)
-        {
-            _context.PersonItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.PersonItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(PersonItem item)
+        {
+            _context.PersonItems.InsertOnSubmit(item);
         }
 
         public bool Create(PersonModel model)
@@ -567,6 +561,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -583,19 +578,6 @@ namespace gescom.data.Models
         public IQueryable<PersonItem> Persons()
         {
             return _context.PersonItems;
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         public bool Update(PersonModel model)
@@ -621,12 +603,9 @@ namespace gescom.data.Models
         {
             Vendors = new List<VendorItem>();
             var repository = new VendorRepository();
-            int count = repository.Count();
-            if (count == 0)
-            {
-                return;
-            }
-            foreach (VendorItem item in repository.Vendors())
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var item in repository.Vendors())
             {
                 item.Set();
                 Vendors.Add(item);
@@ -652,11 +631,12 @@ namespace gescom.data.Models
 
         public void Set()
         {
-            if ((Forme == null) || (Forme == 0))
+            if (Forme == null || Forme == 0)
             {
                 EstFormel = @"INFO";
                 return;
             }
+
             EstFormel = @"FORM";
         }
     }

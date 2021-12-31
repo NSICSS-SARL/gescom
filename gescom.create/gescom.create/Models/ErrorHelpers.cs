@@ -1,7 +1,7 @@
-﻿using gescom.create.Views;
-using gescom.data.Models;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows.Forms;
+using gescom.create.Views;
+using gescom.data.Models;
 
 namespace gescom.create.Models
 {
@@ -20,26 +20,23 @@ namespace gescom.create.Models
 
         public static void ShowDepassError(float quantite, float qstock, string name)
         {
-            string msgError = name + "\n" + qstock.ToString(CultureInfo.InvariantCulture) + @" DISPONIBLE" + "\n\n" +
-                              quantite +
-                              @" SAISIE" + "\n\n";
+            var msgError = name + "\n" + qstock.ToString(CultureInfo.InvariantCulture) + @" DISPONIBLE" + "\n\n" +
+                           quantite +
+                           @" SAISIE" + "\n\n";
             MessageBox.Show(null, msgError, @"DONNEE INVALIDE", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void ShowDepassError(float quantite, float qstock, float qteSaved, string name)
         {
-            string msgError = qstock.ToString(CultureInfo.InvariantCulture) + @" DISPONIBLE" + "\n\n" + quantite +
-                              @" SAISIE" + "\n\n" + qteSaved.ToString(CultureInfo.InvariantCulture) + @" ACUELLE.";
+            var msgError = qstock.ToString(CultureInfo.InvariantCulture) + @" DISPONIBLE" + "\n\n" + quantite +
+                           @" SAISIE" + "\n\n" + qteSaved.ToString(CultureInfo.InvariantCulture) + @" ACUELLE.";
             MessageBox.Show(null, msgError, name, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void ShowDepassError(string txtNew, string txtReal, string txtSend, string name)
         {
-            string msgError = txtReal + @" DISPONIBLE" + "\n\n" + txtNew + @" SAISIE" + "\n\n";
-            if (txtSend != null)
-            {
-                msgError += txtSend + @" ACTUELLE.";
-            }
+            var msgError = txtReal + @" DISPONIBLE" + "\n\n" + txtNew + @" SAISIE" + "\n\n";
+            if (txtSend != null) msgError += txtSend + @" ACTUELLE.";
             MessageBox.Show(null, msgError, name, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 

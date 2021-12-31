@@ -1,10 +1,10 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DevExpress.XtraReports.UI;
 using gescom.data.Models;
 using gescom.printer.Drafts;
 using gescom.printer.Reports;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace gescom.printer
 {
@@ -12,7 +12,7 @@ namespace gescom.printer
     {
         public static void PrintDocument(this XtraReport report, string printerAdress)
         {
-            ReportPrintTool printTool = new ReportPrintTool(report);
+            var printTool = new ReportPrintTool(report);
             // Invoke the Print dialog.
             //printTool.PrintDialog();
             // Send the report to the default printer.
@@ -26,13 +26,13 @@ namespace gescom.printer
             DiaryHelpers.UpdateInitialPrint(item.Id);
             DateHelpers.UpdateBon(item.Id);
             //var model = new PrintModel(item) { Ticket = { PrinterName = "\\\\WIN - HOST.photo104.mg\\XP - 80C" } };
-           var rpt = new TicketDirect(item)
-              {
-                  somme = {Text = item.Montant2},
-                  count = {Text = item.Count}
-              };
-              var ptr = new Ticket(item) {count = {Text = item.Count}};
-           
+            var rpt = new TicketDirect(item)
+            {
+                somme = {Text = item.Montant2},
+                count = {Text = item.Count}
+            };
+            var ptr = new Ticket(item) {count = {Text = item.Count}};
+
             rpt.PrintDocument("\\\\WIN-HOST.photo104.mg\\XP-80C");
             ptr.PrintDocument("\\\\THINK.photo104.mg\\80 Printer(1)");
         }
@@ -78,10 +78,8 @@ namespace gescom.printer
 
     public class PrintModel
     {
-        private List<PrintHelp> _recuList;
         public CasherIn _c;
-        public TicketDirect Ticket { get; set; }
-        public TicketDirect Bon { get; set; }
+        private List<PrintHelp> _recuList;
 
         public PrintModel()
         {
@@ -100,23 +98,26 @@ namespace gescom.printer
         {
             Bon = new TicketDirect(item)
             {
-                somme = { Text = item.Montant2 },
-                count = { Text = item.Count },
-                nomPro = { Text = "BON DE COMMANDE" }
+                somme = {Text = item.Montant2},
+                count = {Text = item.Count},
+                nomPro = {Text = "BON DE COMMANDE"}
             };
             Ticket = new TicketDirect(item)
             {
-                somme = { Text = item.Montant2 },
-                count = { Text = item.Count },
-                nomPro = { Text = "TICKET DE LIVRAISON" },
-                message = { Text = "Cherchez les marchandises." }
+                somme = {Text = item.Montant2},
+                count = {Text = item.Count},
+                nomPro = {Text = "TICKET DE LIVRAISON"},
+                message = {Text = "Cherchez les marchandises."}
             };
         }
+
+        public TicketDirect Ticket { get; set; }
+        public TicketDirect Bon { get; set; }
 
         public void ImprimerRecu()
         {
             var report = new Recu(_c);
-            ReportPrintTool printTool = new ReportPrintTool(report);
+            var printTool = new ReportPrintTool(report);
             printTool.Print();
             //rpt.PrintDocument("Epson TM-T70 Receipt");
             DiaryHelpers.UpdateErrorPrint(_c.Id);
@@ -127,10 +128,7 @@ namespace gescom.printer
 
         protected void ImprimerAutres(long id, PrintItem item)
         {
-            if ((item.Groupe == 6) || (item.Groupe >= 10) || (item.Groupe == 2))
-            {
-                return;
-            }
+            if (item.Groupe == 6 || item.Groupe >= 10 || item.Groupe == 2) return;
             var model = CashHelpers.GetModel(id);
             var rpt = new XtraDocument(model);
             rpt.Print();
@@ -139,18 +137,19 @@ namespace gescom.printer
                 CashHelpers.UpdateAmountInvoice(id, 0);
                 return;
             }
+
             DateHelpers.Delete(id);
         }
 
         private void ImprimerTicket()
         {
-            string name = ApiModel.GetPrinterName(1);
+            var name = ApiModel.GetPrinterName(1);
             Ticket.Print(name);
         }
 
         private void ImprimerBon()
         {
-            string name = ApiModel.GetPrinterName(1);
+            var name = ApiModel.GetPrinterName(1);
             Bon.Print(name);
         }
 

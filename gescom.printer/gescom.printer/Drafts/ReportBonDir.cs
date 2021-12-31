@@ -7,8 +7,6 @@ namespace gescom.printer.Drafts
         public ReportBonDir()
         {
             InitializeComponent();
-            
         }
-
     }
 }

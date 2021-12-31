@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -26,10 +26,7 @@ namespace gescom.create.Views
             _list = liste;
             myNum.DataBindings.Clear();
             myNum.DataBindings.Add("Text", liste, "Ndx");
-            if (liste.ToList().Count > 0)
-            {
-                imprimer.Enabled = true;
-            }
+            if (liste.ToList().Count > 0) imprimer.Enabled = true;
         }
 
         public void SetTitle(string text, string name)
@@ -41,30 +38,18 @@ namespace gescom.create.Views
 
         private void gridActions_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.Detailler(id);
         }
 
         private long GetX()
         {
-            if (string.IsNullOrEmpty(myNum.Text))
-            {
-                return 0;
-            }
-            if (myNum.Text == @"0")
-            {
-                return 0;
-            }
-            long x = long.Parse(myNum.Text);
+            if (string.IsNullOrEmpty(myNum.Text)) return 0;
+            if (myNum.Text == @"0") return 0;
+            var x = long.Parse(myNum.Text);
             return x;
         }
 

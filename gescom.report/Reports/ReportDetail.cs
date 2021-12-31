@@ -1,6 +1,6 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
 using gescom.data.Models;
-using System.Collections.Generic;
 
 namespace gescom.report.Reports
 {
@@ -24,7 +24,7 @@ namespace gescom.report.Reports
             noms.Text = p.Nom;
             activite.Text = p.Activite;
             adresse.Text = p.Adresse;
-            DiaryText diary = DiaryHelpers.GetDiaryText(id);
+            var diary = DiaryHelpers.GetDiaryText(id);
             total.Text = RetailHelpers.GetAmountText(id);
             Datum.Text = diary.Datum.ToString("G");
             Tache.Text = StdCalcul.TitleReport(diary.Tache, diary.Id);

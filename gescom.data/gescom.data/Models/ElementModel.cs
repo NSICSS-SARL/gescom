@@ -14,10 +14,7 @@ namespace gescom.data.Models
         public static List<ElementModel> Remove(List<ElementModel> liste, long id)
         {
             var element = new ElementModel();
-            foreach (ElementModel model in liste.Where(model => model.Id == id))
-            {
-                element = model;
-            }
+            foreach (var model in liste.Where(model => model.Id == id)) element = model;
             liste.Remove(element);
             return liste.ToList();
         }
@@ -25,30 +22,28 @@ namespace gescom.data.Models
         public static List<ElementModel> GetElements(List<ElementModel> liste)
         {
             var result = new List<ElementModel>();
-            foreach (ElementModel model in liste)
+            foreach (var model in liste)
             {
                 model.Prix = PriceHelpers.GetPrixItem(model.Id);
                 result.Add(model);
             }
+
             return result;
         }
 
         public static List<ElementModel> ShowInvalidate(List<ElementModel> liste)
         {
-            int count = InvalidList(liste).ToList().Count;
-            if (count > 0)
-            {
-                return liste;
-            }
+            var count = InvalidList(liste).ToList().Count;
+            if (count > 0) return liste;
             return null;
         }
 
         private static IEnumerable<ElementModel> InvalidList(IEnumerable<ElementModel> liste)
         {
             return from model in liste
-                   let maxQuantite = ArticleHelpers.GetDisponible(model.Id)
-                   where model.Quantite > maxQuantite
-                   select model;
+                let maxQuantite = ArticleHelpers.GetDisponible(model.Id)
+                where model.Quantite > maxQuantite
+                select model;
         }
     }
 
@@ -57,15 +52,12 @@ namespace gescom.data.Models
         public Cart()
         {
             Elements = new List<ElementModel>();
-            List<ArticleItem> articles = ArticleHelpers.GetList();
-            int count = articles.Count;
-            if (count == 0)
+            var articles = ArticleHelpers.GetList();
+            var count = articles.Count;
+            if (count == 0) return;
+            foreach (var item in articles)
             {
-                return;
-            }
-            foreach (ArticleItem item in articles)
-            {
-                var model = new ElementModel { Id = item.Id, Article = item };
+                var model = new ElementModel {Id = item.Id, Article = item};
                 Elements.Add(model);
             }
         }
@@ -73,15 +65,12 @@ namespace gescom.data.Models
         public Cart(long igParam)
         {
             Elements = new List<ElementModel>();
-            List<ArticleItem> articles = ArticleHelpers.ListedByCategory(igParam);
-            int count = articles.Count;
-            if (count == 0)
+            var articles = ArticleHelpers.ListedByCategory(igParam);
+            var count = articles.Count;
+            if (count == 0) return;
+            foreach (var item in articles)
             {
-                return;
-            }
-            foreach (ArticleItem item in articles)
-            {
-                var model = new ElementModel { Id = item.Id, Article = item };
+                var model = new ElementModel {Id = item.Id, Article = item};
                 Elements.Add(model);
             }
         }
@@ -200,34 +189,34 @@ namespace gescom.data.Models
             Code = item.Codage;
             Unite = item.Unite;
             Nom = item.Designation;
-            if (item.QStock != null) QStock = (float)item.QStock;
+            if (item.QStock != null) QStock = (float) item.QStock;
             Q1 = item.Q1;
             Q2 = item.Q2;
             Wid = item.Wid;
             Rx = item.Rx;
-            if (item.Forme != null) Forme = (long)item.Forme;
-            if (item.Taxable != null) Taxable = (int)item.Taxable;
+            if (item.Forme != null) Forme = (long) item.Forme;
+            if (item.Taxable != null) Taxable = (int) item.Taxable;
             Fcode = item.Fcode;
         }
 
         public override string ToString()
         {
-            return this.Prix.ToString();
+            return Prix.ToString();
         }
 
         public void Copy(OperationAuto item)
         {
             Id = item.Ndx;
-            if (item.QEstime != null) Quantite = (float)item.QEstime;
-            if (item.PEstime != null) Prix = (float)item.PEstime;
+            if (item.QEstime != null) Quantite = (float) item.QEstime;
+            if (item.PEstime != null) Prix = (float) item.PEstime;
             Code = item.Codage;
             Unite = item.Unite;
             Nom = item.Designation;
-            if (item.QStock != null) QStock = (float)item.QStock;
+            if (item.QStock != null) QStock = (float) item.QStock;
             Q1 = item.Q1;
             Q2 = item.Q2;
-            if (item.Forme != null) Forme = (long)item.Forme;
-            if (item.Taxable != null) Taxable = (int)item.Taxable;
+            if (item.Forme != null) Forme = (long) item.Forme;
+            if (item.Taxable != null) Taxable = (int) item.Taxable;
             Fcode = item.Fcode;
         }
     }

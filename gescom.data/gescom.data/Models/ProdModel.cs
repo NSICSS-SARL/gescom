@@ -11,7 +11,7 @@ namespace gescom.data.Models
         public static void DisCmd(long id)
         {
             var repository = new ProdRepository();
-            ProdItem item = repository.Get(id);
+            var item = repository.Get(id);
             item.Etat = 0;
             //item.Etat0 = false;
             item.Etat1 = true;
@@ -35,21 +35,15 @@ namespace gescom.data.Models
         {
             var repo = new ProdRepository();
             var item = repo.Get(id);
-            if (item.Quantite == null)
-            {
-                return 0;
-            }
-            var result = (float)item.Quantite;
+            if (item.Quantite == null) return 0;
+            var result = (float) item.Quantite;
             return result;
         }
 
         public static long GetId(string name)
         {
             long result = -1;
-            foreach (ProdItem item in GetList().Where(item => item.Nom == name))
-            {
-                result = item.Id;
-            }
+            foreach (var item in GetList().Where(item => item.Nom == name)) result = item.Id;
             return result;
         }
 
@@ -72,11 +66,8 @@ namespace gescom.data.Models
         public static float GetPrice(long id)
         {
             float result = 0;
-            float? prix = Get(id).Prix;
-            if (prix != null)
-            {
-                result = (float)prix;
-            }
+            var prix = Get(id).Prix;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
@@ -84,7 +75,7 @@ namespace gescom.data.Models
         public static void NewArrive(long id)
         {
             var repository = new ProdRepository();
-            ProdItem item = repository.Get(id);
+            var item = repository.Get(id);
             item.Quantite = 0;
             repository.Save();
         }
@@ -93,7 +84,7 @@ namespace gescom.data.Models
         public static void RealizedCommande(long id, float quantite)
         {
             var repository = new ProdRepository();
-            ProdItem item = repository.Get(id);
+            var item = repository.Get(id);
             item.Etat = -1;
             //item.Etat0 = false;
             item.Etat1 = false;
@@ -104,10 +95,7 @@ namespace gescom.data.Models
 
         public static void ReinitCommande(IEnumerable<ElementModel> elements)
         {
-            foreach (var element in elements)
-            {
-                DisCmd(element.Id);
-            }
+            foreach (var element in elements) DisCmd(element.Id);
         }
 
         public static void SetManual(List<OperationAuto> liste)
@@ -117,17 +105,14 @@ namespace gescom.data.Models
             {
                 var oper = OperationHelpers.Get(item.Ndx);
                 var qte = oper.QStock;
-                if (qte > 0)
-                {
-                    repo.UpdateAuto(item.Ndx, qte);
-                }
+                if (qte > 0) repo.UpdateAuto(item.Ndx, qte);
             }
         }
 
         public static void Update(ProdModel model)
         {
             var repository = new ProdRepository();
-            bool e = repository.Update(model);
+            var e = repository.Update(model);
             if (!e)
             {
                 // StdCalcul.ShowErrorDuplicate();
@@ -151,14 +136,11 @@ namespace gescom.data.Models
         {
             Prods = new List<ProdItem>();
             var repository = new ProdRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Prods())
             {
-                return;
-            }
-            foreach (ProdItem element in repository.Prods())
-            {
-                ProdItem item = element;
+                var item = element;
                 Prods.Add(item);
             }
         }
@@ -216,47 +198,47 @@ namespace gescom.data.Models
             Copy(prod);
             var r = prod.Etat;
             if (r == 0)
-            {
                 CheckCommande = true;
-                //Etat0 = true;
-            }
+            //Etat0 = true;
             if (r == 1)
             {
                 CheckAttente = true;
                 Etat1 = true;
                 Message = "Attente commande";
             }
+
             if (r == 2)
             {
                 CheckRealise = true;
                 //Etat0 = true;
                 Message = "Commande réalisée";
             }
+
             Etat = r;
-            if (Arret)
-            {
-                return;
-            }
-            if (r < 0) { CheckState = true; }
+            if (Arret) return;
+            if (r < 0) CheckState = true;
         }
 
         public void SetActivation(bool chkArret, bool chkEpuise, bool chkCommande, bool chkMdh)
         {
-            Arret = false; Epuise = false;
-            if (chkArret) { Arret = true; }
-            if (chkEpuise) { Epuise = true; }
-            if (chkMdh) { Etat0 = true; }
-            else { Etat0 = false; }
+            Arret = false;
+            Epuise = false;
+            if (chkArret) Arret = true;
+            if (chkEpuise) Epuise = true;
+            if (chkMdh)
+                Etat0 = true;
+            else
+                Etat0 = false;
             if (Arret)
             {
                 Etat = -1;
                 return;
             }
-            if (chkCommande) { Etat = 1; }
+
+            if (chkCommande)
+                Etat = 1;
             else
-            {
                 Etat = 0;
-            }
         }
 
         public override string ToString()
@@ -340,10 +322,10 @@ namespace gescom.data.Models
         {
             Id = item.Id;
             Nom = item.Nom;
-            if (item.Prix != null) Prix = (float)item.Prix;
-            if (item.Iu != null) Iu = (long)item.Iu;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Pid != null) Pid = (long)item.Pid;
+            if (item.Prix != null) Prix = (float) item.Prix;
+            if (item.Iu != null) Iu = (long) item.Iu;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Pid != null) Pid = (long) item.Pid;
             DuplicateError = item.DuplicateError;
             Code = item.Code;
             Description = item.Description;
@@ -354,10 +336,7 @@ namespace gescom.data.Models
 
         public void HasError()
         {
-            if (Nom == null)
-            {
-                IsValid = false;
-            }
+            if (Nom == null) IsValid = false;
         }
     }
 
@@ -365,14 +344,28 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(ProdItem prod)
-        {
-            _context.ProdItems.InsertOnSubmit(prod);
-        }
-
         public int Count()
         {
             return _context.ProdItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(ProdItem prod)
+        {
+            _context.ProdItems.InsertOnSubmit(prod);
         }
 
         public bool Create(ProdModel model)
@@ -389,6 +382,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -405,10 +399,7 @@ namespace gescom.data.Models
         public bool IsCommandValid(long id)
         {
             var item = Get(id);
-            if (item.Arret)
-            {
-                return false;
-            }
+            if (item.Arret) return false;
             return true;
         }
 
@@ -417,22 +408,9 @@ namespace gescom.data.Models
             return _context.ProdItems;
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool Update(ProdModel model)
         {
-            ProdItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {
@@ -442,12 +420,13 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
         public bool Update(ProdCheck model)
         {
-            ProdItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {
@@ -457,12 +436,13 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
         public bool UpdateAuto(long id, float quantite)
         {
-            ProdItem item = Get(id);
+            var item = Get(id);
             item.Quantite = quantite;
             item.Auto = 0;
             try
@@ -473,12 +453,13 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
         public bool UpdateCorrection(long id)
         {
-            ProdItem item = Get(id);
+            var item = Get(id);
             item.Epuise = false;
             item.Arret = false;
             item.Auto = -1;
@@ -494,6 +475,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
 using System.Linq;
 
 namespace gescom.data.Models
@@ -11,7 +10,7 @@ namespace gescom.data.Models
         public static void UpdateOnBuy(long id, long pid)
         {
             var repository = new EventsRepository();
-            EventsItem item = repository.Get(id);
+            var item = repository.Get(id);
             if (item == null) return;
             item.Da = DateTime.Now;
             item.Vid = pid;
@@ -21,7 +20,7 @@ namespace gescom.data.Models
         public static void UpdateOnSold(long id, long pid)
         {
             var repository = new EventsRepository();
-            EventsItem item = repository.Get(id);
+            var item = repository.Get(id);
             if (item == null) return;
             item.Dv = DateTime.Now;
             item.Cid = pid;
@@ -35,14 +34,11 @@ namespace gescom.data.Models
         {
             Events = new List<EventsItem>();
             var repository = new EventsRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Events())
             {
-                return;
-            }
-            foreach (EventsItem element in repository.Events())
-            {
-                EventsItem item = element;
+                var item = element;
                 Events.Add(item);
             }
         }
@@ -92,10 +88,10 @@ namespace gescom.data.Models
         public void Copy(EventsItem item)
         {
             Id = item.Id;
-            if (item.Dv != null) Dv = (DateTime)item.Dv;
-            if (item.Da != null) Da = (DateTime)item.Da;
-            if (item.Vid != null) Vid = (long)item.Vid;
-            if (item.Cid != null) Cid = (long)item.Cid;
+            if (item.Dv != null) Dv = (DateTime) item.Dv;
+            if (item.Da != null) Da = (DateTime) item.Da;
+            if (item.Vid != null) Vid = (long) item.Vid;
+            if (item.Cid != null) Cid = (long) item.Cid;
         }
 
         private void Init()
@@ -126,6 +122,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -147,6 +144,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -167,7 +165,7 @@ namespace gescom.data.Models
 
         public bool Update(EventsModel model)
         {
-            EventsItem item = Get(model.Id);
+            var item = Get(model.Id);
             item.Copy(model);
             try
             {

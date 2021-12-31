@@ -16,17 +16,14 @@ namespace gescom.data.Models
         {
             if (entre != null)
             {
-                int n = entre.Length;
-                int c = code.Length;
+                var n = entre.Length;
+                var c = code.Length;
                 if (n <= c)
                 {
-                    string s = code.Substring(0, n);
+                    var s = code.Substring(0, n);
                     entre = entre.ToUpper();
                     s = s.ToUpper();
-                    if (entre == s)
-                    {
-                        return true;
-                    }
+                    if (entre == s) return true;
                 }
                 else
                 {
@@ -37,127 +34,99 @@ namespace gescom.data.Models
             {
                 return true;
             }
+
             return false;
         }
 
         public static bool CompareChaineCentre(string strFixe, string strVar)
         {
-            if (strVar == null)
-            {
-                return true;
-            }
-            if (strFixe == null)
-            {
-                return false;
-            }
-            int longFixe = strFixe.Length;
-            int longVar = strVar.Length;
+            if (strVar == null) return true;
+            if (strFixe == null) return false;
+            var longFixe = strFixe.Length;
+            var longVar = strVar.Length;
             strFixe = strFixe.ToUpper();
             strVar = strVar.ToUpper();
             string str;
             if (longFixe >= longVar)
             {
                 str = strFixe.Substring(0, longVar);
-                if (str == strVar)
-                {
-                    return true;
-                }
+                if (str == strVar) return true;
             }
             else
             {
                 str = strVar.Substring(0, longFixe);
-                if (str == strFixe)
-                {
-                    return true;
-                }
+                if (str == strFixe) return true;
             }
+
             return false;
         }
 
         // comparer les deux premiers nombres au préfix.
         public static bool ComparerNombre(int fixe, string chaineVariable)
         {
-            if (chaineVariable == null)
-            {
-                return true;
-            }
-            int longueurChaine = chaineVariable.Length;
-            string s = fixe.ToString(CultureInfo.InvariantCulture);
-            int longueurChiffre = s.Length;
-            string str = chaineVariable;
+            if (chaineVariable == null) return true;
+            var longueurChaine = chaineVariable.Length;
+            var s = fixe.ToString(CultureInfo.InvariantCulture);
+            var longueurChiffre = s.Length;
+            var str = chaineVariable;
             if (longueurChiffre >= longueurChaine)
-            {
                 s = s.Substring(0, longueurChaine);
-            }
             else
-            {
                 str = chaineVariable.Substring(0, longueurChiffre);
-            }
-            if (str == s)
-            {
-                return true;
-            }
+            if (str == s) return true;
             return false;
         }
 
         public static int CountPlaceContenance(long id)
         {
             var query = new MssqlQuery("DistItem");
-            int result = query.CountRecordsByNumero(id);
+            var result = query.CountRecordsByNumero(id);
             return result;
         }
 
         public static bool DateIntervalValidation(DateTime debut, DateTime fin)
         {
-            if (!MonthIntevalValidation(debut, fin)) { return false; }
-            int dayEnd = fin.Day;
-            int dayBegin = debut.Day;
-            if (dayBegin >= dayEnd) { return false; }
-            if (dayEnd - dayBegin > 31) { return false; }
+            if (!MonthIntevalValidation(debut, fin)) return false;
+            var dayEnd = fin.Day;
+            var dayBegin = debut.Day;
+            if (dayBegin >= dayEnd) return false;
+            if (dayEnd - dayBegin > 31) return false;
             if (debut.Month == 2)
-            {
-                if (dayEnd - dayBegin > 29) { return false; }
-            }
-            if (dayBegin != 1) { return false; }
+                if (dayEnd - dayBegin > 29)
+                    return false;
+            if (dayBegin != 1) return false;
             if (fin.Month == 2)
-            {
                 if (fin.Day == 28)
-                {
                     return true;
-                }
-            }
-            int dayEndValid = EndMonth(fin);
-            if (dayEndValid == dayEnd) { return true; }
+            var dayEndValid = EndMonth(fin);
+            if (dayEndValid == dayEnd) return true;
             return false;
         }
 
         public static bool DateValidation(DateTime debut, DateTime fin)
         {
-            if (fin.Date >= debut.Date)
-            {
-                return true;
-            }
+            if (fin.Date >= debut.Date) return true;
             return true;
         }
 
         public static double DecimalToDouble(decimal d)
         {
-            string s = d.ToString(CultureInfo.InvariantCulture);
-            double result = double.Parse(s);
+            var s = d.ToString(CultureInfo.InvariantCulture);
+            var result = double.Parse(s);
             return result;
         }
 
         public static float DecimalToFloat(decimal d)
         {
-            string s = d.ToString(CultureInfo.InvariantCulture);
-            float result = float.Parse(s);
+            var s = d.ToString(CultureInfo.InvariantCulture);
+            var result = float.Parse(s);
             return result;
         }
 
         public static bool DoubleConversion(string text)
         {
             var n = 0.0;
-            bool result = true;
+            var result = true;
             try
             {
                 n = double.Parse(text);
@@ -166,26 +135,27 @@ namespace gescom.data.Models
             {
                 result = false;
             }
+
             return result;
         }
 
         public static decimal DoubleToDecimal(double d)
         {
-            string s = d.ToString(CultureInfo.InvariantCulture);
-            decimal result = decimal.Parse(s);
+            var s = d.ToString(CultureInfo.InvariantCulture);
+            var result = decimal.Parse(s);
             return result;
         }
 
         public static string DoubleToSpaceFormat(double f)
         {
-            string s = f.ToString(CultureInfo.InvariantCulture);
+            var s = f.ToString(CultureInfo.InvariantCulture);
             return Spacing(s);
         }
 
         public static bool EntierConversion(string text)
         {
             var n = 0;
-            bool result = true;
+            var result = true;
             try
             {
                 n = int.Parse(text);
@@ -194,22 +164,24 @@ namespace gescom.data.Models
             {
                 result = false;
             }
+
             return result;
         }
 
         public static string FormatEnLettre(double chiffre)
         {
-            Int64 c = DoubleVersEntier(chiffre);
-            string converted = Milliard(c);
-            int n = converted.Length;
+            var c = DoubleVersEntier(chiffre);
+            var converted = Milliard(c);
+            var n = converted.Length;
             if (n > 0)
             {
-                string prefix = converted.Substring(0, 1);
+                var prefix = converted.Substring(0, 1);
                 prefix = prefix.ToUpper();
                 n -= 1;
-                string suffix = converted.Substring(1, n);
+                var suffix = converted.Substring(1, n);
                 converted = prefix + suffix;
             }
+
             return converted;
         }
 
@@ -220,33 +192,30 @@ namespace gescom.data.Models
 
         public static string Formating(string text)
         {
-            string result = "0";
-            int n = text.Length;
-            if (n > 0)
-            {
-                result = n > 3 ? StringFormat(text) : text;
-            }
+            var result = "0";
+            var n = text.Length;
+            if (n > 0) result = n > 3 ? StringFormat(text) : text;
             return result;
         }
 
         public static int GetCategoryId(string nom)
         {
             var query = new MssqlQuery("FamilleItem");
-            int result = query.SelectIdByName(nom);
+            var result = query.SelectIdByName(nom);
             return result;
         }
 
         public static double GetCoefficient(double rate)
         {
             rate = rate / 100;
-            double result = 1 + rate;
+            var result = 1 + rate;
             return result;
         }
 
         public static float GetCoefficientF(float rate)
         {
             rate = rate / 100;
-            float result = 1 + rate;
+            var result = 1 + rate;
             return result;
         }
 
@@ -262,17 +231,15 @@ namespace gescom.data.Models
 
         public static int GetIndexList(List<string> liste, string name)
         {
-            int count = 0;
-            int result = 0;
+            var count = 0;
+            var result = 0;
             if (liste.Count <= 0) return -1;
-            foreach (string t in liste)
+            foreach (var t in liste)
             {
                 count++;
-                if (t == name)
-                {
-                    result = count;
-                }
+                if (t == name) result = count;
             }
+
             return result;
         }
 
@@ -280,48 +247,43 @@ namespace gescom.data.Models
         public static int GetlastNumber(string chaine)
         {
             //nombre de caractères.
-            int n = chaine.Length;
+            var n = chaine.Length;
             // compter nombre de caractères dans la chaîne.
-            int p = 0;
-            int result = 0;
-            for (int i = 0; i < n; i++)
+            var p = 0;
+            var result = 0;
+            for (var i = 0; i < n; i++)
             {
-                char c = chaine[i];
-                if ((c == '0') || (c == '1') || (c == '2') || (c == '3') || (c == '4') || (c == '5') || (c == '6') ||
-                    (c == '7') || (c == '8') || (c == '9'))
-                {
+                var c = chaine[i];
+                if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' ||
+                    c == '7' || c == '8' || c == '9')
                     p += 1;
-                }
             }
+
             if (p > 0)
-            {
-                for (int j = 0; j < p; j++)
+                for (var j = 0; j < p; j++)
                 {
-                    char c = chaine[j];
-                    if ((c == '0') || (c == '1') || (c == '2') || (c == '3') || (c == '4') || (c == '5') || (c == '6') ||
-                        (c == '7') || (c == '8') || (c == '9'))
-                    {
+                    var c = chaine[j];
+                    if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' ||
+                        c == '7' || c == '8' || c == '9')
                         result++;
-                    }
                     else
-                    {
                         break;
-                    }
                 }
-            }
+
             return result;
         }
 
         // obtenir le numéro correspondant aux chiffres consécutifs avant entrées de chaîne*/
         public static int GetNumeroPreced(string chaine)
         {
-            int z = GetlastNumber(chaine);
+            var z = GetlastNumber(chaine);
             if (z > 0)
             {
-                string s = chaine.Substring(0, z);
-                int result = int.Parse(s);
+                var s = chaine.Substring(0, z);
+                var result = int.Parse(s);
                 return result;
             }
+
             return -1;
         }
 
@@ -360,53 +322,46 @@ namespace gescom.data.Models
 
         public static double GetTaxeFraction()
         {
-            double taux = GetTaxe();
+            var taux = GetTaxe();
             return taux / 100;
         }
 
         public static string GetTexteNext(string chaine)
         {
-            int longueurChaine = chaine.Length;
-            int longueurNumero = GetlastNumber(chaine);
+            var longueurChaine = chaine.Length;
+            var longueurNumero = GetlastNumber(chaine);
             // obtenir le numéro.
-            int nb = GetNumeroPreced(chaine);
+            var nb = GetNumeroPreced(chaine);
             if (nb > 0)
-            {
                 if (longueurChaine > longueurNumero)
                 {
-                    string result = chaine.Substring(longueurNumero, longueurChaine - longueurNumero);
+                    var result = chaine.Substring(longueurNumero, longueurChaine - longueurNumero);
                     return result;
                 }
-            }
+
             return null;
         }
 
         public static int GetUnityId(string nom)
         {
             var query = new MssqlQuery("UniteItem");
-            int result = query.SelectIdByName(nom);
+            var result = query.SelectIdByName(nom);
             return result;
         }
 
         public static int GetVendorId(string nom)
         {
             var query = new MssqlQuery("PersonItem");
-            int result = query.SelectIdByName(nom);
+            var result = query.SelectIdByName(nom);
             return result;
         }
 
         public static double LissagePrix(double prix)
         {
             // arrondir le nombre
-            double result = Math.Round(prix);
-            if (result <= 0)
-            {
-                return 0;
-            }
-            if (result <= 10)
-            {
-                return result;
-            }
+            var result = Math.Round(prix);
+            if (result <= 0) return 0;
+            if (result <= 10) return result;
             if (result <= 100)
             {
                 result /= 10;
@@ -414,6 +369,7 @@ namespace gescom.data.Models
                 result *= 10;
                 return result;
             }
+
             result /= 100;
             result = Math.Round(result);
             result *= 100;
@@ -423,24 +379,19 @@ namespace gescom.data.Models
         public static float LissagePrixF(float prix)
         {
             // arrondir le nombre
-            var result = (float)Math.Round(prix);
-            if (result <= 0)
-            {
-                return 0;
-            }
-            if (result <= 10)
-            {
-                return result;
-            }
+            var result = (float) Math.Round(prix);
+            if (result <= 0) return 0;
+            if (result <= 10) return result;
             if (result <= 100)
             {
                 result /= 10;
-                result = (float)Math.Round(result);
+                result = (float) Math.Round(result);
                 result *= 10;
                 return result;
             }
+
             result /= 100;
-            result = (float)Math.Round(result);
+            result = (float) Math.Round(result);
             result *= 100;
             return result;
         }
@@ -448,15 +399,9 @@ namespace gescom.data.Models
         public static double LissageSimple(double prix)
         {
             // arrondir le nombre
-            double result = Math.Round(prix);
-            if (result <= 0)
-            {
-                return 0;
-            }
-            if (result <= 10)
-            {
-                return result;
-            }
+            var result = Math.Round(prix);
+            if (result <= 0) return 0;
+            if (result <= 10) return result;
             result /= 10;
             result = Math.Round(result);
             result *= 10;
@@ -466,47 +411,38 @@ namespace gescom.data.Models
         public static float LissageSimpleF(float prix)
         {
             // arrondir le nombre
-            var result = (float)Math.Round(prix);
-            if (result <= 0)
-            {
-                return 0;
-            }
-            if (result <= 10)
-            {
-                return result;
-            }
+            var result = (float) Math.Round(prix);
+            if (result <= 0) return 0;
+            if (result <= 10) return result;
             result /= 10;
-            result = (float)Math.Round(result);
+            result = (float) Math.Round(result);
             result *= 10;
             return result;
         }
 
         public static bool MonthIntevalValidation(DateTime debut, DateTime fin)
         {
-            if (!YearIntervalValidation(debut, fin)) { return false; }
+            if (!YearIntervalValidation(debut, fin)) return false;
             return debut.Month == fin.Month;
         }
 
         public static string SetInfo(DateTime date, string hote, string operateur)
         {
-            string result = date.ToString("G") + @"-" + hote + @"-" + operateur;
+            var result = date.ToString("G") + @"-" + hote + @"-" + operateur;
             return result;
         }
 
         public static string Spacing(string text)
         {
-            string result = "0";
-            int n = text.Length;
-            if (n > 0)
-            {
-                result = n > 3 ? SpaceFormat(text) : text;
-            }
+            var result = "0";
+            var n = text.Length;
+            if (n > 0) result = n > 3 ? SpaceFormat(text) : text;
             return result;
         }
 
         public static string TitlePeriod(DateTime debut, DateTime fin)
         {
-            string text = @"JOURNAL: PERIODE DU " + debut.ToString("d") + @" AU " + fin.ToString("d");
+            var text = @"JOURNAL: PERIODE DU " + debut.ToString("d") + @" AU " + fin.ToString("d");
             return text;
         }
 
@@ -554,6 +490,7 @@ namespace gescom.data.Models
                     result = "ENTREE";
                     break;
             }
+
             result += @" N° ";
             result += id;
             return result;
@@ -561,30 +498,30 @@ namespace gescom.data.Models
 
         public static string TitleReport(string label, string debut, string fin)
         {
-            string text = label + debut + @" AU " + fin;
+            var text = label + debut + @" AU " + fin;
             return text;
         }
 
         public static string TitleSimple(DateTime debut, DateTime fin)
         {
-            string text = @": PERIODE DU " + debut.ToString("d") + @" AU " + fin.ToString("d");
+            var text = @": PERIODE DU " + debut.ToString("d") + @" AU " + fin.ToString("d");
             return text;
         }
 
         public static bool YearIntervalValidation(DateTime debut, DateTime fin)
         {
-            return (debut.Year - fin.Year >= 0) || (debut.Year - fin.Year <= 1);
+            return debut.Year - fin.Year >= 0 || debut.Year - fin.Year <= 1;
         }
 
         internal static string Basing12Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 10) && (n < 13))
+            var n = text.Length;
+            if (n >= 10 && n < 13)
             {
-                int p = n - 9;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 9);
+                var p = n - 9;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 9);
                 suffix = Basing9Format(suffix);
                 result = prefix + "." + suffix;
             }
@@ -595,12 +532,12 @@ namespace gescom.data.Models
         internal static string Basing6Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 4) && (n < 7))
+            var n = text.Length;
+            if (n >= 4 && n < 7)
             {
-                int p = n - 3;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 3);
+                var p = n - 3;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 3);
                 result = prefix + "." + suffix;
             }
 
@@ -610,12 +547,12 @@ namespace gescom.data.Models
         internal static string Basing9Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 7) && (n < 10))
+            var n = text.Length;
+            if (n >= 7 && n < 10)
             {
-                int p = n - 6;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 6);
+                var p = n - 6;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 6);
                 suffix = Basing6Format(suffix);
                 result = prefix + "." + suffix;
             }
@@ -623,7 +560,7 @@ namespace gescom.data.Models
             return result;
         }
 
-        internal static string Centaine(Int64 a)
+        internal static string Centaine(long a)
         {
             string c = null;
             switch (a)
@@ -1024,62 +961,63 @@ namespace gescom.data.Models
                     c = "quatre vingt dix neuf";
                     break;
             }
+
             return c;
         }
 
-        internal static string CentMille(Int64 c)
+        internal static string CentMille(long c)
         {
             string result = null;
             string prefix = null;
             string suffix = null;
-            string s = c.ToString(CultureInfo.InvariantCulture);
+            var s = c.ToString(CultureInfo.InvariantCulture);
             if (c < 10000)
             {
                 result = Millier(c);
             }
             else
             {
-                if ((c >= 10000) && (c <= 99999))
+                if (c >= 10000 && c <= 99999)
                 {
                     prefix = s.Substring(0, 2);
                     suffix = s.Substring(2, 3);
                 }
-                if ((c >= 100000) && (c <= 999999))
+
+                if (c >= 100000 && c <= 999999)
                 {
                     prefix = s.Substring(0, 3);
                     suffix = s.Substring(3, 3);
                 }
+
                 if (prefix != null)
                 {
-                    int pre = int.Parse(prefix);
-                    int suf = int.Parse(suffix);
+                    var pre = int.Parse(prefix);
+                    var suf = int.Parse(suffix);
                     result = Millier(pre) + " mille " + Millier(suf);
                 }
             }
+
             return result;
         }
 
-        internal static Int64 DoubleVersEntier(double r)
+        internal static long DoubleVersEntier(double r)
         {
             r = Math.Round(r);
-            string s = r.ToString(CultureInfo.InvariantCulture);
-            long result = Int64.Parse(s);
+            var s = r.ToString(CultureInfo.InvariantCulture);
+            var result = long.Parse(s);
             return result;
         }
 
-        internal static string Milliard(Int64 c)
+        internal static string Milliard(long c)
         {
             string result = null;
-            string s = c.ToString(CultureInfo.InvariantCulture);
+            var s = c.ToString(CultureInfo.InvariantCulture);
             string prefix = null;
             string suffix = null;
             int suf;
             double r = c;
-            if ((r < 999999999) && (r > 0))
-            {
-                result = Million(c);
-            }
-            if ((r >= 1000000000) && (r <= 9999999999))
+            if (r < 999999999 && r > 0) result = Million(c);
+            if (r >= 1000000000 && r <= 9999999999)
             {
                 prefix = s.Substring(0, 1);
                 suffix = s.Substring(1, 9);
@@ -1089,155 +1027,124 @@ namespace gescom.data.Models
                     result = "un milliard " + Million(suf);
                 }
             }
-            if ((r >= 10000000000) && (r <= 99999999999))
+
+            if (r >= 10000000000 && r <= 99999999999)
             {
                 prefix = s.Substring(0, 2);
                 suffix = s.Substring(2, 9);
             }
-            if ((r >= 100000000000) && (r <= 999999999999))
+
+            if (r >= 100000000000 && r <= 999999999999)
             {
                 prefix = s.Substring(0, 3);
                 suffix = s.Substring(3, 9);
             }
+
             if (r >= 2000000000)
-            {
                 if (prefix != null)
                 {
-                    int pre = int.Parse(prefix);
+                    var pre = int.Parse(prefix);
                     suf = int.Parse(suffix);
                     result = Million(pre) + " milliards " + Million(suf);
                 }
-            }
-            if (r == 1000000000)
-            {
-                result = "un milliard";
-            }
-            if (r == 0)
-            {
-                result = "zéro";
-            }
+
+            if (r == 1000000000) result = "un milliard";
+            if (r == 0) result = "zéro";
             return result;
         }
 
-        internal static string Millier(Int64 c)
+        internal static string Millier(long c)
         {
             string result = null;
-            if (c < 1000)
-            {
-                result = PlusCent(c);
-            }
-            if (c == 1000)
-            {
-                result = "mille";
-            }
-            if (c == 2000)
-            {
-                result = "deux mille";
-            }
-            if (c == 3000)
-            {
-                result = "trois mille";
-            }
-            if (c == 4000)
-            {
-                result = "quatre mille";
-            }
-            if (c == 5000)
-            {
-                result = "cinq mille";
-            }
-            if (c == 6000)
-            {
-                result = "six mille";
-            }
-            if (c == 7000)
-            {
-                result = "sept mille";
-            }
-            if (c == 8000)
-            {
-                result = "huit mille";
-            }
-            if (c == 9000)
-            {
-                result = "neuf mille";
-            }
-            Int64 x;
+            if (c < 1000) result = PlusCent(c);
+            if (c == 1000) result = "mille";
+            if (c == 2000) result = "deux mille";
+            if (c == 3000) result = "trois mille";
+            if (c == 4000) result = "quatre mille";
+            if (c == 5000) result = "cinq mille";
+            if (c == 6000) result = "six mille";
+            if (c == 7000) result = "sept mille";
+            if (c == 8000) result = "huit mille";
+            if (c == 9000) result = "neuf mille";
+            long x;
             string s;
-            if ((c >= 1001) && (c <= 1999))
+            if (c >= 1001 && c <= 1999)
             {
                 x = c - 1000;
                 s = PlusCent(x);
                 result = "mille " + s;
             }
-            if ((c >= 2001) && (c <= 2999))
+
+            if (c >= 2001 && c <= 2999)
             {
                 x = c - 2000;
                 s = PlusCent(x);
                 result = "deux mille " + s;
             }
-            if ((c >= 3001) && (c <= 3999))
+
+            if (c >= 3001 && c <= 3999)
             {
                 x = c - 3000;
                 s = PlusCent(x);
                 result = "trois mille " + s;
             }
-            if ((c >= 4001) && (c <= 4999))
+
+            if (c >= 4001 && c <= 4999)
             {
                 x = c - 4000;
                 s = PlusCent(x);
                 result = "quatre mille " + s;
             }
-            if ((c >= 5001) && (c <= 5999))
+
+            if (c >= 5001 && c <= 5999)
             {
                 x = c - 5000;
                 s = PlusCent(x);
                 result = "cinq mille " + s;
             }
-            if ((c >= 6001) && (c <= 6999))
+
+            if (c >= 6001 && c <= 6999)
             {
                 x = c - 6000;
                 s = PlusCent(x);
                 result = "six mille " + s;
             }
-            if ((c >= 7001) && (c <= 7999))
+
+            if (c >= 7001 && c <= 7999)
             {
                 x = c - 7000;
                 s = PlusCent(x);
                 result = "sept mille " + s;
             }
-            if ((c >= 8001) && (c <= 8999))
+
+            if (c >= 8001 && c <= 8999)
             {
                 x = c - 8000;
                 s = PlusCent(x);
                 result = "huit mille " + s;
             }
-            if ((c >= 9001) && (c <= 9999))
+
+            if (c >= 9001 && c <= 9999)
             {
                 x = c - 9000;
                 s = PlusCent(x);
                 result = "neuf mille " + s;
             }
+
             return result;
         }
 
-        internal static string Million(Int64 c)
+        internal static string Million(long c)
         {
             string result = null;
-            string s = c.ToString(CultureInfo.InvariantCulture);
+            var s = c.ToString(CultureInfo.InvariantCulture);
             string prefix = null;
             string suffix = null;
-            int pre = 0;
-            int suf = 0;
-            if (c < 1000000)
-            {
-                result = CentMille(c);
-            }
-            if (c == 1000000)
-            {
-                result = "un million";
-            }
-            if ((c > 1000000) && (c <= 9999999))
+            var pre = 0;
+            var suf = 0;
+            if (c < 1000000) result = CentMille(c);
+            if (c == 1000000) result = "un million";
+            if (c > 1000000 && c <= 9999999)
             {
                 prefix = s.Substring(0, 1);
                 suffix = s.Substring(1, 6);
@@ -1247,26 +1154,30 @@ namespace gescom.data.Models
                     result = "un million " + CentMille(suf);
                 }
             }
-            if ((c >= 10000000) && (c <= 99999999))
+
+            if (c >= 10000000 && c <= 99999999)
             {
                 prefix = s.Substring(0, 2);
                 suffix = s.Substring(2, 6);
             }
-            if ((c >= 100000000) && (c <= 999999999))
+
+            if (c >= 100000000 && c <= 999999999)
             {
                 prefix = s.Substring(0, 3);
                 suffix = s.Substring(3, 6);
             }
+
             if (c >= 2000000)
             {
                 if (prefix != null) pre = int.Parse(prefix);
                 if (suffix != null) suf = int.Parse(suffix);
                 result = Millier(pre) + " millions " + CentMille(suf);
             }
+
             return result;
         }
 
-        internal static string PlusCent(Int64 c)
+        internal static string PlusCent(long c)
         {
             string result = null;
             switch (c)
@@ -1307,84 +1218,47 @@ namespace gescom.data.Models
                     result = "neuf cent";
                     break;
             }
-            if ((c >= 1) && (c <= 99))
-            {
-                result = Centaine(c);
-            }
-            if ((c >= 101) && (c <= 199))
-            {
-                result = "cent " + Centaine(c - 100);
-            }
-            if ((c >= 201) && (c <= 299))
-            {
-                result = "deux cent " + Centaine(c - 200);
-            }
-            if ((c >= 301) && (c <= 399))
-            {
-                result = "trois cent " + Centaine(c - 300);
-            }
-            if ((c >= 401) & (c <= 499))
-            {
-                result = "quatre cent " + Centaine(c - 400);
-            }
-            if ((c >= 501) && (c <= 599))
-            {
-                result = "cinq cent " + Centaine(c - 500);
-            }
-            if ((c >= 601) && (c <= 699))
-            {
-                result = "six cent " + Centaine(c - 600);
-            }
-            if ((c >= 701) && (c <= 799))
-            {
-                result = "sept cent " + Centaine(c - 700);
-            }
-            if ((c >= 801) && (c <= 899))
-            {
-                result = "huit cent " + Centaine(c - 800);
-            }
-            if ((c >= 901) && (c <= 999))
-            {
-                result = "neuf cent " + Centaine(c - 900);
-            }
+
+            if (c >= 1 && c <= 99) result = Centaine(c);
+            if (c >= 101 && c <= 199) result = "cent " + Centaine(c - 100);
+            if (c >= 201 && c <= 299) result = "deux cent " + Centaine(c - 200);
+            if (c >= 301 && c <= 399) result = "trois cent " + Centaine(c - 300);
+            if ((c >= 401) & (c <= 499)) result = "quatre cent " + Centaine(c - 400);
+            if (c >= 501 && c <= 599) result = "cinq cent " + Centaine(c - 500);
+            if (c >= 601 && c <= 699) result = "six cent " + Centaine(c - 600);
+            if (c >= 701 && c <= 799) result = "sept cent " + Centaine(c - 700);
+            if (c >= 801 && c <= 899) result = "huit cent " + Centaine(c - 800);
+            if (c >= 901 && c <= 999) result = "neuf cent " + Centaine(c - 900);
             return result;
         }
 
         internal static string SpaceFormat(string text)
         {
-            int n = text.Length;
+            var n = text.Length;
             string result = null;
-            if ((n >= 4) && (n <= 12))
+            if (n >= 4 && n <= 12)
             {
-                if ((n >= 4) && (n < 7))
-                {
-                    result = Spacing6Format(text);
-                }
-                if ((n >= 7) && (n < 10))
-                {
-                    result = Spacing9Format(text);
-                }
-                if ((n >= 10) && (n < 13))
-                {
-                    result = Spacing12Format(text);
-                }
+                if (n >= 4 && n < 7) result = Spacing6Format(text);
+                if (n >= 7 && n < 10) result = Spacing9Format(text);
+                if (n >= 10 && n < 13) result = Spacing12Format(text);
             }
             else
             {
                 result = "0";
             }
+
             return result;
         }
 
         internal static string Spacing12Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 10) && (n < 13))
+            var n = text.Length;
+            if (n >= 10 && n < 13)
             {
-                int p = n - 9;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 9);
+                var p = n - 9;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 9);
                 suffix = Spacing9Format(suffix);
                 result = prefix + " " + suffix;
             }
@@ -1395,12 +1269,12 @@ namespace gescom.data.Models
         internal static string Spacing6Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 4) && (n < 7))
+            var n = text.Length;
+            if (n >= 4 && n < 7)
             {
-                int p = n - 3;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 3);
+                var p = n - 3;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 3);
                 result = prefix + " " + suffix;
             }
 
@@ -1410,12 +1284,12 @@ namespace gescom.data.Models
         internal static string Spacing9Format(string text)
         {
             string result = null;
-            int n = text.Length;
-            if ((n >= 7) && (n < 10))
+            var n = text.Length;
+            if (n >= 7 && n < 10)
             {
-                int p = n - 6;
-                string prefix = text.Substring(0, p);
-                string suffix = text.Substring(p, 6);
+                var p = n - 6;
+                var prefix = text.Substring(0, p);
+                var suffix = text.Substring(p, 6);
                 suffix = Spacing6Format(suffix);
                 result = prefix + " " + suffix;
             }
@@ -1425,34 +1299,26 @@ namespace gescom.data.Models
 
         internal static string StringFormat(string text)
         {
-            int n = text.Length;
+            var n = text.Length;
             string result = null;
-            if ((n >= 4) && (n <= 12))
+            if (n >= 4 && n <= 12)
             {
-                if ((n >= 4) && (n < 7))
-                {
-                    result = Basing6Format(text);
-                }
-                if ((n >= 7) && (n < 10))
-                {
-                    result = Basing9Format(text);
-                }
-                if ((n >= 10) && (n < 13))
-                {
-                    result = Basing12Format(text);
-                }
+                if (n >= 4 && n < 7) result = Basing6Format(text);
+                if (n >= 7 && n < 10) result = Basing9Format(text);
+                if (n >= 10 && n < 13) result = Basing12Format(text);
             }
             else
             {
                 result = "0";
             }
+
             return result;
         }
 
         private static int EndMonth(DateTime date)
         {
             int result;
-            int month = date.Month;
+            var month = date.Month;
             switch (month)
             {
                 case 2:
@@ -1479,6 +1345,7 @@ namespace gescom.data.Models
                     result = 31;
                     break;
             }
+
             return result;
         }
     }

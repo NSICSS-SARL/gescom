@@ -24,10 +24,7 @@ namespace gescom.data.Models
         private static void CleanTables(string tableName)
         {
             var query = new MssqlQuery(tableName);
-            if (query.CountRecords() < 1)
-            {
-                return;
-            }
+            if (query.CountRecords() < 1) return;
             var sb = new StringBuilder();
             sb.Append(@"DELETE FROM ");
             sb.Append(tableName);
@@ -36,15 +33,15 @@ namespace gescom.data.Models
             sb.Append(".Datum < '");
             sb.Append(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"));
             sb.Append("'");
-            string commande = sb.ToString();
+            var commande = sb.ToString();
             query.Command.CommandText = commande;
             query.ExecuterQuery();
         }
 
         public static string GetAmountText(long id)
         {
-            float total = GetAmountTotal(id);
-            string result = StdCalcul.DoubleToSpaceFormat(total);
+            var total = GetAmountTotal(id);
+            var result = StdCalcul.DoubleToSpaceFormat(total);
             return result;
         }
 
@@ -56,12 +53,13 @@ namespace gescom.data.Models
         public static IEnumerable<RetailText> GetFromModel(List<RetailModel> liste)
         {
             var result = new List<RetailText>();
-            foreach (RetailModel model in liste)
+            foreach (var model in liste)
             {
                 var text = new RetailText();
                 text.Copy(model);
                 result.Add(text);
             }
+
             return result;
         }
 
@@ -80,10 +78,7 @@ namespace gescom.data.Models
         public static RetailModel GetModel(long id)
         {
             var model = new RetailModel();
-            foreach (RetailModel item in GetList(id).Where(item => item.Numero == id))
-            {
-                model = item;
-            }
+            foreach (var item in GetList(id).Where(item => item.Numero == id)) model = item;
             return model;
         }
 
@@ -99,7 +94,7 @@ namespace gescom.data.Models
 
         public static IEnumerable<RetailText> GetRetailItems(long id)
         {
-            string numero = id.ToString(CultureInfo.InvariantCulture);
+            var numero = id.ToString(CultureInfo.InvariantCulture);
             return GetRetailTexts().Where(retailText => retailText.Numero == numero);
         }
 
@@ -107,12 +102,13 @@ namespace gescom.data.Models
         {
             var result = new List<RetailModel>();
             var cart = new RetailCart();
-            foreach (RetailItem item in cart.Retails)
+            foreach (var item in cart.Retails)
             {
                 var model = new RetailModel();
                 model.Copy(item);
                 result.Add(model);
             }
+
             return result;
         }
 
@@ -124,12 +120,13 @@ namespace gescom.data.Models
         public static IEnumerable<RetailText> GetRetailTexts()
         {
             var result = new List<RetailText>();
-            foreach (RetailModel model in GetRetailModels())
+            foreach (var model in GetRetailModels())
             {
                 var item = new RetailText();
                 item.Copy(model);
                 result.Add(item);
             }
+
             return result;
         }
 
@@ -152,53 +149,47 @@ namespace gescom.data.Models
         {
             Retails = new List<RetailItem>();
             var repository = new RetailRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Retails())
             {
-                return;
-            }
-            foreach (RetailItem element in repository.Retails())
-            {
-                RetailItem item = element;
+                var item = element;
                 float price = 0;
                 float quantite = 0;
-                if (item.Quantity != null) quantite = (float)item.Quantity;
-                if (item.Price != null) price = (float)item.Price;
+                if (item.Quantity != null) quantite = (float) item.Quantity;
+                if (item.Price != null) price = (float) item.Price;
                 long id = 0;
-                if (element.Numero != null) id = (long)element.Numero;
+                if (element.Numero != null) id = (long) element.Numero;
                 if (id > 0)
                 {
                     long b = 0;
-                    long ndx = item.Ndx;
-                    ArticleItem article = ArticleHelpers.Get(ndx);
+                    var ndx = item.Ndx;
+                    var article = ArticleHelpers.Get(ndx);
                     long forme = 0;
-                    if (article.Forme != null) forme = (long)article.Forme;
-                    long? taxable = article.Taxable;
-                    if (taxable != null) b = (long)taxable;
+                    if (article.Forme != null) forme = (long) article.Forme;
+                    var taxable = article.Taxable;
+                    if (taxable != null) b = (long) taxable;
                     if (forme == 0)
                     {
                         item.Cview = item.Codes + @"-I";
                         item.Price = price;
                         item.Tva = 0;
                     }
+
                     if (forme == 1)
                     {
-                        if (b == 0)
-                        {
-                            item.Cview = item.Codes + @"-X";
-                        }
-                        if (b == 1)
-                        {
-                            item.Cview = item.Codes + @"-T";
-                        }
+                        if (b == 0) item.Cview = item.Codes + @"-X";
+                        if (b == 1) item.Cview = item.Codes + @"-T";
                     }
+
                     if (b == 1)
                     {
-                        float tva = PriceHelpers.CalculReboursTva(price);
+                        var tva = PriceHelpers.CalculReboursTva(price);
                         item.Price = price - tva;
                         item.Tva = tva * quantite;
                     }
                 }
+
                 item.Info = element.Operateur + @" " + element.Daty;
                 Retails.Add(item);
             }
@@ -334,13 +325,13 @@ namespace gescom.data.Models
 
         public void Copy(RetailItem item)
         {
-            if (item.Numero != null) Numero = (long)item.Numero;
-            if (item.Daty != null) Daty = (DateTime)item.Daty;
+            if (item.Numero != null) Numero = (long) item.Numero;
+            if (item.Daty != null) Daty = (DateTime) item.Daty;
             Operateur = item.Operateur;
             Terminal = item.Terminal;
-            if (item.Price != null) Price = (float)item.Price;
-            if (item.Quantity != null) Quantity = (float)item.Quantity;
-            if (item.Produit != null) Produit = (float)item.Produit;
+            if (item.Price != null) Price = (float) item.Price;
+            if (item.Quantity != null) Quantity = (float) item.Quantity;
+            if (item.Produit != null) Produit = (float) item.Produit;
             Unite = item.Unite;
             Place = item.Place;
             Designation = item.Designation;
@@ -349,7 +340,7 @@ namespace gescom.data.Models
             NomClient = item.NomClient;
             AdresseClient = item.AdresseClient;
             Info = item.Info;
-            if (item.Total != null) Total = (float)item.Total;
+            if (item.Total != null) Total = (float) item.Total;
             Ndx = item.Ndx;
             PrixHt = item.PrixHt;
             Tva = item.Tva;
@@ -374,6 +365,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }
@@ -397,6 +389,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -421,6 +414,7 @@ namespace gescom.data.Models
             {
                 result = null;
             }
+
             return result;
         }
 
@@ -432,8 +426,8 @@ namespace gescom.data.Models
         public bool Update(RetailItem retail)
         {
             long n = -1;
-            if (retail.Numero != null) n = (long)retail.Numero;
-            RetailItem item = Get(n);
+            if (retail.Numero != null) n = (long) retail.Numero;
+            var item = Get(n);
             item.Copy(retail);
             try
             {
@@ -448,7 +442,7 @@ namespace gescom.data.Models
 
         public bool Update(RetailModel model)
         {
-            RetailItem item = Get(model.Numero);
+            var item = Get(model.Numero);
             item.Copy(model);
             try
             {
@@ -508,14 +502,8 @@ namespace gescom.data.Models
 
         public void Copy(RetailModel model)
         {
-            if (model == null)
-            {
-                return;
-            }
-            if (model.Numero == 0)
-            {
-                return;
-            }
+            if (model == null) return;
+            if (model.Numero == 0) return;
             Numero = StdCalcul.DoubleToSpaceFormat(model.Numero);
 
             Daty = model.Daty.ToLongTimeString();

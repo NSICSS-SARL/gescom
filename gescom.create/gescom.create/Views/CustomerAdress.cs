@@ -1,7 +1,8 @@
 ﻿//using DevExpress.XtraReports.UI;
-using gescom.data.Models;
+
 using System;
 using System.Windows.Forms;
+using gescom.data.Models;
 
 //using gescom.report.Reports;
 
@@ -39,9 +40,9 @@ namespace gescom.create.Views
 
         private void Save()
         {
-            InvoiceItem retail = CashHelpers.Get(_model.Id);
-            string nom = string.IsNullOrEmpty(textNom.Text) ? retail.Nom : textNom.Text;
-            string adresse = string.IsNullOrEmpty(textAdress.Text) ? retail.Adresse : textAdress.Text;
+            var retail = CashHelpers.Get(_model.Id);
+            var nom = string.IsNullOrEmpty(textNom.Text) ? retail.Nom : textNom.Text;
+            var adresse = string.IsNullOrEmpty(textAdress.Text) ? retail.Adresse : textAdress.Text;
             CashHelpers.UpdateInfo(_model.Id, nom, adresse);
             Close();
         }

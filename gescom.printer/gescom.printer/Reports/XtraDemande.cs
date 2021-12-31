@@ -1,6 +1,6 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using System.Globalization;
+using DevExpress.XtraReports.UI;
 using gescom.data.Models;
-using System.Globalization;
 
 namespace gescom.printer.Reports
 {
@@ -20,11 +20,8 @@ namespace gescom.printer.Reports
             adresseclient.Text = model.Adresse;
             nomclient.Text = model.Nom;
             lineNum.Text = StdCalcul.Spacing(model.Id.ToString(CultureInfo.InvariantCulture));
-            PrintItem print = DateHelpers.Get(model.Id);
-            if (print.Groupe == 9)
-            {
-                lettre.Text = @"Arrêtée la présente demande de prix à la somme de: ";
-            }
+            var print = DateHelpers.Get(model.Id);
+            if (print.Groupe == 9) lettre.Text = @"Arrêtée la présente demande de prix à la somme de: ";
             lettre.Text += StdCalcul.FormatGasy(model.Montant);
             Tache.Text = print.Tache;
             Titre.Text = print.Titre;
@@ -32,7 +29,7 @@ namespace gescom.printer.Reports
 
         private void Init()
         {
-            PersonModel owner = PersonHelpers.Get(1);
+            var owner = PersonHelpers.Get(1);
             nom.Text = owner.Nom;
             adresse.Text = owner.Adresse;
             complement.Text = owner.Complement;

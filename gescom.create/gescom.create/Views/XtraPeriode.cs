@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
 
 namespace gescom.create.Views
 {
@@ -50,18 +50,22 @@ namespace gescom.create.Views
                     ErrorHelpers.ShowError(@"SELECTION INVALIDE");
                     return;
                 }
+
                 Norme = true;
             }
+
             if (_index == 1)
             {
-                bool b = StdCalcul.DateValidation(Debut, Fin);
+                var b = StdCalcul.DateValidation(Debut, Fin);
                 if (!b)
                 {
                     ErrorHelpers.ShowError(@"SELECTION INVALIDE");
                     return;
                 }
+
                 Norme = true;
             }
+
             Close();
         }
     }

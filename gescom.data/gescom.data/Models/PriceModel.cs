@@ -10,11 +10,8 @@ namespace gescom.data.Models
         public static float CalculReboursHt(long id, float prix)
         {
             var item = ArticleHelpers.Get(id);
-            float result = prix;
-            if (item.Taxable == 1)
-            {
-                result = prix - CalculReboursTva(prix);
-            }
+            var result = prix;
+            if (item.Taxable == 1) result = prix - CalculReboursTva(prix);
             result = StdCalcul.GetSimpleLisseF(result);
             return result;
         }
@@ -22,13 +19,14 @@ namespace gescom.data.Models
         public static float CalculReboursTva(float prix)
         {
             float result = 0;
-            float numerator = GetTaxe() / 100;
-            float denominator = 1 + numerator;
+            var numerator = GetTaxe() / 100;
+            var denominator = 1 + numerator;
             if (numerator > 0)
             {
                 numerator = numerator / denominator;
                 result = prix * numerator;
             }
+
             result = StdCalcul.GetSimpleLisseF(result);
             return result;
         }
@@ -42,40 +40,40 @@ namespace gescom.data.Models
         public static float GetPAchat(long id)
         {
             float result = 0;
-            float? prix = ObtenirMarge(id).Achat;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirMarge(id).Achat;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
         public static float GetPDetail(long id)
         {
             float result = 0;
-            float? prix = ObtenirPrixTtc(id).Detail;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirPrixTtc(id).Detail;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
         public static float GetPExtra(long id)
         {
             float result = 0;
-            float? prix = ObtenirPrixTtc(id).Extra;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirPrixTtc(id).Extra;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
         public static float GetPGros(long id)
         {
             float result = 0;
-            float? prix = ObtenirPrixTtc(id).Gros;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirPrixTtc(id).Gros;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
         public static float GetPRevient(long id)
         {
             float result = 0;
-            float? prix = ObtenirPrixHt(id).Revient;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirPrixHt(id).Revient;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
@@ -112,16 +110,16 @@ namespace gescom.data.Models
         public static float GetPrixItem(long id)
         {
             float result = 0;
-            float? prix = GetItem(id).Detail;
-            if (prix != null) result = (float)prix;
+            var prix = GetItem(id).Detail;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
         public static float GetPSpecial(long id)
         {
             float result = 0;
-            float? prix = ObtenirPrixTtc(id).Special;
-            if (prix != null) result = (float)prix;
+            var prix = ObtenirPrixTtc(id).Special;
+            if (prix != null) result = (float) prix;
             return result;
         }
 
@@ -206,14 +204,11 @@ namespace gescom.data.Models
         {
             Hors = new List<HorsItem>();
             var repository = new HorsRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Hors())
             {
-                return;
-            }
-            foreach (HorsItem element in repository.Hors())
-            {
-                HorsItem item = element;
+                var item = element;
                 Hors.Add(item);
             }
         }
@@ -256,21 +251,35 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(HorsItem hors)
-        {
-            _context.HorsItems.InsertOnSubmit(hors);
-        }
-
         public int Count()
         {
             return _context.HorsItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(HorsItem hors)
+        {
+            _context.HorsItems.InsertOnSubmit(hors);
         }
 
         public void Create(PriceModel model)
         {
             if (!model.HasError())
             {
-                var item = new HorsItem { Id = Count() + 1 };
+                var item = new HorsItem {Id = Count() + 1};
                 item.Copy(model);
                 Add(item);
                 _context.SubmitChanges();
@@ -291,19 +300,6 @@ namespace gescom.data.Models
         {
             return _context.HorsItems;
         }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 
     public class MargeCart : IEnumerable<MargeItem>
@@ -312,14 +308,11 @@ namespace gescom.data.Models
         {
             Marges = new List<MargeItem>();
             var repository = new MargeRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Marges())
             {
-                return;
-            }
-            foreach (MargeItem element in repository.Marges())
-            {
-                MargeItem item = element;
+                var item = element;
                 Marges.Add(item);
             }
         }
@@ -362,21 +355,35 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(MargeItem item)
-        {
-            _context.MargeItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.MargeItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(MargeItem item)
+        {
+            _context.MargeItems.InsertOnSubmit(item);
         }
 
         public void Create(PriceModel model)
         {
             if (!model.HasError())
             {
-                var item = new MargeItem { Id = Count() + 1 };
+                var item = new MargeItem {Id = Count() + 1};
                 item.Copy(model);
                 Add(item);
                 _context.SubmitChanges();
@@ -396,19 +403,6 @@ namespace gescom.data.Models
         public IQueryable<MargeItem> Marges()
         {
             return _context.MargeItems;
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
     }
 
@@ -448,63 +442,60 @@ namespace gescom.data.Models
 
         public void Copy(MargeItem item)
         {
-            if (item == null) { return; }
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Extra != null) Extra = (float)item.Extra;
-            if (item.Gros != null) Gros = (float)item.Gros;
+            if (item == null) return;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Extra != null) Extra = (float) item.Extra;
+            if (item.Gros != null) Gros = (float) item.Gros;
             Id = item.Id;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Special != null) Special = (float)item.Special;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Special != null) Special = (float) item.Special;
         }
 
         public void Copy(TaxeItem item)
         {
-            if (item == null) { return; }
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Extra != null) Extra = (float)item.Extra;
-            if (item.Gros != null) Gros = (float)item.Gros;
+            if (item == null) return;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Extra != null) Extra = (float) item.Extra;
+            if (item.Gros != null) Gros = (float) item.Gros;
             Id = item.Id;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Special != null) Special = (float)item.Special;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Special != null) Special = (float) item.Special;
         }
 
         public void Copy(TaxableItem item)
         {
-            if (item == null) { return; }
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Extra != null) Extra = (float)item.Extra;
-            if (item.Gros != null) Gros = (float)item.Gros;
+            if (item == null) return;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Extra != null) Extra = (float) item.Extra;
+            if (item.Gros != null) Gros = (float) item.Gros;
             Id = item.Id;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Special != null) Special = (float)item.Special;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Special != null) Special = (float) item.Special;
         }
 
         public void Copy(HorsItem item)
         {
-            if (item == null) { return; }
-            if (item.Achat != null) Achat = (float)item.Achat;
-            if (item.Detail != null) Detail = (float)item.Detail;
-            if (item.Extra != null) Extra = (float)item.Extra;
-            if (item.Gros != null) Gros = (float)item.Gros;
+            if (item == null) return;
+            if (item.Achat != null) Achat = (float) item.Achat;
+            if (item.Detail != null) Detail = (float) item.Detail;
+            if (item.Extra != null) Extra = (float) item.Extra;
+            if (item.Gros != null) Gros = (float) item.Gros;
             Id = item.Id;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
-            if (item.Revient != null) Revient = (float)item.Revient;
-            if (item.Special != null) Special = (float)item.Special;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
+            if (item.Revient != null) Revient = (float) item.Revient;
+            if (item.Special != null) Special = (float) item.Special;
         }
 
         public bool HasError()
         {
-            IsValid = ((Achat > 0) && (Revient > 0) && (Gros > 0) && (Detail > 0) && (Special > 0) && (Extra > 0));
-            if ((Achat > Revient) || (Special < Revient) || (Extra < Revient) || (Detail < Gros))
-            {
-                IsValid = false;
-            }
+            IsValid = Achat > 0 && Revient > 0 && Gros > 0 && Detail > 0 && Special > 0 && Extra > 0;
+            if (Achat > Revient || Special < Revient || Extra < Revient || Detail < Gros) IsValid = false;
             return IsValid;
         }
     }
@@ -515,14 +506,11 @@ namespace gescom.data.Models
         {
             Primes = new List<PrimeItem>();
             var repository = new PrimeRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Primes())
             {
-                return;
-            }
-            foreach (PrimeItem element in repository.Primes())
-            {
-                PrimeItem item = element;
+                var item = element;
                 Primes.Add(item);
             }
         }
@@ -565,21 +553,35 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(PrimeItem item)
-        {
-            _context.PrimeItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.PrimeItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(PrimeItem item)
+        {
+            _context.PrimeItems.InsertOnSubmit(item);
         }
 
         public void Create(PriceModel model)
         {
             if (!model.HasError())
             {
-                var item = new PrimeItem { Id = Count() + 1 };
+                var item = new PrimeItem {Id = Count() + 1};
                 item.Copy(model);
                 Add(item);
                 _context.SubmitChanges();
@@ -600,19 +602,6 @@ namespace gescom.data.Models
         {
             return _context.PrimeItems;
         }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 
     public class TaxableCart : IEnumerable<TaxableItem>
@@ -621,14 +610,11 @@ namespace gescom.data.Models
         {
             Taxables = new List<TaxableItem>();
             var repository = new TaxableRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Taxables())
             {
-                return;
-            }
-            foreach (TaxableItem element in repository.Taxables())
-            {
-                TaxableItem item = element;
+                var item = element;
                 Taxables.Add(item);
             }
         }
@@ -671,21 +657,35 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(TaxableItem item)
-        {
-            _context.TaxableItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.TaxableItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(TaxableItem item)
+        {
+            _context.TaxableItems.InsertOnSubmit(item);
         }
 
         public void Create(PriceModel model)
         {
             if (!model.HasError())
             {
-                var item = new TaxableItem { Id = Count() + 1 };
+                var item = new TaxableItem {Id = Count() + 1};
                 item.Copy(model);
                 Add(item);
                 _context.SubmitChanges();
@@ -702,19 +702,6 @@ namespace gescom.data.Models
             return _context.TaxableItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public IQueryable<TaxableItem> Taxables()
         {
             return _context.TaxableItems;
@@ -727,14 +714,11 @@ namespace gescom.data.Models
         {
             Taxes = new List<TaxeItem>();
             var repository = new TaxeRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Taxes())
             {
-                return;
-            }
-            foreach (TaxeItem element in repository.Taxes())
-            {
-                TaxeItem item = element;
+                var item = element;
                 Taxes.Add(item);
             }
         }
@@ -777,21 +761,35 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(TaxeItem item)
-        {
-            _context.TaxeItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.TaxeItems.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(TaxeItem item)
+        {
+            _context.TaxeItems.InsertOnSubmit(item);
         }
 
         public void Create(PriceModel model)
         {
             if (!model.HasError())
             {
-                var item = new TaxeItem { Id = Count() + 1 };
+                var item = new TaxeItem {Id = Count() + 1};
                 item.Copy(model);
                 Add(item);
                 _context.SubmitChanges();
@@ -806,19 +804,6 @@ namespace gescom.data.Models
         public TaxeItem Get(long id)
         {
             return _context.TaxeItems.SingleOrDefault(d => d.Id == id);
-        }
-
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
         }
 
         public IQueryable<TaxeItem> Taxes()
@@ -838,24 +823,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(TvaItem item)
-        {
-            _context.TvaItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.TvaItems.Count();
-        }
-
-        public void Delete(TvaItem item)
-        {
-            _context.TvaItems.DeleteOnSubmit(item);
-        }
-
-        public TvaItem Get(long id)
-        {
-            return _context.TvaItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -868,7 +838,23 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(TvaItem item)
+        {
+            _context.TvaItems.InsertOnSubmit(item);
+        }
+
+        public void Delete(TvaItem item)
+        {
+            _context.TvaItems.DeleteOnSubmit(item);
+        }
+
+        public TvaItem Get(long id)
+        {
+            return _context.TvaItems.SingleOrDefault(d => d.Id == id);
         }
 
         public IQueryable<TvaItem> Tvas()
@@ -878,7 +864,7 @@ namespace gescom.data.Models
 
         public void Update(float taux)
         {
-            if (taux <= 0) { return; }
+            if (taux <= 0) return;
             var item = Get(1);
             item.Taux = taux;
             Save();

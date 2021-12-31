@@ -1,7 +1,7 @@
-﻿using gescom.data.Models;
-using DevExpress.XtraReports.UI;
-using System;
+﻿using System;
 using System.Globalization;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.printer.Reports
 {

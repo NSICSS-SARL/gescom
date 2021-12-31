@@ -7,11 +7,9 @@ namespace gescom.data.Models
 {
     public static class SituationHelpers
     {
-      
-
         public static bool Create(long id)
         {
-            var model = new SituationModel { Id = id };
+            var model = new SituationModel {Id = id};
             var repository = new SituationRepository();
             return repository.Create(model);
         }
@@ -20,13 +18,10 @@ namespace gescom.data.Models
         public static SituationItem Get(long id)
         {
             var result = new SituationItem();
-            foreach (SituationItem item in GetList().Where(item => item.Id == id))
-            {
-                result = item;
-            }
+            foreach (var item in GetList().Where(item => item.Id == id)) result = item;
             return result;
         }
-       
+
 
         public static List<SituationItem> GetList()
         {
@@ -34,10 +29,10 @@ namespace gescom.data.Models
             return cart.Situations;
         }
 
-      
+
         public static bool Update(long id, string cce, string frns)
         {
-            var model = new SituationModel { Id = id, Commerce = cce, Fournisseur = frns };
+            var model = new SituationModel {Id = id, Commerce = cce, Fournisseur = frns};
             var repository = new SituationRepository();
             return repository.Update(model);
         }
@@ -49,14 +44,11 @@ namespace gescom.data.Models
         {
             Situations = new List<SituationItem>();
             var repository = new SituationRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Situations())
             {
-                return;
-            }
-            foreach (SituationItem element in repository.Situations())
-            {
-                SituationItem item = element;                
+                var item = element;
                 Situations.Add(item);
             }
         }
@@ -76,7 +68,6 @@ namespace gescom.data.Models
 
     public partial class SituationItem
     {
-      
         public void Copy(SituationModel model)
         {
             Id = model.Id;
@@ -86,15 +77,11 @@ namespace gescom.data.Models
 
         public void HasError()
         {
-
         }
     }
 
     public class SituationModel
     {
-        public long Id { get; set; }
-        public string Commerce { get; set; }
-        public string Fournisseur { get; set; }
         public SituationModel()
         {
             //
@@ -105,7 +92,11 @@ namespace gescom.data.Models
             Copy(unite);
         }
 
-    
+        public long Id { get; set; }
+        public string Commerce { get; set; }
+        public string Fournisseur { get; set; }
+
+
         public void Copy(SituationItem item)
         {
             Id = item.Id;
@@ -133,6 +124,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -155,6 +147,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 

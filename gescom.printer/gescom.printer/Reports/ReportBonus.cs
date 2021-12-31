@@ -1,7 +1,7 @@
-﻿using DevExpress.XtraReports.UI;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.printer.Reports
 {
@@ -30,7 +30,7 @@ namespace gescom.printer.Reports
 
         private void SetApp()
         {
-            PersonModel p = PersonHelpers.Get(1);
+            var p = PersonHelpers.Get(1);
             nom.Text = p.Nom;
             adresse.Text = p.Adresse;
         }
@@ -44,17 +44,11 @@ namespace gescom.printer.Reports
 
         private void SetData(List<PersonnelItem> liste)
         {
-            if (liste.Count == 0)
-            {
-                return;
-            }
+            if (liste.Count == 0) return;
             Noms.Text = liste.Count.ToString("D");
             long id = 0;
-            if (liste[0].Wid != null)
-            {
-                id = (long)liste[0].Wid;
-            }
-            PersonModel p = PersonHelpers.Get(id);
+            if (liste[0].Wid != null) id = (long) liste[0].Wid;
+            var p = PersonHelpers.Get(id);
             Noms.Text = p.Nom;
             Activites.Text = p.Activite;
             Adresses.Text = p.Adresse;
@@ -63,7 +57,7 @@ namespace gescom.printer.Reports
             Datum.DataBindings.Add("Text", liste, "Daty");
             Operateur.DataBindings.Add("Text", liste, "Operateur");
             Bonif.DataBindings.Add("Text", liste, "Primus");
-            float f = DateHelpers.GetAmountPrimeList(liste);
+            var f = DateHelpers.GetAmountPrimeList(liste);
             total.Text = StdCalcul.DoubleToSpaceFormat(f);
         }
     }

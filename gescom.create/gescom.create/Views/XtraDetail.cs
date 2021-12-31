@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -36,22 +36,16 @@ namespace gescom.create.Views
         private void SetTitle(long id)
         {
             _id = id;
-            DiaryItem diary = DiaryHelpers.Get(id);
+            var diary = DiaryHelpers.Get(id);
             Text = diary.Id + @" " + diary.Tache;
         }
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            if (_hideMove)
-            {
-                return;
-            }
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
+            if (_hideMove) return;
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
             if (id == 0)
             {
             }
@@ -67,10 +61,7 @@ namespace gescom.create.Views
 
         private void imprimer_Click(object sender, EventArgs e)
         {
-            if (_id == 0)
-            {
-                return;
-            }
+            if (_id == 0) return;
             CreateHelpers.ImprimerDetails(_id);
             Close();
         }

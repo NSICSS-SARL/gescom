@@ -1,8 +1,9 @@
-﻿using gescom.data.Models;
+﻿using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.report.Reports
 {
-    public partial class ReportGlobal : DevExpress.XtraReports.UI.XtraReport
+    public partial class ReportGlobal : XtraReport
     {
         public ReportGlobal()
         {

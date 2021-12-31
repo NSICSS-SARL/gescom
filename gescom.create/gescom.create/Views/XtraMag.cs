@@ -1,10 +1,10 @@
-﻿using gescom.data.Models;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
-    public partial class XtraMag : DevExpress.XtraEditors.XtraForm
+    public partial class XtraMag : XtraForm
     {
         public XtraMag()
         {
@@ -14,7 +14,7 @@ namespace gescom.create.Views
         public XtraMag(long id)
         {
             InitializeComponent();
-            List<DetailMag> list = ActionHelpers.GetEntrees(id).ToList();
+            var list = ActionHelpers.GetEntrees(id).ToList();
             grillage.DataSource = list;
         }
     }

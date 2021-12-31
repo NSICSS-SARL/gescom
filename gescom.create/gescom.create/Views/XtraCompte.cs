@@ -1,9 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using gescom.create.Models;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
+using gescom.create.Models;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
@@ -48,7 +48,7 @@ namespace gescom.create.Views
 
         private DateModel SetDate()
         {
-            DateModel date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
+            var date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
             return date;
         }
 
@@ -58,16 +58,13 @@ namespace gescom.create.Views
             myNum.DataBindings.Clear();
             myNum.DataBindings.Add("Text", _list, "Id");
             imprimer.Enabled = false;
-            if (_list.Count == 0)
-            {
-                return;
-            }
+            if (_list.Count == 0) return;
             imprimer.Enabled = true;
         }
 
         private void Init(long pid)
         {
-            PersonModel p = PersonHelpers.Get(pid);
+            var p = PersonHelpers.Get(pid);
             Text = p.Nom;
         }
 
@@ -78,16 +75,10 @@ namespace gescom.create.Views
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.DetaillerOperation(id);
         }
 

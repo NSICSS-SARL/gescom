@@ -13,12 +13,9 @@ namespace gescom.data.Models
             var repo = new ArticleRepository();
             foreach (var item in GetList())
             {
-                int nbCaract = item.Nom.Length;
-                string refce = item.Nom;
-                if (nbCaract > 21)
-                {
-                    refce = item.Nom.Substring(0, 19);
-                }
+                var nbCaract = item.Nom.Length;
+                var refce = item.Nom;
+                if (nbCaract > 21) refce = item.Nom.Substring(0, 19);
                 repo.UpdateRef(item.Id, refce);
             }
         }
@@ -27,11 +24,8 @@ namespace gescom.data.Models
         public static void Add(long id, float quantite)
         {
             var repository = new ArticleRepository();
-            ArticleItem item = repository.Get(id);
-            if (item.Quantite == null)
-            {
-                item.Quantite = 0;
-            }
+            var item = repository.Get(id);
+            if (item.Quantite == null) item.Quantite = 0;
             item.Quantite += quantite;
             repository.Save();
         }
@@ -49,7 +43,6 @@ namespace gescom.data.Models
             return reptory.Get(id);
         }
 
-       
 
         //récupération de stock d'un article.
         public static float GetDisponible(long id)
@@ -65,7 +58,6 @@ namespace gescom.data.Models
             return reptory.Get(id);
         }
 
-      
 
         public static List<ArticleItem> GetList()
         {
@@ -73,7 +65,7 @@ namespace gescom.data.Models
             return cart.Articles;
         }
 
-      
+
         public static string GetName(long id)
         {
             return Get(id).Nom;
@@ -82,18 +74,16 @@ namespace gescom.data.Models
         public static string GetNormalizedCode(long id)
         {
             var item = Get(id);
-            if (item == null) { return null; }
+            if (item == null) return null;
             switch (item.Forme)
             {
                 case 0:
                     return item.Code + "-I";
                 case 1:
-                    if (item.Taxable == 1)
-                    {
-                        return item.Code + "-T";
-                    }
+                    if (item.Taxable == 1) return item.Code + "-T";
                     break;
             }
+
             return item.Code + "-X";
         }
 
@@ -102,7 +92,6 @@ namespace gescom.data.Models
             return ListedByCategory(ig).Count();
         }
 
-      
 
         public static List<ArticleItem> ListedByCategory(long igParam)
         {
@@ -113,11 +102,8 @@ namespace gescom.data.Models
         public static void PutDescription(long id, string text)
         {
             var repository = new ArticleRepository();
-            ArticleItem item = repository.Get(id);
-            if (string.IsNullOrEmpty(text))
-            {
-                return;
-            }
+            var item = repository.Get(id);
+            if (string.IsNullOrEmpty(text)) return;
             item.Description = text;
             repository.Save();
         }
@@ -126,35 +112,26 @@ namespace gescom.data.Models
         public static void Remove(long id, float quantite)
         {
             var repository = new ArticleRepository();
-            ArticleItem item = repository.Get(id);
-            if (item.Quantite == null)
-            {
-                item.Quantite = 0;
-            }
-            if (quantite > item.Quantite)
-            {
-                return;
-            }
+            var item = repository.Get(id);
+            if (item.Quantite == null) item.Quantite = 0;
+            if (quantite > item.Quantite) return;
             item.Quantite -= quantite;
             repository.Save();
         }
 
-      
 
         public static void UpdateDuo(long id, string message, float quantite)
         {
             var repository = new DuoRepository();
-            DuoItem item = repository.Get(id);
+            var item = repository.Get(id);
             item.S2 = message;
             item.Q2 = quantite;
             item.D2 = DateTime.Now;
-            if (quantite >= 0)
-            {
-                repository.Update();
-            }
+            if (quantite >= 0) repository.Update();
         }
 
-        public static void UpdateFusion(long id, string tache, string message, string b1, string b2, long entrer = 0, long tarifer = 0, float quantite = 0, long prior = 0, long? mask = null)
+        public static void UpdateFusion(long id, string tache, string message, string b1, string b2, long entrer = 0,
+            long tarifer = 0, float quantite = 0, long prior = 0, long? mask = null)
         {
             var repository = new DuoRepository();
             var item = repository.Get(id);
@@ -177,7 +154,8 @@ namespace gescom.data.Models
             repo.Repair();
         }
 
-        public static void UpdateRecto(long id, string tache, string message, float quantite, string b1, string b2, long tarifer, long entrer, long? visible = null, long prior = 0)
+        public static void UpdateRecto(long id, string tache, string message, float quantite, string b1, string b2,
+            long tarifer, long entrer, long? visible = null, long prior = 0)
         {
             var repository = new DuoRepository();
             var item = repository.Get(id);
@@ -191,10 +169,7 @@ namespace gescom.data.Models
             item.APrix = tarifer;
             item.D1 = DateTime.Now;
             item.Q1 = quantite;
-            if (quantite >= 0)
-            {
-                repository.Update();
-            }
+            if (quantite >= 0) repository.Update();
         }
     }
 
@@ -204,19 +179,16 @@ namespace gescom.data.Models
         {
             Articles = new List<ArticleItem>();
             var repository = new ArticleRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Articles())
             {
-                return;
-            }
-            foreach (ArticleItem element in repository.Articles())
-            {
-                ArticleItem item = element;
+                var item = element;
                 Articles.Add(item);
             }
         }
 
-      
+
         public List<ArticleItem> Articles { get; set; }
 
         public IEnumerator<ArticleItem> GetEnumerator()
@@ -234,7 +206,6 @@ namespace gescom.data.Models
     {
         public bool DuplicateError { get; set; }
 
-       
 
         public void Copy(ArticleModel model)
         {
@@ -299,20 +270,20 @@ namespace gescom.data.Models
             CCode = item.CCode;
             Refce = item.Refce;
             Catalogue = item.Catalogue;
-            if (item.Rang != null) Rang = (long)item.Rang;
+            if (item.Rang != null) Rang = (long) item.Rang;
             Code = item.Code;
             CompleteCode = item.CompleteCode;
             Nom = item.Nom;
             Catalogue = item.Catalogue;
-            if (item.Ig != null) Ig = (int)item.Ig;
-            if (item.Iu != null) Iu = (int)item.Iu;
-            if (item.Seuil != null) Seuil = (float)item.Seuil;
-            if (item.Taxable != null) Taxable = (int)item.Taxable;
-            if (item.State != null) State = (int)item.State;
-            if (item.Quantite != null) Quantite = (float)item.Quantite;
+            if (item.Ig != null) Ig = (int) item.Ig;
+            if (item.Iu != null) Iu = (int) item.Iu;
+            if (item.Seuil != null) Seuil = (float) item.Seuil;
+            if (item.Taxable != null) Taxable = (int) item.Taxable;
+            if (item.State != null) State = (int) item.State;
+            if (item.Quantite != null) Quantite = (float) item.Quantite;
             DuplicateError = item.DuplicateError;
             Description = item.Description;
-            if (item.Forme != null) Forme = (long)item.Forme;
+            if (item.Forme != null) Forme = (long) item.Forme;
         }
     }
 
@@ -320,69 +291,9 @@ namespace gescom.data.Models
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(ArticleItem item)
-        {
-            _context.ArticleItems.InsertOnSubmit(item);
-        }
-
-        public IQueryable<ArticleItem> Articles()
-        {
-            return _context.ArticleItems;
-        }
-
         public int Count()
         {
             return _context.ArticleItems.Count();
-        }
-
-       
-
-        public bool CreateWin(ArticleModel model)
-        {
-            var article = new ArticleItem();
-            int id = Count() + 1;
-            model.Id = id;
-            model.Quantite = 0;
-            model.Rang = ArticleHelpers.GetRang(model.Ig) + 1;
-            string txt = FamilleHelpers.GetCode(model.Ig);
-            model.Code = id + txt.Substring(0, 1);
-            model.CCode = id + " " + txt.Substring(0, 1);
-            model.CompleteCode = id + FamilleHelpers.GetCode(model.Ig) +
-                                 model.Rang.ToString(CultureInfo.InvariantCulture);
-            if (model.Forme == 0)
-            {
-                model.CompleteCode += "-I";
-            }
-            if (model.Forme == 1)
-            {
-                if (model.Taxable == 1)
-                {
-                    model.CompleteCode += "-T";
-                }
-                else
-                {
-                    model.CompleteCode += "-X";
-                }
-            }
-            article.Copy(model);
-            Add(article);
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            ArticleHelpers.CreateDuo();
-            return true;
-        }
-
-       
-
-        public ArticleItem Get(long id)
-        {
-            return _context.ArticleItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Save()
@@ -395,7 +306,61 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
+        }
+
+        public void Add(ArticleItem item)
+        {
+            _context.ArticleItems.InsertOnSubmit(item);
+        }
+
+        public IQueryable<ArticleItem> Articles()
+        {
+            return _context.ArticleItems;
+        }
+
+
+        public bool CreateWin(ArticleModel model)
+        {
+            var article = new ArticleItem();
+            var id = Count() + 1;
+            model.Id = id;
+            model.Quantite = 0;
+            model.Rang = ArticleHelpers.GetRang(model.Ig) + 1;
+            var txt = FamilleHelpers.GetCode(model.Ig);
+            model.Code = id + txt.Substring(0, 1);
+            model.CCode = id + " " + txt.Substring(0, 1);
+            model.CompleteCode = id + FamilleHelpers.GetCode(model.Ig) +
+                                 model.Rang.ToString(CultureInfo.InvariantCulture);
+            if (model.Forme == 0) model.CompleteCode += "-I";
+            if (model.Forme == 1)
+            {
+                if (model.Taxable == 1)
+                    model.CompleteCode += "-T";
+                else
+                    model.CompleteCode += "-X";
+            }
+
+            article.Copy(model);
+            Add(article);
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            ArticleHelpers.CreateDuo();
+            return true;
+        }
+
+
+        public ArticleItem Get(long id)
+        {
+            return _context.ArticleItems.SingleOrDefault(d => d.Id == id);
         }
 
         public bool Update()
@@ -408,6 +373,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
 
@@ -425,14 +391,11 @@ namespace gescom.data.Models
         {
             Duos = new List<DuoItem>();
             var repository = new DuoRepository();
-            int count = repository.Count();
-            if (count == 0)
+            var count = repository.Count();
+            if (count == 0) return;
+            foreach (var element in repository.Duos())
             {
-                return;
-            }
-            foreach (DuoItem element in repository.Duos())
-            {
-                DuoItem item = element;
+                var item = element;
                 Duos.Add(item);
             }
         }
@@ -452,7 +415,6 @@ namespace gescom.data.Models
 
     public partial class DuoItem
     {
-       
     }
 
     public class DuoModel
@@ -475,11 +437,9 @@ namespace gescom.data.Models
 
         public DateTime D2 { get; set; }
 
-      
 
         public long Id { get; set; }
 
-       
 
         public float Q { get; set; }
 
@@ -492,28 +452,40 @@ namespace gescom.data.Models
         public string S2 { get; set; }
 
         public string T1 { get; set; }
-
-       
     }
 
     public class DuoRepository : IData
     {
         private readonly DataGescomDataContext _context = new DataGescomDataContext();
 
-        public void Add(DuoItem item)
-        {
-            _context.DuoItems.InsertOnSubmit(item);
-        }
-
         public int Count()
         {
             return _context.DuoItems.Count();
         }
 
+        public bool Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Add(DuoItem item)
+        {
+            _context.DuoItems.InsertOnSubmit(item);
+        }
+
         public void Create()
         {
             var item = new DuoItem();
-            int id = Count() + 1;
+            var id = Count() + 1;
             item.S1 = @"SIGNAL RECTO";
             item.S2 = @"SIGNAL VERSO";
             item.Id = id;
@@ -527,14 +499,10 @@ namespace gescom.data.Models
             Save();
         }
 
-       
 
         public void Repair()
         {
-            foreach (var elt in _context.ProdItems)
-            {
-                elt.Etat = -1;
-            }
+            foreach (var elt in _context.ProdItems) elt.Etat = -1;
             _context.SubmitChanges();
             Save();
         }
@@ -549,19 +517,6 @@ namespace gescom.data.Models
             return _context.DuoItems.SingleOrDefault(d => d.Id == id);
         }
 
-        public bool Save()
-        {
-            try
-            {
-                _context.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool Update()
         {
             try
@@ -572,6 +527,7 @@ namespace gescom.data.Models
             {
                 return false;
             }
+
             return true;
         }
     }

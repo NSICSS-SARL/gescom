@@ -185,9 +185,9 @@
             this.radioBas = new System.Windows.Forms.RadioButton();
             this.chkEpuise = new DevExpress.XtraEditors.CheckEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.suspendBtn = new System.Windows.Forms.RadioButton();
             this.stopBtn = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.percText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
@@ -285,27 +285,27 @@
             // DateVente
             // 
             this.DateVente.EditValue = null;
-            this.DateVente.Location = new System.Drawing.Point(709, 17);
+            this.DateVente.Location = new System.Drawing.Point(542, 12);
             this.DateVente.Name = "DateVente";
             this.DateVente.Properties.AllowFocused = false;
             this.DateVente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateVente.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateVente.Size = new System.Drawing.Size(100, 20);
+            this.DateVente.Size = new System.Drawing.Size(90, 20);
             this.DateVente.TabIndex = 14;
             // 
             // DateAchat
             // 
             this.DateAchat.EditValue = null;
-            this.DateAchat.Location = new System.Drawing.Point(347, 16);
+            this.DateAchat.Location = new System.Drawing.Point(168, 14);
             this.DateAchat.Name = "DateAchat";
             this.DateAchat.Properties.AllowFocused = false;
             this.DateAchat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateAchat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateAchat.Size = new System.Drawing.Size(100, 20);
+            this.DateAchat.Size = new System.Drawing.Size(90, 20);
             this.DateAchat.TabIndex = 13;
             // 
             // cumDispo
@@ -336,7 +336,7 @@
             this.cumVente.Appearance.ForeColor = System.Drawing.Color.DarkBlue;
             this.cumVente.Appearance.Options.UseFont = true;
             this.cumVente.Appearance.Options.UseForeColor = true;
-            this.cumVente.Location = new System.Drawing.Point(544, 10);
+            this.cumVente.Location = new System.Drawing.Point(690, 6);
             this.cumVente.Name = "cumVente";
             this.cumVente.Size = new System.Drawing.Size(15, 29);
             this.cumVente.TabIndex = 10;
@@ -346,7 +346,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(494, 19);
+            this.labelControl11.Location = new System.Drawing.Point(640, 15);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(39, 13);
             this.labelControl11.TabIndex = 9;
@@ -358,7 +358,7 @@
             this.cumAchat.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
             this.cumAchat.Appearance.Options.UseFont = true;
             this.cumAchat.Appearance.Options.UseForeColor = true;
-            this.cumAchat.Location = new System.Drawing.Point(198, 11);
+            this.cumAchat.Location = new System.Drawing.Point(315, 9);
             this.cumAchat.Name = "cumAchat";
             this.cumAchat.Size = new System.Drawing.Size(15, 29);
             this.cumAchat.TabIndex = 8;
@@ -368,7 +368,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(150, 20);
+            this.labelControl5.Location = new System.Drawing.Point(267, 17);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(39, 13);
             this.labelControl5.TabIndex = 7;
@@ -378,7 +378,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(11, 13);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 21);
+            this.textBox1.Size = new System.Drawing.Size(58, 21);
             this.textBox1.TabIndex = 0;
             // 
             // cadre
@@ -2058,6 +2058,19 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.Green;
+            this.radioButton1.Location = new System.Drawing.Point(13, 16);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(42, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "R.S";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // suspendBtn
             // 
             this.suspendBtn.AutoSize = true;
@@ -2080,19 +2093,6 @@
             this.stopBtn.TabIndex = 2;
             this.stopBtn.Text = "Stop";
             this.stopBtn.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Green;
-            this.radioButton1.Location = new System.Drawing.Point(13, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(42, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "R.S";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // percText
             // 

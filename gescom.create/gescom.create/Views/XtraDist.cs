@@ -1,8 +1,8 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Globalization;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
-using System;
-using System.Globalization;
 
 namespace gescom.create.Views
 {
@@ -46,10 +46,7 @@ namespace gescom.create.Views
             _item = DistHelpers.Get(id);
             Init();
             NoPlacing();
-            if (isParticular)
-            {
-                placement.Enabled = true;
-            }
+            if (isParticular) placement.Enabled = true;
         }
 
         public void NoPlacing()
@@ -60,7 +57,7 @@ namespace gescom.create.Views
         private void Init()
         {
             nombre.Text = StdCalcul.Spacing(_item.Id.ToString(CultureInfo.InvariantCulture));
-            ArticleItem article = ArticleHelpers.Get(_item.Id);
+            var article = ArticleHelpers.Get(_item.Id);
             leNom.Text = article.Nom;
             codage.Text = article.Code;
             txtNom.Text = _item.Nom;
@@ -68,14 +65,11 @@ namespace gescom.create.Views
             remarkEdit.Text = article.Description;
             txtQte.Text = _item.Quantite.ToString();
             if (_item.Numero == null) return;
-            var id = (long)_item.Numero;
+            var id = (long) _item.Numero;
             _numeroPlace = id;
-            PlaceItem place = PlaceHelpers.GetIndex(id);
+            var place = PlaceHelpers.GetIndex(id);
             labelPlace.Text = place.Nom;
-            foreach (string variable in PlaceHelpers.GetListPlaces())
-            {
-                placement.Items.Add(variable);
-            }
+            foreach (var variable in PlaceHelpers.GetListPlaces()) placement.Items.Add(variable);
             placement.Text = place.Nom;
             Text = @"PLACE-OBSERVATIONS";
             if (!_isRemark) return;
@@ -100,32 +94,34 @@ namespace gescom.create.Views
                     txtNom.Focus();
                     return;
                 }
+
                 if (string.IsNullOrEmpty(txtQte.Text))
                 {
                     ErrorHelpers.ShowError("Le seuil minimal de vente ne peut être nul.");
                     txtQte.Focus();
                     return;
                 }
+
                 _item.Nom = txtNom.Text;
                 _item.Quantite = float.Parse(txtQte.Text);
                 _item.Description = obsEdit.Text;
             }
+
             _item.Numero = PlaceHelpers.GetId(newPlace.Text);
             if (_item.Numero == null) return;
-            var n = (long)_item.Numero;
-            PlaceItem place = PlaceHelpers.Get(n);
+            var n = (long) _item.Numero;
+            var place = PlaceHelpers.Get(n);
             if (place.IsReserved != null)
             {
-                var i = (long)place.IsReserved;
-                if (i == 1)
-                {
-                    _item.Numero = _numeroPlace;
-                }
+                var i = (long) place.IsReserved;
+                if (i == 1) _item.Numero = _numeroPlace;
             }
+
             if (DistHelpers.Update(_item))
             {
                 // ErrorHelpers.ShowErrorDuplicate();return;
             }
+
             PlaceHelpers.Fill(n);
             ArticleHelpers.PutDescription(_item.Id, remarkEdit.Text);
 

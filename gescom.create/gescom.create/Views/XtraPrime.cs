@@ -1,10 +1,10 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
 using gescom.printer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace gescom.create.Views
 {
@@ -60,16 +60,10 @@ namespace gescom.create.Views
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.DetaillerOperation(id);
         }
 

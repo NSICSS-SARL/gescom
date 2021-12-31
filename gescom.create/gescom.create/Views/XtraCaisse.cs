@@ -1,15 +1,15 @@
-﻿using DevExpress.XtraEditors;
-using gescom.data.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using gescom.data.Models;
 
 namespace gescom.create.Views
 {
     public partial class XtraCaisse : XtraForm
     {
         private readonly XtraPeriode _fPeriode;
-        private List<InvoiceModern> _list;
+        private readonly List<InvoiceModern> _list;
 
         public XtraCaisse()
         {
@@ -29,21 +29,15 @@ namespace gescom.create.Views
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
         }
 
         private void imprimer_Click(object sender, EventArgs e)
         {
-            DateModel date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
+            var date = DateHelpers.Get(_fPeriode.Debut, _fPeriode.Fin, _fPeriode.Showing);
             // CreateHelpers.ImprimerCaisse(_list, date);
         }
 
@@ -75,28 +69,16 @@ namespace gescom.create.Views
 
         private void annulerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
-            CashModel model = CashHelpers.GetModel(id);
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
+            var model = CashHelpers.GetModel(id);
             //BoxItem model = CashHelpers.GetBoxItem(id);
-            if (model.Percu > 0)
-            {
-                return;
-            }
-            DialogResult msg = MessageBox.Show(this, @"ANNULER OPERATION?", @"SUPPRESSION", MessageBoxButtons.YesNo,
+            if (model.Percu > 0) return;
+            var msg = MessageBox.Show(this, @"ANNULER OPERATION?", @"SUPPRESSION", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if (msg != DialogResult.Yes)
-            {
-                return;
-            }
+            if (msg != DialogResult.Yes) return;
             DiaryHelpers.Cancel(id);
         }
 

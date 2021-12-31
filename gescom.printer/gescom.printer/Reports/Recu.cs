@@ -1,9 +1,10 @@
-﻿using gescom.data.Models;
-using System;
+﻿using System;
+using DevExpress.XtraReports.UI;
+using gescom.data.Models;
 
 namespace gescom.printer.Reports
 {
-    public partial class Recu : DevExpress.XtraReports.UI.XtraReport
+    public partial class Recu : XtraReport
     {
         public Recu()
         {
@@ -44,12 +45,12 @@ namespace gescom.printer.Reports
             adressekil.Text = info.Adresse;
             num.Text = "N° " + StdCalcul.DoubleToSpaceFormat(info.Id);
             double x = 0;
-            if (info.Rendu != null) x = (double)info.Rendu;
+            if (info.Rendu != null) x = (double) info.Rendu;
             rendu.Text = StdCalcul.DoubleToSpaceFormat(x);
-            if (info.Montant != null) x = (double)info.Montant;
+            if (info.Montant != null) x = (double) info.Montant;
             valeur.Text = info.Montant2;
             somme.Text = info.Montant2;
-            if (info.Percu != null) x = (double)info.Percu;
+            if (info.Percu != null) x = (double) info.Percu;
             percu.Text = StdCalcul.DoubleToSpaceFormat(x);
             //
             DataSource = info.ListElem;

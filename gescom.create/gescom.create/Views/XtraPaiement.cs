@@ -1,8 +1,8 @@
-﻿using DevExpress.XtraEditors;
+﻿using System;
+using DevExpress.XtraEditors;
 using gescom.create.Models;
 using gescom.data.Models;
 using gescom.printer;
-using System;
 
 namespace gescom.create.Views
 {
@@ -38,16 +38,10 @@ namespace gescom.create.Views
 
         private void grillage_DoubleClick(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
             CreateHelpers.ConsulteDetailCaisse(id);
         }
 
@@ -58,14 +52,8 @@ namespace gescom.create.Views
 
         private void Percu_EditValueChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Percu.Text))
-            {
-                return;
-            }
-            if (string.IsNullOrEmpty(Montant.Text))
-            {
-                return;
-            }
+            if (string.IsNullOrEmpty(Percu.Text)) return;
+            if (string.IsNullOrEmpty(Montant.Text)) return;
             encaisse.Enabled = false;
             float percu;
             try
@@ -76,11 +64,9 @@ namespace gescom.create.Views
             {
                 return;
             }
-            if (percu <= 0)
-            {
-                return;
-            }
-            float rendu = percu - float.Parse(myMontant.Text);
+
+            if (percu <= 0) return;
+            var rendu = percu - float.Parse(myMontant.Text);
             if (rendu >= 0)
             {
                 Rendu.Text = StdCalcul.DoubleToSpaceFormat(rendu);
@@ -90,10 +76,10 @@ namespace gescom.create.Views
 
         private void encaisse_Click(object sender, EventArgs e)
         {
-            long id = long.Parse(myNum.Text);
-            float percu = float.Parse(Percu.Text);
-           
-            _cash = ApiModel.GetCasher(id);//
+            var id = long.Parse(myNum.Text);
+            var percu = float.Parse(Percu.Text);
+
+            _cash = ApiModel.GetCasher(id); //
             _cash.Percu = percu;
             //
             PrintHelpers.PrintReceipt(_cash);
@@ -106,16 +92,10 @@ namespace gescom.create.Views
 
         private void grillage_Click(object sender, EventArgs e)
         {
-            string text = myNum.Text;
-            if (text == null)
-            {
-                return;
-            }
-            long id = long.Parse(text);
-            if (id == 0)
-            {
-                return;
-            }
+            var text = myNum.Text;
+            if (text == null) return;
+            var id = long.Parse(text);
+            if (id == 0) return;
         }
 
         private void XtraPaiement_Activated(object sender, EventArgs e)

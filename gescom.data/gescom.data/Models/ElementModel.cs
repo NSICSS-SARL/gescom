@@ -24,10 +24,11 @@ namespace gescom.data.Models
             var result = new List<ElementModel>();
             foreach (var model in liste)
             {
-                model.Prix = PriceHelpers.GetPrixItem(model.Id);
-                result.Add(model);
+            
+                    model.Prix = PriceHelpers.GetPrixItem(model.Id);
+                    result.Add(model);
+                          
             }
-
             return result;
         }
 

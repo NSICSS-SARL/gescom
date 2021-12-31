@@ -6,189 +6,32 @@
       <change beforePath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../GBASE/GBASE/obj/Debug/GBASE.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GOPER/.vs/GOPER/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../GOPER/.vs/GOPER/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../GOPER/GOPER/obj/Debug/GOPER.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gescom.create/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gescom.create/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/Models/CreateHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Models/CreateHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Models/ErrorHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Models/ErrorHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/CustomerAdress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/CustomerAdress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/CustomerAdress.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/CustomerAdress.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/DxDate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/DxDate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/DxDate.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/DxDate.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListGlobal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListGlobal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListGlobal.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListGlobal.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListPerson.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListPerson.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListResume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListResume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListResume.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListResume.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/ListState.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/ListState.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraAnalyse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraAnalyse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraAnalyse.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraAnalyse.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraArticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraArticle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraArticle.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraArticle.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraCaisse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraCaisse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraCaisse.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraCaisse.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraChoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraChoice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraChoice.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraChoice.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraChoix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraChoix.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraChoix.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraChoix.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraComment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraComment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraComment.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraComment.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraComptable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraComptable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraCompte.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraCompte.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraCompte.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraCompte.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDeclaration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDeclaration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDeclaration.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDeclaration.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDetail.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDetail.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDiary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDiary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDiary.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDiary.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDispatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDispatch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDispatch.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDispatch.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDist.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraDist.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraDist.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraEntree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraEntree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraEntree.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraEntree.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraFiche.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraFiche.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraFind.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraFind.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraFind.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraFind.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraFusion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraFusion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraFusion.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraFusion.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraGlobal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraGlobal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraGlobal.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraGlobal.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraGroup.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraGroup.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraJournal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraJournal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraJournal.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraJournal.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraMag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraMag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraMag.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraMag.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraMessage.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraMessage.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraOperation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraOperation.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraOperation.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraOrder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraOrder.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraOrder.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPaiement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPaiement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPaiement.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPaiement.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPeriode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPeriode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPeriode.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPeriode.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPerson.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPerson.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPrime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPrime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPrime.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPrime.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPrint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPrint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraPrint.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraPrint.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraProd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraProd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraProd.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraProd.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gescom.create/Properties/licenses.licx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Properties/licenses.licx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraRegBonus.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraVente.cs" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraVente.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/Views/XtraVente.resx" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/Views/XtraVente.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/gescom.create.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/gescom.create.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.AssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.GenerateResource.Cache" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.csproj.GenerateResource.Cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.dll" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/gescom.create/obj/Debug/gescom.create.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ActeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ActeModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ActionModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ActionModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ApiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ApiModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ArticleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ArticleModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/CashModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/CashModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DataGescom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DataGescom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DateModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DateModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DiaryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DiaryModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DistModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/DistModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ElementModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ElementModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/EventsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/EventsModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/FamilleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/FamilleModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/IData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/IData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/OperationModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/OperationModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PersonModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PersonModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PlaceModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PlaceModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PriceModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/PriceModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ProdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ProdModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ReparationModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/ReparationModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/RetailModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/RetailModels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/SituationItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/SituationItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/StdCalcul.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/StdCalcul.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/TarifModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/TarifModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/UniteModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Models/UniteModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/gescom.data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/gescom.data.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/obj/Debug/gescom.data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/obj/Debug/gescom.data.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.data/gescom.data/obj/Debug/gescom.data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.data/gescom.data/obj/Debug/gescom.data.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/DataReport.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/DataReport.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/BonDirect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/BonDirect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/BonDirect.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/BonDirect.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/ReportBonDir.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/ReportBonDir.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/ReportBonDir.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/ReportBonDir.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/Ticket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/Ticket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/Ticket.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Drafts/Ticket.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/PrintModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/PrintModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Recu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Recu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Recu.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Recu.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Report58.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Report58.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Report58.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/Report58.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/ReportBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/ReportBonus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/ReportBonus.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/ReportBonus.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/TicketDirect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/TicketDirect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/TicketDirect.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/TicketDirect.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonCommande.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonCommande.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonCommande.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonCommande.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonus.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraBonus.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraCommandes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraCommandes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraCommandes.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraCommandes.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraDemande.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraDemande.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraDemande.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraDemande.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraRecu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraRecu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraRecu.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/Reports/XtraRecu.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/gescom.printer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/gescom.printer.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.GenerateResource.Cache" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.csproj.GenerateResource.Cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.printer/gescom.printer/obj/Debug/gescom.printer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/DataReport.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/DataReport.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Extensions/ReportHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Extensions/ReportHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCaisse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCaisse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCaisse.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCaisse.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCompte.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCompte.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCompte.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCompte.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCustomer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCustomer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportCustomer.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportCustomer.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDeclare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDeclare.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDeclare.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDeclare.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDetail.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDetail.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDiary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDiary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportDiary.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportDiary.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportFacture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportFacture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportFacture.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportFacture.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportGlobal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportGlobal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportGlobal.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportGlobal.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportJournal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportJournal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportJournal.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportJournal.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportPerson.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportPerson.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportStock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportStock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/Reports/ReportStock.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/Reports/ReportStock.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/gescom.report.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/gescom.report.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.GenerateResource.Cache" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.csproj.GenerateResource.Cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../gescom.report/obj/Debug/gescom.report.pdb" afterDir="false" />
     </list>
@@ -221,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640758075413</updated>
       <workItem from="1640758135257" duration="33000" />
-      <workItem from="1640950007623" duration="1868000" />
+      <workItem from="1640950007623" duration="4131000" />
     </task>
     <servers />
   </component>

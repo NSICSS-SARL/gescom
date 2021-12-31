@@ -93,6 +93,9 @@ namespace gescom.create.Views
                 case -9:
                     _title = @"DEMANDE DE PRIX";
                     break;
+                default:
+                    _title = @"DESTOCKAGE";
+                    break;
             }
 
             Text = _title;
@@ -270,6 +273,12 @@ namespace gescom.create.Views
         {
             if (_elements.Count == 0) return;
 
+            if(_index == -10)
+            {
+                ActionHelpers.DoDestock(_elements);
+                Close();
+            }
+
             if (_index >= -7 && _index <= -3)
             {
                 ActionHelpers.DoActions(_elements, _index);
@@ -355,6 +364,11 @@ namespace gescom.create.Views
 
         private void XtraVente_Load(object sender, EventArgs e)
         {
+            if(_index <= -10)
+            {
+                _myList = OperationHelpers.GetDestockList().ToList();
+                return;
+            }
             if (_index <= -3 && _index >= -7)
             {
                 _myList = OperationHelpers.GetModelList().ToList();

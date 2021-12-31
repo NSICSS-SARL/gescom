@@ -138,7 +138,7 @@ namespace gescom.data.Models
             item.Faster = prior;
             item.AEntre = entrer;
             item.APrix = tarifer;
-            item.L = mask;
+            //item.L = mask;
             //item.T1 = tache;
             item.B1 = b1;
             item.B2 = b2;

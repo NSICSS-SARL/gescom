@@ -130,5 +130,10 @@ namespace GBASE
         {
             CreateHelpers.ShowFormels();
         }
+
+        private void destockBtn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CreateHelpers.Destockage();
+        }
     }
 }

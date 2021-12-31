@@ -130,6 +130,9 @@ namespace gescom.data.Models
                 case 5:
                     result = DoSteal(elements);
                     break;
+                case 10:
+                    result =DoDestock(elements);
+                    break;
             }
 
             return result;
@@ -160,6 +163,20 @@ namespace gescom.data.Models
             }
 
             var model = new CashModel(diary, item, total) {Groupe = 0};
+            return CashHelpers.Create(model);
+        }
+
+        public static long  DoDestock(List<ElementModel> elements)
+        {
+            var diary = new DiaryModel(10, -10);
+            foreach (var elt in elements)
+            {
+                elt.Prix = 0;
+                elt.Pid = -10;                            
+                ToAdd(elt, diary);              
+            }           
+            DiaryHelpers.Create(diary);
+            var model = new CashModel(diary, -10, 0) { Groupe = 10 };
             return CashHelpers.Create(model);
         }
 

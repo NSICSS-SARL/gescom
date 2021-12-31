@@ -72,8 +72,13 @@ namespace gescom.data.Models
             var result = new List<OperationModel>();
             foreach (var element in GetCart(item))
             {
-                element.Wid = wid;
-                result.Add(element);
+                var duo = ArticleHelpers.GetDuo(element.Ndx);
+                if(duo.L == 1 || duo.L == null)
+                {
+                    element.Wid = wid;
+                    result.Add(element);
+                }
+              
             }
 
             return result;
@@ -118,6 +123,24 @@ namespace gescom.data.Models
                 result.Add(element);
             }
 
+            return result;
+        }
+
+        public static IEnumerable<OperationModel> GetDestockList()
+        {
+            var result = new List<OperationModel>();
+            var context = new DataGescomDataContext();
+            var liste = context.OperationEntries.ToList();
+            foreach (var item in liste)
+            {
+                var d = ArticleHelpers.GetDuo(item.Ndx);
+                if(d.L > 0)
+                {
+                    var model = new OperationModel();
+                    model.Copy(item);
+                    result.Add(model);
+                }               
+            }
             return result;
         }
 

@@ -56,12 +56,12 @@
             this.buttonVente = new DevExpress.XtraBars.BarButtonItem();
             this.buttonGrave = new DevExpress.XtraBars.BarButtonItem();
             this.buttonNormal = new DevExpress.XtraBars.BarButtonItem();
+            this.destockBtn = new DevExpress.XtraBars.BarButtonItem();
             this.Accueil = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.basePage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.resumePage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageActe = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tiersPage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.destockBtn = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.buttonArticle,
             this.buttonCustomer,
             this.buttonVendor,
@@ -96,7 +97,6 @@
             this.buttonVente,
             this.buttonGrave,
             this.buttonNormal,
-            this.ribbonControl1.SearchEditItem,
             this.destockBtn});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 34;
@@ -362,6 +362,15 @@
             this.buttonNormal.Name = "buttonNormal";
             this.buttonNormal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonNormal_ItemClick);
             // 
+            // destockBtn
+            // 
+            this.destockBtn.Caption = "Destockage";
+            this.destockBtn.Id = 33;
+            this.destockBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.Image")));
+            this.destockBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.LargeImage")));
+            this.destockBtn.Name = "destockBtn";
+            this.destockBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.destockBtn_ItemClick);
+            // 
             // Accueil
             // 
             this.Accueil.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -415,14 +424,6 @@
             this.tiersPage.ItemLinks.Add(this.buttonTaxe);
             this.tiersPage.Name = "tiersPage";
             this.tiersPage.Text = "EXTERNES";
-            // 
-            // destockBtn
-            // 
-            this.destockBtn.Caption = "Destockage";
-            this.destockBtn.Id = 33;
-            this.destockBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.Image")));
-            this.destockBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("destockBtn.ImageOptions.LargeImage")));
-            this.destockBtn.Name = "destockBtn";
             // 
             // MainForm
             // 

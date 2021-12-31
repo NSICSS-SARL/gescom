@@ -2022,10 +2022,10 @@
             this.radioMoyen.AutoSize = true;
             this.radioMoyen.Location = new System.Drawing.Point(115, 20);
             this.radioMoyen.Name = "radioMoyen";
-            this.radioMoyen.Size = new System.Drawing.Size(89, 17);
+            this.radioMoyen.Size = new System.Drawing.Size(68, 17);
             this.radioMoyen.TabIndex = 1;
             this.radioMoyen.TabStop = true;
-            this.radioMoyen.Text = "Demi-masqué";
+            this.radioMoyen.Text = "STK MAG";
             this.radioMoyen.UseVisualStyleBackColor = true;
             // 
             // radioBas

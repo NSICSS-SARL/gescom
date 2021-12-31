@@ -213,6 +213,12 @@ namespace gescom.create.Models
             f.Show();
         }
 
+        public static void Destockage()
+        {
+            var f = new XtraVente(-10);
+            f.Show();
+        }
+
         public static void Fusion(long id)
         {
             var f = new XtraFusion(id);

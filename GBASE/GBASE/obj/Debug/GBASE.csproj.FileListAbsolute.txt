@@ -92,3 +92,4 @@ C:\Users\patdimby\Documents\GitHub\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.Cor
 C:\Users\patdimby\Documents\GitHub\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.CopyComplete
 C:\Users\patdimby\Documents\GitHub\gescom\GBASE\GBASE\obj\Debug\GBASE.exe
 C:\Users\patdimby\Documents\GitHub\gescom\GBASE\GBASE\obj\Debug\GBASE.pdb
+C:\Users\patdimby\Documents\GitHub\gescom\GBASE\GBASE\obj\Debug\GBASE.csproj.AssemblyReference.cache

@@ -53,8 +53,8 @@
             // 
             // pageSearch
             // 
+            this.pageSearch.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.pageSearch.Name = "pageSearch";
-            this.pageSearch.ShowCaptionButton = false;
             this.pageSearch.Text = "RECHERCHE";
             // 
             // ribbonPageCategory1
@@ -221,7 +221,8 @@
             this.comptage,
             this.demande,
             this.encaisse,
-            this.barVueCaisse});
+            this.barVueCaisse,
+            this.rubanControl.SearchEditItem});
             this.rubanControl.Location = new System.Drawing.Point(0, 0);
             this.rubanControl.MaxItemId = 15;
             this.rubanControl.Name = "rubanControl";
@@ -230,7 +231,7 @@
             this.rubanControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rubanPage});
             this.rubanControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.rubanControl.Size = new System.Drawing.Size(448, 143);
+            this.rubanControl.Size = new System.Drawing.Size(448, 158);
             // 
             // MainForm
             // 
@@ -240,7 +241,7 @@
             this.ClientSize = new System.Drawing.Size(448, 232);
             this.Controls.Add(this.rubanControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("MainForm.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Ribbon = this.rubanControl;

@@ -699,6 +699,7 @@ namespace gescom.data.Models
         public float Vvente { get; set; }
         public float Vvol { get; set; }
         public long Wid { get; set; }
+        public string CompleteCode { get; set; }
 
         public void Copy(OperationEntry item)
         {
@@ -706,6 +707,7 @@ namespace gescom.data.Models
             {
                 return;
             }
+            CompleteCode = item.CompleteCode;
             Signal = item.Signal;
             StateCommande = item.StateCommande;
             Fcode = item.Fcode;
@@ -813,6 +815,7 @@ namespace gescom.data.Models
             {
                 return;
             }
+            CompleteCode = item.CompleteCode;
             Fcode = item.Fcode;
             StateCommande = item.StateCommande;
             OtherInfo = item.OtherInfo;
@@ -930,6 +933,7 @@ namespace gescom.data.Models
             {
                 return;
             }
+            CompleteCode = item.CompleteCode;
             Fcode = item.Fcode;
             StateCommande = item.StateCommande;
             OtherInfo = item.OtherInfo;
@@ -1036,6 +1040,7 @@ namespace gescom.data.Models
         public void Copy(OperationModel model)
         {
             Ndx = model.Ndx;
+            CompleteCode = model.CompleteCode;
             StateCommande = model.StateCommande;
             OtherInfo = model.OtherInfo;
             Codage = model.Codage;

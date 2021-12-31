@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraRegBonus));
             this.tete = new DevExpress.XtraEditors.PanelControl();
+            this.DateVente = new DevExpress.XtraEditors.DateEdit();
+            this.DateAchat = new DevExpress.XtraEditors.DateEdit();
             this.cumDispo = new DevExpress.XtraEditors.LabelControl();
             this.labom = new DevExpress.XtraEditors.LabelControl();
             this.cumVente = new DevExpress.XtraEditors.LabelControl();
@@ -37,12 +39,6 @@
             this.cumAchat = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.leNom = new DevExpress.XtraEditors.LabelControl();
-            this.labiNom = new DevExpress.XtraEditors.LabelControl();
-            this.codage = new DevExpress.XtraEditors.LabelControl();
-            this.codex = new DevExpress.XtraEditors.LabelControl();
-            this.nombre = new DevExpress.XtraEditors.LabelControl();
-            this.labelNums = new DevExpress.XtraEditors.LabelControl();
             this.cadre = new DevExpress.XtraEditors.PanelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.QcomEdit = new DevExpress.XtraEditors.TextEdit();
@@ -133,6 +129,7 @@
             this.creer = new DevExpress.XtraEditors.SimpleButton();
             this.panelTrans = new DevExpress.XtraEditors.PanelControl();
             this.groupRed = new System.Windows.Forms.GroupBox();
+            this.radioSPD = new System.Windows.Forms.RadioButton();
             this.dangerBtn = new System.Windows.Forms.RadioButton();
             this.commRS = new System.Windows.Forms.RadioButton();
             this.commCMD = new System.Windows.Forms.RadioButton();
@@ -187,9 +184,17 @@
             this.radioMoyen = new System.Windows.Forms.RadioButton();
             this.radioBas = new System.Windows.Forms.RadioButton();
             this.chkEpuise = new DevExpress.XtraEditors.CheckEdit();
-            this.radioSPD = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.suspendBtn = new System.Windows.Forms.RadioButton();
+            this.stopBtn = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.percText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateAchat.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateAchat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadre)).BeginInit();
             this.cadre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QcomEdit.Properties)).BeginInit();
@@ -254,11 +259,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkArret.Properties)).BeginInit();
             this.visibleBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkEpuise.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tete
             // 
             this.tete.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.tete.Controls.Add(this.DateVente);
+            this.tete.Controls.Add(this.DateAchat);
             this.tete.Controls.Add(this.cumDispo);
             this.tete.Controls.Add(this.labom);
             this.tete.Controls.Add(this.cumVente);
@@ -266,12 +274,6 @@
             this.tete.Controls.Add(this.cumAchat);
             this.tete.Controls.Add(this.labelControl5);
             this.tete.Controls.Add(this.textBox1);
-            this.tete.Controls.Add(this.leNom);
-            this.tete.Controls.Add(this.labiNom);
-            this.tete.Controls.Add(this.codage);
-            this.tete.Controls.Add(this.codex);
-            this.tete.Controls.Add(this.nombre);
-            this.tete.Controls.Add(this.labelNums);
             this.tete.Dock = System.Windows.Forms.DockStyle.Top;
             this.tete.Location = new System.Drawing.Point(0, 0);
             this.tete.LookAndFeel.SkinName = "Office 2013";
@@ -280,13 +282,39 @@
             this.tete.Size = new System.Drawing.Size(1246, 52);
             this.tete.TabIndex = 0;
             // 
+            // DateVente
+            // 
+            this.DateVente.EditValue = null;
+            this.DateVente.Location = new System.Drawing.Point(709, 17);
+            this.DateVente.Name = "DateVente";
+            this.DateVente.Properties.AllowFocused = false;
+            this.DateVente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateVente.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateVente.Size = new System.Drawing.Size(100, 20);
+            this.DateVente.TabIndex = 14;
+            // 
+            // DateAchat
+            // 
+            this.DateAchat.EditValue = null;
+            this.DateAchat.Location = new System.Drawing.Point(347, 16);
+            this.DateAchat.Name = "DateAchat";
+            this.DateAchat.Properties.AllowFocused = false;
+            this.DateAchat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateAchat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateAchat.Size = new System.Drawing.Size(100, 20);
+            this.DateAchat.TabIndex = 13;
+            // 
             // cumDispo
             // 
             this.cumDispo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cumDispo.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
             this.cumDispo.Appearance.Options.UseFont = true;
             this.cumDispo.Appearance.Options.UseForeColor = true;
-            this.cumDispo.Location = new System.Drawing.Point(682, 20);
+            this.cumDispo.Location = new System.Drawing.Point(914, 10);
             this.cumDispo.Name = "cumDispo";
             this.cumDispo.Size = new System.Drawing.Size(15, 29);
             this.cumDispo.TabIndex = 12;
@@ -296,7 +324,7 @@
             // 
             this.labom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labom.Appearance.Options.UseFont = true;
-            this.labom.Location = new System.Drawing.Point(613, 29);
+            this.labom.Location = new System.Drawing.Point(845, 19);
             this.labom.Name = "labom";
             this.labom.Size = new System.Drawing.Size(58, 13);
             this.labom.TabIndex = 11;
@@ -308,7 +336,7 @@
             this.cumVente.Appearance.ForeColor = System.Drawing.Color.DarkBlue;
             this.cumVente.Appearance.Options.UseFont = true;
             this.cumVente.Appearance.Options.UseForeColor = true;
-            this.cumVente.Location = new System.Drawing.Point(427, 20);
+            this.cumVente.Location = new System.Drawing.Point(544, 10);
             this.cumVente.Name = "cumVente";
             this.cumVente.Size = new System.Drawing.Size(15, 29);
             this.cumVente.TabIndex = 10;
@@ -318,7 +346,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(377, 29);
+            this.labelControl11.Location = new System.Drawing.Point(494, 19);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(39, 13);
             this.labelControl11.TabIndex = 9;
@@ -330,7 +358,7 @@
             this.cumAchat.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
             this.cumAchat.Appearance.Options.UseFont = true;
             this.cumAchat.Appearance.Options.UseForeColor = true;
-            this.cumAchat.Location = new System.Drawing.Point(101, 20);
+            this.cumAchat.Location = new System.Drawing.Point(198, 11);
             this.cumAchat.Name = "cumAchat";
             this.cumAchat.Size = new System.Drawing.Size(15, 29);
             this.cumAchat.TabIndex = 8;
@@ -340,7 +368,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(53, 29);
+            this.labelControl5.Location = new System.Drawing.Point(150, 20);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(39, 13);
             this.labelControl5.TabIndex = 7;
@@ -348,76 +376,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 3);
+            this.textBox1.Location = new System.Drawing.Point(11, 13);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 21);
+            this.textBox1.Size = new System.Drawing.Size(108, 21);
             this.textBox1.TabIndex = 0;
-            // 
-            // leNom
-            // 
-            this.leNom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.leNom.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
-            this.leNom.Appearance.Options.UseFont = true;
-            this.leNom.Appearance.Options.UseForeColor = true;
-            this.leNom.Location = new System.Drawing.Point(426, 7);
-            this.leNom.Name = "leNom";
-            this.leNom.Size = new System.Drawing.Size(9, 13);
-            this.leNom.TabIndex = 5;
-            this.leNom.Text = "A";
-            this.leNom.Visible = false;
-            // 
-            // labiNom
-            // 
-            this.labiNom.Location = new System.Drawing.Point(368, 6);
-            this.labiNom.Name = "labiNom";
-            this.labiNom.Size = new System.Drawing.Size(48, 13);
-            this.labiNom.TabIndex = 4;
-            this.labiNom.Text = "Nom initial";
-            this.labiNom.Visible = false;
-            // 
-            // codage
-            // 
-            this.codage.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.codage.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.codage.Appearance.Options.UseFont = true;
-            this.codage.Appearance.Options.UseForeColor = true;
-            this.codage.Location = new System.Drawing.Point(178, 5);
-            this.codage.Name = "codage";
-            this.codage.Size = new System.Drawing.Size(7, 13);
-            this.codage.TabIndex = 3;
-            this.codage.Text = "C";
-            // 
-            // codex
-            // 
-            this.codex.Location = new System.Drawing.Point(122, 5);
-            this.codex.Name = "codex";
-            this.codex.Size = new System.Drawing.Size(25, 13);
-            this.codex.TabIndex = 2;
-            this.codex.Text = "Code";
-            this.codex.ToolTip = "Code produit.";
-            this.codex.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.nombre.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.nombre.Appearance.Options.UseFont = true;
-            this.nombre.Appearance.Options.UseForeColor = true;
-            this.nombre.Location = new System.Drawing.Point(67, 5);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(7, 13);
-            this.nombre.TabIndex = 1;
-            this.nombre.Text = "0";
-            // 
-            // labelNums
-            // 
-            this.labelNums.Location = new System.Drawing.Point(14, 5);
-            this.labelNums.Name = "labelNums";
-            this.labelNums.Size = new System.Drawing.Size(37, 13);
-            this.labelNums.TabIndex = 0;
-            this.labelNums.Text = "Numéro";
-            this.labelNums.ToolTip = "Identificateur du produit en cours";
-            this.labelNums.Visible = false;
             // 
             // cadre
             // 
@@ -710,25 +672,22 @@
             // 
             // vprime
             // 
-            this.vprime.BackGroundColor = System.Drawing.SystemColors.Window;
             this.vprime.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.vprime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.vprime.Enabled = false;
             this.vprime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vprime.ForeColor = System.Drawing.SystemColors.WindowText;
             this.vprime.IntegerValue = ((long)(0));
             this.vprime.Location = new System.Drawing.Point(96, 144);
-            this.vprime.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.vprime.MinimumSize = new System.Drawing.Size(4, 18);
             this.vprime.Name = "vprime";
-            this.vprime.NullString = "";
             this.vprime.PositiveColor = System.Drawing.Color.Blue;
             this.vprime.ReadOnly = true;
             this.vprime.SelectAllOnFocus = false;
             this.vprime.Size = new System.Drawing.Size(113, 21);
-            this.vprime.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.vprime.TabIndex = 13;
-            this.vprime.Text = "0";
             this.vprime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.vprime.ThemeName = "Default";
             // 
             // labelrim
             // 
@@ -740,105 +699,90 @@
             // 
             // pextra
             // 
-            this.pextra.BackGroundColor = System.Drawing.SystemColors.Window;
             this.pextra.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.pextra.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pextra.Enabled = false;
             this.pextra.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pextra.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pextra.IntegerValue = ((long)(0));
             this.pextra.Location = new System.Drawing.Point(96, 117);
-            this.pextra.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.pextra.MinimumSize = new System.Drawing.Size(4, 18);
             this.pextra.Name = "pextra";
-            this.pextra.NullString = "";
             this.pextra.ReadOnly = true;
             this.pextra.SelectAllOnFocus = false;
             this.pextra.Size = new System.Drawing.Size(113, 21);
-            this.pextra.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.pextra.TabIndex = 12;
-            this.pextra.Text = "0";
             this.pextra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pextra.ThemeName = "Default";
             // 
             // pspecial
             // 
-            this.pspecial.BackGroundColor = System.Drawing.SystemColors.Window;
             this.pspecial.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.pspecial.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pspecial.Enabled = false;
             this.pspecial.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pspecial.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pspecial.IntegerValue = ((long)(0));
             this.pspecial.Location = new System.Drawing.Point(96, 92);
-            this.pspecial.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.pspecial.Name = "pspecial";
-            this.pspecial.NullString = "";
             this.pspecial.ReadOnly = true;
             this.pspecial.SelectAllOnFocus = false;
             this.pspecial.Size = new System.Drawing.Size(113, 21);
-            this.pspecial.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.pspecial.TabIndex = 11;
-            this.pspecial.Text = "0";
             this.pspecial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pspecial.ThemeName = "Default";
             // 
             // pdetail
             // 
-            this.pdetail.BackGroundColor = System.Drawing.SystemColors.Window;
             this.pdetail.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.pdetail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pdetail.Enabled = false;
             this.pdetail.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pdetail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pdetail.IntegerValue = ((long)(0));
             this.pdetail.Location = new System.Drawing.Point(96, 42);
-            this.pdetail.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.pdetail.MinimumSize = new System.Drawing.Size(4, 18);
             this.pdetail.Name = "pdetail";
-            this.pdetail.NullString = "";
             this.pdetail.ReadOnly = true;
             this.pdetail.SelectAllOnFocus = false;
             this.pdetail.Size = new System.Drawing.Size(113, 21);
-            this.pdetail.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.pdetail.TabIndex = 9;
-            this.pdetail.Text = "0";
             this.pdetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pdetail.ThemeName = "Default";
             // 
             // pgros
             // 
-            this.pgros.BackGroundColor = System.Drawing.SystemColors.Window;
             this.pgros.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.pgros.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pgros.Enabled = false;
             this.pgros.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pgros.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pgros.IntegerValue = ((long)(0));
             this.pgros.Location = new System.Drawing.Point(96, 67);
-            this.pgros.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.pgros.Name = "pgros";
-            this.pgros.NullString = "";
             this.pgros.ReadOnly = true;
             this.pgros.SelectAllOnFocus = false;
             this.pgros.Size = new System.Drawing.Size(113, 21);
-            this.pgros.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.pgros.TabIndex = 10;
-            this.pgros.Text = "0";
             this.pgros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pgros.ThemeName = "Default";
             // 
             // revient
             // 
-            this.revient.BackGroundColor = System.Drawing.SystemColors.Window;
             this.revient.BeforeTouchSize = new System.Drawing.Size(113, 21);
             this.revient.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.revient.Enabled = false;
             this.revient.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revient.ForeColor = System.Drawing.SystemColors.WindowText;
             this.revient.IntegerValue = ((long)(0));
             this.revient.Location = new System.Drawing.Point(96, 17);
-            this.revient.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.revient.Name = "revient";
-            this.revient.NullString = "";
             this.revient.ReadOnly = true;
             this.revient.SelectAllOnFocus = false;
             this.revient.Size = new System.Drawing.Size(113, 21);
-            this.revient.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.revient.TabIndex = 8;
-            this.revient.Text = "0";
             this.revient.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.revient.ThemeName = "Default";
             // 
             // labelXtra
             // 
@@ -1511,6 +1455,17 @@
             this.groupRed.TabStop = false;
             this.groupRed.Text = "SITUATIONS COMMANDE";
             // 
+            // radioSPD
+            // 
+            this.radioSPD.AutoSize = true;
+            this.radioSPD.ForeColor = System.Drawing.Color.Red;
+            this.radioSPD.Location = new System.Drawing.Point(210, 20);
+            this.radioSPD.Name = "radioSPD";
+            this.radioSPD.Size = new System.Drawing.Size(44, 17);
+            this.radioSPD.TabIndex = 3;
+            this.radioSPD.Text = "SPD";
+            this.radioSPD.UseVisualStyleBackColor = true;
+            // 
             // dangerBtn
             // 
             this.dangerBtn.AutoSize = true;
@@ -1884,7 +1839,7 @@
             this.colorBox.Controls.Add(this.questionBtn);
             this.colorBox.Location = new System.Drawing.Point(3, 177);
             this.colorBox.Name = "colorBox";
-            this.colorBox.Size = new System.Drawing.Size(286, 43);
+            this.colorBox.Size = new System.Drawing.Size(187, 43);
             this.colorBox.TabIndex = 3;
             this.colorBox.TabStop = false;
             this.colorBox.Text = "SITUATIONS V/PRODUIT";
@@ -1906,7 +1861,7 @@
             // 
             this.superBtn.AutoSize = true;
             this.superBtn.ForeColor = System.Drawing.Color.Green;
-            this.superBtn.Location = new System.Drawing.Point(110, 20);
+            this.superBtn.Location = new System.Drawing.Point(66, 20);
             this.superBtn.Name = "superBtn";
             this.superBtn.Size = new System.Drawing.Size(53, 17);
             this.superBtn.TabIndex = 1;
@@ -1917,7 +1872,7 @@
             // 
             this.questionBtn.AutoSize = true;
             this.questionBtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.questionBtn.Location = new System.Drawing.Point(210, 20);
+            this.questionBtn.Location = new System.Drawing.Point(136, 19);
             this.questionBtn.Name = "questionBtn";
             this.questionBtn.Size = new System.Drawing.Size(46, 17);
             this.questionBtn.TabIndex = 2;
@@ -2092,16 +2047,59 @@
             this.chkEpuise.Size = new System.Drawing.Size(75, 19);
             this.chkEpuise.TabIndex = 2;
             // 
-            // radioSPD
+            // groupBox1
             // 
-            this.radioSPD.AutoSize = true;
-            this.radioSPD.ForeColor = System.Drawing.Color.Red;
-            this.radioSPD.Location = new System.Drawing.Point(210, 20);
-            this.radioSPD.Name = "radioSPD";
-            this.radioSPD.Size = new System.Drawing.Size(44, 17);
-            this.radioSPD.TabIndex = 3;
-            this.radioSPD.Text = "SPD";
-            this.radioSPD.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.suspendBtn);
+            this.groupBox1.Controls.Add(this.stopBtn);
+            this.groupBox1.Location = new System.Drawing.Point(195, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 42);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
+            // suspendBtn
+            // 
+            this.suspendBtn.AutoSize = true;
+            this.suspendBtn.ForeColor = System.Drawing.Color.Red;
+            this.suspendBtn.Location = new System.Drawing.Point(82, 16);
+            this.suspendBtn.Name = "suspendBtn";
+            this.suspendBtn.Size = new System.Drawing.Size(72, 17);
+            this.suspendBtn.TabIndex = 1;
+            this.suspendBtn.TabStop = true;
+            this.suspendBtn.Text = "Suspendu";
+            this.suspendBtn.UseVisualStyleBackColor = true;
+            // 
+            // stopBtn
+            // 
+            this.stopBtn.AutoSize = true;
+            this.stopBtn.ForeColor = System.Drawing.Color.DarkViolet;
+            this.stopBtn.Location = new System.Drawing.Point(165, 16);
+            this.stopBtn.Name = "stopBtn";
+            this.stopBtn.Size = new System.Drawing.Size(47, 17);
+            this.stopBtn.TabIndex = 2;
+            this.stopBtn.Text = "Stop";
+            this.stopBtn.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.Green;
+            this.radioButton1.Location = new System.Drawing.Point(13, 16);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(42, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "R.S";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // percText
+            // 
+            this.percText.Location = new System.Drawing.Point(426, 193);
+            this.percText.Name = "percText";
+            this.percText.Size = new System.Drawing.Size(61, 21);
+            this.percText.TabIndex = 11;
             // 
             // XtraRegBonus
             // 
@@ -2110,6 +2108,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
             this.ClientSize = new System.Drawing.Size(1246, 658);
+            this.Controls.Add(this.percText);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelAvDern);
             this.Controls.Add(this.groupBleu);
             this.Controls.Add(this.colorBox);
@@ -2131,6 +2131,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tete)).EndInit();
             this.tete.ResumeLayout(false);
             this.tete.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateAchat.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateAchat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadre)).EndInit();
             this.cadre.ResumeLayout(false);
             this.cadre.PerformLayout();
@@ -2209,17 +2213,16 @@
             this.visibleBox.ResumeLayout(false);
             this.visibleBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkEpuise.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private DevExpress.XtraEditors.PanelControl tete;
-        private DevExpress.XtraEditors.LabelControl codage;
-        private DevExpress.XtraEditors.LabelControl codex;
-        private DevExpress.XtraEditors.LabelControl nombre;
-        private DevExpress.XtraEditors.LabelControl labelNums;
         private DevExpress.XtraEditors.PanelControl cadre;
         private DevExpress.XtraEditors.CheckEdit formel;
         private System.Windows.Forms.ComboBox unity;
@@ -2322,8 +2325,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl cumDispo;
         private DevExpress.XtraEditors.LabelControl labom;
-        private DevExpress.XtraEditors.LabelControl leNom;
-        private DevExpress.XtraEditors.LabelControl labiNom;
         private DevExpress.XtraEditors.LabelControl reponse;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit katalog;
@@ -2374,5 +2375,12 @@
         private DevExpress.XtraEditors.CheckEdit rienButton;
         private DevExpress.XtraEditors.CheckEdit chkCommande;
         private System.Windows.Forms.RadioButton radioSPD;
+        private DevExpress.XtraEditors.DateEdit DateAchat;
+        private DevExpress.XtraEditors.DateEdit DateVente;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton suspendBtn;
+        private System.Windows.Forms.RadioButton stopBtn;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox percText;
     }
 }

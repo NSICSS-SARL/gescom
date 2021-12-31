@@ -84,7 +84,6 @@
             this.colComm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFourniss = new DevExpress.XtraGrid.Columns.GridColumn();
             this.myNum = new DevExpress.XtraEditors.LabelControl();
-            this.datertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilleView)).BeginInit();
@@ -110,10 +109,9 @@
             // 
             this.clicDroit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.créationToolStripMenuItem,
-            this.comparerToolStripMenuItem,
-            this.datertoolStripMenuItem});
+            this.comparerToolStripMenuItem});
             this.clicDroit.Name = "clicDroit";
-            this.clicDroit.Size = new System.Drawing.Size(191, 70);
+            this.clicDroit.Size = new System.Drawing.Size(191, 48);
             // 
             // créationToolStripMenuItem
             // 
@@ -814,13 +812,6 @@
             this.myNum.TabIndex = 6;
             this.myNum.Text = "0";
             // 
-            // datertoolStripMenuItem
-            // 
-            this.datertoolStripMenuItem.Name = "datertoolStripMenuItem";
-            this.datertoolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.datertoolStripMenuItem.Text = "Dateur";
-            this.datertoolStripMenuItem.Click += new System.EventHandler(this.daterToolStripMenuItem_Click);
-            // 
             // XtraComment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -900,6 +891,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colACA;
         private DevExpress.XtraGrid.Columns.GridColumn colComm;
         private DevExpress.XtraGrid.Columns.GridColumn colFourniss;
-        private System.Windows.Forms.ToolStripMenuItem datertoolStripMenuItem;
     }
 }

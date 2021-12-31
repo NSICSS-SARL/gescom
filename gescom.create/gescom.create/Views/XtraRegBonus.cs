@@ -470,10 +470,7 @@ namespace gescom.create.Views
                 ErrorHelpers.ShowError("ERREUR GENERAL.");
                 return;
             }
-            labelNums.Visible = true;
-            codex.Visible = true;
-            labiNom.Visible = true;
-            leNom.Visible = true;
+           
             _articleItem = _articleRepository.Get(id);
             if (_articleItem.Ig == null)
             {
@@ -516,10 +513,7 @@ namespace gescom.create.Views
                 formel.Checked = true;
             }
             unity.SelectedIndex = index - 1;
-            nombre.Text = _articleItem.Id.ToString(CultureInfo.InvariantCulture);
-            codage.Text = fcode;
-            textBox1.Text = fcode;
-            leNom.Text = _articleItem.Nom;
+            textBox1.Text = _operation.CompleteCode;
             nom.Text = _articleItem.Nom;
             Text = _articleItem.Nom;
             refce.Text = _articleItem.Refce;
@@ -778,6 +772,8 @@ namespace gescom.create.Views
             cumAchat.Text = _operation.Qachat.ToString("#,#");
             cumVente.Text = _operation.Qvente.ToString("#,#");
             cumDispo.Text = _operation.QStock.ToString("#,#");
+            DateAchat.DateTime = (DateTime)_operation.DateAchat;
+            DateVente.DateTime = (DateTime)_operation.DateVente;
             txt1.Text = _operation.T1;
             b1.Text = _operation.B1;
             distObs.Text = _operation.B2;

@@ -429,6 +429,10 @@ namespace gescom.data.Models
             query.ExecuterQuery();
             sb.Clear();
             SituationHelpers.Create(Id);
+            commande = "INSERT INTO GulpItem(Id) VALUES (" + Id + ")";
+            query.Command.CommandText = commande;
+            query.ExecuterQuery();
+            commande = "";
             /*sb.Append("INSERT INTO SituationItem VALUES('");
             sb.Append(Id);
             sb.Append("','','');");

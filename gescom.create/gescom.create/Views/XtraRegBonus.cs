@@ -40,7 +40,7 @@ namespace gescom.create.Views
 
         public XtraRegBonus(long id)
         {
-            InitializeComponent();
+            InitializeComponent();           
             _prodId = id;
             _vendors = PersonHelpers.GetVendorsList();
             _articleRepository = new ArticleRepository();
@@ -55,13 +55,14 @@ namespace gescom.create.Views
             _acte = new ActeModel(ActeHelpers.Get(id));
             _voir = new VoirModel(VoirHelpers.Get(id));
             _etatPrix = _voir.VoirPrix;
-            _etatEntre = _voir.VoirEntre;
+            _etatEntre = _voir.VoirEntre;          
             DistInit();
             ArticleInit(id);
             ProdInit();
             OperInit();
             CheckInit();
             CheckState(id);
+            GulpInit(id);
         }
 
         public long ActicleId { get; set; }
@@ -72,14 +73,14 @@ namespace gescom.create.Views
         {
             if (string.IsNullOrEmpty(nom.Text) || string.IsNullOrEmpty(refce.Text) ||
                 string.IsNullOrEmpty(plancher.Text) ||
-                string.IsNullOrEmpty(prix.Text))
+                string.IsNullOrEmpty(prixBase.Text))
                 return false;
             pdetail.PositiveColor = Color.Black;
             if (coeff.Value <= 0 || mgros.Value <= 0) return false;
             double prAch;
             try
             {
-                prAch = double.Parse(prix.Text);
+                prAch = double.Parse(prixBase.Text);
             }
             catch (Exception)
             {
@@ -145,7 +146,7 @@ namespace gescom.create.Views
             if (!ArticleIsValid) return false;
             if (ActicleId == 0) return false;
             var primeRate = StdCalcul.DecimalToFloat(txPrime.Value);
-            _tarifModel.SetMarge(_tarifModel.Id, float.Parse(prix.Text), coeff.Value, mgros.Value, mdetail.Value,
+            _tarifModel.SetMarge(_tarifModel.Id, float.Parse(prixBase.Text), coeff.Value, mgros.Value, mdetail.Value,
                 mSpecial.Value,
                 mExtra.Value, taxable.Checked, primeRate);
             _tarifModel.SafeUpdate();
@@ -225,18 +226,18 @@ namespace gescom.create.Views
                 return false;
             }
 
-            if (string.IsNullOrEmpty(prodQte.Text))
+            if (string.IsNullOrEmpty(Q1.Text))
             {
                 ErrorHelpers.ShowError("La quantité ne peut être nulle.");
-                prodQte.Focus();
+                Q1.Focus();
                 return false;
             }
 
-            test = StdCalcul.DoubleConversion(prodQte.Text);
+            test = StdCalcul.DoubleConversion(Q1.Text);
             if (!test)
             {
                 ErrorHelpers.ShowError("Valeur incorrecte.");
-                prodQte.Focus();
+                Q1.Focus();
                 return false;
             }
 
@@ -282,7 +283,7 @@ namespace gescom.create.Views
             model.Rq = prodRq.Text;
             model.Nom = prodNom.Text;
             model.Refce = prodRefce.Text;
-            model.Quantite = float.Parse(prodQte.Text);
+            model.Quantite = float.Parse(Q1.Text);
             model.Prix = float.Parse(prodPrix.Text);
             model.Iu = StdCalcul.GetUnityId(prodUnity.Text);
             model.Pid = StdCalcul.GetVendorId(prodVend.Text);
@@ -427,6 +428,28 @@ namespace gescom.create.Views
             ArticleIsValid = false;
         }
 
+        private void SetUnity(ref System.Windows.Forms.ComboBox unite, int i)
+        {
+          
+            string name = "";
+            if (i != 0) { name = UniteHelpers.GetName(i); }
+            else { unite.Items.Add(name); }
+            int index = -1;
+            int count = 0;
+            foreach (var variable in UniteHelpers.GetListUnites())
+            {
+                unite.Items.Add(variable);
+                count++;
+                if (variable == name) index = count;
+            }
+            if (i == 0)
+            {
+                unite.SelectedIndex = 0;
+            }
+            else
+            { unite.SelectedIndex = index - 1; }
+        }
+
         private void ArticleInit(long id)
         {
             ActicleId = id;
@@ -476,7 +499,7 @@ namespace gescom.create.Views
             taxable.Checked = _articleItem.Taxable == 1;
             plancher.Text = _articleItem.Seuil.ToString();
             _tarifModel.ReadFast(id);
-            prix.Text = Math.Round(_tarifModel.Exonere.Achat).ToString(CultureInfo.InvariantCulture);
+            prixBase.Text = Math.Round(_tarifModel.Exonere.Achat).ToString(CultureInfo.InvariantCulture);
             coeff.Value = StdCalcul.DoubleToDecimal(_tarifModel.Marge.Revient);
             mgros.Value = StdCalcul.DoubleToDecimal(_tarifModel.Marge.Gros);
             mdetail.Value = StdCalcul.DoubleToDecimal(_tarifModel.Marge.Detail);
@@ -503,7 +526,7 @@ namespace gescom.create.Views
             {
                 case "CMD":
                     commCMD.Checked = true;
-                    cmdCheck.Checked = true;
+                    C1.Checked = true;
                     break;
                 case "SPD":
                     radioSPD.Checked = true;
@@ -539,7 +562,7 @@ namespace gescom.create.Views
             var cce = "";
             var frns = "";
             if (commCMD.Checked) cce = "CMD";
-            if (cmdCheck.Checked) cce = "CMD";
+            if (C1.Checked) cce = "CMD";
             if (radioSPD.Checked) cce = "SPD";
             if (dangerBtn.Checked) cce = "STOP";
             if (radioRupt.Checked) frns = "En rupture";
@@ -626,6 +649,11 @@ namespace gescom.create.Views
             var b = false;
             b = DistCreer();
             if (!b) return;
+            if(_prodId > 0)
+            {
+               GulpCheck();
+            }          
+            if (!b) return;
             ArticleVerifier();
             ArticleCreer();
             OperSave();
@@ -686,8 +714,8 @@ namespace gescom.create.Views
 
         private void OperInit()
         {
-            dateMode.Text = _operation.D1.ToString("f");
-            dateReact.Text = _operation.D2.ToString("f");
+           // dateMode.Text = _operation.D1.ToString("f");
+           // dateReact.Text = _operation.D2.ToString("f");
             cumAchat.Text = _operation.Qachat.ToString("#,#");
             cumVente.Text = _operation.Qvente.ToString("#,#");
             cumDispo.Text = _operation.QStock.ToString("#,#");
@@ -696,7 +724,7 @@ namespace gescom.create.Views
             txt1.Text = _operation.T1;
             b1.Text = _operation.B1;
             distObs.Text = _operation.B2;
-            q1.Text = _operation.Q1.ToString("####");
+            QA.Text = _operation.Q1.ToString("####");
             s1.Text = _operation.S1;
             if (_duo.Faster == 1)
                 checkPrior.Checked = true;
@@ -723,7 +751,7 @@ namespace gescom.create.Views
             float p;
             try
             {
-                p = float.Parse(q1.Text);
+                p = float.Parse(QA.Text);
             }
             catch (Exception)
             {
@@ -793,7 +821,7 @@ namespace gescom.create.Views
             var item = ProdHelpers.Get(_prodId);
             prodNom.Text = item.Nom;
             prodRefce.Text = item.Refce;
-            prodQte.Text = item.Quantite.ToString();
+            Q1.Text = item.Quantite.ToString();
             prodPrix.Text = item.Prix.ToString();
             prodDesk.Text = item.Description;
             prodRq.Text = item.Rq;
@@ -849,6 +877,164 @@ namespace gescom.create.Views
         private void XtraRegBonus_Load(object sender, EventArgs e)
         {
             nom.Focus();
+        }
+
+        private void GulpCheck()
+        {
+            var model = new GulpModel()
+            {
+                Id = _articleItem.Id
+            };          
+            model.Copy(GulpHelpers.Get(_articleItem.Id));
+            model.C1 = C1.Checked;
+            model.C2 = C2.Checked;
+            model.C3 = C3.Checked;
+            model.C4 = C4.Checked;
+            model.L1 = L1.Text;
+            model.L2 = L2.Text;
+            model.L3 = L3.Text;
+            bool res;
+            int a=0;
+            if (Q1.Text.Length > 0)
+            {
+                res = int.TryParse(Q1.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }                     
+            model.Q1 = a;
+            if (Q2.Text.Length > 0)
+            {
+                res = int.TryParse(Q2.Text, out a);
+                if (!res)
+                {
+                   a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.Q2 = a;
+            if (Q3.Text.Length > 0)
+            {
+                res = int.TryParse(Q3.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.Q3 = a;
+            if (Q4.Text.Length > 0)
+            {
+                res = int.TryParse(Q4.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.P2 = a;
+            if (P2.Text.Length > 0)
+            {
+                res = int.TryParse(P2.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.P2 = a;
+            if (P3.Text.Length > 0)
+            {
+                res = int.TryParse(P3.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.P3 = a;
+            if (!string.IsNullOrEmpty(U2.Text)) { model.U2 = StdCalcul.GetUnityId(U2.Text); }
+            if (!string.IsNullOrEmpty(U3.Text)) { model.U3 = StdCalcul.GetUnityId(U3.Text); }
+            if (!string.IsNullOrEmpty(U4.Text)) { model.U4 = StdCalcul.GetUnityId(U4.Text); }
+            if (!string.IsNullOrEmpty(D1.Text)) { model.D1 = D1.DateTime; }
+            if (!string.IsNullOrEmpty(D2.Text)) { model.D2 = D2.DateTime; }
+            //CultureInfo provider = CultureInfo.InvariantCulture;
+            if (!string.IsNullOrEmpty(D3.Text))
+            {
+                try
+                {
+                   model.D3 = DateTime.Parse(D3.Text);
+                }
+                catch(Exception)
+                {
+                    model.D3 = null;
+                }
+            }
+            if (!string.IsNullOrEmpty(D4.Text))
+            {
+                try
+                {
+                    model.D4 = DateTime.Parse(D4.Text);
+                }
+                catch (Exception)
+                {
+                    model.D4 = null;
+                }
+            }
+            GulpHelpers.Update(model);
+        }
+
+        private void GulpInit(long id)
+        {
+            var gulp = GulpHelpers.Get(id);
+            if (gulp.C1) { C1.Checked = true; }
+            if (gulp.C2) { C2.Checked = true; }
+            if (gulp.C3) { C3.Checked = true; }
+            if (gulp.C4) { C4.Checked = true; }
+            Q1.Text = gulp.Q1.ToString();
+            Q2.Text = gulp.Q2.ToString();
+            Q3.Text = gulp.Q3.ToString();
+            Q4.Text = gulp.Q4.ToString();
+            L1.Text = gulp.L1;
+            L2.Text = gulp.L2;
+            L3.Text = gulp.L3;
+            P2.Text = gulp.P2.ToString();
+            P3.Text = gulp.P3.ToString();
+            if (gulp.D1 != null) { D1.DateTime = (DateTime)gulp.D1; }
+            if (gulp.D2 != null) { D1.DateTime = (DateTime)gulp.D2; }
+            D3.Text = gulp.D3.ToString();
+            D4.Text = gulp.D4.ToString();
+            SetUnity(ref U2, gulp.U2);
+            SetUnity(ref U3, gulp.U3);
+            SetUnity(ref U4, gulp.U4);
+        }
+
+        private void C1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (C1.Checked) { D1.DateTime = DateTime.Now; }
+            else { D1.Text=""; }
+        }
+
+        private void C2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (C2.Checked) { D2.DateTime = DateTime.Now; }
+            else { D2.Text = ""; }
         }
     }
 }

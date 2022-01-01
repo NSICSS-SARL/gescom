@@ -2,7 +2,7 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 50.375" name="DataGescom">
   <DataContextMoniker Name="/DataGescomDataContext" />
   <nestedChildShapes>
-    <classShape Id="f5e87689-2aa3-46f4-854f-667133414ef1" absoluteBounds="9.25, 5.5, 2, 1.7708968098958327">
+    <classShape Id="f5e87689-2aa3-46f4-854f-667133414ef1" absoluteBounds="9.25, 5.5, 2, 1.7708968098958326">
       <DataClassMoniker Name="/DataGescomDataContext/EventsItem" />
       <nestedChildShapes>
         <elementListCompartment Id="b599d1b8-0abc-4f3f-8900-0a7fd10e539b" absoluteBounds="9.265, 5.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
@@ -408,6 +408,12 @@
       <DataClassMoniker Name="/DataGescomDataContext/OperationItem" />
       <nestedChildShapes>
         <elementListCompartment Id="6e3ed759-7f39-40fa-ae4c-c10cace65809" absoluteBounds="11.64, 16.835, 1.9700000000000002, 20.825642903645832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a784cfb-7d2a-417f-a932-4912b8db2934" absoluteBounds="7, 35.75, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/DataGescomDataContext/GulpItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d58668b-1f4a-44c5-a51e-b69e15f335e8" absoluteBounds="7.015, 36.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

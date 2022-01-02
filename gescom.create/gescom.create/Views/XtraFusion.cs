@@ -9,6 +9,8 @@ namespace gescom.create.Views
     {
         private readonly long _id;
         private readonly DistItem _item;
+        private GulpItem _gulp;
+
         private readonly ActeModel _acte;
         private DuoItem _duo;
         private long _numeroPlace;
@@ -31,7 +33,7 @@ namespace gescom.create.Views
             InitializeComponent();
             _item = new DistItem();
             _duo = new DuoItem();
-            // _t = null;
+            _gulp = new GulpItem();
         }
 
         public XtraFusion(long id)
@@ -40,6 +42,7 @@ namespace gescom.create.Views
             _item = DistHelpers.Get(id);
             _acte = new ActeModel(ActeHelpers.Get(id));
             _voir = VoirHelpers.Get(id);
+            _gulp = GulpHelpers.Get(id);
             var operation = OperationHelpers.Get(id);
             cumDispo.Text = operation.QStock.ToString("#,#");
             _id = id;
@@ -67,7 +70,7 @@ namespace gescom.create.Views
         private void creer_Click(object sender, EventArgs e)
         {
             float quantite = 0;
-            if (!checkEntre.Checked && _x == -1)
+            if (!C5.Checked && _x == -1)
             {
                 _x = 1;
                 _voir.VoirEntre = false;
@@ -86,22 +89,67 @@ namespace gescom.create.Views
                 _voir.VoirPrior = false;
                 _z = 1;
             }
-
-            /*  if (_t == 1)
-              {
-                  if (!radioMoyen.Checked)
-                  {
-                      _t = null;
-                  }
-              }
-              else
-              {
-                  _t = null;
-              }
-              */
-            if (!string.IsNullOrEmpty(q1.Text)) quantite = float.Parse(q1.Text);
+            var arrivage = 0;
+            if (!string.IsNullOrEmpty(Q6.Text)) arrivage= int.Parse(Q6.Text);
+            if (!string.IsNullOrEmpty(H6.Text)) quantite = int.Parse(H6.Text);
             var message = s1.Text;
-            ArticleHelpers.UpdateFusion(_id, "tache", message, b1.Text, b2.Text, _x, _y, quantite, _z);
+            ArticleHelpers.UpdateFusion(_id, "tache", message, b1.Text, b2.Text, _x, _y, quantite,arrivage, _z);
+            var a = 0;
+            bool res;
+            if (C4.Checked)
+            {
+                _gulp.D6 = DateTime.Now;
+                if (H4.Text.Length > 0)
+                {
+                    res = int.TryParse(H4.Text, out a);
+                    if (!res)
+                    {
+                        a = 0;
+                    }
+                }
+                else
+                {
+                    a = 0;
+                }
+                _gulp.H4 = a;
+            }
+            if (C5.Checked)
+            {
+               _gulp.D7 = DateTime.Now;
+                if (H6.Text.Length > 0)
+                {
+                    res = int.TryParse(H6.Text, out a);
+                    if (!res)
+                    {
+                        a = 0;
+                    }
+                }
+                else
+                {
+                    a = 0;
+                }
+                _gulp.H6 = a;
+                if (a > 0)
+                {
+                    _gulp.C5 = false;
+                }
+            }             
+            var model = new GulpModel()
+            {
+                Id = _id
+            };
+            model.Copy(_gulp);
+            if (!string.IsNullOrEmpty(Q4.Text)) arrivage = int.Parse(Q4.Text);
+            if (!string.IsNullOrEmpty(H4.Text)) quantite = int.Parse(H4.Text);           
+            if (arrivage >= quantite)
+            {               
+                if(arrivage == quantite)
+                {
+                    model.C4=false;
+                    
+                } 
+            }
+            GulpHelpers.Update(model);
             _item.Numero = PlaceHelpers.GetId(distNewPlace.Text);
             if (_item.Numero == null) return;
             var n = (long) _item.Numero;
@@ -139,15 +187,16 @@ namespace gescom.create.Views
             b2.Text = _duo.B2;
             _x = 0;
             _y = 0;
-            _z = 0;
-            /*  if (_duo.L == 1)
-              {
-                  _t = 1;
-                  radioMoyen.Checked = true;
-              }*/
+            _z = 0;          
+            Q4.Text = _gulp.Q4.ToString("####");
+            Q6.Text = _gulp.Q6.ToString("####");
+            H4N.Text=_gulp.H4.ToString("####");
+            H6N.Text = _gulp.H6.ToString("####");
+            C4.Checked = _gulp.C4;
+            C5.Checked = _gulp.C5;
             if (_voir.VoirEntre)
             {
-                checkEntre.Checked = true;
+               
                 _acte.Entrer = -1;
                 _x = -1;
             }
@@ -178,14 +227,13 @@ namespace gescom.create.Views
             }
 
             s.Text = _duo.S2;
-            q.Text = StdCalcul.DoubleToSpaceFormat(_duo.Q2);
+          
             s1.Text = _duo.S1;
-            q1.Value = StdCalcul.DoubleToDecimal(_duo.Q1);
-
+         
             s.Text = _duo.S1;
-            q.Text = StdCalcul.DoubleToSpaceFormat(_duo.Q1);
+        
             s1.Text = _duo.S2;
-            q1.Value = StdCalcul.DoubleToDecimal(_duo.Q2);
+          
             //
             nombre.Text = StdCalcul.Spacing(_item.Id.ToString(CultureInfo.InvariantCulture));
             var article = ArticleHelpers.Get(_item.Id);

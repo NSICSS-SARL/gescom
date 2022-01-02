@@ -241,18 +241,18 @@ namespace gescom.create.Views
                 return false;
             }
 
-            if (string.IsNullOrEmpty(prodPrix.Text))
+            if (string.IsNullOrEmpty(P2.Text))
             {
                 ErrorHelpers.ShowError("Le prix ne peut être nul.");
-                prodPrix.Focus();
+                P2.Focus();
                 return false;
             }
 
-            test = StdCalcul.DoubleConversion(prodPrix.Text);
+            test = StdCalcul.DoubleConversion(P2.Text);
             if (!test)
             {
                 ErrorHelpers.ShowError("Valeur incorrecte.");
-                prodPrix.Focus();
+                P2.Focus();
                 return false;
             }
 
@@ -284,7 +284,7 @@ namespace gescom.create.Views
             model.Nom = prodNom.Text;
             model.Refce = prodRefce.Text;
             model.Quantite = float.Parse(Q1.Text);
-            model.Prix = float.Parse(prodPrix.Text);
+            model.Prix = float.Parse(P2.Text);
             model.Iu = StdCalcul.GetUnityId(prodUnity.Text);
             model.Pid = StdCalcul.GetVendorId(prodVend.Text);
             if (chkCommande.Checked)
@@ -407,7 +407,7 @@ namespace gescom.create.Views
                 _acte.Entrer = 0;
                 _voir.VoirEntre = false;
             }
-
+          
             _voir.CheckCommande = false;
             if (chkCommande.Checked) _voir.CheckCommande = true;
             _acte.Qcder = double.Parse(QcomEdit.Text);
@@ -524,11 +524,10 @@ namespace gescom.create.Views
             var commerce = state.Commerce;
             switch (commerce)
             {
-                case "CMD":
-                    commCMD.Checked = true;
+                case "CMD":                  
                     C1.Checked = true;
                     break;
-                case "SPD":
+                case "Suspendu":
                     radioSPD.Checked = true;
                     break;
                 case "STOP":
@@ -560,10 +559,9 @@ namespace gescom.create.Views
         public void SituationSave()
         {
             var cce = "";
-            var frns = "";
-            if (commCMD.Checked) cce = "CMD";
-            if (C1.Checked) cce = "CMD";
-            if (radioSPD.Checked) cce = "SPD";
+            var frns = "";           
+            //if (C1.Checked) cce = "CMD";
+            if (radioSPD.Checked) cce = "Suspendu";
             if (dangerBtn.Checked) cce = "STOP";
             if (radioRupt.Checked) frns = "En rupture";
             if (radioPuise.Checked) frns = "Epuisé";
@@ -649,11 +647,6 @@ namespace gescom.create.Views
             var b = false;
             b = DistCreer();
             if (!b) return;
-            if(_prodId > 0)
-            {
-               GulpCheck();
-            }          
-            if (!b) return;
             ArticleVerifier();
             ArticleCreer();
             OperSave();
@@ -662,6 +655,10 @@ namespace gescom.create.Views
             ActeSave();
             b = ProdSave();
             if (!b) return;
+            if (_prodId > 0)
+            {
+                GulpCheck();
+            }
             Close();
         }
 
@@ -713,18 +710,17 @@ namespace gescom.create.Views
         }
 
         private void OperInit()
-        {
-           // dateMode.Text = _operation.D1.ToString("f");
-           // dateReact.Text = _operation.D2.ToString("f");
+        {         
             cumAchat.Text = _operation.Qachat.ToString("#,#");
             cumVente.Text = _operation.Qvente.ToString("#,#");
             cumDispo.Text = _operation.QStock.ToString("#,#");
             DateAchat.DateTime = _operation.DateAchat;
-            DateVente.DateTime = _operation.DateVente;
-            txt1.Text = _operation.T1;
-            b1.Text = _operation.B1;
-            distObs.Text = _operation.B2;
-            QA.Text = _operation.Q1.ToString("####");
+            DateVente.DateTime = _operation.DateVente;           
+            D3.Text = _operation.T1;
+            D4.Text = _operation.B1;
+            Q4.Text = _operation.Q2.ToString("####");
+            distObs.Text = _operation.B2;           
+            Q6.Text = _operation.Q1.ToString("####");
             s1.Text = _operation.S1;
             if (_duo.Faster == 1)
                 checkPrior.Checked = true;
@@ -748,15 +744,7 @@ namespace gescom.create.Views
 
         private void OperSave()
         {
-            float p;
-            try
-            {
-                p = float.Parse(QA.Text);
-            }
-            catch (Exception)
-            {
-                p = 0;
-            }
+            
 
             long x = -1;
             long y = -1;
@@ -793,8 +781,25 @@ namespace gescom.create.Views
             {
                 _voir.VoirPrior = false;
             }
-
-            ArticleHelpers.UpdateRecto(_prodId, txt1.Text, s1.Text, p, b1.Text, distObs.Text, x, y, z, _t);
+            float q = 0;
+            try
+            {
+                q = float.Parse(Q4.Text);
+            }
+            catch (Exception)
+            {
+                q = 0;
+            }
+            float p;
+            try
+            {
+                p = float.Parse(Q6.Text);
+            }
+            catch (Exception)
+            {
+                p = 0;
+            }
+            ArticleHelpers.UpdateRecto(_prodId, D3.Text, s1.Text, q, D4.Text, distObs.Text, x, y, z, _t, p);
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)
@@ -822,7 +827,8 @@ namespace gescom.create.Views
             prodNom.Text = item.Nom;
             prodRefce.Text = item.Refce;
             Q1.Text = item.Quantite.ToString();
-            prodPrix.Text = item.Prix.ToString();
+            //prodPrix.Text = item.Prix.ToString();
+            P2.Text = item.Prix.ToString();
             prodDesk.Text = item.Description;
             prodRq.Text = item.Rq;
             if (item.Iu == null) return;
@@ -879,7 +885,7 @@ namespace gescom.create.Views
             nom.Focus();
         }
 
-        private void GulpCheck()
+        private bool GulpCheck()
         {
             var model = new GulpModel()
             {
@@ -888,11 +894,13 @@ namespace gescom.create.Views
             model.Copy(GulpHelpers.Get(_articleItem.Id));
             model.C1 = C1.Checked;
             model.C2 = C2.Checked;
-            model.C3 = C3.Checked;
-            model.C4 = C4.Checked;
+            model.C3 = C3.Checked;           
             model.L1 = L1.Text;
             model.L2 = L2.Text;
             model.L3 = L3.Text;
+            model.H1 = H1.Text;
+            model.H2 = H2.Text;
+            model.H3 = H3.Text;
             bool res;
             int a=0;
             if (Q1.Text.Length > 0)
@@ -909,12 +917,8 @@ namespace gescom.create.Views
                 res = int.TryParse(Q2.Text, out a);
                 if (!res)
                 {
-                   a = 0;
+                    a = 0;
                 }
-            }
-            else
-            {
-                a = 0;
             }
             model.Q2 = a;
             if (Q3.Text.Length > 0)
@@ -942,10 +946,10 @@ namespace gescom.create.Views
             {
                 a = 0;
             }
-            model.P2 = a;
-            if (P2.Text.Length > 0)
+            model.Q4 = a;
+            if (Q6.Text.Length > 0)
             {
-                res = int.TryParse(P2.Text, out a);
+                res = int.TryParse(Q6.Text, out a);
                 if (!res)
                 {
                     a = 0;
@@ -955,7 +959,59 @@ namespace gescom.create.Views
             {
                 a = 0;
             }
-            model.P2 = a;
+            model.Q6 = a;
+            if (Q5.Text.Length > 0)
+            {
+                res = int.TryParse(Q5.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.Q5 = a;
+            if (H4.Text.Length > 0)
+            {
+                res = int.TryParse(H4.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.H4 = a;
+            if (H6.Text.Length > 0)
+            {
+                res = int.TryParse(H6.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.H6 = a;
+            if (P1.Text.Length > 0)
+            {
+                res = int.TryParse(P1.Text, out a);
+                if (!res)
+                {
+                    a = 0;
+                }
+            }
+            else
+            {
+                a = 0;
+            }
+            model.P1 = a;
             if (P3.Text.Length > 0)
             {
                 res = int.TryParse(P3.Text, out a);
@@ -974,52 +1030,49 @@ namespace gescom.create.Views
             if (!string.IsNullOrEmpty(U4.Text)) { model.U4 = StdCalcul.GetUnityId(U4.Text); }
             if (!string.IsNullOrEmpty(D1.Text)) { model.D1 = D1.DateTime; }
             if (!string.IsNullOrEmpty(D2.Text)) { model.D2 = D2.DateTime; }
-            //CultureInfo provider = CultureInfo.InvariantCulture;
-            if (!string.IsNullOrEmpty(D3.Text))
-            {
-                try
-                {
-                   model.D3 = DateTime.Parse(D3.Text);
-                }
-                catch(Exception)
-                {
-                    model.D3 = null;
-                }
-            }
-            if (!string.IsNullOrEmpty(D4.Text))
-            {
-                try
-                {
-                    model.D4 = DateTime.Parse(D4.Text);
-                }
-                catch (Exception)
-                {
-                    model.D4 = null;
-                }
-            }
-            GulpHelpers.Update(model);
+            if (!string.IsNullOrEmpty(D5.Text)) { model.D5 = D5.DateTime; }
+            if (!string.IsNullOrEmpty(D6.Text)) { model.D6 = D6.DateTime; }
+            if (!string.IsNullOrEmpty(D7.Text)) { model.D7 = D7.DateTime; }
+            model.C4 = C4.Checked;
+            model.C5 = C5.Checked;
+            return GulpHelpers.Update(model);
         }
 
         private void GulpInit(long id)
         {
             var gulp = GulpHelpers.Get(id);
-            if (gulp.C1) { C1.Checked = true; }
-            if (gulp.C2) { C2.Checked = true; }
-            if (gulp.C3) { C3.Checked = true; }
-            if (gulp.C4) { C4.Checked = true; }
+           C1.Checked = gulp.C1; 
+           C2.Checked = gulp.C2;
+            C3.Checked = gulp.C3;
+            C4.Checked = gulp.C4;
+            C5.Checked = gulp.C5;
             Q1.Text = gulp.Q1.ToString();
             Q2.Text = gulp.Q2.ToString();
             Q3.Text = gulp.Q3.ToString();
-            Q4.Text = gulp.Q4.ToString();
+            Q5.Text = gulp.Q5.ToString();            
             L1.Text = gulp.L1;
             L2.Text = gulp.L2;
             L3.Text = gulp.L3;
-            P2.Text = gulp.P2.ToString();
+            H1.Text = gulp.H1;
+            H2.Text = gulp.H2;
+            H3.Text = gulp.H3;
+            H4.Text = gulp.H4.ToString();
+            H6.Text = gulp.H6.ToString();
+            P1.Text = gulp.P1.ToString();
             P3.Text = gulp.P3.ToString();
             if (gulp.D1 != null) { D1.DateTime = (DateTime)gulp.D1; }
-            if (gulp.D2 != null) { D1.DateTime = (DateTime)gulp.D2; }
-            D3.Text = gulp.D3.ToString();
-            D4.Text = gulp.D4.ToString();
+            if (gulp.D2 != null) { D2.DateTime = (DateTime)gulp.D2; }
+            if (gulp.D5 != null) { D5.DateTime = (DateTime)gulp.D5; }
+            if (gulp.D6 != null) { D6.DateTime = (DateTime)gulp.D6; }
+            if (gulp.D7 != null) { D7.DateTime = (DateTime)gulp.D7; }
+            if (gulp.Q4 > 0)
+            {
+                Q4.Text = gulp.Q4.ToString();
+            }
+            if (gulp.Q6 > 0)
+            {
+                Q6.Text = gulp.Q6.ToString();
+            }
             SetUnity(ref U2, gulp.U2);
             SetUnity(ref U3, gulp.U3);
             SetUnity(ref U4, gulp.U4);
@@ -1027,14 +1080,22 @@ namespace gescom.create.Views
 
         private void C1_CheckedChanged(object sender, EventArgs e)
         {
-            if (C1.Checked) { D1.DateTime = DateTime.Now; }
-            else { D1.Text=""; }
+           D1.DateTime = DateTime.Now;
         }
 
         private void C2_CheckedChanged(object sender, EventArgs e)
         {
-            if (C2.Checked) { D2.DateTime = DateTime.Now; }
-            else { D2.Text = ""; }
+            D2.DateTime = DateTime.Now; 
+        }
+
+        private void C4_CheckedChanged(object sender, EventArgs e)
+        {
+           //
+        }
+
+        private void C5_CheckedChanged(object sender, EventArgs e)
+        {
+            D5.DateTime= DateTime.Now;
         }
     }
 }

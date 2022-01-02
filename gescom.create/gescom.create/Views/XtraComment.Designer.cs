@@ -83,6 +83,8 @@
             this.colACA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colComm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFourniss = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridCMD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQ5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.myNum = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
@@ -177,7 +179,9 @@
             this.colProj,
             this.colACA,
             this.colComm,
-            this.colFourniss});
+            this.colFourniss,
+            this.gridCMD,
+            this.colQ5});
             this.grilleView.GridControl = this.gridActions;
             this.grilleView.Name = "grilleView";
             this.grilleView.OptionsFilter.AllowFilterEditor = false;
@@ -204,7 +208,7 @@
             this.colCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Codage", "{0:n0}")});
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 7;
+            this.colCode.VisibleIndex = 8;
             // 
             // colPlace
             // 
@@ -214,7 +218,7 @@
             this.colPlace.FieldName = "Place";
             this.colPlace.Name = "colPlace";
             this.colPlace.Visible = true;
-            this.colPlace.VisibleIndex = 8;
+            this.colPlace.VisibleIndex = 9;
             this.colPlace.Width = 100;
             // 
             // colName
@@ -225,7 +229,7 @@
             this.colName.FieldName = "Designation";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 9;
+            this.colName.VisibleIndex = 10;
             this.colName.Width = 300;
             // 
             // colPrix
@@ -238,7 +242,7 @@
             this.colPrix.FieldName = "PDetail";
             this.colPrix.Name = "colPrix";
             this.colPrix.Visible = true;
-            this.colPrix.VisibleIndex = 12;
+            this.colPrix.VisibleIndex = 13;
             // 
             // colStock
             // 
@@ -258,7 +262,7 @@
             this.colStock.OptionsColumn.AllowFocus = false;
             this.colStock.OptionsColumn.FixedWidth = true;
             this.colStock.Visible = true;
-            this.colStock.VisibleIndex = 15;
+            this.colStock.VisibleIndex = 16;
             this.colStock.Width = 59;
             // 
             // colEst
@@ -272,7 +276,7 @@
             this.colEst.Name = "colEst";
             this.colEst.OptionsColumn.AllowFocus = false;
             this.colEst.Visible = true;
-            this.colEst.VisibleIndex = 33;
+            this.colEst.VisibleIndex = 30;
             // 
             // colPerv
             // 
@@ -285,7 +289,7 @@
             this.colPerv.Name = "colPerv";
             this.colPerv.OptionsColumn.AllowFocus = false;
             this.colPerv.Visible = true;
-            this.colPerv.VisibleIndex = 35;
+            this.colPerv.VisibleIndex = 37;
             // 
             // OtherInfo
             // 
@@ -295,7 +299,7 @@
             this.OtherInfo.FieldName = "OtherInfo";
             this.OtherInfo.Name = "OtherInfo";
             this.OtherInfo.Visible = true;
-            this.OtherInfo.VisibleIndex = 43;
+            this.OtherInfo.VisibleIndex = 45;
             this.OtherInfo.Width = 83;
             // 
             // colMag
@@ -306,7 +310,7 @@
             this.colMag.FieldName = "Magpref";
             this.colMag.Name = "colMag";
             this.colMag.Visible = true;
-            this.colMag.VisibleIndex = 31;
+            this.colMag.VisibleIndex = 34;
             this.colMag.Width = 106;
             // 
             // colCa
@@ -322,7 +326,7 @@
             this.colCa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qachat", "{0:n0}")});
             this.colCa.Visible = true;
-            this.colCa.VisibleIndex = 13;
+            this.colCa.VisibleIndex = 14;
             this.colCa.Width = 82;
             // 
             // colCv
@@ -338,7 +342,7 @@
             this.colCv.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qvente", "{0:n0}")});
             this.colCv.Visible = true;
-            this.colCv.VisibleIndex = 14;
+            this.colCv.VisibleIndex = 15;
             this.colCv.Width = 85;
             // 
             // colUnt
@@ -349,7 +353,7 @@
             this.colUnt.FieldName = "Unite";
             this.colUnt.Name = "colUnt";
             this.colUnt.Visible = true;
-            this.colUnt.VisibleIndex = 16;
+            this.colUnt.VisibleIndex = 17;
             this.colUnt.Width = 60;
             // 
             // colUF
@@ -360,7 +364,7 @@
             this.colUF.FieldName = "UNT_FRNS";
             this.colUF.Name = "colUF";
             this.colUF.Visible = true;
-            this.colUF.VisibleIndex = 34;
+            this.colUF.VisibleIndex = 36;
             // 
             // colDate
             // 
@@ -370,7 +374,7 @@
             this.colDate.FieldName = "T1";
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
-            this.colDate.VisibleIndex = 19;
+            this.colDate.VisibleIndex = 21;
             this.colDate.Width = 68;
             // 
             // colMessage
@@ -381,7 +385,7 @@
             this.colMessage.FieldName = "S1";
             this.colMessage.Name = "colMessage";
             this.colMessage.Visible = true;
-            this.colMessage.VisibleIndex = 27;
+            this.colMessage.VisibleIndex = 29;
             this.colMessage.Width = 154;
             // 
             // colReponse
@@ -392,32 +396,32 @@
             this.colReponse.FieldName = "S2";
             this.colReponse.Name = "colReponse";
             this.colReponse.Visible = true;
-            this.colReponse.VisibleIndex = 28;
+            this.colReponse.VisibleIndex = 33;
             this.colReponse.Width = 135;
             // 
             // colQte
             // 
             this.colQte.AppearanceHeader.Options.UseTextOptions = true;
             this.colQte.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colQte.Caption = "Qté-Achat";
+            this.colQte.Caption = "CMD-Envoyé";
             this.colQte.DisplayFormat.FormatString = "n0";
             this.colQte.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colQte.FieldName = "Q1";
             this.colQte.Name = "colQte";
             this.colQte.Visible = true;
-            this.colQte.VisibleIndex = 29;
+            this.colQte.VisibleIndex = 31;
             // 
             // colComptage
             // 
             this.colComptage.AppearanceHeader.Options.UseTextOptions = true;
             this.colComptage.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colComptage.Caption = "COMPTAGE";
+            this.colComptage.Caption = "Qté Entrée";
             this.colComptage.DisplayFormat.FormatString = "n0";
             this.colComptage.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colComptage.FieldName = "Q2";
             this.colComptage.Name = "colComptage";
             this.colComptage.Visible = true;
-            this.colComptage.VisibleIndex = 30;
+            this.colComptage.VisibleIndex = 32;
             // 
             // colB1
             // 
@@ -427,7 +431,7 @@
             this.colB1.FieldName = "B1";
             this.colB1.Name = "colB1";
             this.colB1.Visible = true;
-            this.colB1.VisibleIndex = 20;
+            this.colB1.VisibleIndex = 22;
             // 
             // colB2
             // 
@@ -437,7 +441,7 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 44;
+            this.colB2.VisibleIndex = 46;
             this.colB2.Width = 91;
             // 
             // colRem
@@ -448,7 +452,7 @@
             this.colRem.FieldName = "Remark";
             this.colRem.Name = "colRem";
             this.colRem.Visible = true;
-            this.colRem.VisibleIndex = 17;
+            this.colRem.VisibleIndex = 19;
             // 
             // colRq
             // 
@@ -458,7 +462,7 @@
             this.colRq.FieldName = "Remarque";
             this.colRq.Name = "colRq";
             this.colRq.Visible = true;
-            this.colRq.VisibleIndex = 18;
+            this.colRq.VisibleIndex = 20;
             // 
             // colObs
             // 
@@ -468,7 +472,7 @@
             this.colObs.FieldName = "Observation";
             this.colObs.Name = "colObs";
             this.colObs.Visible = true;
-            this.colObs.VisibleIndex = 38;
+            this.colObs.VisibleIndex = 40;
             // 
             // gridComment
             // 
@@ -482,7 +486,7 @@
             this.gridComment.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Vstock", "TOTAL={0:n0}")});
             this.gridComment.Visible = true;
-            this.gridComment.VisibleIndex = 47;
+            this.gridComment.VisibleIndex = 49;
             // 
             // gridLocal
             // 
@@ -492,7 +496,7 @@
             this.gridLocal.FieldName = "Localite";
             this.gridLocal.Name = "gridLocal";
             this.gridLocal.Visible = true;
-            this.gridLocal.VisibleIndex = 46;
+            this.gridLocal.VisibleIndex = 48;
             // 
             // colFrName
             // 
@@ -502,7 +506,7 @@
             this.colFrName.FieldName = "Nomfrns";
             this.colFrName.Name = "colFrName";
             this.colFrName.Visible = true;
-            this.colFrName.VisibleIndex = 32;
+            this.colFrName.VisibleIndex = 35;
             // 
             // colVoir
             // 
@@ -514,7 +518,7 @@
             this.colVoir.FieldName = "VoirPrix";
             this.colVoir.Name = "colVoir";
             this.colVoir.Visible = true;
-            this.colVoir.VisibleIndex = 24;
+            this.colVoir.VisibleIndex = 26;
             // 
             // colPrice
             // 
@@ -526,7 +530,7 @@
             this.colPrice.FieldName = "VoirEntre";
             this.colPrice.Name = "colPrice";
             this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 25;
+            this.colPrice.VisibleIndex = 27;
             // 
             // colopAch
             // 
@@ -538,7 +542,7 @@
             this.colopAch.FieldName = "Pachat";
             this.colopAch.Name = "colopAch";
             this.colopAch.Visible = true;
-            this.colopAch.VisibleIndex = 11;
+            this.colopAch.VisibleIndex = 12;
             // 
             // colCMD
             // 
@@ -555,7 +559,7 @@
             this.colCMD.OptionsColumn.AllowFocus = false;
             this.colCMD.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colCMD.Visible = true;
-            this.colCMD.VisibleIndex = 39;
+            this.colCMD.VisibleIndex = 41;
             // 
             // colTT
             // 
@@ -571,7 +575,7 @@
             this.colTT.OptionsColumn.AllowEdit = false;
             this.colTT.OptionsColumn.AllowFocus = false;
             this.colTT.Visible = true;
-            this.colTT.VisibleIndex = 22;
+            this.colTT.VisibleIndex = 24;
             // 
             // colRUPT
             // 
@@ -587,7 +591,7 @@
             this.colRUPT.OptionsColumn.AllowEdit = false;
             this.colRUPT.OptionsColumn.AllowFocus = false;
             this.colRUPT.Visible = true;
-            this.colRUPT.VisibleIndex = 41;
+            this.colRUPT.VisibleIndex = 43;
             // 
             // colSTOP
             // 
@@ -603,7 +607,7 @@
             this.colSTOP.OptionsColumn.AllowEdit = false;
             this.colSTOP.OptionsColumn.AllowFocus = false;
             this.colSTOP.Visible = true;
-            this.colSTOP.VisibleIndex = 42;
+            this.colSTOP.VisibleIndex = 44;
             // 
             // Familier
             // 
@@ -613,7 +617,7 @@
             this.Familier.FieldName = "Categorie";
             this.Familier.Name = "Familier";
             this.Familier.Visible = true;
-            this.Familier.VisibleIndex = 45;
+            this.Familier.VisibleIndex = 47;
             // 
             // RefCol
             // 
@@ -623,7 +627,7 @@
             this.RefCol.FieldName = "Refuse";
             this.RefCol.Name = "RefCol";
             this.RefCol.Visible = true;
-            this.RefCol.VisibleIndex = 37;
+            this.RefCol.VisibleIndex = 39;
             // 
             // cataCol
             // 
@@ -633,7 +637,7 @@
             this.cataCol.FieldName = "CATALOG";
             this.cataCol.Name = "cataCol";
             this.cataCol.Visible = true;
-            this.cataCol.VisibleIndex = 21;
+            this.cataCol.VisibleIndex = 23;
             // 
             // colMtestime
             // 
@@ -649,7 +653,7 @@
             this.colMtestime.UnboundExpression = "[PEstime] * [QEstime]";
             this.colMtestime.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.colMtestime.Visible = true;
-            this.colMtestime.VisibleIndex = 36;
+            this.colMtestime.VisibleIndex = 38;
             // 
             // coLumn
             // 
@@ -674,7 +678,7 @@
             this.coLumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "L", "{0}")});
             this.coLumn.Visible = true;
-            this.coLumn.VisibleIndex = 3;
+            this.coLumn.VisibleIndex = 4;
             this.coLumn.Width = 41;
             // 
             // gridColCheck
@@ -692,7 +696,7 @@
             this.gridColCheck.FieldName = "CheckCommande";
             this.gridColCheck.Name = "gridColCheck";
             this.gridColCheck.Visible = true;
-            this.gridColCheck.VisibleIndex = 40;
+            this.gridColCheck.VisibleIndex = 42;
             this.gridColCheck.Width = 53;
             // 
             // colPlacer
@@ -703,7 +707,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 26;
+            this.colPlacer.VisibleIndex = 28;
             // 
             // colVerif
             // 
@@ -713,7 +717,7 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 23;
+            this.colVerif.VisibleIndex = 25;
             // 
             // colState
             // 
@@ -727,7 +731,7 @@
             this.colState.FieldName = "State";
             this.colState.Name = "colState";
             this.colState.Visible = true;
-            this.colState.VisibleIndex = 4;
+            this.colState.VisibleIndex = 5;
             this.colState.Width = 46;
             // 
             // colVers
@@ -740,7 +744,7 @@
             this.colVers.FieldName = "Nomvers";
             this.colVers.Name = "colVers";
             this.colVers.Visible = true;
-            this.colVers.VisibleIndex = 10;
+            this.colVers.VisibleIndex = 11;
             // 
             // colSign
             // 
@@ -750,7 +754,7 @@
             this.colSign.FieldName = "AlertVte";
             this.colSign.Name = "colSign";
             this.colSign.Visible = true;
-            this.colSign.VisibleIndex = 0;
+            this.colSign.VisibleIndex = 1;
             this.colSign.Width = 61;
             // 
             // colProj
@@ -761,7 +765,7 @@
             this.colProj.FieldName = "AlertCom";
             this.colProj.Name = "colProj";
             this.colProj.Visible = true;
-            this.colProj.VisibleIndex = 2;
+            this.colProj.VisibleIndex = 3;
             this.colProj.Width = 66;
             // 
             // colACA
@@ -770,7 +774,7 @@
             this.colACA.FieldName = "AlertAch";
             this.colACA.Name = "colACA";
             this.colACA.Visible = true;
-            this.colACA.VisibleIndex = 1;
+            this.colACA.VisibleIndex = 2;
             this.colACA.Width = 61;
             // 
             // colComm
@@ -783,7 +787,7 @@
             this.colComm.FieldName = "Commerce";
             this.colComm.Name = "colComm";
             this.colComm.Visible = true;
-            this.colComm.VisibleIndex = 5;
+            this.colComm.VisibleIndex = 6;
             this.colComm.Width = 42;
             // 
             // colFourniss
@@ -796,8 +800,26 @@
             this.colFourniss.FieldName = "Fournisseur";
             this.colFourniss.Name = "colFourniss";
             this.colFourniss.Visible = true;
-            this.colFourniss.VisibleIndex = 6;
+            this.colFourniss.VisibleIndex = 7;
             this.colFourniss.Width = 42;
+            // 
+            // gridCMD
+            // 
+            this.gridCMD.Caption = "Ent-H";
+            this.gridCMD.FieldName = "CMD";
+            this.gridCMD.Name = "gridCMD";
+            this.gridCMD.Visible = true;
+            this.gridCMD.VisibleIndex = 0;
+            this.gridCMD.Width = 41;
+            // 
+            // colQ5
+            // 
+            this.colQ5.Caption = "% Vente";
+            this.colQ5.FieldName = "Q5";
+            this.colQ5.Name = "colQ5";
+            this.colQ5.Visible = true;
+            this.colQ5.VisibleIndex = 18;
+            this.colQ5.Width = 52;
             // 
             // myNum
             // 
@@ -891,5 +913,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colACA;
         private DevExpress.XtraGrid.Columns.GridColumn colComm;
         private DevExpress.XtraGrid.Columns.GridColumn colFourniss;
+        private DevExpress.XtraGrid.Columns.GridColumn gridCMD;
+        private DevExpress.XtraGrid.Columns.GridColumn colQ5;
     }
 }

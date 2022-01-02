@@ -94,7 +94,9 @@
             this.labelCof = new DevExpress.XtraEditors.LabelControl();
             this.prodCadre = new DevExpress.XtraEditors.PanelControl();
             this.katalog = new DevExpress.XtraEditors.TextEdit();
+            this.distLabelObs = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.b2 = new DevExpress.XtraEditors.TextEdit();
             this.prodDesk = new DevExpress.XtraEditors.TextEdit();
             this.prodVend = new System.Windows.Forms.ComboBox();
             this.prodLabelS = new DevExpress.XtraEditors.LabelControl();
@@ -110,10 +112,10 @@
             this.distLabelNom = new DevExpress.XtraEditors.LabelControl();
             this.prodLabelRef = new DevExpress.XtraEditors.LabelControl();
             this.prodLabelNom = new DevExpress.XtraEditors.LabelControl();
-            this.prodPrix = new DevExpress.XtraEditors.TextEdit();
+            this.P1 = new DevExpress.XtraEditors.TextEdit();
             this.prodLabelSeuil = new DevExpress.XtraEditors.LabelControl();
             this.Q1 = new DevExpress.XtraEditors.TextEdit();
-            this.prodUnity = new System.Windows.Forms.ComboBox();
+            this.U2 = new System.Windows.Forms.ComboBox();
             this.prodLabelUnite = new DevExpress.XtraEditors.LabelControl();
             this.prodRq = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -126,23 +128,9 @@
             this.distPlaceNew = new System.Windows.Forms.ComboBox();
             this.distLabelEvent = new DevExpress.XtraEditors.LabelControl();
             this.distLabelRef = new DevExpress.XtraEditors.LabelControl();
-            this.distLabelObs = new DevExpress.XtraEditors.LabelControl();
             this.dernier = new DevExpress.XtraEditors.PanelControl();
             this.annuler = new DevExpress.XtraEditors.SimpleButton();
             this.creer = new DevExpress.XtraEditors.SimpleButton();
-            this.panelTrans = new DevExpress.XtraEditors.PanelControl();
-            this.QA = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.b2 = new DevExpress.XtraEditors.TextEdit();
-            this.b1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txt1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.groupRed = new System.Windows.Forms.GroupBox();
-            this.radioSPD = new System.Windows.Forms.RadioButton();
-            this.dangerBtn = new System.Windows.Forms.RadioButton();
-            this.commRS = new System.Windows.Forms.RadioButton();
-            this.commCMD = new System.Windows.Forms.RadioButton();
             this.prixBox = new System.Windows.Forms.GroupBox();
             this.prixFini = new System.Windows.Forms.RadioButton();
             this.prixCours = new System.Windows.Forms.RadioButton();
@@ -179,11 +167,22 @@
             this.radioMoyen = new System.Windows.Forms.RadioButton();
             this.radioBas = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.suspendBtn = new System.Windows.Forms.RadioButton();
-            this.stopBtn = new System.Windows.Forms.RadioButton();
-            this.percText = new System.Windows.Forms.TextBox();
+            this.commRS = new System.Windows.Forms.RadioButton();
+            this.radioSPD = new System.Windows.Forms.RadioButton();
+            this.dangerBtn = new System.Windows.Forms.RadioButton();
+            this.Q5 = new System.Windows.Forms.TextBox();
             this.cadreNew = new DevExpress.XtraEditors.PanelControl();
+            this.D7 = new DevExpress.XtraEditors.DateEdit();
+            this.D6 = new DevExpress.XtraEditors.DateEdit();
+            this.D5 = new DevExpress.XtraEditors.DateEdit();
+            this.H6 = new DevExpress.XtraEditors.TextEdit();
+            this.H4 = new DevExpress.XtraEditors.TextEdit();
+            this.H3 = new DevExpress.XtraEditors.TextEdit();
+            this.H2 = new DevExpress.XtraEditors.TextEdit();
+            this.H1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.C5 = new System.Windows.Forms.CheckBox();
+            this.Q6 = new DevExpress.XtraEditors.TextEdit();
             this.C4 = new System.Windows.Forms.CheckBox();
             this.C3 = new System.Windows.Forms.CheckBox();
             this.C2 = new System.Windows.Forms.CheckBox();
@@ -204,7 +203,7 @@
             this.P2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.U2 = new System.Windows.Forms.ComboBox();
+            this.prodUnity = new System.Windows.Forms.ComboBox();
             this.Q2 = new DevExpress.XtraEditors.TextEdit();
             this.L1 = new DevExpress.XtraEditors.TextEdit();
             this.D1 = new DevExpress.XtraEditors.DateEdit();
@@ -243,13 +242,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodCadre)).BeginInit();
             this.prodCadre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.katalog.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodDesk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodRefce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodNom.Properties)).BeginInit();
             this.groupBleu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prodPrix.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Q1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodRq.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distCadre)).BeginInit();
@@ -257,13 +257,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).BeginInit();
             this.dernier.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelTrans)).BeginInit();
-            this.panelTrans.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QA.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt1.Properties)).BeginInit();
-            this.groupRed.SuspendLayout();
             this.prixBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.verifBox.SuspendLayout();
@@ -281,6 +274,18 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).BeginInit();
             this.cadreNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.D7.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D6.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D5.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Q6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pdetail2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distObs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).BeginInit();
@@ -318,7 +323,7 @@
             this.tete.LookAndFeel.SkinName = "Office 2013";
             this.tete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tete.Name = "tete";
-            this.tete.Size = new System.Drawing.Size(1217, 52);
+            this.tete.Size = new System.Drawing.Size(1392, 52);
             this.tete.TabIndex = 0;
             // 
             // DateVente
@@ -415,9 +420,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 13);
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(11, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 21);
+            this.textBox1.Size = new System.Drawing.Size(146, 36);
             this.textBox1.TabIndex = 0;
             // 
             // cadre
@@ -443,12 +449,12 @@
             this.cadre.LookAndFeel.SkinName = "Office 2013";
             this.cadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadre.Name = "cadre";
-            this.cadre.Size = new System.Drawing.Size(621, 125);
+            this.cadre.Size = new System.Drawing.Size(548, 125);
             this.cadre.TabIndex = 1;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(421, 77);
+            this.labelControl12.Location = new System.Drawing.Point(407, 77);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(52, 13);
             this.labelControl12.TabIndex = 18;
@@ -457,7 +463,7 @@
             // QcomEdit
             // 
             this.QcomEdit.EditValue = "0";
-            this.QcomEdit.Location = new System.Drawing.Point(520, 74);
+            this.QcomEdit.Location = new System.Drawing.Point(467, 74);
             this.QcomEdit.Name = "QcomEdit";
             this.QcomEdit.Size = new System.Drawing.Size(74, 20);
             this.QcomEdit.TabIndex = 5;
@@ -468,7 +474,7 @@
             this.distNom.ForeColor = System.Drawing.Color.DarkGreen;
             this.distNom.Location = new System.Drawing.Point(115, 27);
             this.distNom.Name = "distNom";
-            this.distNom.Size = new System.Drawing.Size(479, 21);
+            this.distNom.Size = new System.Drawing.Size(426, 21);
             this.distNom.TabIndex = 1;
             // 
             // unity
@@ -505,16 +511,16 @@
             // 
             // distLabelSeuil
             // 
-            this.distLabelSeuil.Location = new System.Drawing.Point(420, 54);
+            this.distLabelSeuil.Location = new System.Drawing.Point(406, 54);
             this.distLabelSeuil.Name = "distLabelSeuil";
-            this.distLabelSeuil.Size = new System.Drawing.Size(76, 13);
+            this.distLabelSeuil.Size = new System.Drawing.Size(47, 13);
             this.distLabelSeuil.TabIndex = 16;
-            this.distLabelSeuil.Text = "Seuil commande";
+            this.distLabelSeuil.Text = "Seuil CMD";
             // 
             // distQte
             // 
             this.distQte.EditValue = "0";
-            this.distQte.Location = new System.Drawing.Point(520, 51);
+            this.distQte.Location = new System.Drawing.Point(467, 51);
             this.distQte.Name = "distQte";
             this.distQte.Size = new System.Drawing.Size(74, 20);
             this.distQte.TabIndex = 3;
@@ -522,7 +528,7 @@
             // 
             // labelSeuil
             // 
-            this.labelSeuil.Location = new System.Drawing.Point(422, 101);
+            this.labelSeuil.Location = new System.Drawing.Point(408, 101);
             this.labelSeuil.Name = "labelSeuil";
             this.labelSeuil.Size = new System.Drawing.Size(53, 13);
             this.labelSeuil.TabIndex = 13;
@@ -531,7 +537,7 @@
             // plancher
             // 
             this.plancher.EditValue = "0";
-            this.plancher.Location = new System.Drawing.Point(520, 97);
+            this.plancher.Location = new System.Drawing.Point(467, 97);
             this.plancher.Name = "plancher";
             this.plancher.Size = new System.Drawing.Size(74, 20);
             this.plancher.TabIndex = 7;
@@ -557,7 +563,7 @@
             this.nom.Properties.Appearance.Options.UseBackColor = true;
             this.nom.Properties.Appearance.Options.UseBorderColor = true;
             this.nom.Properties.Appearance.Options.UseForeColor = true;
-            this.nom.Size = new System.Drawing.Size(479, 20);
+            this.nom.Size = new System.Drawing.Size(426, 20);
             this.nom.TabIndex = 0;
             this.nom.ToolTip = "Nom ou désignation article";
             this.nom.EditValueChanged += new System.EventHandler(this.nom_EditValueChanged);
@@ -639,17 +645,17 @@
             this.tarifBox.Controls.Add(this.labelGM);
             this.tarifBox.Controls.Add(this.labelAch);
             this.tarifBox.Controls.Add(this.labelCof);
-            this.tarifBox.Location = new System.Drawing.Point(0, 222);
+            this.tarifBox.Location = new System.Drawing.Point(0, 243);
             this.tarifBox.LookAndFeel.SkinName = "Office 2013";
             this.tarifBox.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tarifBox.Name = "tarifBox";
-            this.tarifBox.Size = new System.Drawing.Size(439, 190);
+            this.tarifBox.Size = new System.Drawing.Size(420, 190);
             this.tarifBox.TabIndex = 5;
             this.tarifBox.Text = "Tarification";
             // 
             // labelpr
             // 
-            this.labelpr.Location = new System.Drawing.Point(168, 160);
+            this.labelpr.Location = new System.Drawing.Point(138, 160);
             this.labelpr.Name = "labelpr";
             this.labelpr.Size = new System.Drawing.Size(19, 13);
             this.labelpr.TabIndex = 21;
@@ -662,7 +668,7 @@
             0,
             0,
             0});
-            this.txPrime.Location = new System.Drawing.Point(118, 158);
+            this.txPrime.Location = new System.Drawing.Point(88, 158);
             this.txPrime.Name = "txPrime";
             this.txPrime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -704,9 +710,9 @@
             this.groupPrix.Controls.Add(this.labelCdetail);
             this.groupPrix.Controls.Add(this.labelCgros);
             this.groupPrix.Controls.Add(this.labelprev);
-            this.groupPrix.Location = new System.Drawing.Point(211, 13);
+            this.groupPrix.Location = new System.Drawing.Point(162, 15);
             this.groupPrix.Name = "groupPrix";
-            this.groupPrix.Size = new System.Drawing.Size(222, 170);
+            this.groupPrix.Size = new System.Drawing.Size(185, 170);
             this.groupPrix.TabIndex = 7;
             this.groupPrix.TabStop = false;
             // 
@@ -718,7 +724,7 @@
             this.vprime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vprime.ForeColor = System.Drawing.SystemColors.WindowText;
             this.vprime.IntegerValue = ((long)(0));
-            this.vprime.Location = new System.Drawing.Point(96, 144);
+            this.vprime.Location = new System.Drawing.Point(66, 144);
             this.vprime.MinimumSize = new System.Drawing.Size(4, 18);
             this.vprime.Name = "vprime";
             this.vprime.PositiveColor = System.Drawing.Color.Blue;
@@ -745,7 +751,7 @@
             this.pextra.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pextra.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pextra.IntegerValue = ((long)(0));
-            this.pextra.Location = new System.Drawing.Point(96, 117);
+            this.pextra.Location = new System.Drawing.Point(66, 117);
             this.pextra.MinimumSize = new System.Drawing.Size(4, 18);
             this.pextra.Name = "pextra";
             this.pextra.ReadOnly = true;
@@ -763,7 +769,7 @@
             this.pspecial.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pspecial.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pspecial.IntegerValue = ((long)(0));
-            this.pspecial.Location = new System.Drawing.Point(96, 92);
+            this.pspecial.Location = new System.Drawing.Point(66, 92);
             this.pspecial.Name = "pspecial";
             this.pspecial.ReadOnly = true;
             this.pspecial.SelectAllOnFocus = false;
@@ -780,7 +786,7 @@
             this.pdetail.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pdetail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pdetail.IntegerValue = ((long)(0));
-            this.pdetail.Location = new System.Drawing.Point(96, 42);
+            this.pdetail.Location = new System.Drawing.Point(66, 42);
             this.pdetail.MinimumSize = new System.Drawing.Size(4, 18);
             this.pdetail.Name = "pdetail";
             this.pdetail.ReadOnly = true;
@@ -798,7 +804,7 @@
             this.pgros.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pgros.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pgros.IntegerValue = ((long)(0));
-            this.pgros.Location = new System.Drawing.Point(96, 67);
+            this.pgros.Location = new System.Drawing.Point(66, 67);
             this.pgros.Name = "pgros";
             this.pgros.ReadOnly = true;
             this.pgros.SelectAllOnFocus = false;
@@ -815,7 +821,7 @@
             this.revient.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.revient.ForeColor = System.Drawing.SystemColors.WindowText;
             this.revient.IntegerValue = ((long)(0));
-            this.revient.Location = new System.Drawing.Point(96, 17);
+            this.revient.Location = new System.Drawing.Point(66, 17);
             this.revient.Name = "revient";
             this.revient.ReadOnly = true;
             this.revient.SelectAllOnFocus = false;
@@ -828,45 +834,45 @@
             // 
             this.labelXtra.Location = new System.Drawing.Point(13, 120);
             this.labelXtra.Name = "labelXtra";
-            this.labelXtra.Size = new System.Drawing.Size(47, 13);
+            this.labelXtra.Size = new System.Drawing.Size(39, 13);
             this.labelXtra.TabIndex = 4;
-            this.labelXtra.Text = "Prix extra";
+            this.labelXtra.Text = "P. extra";
             // 
             // labelCspec
             // 
             this.labelCspec.Location = new System.Drawing.Point(13, 95);
             this.labelCspec.Name = "labelCspec";
-            this.labelCspec.Size = new System.Drawing.Size(53, 13);
+            this.labelCspec.Size = new System.Drawing.Size(45, 13);
             this.labelCspec.TabIndex = 3;
-            this.labelCspec.Text = "Prix spécial";
+            this.labelCspec.Text = "P. spécial";
             // 
             // labelCdetail
             // 
             this.labelCdetail.Location = new System.Drawing.Point(13, 47);
             this.labelCdetail.Name = "labelCdetail";
-            this.labelCdetail.Size = new System.Drawing.Size(62, 13);
+            this.labelCdetail.Size = new System.Drawing.Size(39, 13);
             this.labelCdetail.TabIndex = 2;
-            this.labelCdetail.Text = "Prix au détail";
+            this.labelCdetail.Text = "P. détail";
             // 
             // labelCgros
             // 
             this.labelCgros.Location = new System.Drawing.Point(13, 70);
             this.labelCgros.Name = "labelCgros";
-            this.labelCgros.Size = new System.Drawing.Size(57, 13);
+            this.labelCgros.Size = new System.Drawing.Size(34, 13);
             this.labelCgros.TabIndex = 1;
-            this.labelCgros.Text = "Prix de gros";
+            this.labelCgros.Text = "P. gros";
             // 
             // labelprev
             // 
             this.labelprev.Location = new System.Drawing.Point(13, 20);
             this.labelprev.Name = "labelprev";
-            this.labelprev.Size = new System.Drawing.Size(70, 13);
+            this.labelprev.Size = new System.Drawing.Size(47, 13);
             this.labelprev.TabIndex = 0;
-            this.labelprev.Text = "Prix de revient";
+            this.labelprev.Text = "P. revient";
             // 
             // labelmg3
             // 
-            this.labelmg3.Location = new System.Drawing.Point(168, 134);
+            this.labelmg3.Location = new System.Drawing.Point(138, 134);
             this.labelmg3.Name = "labelmg3";
             this.labelmg3.Size = new System.Drawing.Size(19, 13);
             this.labelmg3.TabIndex = 18;
@@ -874,7 +880,7 @@
             // 
             // labelsprec
             // 
-            this.labelsprec.Location = new System.Drawing.Point(168, 107);
+            this.labelsprec.Location = new System.Drawing.Point(138, 107);
             this.labelsprec.Name = "labelsprec";
             this.labelsprec.Size = new System.Drawing.Size(19, 13);
             this.labelsprec.TabIndex = 17;
@@ -887,7 +893,7 @@
             0,
             0,
             0});
-            this.mExtra.Location = new System.Drawing.Point(118, 132);
+            this.mExtra.Location = new System.Drawing.Point(88, 132);
             this.mExtra.Name = "mExtra";
             this.mExtra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -922,7 +928,7 @@
             0,
             0,
             0});
-            this.mSpecial.Location = new System.Drawing.Point(118, 106);
+            this.mSpecial.Location = new System.Drawing.Point(88, 106);
             this.mSpecial.Name = "mSpecial";
             this.mSpecial.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -956,7 +962,7 @@
             0,
             0,
             0});
-            this.mdetail.Location = new System.Drawing.Point(118, 56);
+            this.mdetail.Location = new System.Drawing.Point(88, 56);
             this.mdetail.Name = "mdetail";
             this.mdetail.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -987,7 +993,7 @@
             0,
             0,
             0});
-            this.mgros.Location = new System.Drawing.Point(118, 81);
+            this.mgros.Location = new System.Drawing.Point(88, 81);
             this.mgros.Name = "mgros";
             this.mgros.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -1018,7 +1024,7 @@
             0,
             0,
             0});
-            this.coeff.Location = new System.Drawing.Point(118, 31);
+            this.coeff.Location = new System.Drawing.Point(88, 31);
             this.coeff.Name = "coeff";
             this.coeff.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -1039,7 +1045,7 @@
             // 
             // t3
             // 
-            this.t3.Location = new System.Drawing.Point(169, 85);
+            this.t3.Location = new System.Drawing.Point(139, 85);
             this.t3.Name = "t3";
             this.t3.Size = new System.Drawing.Size(19, 13);
             this.t3.TabIndex = 10;
@@ -1047,7 +1053,7 @@
             // 
             // t2
             // 
-            this.t2.Location = new System.Drawing.Point(168, 59);
+            this.t2.Location = new System.Drawing.Point(138, 59);
             this.t2.Name = "t2";
             this.t2.Size = new System.Drawing.Size(19, 13);
             this.t2.TabIndex = 9;
@@ -1055,7 +1061,7 @@
             // 
             // t1
             // 
-            this.t1.Location = new System.Drawing.Point(169, 34);
+            this.t1.Location = new System.Drawing.Point(139, 34);
             this.t1.Name = "t1";
             this.t1.Size = new System.Drawing.Size(19, 13);
             this.t1.TabIndex = 8;
@@ -1064,7 +1070,7 @@
             // prixBase
             // 
             this.prixBase.EditValue = "0";
-            this.prixBase.Location = new System.Drawing.Point(118, 5);
+            this.prixBase.Location = new System.Drawing.Point(88, 5);
             this.prixBase.Name = "prixBase";
             this.prixBase.Size = new System.Drawing.Size(71, 20);
             this.prixBase.TabIndex = 0;
@@ -1107,7 +1113,9 @@
             // 
             this.prodCadre.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.prodCadre.Controls.Add(this.katalog);
+            this.prodCadre.Controls.Add(this.distLabelObs);
             this.prodCadre.Controls.Add(this.labelControl13);
+            this.prodCadre.Controls.Add(this.b2);
             this.prodCadre.Controls.Add(this.prodDesk);
             this.prodCadre.Controls.Add(this.formel);
             this.prodCadre.Controls.Add(this.prodVend);
@@ -1121,10 +1129,10 @@
             this.prodCadre.Controls.Add(this.distLabelNom);
             this.prodCadre.Controls.Add(this.prodLabelRef);
             this.prodCadre.Controls.Add(this.prodLabelNom);
-            this.prodCadre.Location = new System.Drawing.Point(626, 51);
+            this.prodCadre.Location = new System.Drawing.Point(550, 51);
             this.prodCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.prodCadre.Name = "prodCadre";
-            this.prodCadre.Size = new System.Drawing.Size(591, 169);
+            this.prodCadre.Size = new System.Drawing.Size(591, 191);
             this.prodCadre.TabIndex = 2;
             // 
             // katalog
@@ -1135,6 +1143,14 @@
             this.katalog.TabIndex = 2;
             this.katalog.ToolTip = "Référence produit du fournisseur";
             // 
+            // distLabelObs
+            // 
+            this.distLabelObs.Location = new System.Drawing.Point(9, 171);
+            this.distLabelObs.Name = "distLabelObs";
+            this.distLabelObs.Size = new System.Drawing.Size(59, 13);
+            this.distLabelObs.TabIndex = 19;
+            this.distLabelObs.Text = "Observation";
+            // 
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(14, 54);
@@ -1142,6 +1158,13 @@
             this.labelControl13.Size = new System.Drawing.Size(49, 13);
             this.labelControl13.TabIndex = 16;
             this.labelControl13.Text = "Catalogue";
+            // 
+            // b2
+            // 
+            this.b2.Location = new System.Drawing.Point(78, 166);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(442, 20);
+            this.b2.TabIndex = 1;
             // 
             // prodDesk
             // 
@@ -1284,18 +1307,18 @@
             this.prodLabelNom.TabIndex = 8;
             this.prodLabelNom.Text = "Désign FRNS";
             // 
-            // prodPrix
+            // P1
             // 
-            this.prodPrix.EditValue = "0";
-            this.prodPrix.Location = new System.Drawing.Point(288, 35);
-            this.prodPrix.Name = "prodPrix";
-            this.prodPrix.Size = new System.Drawing.Size(71, 20);
-            this.prodPrix.TabIndex = 10;
-            this.prodPrix.ToolTip = "Prix d\'achat unitaire";
+            this.P1.EditValue = "0";
+            this.P1.Location = new System.Drawing.Point(329, 25);
+            this.P1.Name = "P1";
+            this.P1.Size = new System.Drawing.Size(71, 20);
+            this.P1.TabIndex = 10;
+            this.P1.ToolTip = "Prix d\'achat unitaire";
             // 
             // prodLabelSeuil
             // 
-            this.prodLabelSeuil.Location = new System.Drawing.Point(127, 9);
+            this.prodLabelSeuil.Location = new System.Drawing.Point(115, 9);
             this.prodLabelSeuil.Name = "prodLabelSeuil";
             this.prodLabelSeuil.Size = new System.Drawing.Size(18, 13);
             this.prodLabelSeuil.TabIndex = 13;
@@ -1304,25 +1327,25 @@
             // Q1
             // 
             this.Q1.EditValue = "0";
-            this.Q1.Location = new System.Drawing.Point(110, 35);
+            this.Q1.Location = new System.Drawing.Point(96, 24);
             this.Q1.Name = "Q1";
             this.Q1.Size = new System.Drawing.Size(71, 20);
             this.Q1.TabIndex = 8;
             this.Q1.ToolTip = "Quantité préferentielle de commande.";
             // 
-            // prodUnity
+            // U2
             // 
-            this.prodUnity.DisplayMember = "NOM";
-            this.prodUnity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.prodUnity.FormattingEnabled = true;
-            this.prodUnity.Location = new System.Drawing.Point(200, 34);
-            this.prodUnity.Name = "prodUnity";
-            this.prodUnity.Size = new System.Drawing.Size(72, 21);
-            this.prodUnity.TabIndex = 3;
+            this.U2.DisplayMember = "NOM";
+            this.U2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U2.FormattingEnabled = true;
+            this.U2.Location = new System.Drawing.Point(251, 25);
+            this.U2.Name = "U2";
+            this.U2.Size = new System.Drawing.Size(72, 21);
+            this.U2.TabIndex = 3;
             // 
             // prodLabelUnite
             // 
-            this.prodLabelUnite.Location = new System.Drawing.Point(213, 8);
+            this.prodLabelUnite.Location = new System.Drawing.Point(264, 7);
             this.prodLabelUnite.Name = "prodLabelUnite";
             this.prodLabelUnite.Size = new System.Drawing.Size(25, 13);
             this.prodLabelUnite.TabIndex = 10;
@@ -1330,14 +1353,14 @@
             // 
             // prodRq
             // 
-            this.prodRq.Location = new System.Drawing.Point(95, 6);
+            this.prodRq.Location = new System.Drawing.Point(91, 221);
             this.prodRq.Name = "prodRq";
-            this.prodRq.Size = new System.Drawing.Size(110, 20);
+            this.prodRq.Size = new System.Drawing.Size(329, 20);
             this.prodRq.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 10);
+            this.labelControl1.Location = new System.Drawing.Point(7, 225);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(80, 13);
             this.labelControl1.TabIndex = 15;
@@ -1354,7 +1377,7 @@
             this.distCadre.Controls.Add(this.distPlaceNew);
             this.distCadre.Controls.Add(this.distLabelEvent);
             this.distCadre.Controls.Add(this.distLabelRef);
-            this.distCadre.Location = new System.Drawing.Point(819, 415);
+            this.distCadre.Location = new System.Drawing.Point(550, 278);
             this.distCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.distCadre.Name = "distCadre";
             this.distCadre.Size = new System.Drawing.Size(398, 84);
@@ -1443,23 +1466,15 @@
             this.distLabelRef.TabIndex = 1;
             this.distLabelRef.Text = "Place actuelle";
             // 
-            // distLabelObs
-            // 
-            this.distLabelObs.Location = new System.Drawing.Point(11, 68);
-            this.distLabelObs.Name = "distLabelObs";
-            this.distLabelObs.Size = new System.Drawing.Size(59, 13);
-            this.distLabelObs.TabIndex = 19;
-            this.distLabelObs.Text = "Observation";
-            // 
             // dernier
             // 
             this.dernier.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.dernier.Controls.Add(this.annuler);
             this.dernier.Controls.Add(this.creer);
             this.dernier.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dernier.Location = new System.Drawing.Point(0, 603);
+            this.dernier.Location = new System.Drawing.Point(0, 637);
             this.dernier.Name = "dernier";
-            this.dernier.Size = new System.Drawing.Size(1217, 30);
+            this.dernier.Size = new System.Drawing.Size(1392, 30);
             this.dernier.TabIndex = 9;
             // 
             // annuler
@@ -1486,135 +1501,6 @@
             this.creer.Text = "&Modifier";
             this.creer.ToolTip = "Créer l\'article en cours";
             this.creer.Click += new System.EventHandler(this.creer_Click);
-            // 
-            // panelTrans
-            // 
-            this.panelTrans.Controls.Add(this.prodRq);
-            this.panelTrans.Controls.Add(this.distLabelObs);
-            this.panelTrans.Controls.Add(this.labelControl1);
-            this.panelTrans.Controls.Add(this.QA);
-            this.panelTrans.Controls.Add(this.labelControl6);
-            this.panelTrans.Controls.Add(this.b2);
-            this.panelTrans.Controls.Add(this.b1);
-            this.panelTrans.Controls.Add(this.labelControl3);
-            this.panelTrans.Controls.Add(this.txt1);
-            this.panelTrans.Controls.Add(this.labelControl2);
-            this.panelTrans.Location = new System.Drawing.Point(818, 306);
-            this.panelTrans.Name = "panelTrans";
-            this.panelTrans.Size = new System.Drawing.Size(399, 88);
-            this.panelTrans.TabIndex = 7;
-            this.panelTrans.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
-            // 
-            // QA
-            // 
-            this.QA.Location = new System.Drawing.Point(95, 31);
-            this.QA.Name = "QA";
-            this.QA.Size = new System.Drawing.Size(110, 20);
-            this.QA.TabIndex = 2;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(10, 35);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(50, 13);
-            this.labelControl6.TabIndex = 13;
-            this.labelControl6.Text = "Qté-Achat";
-            // 
-            // b2
-            // 
-            this.b2.Location = new System.Drawing.Point(95, 62);
-            this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(110, 20);
-            this.b2.TabIndex = 1;
-            // 
-            // b1
-            // 
-            this.b1.Location = new System.Drawing.Point(276, 35);
-            this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(110, 20);
-            this.b1.TabIndex = 5;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(211, 38);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(60, 13);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Date arrivée";
-            // 
-            // txt1
-            // 
-            this.txt1.Location = new System.Drawing.Point(276, 8);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(110, 20);
-            this.txt1.TabIndex = 3;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(211, 13);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 13);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "Date facture";
-            // 
-            // groupRed
-            // 
-            this.groupRed.Controls.Add(this.radioSPD);
-            this.groupRed.Controls.Add(this.dangerBtn);
-            this.groupRed.Controls.Add(this.commRS);
-            this.groupRed.Controls.Add(this.commCMD);
-            this.groupRed.Location = new System.Drawing.Point(818, 261);
-            this.groupRed.Name = "groupRed";
-            this.groupRed.Size = new System.Drawing.Size(273, 43);
-            this.groupRed.TabIndex = 6;
-            this.groupRed.TabStop = false;
-            this.groupRed.Text = "SITUATIONS COMMANDE";
-            // 
-            // radioSPD
-            // 
-            this.radioSPD.AutoSize = true;
-            this.radioSPD.ForeColor = System.Drawing.Color.Red;
-            this.radioSPD.Location = new System.Drawing.Point(141, 16);
-            this.radioSPD.Name = "radioSPD";
-            this.radioSPD.Size = new System.Drawing.Size(44, 17);
-            this.radioSPD.TabIndex = 3;
-            this.radioSPD.Text = "SPD";
-            this.radioSPD.UseVisualStyleBackColor = true;
-            // 
-            // dangerBtn
-            // 
-            this.dangerBtn.AutoSize = true;
-            this.dangerBtn.ForeColor = System.Drawing.Color.Red;
-            this.dangerBtn.Location = new System.Drawing.Point(210, 14);
-            this.dangerBtn.Name = "dangerBtn";
-            this.dangerBtn.Size = new System.Drawing.Size(51, 17);
-            this.dangerBtn.TabIndex = 2;
-            this.dangerBtn.Text = "STOP";
-            this.dangerBtn.UseVisualStyleBackColor = true;
-            // 
-            // commRS
-            // 
-            this.commRS.AutoSize = true;
-            this.commRS.Checked = true;
-            this.commRS.ForeColor = System.Drawing.Color.Red;
-            this.commRS.Location = new System.Drawing.Point(10, 20);
-            this.commRS.Name = "commRS";
-            this.commRS.Size = new System.Drawing.Size(42, 17);
-            this.commRS.TabIndex = 0;
-            this.commRS.TabStop = true;
-            this.commRS.Text = "R.S";
-            this.commRS.UseVisualStyleBackColor = true;
-            // 
-            // commCMD
-            // 
-            this.commCMD.AutoSize = true;
-            this.commCMD.ForeColor = System.Drawing.Color.Red;
-            this.commCMD.Location = new System.Drawing.Point(58, 20);
-            this.commCMD.Name = "commCMD";
-            this.commCMD.Size = new System.Drawing.Size(47, 17);
-            this.commCMD.TabIndex = 1;
-            this.commCMD.Text = "CMD";
-            this.commCMD.UseVisualStyleBackColor = true;
             // 
             // prixBox
             // 
@@ -1674,7 +1560,7 @@
             this.groupBox2.Size = new System.Drawing.Size(176, 48);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Entrer";
+            this.groupBox2.Text = "Entrer interne";
             // 
             // entreFini
             // 
@@ -1824,7 +1710,7 @@
             // 
             this.reponse.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reponse.Appearance.Options.UseFont = true;
-            this.reponse.Location = new System.Drawing.Point(638, 582);
+            this.reponse.Location = new System.Drawing.Point(638, 600);
             this.reponse.Name = "reponse";
             this.reponse.Size = new System.Drawing.Size(20, 13);
             this.reponse.TabIndex = 22;
@@ -1832,7 +1718,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(552, 582);
+            this.labelControl10.Location = new System.Drawing.Point(552, 600);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(42, 13);
             this.labelControl10.TabIndex = 21;
@@ -1840,14 +1726,14 @@
             // 
             // s1
             // 
-            this.s1.Location = new System.Drawing.Point(91, 579);
+            this.s1.Location = new System.Drawing.Point(91, 597);
             this.s1.Name = "s1";
             this.s1.Size = new System.Drawing.Size(443, 20);
             this.s1.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(11, 583);
+            this.labelControl4.Location = new System.Drawing.Point(11, 601);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(42, 13);
             this.labelControl4.TabIndex = 4;
@@ -1906,7 +1792,7 @@
             this.panelAvDern.Controls.Add(this.rienButton);
             this.panelAvDern.Controls.Add(this.chkArret);
             this.panelAvDern.Controls.Add(this.chkEpuise);
-            this.panelAvDern.Location = new System.Drawing.Point(819, 223);
+            this.panelAvDern.Location = new System.Drawing.Point(550, 243);
             this.panelAvDern.Name = "panelAvDern";
             this.panelAvDern.Size = new System.Drawing.Size(305, 34);
             this.panelAvDern.TabIndex = 8;
@@ -1957,7 +1843,7 @@
             this.visibleBox.Controls.Add(this.radioBas);
             this.visibleBox.Location = new System.Drawing.Point(13, 13);
             this.visibleBox.Name = "visibleBox";
-            this.visibleBox.Size = new System.Drawing.Size(317, 43);
+            this.visibleBox.Size = new System.Drawing.Size(342, 43);
             this.visibleBox.TabIndex = 4;
             this.visibleBox.TabStop = false;
             this.visibleBox.Text = "Invisibilité";
@@ -2002,69 +1888,80 @@
             this.radioBas.AutoSize = true;
             this.radioBas.Location = new System.Drawing.Point(7, 19);
             this.radioBas.Name = "radioBas";
-            this.radioBas.Size = new System.Drawing.Size(75, 17);
+            this.radioBas.Size = new System.Drawing.Size(42, 17);
             this.radioBas.TabIndex = 0;
             this.radioBas.TabStop = true;
-            this.radioBas.Text = "Démasqué";
+            this.radioBas.Text = "R.S";
             this.radioBas.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.suspendBtn);
-            this.groupBox1.Controls.Add(this.stopBtn);
+            this.groupBox1.Controls.Add(this.commRS);
+            this.groupBox1.Controls.Add(this.radioSPD);
+            this.groupBox1.Controls.Add(this.dangerBtn);
             this.groupBox1.Location = new System.Drawing.Point(195, 178);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 42);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton1
+            // commRS
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Green;
-            this.radioButton1.Location = new System.Drawing.Point(13, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(42, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "R.S";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.commRS.AutoSize = true;
+            this.commRS.Checked = true;
+            this.commRS.ForeColor = System.Drawing.Color.Green;
+            this.commRS.Location = new System.Drawing.Point(13, 16);
+            this.commRS.Name = "commRS";
+            this.commRS.Size = new System.Drawing.Size(42, 17);
+            this.commRS.TabIndex = 3;
+            this.commRS.TabStop = true;
+            this.commRS.Text = "R.S";
+            this.commRS.UseVisualStyleBackColor = true;
             // 
-            // suspendBtn
+            // radioSPD
             // 
-            this.suspendBtn.AutoSize = true;
-            this.suspendBtn.ForeColor = System.Drawing.Color.Red;
-            this.suspendBtn.Location = new System.Drawing.Point(82, 16);
-            this.suspendBtn.Name = "suspendBtn";
-            this.suspendBtn.Size = new System.Drawing.Size(72, 17);
-            this.suspendBtn.TabIndex = 1;
-            this.suspendBtn.TabStop = true;
-            this.suspendBtn.Text = "Suspendu";
-            this.suspendBtn.UseVisualStyleBackColor = true;
+            this.radioSPD.AutoSize = true;
+            this.radioSPD.ForeColor = System.Drawing.Color.Red;
+            this.radioSPD.Location = new System.Drawing.Point(82, 16);
+            this.radioSPD.Name = "radioSPD";
+            this.radioSPD.Size = new System.Drawing.Size(72, 17);
+            this.radioSPD.TabIndex = 1;
+            this.radioSPD.TabStop = true;
+            this.radioSPD.Text = "Suspendu";
+            this.radioSPD.UseVisualStyleBackColor = true;
             // 
-            // stopBtn
+            // dangerBtn
             // 
-            this.stopBtn.AutoSize = true;
-            this.stopBtn.ForeColor = System.Drawing.Color.DarkViolet;
-            this.stopBtn.Location = new System.Drawing.Point(165, 16);
-            this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(47, 17);
-            this.stopBtn.TabIndex = 2;
-            this.stopBtn.Text = "Stop";
-            this.stopBtn.UseVisualStyleBackColor = true;
+            this.dangerBtn.AutoSize = true;
+            this.dangerBtn.ForeColor = System.Drawing.Color.DarkViolet;
+            this.dangerBtn.Location = new System.Drawing.Point(165, 16);
+            this.dangerBtn.Name = "dangerBtn";
+            this.dangerBtn.Size = new System.Drawing.Size(47, 17);
+            this.dangerBtn.TabIndex = 2;
+            this.dangerBtn.Text = "Stop";
+            this.dangerBtn.UseVisualStyleBackColor = true;
             // 
-            // percText
+            // Q5
             // 
-            this.percText.Location = new System.Drawing.Point(426, 191);
-            this.percText.Name = "percText";
-            this.percText.Size = new System.Drawing.Size(70, 21);
-            this.percText.TabIndex = 11;
+            this.Q5.Location = new System.Drawing.Point(426, 191);
+            this.Q5.Name = "Q5";
+            this.Q5.Size = new System.Drawing.Size(70, 21);
+            this.Q5.TabIndex = 11;
             // 
             // cadreNew
             // 
             this.cadreNew.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cadreNew.Controls.Add(this.D7);
+            this.cadreNew.Controls.Add(this.D6);
+            this.cadreNew.Controls.Add(this.D5);
+            this.cadreNew.Controls.Add(this.H6);
+            this.cadreNew.Controls.Add(this.H4);
+            this.cadreNew.Controls.Add(this.H3);
+            this.cadreNew.Controls.Add(this.H2);
+            this.cadreNew.Controls.Add(this.H1);
+            this.cadreNew.Controls.Add(this.labelControl2);
+            this.cadreNew.Controls.Add(this.C5);
+            this.cadreNew.Controls.Add(this.Q6);
             this.cadreNew.Controls.Add(this.C4);
             this.cadreNew.Controls.Add(this.C3);
             this.cadreNew.Controls.Add(this.C2);
@@ -2085,36 +1982,160 @@
             this.cadreNew.Controls.Add(this.P2);
             this.cadreNew.Controls.Add(this.labelControl15);
             this.cadreNew.Controls.Add(this.labelControl14);
-            this.cadreNew.Controls.Add(this.U2);
+            this.cadreNew.Controls.Add(this.prodUnity);
             this.cadreNew.Controls.Add(this.Q2);
             this.cadreNew.Controls.Add(this.L1);
             this.cadreNew.Controls.Add(this.D1);
             this.cadreNew.Controls.Add(this.Q1);
             this.cadreNew.Controls.Add(this.prodLabelSeuil);
-            this.cadreNew.Controls.Add(this.prodUnity);
-            this.cadreNew.Controls.Add(this.prodPrix);
+            this.cadreNew.Controls.Add(this.U2);
+            this.cadreNew.Controls.Add(this.P1);
             this.cadreNew.Controls.Add(this.prodLabelUnite);
-            this.cadreNew.Location = new System.Drawing.Point(-2, 413);
+            this.cadreNew.Location = new System.Drawing.Point(-2, 433);
             this.cadreNew.LookAndFeel.SkinName = "Office 2013";
             this.cadreNew.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadreNew.Name = "cadreNew";
-            this.cadreNew.Size = new System.Drawing.Size(815, 158);
+            this.cadreNew.Size = new System.Drawing.Size(950, 160);
             this.cadreNew.TabIndex = 13;
+            // 
+            // D7
+            // 
+            this.D7.EditValue = null;
+            this.D7.Enabled = false;
+            this.D7.Location = new System.Drawing.Point(504, 137);
+            this.D7.Name = "D7";
+            this.D7.Properties.AllowFocused = false;
+            this.D7.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D7.Properties.Appearance.Options.UseForeColor = true;
+            this.D7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D7.Size = new System.Drawing.Size(90, 20);
+            this.D7.TabIndex = 52;
+            // 
+            // D6
+            // 
+            this.D6.EditValue = null;
+            this.D6.Enabled = false;
+            this.D6.Location = new System.Drawing.Point(504, 110);
+            this.D6.Name = "D6";
+            this.D6.Properties.AllowFocused = false;
+            this.D6.Properties.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.D6.Properties.Appearance.Options.UseForeColor = true;
+            this.D6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D6.Size = new System.Drawing.Size(90, 20);
+            this.D6.TabIndex = 51;
+            // 
+            // D5
+            // 
+            this.D5.EditValue = null;
+            this.D5.Enabled = false;
+            this.D5.Location = new System.Drawing.Point(408, 136);
+            this.D5.Name = "D5";
+            this.D5.Properties.AllowFocused = false;
+            this.D5.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D5.Properties.Appearance.Options.UseForeColor = true;
+            this.D5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D5.Size = new System.Drawing.Size(90, 20);
+            this.D5.TabIndex = 50;
+            // 
+            // H6
+            // 
+            this.H6.EditValue = "0";
+            this.H6.Enabled = false;
+            this.H6.Location = new System.Drawing.Point(178, 136);
+            this.H6.Name = "H6";
+            this.H6.Size = new System.Drawing.Size(71, 20);
+            this.H6.TabIndex = 49;
+            this.H6.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // H4
+            // 
+            this.H4.EditValue = "0";
+            this.H4.Enabled = false;
+            this.H4.Location = new System.Drawing.Point(178, 111);
+            this.H4.Name = "H4";
+            this.H4.Size = new System.Drawing.Size(71, 20);
+            this.H4.TabIndex = 48;
+            this.H4.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // H3
+            // 
+            this.H3.EditValue = "0";
+            this.H3.Location = new System.Drawing.Point(178, 80);
+            this.H3.Name = "H3";
+            this.H3.Size = new System.Drawing.Size(71, 20);
+            this.H3.TabIndex = 47;
+            this.H3.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // H2
+            // 
+            this.H2.EditValue = "0";
+            this.H2.Location = new System.Drawing.Point(177, 50);
+            this.H2.Name = "H2";
+            this.H2.Size = new System.Drawing.Size(71, 20);
+            this.H2.TabIndex = 46;
+            this.H2.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // H1
+            // 
+            this.H1.EditValue = "0";
+            this.H1.Location = new System.Drawing.Point(176, 25);
+            this.H1.Name = "H1";
+            this.H1.Size = new System.Drawing.Size(71, 20);
+            this.H1.TabIndex = 44;
+            this.H1.ToolTip = "Quantité préferentielle de commande.";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(193, 9);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(29, 13);
+            this.labelControl2.TabIndex = 45;
+            this.labelControl2.Text = "Qté-H";
+            // 
+            // C5
+            // 
+            this.C5.AutoSize = true;
+            this.C5.Location = new System.Drawing.Point(9, 137);
+            this.C5.Name = "C5";
+            this.C5.Size = new System.Drawing.Size(81, 17);
+            this.C5.TabIndex = 43;
+            this.C5.Text = "Ent Interne";
+            this.C5.UseVisualStyleBackColor = true;
+            this.C5.CheckedChanged += new System.EventHandler(this.C5_CheckedChanged);
+            // 
+            // Q6
+            // 
+            this.Q6.EditValue = "0";
+            this.Q6.Location = new System.Drawing.Point(100, 136);
+            this.Q6.Name = "Q6";
+            this.Q6.Size = new System.Drawing.Size(71, 20);
+            this.Q6.TabIndex = 42;
+            this.Q6.ToolTip = "Quantité préferentielle de commande.";
             // 
             // C4
             // 
             this.C4.AutoSize = true;
-            this.C4.Location = new System.Drawing.Point(13, 128);
+            this.C4.Location = new System.Drawing.Point(9, 109);
             this.C4.Name = "C4";
-            this.C4.Size = new System.Drawing.Size(68, 17);
+            this.C4.Size = new System.Drawing.Size(82, 17);
             this.C4.TabIndex = 40;
-            this.C4.Text = "Ent Hery";
+            this.C4.Text = "Ent Facture";
             this.C4.UseVisualStyleBackColor = true;
+            this.C4.CheckedChanged += new System.EventHandler(this.C4_CheckedChanged);
             // 
             // C3
             // 
             this.C3.AutoSize = true;
-            this.C3.Location = new System.Drawing.Point(13, 100);
+            this.C3.Location = new System.Drawing.Point(9, 81);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(69, 17);
             this.C3.TabIndex = 39;
@@ -2124,7 +2145,7 @@
             // C2
             // 
             this.C2.AutoSize = true;
-            this.C2.Location = new System.Drawing.Point(14, 70);
+            this.C2.Location = new System.Drawing.Point(8, 51);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(87, 17);
             this.C2.TabIndex = 38;
@@ -2135,7 +2156,7 @@
             // C1
             // 
             this.C1.AutoSize = true;
-            this.C1.Location = new System.Drawing.Point(13, 35);
+            this.C1.Location = new System.Drawing.Point(10, 26);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(80, 17);
             this.C1.TabIndex = 37;
@@ -2151,7 +2172,7 @@
             this.pdetail2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pdetail2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pdetail2.IntegerValue = ((long)(0));
-            this.pdetail2.Location = new System.Drawing.Point(288, 126);
+            this.pdetail2.Location = new System.Drawing.Point(329, 110);
             this.pdetail2.MinimumSize = new System.Drawing.Size(4, 18);
             this.pdetail2.Name = "pdetail2";
             this.pdetail2.ReadOnly = true;
@@ -2163,14 +2184,14 @@
             // 
             // distObs
             // 
-            this.distObs.Location = new System.Drawing.Point(476, 127);
+            this.distObs.Location = new System.Drawing.Point(600, 110);
             this.distObs.Name = "distObs";
-            this.distObs.Size = new System.Drawing.Size(326, 20);
+            this.distObs.Size = new System.Drawing.Size(300, 20);
             this.distObs.TabIndex = 35;
             // 
             // D4
             // 
-            this.D4.Location = new System.Drawing.Point(369, 127);
+            this.D4.Location = new System.Drawing.Point(405, 110);
             this.D4.Name = "D4";
             this.D4.Size = new System.Drawing.Size(94, 20);
             this.D4.TabIndex = 34;
@@ -2180,7 +2201,7 @@
             this.U4.DisplayMember = "NOM";
             this.U4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.U4.FormattingEnabled = true;
-            this.U4.Location = new System.Drawing.Point(201, 126);
+            this.U4.Location = new System.Drawing.Point(252, 111);
             this.U4.Name = "U4";
             this.U4.Size = new System.Drawing.Size(72, 21);
             this.U4.TabIndex = 32;
@@ -2188,7 +2209,7 @@
             // Q4
             // 
             this.Q4.EditValue = "0";
-            this.Q4.Location = new System.Drawing.Point(112, 126);
+            this.Q4.Location = new System.Drawing.Point(100, 110);
             this.Q4.Name = "Q4";
             this.Q4.Size = new System.Drawing.Size(71, 20);
             this.Q4.TabIndex = 31;
@@ -2196,14 +2217,14 @@
             // 
             // L3
             // 
-            this.L3.Location = new System.Drawing.Point(476, 97);
+            this.L3.Location = new System.Drawing.Point(599, 80);
             this.L3.Name = "L3";
-            this.L3.Size = new System.Drawing.Size(326, 20);
+            this.L3.Size = new System.Drawing.Size(300, 20);
             this.L3.TabIndex = 30;
             // 
             // D3
             // 
-            this.D3.Location = new System.Drawing.Point(369, 97);
+            this.D3.Location = new System.Drawing.Point(405, 80);
             this.D3.Name = "D3";
             this.D3.Size = new System.Drawing.Size(94, 20);
             this.D3.TabIndex = 29;
@@ -2211,7 +2232,7 @@
             // P3
             // 
             this.P3.EditValue = "0";
-            this.P3.Location = new System.Drawing.Point(290, 97);
+            this.P3.Location = new System.Drawing.Point(331, 81);
             this.P3.Name = "P3";
             this.P3.Size = new System.Drawing.Size(71, 20);
             this.P3.TabIndex = 27;
@@ -2222,7 +2243,7 @@
             this.U3.DisplayMember = "NOM";
             this.U3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.U3.FormattingEnabled = true;
-            this.U3.Location = new System.Drawing.Point(201, 96);
+            this.U3.Location = new System.Drawing.Point(252, 81);
             this.U3.Name = "U3";
             this.U3.Size = new System.Drawing.Size(72, 21);
             this.U3.TabIndex = 26;
@@ -2230,7 +2251,7 @@
             // Q3
             // 
             this.Q3.EditValue = "0";
-            this.Q3.Location = new System.Drawing.Point(112, 96);
+            this.Q3.Location = new System.Drawing.Point(100, 79);
             this.Q3.Name = "Q3";
             this.Q3.Size = new System.Drawing.Size(71, 20);
             this.Q3.TabIndex = 25;
@@ -2246,15 +2267,16 @@
             // 
             // L2
             // 
-            this.L2.Location = new System.Drawing.Point(476, 67);
+            this.L2.Location = new System.Drawing.Point(599, 50);
             this.L2.Name = "L2";
-            this.L2.Size = new System.Drawing.Size(326, 20);
+            this.L2.Size = new System.Drawing.Size(300, 20);
             this.L2.TabIndex = 23;
             // 
             // D2
             // 
             this.D2.EditValue = null;
-            this.D2.Location = new System.Drawing.Point(371, 67);
+            this.D2.Enabled = false;
+            this.D2.Location = new System.Drawing.Point(407, 50);
             this.D2.Name = "D2";
             this.D2.Properties.AllowFocused = false;
             this.D2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2267,7 +2289,7 @@
             // P2
             // 
             this.P2.EditValue = "0";
-            this.P2.Location = new System.Drawing.Point(289, 67);
+            this.P2.Location = new System.Drawing.Point(330, 51);
             this.P2.Name = "P2";
             this.P2.Size = new System.Drawing.Size(71, 20);
             this.P2.TabIndex = 21;
@@ -2275,7 +2297,7 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(399, 6);
+            this.labelControl15.Location = new System.Drawing.Point(435, 4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(23, 13);
             this.labelControl15.TabIndex = 20;
@@ -2283,26 +2305,26 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(314, 8);
+            this.labelControl14.Location = new System.Drawing.Point(355, 7);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(18, 13);
             this.labelControl14.TabIndex = 19;
             this.labelControl14.Text = "Prix";
             // 
-            // U2
+            // prodUnity
             // 
-            this.U2.DisplayMember = "NOM";
-            this.U2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U2.FormattingEnabled = true;
-            this.U2.Location = new System.Drawing.Point(200, 66);
-            this.U2.Name = "U2";
-            this.U2.Size = new System.Drawing.Size(72, 21);
-            this.U2.TabIndex = 18;
+            this.prodUnity.DisplayMember = "NOM";
+            this.prodUnity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.prodUnity.FormattingEnabled = true;
+            this.prodUnity.Location = new System.Drawing.Point(251, 51);
+            this.prodUnity.Name = "prodUnity";
+            this.prodUnity.Size = new System.Drawing.Size(72, 21);
+            this.prodUnity.TabIndex = 18;
             // 
             // Q2
             // 
             this.Q2.EditValue = "0";
-            this.Q2.Location = new System.Drawing.Point(111, 66);
+            this.Q2.Location = new System.Drawing.Point(100, 50);
             this.Q2.Name = "Q2";
             this.Q2.Size = new System.Drawing.Size(71, 20);
             this.Q2.TabIndex = 17;
@@ -2310,15 +2332,16 @@
             // 
             // L1
             // 
-            this.L1.Location = new System.Drawing.Point(476, 35);
+            this.L1.Location = new System.Drawing.Point(599, 25);
             this.L1.Name = "L1";
-            this.L1.Size = new System.Drawing.Size(326, 20);
+            this.L1.Size = new System.Drawing.Size(300, 20);
             this.L1.TabIndex = 16;
             // 
             // D1
             // 
             this.D1.EditValue = null;
-            this.D1.Location = new System.Drawing.Point(371, 35);
+            this.D1.Enabled = false;
+            this.D1.Location = new System.Drawing.Point(407, 25);
             this.D1.Name = "D1";
             this.D1.Properties.AllowFocused = false;
             this.D1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2337,7 +2360,7 @@
             this.panelControl1.Controls.Add(this.verifBox);
             this.panelControl1.Controls.Add(this.groupBox2);
             this.panelControl1.Controls.Add(this.visibleBox);
-            this.panelControl1.Location = new System.Drawing.Point(445, 222);
+            this.panelControl1.Location = new System.Drawing.Point(970, 247);
             this.panelControl1.LookAndFeel.SkinName = "Office 2013";
             this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl1.Name = "panelControl1";
@@ -2350,19 +2373,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
-            this.ClientSize = new System.Drawing.Size(1217, 633);
+            this.ClientSize = new System.Drawing.Size(1392, 667);
+            this.Controls.Add(this.prodRq);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.reponse);
-            this.Controls.Add(this.groupRed);
             this.Controls.Add(this.cadreNew);
             this.Controls.Add(this.labelControl10);
-            this.Controls.Add(this.percText);
+            this.Controls.Add(this.Q5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.distCadre);
             this.Controls.Add(this.panelAvDern);
             this.Controls.Add(this.s1);
             this.Controls.Add(this.colorBox);
-            this.Controls.Add(this.panelTrans);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.dernier);
             this.Controls.Add(this.prodCadre);
@@ -2416,6 +2439,7 @@
             this.prodCadre.ResumeLayout(false);
             this.prodCadre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.katalog.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodDesk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.distRemark.Properties)).EndInit();
@@ -2423,7 +2447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodNom.Properties)).EndInit();
             this.groupBleu.ResumeLayout(false);
             this.groupBleu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prodPrix.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Q1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodRq.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.distCadre)).EndInit();
@@ -2432,15 +2456,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).EndInit();
             this.dernier.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelTrans)).EndInit();
-            this.panelTrans.ResumeLayout(false);
-            this.panelTrans.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QA.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt1.Properties)).EndInit();
-            this.groupRed.ResumeLayout(false);
-            this.groupRed.PerformLayout();
             this.prixBox.ResumeLayout(false);
             this.prixBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2466,6 +2481,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).EndInit();
             this.cadreNew.ResumeLayout(false);
             this.cadreNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.D7.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D6.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D5.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Q6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pdetail2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.distObs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).EndInit();
@@ -2543,10 +2570,10 @@
         private DevExpress.XtraEditors.TextEdit prodDesk;
         private System.Windows.Forms.ComboBox prodVend;
         private DevExpress.XtraEditors.LabelControl prodLabelS;
-        private DevExpress.XtraEditors.TextEdit prodPrix;
+        private DevExpress.XtraEditors.TextEdit P1;
         private DevExpress.XtraEditors.LabelControl prodLabelSeuil;
         private DevExpress.XtraEditors.TextEdit Q1;
-        private System.Windows.Forms.ComboBox prodUnity;
+        private System.Windows.Forms.ComboBox U2;
         private DevExpress.XtraEditors.TextEdit prodRefce;
         private DevExpress.XtraEditors.TextEdit prodNom;
         private DevExpress.XtraEditors.LabelControl prodLabelUnite;
@@ -2571,17 +2598,10 @@
         private DevExpress.XtraEditors.TextEdit prodRq;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.TextBox textBox1;
-        private DevExpress.XtraEditors.PanelControl panelTrans;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit b1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txt1;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit s1;
         private DevExpress.XtraEditors.TextEdit b2;
         private DevExpress.XtraEditors.TextEdit codeF;
-        private DevExpress.XtraEditors.TextEdit QA;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl cumAchat;
         private DevExpress.XtraEditors.LabelControl cumVente;
@@ -2618,15 +2638,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit QcomEdit;
         private System.Windows.Forms.RadioButton normeBtn;
-        private System.Windows.Forms.GroupBox groupRed;
-        private System.Windows.Forms.RadioButton commRS;
-        private System.Windows.Forms.RadioButton commCMD;
         private System.Windows.Forms.GroupBox groupBleu;
         private System.Windows.Forms.RadioButton radioBB;
         private System.Windows.Forms.RadioButton radioRS;
         private System.Windows.Forms.RadioButton radioRupt;
         private System.Windows.Forms.RadioButton radioPuise;
-        private System.Windows.Forms.RadioButton dangerBtn;
         private DevExpress.XtraEditors.PanelControl panelAvDern;
         private DevExpress.XtraEditors.CheckEdit chkEpuise;
         private System.Windows.Forms.RadioButton radioBas;
@@ -2637,14 +2653,13 @@
         private DevExpress.XtraEditors.CheckEdit chkArret;
         private DevExpress.XtraEditors.CheckEdit rienButton;
         private DevExpress.XtraEditors.CheckEdit chkCommande;
-        private System.Windows.Forms.RadioButton radioSPD;
         private DevExpress.XtraEditors.DateEdit DateAchat;
         private DevExpress.XtraEditors.DateEdit DateVente;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton suspendBtn;
-        private System.Windows.Forms.RadioButton stopBtn;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox percText;
+        private System.Windows.Forms.RadioButton radioSPD;
+        private System.Windows.Forms.RadioButton dangerBtn;
+        private System.Windows.Forms.RadioButton commRS;
+        private System.Windows.Forms.TextBox Q5;
         private DevExpress.XtraEditors.PanelControl cadreNew;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox pdetail2;
         private DevExpress.XtraEditors.TextEdit distObs;
@@ -2662,7 +2677,7 @@
         private DevExpress.XtraEditors.TextEdit P2;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private System.Windows.Forms.ComboBox U2;
+        private System.Windows.Forms.ComboBox prodUnity;
         private DevExpress.XtraEditors.TextEdit Q2;
         private DevExpress.XtraEditors.TextEdit L1;
         private DevExpress.XtraEditors.DateEdit D1;
@@ -2671,5 +2686,16 @@
         private System.Windows.Forms.CheckBox C4;
         private System.Windows.Forms.CheckBox C3;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.TextEdit Q6;
+        private System.Windows.Forms.CheckBox C5;
+        private DevExpress.XtraEditors.TextEdit H6;
+        private DevExpress.XtraEditors.TextEdit H4;
+        private DevExpress.XtraEditors.TextEdit H3;
+        private DevExpress.XtraEditors.TextEdit H2;
+        private DevExpress.XtraEditors.TextEdit H1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.DateEdit D5;
+        private DevExpress.XtraEditors.DateEdit D7;
+        private DevExpress.XtraEditors.DateEdit D6;
     }
 }

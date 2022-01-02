@@ -14,8 +14,7 @@ namespace gescom.create.Views
         public XtraComment()
         {
             InitializeComponent();
-            _list = new List<OperationItem>();
-            //ArticleHelpers.RepairDuoFaster();
+            _list = new List<OperationItem>();            
         }
 
         private void SetData()

@@ -642,38 +642,6 @@ namespace gescom.data.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<OperationAuto> OperationAutos
-		{
-			get
-			{
-				return this.GetTable<OperationAuto>();
-			}
-		}
-		
-		public System.Data.Linq.Table<OperationEntry> OperationEntries
-		{
-			get
-			{
-				return this.GetTable<OperationEntry>();
-			}
-		}
-		
-		public System.Data.Linq.Table<OperationDispo> OperationDispos
-		{
-			get
-			{
-				return this.GetTable<OperationDispo>();
-			}
-		}
-		
-		public System.Data.Linq.Table<OperationCommande> OperationCommandes
-		{
-			get
-			{
-				return this.GetTable<OperationCommande>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ActeItem> ActeItems
 		{
 			get
@@ -706,11 +674,35 @@ namespace gescom.data.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<OperationItem> OperationItems
+		public System.Data.Linq.Table<OperationDispo> OperationDispos
 		{
 			get
 			{
-				return this.GetTable<OperationItem>();
+				return this.GetTable<OperationDispo>();
+			}
+		}
+		
+		public System.Data.Linq.Table<OperationEntry> OperationEntries
+		{
+			get
+			{
+				return this.GetTable<OperationEntry>();
+			}
+		}
+		
+		public System.Data.Linq.Table<OperationAuto> OperationAutos
+		{
+			get
+			{
+				return this.GetTable<OperationAuto>();
+			}
+		}
+		
+		public System.Data.Linq.Table<OperationCommande> OperationCommandes
+		{
+			get
+			{
+				return this.GetTable<OperationCommande>();
 			}
 		}
 		
@@ -719,6 +711,14 @@ namespace gescom.data.Models
 			get
 			{
 				return this.GetTable<GulpItem>();
+			}
+		}
+		
+		public System.Data.Linq.Table<OperationItem> OperationItems
+		{
+			get
+			{
+				return this.GetTable<OperationItem>();
 			}
 		}
 	}
@@ -15124,6396 +15124,6 @@ namespace gescom.data.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationAuto")]
-	public partial class OperationAuto
-	{
-		
-		private long _Ndx;
-		
-		private string _Codage;
-		
-		private string _Refers;
-		
-		private string _Place;
-		
-		private string _Designation;
-		
-		private System.Nullable<float> _Pachat;
-		
-		private System.Nullable<float> _Previent;
-		
-		private System.Nullable<float> _PGros;
-		
-		private System.Nullable<float> _PDetail;
-		
-		private System.Nullable<float> _PSpecial;
-		
-		private System.Nullable<float> _PExtra;
-		
-		private System.Nullable<float> _QEstime;
-		
-		private System.Nullable<float> _QStock;
-		
-		private System.Nullable<float> _PEstime;
-		
-		private string _Nomvers;
-		
-		private string _Categorie;
-		
-		private string _Unite;
-		
-		private string _Nomfrns;
-		
-		private string _Remark;
-		
-		private System.Nullable<float> _Vstock;
-		
-		private System.Nullable<System.DateTime> _DateVente;
-		
-		private System.Nullable<System.DateTime> _DateAchat;
-		
-		private string _Frs;
-		
-		private string _Clt;
-		
-		private System.Nullable<double> _Qachat;
-		
-		private System.Nullable<double> _Vachat;
-		
-		private System.Nullable<double> _Qavoir;
-		
-		private System.Nullable<double> _Vavoir;
-		
-		private System.Nullable<double> _Qvente;
-		
-		private System.Nullable<double> _Vvente;
-		
-		private System.Nullable<double> _Qercpt;
-		
-		private System.Nullable<double> _Vercpt;
-		
-		private System.Nullable<double> _Qdefect;
-		
-		private System.Nullable<double> _Vdefect;
-		
-		private System.Nullable<double> _Qvol;
-		
-		private System.Nullable<double> _Vvol;
-		
-		private string _RCode;
-		
-		private string _Catalog;
-		
-		private string _Remarque;
-		
-		private string _Observation;
-		
-		private System.Nullable<float> _QSeuil;
-		
-		private string _Magpref;
-		
-		private System.Nullable<long> _IdPlace;
-		
-		private System.Nullable<long> _IdCat;
-		
-		private System.Nullable<long> _IdUnit;
-		
-		private float _Q;
-		
-		private float _Q1;
-		
-		private float _Q2;
-		
-		private string _S1;
-		
-		private string _S2;
-		
-		private System.DateTime _D1;
-		
-		private System.DateTime _D2;
-		
-		private string _B1;
-		
-		private string _C1;
-		
-		private string _T1;
-		
-		private string _B2;
-		
-		private string _OtherInfo;
-		
-		private string _AdrPref;
-		
-		private string _ComplPref;
-		
-		private string _Tel1Pref;
-		
-		private string _Tel2Pref;
-		
-		private System.Nullable<long> _Pid;
-		
-		private System.Nullable<float> _PrimGros;
-		
-		private System.Nullable<float> _PrimDetail;
-		
-		private System.Nullable<float> _PrimSpecial;
-		
-		private System.Nullable<float> _PrimExtra;
-		
-		private System.Nullable<long> _Forme;
-		
-		private System.Nullable<long> _Taxable;
-		
-		private string _CompleteCode;
-		
-		private long _Drapeau;
-		
-		private string _StateCommande;
-		
-		private string _Prenom;
-		
-		private long _Actif;
-		
-		private string _Note;
-		
-		private System.Nullable<long> _Fait;
-		
-		private System.Nullable<long> _L;
-		
-		private System.Nullable<long> _AEntre;
-		
-		private System.Nullable<long> _APrix;
-		
-		private string _Usr;
-		
-		private string _CDF;
-		
-		private string _Localite;
-		
-		private bool _Arret;
-		
-		private bool _Epuise;
-		
-		private long _Auto;
-		
-		private string _Fcode;
-		
-		public OperationAuto()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
-		public long Ndx
-		{
-			get
-			{
-				return this._Ndx;
-			}
-			set
-			{
-				if ((this._Ndx != value))
-				{
-					this._Ndx = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
-		public string Codage
-		{
-			get
-			{
-				return this._Codage;
-			}
-			set
-			{
-				if ((this._Codage != value))
-				{
-					this._Codage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
-		public string Refers
-		{
-			get
-			{
-				return this._Refers;
-			}
-			set
-			{
-				if ((this._Refers != value))
-				{
-					this._Refers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
-		public string Place
-		{
-			get
-			{
-				return this._Place;
-			}
-			set
-			{
-				if ((this._Place != value))
-				{
-					this._Place = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
-		public string Designation
-		{
-			get
-			{
-				return this._Designation;
-			}
-			set
-			{
-				if ((this._Designation != value))
-				{
-					this._Designation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
-		public System.Nullable<float> Pachat
-		{
-			get
-			{
-				return this._Pachat;
-			}
-			set
-			{
-				if ((this._Pachat != value))
-				{
-					this._Pachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
-		public System.Nullable<float> Previent
-		{
-			get
-			{
-				return this._Previent;
-			}
-			set
-			{
-				if ((this._Previent != value))
-				{
-					this._Previent = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
-		public System.Nullable<float> PGros
-		{
-			get
-			{
-				return this._PGros;
-			}
-			set
-			{
-				if ((this._PGros != value))
-				{
-					this._PGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
-		public System.Nullable<float> PDetail
-		{
-			get
-			{
-				return this._PDetail;
-			}
-			set
-			{
-				if ((this._PDetail != value))
-				{
-					this._PDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
-		public System.Nullable<float> PSpecial
-		{
-			get
-			{
-				return this._PSpecial;
-			}
-			set
-			{
-				if ((this._PSpecial != value))
-				{
-					this._PSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
-		public System.Nullable<float> PExtra
-		{
-			get
-			{
-				return this._PExtra;
-			}
-			set
-			{
-				if ((this._PExtra != value))
-				{
-					this._PExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
-		public System.Nullable<float> QEstime
-		{
-			get
-			{
-				return this._QEstime;
-			}
-			set
-			{
-				if ((this._QEstime != value))
-				{
-					this._QEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
-		public System.Nullable<float> QStock
-		{
-			get
-			{
-				return this._QStock;
-			}
-			set
-			{
-				if ((this._QStock != value))
-				{
-					this._QStock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
-		public System.Nullable<float> PEstime
-		{
-			get
-			{
-				return this._PEstime;
-			}
-			set
-			{
-				if ((this._PEstime != value))
-				{
-					this._PEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(511)")]
-		public string Nomvers
-		{
-			get
-			{
-				return this._Nomvers;
-			}
-			set
-			{
-				if ((this._Nomvers != value))
-				{
-					this._Nomvers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
-		public string Categorie
-		{
-			get
-			{
-				return this._Categorie;
-			}
-			set
-			{
-				if ((this._Categorie != value))
-				{
-					this._Categorie = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
-		public string Unite
-		{
-			get
-			{
-				return this._Unite;
-			}
-			set
-			{
-				if ((this._Unite != value))
-				{
-					this._Unite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
-		public string Nomfrns
-		{
-			get
-			{
-				return this._Nomfrns;
-			}
-			set
-			{
-				if ((this._Nomfrns != value))
-				{
-					this._Nomfrns = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
-		public string Remark
-		{
-			get
-			{
-				return this._Remark;
-			}
-			set
-			{
-				if ((this._Remark != value))
-				{
-					this._Remark = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
-		public System.Nullable<float> Vstock
-		{
-			get
-			{
-				return this._Vstock;
-			}
-			set
-			{
-				if ((this._Vstock != value))
-				{
-					this._Vstock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateVente
-		{
-			get
-			{
-				return this._DateVente;
-			}
-			set
-			{
-				if ((this._DateVente != value))
-				{
-					this._DateVente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateAchat
-		{
-			get
-			{
-				return this._DateAchat;
-			}
-			set
-			{
-				if ((this._DateAchat != value))
-				{
-					this._DateAchat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
-		public string Frs
-		{
-			get
-			{
-				return this._Frs;
-			}
-			set
-			{
-				if ((this._Frs != value))
-				{
-					this._Frs = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
-		public string Clt
-		{
-			get
-			{
-				return this._Clt;
-			}
-			set
-			{
-				if ((this._Clt != value))
-				{
-					this._Clt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
-		public System.Nullable<double> Qachat
-		{
-			get
-			{
-				return this._Qachat;
-			}
-			set
-			{
-				if ((this._Qachat != value))
-				{
-					this._Qachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
-		public System.Nullable<double> Vachat
-		{
-			get
-			{
-				return this._Vachat;
-			}
-			set
-			{
-				if ((this._Vachat != value))
-				{
-					this._Vachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
-		public System.Nullable<double> Qavoir
-		{
-			get
-			{
-				return this._Qavoir;
-			}
-			set
-			{
-				if ((this._Qavoir != value))
-				{
-					this._Qavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
-		public System.Nullable<double> Vavoir
-		{
-			get
-			{
-				return this._Vavoir;
-			}
-			set
-			{
-				if ((this._Vavoir != value))
-				{
-					this._Vavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
-		public System.Nullable<double> Qvente
-		{
-			get
-			{
-				return this._Qvente;
-			}
-			set
-			{
-				if ((this._Qvente != value))
-				{
-					this._Qvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
-		public System.Nullable<double> Vvente
-		{
-			get
-			{
-				return this._Vvente;
-			}
-			set
-			{
-				if ((this._Vvente != value))
-				{
-					this._Vvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
-		public System.Nullable<double> Qercpt
-		{
-			get
-			{
-				return this._Qercpt;
-			}
-			set
-			{
-				if ((this._Qercpt != value))
-				{
-					this._Qercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
-		public System.Nullable<double> Vercpt
-		{
-			get
-			{
-				return this._Vercpt;
-			}
-			set
-			{
-				if ((this._Vercpt != value))
-				{
-					this._Vercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
-		public System.Nullable<double> Qdefect
-		{
-			get
-			{
-				return this._Qdefect;
-			}
-			set
-			{
-				if ((this._Qdefect != value))
-				{
-					this._Qdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
-		public System.Nullable<double> Vdefect
-		{
-			get
-			{
-				return this._Vdefect;
-			}
-			set
-			{
-				if ((this._Vdefect != value))
-				{
-					this._Vdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
-		public System.Nullable<double> Qvol
-		{
-			get
-			{
-				return this._Qvol;
-			}
-			set
-			{
-				if ((this._Qvol != value))
-				{
-					this._Qvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
-		public System.Nullable<double> Vvol
-		{
-			get
-			{
-				return this._Vvol;
-			}
-			set
-			{
-				if ((this._Vvol != value))
-				{
-					this._Vvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
-		public string RCode
-		{
-			get
-			{
-				return this._RCode;
-			}
-			set
-			{
-				if ((this._RCode != value))
-				{
-					this._RCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Catalog", DbType="NVarChar(255)")]
-		public string Catalog
-		{
-			get
-			{
-				return this._Catalog;
-			}
-			set
-			{
-				if ((this._Catalog != value))
-				{
-					this._Catalog = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
-		public string Remarque
-		{
-			get
-			{
-				return this._Remarque;
-			}
-			set
-			{
-				if ((this._Remarque != value))
-				{
-					this._Remarque = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
-		public string Observation
-		{
-			get
-			{
-				return this._Observation;
-			}
-			set
-			{
-				if ((this._Observation != value))
-				{
-					this._Observation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
-		public System.Nullable<float> QSeuil
-		{
-			get
-			{
-				return this._QSeuil;
-			}
-			set
-			{
-				if ((this._QSeuil != value))
-				{
-					this._QSeuil = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
-		public string Magpref
-		{
-			get
-			{
-				return this._Magpref;
-			}
-			set
-			{
-				if ((this._Magpref != value))
-				{
-					this._Magpref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
-		public System.Nullable<long> IdPlace
-		{
-			get
-			{
-				return this._IdPlace;
-			}
-			set
-			{
-				if ((this._IdPlace != value))
-				{
-					this._IdPlace = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
-		public System.Nullable<long> IdCat
-		{
-			get
-			{
-				return this._IdCat;
-			}
-			set
-			{
-				if ((this._IdCat != value))
-				{
-					this._IdCat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
-		public System.Nullable<long> IdUnit
-		{
-			get
-			{
-				return this._IdUnit;
-			}
-			set
-			{
-				if ((this._IdUnit != value))
-				{
-					this._IdUnit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
-		public float Q
-		{
-			get
-			{
-				return this._Q;
-			}
-			set
-			{
-				if ((this._Q != value))
-				{
-					this._Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
-		public float Q1
-		{
-			get
-			{
-				return this._Q1;
-			}
-			set
-			{
-				if ((this._Q1 != value))
-				{
-					this._Q1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
-		public float Q2
-		{
-			get
-			{
-				return this._Q2;
-			}
-			set
-			{
-				if ((this._Q2 != value))
-				{
-					this._Q2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
-		public string S1
-		{
-			get
-			{
-				return this._S1;
-			}
-			set
-			{
-				if ((this._S1 != value))
-				{
-					this._S1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
-		public string S2
-		{
-			get
-			{
-				return this._S2;
-			}
-			set
-			{
-				if ((this._S2 != value))
-				{
-					this._S2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D1
-		{
-			get
-			{
-				return this._D1;
-			}
-			set
-			{
-				if ((this._D1 != value))
-				{
-					this._D1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D2
-		{
-			get
-			{
-				return this._D2;
-			}
-			set
-			{
-				if ((this._D2 != value))
-				{
-					this._D2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
-		public string B1
-		{
-			get
-			{
-				return this._B1;
-			}
-			set
-			{
-				if ((this._B1 != value))
-				{
-					this._B1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
-		public string C1
-		{
-			get
-			{
-				return this._C1;
-			}
-			set
-			{
-				if ((this._C1 != value))
-				{
-					this._C1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
-		public string T1
-		{
-			get
-			{
-				return this._T1;
-			}
-			set
-			{
-				if ((this._T1 != value))
-				{
-					this._T1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
-		public string B2
-		{
-			get
-			{
-				return this._B2;
-			}
-			set
-			{
-				if ((this._B2 != value))
-				{
-					this._B2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
-		public string OtherInfo
-		{
-			get
-			{
-				return this._OtherInfo;
-			}
-			set
-			{
-				if ((this._OtherInfo != value))
-				{
-					this._OtherInfo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
-		public string AdrPref
-		{
-			get
-			{
-				return this._AdrPref;
-			}
-			set
-			{
-				if ((this._AdrPref != value))
-				{
-					this._AdrPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
-		public string ComplPref
-		{
-			get
-			{
-				return this._ComplPref;
-			}
-			set
-			{
-				if ((this._ComplPref != value))
-				{
-					this._ComplPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
-		public string Tel1Pref
-		{
-			get
-			{
-				return this._Tel1Pref;
-			}
-			set
-			{
-				if ((this._Tel1Pref != value))
-				{
-					this._Tel1Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
-		public string Tel2Pref
-		{
-			get
-			{
-				return this._Tel2Pref;
-			}
-			set
-			{
-				if ((this._Tel2Pref != value))
-				{
-					this._Tel2Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
-		public System.Nullable<long> Pid
-		{
-			get
-			{
-				return this._Pid;
-			}
-			set
-			{
-				if ((this._Pid != value))
-				{
-					this._Pid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
-		public System.Nullable<float> PrimGros
-		{
-			get
-			{
-				return this._PrimGros;
-			}
-			set
-			{
-				if ((this._PrimGros != value))
-				{
-					this._PrimGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
-		public System.Nullable<float> PrimDetail
-		{
-			get
-			{
-				return this._PrimDetail;
-			}
-			set
-			{
-				if ((this._PrimDetail != value))
-				{
-					this._PrimDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
-		public System.Nullable<float> PrimSpecial
-		{
-			get
-			{
-				return this._PrimSpecial;
-			}
-			set
-			{
-				if ((this._PrimSpecial != value))
-				{
-					this._PrimSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
-		public System.Nullable<float> PrimExtra
-		{
-			get
-			{
-				return this._PrimExtra;
-			}
-			set
-			{
-				if ((this._PrimExtra != value))
-				{
-					this._PrimExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
-		public System.Nullable<long> Forme
-		{
-			get
-			{
-				return this._Forme;
-			}
-			set
-			{
-				if ((this._Forme != value))
-				{
-					this._Forme = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
-		public System.Nullable<long> Taxable
-		{
-			get
-			{
-				return this._Taxable;
-			}
-			set
-			{
-				if ((this._Taxable != value))
-				{
-					this._Taxable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
-		public string CompleteCode
-		{
-			get
-			{
-				return this._CompleteCode;
-			}
-			set
-			{
-				if ((this._CompleteCode != value))
-				{
-					this._CompleteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
-		public long Drapeau
-		{
-			get
-			{
-				return this._Drapeau;
-			}
-			set
-			{
-				if ((this._Drapeau != value))
-				{
-					this._Drapeau = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
-		public string StateCommande
-		{
-			get
-			{
-				return this._StateCommande;
-			}
-			set
-			{
-				if ((this._StateCommande != value))
-				{
-					this._StateCommande = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
-		public string Prenom
-		{
-			get
-			{
-				return this._Prenom;
-			}
-			set
-			{
-				if ((this._Prenom != value))
-				{
-					this._Prenom = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
-		public long Actif
-		{
-			get
-			{
-				return this._Actif;
-			}
-			set
-			{
-				if ((this._Actif != value))
-				{
-					this._Actif = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
-		public System.Nullable<long> Fait
-		{
-			get
-			{
-				return this._Fait;
-			}
-			set
-			{
-				if ((this._Fait != value))
-				{
-					this._Fait = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
-		public System.Nullable<long> L
-		{
-			get
-			{
-				return this._L;
-			}
-			set
-			{
-				if ((this._L != value))
-				{
-					this._L = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
-		public System.Nullable<long> AEntre
-		{
-			get
-			{
-				return this._AEntre;
-			}
-			set
-			{
-				if ((this._AEntre != value))
-				{
-					this._AEntre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
-		public System.Nullable<long> APrix
-		{
-			get
-			{
-				return this._APrix;
-			}
-			set
-			{
-				if ((this._APrix != value))
-				{
-					this._APrix = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
-		public string Usr
-		{
-			get
-			{
-				return this._Usr;
-			}
-			set
-			{
-				if ((this._Usr != value))
-				{
-					this._Usr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
-		public string CDF
-		{
-			get
-			{
-				return this._CDF;
-			}
-			set
-			{
-				if ((this._CDF != value))
-				{
-					this._CDF = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
-		public string Localite
-		{
-			get
-			{
-				return this._Localite;
-			}
-			set
-			{
-				if ((this._Localite != value))
-				{
-					this._Localite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
-		public bool Arret
-		{
-			get
-			{
-				return this._Arret;
-			}
-			set
-			{
-				if ((this._Arret != value))
-				{
-					this._Arret = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
-		public bool Epuise
-		{
-			get
-			{
-				return this._Epuise;
-			}
-			set
-			{
-				if ((this._Epuise != value))
-				{
-					this._Epuise = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
-		public long Auto
-		{
-			get
-			{
-				return this._Auto;
-			}
-			set
-			{
-				if ((this._Auto != value))
-				{
-					this._Auto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(266)")]
-		public string Fcode
-		{
-			get
-			{
-				return this._Fcode;
-			}
-			set
-			{
-				if ((this._Fcode != value))
-				{
-					this._Fcode = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationEntry")]
-	public partial class OperationEntry
-	{
-		
-		private long _Ndx;
-		
-		private string _Codage;
-		
-		private string _Refers;
-		
-		private string _Place;
-		
-		private string _Designation;
-		
-		private System.Nullable<float> _Pachat;
-		
-		private string _UNT_FRNS;
-		
-		private System.Nullable<float> _Previent;
-		
-		private System.Nullable<float> _PGros;
-		
-		private System.Nullable<float> _Px;
-		
-		private System.Nullable<float> _PSpecial;
-		
-		private System.Nullable<float> _PExtra;
-		
-		private string _Refuse;
-		
-		private System.Nullable<float> _QEstime;
-		
-		private System.Nullable<float> _PEstime;
-		
-		private string _Nomvers;
-		
-		private string _Categorie;
-		
-		private string _Unite;
-		
-		private System.Nullable<float> _QStock;
-		
-		private string _Nomfrns;
-		
-		private string _Remark;
-		
-		private System.Nullable<float> _Vstock;
-		
-		private System.Nullable<System.DateTime> _DateVente;
-		
-		private System.Nullable<System.DateTime> _DateAchat;
-		
-		private string _Frs;
-		
-		private string _Clt;
-		
-		private System.Nullable<double> _Qachat;
-		
-		private System.Nullable<double> _Vachat;
-		
-		private System.Nullable<double> _Qavoir;
-		
-		private System.Nullable<double> _Vavoir;
-		
-		private System.Nullable<double> _Qvente;
-		
-		private System.Nullable<double> _Vvente;
-		
-		private System.Nullable<double> _Qercpt;
-		
-		private System.Nullable<double> _Vercpt;
-		
-		private System.Nullable<double> _Qdefect;
-		
-		private System.Nullable<double> _Vdefect;
-		
-		private System.Nullable<double> _Qvol;
-		
-		private System.Nullable<double> _Vvol;
-		
-		private string _RCode;
-		
-		private string _Catalog;
-		
-		private string _Remarque;
-		
-		private string _Observation;
-		
-		private System.Nullable<float> _QSeuil;
-		
-		private string _Magpref;
-		
-		private System.Nullable<long> _IdPlace;
-		
-		private System.Nullable<long> _IdCat;
-		
-		private System.Nullable<long> _IdUnit;
-		
-		private float _Q;
-		
-		private float _Q1;
-		
-		private float _Q2;
-		
-		private string _S1;
-		
-		private string _S2;
-		
-		private System.DateTime _D1;
-		
-		private System.DateTime _D2;
-		
-		private string _B1;
-		
-		private string _C1;
-		
-		private string _T1;
-		
-		private string _B2;
-		
-		private string _OtherInfo;
-		
-		private string _AdrPref;
-		
-		private string _ComplPref;
-		
-		private string _Tel1Pref;
-		
-		private string _Tel2Pref;
-		
-		private System.Nullable<long> _Pid;
-		
-		private System.Nullable<float> _PrimGros;
-		
-		private System.Nullable<float> _PrimDetail;
-		
-		private System.Nullable<float> _PrimSpecial;
-		
-		private System.Nullable<float> _PrimExtra;
-		
-		private System.Nullable<long> _Forme;
-		
-		private System.Nullable<long> _Taxable;
-		
-		private string _CompleteCode;
-		
-		private long _Drapeau;
-		
-		private string _StateCommande;
-		
-		private string _Prenom;
-		
-		private long _Actif;
-		
-		private string _Note;
-		
-		private System.Nullable<long> _Fait;
-		
-		private System.Nullable<long> _L;
-		
-		private System.Nullable<long> _AEntre;
-		
-		private System.Nullable<long> _APrix;
-		
-		private string _Usr;
-		
-		private string _CDF;
-		
-		private string _Localite;
-		
-		private long _Auto;
-		
-		private bool _Arret;
-		
-		private bool _Epuise;
-		
-		private bool _Etat0;
-		
-		private bool _Etat1;
-		
-		private bool _Etat2;
-		
-		private string _Fcode;
-		
-		public OperationEntry()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
-		public long Ndx
-		{
-			get
-			{
-				return this._Ndx;
-			}
-			set
-			{
-				if ((this._Ndx != value))
-				{
-					this._Ndx = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
-		public string Codage
-		{
-			get
-			{
-				return this._Codage;
-			}
-			set
-			{
-				if ((this._Codage != value))
-				{
-					this._Codage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
-		public string Refers
-		{
-			get
-			{
-				return this._Refers;
-			}
-			set
-			{
-				if ((this._Refers != value))
-				{
-					this._Refers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
-		public string Place
-		{
-			get
-			{
-				return this._Place;
-			}
-			set
-			{
-				if ((this._Place != value))
-				{
-					this._Place = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
-		public string Designation
-		{
-			get
-			{
-				return this._Designation;
-			}
-			set
-			{
-				if ((this._Designation != value))
-				{
-					this._Designation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
-		public System.Nullable<float> Pachat
-		{
-			get
-			{
-				return this._Pachat;
-			}
-			set
-			{
-				if ((this._Pachat != value))
-				{
-					this._Pachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNT_FRNS", DbType="VarChar(200)")]
-		public string UNT_FRNS
-		{
-			get
-			{
-				return this._UNT_FRNS;
-			}
-			set
-			{
-				if ((this._UNT_FRNS != value))
-				{
-					this._UNT_FRNS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
-		public System.Nullable<float> Previent
-		{
-			get
-			{
-				return this._Previent;
-			}
-			set
-			{
-				if ((this._Previent != value))
-				{
-					this._Previent = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
-		public System.Nullable<float> PGros
-		{
-			get
-			{
-				return this._PGros;
-			}
-			set
-			{
-				if ((this._PGros != value))
-				{
-					this._PGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Px", DbType="Real")]
-		public System.Nullable<float> Px
-		{
-			get
-			{
-				return this._Px;
-			}
-			set
-			{
-				if ((this._Px != value))
-				{
-					this._Px = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
-		public System.Nullable<float> PSpecial
-		{
-			get
-			{
-				return this._PSpecial;
-			}
-			set
-			{
-				if ((this._PSpecial != value))
-				{
-					this._PSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
-		public System.Nullable<float> PExtra
-		{
-			get
-			{
-				return this._PExtra;
-			}
-			set
-			{
-				if ((this._PExtra != value))
-				{
-					this._PExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refuse", DbType="NVarChar(255)")]
-		public string Refuse
-		{
-			get
-			{
-				return this._Refuse;
-			}
-			set
-			{
-				if ((this._Refuse != value))
-				{
-					this._Refuse = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
-		public System.Nullable<float> QEstime
-		{
-			get
-			{
-				return this._QEstime;
-			}
-			set
-			{
-				if ((this._QEstime != value))
-				{
-					this._QEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
-		public System.Nullable<float> PEstime
-		{
-			get
-			{
-				return this._PEstime;
-			}
-			set
-			{
-				if ((this._PEstime != value))
-				{
-					this._PEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(511)")]
-		public string Nomvers
-		{
-			get
-			{
-				return this._Nomvers;
-			}
-			set
-			{
-				if ((this._Nomvers != value))
-				{
-					this._Nomvers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
-		public string Categorie
-		{
-			get
-			{
-				return this._Categorie;
-			}
-			set
-			{
-				if ((this._Categorie != value))
-				{
-					this._Categorie = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
-		public string Unite
-		{
-			get
-			{
-				return this._Unite;
-			}
-			set
-			{
-				if ((this._Unite != value))
-				{
-					this._Unite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
-		public System.Nullable<float> QStock
-		{
-			get
-			{
-				return this._QStock;
-			}
-			set
-			{
-				if ((this._QStock != value))
-				{
-					this._QStock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
-		public string Nomfrns
-		{
-			get
-			{
-				return this._Nomfrns;
-			}
-			set
-			{
-				if ((this._Nomfrns != value))
-				{
-					this._Nomfrns = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
-		public string Remark
-		{
-			get
-			{
-				return this._Remark;
-			}
-			set
-			{
-				if ((this._Remark != value))
-				{
-					this._Remark = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
-		public System.Nullable<float> Vstock
-		{
-			get
-			{
-				return this._Vstock;
-			}
-			set
-			{
-				if ((this._Vstock != value))
-				{
-					this._Vstock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateVente
-		{
-			get
-			{
-				return this._DateVente;
-			}
-			set
-			{
-				if ((this._DateVente != value))
-				{
-					this._DateVente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateAchat
-		{
-			get
-			{
-				return this._DateAchat;
-			}
-			set
-			{
-				if ((this._DateAchat != value))
-				{
-					this._DateAchat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
-		public string Frs
-		{
-			get
-			{
-				return this._Frs;
-			}
-			set
-			{
-				if ((this._Frs != value))
-				{
-					this._Frs = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
-		public string Clt
-		{
-			get
-			{
-				return this._Clt;
-			}
-			set
-			{
-				if ((this._Clt != value))
-				{
-					this._Clt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
-		public System.Nullable<double> Qachat
-		{
-			get
-			{
-				return this._Qachat;
-			}
-			set
-			{
-				if ((this._Qachat != value))
-				{
-					this._Qachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
-		public System.Nullable<double> Vachat
-		{
-			get
-			{
-				return this._Vachat;
-			}
-			set
-			{
-				if ((this._Vachat != value))
-				{
-					this._Vachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
-		public System.Nullable<double> Qavoir
-		{
-			get
-			{
-				return this._Qavoir;
-			}
-			set
-			{
-				if ((this._Qavoir != value))
-				{
-					this._Qavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
-		public System.Nullable<double> Vavoir
-		{
-			get
-			{
-				return this._Vavoir;
-			}
-			set
-			{
-				if ((this._Vavoir != value))
-				{
-					this._Vavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
-		public System.Nullable<double> Qvente
-		{
-			get
-			{
-				return this._Qvente;
-			}
-			set
-			{
-				if ((this._Qvente != value))
-				{
-					this._Qvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
-		public System.Nullable<double> Vvente
-		{
-			get
-			{
-				return this._Vvente;
-			}
-			set
-			{
-				if ((this._Vvente != value))
-				{
-					this._Vvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
-		public System.Nullable<double> Qercpt
-		{
-			get
-			{
-				return this._Qercpt;
-			}
-			set
-			{
-				if ((this._Qercpt != value))
-				{
-					this._Qercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
-		public System.Nullable<double> Vercpt
-		{
-			get
-			{
-				return this._Vercpt;
-			}
-			set
-			{
-				if ((this._Vercpt != value))
-				{
-					this._Vercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
-		public System.Nullable<double> Qdefect
-		{
-			get
-			{
-				return this._Qdefect;
-			}
-			set
-			{
-				if ((this._Qdefect != value))
-				{
-					this._Qdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
-		public System.Nullable<double> Vdefect
-		{
-			get
-			{
-				return this._Vdefect;
-			}
-			set
-			{
-				if ((this._Vdefect != value))
-				{
-					this._Vdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
-		public System.Nullable<double> Qvol
-		{
-			get
-			{
-				return this._Qvol;
-			}
-			set
-			{
-				if ((this._Qvol != value))
-				{
-					this._Qvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
-		public System.Nullable<double> Vvol
-		{
-			get
-			{
-				return this._Vvol;
-			}
-			set
-			{
-				if ((this._Vvol != value))
-				{
-					this._Vvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
-		public string RCode
-		{
-			get
-			{
-				return this._RCode;
-			}
-			set
-			{
-				if ((this._RCode != value))
-				{
-					this._RCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Catalog", DbType="NVarChar(255)")]
-		public string Catalog
-		{
-			get
-			{
-				return this._Catalog;
-			}
-			set
-			{
-				if ((this._Catalog != value))
-				{
-					this._Catalog = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
-		public string Remarque
-		{
-			get
-			{
-				return this._Remarque;
-			}
-			set
-			{
-				if ((this._Remarque != value))
-				{
-					this._Remarque = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
-		public string Observation
-		{
-			get
-			{
-				return this._Observation;
-			}
-			set
-			{
-				if ((this._Observation != value))
-				{
-					this._Observation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
-		public System.Nullable<float> QSeuil
-		{
-			get
-			{
-				return this._QSeuil;
-			}
-			set
-			{
-				if ((this._QSeuil != value))
-				{
-					this._QSeuil = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
-		public string Magpref
-		{
-			get
-			{
-				return this._Magpref;
-			}
-			set
-			{
-				if ((this._Magpref != value))
-				{
-					this._Magpref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
-		public System.Nullable<long> IdPlace
-		{
-			get
-			{
-				return this._IdPlace;
-			}
-			set
-			{
-				if ((this._IdPlace != value))
-				{
-					this._IdPlace = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
-		public System.Nullable<long> IdCat
-		{
-			get
-			{
-				return this._IdCat;
-			}
-			set
-			{
-				if ((this._IdCat != value))
-				{
-					this._IdCat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
-		public System.Nullable<long> IdUnit
-		{
-			get
-			{
-				return this._IdUnit;
-			}
-			set
-			{
-				if ((this._IdUnit != value))
-				{
-					this._IdUnit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
-		public float Q
-		{
-			get
-			{
-				return this._Q;
-			}
-			set
-			{
-				if ((this._Q != value))
-				{
-					this._Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
-		public float Q1
-		{
-			get
-			{
-				return this._Q1;
-			}
-			set
-			{
-				if ((this._Q1 != value))
-				{
-					this._Q1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
-		public float Q2
-		{
-			get
-			{
-				return this._Q2;
-			}
-			set
-			{
-				if ((this._Q2 != value))
-				{
-					this._Q2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
-		public string S1
-		{
-			get
-			{
-				return this._S1;
-			}
-			set
-			{
-				if ((this._S1 != value))
-				{
-					this._S1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
-		public string S2
-		{
-			get
-			{
-				return this._S2;
-			}
-			set
-			{
-				if ((this._S2 != value))
-				{
-					this._S2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D1
-		{
-			get
-			{
-				return this._D1;
-			}
-			set
-			{
-				if ((this._D1 != value))
-				{
-					this._D1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D2
-		{
-			get
-			{
-				return this._D2;
-			}
-			set
-			{
-				if ((this._D2 != value))
-				{
-					this._D2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
-		public string B1
-		{
-			get
-			{
-				return this._B1;
-			}
-			set
-			{
-				if ((this._B1 != value))
-				{
-					this._B1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
-		public string C1
-		{
-			get
-			{
-				return this._C1;
-			}
-			set
-			{
-				if ((this._C1 != value))
-				{
-					this._C1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
-		public string T1
-		{
-			get
-			{
-				return this._T1;
-			}
-			set
-			{
-				if ((this._T1 != value))
-				{
-					this._T1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
-		public string B2
-		{
-			get
-			{
-				return this._B2;
-			}
-			set
-			{
-				if ((this._B2 != value))
-				{
-					this._B2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
-		public string OtherInfo
-		{
-			get
-			{
-				return this._OtherInfo;
-			}
-			set
-			{
-				if ((this._OtherInfo != value))
-				{
-					this._OtherInfo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
-		public string AdrPref
-		{
-			get
-			{
-				return this._AdrPref;
-			}
-			set
-			{
-				if ((this._AdrPref != value))
-				{
-					this._AdrPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
-		public string ComplPref
-		{
-			get
-			{
-				return this._ComplPref;
-			}
-			set
-			{
-				if ((this._ComplPref != value))
-				{
-					this._ComplPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
-		public string Tel1Pref
-		{
-			get
-			{
-				return this._Tel1Pref;
-			}
-			set
-			{
-				if ((this._Tel1Pref != value))
-				{
-					this._Tel1Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
-		public string Tel2Pref
-		{
-			get
-			{
-				return this._Tel2Pref;
-			}
-			set
-			{
-				if ((this._Tel2Pref != value))
-				{
-					this._Tel2Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
-		public System.Nullable<long> Pid
-		{
-			get
-			{
-				return this._Pid;
-			}
-			set
-			{
-				if ((this._Pid != value))
-				{
-					this._Pid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
-		public System.Nullable<float> PrimGros
-		{
-			get
-			{
-				return this._PrimGros;
-			}
-			set
-			{
-				if ((this._PrimGros != value))
-				{
-					this._PrimGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
-		public System.Nullable<float> PrimDetail
-		{
-			get
-			{
-				return this._PrimDetail;
-			}
-			set
-			{
-				if ((this._PrimDetail != value))
-				{
-					this._PrimDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
-		public System.Nullable<float> PrimSpecial
-		{
-			get
-			{
-				return this._PrimSpecial;
-			}
-			set
-			{
-				if ((this._PrimSpecial != value))
-				{
-					this._PrimSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
-		public System.Nullable<float> PrimExtra
-		{
-			get
-			{
-				return this._PrimExtra;
-			}
-			set
-			{
-				if ((this._PrimExtra != value))
-				{
-					this._PrimExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
-		public System.Nullable<long> Forme
-		{
-			get
-			{
-				return this._Forme;
-			}
-			set
-			{
-				if ((this._Forme != value))
-				{
-					this._Forme = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
-		public System.Nullable<long> Taxable
-		{
-			get
-			{
-				return this._Taxable;
-			}
-			set
-			{
-				if ((this._Taxable != value))
-				{
-					this._Taxable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
-		public string CompleteCode
-		{
-			get
-			{
-				return this._CompleteCode;
-			}
-			set
-			{
-				if ((this._CompleteCode != value))
-				{
-					this._CompleteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
-		public long Drapeau
-		{
-			get
-			{
-				return this._Drapeau;
-			}
-			set
-			{
-				if ((this._Drapeau != value))
-				{
-					this._Drapeau = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
-		public string StateCommande
-		{
-			get
-			{
-				return this._StateCommande;
-			}
-			set
-			{
-				if ((this._StateCommande != value))
-				{
-					this._StateCommande = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
-		public string Prenom
-		{
-			get
-			{
-				return this._Prenom;
-			}
-			set
-			{
-				if ((this._Prenom != value))
-				{
-					this._Prenom = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
-		public long Actif
-		{
-			get
-			{
-				return this._Actif;
-			}
-			set
-			{
-				if ((this._Actif != value))
-				{
-					this._Actif = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
-		public System.Nullable<long> Fait
-		{
-			get
-			{
-				return this._Fait;
-			}
-			set
-			{
-				if ((this._Fait != value))
-				{
-					this._Fait = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
-		public System.Nullable<long> L
-		{
-			get
-			{
-				return this._L;
-			}
-			set
-			{
-				if ((this._L != value))
-				{
-					this._L = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
-		public System.Nullable<long> AEntre
-		{
-			get
-			{
-				return this._AEntre;
-			}
-			set
-			{
-				if ((this._AEntre != value))
-				{
-					this._AEntre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
-		public System.Nullable<long> APrix
-		{
-			get
-			{
-				return this._APrix;
-			}
-			set
-			{
-				if ((this._APrix != value))
-				{
-					this._APrix = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
-		public string Usr
-		{
-			get
-			{
-				return this._Usr;
-			}
-			set
-			{
-				if ((this._Usr != value))
-				{
-					this._Usr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
-		public string CDF
-		{
-			get
-			{
-				return this._CDF;
-			}
-			set
-			{
-				if ((this._CDF != value))
-				{
-					this._CDF = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
-		public string Localite
-		{
-			get
-			{
-				return this._Localite;
-			}
-			set
-			{
-				if ((this._Localite != value))
-				{
-					this._Localite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
-		public long Auto
-		{
-			get
-			{
-				return this._Auto;
-			}
-			set
-			{
-				if ((this._Auto != value))
-				{
-					this._Auto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
-		public bool Arret
-		{
-			get
-			{
-				return this._Arret;
-			}
-			set
-			{
-				if ((this._Arret != value))
-				{
-					this._Arret = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
-		public bool Epuise
-		{
-			get
-			{
-				return this._Epuise;
-			}
-			set
-			{
-				if ((this._Epuise != value))
-				{
-					this._Epuise = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
-		public bool Etat0
-		{
-			get
-			{
-				return this._Etat0;
-			}
-			set
-			{
-				if ((this._Etat0 != value))
-				{
-					this._Etat0 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
-		public bool Etat1
-		{
-			get
-			{
-				return this._Etat1;
-			}
-			set
-			{
-				if ((this._Etat1 != value))
-				{
-					this._Etat1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
-		public bool Etat2
-		{
-			get
-			{
-				return this._Etat2;
-			}
-			set
-			{
-				if ((this._Etat2 != value))
-				{
-					this._Etat2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(266)")]
-		public string Fcode
-		{
-			get
-			{
-				return this._Fcode;
-			}
-			set
-			{
-				if ((this._Fcode != value))
-				{
-					this._Fcode = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationDispo")]
-	public partial class OperationDispo
-	{
-		
-		private long _Ndx;
-		
-		private string _Codage;
-		
-		private string _Refers;
-		
-		private string _Place;
-		
-		private string _Designation;
-		
-		private System.Nullable<float> _Pachat;
-		
-		private string _UNT_FRNS;
-		
-		private System.Nullable<float> _Previent;
-		
-		private System.Nullable<float> _PGros;
-		
-		private System.Nullable<float> _PDetail;
-		
-		private System.Nullable<float> _PSpecial;
-		
-		private System.Nullable<float> _PExtra;
-		
-		private string _Refuse;
-		
-		private System.Nullable<float> _QEstime;
-		
-		private System.Nullable<float> _PEstime;
-		
-		private string _Nomvers;
-		
-		private string _Categorie;
-		
-		private string _Unite;
-		
-		private System.Nullable<float> _QStock;
-		
-		private string _Nomfrns;
-		
-		private string _Remark;
-		
-		private System.Nullable<float> _Vstock;
-		
-		private System.Nullable<System.DateTime> _DateVente;
-		
-		private System.Nullable<System.DateTime> _DateAchat;
-		
-		private string _Frs;
-		
-		private string _Clt;
-		
-		private System.Nullable<double> _Qachat;
-		
-		private System.Nullable<double> _Vachat;
-		
-		private System.Nullable<double> _Qavoir;
-		
-		private System.Nullable<double> _Vavoir;
-		
-		private System.Nullable<double> _Qvente;
-		
-		private System.Nullable<double> _Vvente;
-		
-		private System.Nullable<double> _Qercpt;
-		
-		private System.Nullable<double> _Vercpt;
-		
-		private System.Nullable<double> _Qdefect;
-		
-		private System.Nullable<double> _Vdefect;
-		
-		private System.Nullable<double> _Qvol;
-		
-		private System.Nullable<double> _Vvol;
-		
-		private string _RCode;
-		
-		private string _Catalog;
-		
-		private string _Remarque;
-		
-		private string _Observation;
-		
-		private System.Nullable<float> _QSeuil;
-		
-		private string _Magpref;
-		
-		private System.Nullable<long> _IdPlace;
-		
-		private System.Nullable<long> _IdCat;
-		
-		private System.Nullable<long> _IdUnit;
-		
-		private float _Q;
-		
-		private float _Q1;
-		
-		private float _Q2;
-		
-		private string _S1;
-		
-		private string _S2;
-		
-		private System.DateTime _D1;
-		
-		private System.DateTime _D2;
-		
-		private string _B1;
-		
-		private string _C1;
-		
-		private string _T1;
-		
-		private string _B2;
-		
-		private string _OtherInfo;
-		
-		private string _AdrPref;
-		
-		private string _ComplPref;
-		
-		private string _Tel1Pref;
-		
-		private string _Tel2Pref;
-		
-		private System.Nullable<long> _Pid;
-		
-		private System.Nullable<float> _PrimGros;
-		
-		private System.Nullable<float> _PrimDetail;
-		
-		private System.Nullable<float> _PrimSpecial;
-		
-		private System.Nullable<float> _PrimExtra;
-		
-		private System.Nullable<long> _Forme;
-		
-		private System.Nullable<long> _Taxable;
-		
-		private string _CompleteCode;
-		
-		private long _Drapeau;
-		
-		private string _StateCommande;
-		
-		private string _Prenom;
-		
-		private long _Actif;
-		
-		private string _Note;
-		
-		private System.Nullable<long> _Fait;
-		
-		private System.Nullable<long> _L;
-		
-		private System.Nullable<long> _AEntre;
-		
-		private System.Nullable<long> _APrix;
-		
-		private string _Usr;
-		
-		private string _CDF;
-		
-		private string _Localite;
-		
-		private long _Auto;
-		
-		private bool _Arret;
-		
-		private bool _Epuise;
-		
-		private bool _Etat0;
-		
-		private bool _Etat1;
-		
-		private bool _Etat2;
-		
-		private string _Fcode;
-		
-		public OperationDispo()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
-		public long Ndx
-		{
-			get
-			{
-				return this._Ndx;
-			}
-			set
-			{
-				if ((this._Ndx != value))
-				{
-					this._Ndx = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
-		public string Codage
-		{
-			get
-			{
-				return this._Codage;
-			}
-			set
-			{
-				if ((this._Codage != value))
-				{
-					this._Codage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
-		public string Refers
-		{
-			get
-			{
-				return this._Refers;
-			}
-			set
-			{
-				if ((this._Refers != value))
-				{
-					this._Refers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
-		public string Place
-		{
-			get
-			{
-				return this._Place;
-			}
-			set
-			{
-				if ((this._Place != value))
-				{
-					this._Place = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
-		public string Designation
-		{
-			get
-			{
-				return this._Designation;
-			}
-			set
-			{
-				if ((this._Designation != value))
-				{
-					this._Designation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
-		public System.Nullable<float> Pachat
-		{
-			get
-			{
-				return this._Pachat;
-			}
-			set
-			{
-				if ((this._Pachat != value))
-				{
-					this._Pachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNT_FRNS", DbType="VarChar(200)")]
-		public string UNT_FRNS
-		{
-			get
-			{
-				return this._UNT_FRNS;
-			}
-			set
-			{
-				if ((this._UNT_FRNS != value))
-				{
-					this._UNT_FRNS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
-		public System.Nullable<float> Previent
-		{
-			get
-			{
-				return this._Previent;
-			}
-			set
-			{
-				if ((this._Previent != value))
-				{
-					this._Previent = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
-		public System.Nullable<float> PGros
-		{
-			get
-			{
-				return this._PGros;
-			}
-			set
-			{
-				if ((this._PGros != value))
-				{
-					this._PGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
-		public System.Nullable<float> PDetail
-		{
-			get
-			{
-				return this._PDetail;
-			}
-			set
-			{
-				if ((this._PDetail != value))
-				{
-					this._PDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
-		public System.Nullable<float> PSpecial
-		{
-			get
-			{
-				return this._PSpecial;
-			}
-			set
-			{
-				if ((this._PSpecial != value))
-				{
-					this._PSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
-		public System.Nullable<float> PExtra
-		{
-			get
-			{
-				return this._PExtra;
-			}
-			set
-			{
-				if ((this._PExtra != value))
-				{
-					this._PExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refuse", DbType="NVarChar(255)")]
-		public string Refuse
-		{
-			get
-			{
-				return this._Refuse;
-			}
-			set
-			{
-				if ((this._Refuse != value))
-				{
-					this._Refuse = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
-		public System.Nullable<float> QEstime
-		{
-			get
-			{
-				return this._QEstime;
-			}
-			set
-			{
-				if ((this._QEstime != value))
-				{
-					this._QEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
-		public System.Nullable<float> PEstime
-		{
-			get
-			{
-				return this._PEstime;
-			}
-			set
-			{
-				if ((this._PEstime != value))
-				{
-					this._PEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(511)")]
-		public string Nomvers
-		{
-			get
-			{
-				return this._Nomvers;
-			}
-			set
-			{
-				if ((this._Nomvers != value))
-				{
-					this._Nomvers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
-		public string Categorie
-		{
-			get
-			{
-				return this._Categorie;
-			}
-			set
-			{
-				if ((this._Categorie != value))
-				{
-					this._Categorie = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
-		public string Unite
-		{
-			get
-			{
-				return this._Unite;
-			}
-			set
-			{
-				if ((this._Unite != value))
-				{
-					this._Unite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
-		public System.Nullable<float> QStock
-		{
-			get
-			{
-				return this._QStock;
-			}
-			set
-			{
-				if ((this._QStock != value))
-				{
-					this._QStock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
-		public string Nomfrns
-		{
-			get
-			{
-				return this._Nomfrns;
-			}
-			set
-			{
-				if ((this._Nomfrns != value))
-				{
-					this._Nomfrns = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
-		public string Remark
-		{
-			get
-			{
-				return this._Remark;
-			}
-			set
-			{
-				if ((this._Remark != value))
-				{
-					this._Remark = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
-		public System.Nullable<float> Vstock
-		{
-			get
-			{
-				return this._Vstock;
-			}
-			set
-			{
-				if ((this._Vstock != value))
-				{
-					this._Vstock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateVente
-		{
-			get
-			{
-				return this._DateVente;
-			}
-			set
-			{
-				if ((this._DateVente != value))
-				{
-					this._DateVente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateAchat
-		{
-			get
-			{
-				return this._DateAchat;
-			}
-			set
-			{
-				if ((this._DateAchat != value))
-				{
-					this._DateAchat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
-		public string Frs
-		{
-			get
-			{
-				return this._Frs;
-			}
-			set
-			{
-				if ((this._Frs != value))
-				{
-					this._Frs = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
-		public string Clt
-		{
-			get
-			{
-				return this._Clt;
-			}
-			set
-			{
-				if ((this._Clt != value))
-				{
-					this._Clt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
-		public System.Nullable<double> Qachat
-		{
-			get
-			{
-				return this._Qachat;
-			}
-			set
-			{
-				if ((this._Qachat != value))
-				{
-					this._Qachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
-		public System.Nullable<double> Vachat
-		{
-			get
-			{
-				return this._Vachat;
-			}
-			set
-			{
-				if ((this._Vachat != value))
-				{
-					this._Vachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
-		public System.Nullable<double> Qavoir
-		{
-			get
-			{
-				return this._Qavoir;
-			}
-			set
-			{
-				if ((this._Qavoir != value))
-				{
-					this._Qavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
-		public System.Nullable<double> Vavoir
-		{
-			get
-			{
-				return this._Vavoir;
-			}
-			set
-			{
-				if ((this._Vavoir != value))
-				{
-					this._Vavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
-		public System.Nullable<double> Qvente
-		{
-			get
-			{
-				return this._Qvente;
-			}
-			set
-			{
-				if ((this._Qvente != value))
-				{
-					this._Qvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
-		public System.Nullable<double> Vvente
-		{
-			get
-			{
-				return this._Vvente;
-			}
-			set
-			{
-				if ((this._Vvente != value))
-				{
-					this._Vvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
-		public System.Nullable<double> Qercpt
-		{
-			get
-			{
-				return this._Qercpt;
-			}
-			set
-			{
-				if ((this._Qercpt != value))
-				{
-					this._Qercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
-		public System.Nullable<double> Vercpt
-		{
-			get
-			{
-				return this._Vercpt;
-			}
-			set
-			{
-				if ((this._Vercpt != value))
-				{
-					this._Vercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
-		public System.Nullable<double> Qdefect
-		{
-			get
-			{
-				return this._Qdefect;
-			}
-			set
-			{
-				if ((this._Qdefect != value))
-				{
-					this._Qdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
-		public System.Nullable<double> Vdefect
-		{
-			get
-			{
-				return this._Vdefect;
-			}
-			set
-			{
-				if ((this._Vdefect != value))
-				{
-					this._Vdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
-		public System.Nullable<double> Qvol
-		{
-			get
-			{
-				return this._Qvol;
-			}
-			set
-			{
-				if ((this._Qvol != value))
-				{
-					this._Qvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
-		public System.Nullable<double> Vvol
-		{
-			get
-			{
-				return this._Vvol;
-			}
-			set
-			{
-				if ((this._Vvol != value))
-				{
-					this._Vvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
-		public string RCode
-		{
-			get
-			{
-				return this._RCode;
-			}
-			set
-			{
-				if ((this._RCode != value))
-				{
-					this._RCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Catalog", DbType="NVarChar(255)")]
-		public string Catalog
-		{
-			get
-			{
-				return this._Catalog;
-			}
-			set
-			{
-				if ((this._Catalog != value))
-				{
-					this._Catalog = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
-		public string Remarque
-		{
-			get
-			{
-				return this._Remarque;
-			}
-			set
-			{
-				if ((this._Remarque != value))
-				{
-					this._Remarque = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
-		public string Observation
-		{
-			get
-			{
-				return this._Observation;
-			}
-			set
-			{
-				if ((this._Observation != value))
-				{
-					this._Observation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
-		public System.Nullable<float> QSeuil
-		{
-			get
-			{
-				return this._QSeuil;
-			}
-			set
-			{
-				if ((this._QSeuil != value))
-				{
-					this._QSeuil = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
-		public string Magpref
-		{
-			get
-			{
-				return this._Magpref;
-			}
-			set
-			{
-				if ((this._Magpref != value))
-				{
-					this._Magpref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
-		public System.Nullable<long> IdPlace
-		{
-			get
-			{
-				return this._IdPlace;
-			}
-			set
-			{
-				if ((this._IdPlace != value))
-				{
-					this._IdPlace = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
-		public System.Nullable<long> IdCat
-		{
-			get
-			{
-				return this._IdCat;
-			}
-			set
-			{
-				if ((this._IdCat != value))
-				{
-					this._IdCat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
-		public System.Nullable<long> IdUnit
-		{
-			get
-			{
-				return this._IdUnit;
-			}
-			set
-			{
-				if ((this._IdUnit != value))
-				{
-					this._IdUnit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
-		public float Q
-		{
-			get
-			{
-				return this._Q;
-			}
-			set
-			{
-				if ((this._Q != value))
-				{
-					this._Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
-		public float Q1
-		{
-			get
-			{
-				return this._Q1;
-			}
-			set
-			{
-				if ((this._Q1 != value))
-				{
-					this._Q1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
-		public float Q2
-		{
-			get
-			{
-				return this._Q2;
-			}
-			set
-			{
-				if ((this._Q2 != value))
-				{
-					this._Q2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
-		public string S1
-		{
-			get
-			{
-				return this._S1;
-			}
-			set
-			{
-				if ((this._S1 != value))
-				{
-					this._S1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
-		public string S2
-		{
-			get
-			{
-				return this._S2;
-			}
-			set
-			{
-				if ((this._S2 != value))
-				{
-					this._S2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D1
-		{
-			get
-			{
-				return this._D1;
-			}
-			set
-			{
-				if ((this._D1 != value))
-				{
-					this._D1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D2
-		{
-			get
-			{
-				return this._D2;
-			}
-			set
-			{
-				if ((this._D2 != value))
-				{
-					this._D2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
-		public string B1
-		{
-			get
-			{
-				return this._B1;
-			}
-			set
-			{
-				if ((this._B1 != value))
-				{
-					this._B1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
-		public string C1
-		{
-			get
-			{
-				return this._C1;
-			}
-			set
-			{
-				if ((this._C1 != value))
-				{
-					this._C1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
-		public string T1
-		{
-			get
-			{
-				return this._T1;
-			}
-			set
-			{
-				if ((this._T1 != value))
-				{
-					this._T1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
-		public string B2
-		{
-			get
-			{
-				return this._B2;
-			}
-			set
-			{
-				if ((this._B2 != value))
-				{
-					this._B2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
-		public string OtherInfo
-		{
-			get
-			{
-				return this._OtherInfo;
-			}
-			set
-			{
-				if ((this._OtherInfo != value))
-				{
-					this._OtherInfo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
-		public string AdrPref
-		{
-			get
-			{
-				return this._AdrPref;
-			}
-			set
-			{
-				if ((this._AdrPref != value))
-				{
-					this._AdrPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
-		public string ComplPref
-		{
-			get
-			{
-				return this._ComplPref;
-			}
-			set
-			{
-				if ((this._ComplPref != value))
-				{
-					this._ComplPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
-		public string Tel1Pref
-		{
-			get
-			{
-				return this._Tel1Pref;
-			}
-			set
-			{
-				if ((this._Tel1Pref != value))
-				{
-					this._Tel1Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
-		public string Tel2Pref
-		{
-			get
-			{
-				return this._Tel2Pref;
-			}
-			set
-			{
-				if ((this._Tel2Pref != value))
-				{
-					this._Tel2Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
-		public System.Nullable<long> Pid
-		{
-			get
-			{
-				return this._Pid;
-			}
-			set
-			{
-				if ((this._Pid != value))
-				{
-					this._Pid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
-		public System.Nullable<float> PrimGros
-		{
-			get
-			{
-				return this._PrimGros;
-			}
-			set
-			{
-				if ((this._PrimGros != value))
-				{
-					this._PrimGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
-		public System.Nullable<float> PrimDetail
-		{
-			get
-			{
-				return this._PrimDetail;
-			}
-			set
-			{
-				if ((this._PrimDetail != value))
-				{
-					this._PrimDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
-		public System.Nullable<float> PrimSpecial
-		{
-			get
-			{
-				return this._PrimSpecial;
-			}
-			set
-			{
-				if ((this._PrimSpecial != value))
-				{
-					this._PrimSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
-		public System.Nullable<float> PrimExtra
-		{
-			get
-			{
-				return this._PrimExtra;
-			}
-			set
-			{
-				if ((this._PrimExtra != value))
-				{
-					this._PrimExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
-		public System.Nullable<long> Forme
-		{
-			get
-			{
-				return this._Forme;
-			}
-			set
-			{
-				if ((this._Forme != value))
-				{
-					this._Forme = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
-		public System.Nullable<long> Taxable
-		{
-			get
-			{
-				return this._Taxable;
-			}
-			set
-			{
-				if ((this._Taxable != value))
-				{
-					this._Taxable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
-		public string CompleteCode
-		{
-			get
-			{
-				return this._CompleteCode;
-			}
-			set
-			{
-				if ((this._CompleteCode != value))
-				{
-					this._CompleteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
-		public long Drapeau
-		{
-			get
-			{
-				return this._Drapeau;
-			}
-			set
-			{
-				if ((this._Drapeau != value))
-				{
-					this._Drapeau = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
-		public string StateCommande
-		{
-			get
-			{
-				return this._StateCommande;
-			}
-			set
-			{
-				if ((this._StateCommande != value))
-				{
-					this._StateCommande = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
-		public string Prenom
-		{
-			get
-			{
-				return this._Prenom;
-			}
-			set
-			{
-				if ((this._Prenom != value))
-				{
-					this._Prenom = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
-		public long Actif
-		{
-			get
-			{
-				return this._Actif;
-			}
-			set
-			{
-				if ((this._Actif != value))
-				{
-					this._Actif = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
-		public System.Nullable<long> Fait
-		{
-			get
-			{
-				return this._Fait;
-			}
-			set
-			{
-				if ((this._Fait != value))
-				{
-					this._Fait = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
-		public System.Nullable<long> L
-		{
-			get
-			{
-				return this._L;
-			}
-			set
-			{
-				if ((this._L != value))
-				{
-					this._L = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
-		public System.Nullable<long> AEntre
-		{
-			get
-			{
-				return this._AEntre;
-			}
-			set
-			{
-				if ((this._AEntre != value))
-				{
-					this._AEntre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
-		public System.Nullable<long> APrix
-		{
-			get
-			{
-				return this._APrix;
-			}
-			set
-			{
-				if ((this._APrix != value))
-				{
-					this._APrix = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
-		public string Usr
-		{
-			get
-			{
-				return this._Usr;
-			}
-			set
-			{
-				if ((this._Usr != value))
-				{
-					this._Usr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
-		public string CDF
-		{
-			get
-			{
-				return this._CDF;
-			}
-			set
-			{
-				if ((this._CDF != value))
-				{
-					this._CDF = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
-		public string Localite
-		{
-			get
-			{
-				return this._Localite;
-			}
-			set
-			{
-				if ((this._Localite != value))
-				{
-					this._Localite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
-		public long Auto
-		{
-			get
-			{
-				return this._Auto;
-			}
-			set
-			{
-				if ((this._Auto != value))
-				{
-					this._Auto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
-		public bool Arret
-		{
-			get
-			{
-				return this._Arret;
-			}
-			set
-			{
-				if ((this._Arret != value))
-				{
-					this._Arret = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
-		public bool Epuise
-		{
-			get
-			{
-				return this._Epuise;
-			}
-			set
-			{
-				if ((this._Epuise != value))
-				{
-					this._Epuise = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
-		public bool Etat0
-		{
-			get
-			{
-				return this._Etat0;
-			}
-			set
-			{
-				if ((this._Etat0 != value))
-				{
-					this._Etat0 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
-		public bool Etat1
-		{
-			get
-			{
-				return this._Etat1;
-			}
-			set
-			{
-				if ((this._Etat1 != value))
-				{
-					this._Etat1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
-		public bool Etat2
-		{
-			get
-			{
-				return this._Etat2;
-			}
-			set
-			{
-				if ((this._Etat2 != value))
-				{
-					this._Etat2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(266)")]
-		public string Fcode
-		{
-			get
-			{
-				return this._Fcode;
-			}
-			set
-			{
-				if ((this._Fcode != value))
-				{
-					this._Fcode = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationCommande")]
-	public partial class OperationCommande
-	{
-		
-		private long _Ndx;
-		
-		private string _Codage;
-		
-		private string _Refers;
-		
-		private string _Place;
-		
-		private string _Designation;
-		
-		private System.Nullable<float> _Pachat;
-		
-		private System.Nullable<float> _Previent;
-		
-		private System.Nullable<float> _PGros;
-		
-		private System.Nullable<float> _PDetail;
-		
-		private System.Nullable<float> _PSpecial;
-		
-		private System.Nullable<float> _PExtra;
-		
-		private System.Nullable<float> _QEstime;
-		
-		private System.Nullable<float> _PEstime;
-		
-		private string _Nomvers;
-		
-		private string _Categorie;
-		
-		private string _Unite;
-		
-		private System.Nullable<float> _QStock;
-		
-		private string _Nomfrns;
-		
-		private string _Remark;
-		
-		private System.Nullable<float> _Vstock;
-		
-		private System.Nullable<System.DateTime> _DateVente;
-		
-		private System.Nullable<System.DateTime> _DateAchat;
-		
-		private string _Frs;
-		
-		private string _Clt;
-		
-		private System.Nullable<double> _Qachat;
-		
-		private System.Nullable<double> _Vachat;
-		
-		private System.Nullable<double> _Qavoir;
-		
-		private System.Nullable<double> _Vavoir;
-		
-		private System.Nullable<double> _Qvente;
-		
-		private System.Nullable<double> _Vvente;
-		
-		private System.Nullable<double> _Qercpt;
-		
-		private System.Nullable<double> _Vercpt;
-		
-		private System.Nullable<double> _Qdefect;
-		
-		private System.Nullable<double> _Vdefect;
-		
-		private System.Nullable<double> _Qvol;
-		
-		private System.Nullable<double> _Vvol;
-		
-		private string _RCode;
-		
-		private string _Catalog;
-		
-		private string _Remarque;
-		
-		private string _Observation;
-		
-		private System.Nullable<float> _QSeuil;
-		
-		private string _Magpref;
-		
-		private System.Nullable<long> _IdPlace;
-		
-		private System.Nullable<long> _IdCat;
-		
-		private System.Nullable<long> _IdUnit;
-		
-		private float _Q;
-		
-		private float _Q1;
-		
-		private float _Q2;
-		
-		private string _S1;
-		
-		private string _S2;
-		
-		private System.DateTime _D1;
-		
-		private System.DateTime _D2;
-		
-		private string _B1;
-		
-		private string _C1;
-		
-		private string _T1;
-		
-		private string _B2;
-		
-		private string _OtherInfo;
-		
-		private string _AdrPref;
-		
-		private string _ComplPref;
-		
-		private string _Tel1Pref;
-		
-		private string _Tel2Pref;
-		
-		private System.Nullable<long> _Pid;
-		
-		private System.Nullable<float> _PrimGros;
-		
-		private System.Nullable<float> _PrimDetail;
-		
-		private System.Nullable<float> _PrimSpecial;
-		
-		private System.Nullable<float> _PrimExtra;
-		
-		private System.Nullable<long> _Forme;
-		
-		private System.Nullable<long> _Taxable;
-		
-		private string _CompleteCode;
-		
-		private long _Drapeau;
-		
-		private string _StateCommande;
-		
-		private string _Prenom;
-		
-		private long _Actif;
-		
-		private string _Note;
-		
-		private System.Nullable<long> _Fait;
-		
-		private System.Nullable<long> _L;
-		
-		private System.Nullable<long> _AEntre;
-		
-		private System.Nullable<long> _APrix;
-		
-		private string _Usr;
-		
-		private string _CDF;
-		
-		private string _Localite;
-		
-		private bool _Arret;
-		
-		private bool _Epuise;
-		
-		private string _Fcode;
-		
-		private long _Auto;
-		
-		private bool _Etat0;
-		
-		private bool _Etat1;
-		
-		private bool _Etat2;
-		
-		public OperationCommande()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
-		public long Ndx
-		{
-			get
-			{
-				return this._Ndx;
-			}
-			set
-			{
-				if ((this._Ndx != value))
-				{
-					this._Ndx = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
-		public string Codage
-		{
-			get
-			{
-				return this._Codage;
-			}
-			set
-			{
-				if ((this._Codage != value))
-				{
-					this._Codage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
-		public string Refers
-		{
-			get
-			{
-				return this._Refers;
-			}
-			set
-			{
-				if ((this._Refers != value))
-				{
-					this._Refers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
-		public string Place
-		{
-			get
-			{
-				return this._Place;
-			}
-			set
-			{
-				if ((this._Place != value))
-				{
-					this._Place = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
-		public string Designation
-		{
-			get
-			{
-				return this._Designation;
-			}
-			set
-			{
-				if ((this._Designation != value))
-				{
-					this._Designation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
-		public System.Nullable<float> Pachat
-		{
-			get
-			{
-				return this._Pachat;
-			}
-			set
-			{
-				if ((this._Pachat != value))
-				{
-					this._Pachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
-		public System.Nullable<float> Previent
-		{
-			get
-			{
-				return this._Previent;
-			}
-			set
-			{
-				if ((this._Previent != value))
-				{
-					this._Previent = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
-		public System.Nullable<float> PGros
-		{
-			get
-			{
-				return this._PGros;
-			}
-			set
-			{
-				if ((this._PGros != value))
-				{
-					this._PGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
-		public System.Nullable<float> PDetail
-		{
-			get
-			{
-				return this._PDetail;
-			}
-			set
-			{
-				if ((this._PDetail != value))
-				{
-					this._PDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
-		public System.Nullable<float> PSpecial
-		{
-			get
-			{
-				return this._PSpecial;
-			}
-			set
-			{
-				if ((this._PSpecial != value))
-				{
-					this._PSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
-		public System.Nullable<float> PExtra
-		{
-			get
-			{
-				return this._PExtra;
-			}
-			set
-			{
-				if ((this._PExtra != value))
-				{
-					this._PExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
-		public System.Nullable<float> QEstime
-		{
-			get
-			{
-				return this._QEstime;
-			}
-			set
-			{
-				if ((this._QEstime != value))
-				{
-					this._QEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
-		public System.Nullable<float> PEstime
-		{
-			get
-			{
-				return this._PEstime;
-			}
-			set
-			{
-				if ((this._PEstime != value))
-				{
-					this._PEstime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(511)")]
-		public string Nomvers
-		{
-			get
-			{
-				return this._Nomvers;
-			}
-			set
-			{
-				if ((this._Nomvers != value))
-				{
-					this._Nomvers = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
-		public string Categorie
-		{
-			get
-			{
-				return this._Categorie;
-			}
-			set
-			{
-				if ((this._Categorie != value))
-				{
-					this._Categorie = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
-		public string Unite
-		{
-			get
-			{
-				return this._Unite;
-			}
-			set
-			{
-				if ((this._Unite != value))
-				{
-					this._Unite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
-		public System.Nullable<float> QStock
-		{
-			get
-			{
-				return this._QStock;
-			}
-			set
-			{
-				if ((this._QStock != value))
-				{
-					this._QStock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
-		public string Nomfrns
-		{
-			get
-			{
-				return this._Nomfrns;
-			}
-			set
-			{
-				if ((this._Nomfrns != value))
-				{
-					this._Nomfrns = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
-		public string Remark
-		{
-			get
-			{
-				return this._Remark;
-			}
-			set
-			{
-				if ((this._Remark != value))
-				{
-					this._Remark = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
-		public System.Nullable<float> Vstock
-		{
-			get
-			{
-				return this._Vstock;
-			}
-			set
-			{
-				if ((this._Vstock != value))
-				{
-					this._Vstock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateVente
-		{
-			get
-			{
-				return this._DateVente;
-			}
-			set
-			{
-				if ((this._DateVente != value))
-				{
-					this._DateVente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> DateAchat
-		{
-			get
-			{
-				return this._DateAchat;
-			}
-			set
-			{
-				if ((this._DateAchat != value))
-				{
-					this._DateAchat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
-		public string Frs
-		{
-			get
-			{
-				return this._Frs;
-			}
-			set
-			{
-				if ((this._Frs != value))
-				{
-					this._Frs = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
-		public string Clt
-		{
-			get
-			{
-				return this._Clt;
-			}
-			set
-			{
-				if ((this._Clt != value))
-				{
-					this._Clt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
-		public System.Nullable<double> Qachat
-		{
-			get
-			{
-				return this._Qachat;
-			}
-			set
-			{
-				if ((this._Qachat != value))
-				{
-					this._Qachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
-		public System.Nullable<double> Vachat
-		{
-			get
-			{
-				return this._Vachat;
-			}
-			set
-			{
-				if ((this._Vachat != value))
-				{
-					this._Vachat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
-		public System.Nullable<double> Qavoir
-		{
-			get
-			{
-				return this._Qavoir;
-			}
-			set
-			{
-				if ((this._Qavoir != value))
-				{
-					this._Qavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
-		public System.Nullable<double> Vavoir
-		{
-			get
-			{
-				return this._Vavoir;
-			}
-			set
-			{
-				if ((this._Vavoir != value))
-				{
-					this._Vavoir = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
-		public System.Nullable<double> Qvente
-		{
-			get
-			{
-				return this._Qvente;
-			}
-			set
-			{
-				if ((this._Qvente != value))
-				{
-					this._Qvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
-		public System.Nullable<double> Vvente
-		{
-			get
-			{
-				return this._Vvente;
-			}
-			set
-			{
-				if ((this._Vvente != value))
-				{
-					this._Vvente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
-		public System.Nullable<double> Qercpt
-		{
-			get
-			{
-				return this._Qercpt;
-			}
-			set
-			{
-				if ((this._Qercpt != value))
-				{
-					this._Qercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
-		public System.Nullable<double> Vercpt
-		{
-			get
-			{
-				return this._Vercpt;
-			}
-			set
-			{
-				if ((this._Vercpt != value))
-				{
-					this._Vercpt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
-		public System.Nullable<double> Qdefect
-		{
-			get
-			{
-				return this._Qdefect;
-			}
-			set
-			{
-				if ((this._Qdefect != value))
-				{
-					this._Qdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
-		public System.Nullable<double> Vdefect
-		{
-			get
-			{
-				return this._Vdefect;
-			}
-			set
-			{
-				if ((this._Vdefect != value))
-				{
-					this._Vdefect = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
-		public System.Nullable<double> Qvol
-		{
-			get
-			{
-				return this._Qvol;
-			}
-			set
-			{
-				if ((this._Qvol != value))
-				{
-					this._Qvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
-		public System.Nullable<double> Vvol
-		{
-			get
-			{
-				return this._Vvol;
-			}
-			set
-			{
-				if ((this._Vvol != value))
-				{
-					this._Vvol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
-		public string RCode
-		{
-			get
-			{
-				return this._RCode;
-			}
-			set
-			{
-				if ((this._RCode != value))
-				{
-					this._RCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Catalog", DbType="NVarChar(255)")]
-		public string Catalog
-		{
-			get
-			{
-				return this._Catalog;
-			}
-			set
-			{
-				if ((this._Catalog != value))
-				{
-					this._Catalog = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
-		public string Remarque
-		{
-			get
-			{
-				return this._Remarque;
-			}
-			set
-			{
-				if ((this._Remarque != value))
-				{
-					this._Remarque = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
-		public string Observation
-		{
-			get
-			{
-				return this._Observation;
-			}
-			set
-			{
-				if ((this._Observation != value))
-				{
-					this._Observation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
-		public System.Nullable<float> QSeuil
-		{
-			get
-			{
-				return this._QSeuil;
-			}
-			set
-			{
-				if ((this._QSeuil != value))
-				{
-					this._QSeuil = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
-		public string Magpref
-		{
-			get
-			{
-				return this._Magpref;
-			}
-			set
-			{
-				if ((this._Magpref != value))
-				{
-					this._Magpref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
-		public System.Nullable<long> IdPlace
-		{
-			get
-			{
-				return this._IdPlace;
-			}
-			set
-			{
-				if ((this._IdPlace != value))
-				{
-					this._IdPlace = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
-		public System.Nullable<long> IdCat
-		{
-			get
-			{
-				return this._IdCat;
-			}
-			set
-			{
-				if ((this._IdCat != value))
-				{
-					this._IdCat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
-		public System.Nullable<long> IdUnit
-		{
-			get
-			{
-				return this._IdUnit;
-			}
-			set
-			{
-				if ((this._IdUnit != value))
-				{
-					this._IdUnit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
-		public float Q
-		{
-			get
-			{
-				return this._Q;
-			}
-			set
-			{
-				if ((this._Q != value))
-				{
-					this._Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
-		public float Q1
-		{
-			get
-			{
-				return this._Q1;
-			}
-			set
-			{
-				if ((this._Q1 != value))
-				{
-					this._Q1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
-		public float Q2
-		{
-			get
-			{
-				return this._Q2;
-			}
-			set
-			{
-				if ((this._Q2 != value))
-				{
-					this._Q2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
-		public string S1
-		{
-			get
-			{
-				return this._S1;
-			}
-			set
-			{
-				if ((this._S1 != value))
-				{
-					this._S1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
-		public string S2
-		{
-			get
-			{
-				return this._S2;
-			}
-			set
-			{
-				if ((this._S2 != value))
-				{
-					this._S2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D1
-		{
-			get
-			{
-				return this._D1;
-			}
-			set
-			{
-				if ((this._D1 != value))
-				{
-					this._D1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
-		public System.DateTime D2
-		{
-			get
-			{
-				return this._D2;
-			}
-			set
-			{
-				if ((this._D2 != value))
-				{
-					this._D2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
-		public string B1
-		{
-			get
-			{
-				return this._B1;
-			}
-			set
-			{
-				if ((this._B1 != value))
-				{
-					this._B1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
-		public string C1
-		{
-			get
-			{
-				return this._C1;
-			}
-			set
-			{
-				if ((this._C1 != value))
-				{
-					this._C1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
-		public string T1
-		{
-			get
-			{
-				return this._T1;
-			}
-			set
-			{
-				if ((this._T1 != value))
-				{
-					this._T1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
-		public string B2
-		{
-			get
-			{
-				return this._B2;
-			}
-			set
-			{
-				if ((this._B2 != value))
-				{
-					this._B2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
-		public string OtherInfo
-		{
-			get
-			{
-				return this._OtherInfo;
-			}
-			set
-			{
-				if ((this._OtherInfo != value))
-				{
-					this._OtherInfo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
-		public string AdrPref
-		{
-			get
-			{
-				return this._AdrPref;
-			}
-			set
-			{
-				if ((this._AdrPref != value))
-				{
-					this._AdrPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
-		public string ComplPref
-		{
-			get
-			{
-				return this._ComplPref;
-			}
-			set
-			{
-				if ((this._ComplPref != value))
-				{
-					this._ComplPref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
-		public string Tel1Pref
-		{
-			get
-			{
-				return this._Tel1Pref;
-			}
-			set
-			{
-				if ((this._Tel1Pref != value))
-				{
-					this._Tel1Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
-		public string Tel2Pref
-		{
-			get
-			{
-				return this._Tel2Pref;
-			}
-			set
-			{
-				if ((this._Tel2Pref != value))
-				{
-					this._Tel2Pref = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
-		public System.Nullable<long> Pid
-		{
-			get
-			{
-				return this._Pid;
-			}
-			set
-			{
-				if ((this._Pid != value))
-				{
-					this._Pid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
-		public System.Nullable<float> PrimGros
-		{
-			get
-			{
-				return this._PrimGros;
-			}
-			set
-			{
-				if ((this._PrimGros != value))
-				{
-					this._PrimGros = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
-		public System.Nullable<float> PrimDetail
-		{
-			get
-			{
-				return this._PrimDetail;
-			}
-			set
-			{
-				if ((this._PrimDetail != value))
-				{
-					this._PrimDetail = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
-		public System.Nullable<float> PrimSpecial
-		{
-			get
-			{
-				return this._PrimSpecial;
-			}
-			set
-			{
-				if ((this._PrimSpecial != value))
-				{
-					this._PrimSpecial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
-		public System.Nullable<float> PrimExtra
-		{
-			get
-			{
-				return this._PrimExtra;
-			}
-			set
-			{
-				if ((this._PrimExtra != value))
-				{
-					this._PrimExtra = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
-		public System.Nullable<long> Forme
-		{
-			get
-			{
-				return this._Forme;
-			}
-			set
-			{
-				if ((this._Forme != value))
-				{
-					this._Forme = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
-		public System.Nullable<long> Taxable
-		{
-			get
-			{
-				return this._Taxable;
-			}
-			set
-			{
-				if ((this._Taxable != value))
-				{
-					this._Taxable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
-		public string CompleteCode
-		{
-			get
-			{
-				return this._CompleteCode;
-			}
-			set
-			{
-				if ((this._CompleteCode != value))
-				{
-					this._CompleteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
-		public long Drapeau
-		{
-			get
-			{
-				return this._Drapeau;
-			}
-			set
-			{
-				if ((this._Drapeau != value))
-				{
-					this._Drapeau = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
-		public string StateCommande
-		{
-			get
-			{
-				return this._StateCommande;
-			}
-			set
-			{
-				if ((this._StateCommande != value))
-				{
-					this._StateCommande = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
-		public string Prenom
-		{
-			get
-			{
-				return this._Prenom;
-			}
-			set
-			{
-				if ((this._Prenom != value))
-				{
-					this._Prenom = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
-		public long Actif
-		{
-			get
-			{
-				return this._Actif;
-			}
-			set
-			{
-				if ((this._Actif != value))
-				{
-					this._Actif = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
-		public System.Nullable<long> Fait
-		{
-			get
-			{
-				return this._Fait;
-			}
-			set
-			{
-				if ((this._Fait != value))
-				{
-					this._Fait = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
-		public System.Nullable<long> L
-		{
-			get
-			{
-				return this._L;
-			}
-			set
-			{
-				if ((this._L != value))
-				{
-					this._L = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
-		public System.Nullable<long> AEntre
-		{
-			get
-			{
-				return this._AEntre;
-			}
-			set
-			{
-				if ((this._AEntre != value))
-				{
-					this._AEntre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
-		public System.Nullable<long> APrix
-		{
-			get
-			{
-				return this._APrix;
-			}
-			set
-			{
-				if ((this._APrix != value))
-				{
-					this._APrix = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
-		public string Usr
-		{
-			get
-			{
-				return this._Usr;
-			}
-			set
-			{
-				if ((this._Usr != value))
-				{
-					this._Usr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
-		public string CDF
-		{
-			get
-			{
-				return this._CDF;
-			}
-			set
-			{
-				if ((this._CDF != value))
-				{
-					this._CDF = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
-		public string Localite
-		{
-			get
-			{
-				return this._Localite;
-			}
-			set
-			{
-				if ((this._Localite != value))
-				{
-					this._Localite = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
-		public bool Arret
-		{
-			get
-			{
-				return this._Arret;
-			}
-			set
-			{
-				if ((this._Arret != value))
-				{
-					this._Arret = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
-		public bool Epuise
-		{
-			get
-			{
-				return this._Epuise;
-			}
-			set
-			{
-				if ((this._Epuise != value))
-				{
-					this._Epuise = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(266)")]
-		public string Fcode
-		{
-			get
-			{
-				return this._Fcode;
-			}
-			set
-			{
-				if ((this._Fcode != value))
-				{
-					this._Fcode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
-		public long Auto
-		{
-			get
-			{
-				return this._Auto;
-			}
-			set
-			{
-				if ((this._Auto != value))
-				{
-					this._Auto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
-		public bool Etat0
-		{
-			get
-			{
-				return this._Etat0;
-			}
-			set
-			{
-				if ((this._Etat0 != value))
-				{
-					this._Etat0 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
-		public bool Etat1
-		{
-			get
-			{
-				return this._Etat1;
-			}
-			set
-			{
-				if ((this._Etat1 != value))
-				{
-					this._Etat1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
-		public bool Etat2
-		{
-			get
-			{
-				return this._Etat2;
-			}
-			set
-			{
-				if ((this._Etat2 != value))
-				{
-					this._Etat2 = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ActeItem")]
 	public partial class ActeItem : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -22543,6 +16153,7466 @@ namespace gescom.data.Models
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationDispo")]
+	public partial class OperationDispo
+	{
+		
+		private long _Ndx;
+		
+		private string _Codage;
+		
+		private string _Refers;
+		
+		private string _Place;
+		
+		private string _Designation;
+		
+		private System.Nullable<float> _Pachat;
+		
+		private string _UNT_FRNS;
+		
+		private System.Nullable<float> _Previent;
+		
+		private System.Nullable<float> _PGros;
+		
+		private System.Nullable<float> _PDetail;
+		
+		private System.Nullable<float> _PSpecial;
+		
+		private System.Nullable<float> _PExtra;
+		
+		private string _Refuse;
+		
+		private System.Nullable<float> _QEstime;
+		
+		private System.Nullable<float> _PEstime;
+		
+		private string _Nomvers;
+		
+		private string _Categorie;
+		
+		private string _Unite;
+		
+		private System.Nullable<float> _QStock;
+		
+		private string _Nomfrns;
+		
+		private string _Remark;
+		
+		private System.Nullable<float> _Vstock;
+		
+		private System.Nullable<System.DateTime> _DateVente;
+		
+		private System.Nullable<System.DateTime> _DateAchat;
+		
+		private string _Frs;
+		
+		private string _Clt;
+		
+		private System.Nullable<double> _Qachat;
+		
+		private System.Nullable<double> _Vachat;
+		
+		private System.Nullable<double> _Qavoir;
+		
+		private System.Nullable<double> _Vavoir;
+		
+		private System.Nullable<double> _Qvente;
+		
+		private System.Nullable<double> _Vvente;
+		
+		private System.Nullable<double> _Qercpt;
+		
+		private System.Nullable<double> _Vercpt;
+		
+		private System.Nullable<double> _Qdefect;
+		
+		private System.Nullable<double> _Vdefect;
+		
+		private System.Nullable<double> _Qvol;
+		
+		private System.Nullable<double> _Vvol;
+		
+		private string _RCode;
+		
+		private string _CATALOG;
+		
+		private string _Remarque;
+		
+		private string _Observation;
+		
+		private System.Nullable<float> _QSeuil;
+		
+		private string _Magpref;
+		
+		private System.Nullable<long> _IdPlace;
+		
+		private System.Nullable<long> _IdCat;
+		
+		private System.Nullable<long> _IdUnit;
+		
+		private float _Q;
+		
+		private float _Q1;
+		
+		private float _Q2;
+		
+		private string _S1;
+		
+		private string _S2;
+		
+		private System.DateTime _D1;
+		
+		private System.DateTime _D2;
+		
+		private string _B1;
+		
+		private string _C1;
+		
+		private string _T1;
+		
+		private string _B2;
+		
+		private string _OtherInfo;
+		
+		private string _AdrPref;
+		
+		private string _ComplPref;
+		
+		private string _Tel1Pref;
+		
+		private string _Tel2Pref;
+		
+		private System.Nullable<long> _Pid;
+		
+		private System.Nullable<float> _PrimGros;
+		
+		private System.Nullable<float> _PrimDetail;
+		
+		private System.Nullable<float> _PrimSpecial;
+		
+		private System.Nullable<float> _PrimExtra;
+		
+		private System.Nullable<long> _Forme;
+		
+		private System.Nullable<long> _Taxable;
+		
+		private string _CompleteCode;
+		
+		private long _Drapeau;
+		
+		private string _StateCommande;
+		
+		private string _Prenom;
+		
+		private long _Actif;
+		
+		private string _Note;
+		
+		private System.Nullable<long> _Fait;
+		
+		private System.Nullable<long> _L;
+		
+		private System.Nullable<long> _AEntre;
+		
+		private System.Nullable<long> _APrix;
+		
+		private string _Usr;
+		
+		private string _CDF;
+		
+		private string _Localite;
+		
+		private long _Auto;
+		
+		private bool _Arret;
+		
+		private bool _Epuise;
+		
+		private bool _Etat0;
+		
+		private bool _Etat1;
+		
+		private bool _Etat2;
+		
+		private string _Fcode;
+		
+		private bool _CMD;
+		
+		private System.Nullable<System.DateTime> _DCMD;
+		
+		private long _Q5;
+		
+		public OperationDispo()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
+		public long Ndx
+		{
+			get
+			{
+				return this._Ndx;
+			}
+			set
+			{
+				if ((this._Ndx != value))
+				{
+					this._Ndx = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
+		public string Codage
+		{
+			get
+			{
+				return this._Codage;
+			}
+			set
+			{
+				if ((this._Codage != value))
+				{
+					this._Codage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
+		public string Refers
+		{
+			get
+			{
+				return this._Refers;
+			}
+			set
+			{
+				if ((this._Refers != value))
+				{
+					this._Refers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
+		public string Place
+		{
+			get
+			{
+				return this._Place;
+			}
+			set
+			{
+				if ((this._Place != value))
+				{
+					this._Place = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
+		public string Designation
+		{
+			get
+			{
+				return this._Designation;
+			}
+			set
+			{
+				if ((this._Designation != value))
+				{
+					this._Designation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
+		public System.Nullable<float> Pachat
+		{
+			get
+			{
+				return this._Pachat;
+			}
+			set
+			{
+				if ((this._Pachat != value))
+				{
+					this._Pachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNT_FRNS", DbType="VarChar(200)")]
+		public string UNT_FRNS
+		{
+			get
+			{
+				return this._UNT_FRNS;
+			}
+			set
+			{
+				if ((this._UNT_FRNS != value))
+				{
+					this._UNT_FRNS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
+		public System.Nullable<float> Previent
+		{
+			get
+			{
+				return this._Previent;
+			}
+			set
+			{
+				if ((this._Previent != value))
+				{
+					this._Previent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
+		public System.Nullable<float> PGros
+		{
+			get
+			{
+				return this._PGros;
+			}
+			set
+			{
+				if ((this._PGros != value))
+				{
+					this._PGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
+		public System.Nullable<float> PDetail
+		{
+			get
+			{
+				return this._PDetail;
+			}
+			set
+			{
+				if ((this._PDetail != value))
+				{
+					this._PDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
+		public System.Nullable<float> PSpecial
+		{
+			get
+			{
+				return this._PSpecial;
+			}
+			set
+			{
+				if ((this._PSpecial != value))
+				{
+					this._PSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
+		public System.Nullable<float> PExtra
+		{
+			get
+			{
+				return this._PExtra;
+			}
+			set
+			{
+				if ((this._PExtra != value))
+				{
+					this._PExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refuse", DbType="NVarChar(255)")]
+		public string Refuse
+		{
+			get
+			{
+				return this._Refuse;
+			}
+			set
+			{
+				if ((this._Refuse != value))
+				{
+					this._Refuse = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
+		public System.Nullable<float> QEstime
+		{
+			get
+			{
+				return this._QEstime;
+			}
+			set
+			{
+				if ((this._QEstime != value))
+				{
+					this._QEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
+		public System.Nullable<float> PEstime
+		{
+			get
+			{
+				return this._PEstime;
+			}
+			set
+			{
+				if ((this._PEstime != value))
+				{
+					this._PEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(255)")]
+		public string Nomvers
+		{
+			get
+			{
+				return this._Nomvers;
+			}
+			set
+			{
+				if ((this._Nomvers != value))
+				{
+					this._Nomvers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
+		public string Categorie
+		{
+			get
+			{
+				return this._Categorie;
+			}
+			set
+			{
+				if ((this._Categorie != value))
+				{
+					this._Categorie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
+		public string Unite
+		{
+			get
+			{
+				return this._Unite;
+			}
+			set
+			{
+				if ((this._Unite != value))
+				{
+					this._Unite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
+		public System.Nullable<float> QStock
+		{
+			get
+			{
+				return this._QStock;
+			}
+			set
+			{
+				if ((this._QStock != value))
+				{
+					this._QStock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
+		public string Nomfrns
+		{
+			get
+			{
+				return this._Nomfrns;
+			}
+			set
+			{
+				if ((this._Nomfrns != value))
+				{
+					this._Nomfrns = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
+		public string Remark
+		{
+			get
+			{
+				return this._Remark;
+			}
+			set
+			{
+				if ((this._Remark != value))
+				{
+					this._Remark = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
+		public System.Nullable<float> Vstock
+		{
+			get
+			{
+				return this._Vstock;
+			}
+			set
+			{
+				if ((this._Vstock != value))
+				{
+					this._Vstock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateVente
+		{
+			get
+			{
+				return this._DateVente;
+			}
+			set
+			{
+				if ((this._DateVente != value))
+				{
+					this._DateVente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateAchat
+		{
+			get
+			{
+				return this._DateAchat;
+			}
+			set
+			{
+				if ((this._DateAchat != value))
+				{
+					this._DateAchat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
+		public string Frs
+		{
+			get
+			{
+				return this._Frs;
+			}
+			set
+			{
+				if ((this._Frs != value))
+				{
+					this._Frs = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
+		public string Clt
+		{
+			get
+			{
+				return this._Clt;
+			}
+			set
+			{
+				if ((this._Clt != value))
+				{
+					this._Clt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
+		public System.Nullable<double> Qachat
+		{
+			get
+			{
+				return this._Qachat;
+			}
+			set
+			{
+				if ((this._Qachat != value))
+				{
+					this._Qachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
+		public System.Nullable<double> Vachat
+		{
+			get
+			{
+				return this._Vachat;
+			}
+			set
+			{
+				if ((this._Vachat != value))
+				{
+					this._Vachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
+		public System.Nullable<double> Qavoir
+		{
+			get
+			{
+				return this._Qavoir;
+			}
+			set
+			{
+				if ((this._Qavoir != value))
+				{
+					this._Qavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
+		public System.Nullable<double> Vavoir
+		{
+			get
+			{
+				return this._Vavoir;
+			}
+			set
+			{
+				if ((this._Vavoir != value))
+				{
+					this._Vavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
+		public System.Nullable<double> Qvente
+		{
+			get
+			{
+				return this._Qvente;
+			}
+			set
+			{
+				if ((this._Qvente != value))
+				{
+					this._Qvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
+		public System.Nullable<double> Vvente
+		{
+			get
+			{
+				return this._Vvente;
+			}
+			set
+			{
+				if ((this._Vvente != value))
+				{
+					this._Vvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
+		public System.Nullable<double> Qercpt
+		{
+			get
+			{
+				return this._Qercpt;
+			}
+			set
+			{
+				if ((this._Qercpt != value))
+				{
+					this._Qercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
+		public System.Nullable<double> Vercpt
+		{
+			get
+			{
+				return this._Vercpt;
+			}
+			set
+			{
+				if ((this._Vercpt != value))
+				{
+					this._Vercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
+		public System.Nullable<double> Qdefect
+		{
+			get
+			{
+				return this._Qdefect;
+			}
+			set
+			{
+				if ((this._Qdefect != value))
+				{
+					this._Qdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
+		public System.Nullable<double> Vdefect
+		{
+			get
+			{
+				return this._Vdefect;
+			}
+			set
+			{
+				if ((this._Vdefect != value))
+				{
+					this._Vdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
+		public System.Nullable<double> Qvol
+		{
+			get
+			{
+				return this._Qvol;
+			}
+			set
+			{
+				if ((this._Qvol != value))
+				{
+					this._Qvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
+		public System.Nullable<double> Vvol
+		{
+			get
+			{
+				return this._Vvol;
+			}
+			set
+			{
+				if ((this._Vvol != value))
+				{
+					this._Vvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
+		public string RCode
+		{
+			get
+			{
+				return this._RCode;
+			}
+			set
+			{
+				if ((this._RCode != value))
+				{
+					this._RCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CATALOG", DbType="NVarChar(255)")]
+		public string CATALOG
+		{
+			get
+			{
+				return this._CATALOG;
+			}
+			set
+			{
+				if ((this._CATALOG != value))
+				{
+					this._CATALOG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
+		public string Remarque
+		{
+			get
+			{
+				return this._Remarque;
+			}
+			set
+			{
+				if ((this._Remarque != value))
+				{
+					this._Remarque = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
+		public string Observation
+		{
+			get
+			{
+				return this._Observation;
+			}
+			set
+			{
+				if ((this._Observation != value))
+				{
+					this._Observation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
+		public System.Nullable<float> QSeuil
+		{
+			get
+			{
+				return this._QSeuil;
+			}
+			set
+			{
+				if ((this._QSeuil != value))
+				{
+					this._QSeuil = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
+		public string Magpref
+		{
+			get
+			{
+				return this._Magpref;
+			}
+			set
+			{
+				if ((this._Magpref != value))
+				{
+					this._Magpref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
+		public System.Nullable<long> IdPlace
+		{
+			get
+			{
+				return this._IdPlace;
+			}
+			set
+			{
+				if ((this._IdPlace != value))
+				{
+					this._IdPlace = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
+		public System.Nullable<long> IdCat
+		{
+			get
+			{
+				return this._IdCat;
+			}
+			set
+			{
+				if ((this._IdCat != value))
+				{
+					this._IdCat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
+		public System.Nullable<long> IdUnit
+		{
+			get
+			{
+				return this._IdUnit;
+			}
+			set
+			{
+				if ((this._IdUnit != value))
+				{
+					this._IdUnit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
+		public float Q
+		{
+			get
+			{
+				return this._Q;
+			}
+			set
+			{
+				if ((this._Q != value))
+				{
+					this._Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
+		public float Q1
+		{
+			get
+			{
+				return this._Q1;
+			}
+			set
+			{
+				if ((this._Q1 != value))
+				{
+					this._Q1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
+		public float Q2
+		{
+			get
+			{
+				return this._Q2;
+			}
+			set
+			{
+				if ((this._Q2 != value))
+				{
+					this._Q2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
+		public string S1
+		{
+			get
+			{
+				return this._S1;
+			}
+			set
+			{
+				if ((this._S1 != value))
+				{
+					this._S1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
+		public string S2
+		{
+			get
+			{
+				return this._S2;
+			}
+			set
+			{
+				if ((this._S2 != value))
+				{
+					this._S2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D1
+		{
+			get
+			{
+				return this._D1;
+			}
+			set
+			{
+				if ((this._D1 != value))
+				{
+					this._D1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D2
+		{
+			get
+			{
+				return this._D2;
+			}
+			set
+			{
+				if ((this._D2 != value))
+				{
+					this._D2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
+		public string B1
+		{
+			get
+			{
+				return this._B1;
+			}
+			set
+			{
+				if ((this._B1 != value))
+				{
+					this._B1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
+		public string C1
+		{
+			get
+			{
+				return this._C1;
+			}
+			set
+			{
+				if ((this._C1 != value))
+				{
+					this._C1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
+		public string T1
+		{
+			get
+			{
+				return this._T1;
+			}
+			set
+			{
+				if ((this._T1 != value))
+				{
+					this._T1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
+		public string B2
+		{
+			get
+			{
+				return this._B2;
+			}
+			set
+			{
+				if ((this._B2 != value))
+				{
+					this._B2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
+		public string OtherInfo
+		{
+			get
+			{
+				return this._OtherInfo;
+			}
+			set
+			{
+				if ((this._OtherInfo != value))
+				{
+					this._OtherInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
+		public string AdrPref
+		{
+			get
+			{
+				return this._AdrPref;
+			}
+			set
+			{
+				if ((this._AdrPref != value))
+				{
+					this._AdrPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
+		public string ComplPref
+		{
+			get
+			{
+				return this._ComplPref;
+			}
+			set
+			{
+				if ((this._ComplPref != value))
+				{
+					this._ComplPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
+		public string Tel1Pref
+		{
+			get
+			{
+				return this._Tel1Pref;
+			}
+			set
+			{
+				if ((this._Tel1Pref != value))
+				{
+					this._Tel1Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
+		public string Tel2Pref
+		{
+			get
+			{
+				return this._Tel2Pref;
+			}
+			set
+			{
+				if ((this._Tel2Pref != value))
+				{
+					this._Tel2Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
+		public System.Nullable<long> Pid
+		{
+			get
+			{
+				return this._Pid;
+			}
+			set
+			{
+				if ((this._Pid != value))
+				{
+					this._Pid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
+		public System.Nullable<float> PrimGros
+		{
+			get
+			{
+				return this._PrimGros;
+			}
+			set
+			{
+				if ((this._PrimGros != value))
+				{
+					this._PrimGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
+		public System.Nullable<float> PrimDetail
+		{
+			get
+			{
+				return this._PrimDetail;
+			}
+			set
+			{
+				if ((this._PrimDetail != value))
+				{
+					this._PrimDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
+		public System.Nullable<float> PrimSpecial
+		{
+			get
+			{
+				return this._PrimSpecial;
+			}
+			set
+			{
+				if ((this._PrimSpecial != value))
+				{
+					this._PrimSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
+		public System.Nullable<float> PrimExtra
+		{
+			get
+			{
+				return this._PrimExtra;
+			}
+			set
+			{
+				if ((this._PrimExtra != value))
+				{
+					this._PrimExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
+		public System.Nullable<long> Forme
+		{
+			get
+			{
+				return this._Forme;
+			}
+			set
+			{
+				if ((this._Forme != value))
+				{
+					this._Forme = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
+		public System.Nullable<long> Taxable
+		{
+			get
+			{
+				return this._Taxable;
+			}
+			set
+			{
+				if ((this._Taxable != value))
+				{
+					this._Taxable = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
+		public string CompleteCode
+		{
+			get
+			{
+				return this._CompleteCode;
+			}
+			set
+			{
+				if ((this._CompleteCode != value))
+				{
+					this._CompleteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
+		public long Drapeau
+		{
+			get
+			{
+				return this._Drapeau;
+			}
+			set
+			{
+				if ((this._Drapeau != value))
+				{
+					this._Drapeau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
+		public string StateCommande
+		{
+			get
+			{
+				return this._StateCommande;
+			}
+			set
+			{
+				if ((this._StateCommande != value))
+				{
+					this._StateCommande = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
+		public string Prenom
+		{
+			get
+			{
+				return this._Prenom;
+			}
+			set
+			{
+				if ((this._Prenom != value))
+				{
+					this._Prenom = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
+		public long Actif
+		{
+			get
+			{
+				return this._Actif;
+			}
+			set
+			{
+				if ((this._Actif != value))
+				{
+					this._Actif = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
+		public System.Nullable<long> Fait
+		{
+			get
+			{
+				return this._Fait;
+			}
+			set
+			{
+				if ((this._Fait != value))
+				{
+					this._Fait = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
+		public System.Nullable<long> L
+		{
+			get
+			{
+				return this._L;
+			}
+			set
+			{
+				if ((this._L != value))
+				{
+					this._L = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
+		public System.Nullable<long> AEntre
+		{
+			get
+			{
+				return this._AEntre;
+			}
+			set
+			{
+				if ((this._AEntre != value))
+				{
+					this._AEntre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
+		public System.Nullable<long> APrix
+		{
+			get
+			{
+				return this._APrix;
+			}
+			set
+			{
+				if ((this._APrix != value))
+				{
+					this._APrix = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
+		public string Usr
+		{
+			get
+			{
+				return this._Usr;
+			}
+			set
+			{
+				if ((this._Usr != value))
+				{
+					this._Usr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
+		public string CDF
+		{
+			get
+			{
+				return this._CDF;
+			}
+			set
+			{
+				if ((this._CDF != value))
+				{
+					this._CDF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
+		public string Localite
+		{
+			get
+			{
+				return this._Localite;
+			}
+			set
+			{
+				if ((this._Localite != value))
+				{
+					this._Localite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
+		public long Auto
+		{
+			get
+			{
+				return this._Auto;
+			}
+			set
+			{
+				if ((this._Auto != value))
+				{
+					this._Auto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
+		public bool Arret
+		{
+			get
+			{
+				return this._Arret;
+			}
+			set
+			{
+				if ((this._Arret != value))
+				{
+					this._Arret = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
+		public bool Epuise
+		{
+			get
+			{
+				return this._Epuise;
+			}
+			set
+			{
+				if ((this._Epuise != value))
+				{
+					this._Epuise = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
+		public bool Etat0
+		{
+			get
+			{
+				return this._Etat0;
+			}
+			set
+			{
+				if ((this._Etat0 != value))
+				{
+					this._Etat0 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
+		public bool Etat1
+		{
+			get
+			{
+				return this._Etat1;
+			}
+			set
+			{
+				if ((this._Etat1 != value))
+				{
+					this._Etat1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
+		public bool Etat2
+		{
+			get
+			{
+				return this._Etat2;
+			}
+			set
+			{
+				if ((this._Etat2 != value))
+				{
+					this._Etat2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(11)")]
+		public string Fcode
+		{
+			get
+			{
+				return this._Fcode;
+			}
+			set
+			{
+				if ((this._Fcode != value))
+				{
+					this._Fcode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMD", DbType="Bit NOT NULL")]
+		public bool CMD
+		{
+			get
+			{
+				return this._CMD;
+			}
+			set
+			{
+				if ((this._CMD != value))
+				{
+					this._CMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DCMD", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DCMD
+		{
+			get
+			{
+				return this._DCMD;
+			}
+			set
+			{
+				if ((this._DCMD != value))
+				{
+					this._DCMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt NOT NULL")]
+		public long Q5
+		{
+			get
+			{
+				return this._Q5;
+			}
+			set
+			{
+				if ((this._Q5 != value))
+				{
+					this._Q5 = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationEntry")]
+	public partial class OperationEntry
+	{
+		
+		private long _Ndx;
+		
+		private string _Codage;
+		
+		private string _Refers;
+		
+		private string _Place;
+		
+		private string _Designation;
+		
+		private System.Nullable<float> _Pachat;
+		
+		private string _UNT_FRNS;
+		
+		private System.Nullable<float> _Previent;
+		
+		private System.Nullable<float> _PGros;
+		
+		private System.Nullable<float> _Px;
+		
+		private System.Nullable<float> _PSpecial;
+		
+		private System.Nullable<float> _PExtra;
+		
+		private string _Refuse;
+		
+		private System.Nullable<float> _QEstime;
+		
+		private System.Nullable<float> _PEstime;
+		
+		private string _Nomvers;
+		
+		private string _Categorie;
+		
+		private string _Unite;
+		
+		private System.Nullable<float> _QStock;
+		
+		private string _Nomfrns;
+		
+		private string _Remark;
+		
+		private System.Nullable<float> _Vstock;
+		
+		private System.Nullable<System.DateTime> _DateVente;
+		
+		private System.Nullable<System.DateTime> _DateAchat;
+		
+		private string _Frs;
+		
+		private string _Clt;
+		
+		private System.Nullable<double> _Qachat;
+		
+		private System.Nullable<double> _Vachat;
+		
+		private System.Nullable<double> _Qavoir;
+		
+		private System.Nullable<double> _Vavoir;
+		
+		private System.Nullable<double> _Qvente;
+		
+		private System.Nullable<double> _Vvente;
+		
+		private System.Nullable<double> _Qercpt;
+		
+		private System.Nullable<double> _Vercpt;
+		
+		private System.Nullable<double> _Qdefect;
+		
+		private System.Nullable<double> _Vdefect;
+		
+		private System.Nullable<double> _Qvol;
+		
+		private System.Nullable<double> _Vvol;
+		
+		private string _RCode;
+		
+		private string _CATALOG;
+		
+		private string _Remarque;
+		
+		private string _Observation;
+		
+		private System.Nullable<float> _QSeuil;
+		
+		private string _Magpref;
+		
+		private System.Nullable<long> _IdPlace;
+		
+		private System.Nullable<long> _IdCat;
+		
+		private System.Nullable<long> _IdUnit;
+		
+		private float _Q;
+		
+		private float _Q1;
+		
+		private float _Q2;
+		
+		private string _S1;
+		
+		private string _S2;
+		
+		private System.DateTime _D1;
+		
+		private System.DateTime _D2;
+		
+		private string _B1;
+		
+		private string _C1;
+		
+		private string _T1;
+		
+		private string _B2;
+		
+		private string _OtherInfo;
+		
+		private string _AdrPref;
+		
+		private string _ComplPref;
+		
+		private string _Tel1Pref;
+		
+		private string _Tel2Pref;
+		
+		private System.Nullable<long> _Pid;
+		
+		private System.Nullable<float> _PrimGros;
+		
+		private System.Nullable<float> _PrimDetail;
+		
+		private System.Nullable<float> _PrimSpecial;
+		
+		private System.Nullable<float> _PrimExtra;
+		
+		private System.Nullable<long> _Forme;
+		
+		private System.Nullable<long> _Taxable;
+		
+		private string _CompleteCode;
+		
+		private long _Drapeau;
+		
+		private string _StateCommande;
+		
+		private string _Prenom;
+		
+		private long _Actif;
+		
+		private string _Note;
+		
+		private System.Nullable<long> _Fait;
+		
+		private System.Nullable<long> _L;
+		
+		private System.Nullable<long> _AEntre;
+		
+		private System.Nullable<long> _APrix;
+		
+		private string _Usr;
+		
+		private string _CDF;
+		
+		private string _Localite;
+		
+		private long _Auto;
+		
+		private bool _Arret;
+		
+		private bool _Epuise;
+		
+		private bool _Etat0;
+		
+		private bool _Etat1;
+		
+		private bool _Etat2;
+		
+		private string _Fcode;
+		
+		private long _Q5;
+		
+		private System.Nullable<System.DateTime> _DCMD;
+		
+		private bool _CMD;
+		
+		public OperationEntry()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
+		public long Ndx
+		{
+			get
+			{
+				return this._Ndx;
+			}
+			set
+			{
+				if ((this._Ndx != value))
+				{
+					this._Ndx = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
+		public string Codage
+		{
+			get
+			{
+				return this._Codage;
+			}
+			set
+			{
+				if ((this._Codage != value))
+				{
+					this._Codage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
+		public string Refers
+		{
+			get
+			{
+				return this._Refers;
+			}
+			set
+			{
+				if ((this._Refers != value))
+				{
+					this._Refers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
+		public string Place
+		{
+			get
+			{
+				return this._Place;
+			}
+			set
+			{
+				if ((this._Place != value))
+				{
+					this._Place = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
+		public string Designation
+		{
+			get
+			{
+				return this._Designation;
+			}
+			set
+			{
+				if ((this._Designation != value))
+				{
+					this._Designation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
+		public System.Nullable<float> Pachat
+		{
+			get
+			{
+				return this._Pachat;
+			}
+			set
+			{
+				if ((this._Pachat != value))
+				{
+					this._Pachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNT_FRNS", DbType="VarChar(200)")]
+		public string UNT_FRNS
+		{
+			get
+			{
+				return this._UNT_FRNS;
+			}
+			set
+			{
+				if ((this._UNT_FRNS != value))
+				{
+					this._UNT_FRNS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
+		public System.Nullable<float> Previent
+		{
+			get
+			{
+				return this._Previent;
+			}
+			set
+			{
+				if ((this._Previent != value))
+				{
+					this._Previent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
+		public System.Nullable<float> PGros
+		{
+			get
+			{
+				return this._PGros;
+			}
+			set
+			{
+				if ((this._PGros != value))
+				{
+					this._PGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Px", DbType="Real")]
+		public System.Nullable<float> Px
+		{
+			get
+			{
+				return this._Px;
+			}
+			set
+			{
+				if ((this._Px != value))
+				{
+					this._Px = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
+		public System.Nullable<float> PSpecial
+		{
+			get
+			{
+				return this._PSpecial;
+			}
+			set
+			{
+				if ((this._PSpecial != value))
+				{
+					this._PSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
+		public System.Nullable<float> PExtra
+		{
+			get
+			{
+				return this._PExtra;
+			}
+			set
+			{
+				if ((this._PExtra != value))
+				{
+					this._PExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refuse", DbType="NVarChar(255)")]
+		public string Refuse
+		{
+			get
+			{
+				return this._Refuse;
+			}
+			set
+			{
+				if ((this._Refuse != value))
+				{
+					this._Refuse = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
+		public System.Nullable<float> QEstime
+		{
+			get
+			{
+				return this._QEstime;
+			}
+			set
+			{
+				if ((this._QEstime != value))
+				{
+					this._QEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
+		public System.Nullable<float> PEstime
+		{
+			get
+			{
+				return this._PEstime;
+			}
+			set
+			{
+				if ((this._PEstime != value))
+				{
+					this._PEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(255)")]
+		public string Nomvers
+		{
+			get
+			{
+				return this._Nomvers;
+			}
+			set
+			{
+				if ((this._Nomvers != value))
+				{
+					this._Nomvers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
+		public string Categorie
+		{
+			get
+			{
+				return this._Categorie;
+			}
+			set
+			{
+				if ((this._Categorie != value))
+				{
+					this._Categorie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
+		public string Unite
+		{
+			get
+			{
+				return this._Unite;
+			}
+			set
+			{
+				if ((this._Unite != value))
+				{
+					this._Unite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
+		public System.Nullable<float> QStock
+		{
+			get
+			{
+				return this._QStock;
+			}
+			set
+			{
+				if ((this._QStock != value))
+				{
+					this._QStock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
+		public string Nomfrns
+		{
+			get
+			{
+				return this._Nomfrns;
+			}
+			set
+			{
+				if ((this._Nomfrns != value))
+				{
+					this._Nomfrns = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
+		public string Remark
+		{
+			get
+			{
+				return this._Remark;
+			}
+			set
+			{
+				if ((this._Remark != value))
+				{
+					this._Remark = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
+		public System.Nullable<float> Vstock
+		{
+			get
+			{
+				return this._Vstock;
+			}
+			set
+			{
+				if ((this._Vstock != value))
+				{
+					this._Vstock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateVente
+		{
+			get
+			{
+				return this._DateVente;
+			}
+			set
+			{
+				if ((this._DateVente != value))
+				{
+					this._DateVente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateAchat
+		{
+			get
+			{
+				return this._DateAchat;
+			}
+			set
+			{
+				if ((this._DateAchat != value))
+				{
+					this._DateAchat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
+		public string Frs
+		{
+			get
+			{
+				return this._Frs;
+			}
+			set
+			{
+				if ((this._Frs != value))
+				{
+					this._Frs = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
+		public string Clt
+		{
+			get
+			{
+				return this._Clt;
+			}
+			set
+			{
+				if ((this._Clt != value))
+				{
+					this._Clt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
+		public System.Nullable<double> Qachat
+		{
+			get
+			{
+				return this._Qachat;
+			}
+			set
+			{
+				if ((this._Qachat != value))
+				{
+					this._Qachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
+		public System.Nullable<double> Vachat
+		{
+			get
+			{
+				return this._Vachat;
+			}
+			set
+			{
+				if ((this._Vachat != value))
+				{
+					this._Vachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
+		public System.Nullable<double> Qavoir
+		{
+			get
+			{
+				return this._Qavoir;
+			}
+			set
+			{
+				if ((this._Qavoir != value))
+				{
+					this._Qavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
+		public System.Nullable<double> Vavoir
+		{
+			get
+			{
+				return this._Vavoir;
+			}
+			set
+			{
+				if ((this._Vavoir != value))
+				{
+					this._Vavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
+		public System.Nullable<double> Qvente
+		{
+			get
+			{
+				return this._Qvente;
+			}
+			set
+			{
+				if ((this._Qvente != value))
+				{
+					this._Qvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
+		public System.Nullable<double> Vvente
+		{
+			get
+			{
+				return this._Vvente;
+			}
+			set
+			{
+				if ((this._Vvente != value))
+				{
+					this._Vvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
+		public System.Nullable<double> Qercpt
+		{
+			get
+			{
+				return this._Qercpt;
+			}
+			set
+			{
+				if ((this._Qercpt != value))
+				{
+					this._Qercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
+		public System.Nullable<double> Vercpt
+		{
+			get
+			{
+				return this._Vercpt;
+			}
+			set
+			{
+				if ((this._Vercpt != value))
+				{
+					this._Vercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
+		public System.Nullable<double> Qdefect
+		{
+			get
+			{
+				return this._Qdefect;
+			}
+			set
+			{
+				if ((this._Qdefect != value))
+				{
+					this._Qdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
+		public System.Nullable<double> Vdefect
+		{
+			get
+			{
+				return this._Vdefect;
+			}
+			set
+			{
+				if ((this._Vdefect != value))
+				{
+					this._Vdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
+		public System.Nullable<double> Qvol
+		{
+			get
+			{
+				return this._Qvol;
+			}
+			set
+			{
+				if ((this._Qvol != value))
+				{
+					this._Qvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
+		public System.Nullable<double> Vvol
+		{
+			get
+			{
+				return this._Vvol;
+			}
+			set
+			{
+				if ((this._Vvol != value))
+				{
+					this._Vvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
+		public string RCode
+		{
+			get
+			{
+				return this._RCode;
+			}
+			set
+			{
+				if ((this._RCode != value))
+				{
+					this._RCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CATALOG", DbType="NVarChar(255)")]
+		public string CATALOG
+		{
+			get
+			{
+				return this._CATALOG;
+			}
+			set
+			{
+				if ((this._CATALOG != value))
+				{
+					this._CATALOG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
+		public string Remarque
+		{
+			get
+			{
+				return this._Remarque;
+			}
+			set
+			{
+				if ((this._Remarque != value))
+				{
+					this._Remarque = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
+		public string Observation
+		{
+			get
+			{
+				return this._Observation;
+			}
+			set
+			{
+				if ((this._Observation != value))
+				{
+					this._Observation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
+		public System.Nullable<float> QSeuil
+		{
+			get
+			{
+				return this._QSeuil;
+			}
+			set
+			{
+				if ((this._QSeuil != value))
+				{
+					this._QSeuil = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
+		public string Magpref
+		{
+			get
+			{
+				return this._Magpref;
+			}
+			set
+			{
+				if ((this._Magpref != value))
+				{
+					this._Magpref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
+		public System.Nullable<long> IdPlace
+		{
+			get
+			{
+				return this._IdPlace;
+			}
+			set
+			{
+				if ((this._IdPlace != value))
+				{
+					this._IdPlace = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
+		public System.Nullable<long> IdCat
+		{
+			get
+			{
+				return this._IdCat;
+			}
+			set
+			{
+				if ((this._IdCat != value))
+				{
+					this._IdCat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
+		public System.Nullable<long> IdUnit
+		{
+			get
+			{
+				return this._IdUnit;
+			}
+			set
+			{
+				if ((this._IdUnit != value))
+				{
+					this._IdUnit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
+		public float Q
+		{
+			get
+			{
+				return this._Q;
+			}
+			set
+			{
+				if ((this._Q != value))
+				{
+					this._Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
+		public float Q1
+		{
+			get
+			{
+				return this._Q1;
+			}
+			set
+			{
+				if ((this._Q1 != value))
+				{
+					this._Q1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
+		public float Q2
+		{
+			get
+			{
+				return this._Q2;
+			}
+			set
+			{
+				if ((this._Q2 != value))
+				{
+					this._Q2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
+		public string S1
+		{
+			get
+			{
+				return this._S1;
+			}
+			set
+			{
+				if ((this._S1 != value))
+				{
+					this._S1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
+		public string S2
+		{
+			get
+			{
+				return this._S2;
+			}
+			set
+			{
+				if ((this._S2 != value))
+				{
+					this._S2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D1
+		{
+			get
+			{
+				return this._D1;
+			}
+			set
+			{
+				if ((this._D1 != value))
+				{
+					this._D1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D2
+		{
+			get
+			{
+				return this._D2;
+			}
+			set
+			{
+				if ((this._D2 != value))
+				{
+					this._D2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
+		public string B1
+		{
+			get
+			{
+				return this._B1;
+			}
+			set
+			{
+				if ((this._B1 != value))
+				{
+					this._B1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
+		public string C1
+		{
+			get
+			{
+				return this._C1;
+			}
+			set
+			{
+				if ((this._C1 != value))
+				{
+					this._C1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
+		public string T1
+		{
+			get
+			{
+				return this._T1;
+			}
+			set
+			{
+				if ((this._T1 != value))
+				{
+					this._T1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
+		public string B2
+		{
+			get
+			{
+				return this._B2;
+			}
+			set
+			{
+				if ((this._B2 != value))
+				{
+					this._B2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
+		public string OtherInfo
+		{
+			get
+			{
+				return this._OtherInfo;
+			}
+			set
+			{
+				if ((this._OtherInfo != value))
+				{
+					this._OtherInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
+		public string AdrPref
+		{
+			get
+			{
+				return this._AdrPref;
+			}
+			set
+			{
+				if ((this._AdrPref != value))
+				{
+					this._AdrPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
+		public string ComplPref
+		{
+			get
+			{
+				return this._ComplPref;
+			}
+			set
+			{
+				if ((this._ComplPref != value))
+				{
+					this._ComplPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
+		public string Tel1Pref
+		{
+			get
+			{
+				return this._Tel1Pref;
+			}
+			set
+			{
+				if ((this._Tel1Pref != value))
+				{
+					this._Tel1Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
+		public string Tel2Pref
+		{
+			get
+			{
+				return this._Tel2Pref;
+			}
+			set
+			{
+				if ((this._Tel2Pref != value))
+				{
+					this._Tel2Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
+		public System.Nullable<long> Pid
+		{
+			get
+			{
+				return this._Pid;
+			}
+			set
+			{
+				if ((this._Pid != value))
+				{
+					this._Pid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
+		public System.Nullable<float> PrimGros
+		{
+			get
+			{
+				return this._PrimGros;
+			}
+			set
+			{
+				if ((this._PrimGros != value))
+				{
+					this._PrimGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
+		public System.Nullable<float> PrimDetail
+		{
+			get
+			{
+				return this._PrimDetail;
+			}
+			set
+			{
+				if ((this._PrimDetail != value))
+				{
+					this._PrimDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
+		public System.Nullable<float> PrimSpecial
+		{
+			get
+			{
+				return this._PrimSpecial;
+			}
+			set
+			{
+				if ((this._PrimSpecial != value))
+				{
+					this._PrimSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
+		public System.Nullable<float> PrimExtra
+		{
+			get
+			{
+				return this._PrimExtra;
+			}
+			set
+			{
+				if ((this._PrimExtra != value))
+				{
+					this._PrimExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
+		public System.Nullable<long> Forme
+		{
+			get
+			{
+				return this._Forme;
+			}
+			set
+			{
+				if ((this._Forme != value))
+				{
+					this._Forme = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
+		public System.Nullable<long> Taxable
+		{
+			get
+			{
+				return this._Taxable;
+			}
+			set
+			{
+				if ((this._Taxable != value))
+				{
+					this._Taxable = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
+		public string CompleteCode
+		{
+			get
+			{
+				return this._CompleteCode;
+			}
+			set
+			{
+				if ((this._CompleteCode != value))
+				{
+					this._CompleteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
+		public long Drapeau
+		{
+			get
+			{
+				return this._Drapeau;
+			}
+			set
+			{
+				if ((this._Drapeau != value))
+				{
+					this._Drapeau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
+		public string StateCommande
+		{
+			get
+			{
+				return this._StateCommande;
+			}
+			set
+			{
+				if ((this._StateCommande != value))
+				{
+					this._StateCommande = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
+		public string Prenom
+		{
+			get
+			{
+				return this._Prenom;
+			}
+			set
+			{
+				if ((this._Prenom != value))
+				{
+					this._Prenom = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
+		public long Actif
+		{
+			get
+			{
+				return this._Actif;
+			}
+			set
+			{
+				if ((this._Actif != value))
+				{
+					this._Actif = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
+		public System.Nullable<long> Fait
+		{
+			get
+			{
+				return this._Fait;
+			}
+			set
+			{
+				if ((this._Fait != value))
+				{
+					this._Fait = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
+		public System.Nullable<long> L
+		{
+			get
+			{
+				return this._L;
+			}
+			set
+			{
+				if ((this._L != value))
+				{
+					this._L = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
+		public System.Nullable<long> AEntre
+		{
+			get
+			{
+				return this._AEntre;
+			}
+			set
+			{
+				if ((this._AEntre != value))
+				{
+					this._AEntre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
+		public System.Nullable<long> APrix
+		{
+			get
+			{
+				return this._APrix;
+			}
+			set
+			{
+				if ((this._APrix != value))
+				{
+					this._APrix = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
+		public string Usr
+		{
+			get
+			{
+				return this._Usr;
+			}
+			set
+			{
+				if ((this._Usr != value))
+				{
+					this._Usr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
+		public string CDF
+		{
+			get
+			{
+				return this._CDF;
+			}
+			set
+			{
+				if ((this._CDF != value))
+				{
+					this._CDF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
+		public string Localite
+		{
+			get
+			{
+				return this._Localite;
+			}
+			set
+			{
+				if ((this._Localite != value))
+				{
+					this._Localite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
+		public long Auto
+		{
+			get
+			{
+				return this._Auto;
+			}
+			set
+			{
+				if ((this._Auto != value))
+				{
+					this._Auto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
+		public bool Arret
+		{
+			get
+			{
+				return this._Arret;
+			}
+			set
+			{
+				if ((this._Arret != value))
+				{
+					this._Arret = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
+		public bool Epuise
+		{
+			get
+			{
+				return this._Epuise;
+			}
+			set
+			{
+				if ((this._Epuise != value))
+				{
+					this._Epuise = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
+		public bool Etat0
+		{
+			get
+			{
+				return this._Etat0;
+			}
+			set
+			{
+				if ((this._Etat0 != value))
+				{
+					this._Etat0 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
+		public bool Etat1
+		{
+			get
+			{
+				return this._Etat1;
+			}
+			set
+			{
+				if ((this._Etat1 != value))
+				{
+					this._Etat1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
+		public bool Etat2
+		{
+			get
+			{
+				return this._Etat2;
+			}
+			set
+			{
+				if ((this._Etat2 != value))
+				{
+					this._Etat2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(11)")]
+		public string Fcode
+		{
+			get
+			{
+				return this._Fcode;
+			}
+			set
+			{
+				if ((this._Fcode != value))
+				{
+					this._Fcode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt NOT NULL")]
+		public long Q5
+		{
+			get
+			{
+				return this._Q5;
+			}
+			set
+			{
+				if ((this._Q5 != value))
+				{
+					this._Q5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DCMD", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DCMD
+		{
+			get
+			{
+				return this._DCMD;
+			}
+			set
+			{
+				if ((this._DCMD != value))
+				{
+					this._DCMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMD", DbType="Bit NOT NULL")]
+		public bool CMD
+		{
+			get
+			{
+				return this._CMD;
+			}
+			set
+			{
+				if ((this._CMD != value))
+				{
+					this._CMD = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationAuto")]
+	public partial class OperationAuto
+	{
+		
+		private long _Ndx;
+		
+		private string _Codage;
+		
+		private string _Refers;
+		
+		private string _Place;
+		
+		private string _Designation;
+		
+		private System.Nullable<float> _Pachat;
+		
+		private System.Nullable<float> _Previent;
+		
+		private System.Nullable<float> _PGros;
+		
+		private System.Nullable<float> _PDetail;
+		
+		private System.Nullable<float> _PSpecial;
+		
+		private System.Nullable<float> _PExtra;
+		
+		private System.Nullable<float> _QEstime;
+		
+		private System.Nullable<float> _QStock;
+		
+		private System.Nullable<float> _PEstime;
+		
+		private string _Nomvers;
+		
+		private string _Categorie;
+		
+		private string _Unite;
+		
+		private string _Nomfrns;
+		
+		private string _Remark;
+		
+		private System.Nullable<float> _Vstock;
+		
+		private System.Nullable<System.DateTime> _DateVente;
+		
+		private System.Nullable<System.DateTime> _DateAchat;
+		
+		private string _Frs;
+		
+		private string _Clt;
+		
+		private System.Nullable<double> _Qachat;
+		
+		private System.Nullable<double> _Vachat;
+		
+		private System.Nullable<double> _Qavoir;
+		
+		private System.Nullable<double> _Vavoir;
+		
+		private System.Nullable<double> _Qvente;
+		
+		private System.Nullable<double> _Vvente;
+		
+		private System.Nullable<double> _Qercpt;
+		
+		private System.Nullable<double> _Vercpt;
+		
+		private System.Nullable<double> _Qdefect;
+		
+		private System.Nullable<double> _Vdefect;
+		
+		private System.Nullable<double> _Qvol;
+		
+		private System.Nullable<double> _Vvol;
+		
+		private string _RCode;
+		
+		private string _CATALOG;
+		
+		private string _Remarque;
+		
+		private string _Observation;
+		
+		private System.Nullable<float> _QSeuil;
+		
+		private string _Magpref;
+		
+		private System.Nullable<long> _IdPlace;
+		
+		private System.Nullable<long> _IdCat;
+		
+		private System.Nullable<long> _IdUnit;
+		
+		private float _Q;
+		
+		private float _Q1;
+		
+		private float _Q2;
+		
+		private string _S1;
+		
+		private string _S2;
+		
+		private System.DateTime _D1;
+		
+		private System.DateTime _D2;
+		
+		private string _B1;
+		
+		private string _C1;
+		
+		private string _T1;
+		
+		private string _B2;
+		
+		private string _OtherInfo;
+		
+		private string _AdrPref;
+		
+		private string _ComplPref;
+		
+		private string _Tel1Pref;
+		
+		private string _Tel2Pref;
+		
+		private System.Nullable<long> _Pid;
+		
+		private System.Nullable<float> _PrimGros;
+		
+		private System.Nullable<float> _PrimDetail;
+		
+		private System.Nullable<float> _PrimSpecial;
+		
+		private System.Nullable<float> _PrimExtra;
+		
+		private System.Nullable<long> _Forme;
+		
+		private System.Nullable<long> _Taxable;
+		
+		private string _CompleteCode;
+		
+		private long _Drapeau;
+		
+		private string _StateCommande;
+		
+		private string _Prenom;
+		
+		private long _Actif;
+		
+		private string _Note;
+		
+		private System.Nullable<long> _Fait;
+		
+		private System.Nullable<long> _L;
+		
+		private System.Nullable<long> _AEntre;
+		
+		private System.Nullable<long> _APrix;
+		
+		private string _Usr;
+		
+		private string _CDF;
+		
+		private string _Localite;
+		
+		private bool _Arret;
+		
+		private bool _Epuise;
+		
+		private long _Auto;
+		
+		private string _Fcode;
+		
+		private bool _CMD;
+		
+		private System.Nullable<System.DateTime> _DCMD;
+		
+		private long _Q5;
+		
+		public OperationAuto()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
+		public long Ndx
+		{
+			get
+			{
+				return this._Ndx;
+			}
+			set
+			{
+				if ((this._Ndx != value))
+				{
+					this._Ndx = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
+		public string Codage
+		{
+			get
+			{
+				return this._Codage;
+			}
+			set
+			{
+				if ((this._Codage != value))
+				{
+					this._Codage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
+		public string Refers
+		{
+			get
+			{
+				return this._Refers;
+			}
+			set
+			{
+				if ((this._Refers != value))
+				{
+					this._Refers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
+		public string Place
+		{
+			get
+			{
+				return this._Place;
+			}
+			set
+			{
+				if ((this._Place != value))
+				{
+					this._Place = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
+		public string Designation
+		{
+			get
+			{
+				return this._Designation;
+			}
+			set
+			{
+				if ((this._Designation != value))
+				{
+					this._Designation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
+		public System.Nullable<float> Pachat
+		{
+			get
+			{
+				return this._Pachat;
+			}
+			set
+			{
+				if ((this._Pachat != value))
+				{
+					this._Pachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
+		public System.Nullable<float> Previent
+		{
+			get
+			{
+				return this._Previent;
+			}
+			set
+			{
+				if ((this._Previent != value))
+				{
+					this._Previent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
+		public System.Nullable<float> PGros
+		{
+			get
+			{
+				return this._PGros;
+			}
+			set
+			{
+				if ((this._PGros != value))
+				{
+					this._PGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
+		public System.Nullable<float> PDetail
+		{
+			get
+			{
+				return this._PDetail;
+			}
+			set
+			{
+				if ((this._PDetail != value))
+				{
+					this._PDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
+		public System.Nullable<float> PSpecial
+		{
+			get
+			{
+				return this._PSpecial;
+			}
+			set
+			{
+				if ((this._PSpecial != value))
+				{
+					this._PSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
+		public System.Nullable<float> PExtra
+		{
+			get
+			{
+				return this._PExtra;
+			}
+			set
+			{
+				if ((this._PExtra != value))
+				{
+					this._PExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
+		public System.Nullable<float> QEstime
+		{
+			get
+			{
+				return this._QEstime;
+			}
+			set
+			{
+				if ((this._QEstime != value))
+				{
+					this._QEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
+		public System.Nullable<float> QStock
+		{
+			get
+			{
+				return this._QStock;
+			}
+			set
+			{
+				if ((this._QStock != value))
+				{
+					this._QStock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
+		public System.Nullable<float> PEstime
+		{
+			get
+			{
+				return this._PEstime;
+			}
+			set
+			{
+				if ((this._PEstime != value))
+				{
+					this._PEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(255)")]
+		public string Nomvers
+		{
+			get
+			{
+				return this._Nomvers;
+			}
+			set
+			{
+				if ((this._Nomvers != value))
+				{
+					this._Nomvers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
+		public string Categorie
+		{
+			get
+			{
+				return this._Categorie;
+			}
+			set
+			{
+				if ((this._Categorie != value))
+				{
+					this._Categorie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
+		public string Unite
+		{
+			get
+			{
+				return this._Unite;
+			}
+			set
+			{
+				if ((this._Unite != value))
+				{
+					this._Unite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
+		public string Nomfrns
+		{
+			get
+			{
+				return this._Nomfrns;
+			}
+			set
+			{
+				if ((this._Nomfrns != value))
+				{
+					this._Nomfrns = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
+		public string Remark
+		{
+			get
+			{
+				return this._Remark;
+			}
+			set
+			{
+				if ((this._Remark != value))
+				{
+					this._Remark = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
+		public System.Nullable<float> Vstock
+		{
+			get
+			{
+				return this._Vstock;
+			}
+			set
+			{
+				if ((this._Vstock != value))
+				{
+					this._Vstock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateVente
+		{
+			get
+			{
+				return this._DateVente;
+			}
+			set
+			{
+				if ((this._DateVente != value))
+				{
+					this._DateVente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateAchat
+		{
+			get
+			{
+				return this._DateAchat;
+			}
+			set
+			{
+				if ((this._DateAchat != value))
+				{
+					this._DateAchat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
+		public string Frs
+		{
+			get
+			{
+				return this._Frs;
+			}
+			set
+			{
+				if ((this._Frs != value))
+				{
+					this._Frs = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
+		public string Clt
+		{
+			get
+			{
+				return this._Clt;
+			}
+			set
+			{
+				if ((this._Clt != value))
+				{
+					this._Clt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
+		public System.Nullable<double> Qachat
+		{
+			get
+			{
+				return this._Qachat;
+			}
+			set
+			{
+				if ((this._Qachat != value))
+				{
+					this._Qachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
+		public System.Nullable<double> Vachat
+		{
+			get
+			{
+				return this._Vachat;
+			}
+			set
+			{
+				if ((this._Vachat != value))
+				{
+					this._Vachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
+		public System.Nullable<double> Qavoir
+		{
+			get
+			{
+				return this._Qavoir;
+			}
+			set
+			{
+				if ((this._Qavoir != value))
+				{
+					this._Qavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
+		public System.Nullable<double> Vavoir
+		{
+			get
+			{
+				return this._Vavoir;
+			}
+			set
+			{
+				if ((this._Vavoir != value))
+				{
+					this._Vavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
+		public System.Nullable<double> Qvente
+		{
+			get
+			{
+				return this._Qvente;
+			}
+			set
+			{
+				if ((this._Qvente != value))
+				{
+					this._Qvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
+		public System.Nullable<double> Vvente
+		{
+			get
+			{
+				return this._Vvente;
+			}
+			set
+			{
+				if ((this._Vvente != value))
+				{
+					this._Vvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
+		public System.Nullable<double> Qercpt
+		{
+			get
+			{
+				return this._Qercpt;
+			}
+			set
+			{
+				if ((this._Qercpt != value))
+				{
+					this._Qercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
+		public System.Nullable<double> Vercpt
+		{
+			get
+			{
+				return this._Vercpt;
+			}
+			set
+			{
+				if ((this._Vercpt != value))
+				{
+					this._Vercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
+		public System.Nullable<double> Qdefect
+		{
+			get
+			{
+				return this._Qdefect;
+			}
+			set
+			{
+				if ((this._Qdefect != value))
+				{
+					this._Qdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
+		public System.Nullable<double> Vdefect
+		{
+			get
+			{
+				return this._Vdefect;
+			}
+			set
+			{
+				if ((this._Vdefect != value))
+				{
+					this._Vdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
+		public System.Nullable<double> Qvol
+		{
+			get
+			{
+				return this._Qvol;
+			}
+			set
+			{
+				if ((this._Qvol != value))
+				{
+					this._Qvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
+		public System.Nullable<double> Vvol
+		{
+			get
+			{
+				return this._Vvol;
+			}
+			set
+			{
+				if ((this._Vvol != value))
+				{
+					this._Vvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
+		public string RCode
+		{
+			get
+			{
+				return this._RCode;
+			}
+			set
+			{
+				if ((this._RCode != value))
+				{
+					this._RCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CATALOG", DbType="NVarChar(255)")]
+		public string CATALOG
+		{
+			get
+			{
+				return this._CATALOG;
+			}
+			set
+			{
+				if ((this._CATALOG != value))
+				{
+					this._CATALOG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
+		public string Remarque
+		{
+			get
+			{
+				return this._Remarque;
+			}
+			set
+			{
+				if ((this._Remarque != value))
+				{
+					this._Remarque = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
+		public string Observation
+		{
+			get
+			{
+				return this._Observation;
+			}
+			set
+			{
+				if ((this._Observation != value))
+				{
+					this._Observation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
+		public System.Nullable<float> QSeuil
+		{
+			get
+			{
+				return this._QSeuil;
+			}
+			set
+			{
+				if ((this._QSeuil != value))
+				{
+					this._QSeuil = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
+		public string Magpref
+		{
+			get
+			{
+				return this._Magpref;
+			}
+			set
+			{
+				if ((this._Magpref != value))
+				{
+					this._Magpref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
+		public System.Nullable<long> IdPlace
+		{
+			get
+			{
+				return this._IdPlace;
+			}
+			set
+			{
+				if ((this._IdPlace != value))
+				{
+					this._IdPlace = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
+		public System.Nullable<long> IdCat
+		{
+			get
+			{
+				return this._IdCat;
+			}
+			set
+			{
+				if ((this._IdCat != value))
+				{
+					this._IdCat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
+		public System.Nullable<long> IdUnit
+		{
+			get
+			{
+				return this._IdUnit;
+			}
+			set
+			{
+				if ((this._IdUnit != value))
+				{
+					this._IdUnit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
+		public float Q
+		{
+			get
+			{
+				return this._Q;
+			}
+			set
+			{
+				if ((this._Q != value))
+				{
+					this._Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
+		public float Q1
+		{
+			get
+			{
+				return this._Q1;
+			}
+			set
+			{
+				if ((this._Q1 != value))
+				{
+					this._Q1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
+		public float Q2
+		{
+			get
+			{
+				return this._Q2;
+			}
+			set
+			{
+				if ((this._Q2 != value))
+				{
+					this._Q2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
+		public string S1
+		{
+			get
+			{
+				return this._S1;
+			}
+			set
+			{
+				if ((this._S1 != value))
+				{
+					this._S1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
+		public string S2
+		{
+			get
+			{
+				return this._S2;
+			}
+			set
+			{
+				if ((this._S2 != value))
+				{
+					this._S2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D1
+		{
+			get
+			{
+				return this._D1;
+			}
+			set
+			{
+				if ((this._D1 != value))
+				{
+					this._D1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D2
+		{
+			get
+			{
+				return this._D2;
+			}
+			set
+			{
+				if ((this._D2 != value))
+				{
+					this._D2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
+		public string B1
+		{
+			get
+			{
+				return this._B1;
+			}
+			set
+			{
+				if ((this._B1 != value))
+				{
+					this._B1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
+		public string C1
+		{
+			get
+			{
+				return this._C1;
+			}
+			set
+			{
+				if ((this._C1 != value))
+				{
+					this._C1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
+		public string T1
+		{
+			get
+			{
+				return this._T1;
+			}
+			set
+			{
+				if ((this._T1 != value))
+				{
+					this._T1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
+		public string B2
+		{
+			get
+			{
+				return this._B2;
+			}
+			set
+			{
+				if ((this._B2 != value))
+				{
+					this._B2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
+		public string OtherInfo
+		{
+			get
+			{
+				return this._OtherInfo;
+			}
+			set
+			{
+				if ((this._OtherInfo != value))
+				{
+					this._OtherInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
+		public string AdrPref
+		{
+			get
+			{
+				return this._AdrPref;
+			}
+			set
+			{
+				if ((this._AdrPref != value))
+				{
+					this._AdrPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
+		public string ComplPref
+		{
+			get
+			{
+				return this._ComplPref;
+			}
+			set
+			{
+				if ((this._ComplPref != value))
+				{
+					this._ComplPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
+		public string Tel1Pref
+		{
+			get
+			{
+				return this._Tel1Pref;
+			}
+			set
+			{
+				if ((this._Tel1Pref != value))
+				{
+					this._Tel1Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
+		public string Tel2Pref
+		{
+			get
+			{
+				return this._Tel2Pref;
+			}
+			set
+			{
+				if ((this._Tel2Pref != value))
+				{
+					this._Tel2Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
+		public System.Nullable<long> Pid
+		{
+			get
+			{
+				return this._Pid;
+			}
+			set
+			{
+				if ((this._Pid != value))
+				{
+					this._Pid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
+		public System.Nullable<float> PrimGros
+		{
+			get
+			{
+				return this._PrimGros;
+			}
+			set
+			{
+				if ((this._PrimGros != value))
+				{
+					this._PrimGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
+		public System.Nullable<float> PrimDetail
+		{
+			get
+			{
+				return this._PrimDetail;
+			}
+			set
+			{
+				if ((this._PrimDetail != value))
+				{
+					this._PrimDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
+		public System.Nullable<float> PrimSpecial
+		{
+			get
+			{
+				return this._PrimSpecial;
+			}
+			set
+			{
+				if ((this._PrimSpecial != value))
+				{
+					this._PrimSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
+		public System.Nullable<float> PrimExtra
+		{
+			get
+			{
+				return this._PrimExtra;
+			}
+			set
+			{
+				if ((this._PrimExtra != value))
+				{
+					this._PrimExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
+		public System.Nullable<long> Forme
+		{
+			get
+			{
+				return this._Forme;
+			}
+			set
+			{
+				if ((this._Forme != value))
+				{
+					this._Forme = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
+		public System.Nullable<long> Taxable
+		{
+			get
+			{
+				return this._Taxable;
+			}
+			set
+			{
+				if ((this._Taxable != value))
+				{
+					this._Taxable = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
+		public string CompleteCode
+		{
+			get
+			{
+				return this._CompleteCode;
+			}
+			set
+			{
+				if ((this._CompleteCode != value))
+				{
+					this._CompleteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
+		public long Drapeau
+		{
+			get
+			{
+				return this._Drapeau;
+			}
+			set
+			{
+				if ((this._Drapeau != value))
+				{
+					this._Drapeau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
+		public string StateCommande
+		{
+			get
+			{
+				return this._StateCommande;
+			}
+			set
+			{
+				if ((this._StateCommande != value))
+				{
+					this._StateCommande = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
+		public string Prenom
+		{
+			get
+			{
+				return this._Prenom;
+			}
+			set
+			{
+				if ((this._Prenom != value))
+				{
+					this._Prenom = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
+		public long Actif
+		{
+			get
+			{
+				return this._Actif;
+			}
+			set
+			{
+				if ((this._Actif != value))
+				{
+					this._Actif = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
+		public System.Nullable<long> Fait
+		{
+			get
+			{
+				return this._Fait;
+			}
+			set
+			{
+				if ((this._Fait != value))
+				{
+					this._Fait = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
+		public System.Nullable<long> L
+		{
+			get
+			{
+				return this._L;
+			}
+			set
+			{
+				if ((this._L != value))
+				{
+					this._L = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
+		public System.Nullable<long> AEntre
+		{
+			get
+			{
+				return this._AEntre;
+			}
+			set
+			{
+				if ((this._AEntre != value))
+				{
+					this._AEntre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
+		public System.Nullable<long> APrix
+		{
+			get
+			{
+				return this._APrix;
+			}
+			set
+			{
+				if ((this._APrix != value))
+				{
+					this._APrix = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
+		public string Usr
+		{
+			get
+			{
+				return this._Usr;
+			}
+			set
+			{
+				if ((this._Usr != value))
+				{
+					this._Usr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
+		public string CDF
+		{
+			get
+			{
+				return this._CDF;
+			}
+			set
+			{
+				if ((this._CDF != value))
+				{
+					this._CDF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
+		public string Localite
+		{
+			get
+			{
+				return this._Localite;
+			}
+			set
+			{
+				if ((this._Localite != value))
+				{
+					this._Localite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
+		public bool Arret
+		{
+			get
+			{
+				return this._Arret;
+			}
+			set
+			{
+				if ((this._Arret != value))
+				{
+					this._Arret = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
+		public bool Epuise
+		{
+			get
+			{
+				return this._Epuise;
+			}
+			set
+			{
+				if ((this._Epuise != value))
+				{
+					this._Epuise = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
+		public long Auto
+		{
+			get
+			{
+				return this._Auto;
+			}
+			set
+			{
+				if ((this._Auto != value))
+				{
+					this._Auto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(11)")]
+		public string Fcode
+		{
+			get
+			{
+				return this._Fcode;
+			}
+			set
+			{
+				if ((this._Fcode != value))
+				{
+					this._Fcode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMD", DbType="Bit NOT NULL")]
+		public bool CMD
+		{
+			get
+			{
+				return this._CMD;
+			}
+			set
+			{
+				if ((this._CMD != value))
+				{
+					this._CMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DCMD", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DCMD
+		{
+			get
+			{
+				return this._DCMD;
+			}
+			set
+			{
+				if ((this._DCMD != value))
+				{
+					this._DCMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt NOT NULL")]
+		public long Q5
+		{
+			get
+			{
+				return this._Q5;
+			}
+			set
+			{
+				if ((this._Q5 != value))
+				{
+					this._Q5 = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationCommande")]
+	public partial class OperationCommande
+	{
+		
+		private long _Ndx;
+		
+		private string _Codage;
+		
+		private string _Refers;
+		
+		private string _Place;
+		
+		private string _Designation;
+		
+		private System.Nullable<float> _Pachat;
+		
+		private System.Nullable<float> _Previent;
+		
+		private System.Nullable<float> _PGros;
+		
+		private System.Nullable<float> _PDetail;
+		
+		private System.Nullable<float> _PSpecial;
+		
+		private System.Nullable<float> _PExtra;
+		
+		private System.Nullable<float> _QEstime;
+		
+		private System.Nullable<float> _PEstime;
+		
+		private string _Nomvers;
+		
+		private string _Categorie;
+		
+		private string _Unite;
+		
+		private System.Nullable<float> _QStock;
+		
+		private string _Nomfrns;
+		
+		private string _Remark;
+		
+		private System.Nullable<float> _Vstock;
+		
+		private System.Nullable<System.DateTime> _DateVente;
+		
+		private System.Nullable<System.DateTime> _DateAchat;
+		
+		private string _Frs;
+		
+		private string _Clt;
+		
+		private System.Nullable<double> _Qachat;
+		
+		private System.Nullable<double> _Vachat;
+		
+		private System.Nullable<double> _Qavoir;
+		
+		private System.Nullable<double> _Vavoir;
+		
+		private System.Nullable<double> _Qvente;
+		
+		private System.Nullable<double> _Vvente;
+		
+		private System.Nullable<double> _Qercpt;
+		
+		private System.Nullable<double> _Vercpt;
+		
+		private System.Nullable<double> _Qdefect;
+		
+		private System.Nullable<double> _Vdefect;
+		
+		private System.Nullable<double> _Qvol;
+		
+		private System.Nullable<double> _Vvol;
+		
+		private string _RCode;
+		
+		private string _CATALOG;
+		
+		private string _Remarque;
+		
+		private string _Observation;
+		
+		private System.Nullable<float> _QSeuil;
+		
+		private string _Magpref;
+		
+		private System.Nullable<long> _IdPlace;
+		
+		private System.Nullable<long> _IdCat;
+		
+		private System.Nullable<long> _IdUnit;
+		
+		private float _Q;
+		
+		private float _Q1;
+		
+		private float _Q2;
+		
+		private string _S1;
+		
+		private string _S2;
+		
+		private System.DateTime _D1;
+		
+		private System.DateTime _D2;
+		
+		private string _B1;
+		
+		private string _C1;
+		
+		private string _T1;
+		
+		private string _B2;
+		
+		private string _OtherInfo;
+		
+		private string _AdrPref;
+		
+		private string _ComplPref;
+		
+		private string _Tel1Pref;
+		
+		private string _Tel2Pref;
+		
+		private System.Nullable<long> _Pid;
+		
+		private System.Nullable<float> _PrimGros;
+		
+		private System.Nullable<float> _PrimDetail;
+		
+		private System.Nullable<float> _PrimSpecial;
+		
+		private System.Nullable<float> _PrimExtra;
+		
+		private System.Nullable<long> _Forme;
+		
+		private System.Nullable<long> _Taxable;
+		
+		private string _CompleteCode;
+		
+		private long _Drapeau;
+		
+		private string _StateCommande;
+		
+		private string _Prenom;
+		
+		private long _Actif;
+		
+		private string _Note;
+		
+		private System.Nullable<long> _Fait;
+		
+		private System.Nullable<long> _L;
+		
+		private System.Nullable<long> _AEntre;
+		
+		private System.Nullable<long> _APrix;
+		
+		private string _Usr;
+		
+		private string _CDF;
+		
+		private string _Localite;
+		
+		private bool _Arret;
+		
+		private bool _Epuise;
+		
+		private string _Fcode;
+		
+		private long _Auto;
+		
+		private bool _Etat0;
+		
+		private bool _Etat1;
+		
+		private bool _Etat2;
+		
+		private bool _CMD;
+		
+		private System.Nullable<System.DateTime> _DCMD;
+		
+		private long _Q5;
+		
+		public OperationCommande()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ndx", DbType="BigInt NOT NULL")]
+		public long Ndx
+		{
+			get
+			{
+				return this._Ndx;
+			}
+			set
+			{
+				if ((this._Ndx != value))
+				{
+					this._Ndx = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codage", DbType="NVarChar(255)")]
+		public string Codage
+		{
+			get
+			{
+				return this._Codage;
+			}
+			set
+			{
+				if ((this._Codage != value))
+				{
+					this._Codage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Refers", DbType="NVarChar(255)")]
+		public string Refers
+		{
+			get
+			{
+				return this._Refers;
+			}
+			set
+			{
+				if ((this._Refers != value))
+				{
+					this._Refers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Place", DbType="NVarChar(510)")]
+		public string Place
+		{
+			get
+			{
+				return this._Place;
+			}
+			set
+			{
+				if ((this._Place != value))
+				{
+					this._Place = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation", DbType="NVarChar(255)")]
+		public string Designation
+		{
+			get
+			{
+				return this._Designation;
+			}
+			set
+			{
+				if ((this._Designation != value))
+				{
+					this._Designation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pachat", DbType="Real")]
+		public System.Nullable<float> Pachat
+		{
+			get
+			{
+				return this._Pachat;
+			}
+			set
+			{
+				if ((this._Pachat != value))
+				{
+					this._Pachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previent", DbType="Real")]
+		public System.Nullable<float> Previent
+		{
+			get
+			{
+				return this._Previent;
+			}
+			set
+			{
+				if ((this._Previent != value))
+				{
+					this._Previent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGros", DbType="Real")]
+		public System.Nullable<float> PGros
+		{
+			get
+			{
+				return this._PGros;
+			}
+			set
+			{
+				if ((this._PGros != value))
+				{
+					this._PGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDetail", DbType="Real")]
+		public System.Nullable<float> PDetail
+		{
+			get
+			{
+				return this._PDetail;
+			}
+			set
+			{
+				if ((this._PDetail != value))
+				{
+					this._PDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSpecial", DbType="Real")]
+		public System.Nullable<float> PSpecial
+		{
+			get
+			{
+				return this._PSpecial;
+			}
+			set
+			{
+				if ((this._PSpecial != value))
+				{
+					this._PSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PExtra", DbType="Real")]
+		public System.Nullable<float> PExtra
+		{
+			get
+			{
+				return this._PExtra;
+			}
+			set
+			{
+				if ((this._PExtra != value))
+				{
+					this._PExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QEstime", DbType="Real")]
+		public System.Nullable<float> QEstime
+		{
+			get
+			{
+				return this._QEstime;
+			}
+			set
+			{
+				if ((this._QEstime != value))
+				{
+					this._QEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PEstime", DbType="Real")]
+		public System.Nullable<float> PEstime
+		{
+			get
+			{
+				return this._PEstime;
+			}
+			set
+			{
+				if ((this._PEstime != value))
+				{
+					this._PEstime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomvers", DbType="NVarChar(255)")]
+		public string Nomvers
+		{
+			get
+			{
+				return this._Nomvers;
+			}
+			set
+			{
+				if ((this._Nomvers != value))
+				{
+					this._Nomvers = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categorie", DbType="NVarChar(255)")]
+		public string Categorie
+		{
+			get
+			{
+				return this._Categorie;
+			}
+			set
+			{
+				if ((this._Categorie != value))
+				{
+					this._Categorie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unite", DbType="NVarChar(255)")]
+		public string Unite
+		{
+			get
+			{
+				return this._Unite;
+			}
+			set
+			{
+				if ((this._Unite != value))
+				{
+					this._Unite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QStock", DbType="Real")]
+		public System.Nullable<float> QStock
+		{
+			get
+			{
+				return this._QStock;
+			}
+			set
+			{
+				if ((this._QStock != value))
+				{
+					this._QStock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nomfrns", DbType="NVarChar(255)")]
+		public string Nomfrns
+		{
+			get
+			{
+				return this._Nomfrns;
+			}
+			set
+			{
+				if ((this._Nomfrns != value))
+				{
+					this._Nomfrns = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remark", DbType="NVarChar(255)")]
+		public string Remark
+		{
+			get
+			{
+				return this._Remark;
+			}
+			set
+			{
+				if ((this._Remark != value))
+				{
+					this._Remark = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vstock", DbType="Real")]
+		public System.Nullable<float> Vstock
+		{
+			get
+			{
+				return this._Vstock;
+			}
+			set
+			{
+				if ((this._Vstock != value))
+				{
+					this._Vstock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateVente", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateVente
+		{
+			get
+			{
+				return this._DateVente;
+			}
+			set
+			{
+				if ((this._DateVente != value))
+				{
+					this._DateVente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateAchat", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateAchat
+		{
+			get
+			{
+				return this._DateAchat;
+			}
+			set
+			{
+				if ((this._DateAchat != value))
+				{
+					this._DateAchat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Frs", DbType="NVarChar(255)")]
+		public string Frs
+		{
+			get
+			{
+				return this._Frs;
+			}
+			set
+			{
+				if ((this._Frs != value))
+				{
+					this._Frs = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clt", DbType="NVarChar(255)")]
+		public string Clt
+		{
+			get
+			{
+				return this._Clt;
+			}
+			set
+			{
+				if ((this._Clt != value))
+				{
+					this._Clt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qachat", DbType="Float")]
+		public System.Nullable<double> Qachat
+		{
+			get
+			{
+				return this._Qachat;
+			}
+			set
+			{
+				if ((this._Qachat != value))
+				{
+					this._Qachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vachat", DbType="Float")]
+		public System.Nullable<double> Vachat
+		{
+			get
+			{
+				return this._Vachat;
+			}
+			set
+			{
+				if ((this._Vachat != value))
+				{
+					this._Vachat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qavoir", DbType="Float")]
+		public System.Nullable<double> Qavoir
+		{
+			get
+			{
+				return this._Qavoir;
+			}
+			set
+			{
+				if ((this._Qavoir != value))
+				{
+					this._Qavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vavoir", DbType="Float")]
+		public System.Nullable<double> Vavoir
+		{
+			get
+			{
+				return this._Vavoir;
+			}
+			set
+			{
+				if ((this._Vavoir != value))
+				{
+					this._Vavoir = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvente", DbType="Float")]
+		public System.Nullable<double> Qvente
+		{
+			get
+			{
+				return this._Qvente;
+			}
+			set
+			{
+				if ((this._Qvente != value))
+				{
+					this._Qvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvente", DbType="Float")]
+		public System.Nullable<double> Vvente
+		{
+			get
+			{
+				return this._Vvente;
+			}
+			set
+			{
+				if ((this._Vvente != value))
+				{
+					this._Vvente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qercpt", DbType="Float")]
+		public System.Nullable<double> Qercpt
+		{
+			get
+			{
+				return this._Qercpt;
+			}
+			set
+			{
+				if ((this._Qercpt != value))
+				{
+					this._Qercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vercpt", DbType="Float")]
+		public System.Nullable<double> Vercpt
+		{
+			get
+			{
+				return this._Vercpt;
+			}
+			set
+			{
+				if ((this._Vercpt != value))
+				{
+					this._Vercpt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qdefect", DbType="Float")]
+		public System.Nullable<double> Qdefect
+		{
+			get
+			{
+				return this._Qdefect;
+			}
+			set
+			{
+				if ((this._Qdefect != value))
+				{
+					this._Qdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vdefect", DbType="Float")]
+		public System.Nullable<double> Vdefect
+		{
+			get
+			{
+				return this._Vdefect;
+			}
+			set
+			{
+				if ((this._Vdefect != value))
+				{
+					this._Vdefect = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Qvol", DbType="Float")]
+		public System.Nullable<double> Qvol
+		{
+			get
+			{
+				return this._Qvol;
+			}
+			set
+			{
+				if ((this._Qvol != value))
+				{
+					this._Qvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vvol", DbType="Float")]
+		public System.Nullable<double> Vvol
+		{
+			get
+			{
+				return this._Vvol;
+			}
+			set
+			{
+				if ((this._Vvol != value))
+				{
+					this._Vvol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RCode", DbType="NVarChar(511)")]
+		public string RCode
+		{
+			get
+			{
+				return this._RCode;
+			}
+			set
+			{
+				if ((this._RCode != value))
+				{
+					this._RCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CATALOG", DbType="NVarChar(255)")]
+		public string CATALOG
+		{
+			get
+			{
+				return this._CATALOG;
+			}
+			set
+			{
+				if ((this._CATALOG != value))
+				{
+					this._CATALOG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarque", DbType="NVarChar(255)")]
+		public string Remarque
+		{
+			get
+			{
+				return this._Remarque;
+			}
+			set
+			{
+				if ((this._Remarque != value))
+				{
+					this._Remarque = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observation", DbType="NVarChar(255)")]
+		public string Observation
+		{
+			get
+			{
+				return this._Observation;
+			}
+			set
+			{
+				if ((this._Observation != value))
+				{
+					this._Observation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QSeuil", DbType="Real")]
+		public System.Nullable<float> QSeuil
+		{
+			get
+			{
+				return this._QSeuil;
+			}
+			set
+			{
+				if ((this._QSeuil != value))
+				{
+					this._QSeuil = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Magpref", DbType="NVarChar(255)")]
+		public string Magpref
+		{
+			get
+			{
+				return this._Magpref;
+			}
+			set
+			{
+				if ((this._Magpref != value))
+				{
+					this._Magpref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="BigInt")]
+		public System.Nullable<long> IdPlace
+		{
+			get
+			{
+				return this._IdPlace;
+			}
+			set
+			{
+				if ((this._IdPlace != value))
+				{
+					this._IdPlace = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCat", DbType="BigInt")]
+		public System.Nullable<long> IdCat
+		{
+			get
+			{
+				return this._IdCat;
+			}
+			set
+			{
+				if ((this._IdCat != value))
+				{
+					this._IdCat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUnit", DbType="BigInt")]
+		public System.Nullable<long> IdUnit
+		{
+			get
+			{
+				return this._IdUnit;
+			}
+			set
+			{
+				if ((this._IdUnit != value))
+				{
+					this._IdUnit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q", DbType="Real NOT NULL")]
+		public float Q
+		{
+			get
+			{
+				return this._Q;
+			}
+			set
+			{
+				if ((this._Q != value))
+				{
+					this._Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="Real NOT NULL")]
+		public float Q1
+		{
+			get
+			{
+				return this._Q1;
+			}
+			set
+			{
+				if ((this._Q1 != value))
+				{
+					this._Q1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="Real NOT NULL")]
+		public float Q2
+		{
+			get
+			{
+				return this._Q2;
+			}
+			set
+			{
+				if ((this._Q2 != value))
+				{
+					this._Q2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S1", DbType="NVarChar(255)")]
+		public string S1
+		{
+			get
+			{
+				return this._S1;
+			}
+			set
+			{
+				if ((this._S1 != value))
+				{
+					this._S1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_S2", DbType="NVarChar(255)")]
+		public string S2
+		{
+			get
+			{
+				return this._S2;
+			}
+			set
+			{
+				if ((this._S2 != value))
+				{
+					this._S2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D1
+		{
+			get
+			{
+				return this._D1;
+			}
+			set
+			{
+				if ((this._D1 != value))
+				{
+					this._D1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2 NOT NULL")]
+		public System.DateTime D2
+		{
+			get
+			{
+				return this._D2;
+			}
+			set
+			{
+				if ((this._D2 != value))
+				{
+					this._D2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B1", DbType="NVarChar(255)")]
+		public string B1
+		{
+			get
+			{
+				return this._B1;
+			}
+			set
+			{
+				if ((this._B1 != value))
+				{
+					this._B1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="NVarChar(255)")]
+		public string C1
+		{
+			get
+			{
+				return this._C1;
+			}
+			set
+			{
+				if ((this._C1 != value))
+				{
+					this._C1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T1", DbType="NVarChar(255)")]
+		public string T1
+		{
+			get
+			{
+				return this._T1;
+			}
+			set
+			{
+				if ((this._T1 != value))
+				{
+					this._T1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B2", DbType="NVarChar(255)")]
+		public string B2
+		{
+			get
+			{
+				return this._B2;
+			}
+			set
+			{
+				if ((this._B2 != value))
+				{
+					this._B2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OtherInfo", DbType="NVarChar(255)")]
+		public string OtherInfo
+		{
+			get
+			{
+				return this._OtherInfo;
+			}
+			set
+			{
+				if ((this._OtherInfo != value))
+				{
+					this._OtherInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdrPref", DbType="NVarChar(255)")]
+		public string AdrPref
+		{
+			get
+			{
+				return this._AdrPref;
+			}
+			set
+			{
+				if ((this._AdrPref != value))
+				{
+					this._AdrPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComplPref", DbType="NVarChar(255)")]
+		public string ComplPref
+		{
+			get
+			{
+				return this._ComplPref;
+			}
+			set
+			{
+				if ((this._ComplPref != value))
+				{
+					this._ComplPref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel1Pref", DbType="NVarChar(255)")]
+		public string Tel1Pref
+		{
+			get
+			{
+				return this._Tel1Pref;
+			}
+			set
+			{
+				if ((this._Tel1Pref != value))
+				{
+					this._Tel1Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel2Pref", DbType="NVarChar(255)")]
+		public string Tel2Pref
+		{
+			get
+			{
+				return this._Tel2Pref;
+			}
+			set
+			{
+				if ((this._Tel2Pref != value))
+				{
+					this._Tel2Pref = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pid", DbType="BigInt")]
+		public System.Nullable<long> Pid
+		{
+			get
+			{
+				return this._Pid;
+			}
+			set
+			{
+				if ((this._Pid != value))
+				{
+					this._Pid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimGros", DbType="Real")]
+		public System.Nullable<float> PrimGros
+		{
+			get
+			{
+				return this._PrimGros;
+			}
+			set
+			{
+				if ((this._PrimGros != value))
+				{
+					this._PrimGros = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimDetail", DbType="Real")]
+		public System.Nullable<float> PrimDetail
+		{
+			get
+			{
+				return this._PrimDetail;
+			}
+			set
+			{
+				if ((this._PrimDetail != value))
+				{
+					this._PrimDetail = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimSpecial", DbType="Real")]
+		public System.Nullable<float> PrimSpecial
+		{
+			get
+			{
+				return this._PrimSpecial;
+			}
+			set
+			{
+				if ((this._PrimSpecial != value))
+				{
+					this._PrimSpecial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimExtra", DbType="Real")]
+		public System.Nullable<float> PrimExtra
+		{
+			get
+			{
+				return this._PrimExtra;
+			}
+			set
+			{
+				if ((this._PrimExtra != value))
+				{
+					this._PrimExtra = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Forme", DbType="BigInt")]
+		public System.Nullable<long> Forme
+		{
+			get
+			{
+				return this._Forme;
+			}
+			set
+			{
+				if ((this._Forme != value))
+				{
+					this._Forme = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Taxable", DbType="BigInt")]
+		public System.Nullable<long> Taxable
+		{
+			get
+			{
+				return this._Taxable;
+			}
+			set
+			{
+				if ((this._Taxable != value))
+				{
+					this._Taxable = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompleteCode", DbType="NVarChar(255)")]
+		public string CompleteCode
+		{
+			get
+			{
+				return this._CompleteCode;
+			}
+			set
+			{
+				if ((this._CompleteCode != value))
+				{
+					this._CompleteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drapeau", DbType="BigInt NOT NULL")]
+		public long Drapeau
+		{
+			get
+			{
+				return this._Drapeau;
+			}
+			set
+			{
+				if ((this._Drapeau != value))
+				{
+					this._Drapeau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCommande", DbType="NVarChar(50)")]
+		public string StateCommande
+		{
+			get
+			{
+				return this._StateCommande;
+			}
+			set
+			{
+				if ((this._StateCommande != value))
+				{
+					this._StateCommande = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenom", DbType="NVarChar(255)")]
+		public string Prenom
+		{
+			get
+			{
+				return this._Prenom;
+			}
+			set
+			{
+				if ((this._Prenom != value))
+				{
+					this._Prenom = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actif", DbType="BigInt NOT NULL")]
+		public long Actif
+		{
+			get
+			{
+				return this._Actif;
+			}
+			set
+			{
+				if ((this._Actif != value))
+				{
+					this._Actif = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(255)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fait", DbType="BigInt")]
+		public System.Nullable<long> Fait
+		{
+			get
+			{
+				return this._Fait;
+			}
+			set
+			{
+				if ((this._Fait != value))
+				{
+					this._Fait = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L", DbType="BigInt")]
+		public System.Nullable<long> L
+		{
+			get
+			{
+				return this._L;
+			}
+			set
+			{
+				if ((this._L != value))
+				{
+					this._L = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AEntre", DbType="BigInt")]
+		public System.Nullable<long> AEntre
+		{
+			get
+			{
+				return this._AEntre;
+			}
+			set
+			{
+				if ((this._AEntre != value))
+				{
+					this._AEntre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APrix", DbType="BigInt")]
+		public System.Nullable<long> APrix
+		{
+			get
+			{
+				return this._APrix;
+			}
+			set
+			{
+				if ((this._APrix != value))
+				{
+					this._APrix = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usr", DbType="NVarChar(255)")]
+		public string Usr
+		{
+			get
+			{
+				return this._Usr;
+			}
+			set
+			{
+				if ((this._Usr != value))
+				{
+					this._Usr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDF", DbType="NVarChar(255)")]
+		public string CDF
+		{
+			get
+			{
+				return this._CDF;
+			}
+			set
+			{
+				if ((this._CDF != value))
+				{
+					this._CDF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Localite", DbType="NVarChar(255)")]
+		public string Localite
+		{
+			get
+			{
+				return this._Localite;
+			}
+			set
+			{
+				if ((this._Localite != value))
+				{
+					this._Localite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arret", DbType="Bit NOT NULL")]
+		public bool Arret
+		{
+			get
+			{
+				return this._Arret;
+			}
+			set
+			{
+				if ((this._Arret != value))
+				{
+					this._Arret = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Epuise", DbType="Bit NOT NULL")]
+		public bool Epuise
+		{
+			get
+			{
+				return this._Epuise;
+			}
+			set
+			{
+				if ((this._Epuise != value))
+				{
+					this._Epuise = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fcode", DbType="NVarChar(11)")]
+		public string Fcode
+		{
+			get
+			{
+				return this._Fcode;
+			}
+			set
+			{
+				if ((this._Fcode != value))
+				{
+					this._Fcode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Auto", DbType="BigInt NOT NULL")]
+		public long Auto
+		{
+			get
+			{
+				return this._Auto;
+			}
+			set
+			{
+				if ((this._Auto != value))
+				{
+					this._Auto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat0", DbType="Bit NOT NULL")]
+		public bool Etat0
+		{
+			get
+			{
+				return this._Etat0;
+			}
+			set
+			{
+				if ((this._Etat0 != value))
+				{
+					this._Etat0 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat1", DbType="Bit NOT NULL")]
+		public bool Etat1
+		{
+			get
+			{
+				return this._Etat1;
+			}
+			set
+			{
+				if ((this._Etat1 != value))
+				{
+					this._Etat1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Etat2", DbType="Bit NOT NULL")]
+		public bool Etat2
+		{
+			get
+			{
+				return this._Etat2;
+			}
+			set
+			{
+				if ((this._Etat2 != value))
+				{
+					this._Etat2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMD", DbType="Bit NOT NULL")]
+		public bool CMD
+		{
+			get
+			{
+				return this._CMD;
+			}
+			set
+			{
+				if ((this._CMD != value))
+				{
+					this._CMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DCMD", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DCMD
+		{
+			get
+			{
+				return this._DCMD;
+			}
+			set
+			{
+				if ((this._DCMD != value))
+				{
+					this._DCMD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt NOT NULL")]
+		public long Q5
+		{
+			get
+			{
+				return this._Q5;
+			}
+			set
+			{
+				if ((this._Q5 != value))
+				{
+					this._Q5 = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GulpItem")]
+	public partial class GulpItem : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _Id;
+		
+		private bool _C1;
+		
+		private bool _C2;
+		
+		private bool _C3;
+		
+		private bool _C4;
+		
+		private long _Q1;
+		
+		private long _Q2;
+		
+		private long _Q3;
+		
+		private long _Q4;
+		
+		private int _U2;
+		
+		private int _U3;
+		
+		private int _U4;
+		
+		private int _P2;
+		
+		private int _P3;
+		
+		private System.Nullable<System.DateTime> _D1;
+		
+		private System.Nullable<System.DateTime> _D2;
+		
+		private System.Nullable<System.DateTime> _D3;
+		
+		private System.Nullable<System.DateTime> _D4;
+		
+		private string _L1;
+		
+		private string _L2;
+		
+		private string _L3;
+		
+		private string _L4;
+		
+		private int _P1;
+		
+		private long _Q5;
+		
+		private bool _C5;
+		
+		private string _H1;
+		
+		private string _H2;
+		
+		private string _H3;
+		
+		private long _H4;
+		
+		private long _H6;
+		
+		private long _Q6;
+		
+		private System.Nullable<System.DateTime> _D5;
+		
+		private System.Nullable<System.DateTime> _D6;
+		
+		private System.Nullable<System.DateTime> _D7;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(long value);
+    partial void OnIdChanged();
+    partial void OnC1Changing(bool value);
+    partial void OnC1Changed();
+    partial void OnC2Changing(bool value);
+    partial void OnC2Changed();
+    partial void OnC3Changing(bool value);
+    partial void OnC3Changed();
+    partial void OnC4Changing(bool value);
+    partial void OnC4Changed();
+    partial void OnQ1Changing(long value);
+    partial void OnQ1Changed();
+    partial void OnQ2Changing(long value);
+    partial void OnQ2Changed();
+    partial void OnQ3Changing(long value);
+    partial void OnQ3Changed();
+    partial void OnQ4Changing(long value);
+    partial void OnQ4Changed();
+    partial void OnU2Changing(int value);
+    partial void OnU2Changed();
+    partial void OnU3Changing(int value);
+    partial void OnU3Changed();
+    partial void OnU4Changing(int value);
+    partial void OnU4Changed();
+    partial void OnP2Changing(int value);
+    partial void OnP2Changed();
+    partial void OnP3Changing(int value);
+    partial void OnP3Changed();
+    partial void OnD1Changing(System.Nullable<System.DateTime> value);
+    partial void OnD1Changed();
+    partial void OnD2Changing(System.Nullable<System.DateTime> value);
+    partial void OnD2Changed();
+    partial void OnD3Changing(System.Nullable<System.DateTime> value);
+    partial void OnD3Changed();
+    partial void OnD4Changing(System.Nullable<System.DateTime> value);
+    partial void OnD4Changed();
+    partial void OnL1Changing(string value);
+    partial void OnL1Changed();
+    partial void OnL2Changing(string value);
+    partial void OnL2Changed();
+    partial void OnL3Changing(string value);
+    partial void OnL3Changed();
+    partial void OnL4Changing(string value);
+    partial void OnL4Changed();
+    partial void OnP1Changing(int value);
+    partial void OnP1Changed();
+    partial void OnQ5Changing(long value);
+    partial void OnQ5Changed();
+    partial void OnC5Changing(bool value);
+    partial void OnC5Changed();
+    partial void OnH1Changing(string value);
+    partial void OnH1Changed();
+    partial void OnH2Changing(string value);
+    partial void OnH2Changed();
+    partial void OnH3Changing(string value);
+    partial void OnH3Changed();
+    partial void OnH4Changing(long value);
+    partial void OnH4Changed();
+    partial void OnH6Changing(long value);
+    partial void OnH6Changed();
+    partial void OnQ6Changing(long value);
+    partial void OnQ6Changed();
+    partial void OnD5Changing(System.Nullable<System.DateTime> value);
+    partial void OnD5Changed();
+    partial void OnD6Changing(System.Nullable<System.DateTime> value);
+    partial void OnD6Changed();
+    partial void OnD7Changing(System.Nullable<System.DateTime> value);
+    partial void OnD7Changed();
+    #endregion
+		
+		public GulpItem()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="BigInt NOT NULL", IsPrimaryKey=true)]
+		public long Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="Bit NOT NULL")]
+		public bool C1
+		{
+			get
+			{
+				return this._C1;
+			}
+			set
+			{
+				if ((this._C1 != value))
+				{
+					this.OnC1Changing(value);
+					this.SendPropertyChanging();
+					this._C1 = value;
+					this.SendPropertyChanged("C1");
+					this.OnC1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C2", DbType="Bit NOT NULL")]
+		public bool C2
+		{
+			get
+			{
+				return this._C2;
+			}
+			set
+			{
+				if ((this._C2 != value))
+				{
+					this.OnC2Changing(value);
+					this.SendPropertyChanging();
+					this._C2 = value;
+					this.SendPropertyChanged("C2");
+					this.OnC2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C3", DbType="Bit NOT NULL")]
+		public bool C3
+		{
+			get
+			{
+				return this._C3;
+			}
+			set
+			{
+				if ((this._C3 != value))
+				{
+					this.OnC3Changing(value);
+					this.SendPropertyChanging();
+					this._C3 = value;
+					this.SendPropertyChanged("C3");
+					this.OnC3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C4", DbType="Bit NOT NULL")]
+		public bool C4
+		{
+			get
+			{
+				return this._C4;
+			}
+			set
+			{
+				if ((this._C4 != value))
+				{
+					this.OnC4Changing(value);
+					this.SendPropertyChanging();
+					this._C4 = value;
+					this.SendPropertyChanged("C4");
+					this.OnC4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="BigInt NOT NULL")]
+		public long Q1
+		{
+			get
+			{
+				return this._Q1;
+			}
+			set
+			{
+				if ((this._Q1 != value))
+				{
+					this.OnQ1Changing(value);
+					this.SendPropertyChanging();
+					this._Q1 = value;
+					this.SendPropertyChanged("Q1");
+					this.OnQ1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="BigInt NOT NULL")]
+		public long Q2
+		{
+			get
+			{
+				return this._Q2;
+			}
+			set
+			{
+				if ((this._Q2 != value))
+				{
+					this.OnQ2Changing(value);
+					this.SendPropertyChanging();
+					this._Q2 = value;
+					this.SendPropertyChanged("Q2");
+					this.OnQ2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q3", DbType="BigInt NOT NULL")]
+		public long Q3
+		{
+			get
+			{
+				return this._Q3;
+			}
+			set
+			{
+				if ((this._Q3 != value))
+				{
+					this.OnQ3Changing(value);
+					this.SendPropertyChanging();
+					this._Q3 = value;
+					this.SendPropertyChanged("Q3");
+					this.OnQ3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q4", DbType="BigInt NOT NULL")]
+		public long Q4
+		{
+			get
+			{
+				return this._Q4;
+			}
+			set
+			{
+				if ((this._Q4 != value))
+				{
+					this.OnQ4Changing(value);
+					this.SendPropertyChanging();
+					this._Q4 = value;
+					this.SendPropertyChanged("Q4");
+					this.OnQ4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U2", DbType="Int NOT NULL")]
+		public int U2
+		{
+			get
+			{
+				return this._U2;
+			}
+			set
+			{
+				if ((this._U2 != value))
+				{
+					this.OnU2Changing(value);
+					this.SendPropertyChanging();
+					this._U2 = value;
+					this.SendPropertyChanged("U2");
+					this.OnU2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U3", DbType="Int NOT NULL")]
+		public int U3
+		{
+			get
+			{
+				return this._U3;
+			}
+			set
+			{
+				if ((this._U3 != value))
+				{
+					this.OnU3Changing(value);
+					this.SendPropertyChanging();
+					this._U3 = value;
+					this.SendPropertyChanged("U3");
+					this.OnU3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U4", DbType="Int NOT NULL")]
+		public int U4
+		{
+			get
+			{
+				return this._U4;
+			}
+			set
+			{
+				if ((this._U4 != value))
+				{
+					this.OnU4Changing(value);
+					this.SendPropertyChanging();
+					this._U4 = value;
+					this.SendPropertyChanged("U4");
+					this.OnU4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P2", DbType="Int NOT NULL")]
+		public int P2
+		{
+			get
+			{
+				return this._P2;
+			}
+			set
+			{
+				if ((this._P2 != value))
+				{
+					this.OnP2Changing(value);
+					this.SendPropertyChanging();
+					this._P2 = value;
+					this.SendPropertyChanged("P2");
+					this.OnP2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P3", DbType="Int NOT NULL")]
+		public int P3
+		{
+			get
+			{
+				return this._P3;
+			}
+			set
+			{
+				if ((this._P3 != value))
+				{
+					this.OnP3Changing(value);
+					this.SendPropertyChanging();
+					this._P3 = value;
+					this.SendPropertyChanged("P3");
+					this.OnP3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D1
+		{
+			get
+			{
+				return this._D1;
+			}
+			set
+			{
+				if ((this._D1 != value))
+				{
+					this.OnD1Changing(value);
+					this.SendPropertyChanging();
+					this._D1 = value;
+					this.SendPropertyChanged("D1");
+					this.OnD1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D2
+		{
+			get
+			{
+				return this._D2;
+			}
+			set
+			{
+				if ((this._D2 != value))
+				{
+					this.OnD2Changing(value);
+					this.SendPropertyChanging();
+					this._D2 = value;
+					this.SendPropertyChanged("D2");
+					this.OnD2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D3", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D3
+		{
+			get
+			{
+				return this._D3;
+			}
+			set
+			{
+				if ((this._D3 != value))
+				{
+					this.OnD3Changing(value);
+					this.SendPropertyChanging();
+					this._D3 = value;
+					this.SendPropertyChanged("D3");
+					this.OnD3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D4", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D4
+		{
+			get
+			{
+				return this._D4;
+			}
+			set
+			{
+				if ((this._D4 != value))
+				{
+					this.OnD4Changing(value);
+					this.SendPropertyChanging();
+					this._D4 = value;
+					this.SendPropertyChanged("D4");
+					this.OnD4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L1", DbType="NVarChar(50)")]
+		public string L1
+		{
+			get
+			{
+				return this._L1;
+			}
+			set
+			{
+				if ((this._L1 != value))
+				{
+					this.OnL1Changing(value);
+					this.SendPropertyChanging();
+					this._L1 = value;
+					this.SendPropertyChanged("L1");
+					this.OnL1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L2", DbType="NVarChar(50)")]
+		public string L2
+		{
+			get
+			{
+				return this._L2;
+			}
+			set
+			{
+				if ((this._L2 != value))
+				{
+					this.OnL2Changing(value);
+					this.SendPropertyChanging();
+					this._L2 = value;
+					this.SendPropertyChanged("L2");
+					this.OnL2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L3", DbType="NVarChar(50)")]
+		public string L3
+		{
+			get
+			{
+				return this._L3;
+			}
+			set
+			{
+				if ((this._L3 != value))
+				{
+					this.OnL3Changing(value);
+					this.SendPropertyChanging();
+					this._L3 = value;
+					this.SendPropertyChanged("L3");
+					this.OnL3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L4", DbType="NVarChar(50)")]
+		public string L4
+		{
+			get
+			{
+				return this._L4;
+			}
+			set
+			{
+				if ((this._L4 != value))
+				{
+					this.OnL4Changing(value);
+					this.SendPropertyChanging();
+					this._L4 = value;
+					this.SendPropertyChanged("L4");
+					this.OnL4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P1", DbType="Int NOT NULL")]
+		public int P1
+		{
+			get
+			{
+				return this._P1;
+			}
+			set
+			{
+				if ((this._P1 != value))
+				{
+					this.OnP1Changing(value);
+					this.SendPropertyChanging();
+					this._P1 = value;
+					this.SendPropertyChanged("P1");
+					this.OnP1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt NOT NULL")]
+		public long Q5
+		{
+			get
+			{
+				return this._Q5;
+			}
+			set
+			{
+				if ((this._Q5 != value))
+				{
+					this.OnQ5Changing(value);
+					this.SendPropertyChanging();
+					this._Q5 = value;
+					this.SendPropertyChanged("Q5");
+					this.OnQ5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C5", DbType="Bit NOT NULL")]
+		public bool C5
+		{
+			get
+			{
+				return this._C5;
+			}
+			set
+			{
+				if ((this._C5 != value))
+				{
+					this.OnC5Changing(value);
+					this.SendPropertyChanging();
+					this._C5 = value;
+					this.SendPropertyChanged("C5");
+					this.OnC5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H1", DbType="NVarChar(50)")]
+		public string H1
+		{
+			get
+			{
+				return this._H1;
+			}
+			set
+			{
+				if ((this._H1 != value))
+				{
+					this.OnH1Changing(value);
+					this.SendPropertyChanging();
+					this._H1 = value;
+					this.SendPropertyChanged("H1");
+					this.OnH1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H2", DbType="NVarChar(50)")]
+		public string H2
+		{
+			get
+			{
+				return this._H2;
+			}
+			set
+			{
+				if ((this._H2 != value))
+				{
+					this.OnH2Changing(value);
+					this.SendPropertyChanging();
+					this._H2 = value;
+					this.SendPropertyChanged("H2");
+					this.OnH2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H3", DbType="NVarChar(50)")]
+		public string H3
+		{
+			get
+			{
+				return this._H3;
+			}
+			set
+			{
+				if ((this._H3 != value))
+				{
+					this.OnH3Changing(value);
+					this.SendPropertyChanging();
+					this._H3 = value;
+					this.SendPropertyChanged("H3");
+					this.OnH3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H4", DbType="BigInt NOT NULL")]
+		public long H4
+		{
+			get
+			{
+				return this._H4;
+			}
+			set
+			{
+				if ((this._H4 != value))
+				{
+					this.OnH4Changing(value);
+					this.SendPropertyChanging();
+					this._H4 = value;
+					this.SendPropertyChanged("H4");
+					this.OnH4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H6", DbType="BigInt NOT NULL")]
+		public long H6
+		{
+			get
+			{
+				return this._H6;
+			}
+			set
+			{
+				if ((this._H6 != value))
+				{
+					this.OnH6Changing(value);
+					this.SendPropertyChanging();
+					this._H6 = value;
+					this.SendPropertyChanged("H6");
+					this.OnH6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q6", DbType="BigInt NOT NULL")]
+		public long Q6
+		{
+			get
+			{
+				return this._Q6;
+			}
+			set
+			{
+				if ((this._Q6 != value))
+				{
+					this.OnQ6Changing(value);
+					this.SendPropertyChanging();
+					this._Q6 = value;
+					this.SendPropertyChanged("Q6");
+					this.OnQ6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D5", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D5
+		{
+			get
+			{
+				return this._D5;
+			}
+			set
+			{
+				if ((this._D5 != value))
+				{
+					this.OnD5Changing(value);
+					this.SendPropertyChanging();
+					this._D5 = value;
+					this.SendPropertyChanged("D5");
+					this.OnD5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D6", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D6
+		{
+			get
+			{
+				return this._D6;
+			}
+			set
+			{
+				if ((this._D6 != value))
+				{
+					this.OnD6Changing(value);
+					this.SendPropertyChanging();
+					this._D6 = value;
+					this.SendPropertyChanged("D6");
+					this.OnD6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D7", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D7
+		{
+			get
+			{
+				return this._D7;
+			}
+			set
+			{
+				if ((this._D7 != value))
+				{
+					this.OnD7Changing(value);
+					this.SendPropertyChanging();
+					this._D7 = value;
+					this.SendPropertyChanged("D7");
+					this.OnD7Changed();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OperationItem")]
 	public partial class OperationItem
 	{
@@ -22760,6 +23830,32 @@ namespace gescom.data.Models
 		private string _Commerce;
 		
 		private string _Fournisseur;
+		
+		private System.Nullable<bool> _CMD;
+		
+		private System.Nullable<System.DateTime> _DCMD;
+		
+		private System.Nullable<long> _Q5;
+		
+		private System.Nullable<bool> _C5;
+		
+		private string _H2;
+		
+		private string _H1;
+		
+		private string _H3;
+		
+		private System.Nullable<long> _H4;
+		
+		private System.Nullable<long> _H6;
+		
+		private System.Nullable<System.DateTime> _D7;
+		
+		private System.Nullable<System.DateTime> _D6;
+		
+		private System.Nullable<System.DateTime> _D5;
+		
+		private System.Nullable<long> _Q6;
 		
 		public OperationItem()
 		{
@@ -24476,570 +25572,212 @@ namespace gescom.data.Models
 				}
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GulpItem")]
-	public partial class GulpItem : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _Id;
-		
-		private bool _C1;
-		
-		private bool _C2;
-		
-		private bool _C3;
-		
-		private bool _C4;
-		
-		private long _Q1;
-		
-		private long _Q2;
-		
-		private long _Q3;
-		
-		private long _Q4;
-		
-		private int _U2;
-		
-		private int _U3;
-		
-		private int _U4;
-		
-		private int _P2;
-		
-		private int _P3;
-		
-		private System.Nullable<System.DateTime> _D1;
-		
-		private System.Nullable<System.DateTime> _D2;
-		
-		private System.Nullable<System.DateTime> _D3;
-		
-		private System.Nullable<System.DateTime> _D4;
-		
-		private string _L1;
-		
-		private string _L2;
-		
-		private string _L3;
-		
-		private string _L4;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(long value);
-    partial void OnIdChanged();
-    partial void OnC1Changing(bool value);
-    partial void OnC1Changed();
-    partial void OnC2Changing(bool value);
-    partial void OnC2Changed();
-    partial void OnC3Changing(bool value);
-    partial void OnC3Changed();
-    partial void OnC4Changing(bool value);
-    partial void OnC4Changed();
-    partial void OnQ1Changing(long value);
-    partial void OnQ1Changed();
-    partial void OnQ2Changing(long value);
-    partial void OnQ2Changed();
-    partial void OnQ3Changing(long value);
-    partial void OnQ3Changed();
-    partial void OnQ4Changing(long value);
-    partial void OnQ4Changed();
-    partial void OnU2Changing(int value);
-    partial void OnU2Changed();
-    partial void OnU3Changing(int value);
-    partial void OnU3Changed();
-    partial void OnU4Changing(int value);
-    partial void OnU4Changed();
-    partial void OnP2Changing(int value);
-    partial void OnP2Changed();
-    partial void OnP3Changing(int value);
-    partial void OnP3Changed();
-    partial void OnD1Changing(System.Nullable<System.DateTime> value);
-    partial void OnD1Changed();
-    partial void OnD2Changing(System.Nullable<System.DateTime> value);
-    partial void OnD2Changed();
-    partial void OnD3Changing(System.Nullable<System.DateTime> value);
-    partial void OnD3Changed();
-    partial void OnD4Changing(System.Nullable<System.DateTime> value);
-    partial void OnD4Changed();
-    partial void OnL1Changing(string value);
-    partial void OnL1Changed();
-    partial void OnL2Changing(string value);
-    partial void OnL2Changed();
-    partial void OnL3Changing(string value);
-    partial void OnL3Changed();
-    partial void OnL4Changing(string value);
-    partial void OnL4Changed();
-    #endregion
-		
-		public GulpItem()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="BigInt NOT NULL", IsPrimaryKey=true)]
-		public long Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMD", DbType="Bit")]
+		public System.Nullable<bool> CMD
 		{
 			get
 			{
-				return this._Id;
+				return this._CMD;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._CMD != value))
 				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._CMD = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C1", DbType="Bit NOT NULL")]
-		public bool C1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DCMD", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DCMD
 		{
 			get
 			{
-				return this._C1;
+				return this._DCMD;
 			}
 			set
 			{
-				if ((this._C1 != value))
+				if ((this._DCMD != value))
 				{
-					this.OnC1Changing(value);
-					this.SendPropertyChanging();
-					this._C1 = value;
-					this.SendPropertyChanged("C1");
-					this.OnC1Changed();
+					this._DCMD = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C2", DbType="Bit NOT NULL")]
-		public bool C2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q5", DbType="BigInt")]
+		public System.Nullable<long> Q5
 		{
 			get
 			{
-				return this._C2;
+				return this._Q5;
 			}
 			set
 			{
-				if ((this._C2 != value))
+				if ((this._Q5 != value))
 				{
-					this.OnC2Changing(value);
-					this.SendPropertyChanging();
-					this._C2 = value;
-					this.SendPropertyChanged("C2");
-					this.OnC2Changed();
+					this._Q5 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C3", DbType="Bit NOT NULL")]
-		public bool C3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C5", DbType="Bit")]
+		public System.Nullable<bool> C5
 		{
 			get
 			{
-				return this._C3;
+				return this._C5;
 			}
 			set
 			{
-				if ((this._C3 != value))
+				if ((this._C5 != value))
 				{
-					this.OnC3Changing(value);
-					this.SendPropertyChanging();
-					this._C3 = value;
-					this.SendPropertyChanged("C3");
-					this.OnC3Changed();
+					this._C5 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C4", DbType="Bit NOT NULL")]
-		public bool C4
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H2", DbType="NVarChar(50)")]
+		public string H2
 		{
 			get
 			{
-				return this._C4;
+				return this._H2;
 			}
 			set
 			{
-				if ((this._C4 != value))
+				if ((this._H2 != value))
 				{
-					this.OnC4Changing(value);
-					this.SendPropertyChanging();
-					this._C4 = value;
-					this.SendPropertyChanged("C4");
-					this.OnC4Changed();
+					this._H2 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q1", DbType="BigInt NOT NULL")]
-		public long Q1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H1", DbType="NVarChar(50)")]
+		public string H1
 		{
 			get
 			{
-				return this._Q1;
+				return this._H1;
 			}
 			set
 			{
-				if ((this._Q1 != value))
+				if ((this._H1 != value))
 				{
-					this.OnQ1Changing(value);
-					this.SendPropertyChanging();
-					this._Q1 = value;
-					this.SendPropertyChanged("Q1");
-					this.OnQ1Changed();
+					this._H1 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q2", DbType="BigInt NOT NULL")]
-		public long Q2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H3", DbType="NVarChar(50)")]
+		public string H3
 		{
 			get
 			{
-				return this._Q2;
+				return this._H3;
 			}
 			set
 			{
-				if ((this._Q2 != value))
+				if ((this._H3 != value))
 				{
-					this.OnQ2Changing(value);
-					this.SendPropertyChanging();
-					this._Q2 = value;
-					this.SendPropertyChanged("Q2");
-					this.OnQ2Changed();
+					this._H3 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q3", DbType="BigInt NOT NULL")]
-		public long Q3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H4", DbType="BigInt")]
+		public System.Nullable<long> H4
 		{
 			get
 			{
-				return this._Q3;
+				return this._H4;
 			}
 			set
 			{
-				if ((this._Q3 != value))
+				if ((this._H4 != value))
 				{
-					this.OnQ3Changing(value);
-					this.SendPropertyChanging();
-					this._Q3 = value;
-					this.SendPropertyChanged("Q3");
-					this.OnQ3Changed();
+					this._H4 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q4", DbType="BigInt NOT NULL")]
-		public long Q4
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_H6", DbType="BigInt")]
+		public System.Nullable<long> H6
 		{
 			get
 			{
-				return this._Q4;
+				return this._H6;
 			}
 			set
 			{
-				if ((this._Q4 != value))
+				if ((this._H6 != value))
 				{
-					this.OnQ4Changing(value);
-					this.SendPropertyChanging();
-					this._Q4 = value;
-					this.SendPropertyChanged("Q4");
-					this.OnQ4Changed();
+					this._H6 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U2", DbType="Int NOT NULL")]
-		public int U2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D7", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D7
 		{
 			get
 			{
-				return this._U2;
+				return this._D7;
 			}
 			set
 			{
-				if ((this._U2 != value))
+				if ((this._D7 != value))
 				{
-					this.OnU2Changing(value);
-					this.SendPropertyChanging();
-					this._U2 = value;
-					this.SendPropertyChanged("U2");
-					this.OnU2Changed();
+					this._D7 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U3", DbType="Int NOT NULL")]
-		public int U3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D6", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D6
 		{
 			get
 			{
-				return this._U3;
+				return this._D6;
 			}
 			set
 			{
-				if ((this._U3 != value))
+				if ((this._D6 != value))
 				{
-					this.OnU3Changing(value);
-					this.SendPropertyChanging();
-					this._U3 = value;
-					this.SendPropertyChanged("U3");
-					this.OnU3Changed();
+					this._D6 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U4", DbType="Int NOT NULL")]
-		public int U4
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D5", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> D5
 		{
 			get
 			{
-				return this._U4;
+				return this._D5;
 			}
 			set
 			{
-				if ((this._U4 != value))
+				if ((this._D5 != value))
 				{
-					this.OnU4Changing(value);
-					this.SendPropertyChanging();
-					this._U4 = value;
-					this.SendPropertyChanged("U4");
-					this.OnU4Changed();
+					this._D5 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P2", DbType="Int NOT NULL")]
-		public int P2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Q6", DbType="BigInt")]
+		public System.Nullable<long> Q6
 		{
 			get
 			{
-				return this._P2;
+				return this._Q6;
 			}
 			set
 			{
-				if ((this._P2 != value))
+				if ((this._Q6 != value))
 				{
-					this.OnP2Changing(value);
-					this.SendPropertyChanging();
-					this._P2 = value;
-					this.SendPropertyChanged("P2");
-					this.OnP2Changed();
+					this._Q6 = value;
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P3", DbType="Int NOT NULL")]
-		public int P3
-		{
-			get
-			{
-				return this._P3;
-			}
-			set
-			{
-				if ((this._P3 != value))
-				{
-					this.OnP3Changing(value);
-					this.SendPropertyChanging();
-					this._P3 = value;
-					this.SendPropertyChanged("P3");
-					this.OnP3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D1", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> D1
-		{
-			get
-			{
-				return this._D1;
-			}
-			set
-			{
-				if ((this._D1 != value))
-				{
-					this.OnD1Changing(value);
-					this.SendPropertyChanging();
-					this._D1 = value;
-					this.SendPropertyChanged("D1");
-					this.OnD1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D2", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> D2
-		{
-			get
-			{
-				return this._D2;
-			}
-			set
-			{
-				if ((this._D2 != value))
-				{
-					this.OnD2Changing(value);
-					this.SendPropertyChanging();
-					this._D2 = value;
-					this.SendPropertyChanged("D2");
-					this.OnD2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D3", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> D3
-		{
-			get
-			{
-				return this._D3;
-			}
-			set
-			{
-				if ((this._D3 != value))
-				{
-					this.OnD3Changing(value);
-					this.SendPropertyChanging();
-					this._D3 = value;
-					this.SendPropertyChanged("D3");
-					this.OnD3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D4", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> D4
-		{
-			get
-			{
-				return this._D4;
-			}
-			set
-			{
-				if ((this._D4 != value))
-				{
-					this.OnD4Changing(value);
-					this.SendPropertyChanging();
-					this._D4 = value;
-					this.SendPropertyChanged("D4");
-					this.OnD4Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L1", DbType="NVarChar(50)")]
-		public string L1
-		{
-			get
-			{
-				return this._L1;
-			}
-			set
-			{
-				if ((this._L1 != value))
-				{
-					this.OnL1Changing(value);
-					this.SendPropertyChanging();
-					this._L1 = value;
-					this.SendPropertyChanged("L1");
-					this.OnL1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L2", DbType="NVarChar(50)")]
-		public string L2
-		{
-			get
-			{
-				return this._L2;
-			}
-			set
-			{
-				if ((this._L2 != value))
-				{
-					this.OnL2Changing(value);
-					this.SendPropertyChanging();
-					this._L2 = value;
-					this.SendPropertyChanged("L2");
-					this.OnL2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L3", DbType="NVarChar(50)")]
-		public string L3
-		{
-			get
-			{
-				return this._L3;
-			}
-			set
-			{
-				if ((this._L3 != value))
-				{
-					this.OnL3Changing(value);
-					this.SendPropertyChanging();
-					this._L3 = value;
-					this.SendPropertyChanged("L3");
-					this.OnL3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_L4", DbType="NVarChar(50)")]
-		public string L4
-		{
-			get
-			{
-				return this._L4;
-			}
-			set
-			{
-				if ((this._L4 != value))
-				{
-					this.OnL4Changing(value);
-					this.SendPropertyChanging();
-					this._L4 = value;
-					this.SendPropertyChanged("L4");
-					this.OnL4Changed();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

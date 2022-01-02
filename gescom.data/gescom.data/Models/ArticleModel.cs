@@ -131,7 +131,7 @@ namespace gescom.data.Models
         }
 
         public static void UpdateFusion(long id, string tache, string message, string b1, string b2, long entrer = 0,
-            long tarifer = 0, float quantite = 0, long prior = 0, long? mask = null)
+            long tarifer = 0, float quantite = 0, float arrivage=0,long prior = 0, long? mask = null)
         {
             var repository = new DuoRepository();
             var item = repository.Get(id);
@@ -145,6 +145,7 @@ namespace gescom.data.Models
             item.S2 = message;
             item.D2 = DateTime.Now;
             item.Q2 = quantite;
+            item.Q1 = arrivage;
             repository.Update();
         }
 
@@ -155,7 +156,7 @@ namespace gescom.data.Models
         }
 
         public static void UpdateRecto(long id, string tache, string message, float quantite, string b1, string b2,
-            long tarifer, long entrer, long? visible = null, long prior = 0)
+            long tarifer, long entrer, long? visible = null, long prior = 0, float qentre=0)
         {
             var repository = new DuoRepository();
             var item = repository.Get(id);
@@ -169,6 +170,7 @@ namespace gescom.data.Models
             item.APrix = tarifer;
             item.D1 = DateTime.Now;
             item.Q1 = quantite;
+            item.Q2 = qentre;
             if (quantite >= 0) repository.Update();
         }
     }

@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraFusion));
-            this.ultraGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.ultrainfo = new System.Windows.Forms.GroupBox();
             this.b2 = new DevExpress.XtraEditors.LabelControl();
             this.b1 = new DevExpress.XtraEditors.LabelControl();
             this.s = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.q = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labeltransp = new DevExpress.XtraEditors.LabelControl();
+            this.labdatariv = new DevExpress.XtraEditors.LabelControl();
+            this.labelmsg = new DevExpress.XtraEditors.LabelControl();
+            this.Q6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelarriv = new DevExpress.XtraEditors.LabelControl();
             this.dernier = new DevExpress.XtraEditors.PanelControl();
             this.checkVerif = new DevExpress.XtraEditors.CheckEdit();
             this.checkPlace = new DevExpress.XtraEditors.CheckEdit();
-            this.radioMoyen = new DevExpress.XtraEditors.CheckEdit();
+            this.C4 = new DevExpress.XtraEditors.CheckEdit();
             this.checkPrior = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEntre = new DevExpress.XtraEditors.CheckEdit();
+            this.C5 = new DevExpress.XtraEditors.CheckEdit();
             this.checkPrix = new DevExpress.XtraEditors.CheckEdit();
             this.fermer = new DevExpress.XtraEditors.SimpleButton();
             this.creer = new DevExpress.XtraEditors.SimpleButton();
             this.tete = new DevExpress.XtraEditors.PanelControl();
             this.d2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelCompte = new DevExpress.XtraEditors.LabelControl();
             this.d1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labeordr = new DevExpress.XtraEditors.LabelControl();
             this.leNom = new DevExpress.XtraEditors.LabelControl();
             this.codage = new DevExpress.XtraEditors.LabelControl();
             this.codex = new DevExpress.XtraEditors.LabelControl();
             this.nombre = new DevExpress.XtraEditors.LabelControl();
             this.labelNums = new DevExpress.XtraEditors.LabelControl();
-            this.groupe1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupArriv = new DevExpress.XtraEditors.GroupControl();
             this.cumDispo = new DevExpress.XtraEditors.LabelControl();
             this.labom = new DevExpress.XtraEditors.LabelControl();
-            this.q1 = new DevExpress.XtraEditors.SpinEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.H6 = new DevExpress.XtraEditors.SpinEdit();
+            this.labelPhys = new DevExpress.XtraEditors.LabelControl();
+            this.labelrepo = new DevExpress.XtraEditors.LabelControl();
             this.s1 = new DevExpress.XtraEditors.TextEdit();
             this.cadre = new DevExpress.XtraEditors.PanelControl();
             this.secondPlace = new DevExpress.XtraEditors.TextEdit();
@@ -72,40 +72,50 @@
             this.placement = new System.Windows.Forms.ComboBox();
             this.labelUnite = new DevExpress.XtraEditors.LabelControl();
             this.labelRef = new DevExpress.XtraEditors.LabelControl();
-            this.ultraGroupBox1.SuspendLayout();
+            this.groupInterne = new DevExpress.XtraEditors.GroupControl();
+            this.labInterne = new DevExpress.XtraEditors.LabelControl();
+            this.H4 = new DevExpress.XtraEditors.SpinEdit();
+            this.labelphi = new DevExpress.XtraEditors.LabelControl();
+            this.Q4 = new DevExpress.XtraEditors.LabelControl();
+            this.H6N = new DevExpress.XtraEditors.LabelControl();
+            this.H4N = new DevExpress.XtraEditors.LabelControl();
+            this.ultrainfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).BeginInit();
             this.dernier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkVerif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPlace.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioMoyen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEntre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrix.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupe1)).BeginInit();
-            this.groupe1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.q1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupArriv)).BeginInit();
+            this.groupArriv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.H6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadre)).BeginInit();
             this.cadre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupInterne)).BeginInit();
+            this.groupInterne.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.H4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // ultraGroupBox1
+            // ultrainfo
             // 
-            this.ultraGroupBox1.Controls.Add(this.b2);
-            this.ultraGroupBox1.Controls.Add(this.b1);
-            this.ultraGroupBox1.Controls.Add(this.s);
-            this.ultraGroupBox1.Controls.Add(this.labelControl8);
-            this.ultraGroupBox1.Controls.Add(this.labelControl3);
-            this.ultraGroupBox1.Controls.Add(this.labelControl4);
-            this.ultraGroupBox1.Location = new System.Drawing.Point(5, 87);
-            this.ultraGroupBox1.Name = "ultraGroupBox1";
-            this.ultraGroupBox1.Size = new System.Drawing.Size(524, 105);
-            this.ultraGroupBox1.TabIndex = 9;
-            this.ultraGroupBox1.TabStop = false;
-            this.ultraGroupBox1.Text = "Informations";
+            this.ultrainfo.Controls.Add(this.b2);
+            this.ultrainfo.Controls.Add(this.b1);
+            this.ultrainfo.Controls.Add(this.s);
+            this.ultrainfo.Controls.Add(this.labeltransp);
+            this.ultrainfo.Controls.Add(this.labdatariv);
+            this.ultrainfo.Controls.Add(this.labelmsg);
+            this.ultrainfo.Location = new System.Drawing.Point(5, 87);
+            this.ultrainfo.Name = "ultrainfo";
+            this.ultrainfo.Size = new System.Drawing.Size(524, 101);
+            this.ultrainfo.TabIndex = 9;
+            this.ultrainfo.TabStop = false;
+            this.ultrainfo.Text = "Informations";
             // 
             // b2
             // 
@@ -137,60 +147,58 @@
             this.s.TabIndex = 2;
             this.s.Text = "s";
             // 
-            // labelControl8
+            // labeltransp
             // 
-            this.labelControl8.Location = new System.Drawing.Point(11, 77);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(63, 13);
-            this.labelControl8.TabIndex = 8;
-            this.labelControl8.Text = "Transporteur";
+            this.labeltransp.Location = new System.Drawing.Point(11, 77);
+            this.labeltransp.Name = "labeltransp";
+            this.labeltransp.Size = new System.Drawing.Size(63, 13);
+            this.labeltransp.TabIndex = 8;
+            this.labeltransp.Text = "Transporteur";
             // 
-            // labelControl3
+            // labdatariv
             // 
-            this.labelControl3.Location = new System.Drawing.Point(14, 50);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(74, 13);
-            this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "Date d\'arrivage";
+            this.labdatariv.Location = new System.Drawing.Point(14, 50);
+            this.labdatariv.Name = "labdatariv";
+            this.labdatariv.Size = new System.Drawing.Size(74, 13);
+            this.labdatariv.TabIndex = 5;
+            this.labdatariv.Text = "Date d\'arrivage";
             // 
-            // labelControl4
+            // labelmsg
             // 
-            this.labelControl4.Location = new System.Drawing.Point(14, 24);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(52, 13);
-            this.labelControl4.TabIndex = 1;
-            this.labelControl4.Text = "Message R";
+            this.labelmsg.Location = new System.Drawing.Point(14, 24);
+            this.labelmsg.Name = "labelmsg";
+            this.labelmsg.Size = new System.Drawing.Size(52, 13);
+            this.labelmsg.TabIndex = 1;
+            this.labelmsg.Text = "Message R";
             // 
-            // q
+            // Q6
             // 
-            this.q.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q.Appearance.Options.UseFont = true;
-            this.q.Location = new System.Drawing.Point(175, 23);
-            this.q.Name = "q";
-            this.q.Size = new System.Drawing.Size(7, 13);
-            this.q.TabIndex = 4;
-            this.q.Text = "q";
+            this.Q6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Q6.Appearance.Options.UseFont = true;
+            this.Q6.Location = new System.Drawing.Point(159, 48);
+            this.Q6.Name = "Q6";
+            this.Q6.Size = new System.Drawing.Size(15, 13);
+            this.Q6.TabIndex = 4;
+            this.Q6.Text = "Q6";
             // 
-            // labelControl7
+            // labelarriv
             // 
-            this.labelControl7.Location = new System.Drawing.Point(10, 23);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(107, 13);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "Quantité dénombrable";
+            this.labelarriv.Location = new System.Drawing.Point(10, 48);
+            this.labelarriv.Name = "labelarriv";
+            this.labelarriv.Size = new System.Drawing.Size(85, 13);
+            this.labelarriv.TabIndex = 3;
+            this.labelarriv.Text = "Quantité arrivage";
             // 
             // dernier
             // 
             this.dernier.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.dernier.Controls.Add(this.checkVerif);
             this.dernier.Controls.Add(this.checkPlace);
-            this.dernier.Controls.Add(this.radioMoyen);
             this.dernier.Controls.Add(this.checkPrior);
-            this.dernier.Controls.Add(this.checkEntre);
             this.dernier.Controls.Add(this.checkPrix);
             this.dernier.Controls.Add(this.fermer);
             this.dernier.Controls.Add(this.creer);
-            this.dernier.Location = new System.Drawing.Point(0, 386);
+            this.dernier.Location = new System.Drawing.Point(1, 510);
             this.dernier.Name = "dernier";
             this.dernier.Size = new System.Drawing.Size(529, 36);
             this.dernier.TabIndex = 8;
@@ -211,14 +219,18 @@
             this.checkPlace.Size = new System.Drawing.Size(52, 19);
             this.checkPlace.TabIndex = 25;
             // 
-            // radioMoyen
+            // C4
             // 
-            this.radioMoyen.Location = new System.Drawing.Point(5, 7);
-            this.radioMoyen.Name = "radioMoyen";
-            this.radioMoyen.Properties.Caption = "DMSQ";
-            this.radioMoyen.Size = new System.Drawing.Size(48, 19);
-            this.radioMoyen.TabIndex = 24;
-            this.radioMoyen.Visible = false;
+            this.C4.Enabled = false;
+            this.C4.Location = new System.Drawing.Point(8, 22);
+            this.C4.Name = "C4";
+            this.C4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C4.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.C4.Properties.Appearance.Options.UseFont = true;
+            this.C4.Properties.Appearance.Options.UseForeColor = true;
+            this.C4.Properties.Caption = "Entrée arrivage";
+            this.C4.Size = new System.Drawing.Size(120, 20);
+            this.C4.TabIndex = 24;
             // 
             // checkPrior
             // 
@@ -232,13 +244,18 @@
             this.checkPrior.Size = new System.Drawing.Size(66, 19);
             this.checkPrior.TabIndex = 23;
             // 
-            // checkEntre
+            // C5
             // 
-            this.checkEntre.Location = new System.Drawing.Point(60, 6);
-            this.checkEntre.Name = "checkEntre";
-            this.checkEntre.Properties.Caption = "Entrer";
-            this.checkEntre.Size = new System.Drawing.Size(52, 19);
-            this.checkEntre.TabIndex = 22;
+            this.C5.Enabled = false;
+            this.C5.Location = new System.Drawing.Point(6, 25);
+            this.C5.Name = "C5";
+            this.C5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C5.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.C5.Properties.Appearance.Options.UseFont = true;
+            this.C5.Properties.Appearance.Options.UseForeColor = true;
+            this.C5.Properties.Caption = "Entrée interne";
+            this.C5.Size = new System.Drawing.Size(112, 19);
+            this.C5.TabIndex = 22;
             // 
             // checkPrix
             // 
@@ -277,9 +294,9 @@
             // 
             this.tete.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.tete.Controls.Add(this.d2);
-            this.tete.Controls.Add(this.labelControl6);
+            this.tete.Controls.Add(this.labelCompte);
             this.tete.Controls.Add(this.d1);
-            this.tete.Controls.Add(this.labelControl5);
+            this.tete.Controls.Add(this.labeordr);
             this.tete.Controls.Add(this.leNom);
             this.tete.Controls.Add(this.codage);
             this.tete.Controls.Add(this.codex);
@@ -303,13 +320,13 @@
             this.d2.TabIndex = 9;
             this.d2.Text = "0";
             // 
-            // labelControl6
+            // labelCompte
             // 
-            this.labelControl6.Location = new System.Drawing.Point(266, 60);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(73, 13);
-            this.labelControl6.TabIndex = 8;
-            this.labelControl6.Text = "Date comptage";
+            this.labelCompte.Location = new System.Drawing.Point(266, 60);
+            this.labelCompte.Name = "labelCompte";
+            this.labelCompte.Size = new System.Drawing.Size(73, 13);
+            this.labelCompte.TabIndex = 8;
+            this.labelCompte.Text = "Date comptage";
             // 
             // d1
             // 
@@ -323,13 +340,13 @@
             this.d1.TabIndex = 7;
             this.d1.Text = "0";
             // 
-            // labelControl5
+            // labeordr
             // 
-            this.labelControl5.Location = new System.Drawing.Point(14, 60);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(52, 13);
-            this.labelControl5.TabIndex = 6;
-            this.labelControl5.Text = "Date ordre";
+            this.labeordr.Location = new System.Drawing.Point(14, 60);
+            this.labeordr.Name = "labeordr";
+            this.labeordr.Size = new System.Drawing.Size(52, 13);
+            this.labeordr.TabIndex = 6;
+            this.labeordr.Text = "Date ordre";
             // 
             // leNom
             // 
@@ -385,20 +402,20 @@
             this.labelNums.Text = "Numéro";
             this.labelNums.ToolTip = "Identificateur du produit en cours";
             // 
-            // groupe1
+            // groupArriv
             // 
-            this.groupe1.Controls.Add(this.cumDispo);
-            this.groupe1.Controls.Add(this.q);
-            this.groupe1.Controls.Add(this.labelControl7);
-            this.groupe1.Controls.Add(this.labom);
-            this.groupe1.Controls.Add(this.q1);
-            this.groupe1.Controls.Add(this.labelControl2);
-            this.groupe1.Controls.Add(this.labelControl1);
-            this.groupe1.Controls.Add(this.s1);
-            this.groupe1.Location = new System.Drawing.Point(5, 198);
-            this.groupe1.Name = "groupe1";
-            this.groupe1.Size = new System.Drawing.Size(524, 103);
-            this.groupe1.TabIndex = 6;
+            this.groupArriv.Controls.Add(this.H6N);
+            this.groupArriv.Controls.Add(this.Q6);
+            this.groupArriv.Controls.Add(this.labelarriv);
+            this.groupArriv.Controls.Add(this.H6);
+            this.groupArriv.Controls.Add(this.C5);
+            this.groupArriv.Controls.Add(this.labelPhys);
+            this.groupArriv.Controls.Add(this.labelrepo);
+            this.groupArriv.Controls.Add(this.s1);
+            this.groupArriv.Location = new System.Drawing.Point(5, 284);
+            this.groupArriv.Name = "groupArriv";
+            this.groupArriv.Size = new System.Drawing.Size(524, 124);
+            this.groupArriv.TabIndex = 6;
             // 
             // cumDispo
             // 
@@ -406,7 +423,7 @@
             this.cumDispo.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
             this.cumDispo.Appearance.Options.UseFont = true;
             this.cumDispo.Appearance.Options.UseForeColor = true;
-            this.cumDispo.Location = new System.Drawing.Point(340, 39);
+            this.cumDispo.Location = new System.Drawing.Point(474, 233);
             this.cumDispo.Name = "cumDispo";
             this.cumDispo.Size = new System.Drawing.Size(15, 29);
             this.cumDispo.TabIndex = 14;
@@ -416,50 +433,50 @@
             // 
             this.labom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labom.Appearance.Options.UseFont = true;
-            this.labom.Location = new System.Drawing.Point(232, 48);
+            this.labom.Location = new System.Drawing.Point(366, 242);
             this.labom.Name = "labom";
             this.labom.Size = new System.Drawing.Size(58, 13);
             this.labom.TabIndex = 13;
             this.labom.Text = "Disponible";
             // 
-            // q1
+            // H6
             // 
-            this.q1.EditValue = new decimal(new int[] {
+            this.H6.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.q1.Location = new System.Drawing.Point(122, 45);
-            this.q1.Name = "q1";
-            this.q1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.H6.Location = new System.Drawing.Point(122, 70);
+            this.H6.Name = "H6";
+            this.H6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.q1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.q1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.q1.Properties.IsFloatValue = false;
-            this.q1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.q1.Properties.Mask.EditMask = "N00";
-            this.q1.Size = new System.Drawing.Size(62, 20);
-            this.q1.TabIndex = 3;
+            this.H6.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.H6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.H6.Properties.IsFloatValue = false;
+            this.H6.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.H6.Properties.MaskSettings.Set("mask", "N00");
+            this.H6.Size = new System.Drawing.Size(62, 20);
+            this.H6.TabIndex = 3;
             // 
-            // labelControl2
+            // labelPhys
             // 
-            this.labelControl2.Location = new System.Drawing.Point(11, 48);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(88, 13);
-            this.labelControl2.TabIndex = 7;
-            this.labelControl2.Text = "Quantité physique";
+            this.labelPhys.Location = new System.Drawing.Point(11, 73);
+            this.labelPhys.Name = "labelPhys";
+            this.labelPhys.Size = new System.Drawing.Size(88, 13);
+            this.labelPhys.TabIndex = 7;
+            this.labelPhys.Text = "Quantité physique";
             // 
-            // labelControl1
+            // labelrepo
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 76);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(42, 13);
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Réponse";
+            this.labelrepo.Location = new System.Drawing.Point(11, 101);
+            this.labelrepo.Name = "labelrepo";
+            this.labelrepo.Size = new System.Drawing.Size(42, 13);
+            this.labelrepo.TabIndex = 6;
+            this.labelrepo.Text = "Réponse";
             // 
             // s1
             // 
-            this.s1.Location = new System.Drawing.Point(122, 72);
+            this.s1.Location = new System.Drawing.Point(122, 97);
             this.s1.Name = "s1";
             this.s1.Size = new System.Drawing.Size(388, 20);
             this.s1.TabIndex = 2;
@@ -474,7 +491,7 @@
             this.cadre.Controls.Add(this.placement);
             this.cadre.Controls.Add(this.labelUnite);
             this.cadre.Controls.Add(this.labelRef);
-            this.cadre.Location = new System.Drawing.Point(0, 306);
+            this.cadre.Location = new System.Drawing.Point(0, 426);
             this.cadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadre.Name = "cadre";
             this.cadre.Size = new System.Drawing.Size(529, 81);
@@ -553,16 +570,97 @@
             this.labelRef.TabIndex = 1;
             this.labelRef.Text = "Place actuelle";
             // 
+            // groupInterne
+            // 
+            this.groupInterne.Controls.Add(this.H4N);
+            this.groupInterne.Controls.Add(this.Q4);
+            this.groupInterne.Controls.Add(this.labInterne);
+            this.groupInterne.Controls.Add(this.C4);
+            this.groupInterne.Controls.Add(this.H4);
+            this.groupInterne.Controls.Add(this.labelphi);
+            this.groupInterne.Location = new System.Drawing.Point(3, 190);
+            this.groupInterne.Name = "groupInterne";
+            this.groupInterne.Size = new System.Drawing.Size(336, 92);
+            this.groupInterne.TabIndex = 11;
+            // 
+            // labInterne
+            // 
+            this.labInterne.Location = new System.Drawing.Point(10, 48);
+            this.labInterne.Name = "labInterne";
+            this.labInterne.Size = new System.Drawing.Size(79, 13);
+            this.labInterne.TabIndex = 3;
+            this.labInterne.Text = "Quantité interne";
+            // 
+            // H4
+            // 
+            this.H4.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.H4.Location = new System.Drawing.Point(122, 69);
+            this.H4.Name = "H4";
+            this.H4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.H4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.H4.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.H4.Properties.IsFloatValue = false;
+            this.H4.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.H4.Properties.MaskSettings.Set("mask", "N00");
+            this.H4.Size = new System.Drawing.Size(62, 20);
+            this.H4.TabIndex = 3;
+            // 
+            // labelphi
+            // 
+            this.labelphi.Location = new System.Drawing.Point(11, 74);
+            this.labelphi.Name = "labelphi";
+            this.labelphi.Size = new System.Drawing.Size(88, 13);
+            this.labelphi.TabIndex = 7;
+            this.labelphi.Text = "Quantité physique";
+            // 
+            // Q4
+            // 
+            this.Q4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Q4.Appearance.Options.UseFont = true;
+            this.Q4.Location = new System.Drawing.Point(161, 43);
+            this.Q4.Name = "Q4";
+            this.Q4.Size = new System.Drawing.Size(15, 13);
+            this.Q4.TabIndex = 23;
+            this.Q4.Text = "Q4";
+            // 
+            // H6N
+            // 
+            this.H6N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.H6N.Appearance.Options.UseFont = true;
+            this.H6N.Location = new System.Drawing.Point(239, 73);
+            this.H6N.Name = "H6N";
+            this.H6N.Size = new System.Drawing.Size(22, 13);
+            this.H6N.TabIndex = 23;
+            this.H6N.Text = "H6N";
+            // 
+            // H4N
+            // 
+            this.H4N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.H4N.Appearance.Options.UseFont = true;
+            this.H4N.Location = new System.Drawing.Point(241, 72);
+            this.H4N.Name = "H4N";
+            this.H4N.Size = new System.Drawing.Size(22, 13);
+            this.H4N.TabIndex = 25;
+            this.H4N.Text = "H4N";
+            // 
             // XtraFusion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 423);
+            this.ClientSize = new System.Drawing.Size(531, 548);
+            this.Controls.Add(this.cumDispo);
+            this.Controls.Add(this.groupInterne);
             this.Controls.Add(this.cadre);
-            this.Controls.Add(this.ultraGroupBox1);
+            this.Controls.Add(this.ultrainfo);
+            this.Controls.Add(this.labom);
             this.Controls.Add(this.dernier);
             this.Controls.Add(this.tete);
-            this.Controls.Add(this.groupe1);
+            this.Controls.Add(this.groupArriv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFusion.IconOptions.Icon")));
             this.LookAndFeel.SkinName = "Seven Classic";
@@ -570,61 +668,66 @@
             this.Name = "XtraFusion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MODIFICATION";
-            this.ultraGroupBox1.ResumeLayout(false);
-            this.ultraGroupBox1.PerformLayout();
+            this.ultrainfo.ResumeLayout(false);
+            this.ultrainfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).EndInit();
             this.dernier.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkVerif.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPlace.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioMoyen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEntre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrix.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).EndInit();
             this.tete.ResumeLayout(false);
             this.tete.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupe1)).EndInit();
-            this.groupe1.ResumeLayout(false);
-            this.groupe1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.q1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupArriv)).EndInit();
+            this.groupArriv.ResumeLayout(false);
+            this.groupArriv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.H6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadre)).EndInit();
             this.cadre.ResumeLayout(false);
             this.cadre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupInterne)).EndInit();
+            this.groupInterne.ResumeLayout(false);
+            this.groupInterne.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.H4.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox ultraGroupBox1;
-        private DevExpress.XtraEditors.LabelControl q;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.GroupBox ultrainfo;
+        private DevExpress.XtraEditors.LabelControl Q6;
+        private DevExpress.XtraEditors.LabelControl labelarriv;
         private DevExpress.XtraEditors.LabelControl s;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelmsg;
         private DevExpress.XtraEditors.PanelControl dernier;
-        private DevExpress.XtraEditors.CheckEdit checkEntre;
+        private DevExpress.XtraEditors.CheckEdit C5;
         private DevExpress.XtraEditors.CheckEdit checkPrix;
         public DevExpress.XtraEditors.SimpleButton fermer;
         public DevExpress.XtraEditors.SimpleButton creer;
         private DevExpress.XtraEditors.PanelControl tete;
         private DevExpress.XtraEditors.LabelControl d2;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelCompte;
         private DevExpress.XtraEditors.LabelControl d1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labeordr;
         private DevExpress.XtraEditors.LabelControl leNom;
         private DevExpress.XtraEditors.LabelControl codage;
         private DevExpress.XtraEditors.LabelControl codex;
         private DevExpress.XtraEditors.LabelControl nombre;
         private DevExpress.XtraEditors.LabelControl labelNums;
-        private DevExpress.XtraEditors.GroupControl groupe1;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.SpinEdit q1;
+        private DevExpress.XtraEditors.GroupControl groupArriv;
+        private DevExpress.XtraEditors.LabelControl labeltransp;
+        private DevExpress.XtraEditors.LabelControl labdatariv;
+        private DevExpress.XtraEditors.SpinEdit H6;
         private DevExpress.XtraEditors.TextEdit s1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelPhys;
+        private DevExpress.XtraEditors.LabelControl labelrepo;
         private DevExpress.XtraEditors.PanelControl cadre;
         private DevExpress.XtraEditors.LabelControl distNewPlace;
         private DevExpress.XtraEditors.LabelControl newLabel;
@@ -638,8 +741,15 @@
         private DevExpress.XtraEditors.LabelControl cumDispo;
         private DevExpress.XtraEditors.LabelControl labom;
         private DevExpress.XtraEditors.CheckEdit checkPrior;
-        private DevExpress.XtraEditors.CheckEdit radioMoyen;
+        private DevExpress.XtraEditors.CheckEdit C4;
         private DevExpress.XtraEditors.CheckEdit checkVerif;
         private DevExpress.XtraEditors.CheckEdit checkPlace;
+        private DevExpress.XtraEditors.GroupControl groupInterne;
+        private DevExpress.XtraEditors.LabelControl labInterne;
+        private DevExpress.XtraEditors.SpinEdit H4;
+        private DevExpress.XtraEditors.LabelControl labelphi;
+        private DevExpress.XtraEditors.LabelControl Q4;
+        private DevExpress.XtraEditors.LabelControl H6N;
+        private DevExpress.XtraEditors.LabelControl H4N;
     }
 }

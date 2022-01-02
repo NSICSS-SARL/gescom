@@ -10,7 +10,12 @@
       "ProjectGuid": "f8a2e6b3-bff3-4781-8e09-cb01b67d6479",
       "DisplayName": "gescom.data",
       "ColorIndex": 1
+    },
+    "a9b6ae1f-68ed-4f3b-9fc1-a00e1e7c98cd": {
+      "ProjectGuid": "a9b6ae1f-68ed-4f3b-9fc1-a00e1e7c98cd",
+      "DisplayName": "GBASE",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

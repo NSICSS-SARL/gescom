@@ -657,8 +657,8 @@
             // 
             // coLumn
             // 
-            this.coLumn.AppearanceCell.BackColor = System.Drawing.Color.Azure;
-            this.coLumn.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.coLumn.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.coLumn.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coLumn.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.coLumn.AppearanceCell.Options.UseBackColor = true;
             this.coLumn.AppearanceCell.Options.UseFont = true;

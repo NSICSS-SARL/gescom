@@ -71,17 +71,10 @@ namespace gescom.data.Models
         public static IEnumerable<OperationModel> GetCart(PersonModel item, long wid)
         {
             var result = new List<OperationModel>();
-            foreach (var element in GetCart(item))
-            {
-                var duo = ArticleHelpers.GetDuo(element.Ndx);
-                if(duo.L == 1 || duo.L == null)
-                {
-                    element.Wid = wid;
+            foreach (var element in GetCart(item).Where(p=>p.L == 1 || p.L == null))
+            {  element.Wid = wid;
                     result.Add(element);
-                }
-              
             }
-
             return result;
         }
 
@@ -131,16 +124,14 @@ namespace gescom.data.Models
         {
             var result = new List<OperationModel>();
             var context = new DataGescomDataContext();
-            var liste = context.OperationEntries.ToList();
+            var liste = context.OperationEntries.ToList().Where(p =>p.L > 0);
             foreach (var item in liste)
             {
-                var d = ArticleHelpers.GetDuo(item.Ndx);
-                if(d.L > 0)
-                {
+                
                     var model = new OperationModel();
                     model.Copy(item);
                     result.Add(model);
-                }               
+                            
             }
             return result;
         }
@@ -919,7 +910,24 @@ namespace gescom.data.Models
 
             QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
+            if(Qvol is null)
+            {
+                Qvol = 0;
+            }
+            if (Vvol is null)
+            {
+                Vvol = 0;
+            }
+            if (Qdefect is null)
+            {
+                Qdefect = 0;
+            }
+            if (Vdefect is null)
+            {
+                Vdefect = 0;
+            }
             Qrebut = (float)(Qvol + Qdefect);
+
             Vrebut = (float)(Vvol + Vdefect);
             IdCat = (long) item.IdCat;
             if (item.IdUnit == null) item.IdUnit = 20;

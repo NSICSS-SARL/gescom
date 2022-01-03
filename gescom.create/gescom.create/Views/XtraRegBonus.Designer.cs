@@ -120,6 +120,10 @@
             this.prodRq = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.distCadre = new DevExpress.XtraEditors.PanelControl();
+            this.placeBox = new System.Windows.Forms.GroupBox();
+            this.placeFini = new System.Windows.Forms.RadioButton();
+            this.placeCours = new System.Windows.Forms.RadioButton();
+            this.placeNorme = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.secondPlace = new DevExpress.XtraEditors.TextEdit();
             this.distNewPlace = new DevExpress.XtraEditors.LabelControl();
@@ -139,10 +143,6 @@
             this.verifFini = new System.Windows.Forms.RadioButton();
             this.verifCours = new System.Windows.Forms.RadioButton();
             this.verifNorme = new System.Windows.Forms.RadioButton();
-            this.placeBox = new System.Windows.Forms.GroupBox();
-            this.placeFini = new System.Windows.Forms.RadioButton();
-            this.placeCours = new System.Windows.Forms.RadioButton();
-            this.placeNorme = new System.Windows.Forms.RadioButton();
             this.checkPrior = new DevExpress.XtraEditors.CheckEdit();
             this.reponse = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -203,6 +203,7 @@
             this.Q2 = new DevExpress.XtraEditors.TextEdit();
             this.L1 = new DevExpress.XtraEditors.TextEdit();
             this.D1 = new DevExpress.XtraEditors.DateEdit();
+            this.labelPass = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
@@ -249,12 +250,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodRq.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distCadre)).BeginInit();
             this.distCadre.SuspendLayout();
+            this.placeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).BeginInit();
             this.dernier.SuspendLayout();
             this.prixBox.SuspendLayout();
             this.verifBox.SuspendLayout();
-            this.placeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1.Properties)).BeginInit();
             this.colorBox.SuspendLayout();
@@ -1106,6 +1107,7 @@
             // prodCadre
             // 
             this.prodCadre.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.prodCadre.Controls.Add(this.labelPass);
             this.prodCadre.Controls.Add(this.katalog);
             this.prodCadre.Controls.Add(this.distLabelObs);
             this.prodCadre.Controls.Add(this.labelControl13);
@@ -1378,6 +1380,54 @@
             this.distCadre.Size = new System.Drawing.Size(398, 137);
             this.distCadre.TabIndex = 6;
             // 
+            // placeBox
+            // 
+            this.placeBox.Controls.Add(this.placeFini);
+            this.placeBox.Controls.Add(this.placeCours);
+            this.placeBox.Controls.Add(this.placeNorme);
+            this.placeBox.Location = new System.Drawing.Point(13, 80);
+            this.placeBox.Name = "placeBox";
+            this.placeBox.Size = new System.Drawing.Size(168, 48);
+            this.placeBox.TabIndex = 7;
+            this.placeBox.TabStop = false;
+            this.placeBox.Text = "Placer";
+            // 
+            // placeFini
+            // 
+            this.placeFini.AutoSize = true;
+            this.placeFini.ForeColor = System.Drawing.Color.Black;
+            this.placeFini.Location = new System.Drawing.Point(125, 20);
+            this.placeFini.Name = "placeFini";
+            this.placeFini.Size = new System.Drawing.Size(41, 17);
+            this.placeFini.TabIndex = 2;
+            this.placeFini.TabStop = true;
+            this.placeFini.Text = "Fini";
+            this.placeFini.UseVisualStyleBackColor = true;
+            // 
+            // placeCours
+            // 
+            this.placeCours.AutoSize = true;
+            this.placeCours.ForeColor = System.Drawing.Color.Black;
+            this.placeCours.Location = new System.Drawing.Point(60, 20);
+            this.placeCours.Name = "placeCours";
+            this.placeCours.Size = new System.Drawing.Size(66, 17);
+            this.placeCours.TabIndex = 1;
+            this.placeCours.TabStop = true;
+            this.placeCours.Text = "En cours";
+            this.placeCours.UseVisualStyleBackColor = true;
+            // 
+            // placeNorme
+            // 
+            this.placeNorme.AutoSize = true;
+            this.placeNorme.ForeColor = System.Drawing.Color.Black;
+            this.placeNorme.Location = new System.Drawing.Point(5, 20);
+            this.placeNorme.Name = "placeNorme";
+            this.placeNorme.Size = new System.Drawing.Size(42, 17);
+            this.placeNorme.TabIndex = 0;
+            this.placeNorme.TabStop = true;
+            this.placeNorme.Text = "R.S";
+            this.placeNorme.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1592,54 +1642,6 @@
             this.verifNorme.TabStop = true;
             this.verifNorme.Text = "R.S";
             this.verifNorme.UseVisualStyleBackColor = true;
-            // 
-            // placeBox
-            // 
-            this.placeBox.Controls.Add(this.placeFini);
-            this.placeBox.Controls.Add(this.placeCours);
-            this.placeBox.Controls.Add(this.placeNorme);
-            this.placeBox.Location = new System.Drawing.Point(13, 80);
-            this.placeBox.Name = "placeBox";
-            this.placeBox.Size = new System.Drawing.Size(168, 48);
-            this.placeBox.TabIndex = 7;
-            this.placeBox.TabStop = false;
-            this.placeBox.Text = "Placer";
-            // 
-            // placeFini
-            // 
-            this.placeFini.AutoSize = true;
-            this.placeFini.ForeColor = System.Drawing.Color.Black;
-            this.placeFini.Location = new System.Drawing.Point(125, 20);
-            this.placeFini.Name = "placeFini";
-            this.placeFini.Size = new System.Drawing.Size(41, 17);
-            this.placeFini.TabIndex = 2;
-            this.placeFini.TabStop = true;
-            this.placeFini.Text = "Fini";
-            this.placeFini.UseVisualStyleBackColor = true;
-            // 
-            // placeCours
-            // 
-            this.placeCours.AutoSize = true;
-            this.placeCours.ForeColor = System.Drawing.Color.Black;
-            this.placeCours.Location = new System.Drawing.Point(60, 20);
-            this.placeCours.Name = "placeCours";
-            this.placeCours.Size = new System.Drawing.Size(66, 17);
-            this.placeCours.TabIndex = 1;
-            this.placeCours.TabStop = true;
-            this.placeCours.Text = "En cours";
-            this.placeCours.UseVisualStyleBackColor = true;
-            // 
-            // placeNorme
-            // 
-            this.placeNorme.AutoSize = true;
-            this.placeNorme.ForeColor = System.Drawing.Color.Black;
-            this.placeNorme.Location = new System.Drawing.Point(5, 20);
-            this.placeNorme.Name = "placeNorme";
-            this.placeNorme.Size = new System.Drawing.Size(42, 17);
-            this.placeNorme.TabIndex = 0;
-            this.placeNorme.TabStop = true;
-            this.placeNorme.Text = "R.S";
-            this.placeNorme.UseVisualStyleBackColor = true;
             // 
             // checkPrior
             // 
@@ -2299,6 +2301,14 @@
             this.D1.Size = new System.Drawing.Size(90, 20);
             this.D1.TabIndex = 15;
             // 
+            // labelPass
+            // 
+            this.labelPass.Location = new System.Drawing.Point(14, 77);
+            this.labelPass.Name = "labelPass";
+            this.labelPass.Size = new System.Drawing.Size(25, 13);
+            this.labelPass.TabIndex = 20;
+            this.labelPass.Text = "PASS";
+            // 
             // XtraRegBonus
             // 
             this.AcceptButton = this.creer;
@@ -2388,6 +2398,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.distCadre)).EndInit();
             this.distCadre.ResumeLayout(false);
             this.distCadre.PerformLayout();
+            this.placeBox.ResumeLayout(false);
+            this.placeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondPlace.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).EndInit();
             this.dernier.ResumeLayout(false);
@@ -2395,8 +2407,6 @@
             this.prixBox.PerformLayout();
             this.verifBox.ResumeLayout(false);
             this.verifBox.PerformLayout();
-            this.placeBox.ResumeLayout(false);
-            this.placeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1.Properties)).EndInit();
             this.colorBox.ResumeLayout(false);
@@ -2623,5 +2633,6 @@
         private DevExpress.XtraEditors.DateEdit D5;
         private DevExpress.XtraEditors.DateEdit D7;
         private DevExpress.XtraEditors.DateEdit D6;
+        private DevExpress.XtraEditors.LabelControl labelPass;
     }
 }

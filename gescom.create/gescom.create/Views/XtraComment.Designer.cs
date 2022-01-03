@@ -288,7 +288,7 @@
             this.colEst.Name = "colEst";
             this.colEst.OptionsColumn.AllowFocus = false;
             this.colEst.Visible = true;
-            this.colEst.VisibleIndex = 37;
+            this.colEst.VisibleIndex = 47;
             // 
             // colPerv
             // 
@@ -301,7 +301,7 @@
             this.colPerv.Name = "colPerv";
             this.colPerv.OptionsColumn.AllowFocus = false;
             this.colPerv.Visible = true;
-            this.colPerv.VisibleIndex = 43;
+            this.colPerv.VisibleIndex = 41;
             // 
             // OtherInfo
             // 
@@ -311,7 +311,7 @@
             this.OtherInfo.FieldName = "OtherInfo";
             this.OtherInfo.Name = "OtherInfo";
             this.OtherInfo.Visible = true;
-            this.OtherInfo.VisibleIndex = 51;
+            this.OtherInfo.VisibleIndex = 43;
             this.OtherInfo.Width = 83;
             // 
             // colMag
@@ -322,7 +322,7 @@
             this.colMag.FieldName = "Magpref";
             this.colMag.Name = "colMag";
             this.colMag.Visible = true;
-            this.colMag.VisibleIndex = 40;
+            this.colMag.VisibleIndex = 37;
             this.colMag.Width = 106;
             // 
             // colCa
@@ -376,7 +376,7 @@
             this.colUF.FieldName = "UNT_FRNS";
             this.colUF.Name = "colUF";
             this.colUF.Visible = true;
-            this.colUF.VisibleIndex = 42;
+            this.colUF.VisibleIndex = 40;
             // 
             // colDate
             // 
@@ -397,7 +397,7 @@
             this.colMessage.FieldName = "S1";
             this.colMessage.Name = "colMessage";
             this.colMessage.Visible = true;
-            this.colMessage.VisibleIndex = 33;
+            this.colMessage.VisibleIndex = 34;
             this.colMessage.Width = 154;
             // 
             // colReponse
@@ -408,7 +408,7 @@
             this.colReponse.FieldName = "S2";
             this.colReponse.Name = "colReponse";
             this.colReponse.Visible = true;
-            this.colReponse.VisibleIndex = 39;
+            this.colReponse.VisibleIndex = 35;
             this.colReponse.Width = 135;
             // 
             // colComptage
@@ -421,7 +421,7 @@
             this.colComptage.FieldName = "Q6";
             this.colComptage.Name = "colComptage";
             this.colComptage.Visible = true;
-            this.colComptage.VisibleIndex = 38;
+            this.colComptage.VisibleIndex = 28;
             // 
             // colB1
             // 
@@ -472,7 +472,7 @@
             this.colObs.FieldName = "Observation";
             this.colObs.Name = "colObs";
             this.colObs.Visible = true;
-            this.colObs.VisibleIndex = 46;
+            this.colObs.VisibleIndex = 44;
             // 
             // gridComment
             // 
@@ -506,7 +506,7 @@
             this.colFrName.FieldName = "Nomfrns";
             this.colFrName.Name = "colFrName";
             this.colFrName.Visible = true;
-            this.colFrName.VisibleIndex = 41;
+            this.colFrName.VisibleIndex = 38;
             // 
             // colVoir
             // 
@@ -518,7 +518,7 @@
             this.colVoir.FieldName = "VoirPrix";
             this.colVoir.Name = "colVoir";
             this.colVoir.Visible = true;
-            this.colVoir.VisibleIndex = 26;
+            this.colVoir.VisibleIndex = 25;
             // 
             // colPrice
             // 
@@ -559,7 +559,7 @@
             this.colCMD.OptionsColumn.AllowFocus = false;
             this.colCMD.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colCMD.Visible = true;
-            this.colCMD.VisibleIndex = 47;
+            this.colCMD.VisibleIndex = 48;
             // 
             // colTT
             // 
@@ -575,7 +575,7 @@
             this.colTT.OptionsColumn.AllowEdit = false;
             this.colTT.OptionsColumn.AllowFocus = false;
             this.colTT.Visible = true;
-            this.colTT.VisibleIndex = 24;
+            this.colTT.VisibleIndex = 23;
             // 
             // colRUPT
             // 
@@ -591,7 +591,7 @@
             this.colRUPT.OptionsColumn.AllowEdit = false;
             this.colRUPT.OptionsColumn.AllowFocus = false;
             this.colRUPT.Visible = true;
-            this.colRUPT.VisibleIndex = 49;
+            this.colRUPT.VisibleIndex = 50;
             // 
             // colSTOP
             // 
@@ -607,7 +607,7 @@
             this.colSTOP.OptionsColumn.AllowEdit = false;
             this.colSTOP.OptionsColumn.AllowFocus = false;
             this.colSTOP.Visible = true;
-            this.colSTOP.VisibleIndex = 50;
+            this.colSTOP.VisibleIndex = 51;
             // 
             // Familier
             // 
@@ -637,7 +637,7 @@
             this.cataCol.FieldName = "CATALOG";
             this.cataCol.Name = "cataCol";
             this.cataCol.Visible = true;
-            this.cataCol.VisibleIndex = 23;
+            this.cataCol.VisibleIndex = 46;
             // 
             // colMtestime
             // 
@@ -653,7 +653,7 @@
             this.colMtestime.UnboundExpression = "[PEstime] * [QEstime]";
             this.colMtestime.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.colMtestime.Visible = true;
-            this.colMtestime.VisibleIndex = 44;
+            this.colMtestime.VisibleIndex = 42;
             // 
             // coLumn
             // 
@@ -696,7 +696,7 @@
             this.gridColCheck.FieldName = "CheckCommande";
             this.gridColCheck.Name = "gridColCheck";
             this.gridColCheck.Visible = true;
-            this.gridColCheck.VisibleIndex = 48;
+            this.gridColCheck.VisibleIndex = 49;
             this.gridColCheck.Width = 53;
             // 
             // colPlacer
@@ -707,7 +707,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 28;
+            this.colPlacer.VisibleIndex = 26;
             // 
             // colVerif
             // 
@@ -717,7 +717,7 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 25;
+            this.colVerif.VisibleIndex = 24;
             // 
             // colState
             // 
@@ -825,11 +825,11 @@
             // 
             this.selectCMD.AppearanceHeader.Options.UseTextOptions = true;
             this.selectCMD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.selectCMD.Caption = "Select. CMD";
+            this.selectCMD.Caption = "Select CMD";
             this.selectCMD.FieldName = "Q1N";
             this.selectCMD.Name = "selectCMD";
             this.selectCMD.Visible = true;
-            this.selectCMD.VisibleIndex = 34;
+            this.selectCMD.VisibleIndex = 39;
             // 
             // cmdEnvoye
             // 
@@ -839,7 +839,7 @@
             this.cmdEnvoye.FieldName = "Q2N";
             this.cmdEnvoye.Name = "cmdEnvoye";
             this.cmdEnvoye.Visible = true;
-            this.cmdEnvoye.VisibleIndex = 35;
+            this.cmdEnvoye.VisibleIndex = 30;
             // 
             // factFRS
             // 
@@ -849,7 +849,7 @@
             this.factFRS.FieldName = "Q3";
             this.factFRS.Name = "factFRS";
             this.factFRS.Visible = true;
-            this.factFRS.VisibleIndex = 36;
+            this.factFRS.VisibleIndex = 32;
             // 
             // colEnfact
             // 
@@ -859,7 +859,7 @@
             this.colEnfact.FieldName = "CMD";
             this.colEnfact.Name = "colEnfact";
             this.colEnfact.Visible = true;
-            this.colEnfact.VisibleIndex = 29;
+            this.colEnfact.VisibleIndex = 33;
             // 
             // selectcmds
             // 
@@ -869,7 +869,7 @@
             this.selectcmds.FieldName = "C1N";
             this.selectcmds.Name = "selectcmds";
             this.selectcmds.Visible = true;
-            this.selectcmds.VisibleIndex = 30;
+            this.selectcmds.VisibleIndex = 36;
             // 
             // cmmdenvoi
             // 
@@ -881,7 +881,7 @@
             this.cmmdenvoi.FieldName = "C2";
             this.cmmdenvoi.Name = "cmmdenvoi";
             this.cmmdenvoi.Visible = true;
-            this.cmmdenvoi.VisibleIndex = 31;
+            this.cmmdenvoi.VisibleIndex = 29;
             // 
             // factfrns
             // 
@@ -893,7 +893,7 @@
             this.factfrns.FieldName = "C3";
             this.factfrns.Name = "factfrns";
             this.factfrns.Visible = true;
-            this.factfrns.VisibleIndex = 32;
+            this.factfrns.VisibleIndex = 31;
             // 
             // myNum
             // 

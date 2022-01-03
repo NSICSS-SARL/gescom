@@ -1240,11 +1240,29 @@ namespace gescom.data.Models
             IdPlace = StdCalcul.DoubleToSpaceFormat((float)model.IdPlace);
             S1 = model.S1;
             S2 = model.S2;
-            Q = StdCalcul.DoubleToSpaceFormat(model.Q);
-            Q1 = StdCalcul.DoubleToSpaceFormat(model.Q1);
-            Q2 = StdCalcul.DoubleToSpaceFormat(model.Q2);
-            D1 = model.D1;
-            D2 = model.D2;
+            if (model.Q is null)
+            {
+                model.Q = 0;
+            }
+            if (model.Q1 is null)
+            {
+                model.Q1 = 0;
+            }
+            if (model.Q2 is null)
+            {
+                model.Q2 = 0;
+            }
+            Q = StdCalcul.DoubleToSpaceFormat((float)model.Q);
+            Q1 = StdCalcul.DoubleToSpaceFormat((float)model.Q1);
+            Q2 = StdCalcul.DoubleToSpaceFormat((float)model.Q2);
+            if (model.D1 != null)
+            {
+                D1 = (DateTime)model.D1;
+            }
+            if (model.D2 != null)
+            {
+                D2 = (DateTime)model.D2;
+            }
             B1 = model.B1;
             B2 = model.B2;
             Cview = model.Cview;

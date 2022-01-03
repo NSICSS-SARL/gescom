@@ -72,4 +72,3 @@ C:\Users\PC\source\repos\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.pd
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.csproj.CoreCompileInputs.cache
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.dll
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.pdb
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.data\gescom.data\obj\Debug\gescom.data.csproj.AssemblyReference.cache

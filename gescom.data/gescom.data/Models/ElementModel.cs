@@ -181,8 +181,16 @@ namespace gescom.data.Models
             Unite = model.Unite;
             Nom = model.Designation;
             QStock = (float)model.QStock;
-            Q1 = model.Q1;
-            Q2 = model.Q2;
+            if(model.Q1 is null)
+            {
+                model.Q1 = 0;
+            }
+            Q1 = (float)model.Q1;
+            if (model.Q2 is null)
+            {
+                model.Q2 = 0;
+            }
+            Q2 = (float)model.Q2;
             Wid = model.Wid;
             Rx = model.Rx;
             Forme = (long)model.Forme;

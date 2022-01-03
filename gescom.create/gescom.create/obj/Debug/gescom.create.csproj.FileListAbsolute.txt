@@ -564,3 +564,4 @@ C:\glite\Bin\gescom.create.pdb
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.CopyComplete
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.dll
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.pdb
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.AssemblyReference.cache

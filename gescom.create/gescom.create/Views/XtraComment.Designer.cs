@@ -669,17 +669,17 @@
             this.coLumn.AppearanceHeader.Options.UseTextOptions = true;
             this.coLumn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.coLumn.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.coLumn.Caption = "MSQ";
+            this.coLumn.Caption = "MASQUAGE";
             this.coLumn.DisplayFormat.FormatString = "n0";
             this.coLumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.coLumn.FieldName = "L";
+            this.coLumn.FieldName = "Masquage";
             this.coLumn.Name = "coLumn";
             this.coLumn.OptionsColumn.AllowEdit = false;
             this.coLumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "L", "{0}")});
             this.coLumn.Visible = true;
             this.coLumn.VisibleIndex = 4;
-            this.coLumn.Width = 41;
+            this.coLumn.Width = 93;
             // 
             // gridColCheck
             // 

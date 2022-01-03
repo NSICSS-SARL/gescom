@@ -15,7 +15,12 @@
       "ProjectGuid": "a9b6ae1f-68ed-4f3b-9fc1-a00e1e7c98cd",
       "DisplayName": "GBASE",
       "ColorIndex": 2
+    },
+    "aa27e95f-d1d4-411e-a1c4-ba59ae51527b": {
+      "ProjectGuid": "aa27e95f-d1d4-411e-a1c4-ba59ae51527b",
+      "DisplayName": "GOPER",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

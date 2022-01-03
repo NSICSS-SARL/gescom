@@ -20,6 +20,13 @@ namespace gescom.data.Models
             }
         }
 
+        public static List<DuoItem> GetDuos()
+        {
+            var reptory = new DuoCart();
+            return reptory.Duos;
+        }
+
+
         //ajouter quantité stock dans table article.
         public static void Add(long id, float quantite)
         {

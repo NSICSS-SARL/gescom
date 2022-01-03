@@ -680,7 +680,7 @@ namespace gescom.data.Models
     {
         public void Copy(OperationItem item)
         {
-            Id = item.Ndx;
+            Id = (long)item.Ndx;
             Code = item.RCode;
             Reference = item.Refers;
             Nom = item.Designation;

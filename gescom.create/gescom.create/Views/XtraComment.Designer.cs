@@ -51,7 +51,6 @@
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMessage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReponse = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colQte = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colComptage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colB1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colB2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,6 +84,13 @@
             this.colFourniss = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridCMD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQ5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.selectCMD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdEnvoye = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.factFRS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEnfact = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.selectcmds = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmmdenvoi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.factfrns = new DevExpress.XtraGrid.Columns.GridColumn();
             this.myNum = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
@@ -148,7 +154,6 @@
             this.colDate,
             this.colMessage,
             this.colReponse,
-            this.colQte,
             this.colComptage,
             this.colB1,
             this.colB2,
@@ -181,7 +186,14 @@
             this.colComm,
             this.colFourniss,
             this.gridCMD,
-            this.colQ5});
+            this.colQ5,
+            this.selectCMD,
+            this.cmdEnvoye,
+            this.factFRS,
+            this.colEnfact,
+            this.selectcmds,
+            this.cmmdenvoi,
+            this.factfrns});
             this.grilleView.GridControl = this.gridActions;
             this.grilleView.Name = "grilleView";
             this.grilleView.OptionsFilter.AllowFilterEditor = false;
@@ -202,13 +214,13 @@
             this.colCode.Caption = "CODE";
             this.colCode.DisplayFormat.FormatString = "n0";
             this.colCode.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colCode.FieldName = "SupCode";
+            this.colCode.FieldName = "NewCode";
             this.colCode.Name = "colCode";
             this.colCode.OptionsColumn.FixedWidth = true;
             this.colCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Codage", "{0:n0}")});
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 8;
+            this.colCode.VisibleIndex = 9;
             // 
             // colPlace
             // 
@@ -218,7 +230,7 @@
             this.colPlace.FieldName = "Place";
             this.colPlace.Name = "colPlace";
             this.colPlace.Visible = true;
-            this.colPlace.VisibleIndex = 9;
+            this.colPlace.VisibleIndex = 10;
             this.colPlace.Width = 100;
             // 
             // colName
@@ -229,7 +241,7 @@
             this.colName.FieldName = "Designation";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 10;
+            this.colName.VisibleIndex = 11;
             this.colName.Width = 300;
             // 
             // colPrix
@@ -242,7 +254,7 @@
             this.colPrix.FieldName = "PDetail";
             this.colPrix.Name = "colPrix";
             this.colPrix.Visible = true;
-            this.colPrix.VisibleIndex = 13;
+            this.colPrix.VisibleIndex = 14;
             // 
             // colStock
             // 
@@ -262,21 +274,21 @@
             this.colStock.OptionsColumn.AllowFocus = false;
             this.colStock.OptionsColumn.FixedWidth = true;
             this.colStock.Visible = true;
-            this.colStock.VisibleIndex = 16;
+            this.colStock.VisibleIndex = 17;
             this.colStock.Width = 59;
             // 
             // colEst
             // 
             this.colEst.AppearanceHeader.Options.UseTextOptions = true;
             this.colEst.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEst.Caption = "QT ESTIME";
+            this.colEst.Caption = "Ent Fact";
             this.colEst.DisplayFormat.FormatString = "n0";
             this.colEst.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colEst.FieldName = "QEstime";
+            this.colEst.FieldName = "Q1";
             this.colEst.Name = "colEst";
             this.colEst.OptionsColumn.AllowFocus = false;
             this.colEst.Visible = true;
-            this.colEst.VisibleIndex = 30;
+            this.colEst.VisibleIndex = 37;
             // 
             // colPerv
             // 
@@ -289,7 +301,7 @@
             this.colPerv.Name = "colPerv";
             this.colPerv.OptionsColumn.AllowFocus = false;
             this.colPerv.Visible = true;
-            this.colPerv.VisibleIndex = 37;
+            this.colPerv.VisibleIndex = 43;
             // 
             // OtherInfo
             // 
@@ -299,7 +311,7 @@
             this.OtherInfo.FieldName = "OtherInfo";
             this.OtherInfo.Name = "OtherInfo";
             this.OtherInfo.Visible = true;
-            this.OtherInfo.VisibleIndex = 45;
+            this.OtherInfo.VisibleIndex = 51;
             this.OtherInfo.Width = 83;
             // 
             // colMag
@@ -310,7 +322,7 @@
             this.colMag.FieldName = "Magpref";
             this.colMag.Name = "colMag";
             this.colMag.Visible = true;
-            this.colMag.VisibleIndex = 34;
+            this.colMag.VisibleIndex = 40;
             this.colMag.Width = 106;
             // 
             // colCa
@@ -326,7 +338,7 @@
             this.colCa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qachat", "{0:n0}")});
             this.colCa.Visible = true;
-            this.colCa.VisibleIndex = 14;
+            this.colCa.VisibleIndex = 15;
             this.colCa.Width = 82;
             // 
             // colCv
@@ -342,7 +354,7 @@
             this.colCv.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qvente", "{0:n0}")});
             this.colCv.Visible = true;
-            this.colCv.VisibleIndex = 15;
+            this.colCv.VisibleIndex = 16;
             this.colCv.Width = 85;
             // 
             // colUnt
@@ -353,7 +365,7 @@
             this.colUnt.FieldName = "Unite";
             this.colUnt.Name = "colUnt";
             this.colUnt.Visible = true;
-            this.colUnt.VisibleIndex = 17;
+            this.colUnt.VisibleIndex = 18;
             this.colUnt.Width = 60;
             // 
             // colUF
@@ -364,7 +376,7 @@
             this.colUF.FieldName = "UNT_FRNS";
             this.colUF.Name = "colUF";
             this.colUF.Visible = true;
-            this.colUF.VisibleIndex = 36;
+            this.colUF.VisibleIndex = 42;
             // 
             // colDate
             // 
@@ -385,7 +397,7 @@
             this.colMessage.FieldName = "S1";
             this.colMessage.Name = "colMessage";
             this.colMessage.Visible = true;
-            this.colMessage.VisibleIndex = 29;
+            this.colMessage.VisibleIndex = 33;
             this.colMessage.Width = 154;
             // 
             // colReponse
@@ -396,32 +408,20 @@
             this.colReponse.FieldName = "S2";
             this.colReponse.Name = "colReponse";
             this.colReponse.Visible = true;
-            this.colReponse.VisibleIndex = 33;
+            this.colReponse.VisibleIndex = 39;
             this.colReponse.Width = 135;
-            // 
-            // colQte
-            // 
-            this.colQte.AppearanceHeader.Options.UseTextOptions = true;
-            this.colQte.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colQte.Caption = "CMD-Envoyé";
-            this.colQte.DisplayFormat.FormatString = "n0";
-            this.colQte.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colQte.FieldName = "Q1";
-            this.colQte.Name = "colQte";
-            this.colQte.Visible = true;
-            this.colQte.VisibleIndex = 31;
             // 
             // colComptage
             // 
             this.colComptage.AppearanceHeader.Options.UseTextOptions = true;
             this.colComptage.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colComptage.Caption = "Qté Entrée";
+            this.colComptage.Caption = "Ent interne";
             this.colComptage.DisplayFormat.FormatString = "n0";
             this.colComptage.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colComptage.FieldName = "Q2";
+            this.colComptage.FieldName = "Q6";
             this.colComptage.Name = "colComptage";
             this.colComptage.Visible = true;
-            this.colComptage.VisibleIndex = 32;
+            this.colComptage.VisibleIndex = 38;
             // 
             // colB1
             // 
@@ -441,7 +441,7 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 46;
+            this.colB2.VisibleIndex = 52;
             this.colB2.Width = 91;
             // 
             // colRem
@@ -472,7 +472,7 @@
             this.colObs.FieldName = "Observation";
             this.colObs.Name = "colObs";
             this.colObs.Visible = true;
-            this.colObs.VisibleIndex = 40;
+            this.colObs.VisibleIndex = 46;
             // 
             // gridComment
             // 
@@ -486,7 +486,7 @@
             this.gridComment.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Vstock", "TOTAL={0:n0}")});
             this.gridComment.Visible = true;
-            this.gridComment.VisibleIndex = 49;
+            this.gridComment.VisibleIndex = 55;
             // 
             // gridLocal
             // 
@@ -496,7 +496,7 @@
             this.gridLocal.FieldName = "Localite";
             this.gridLocal.Name = "gridLocal";
             this.gridLocal.Visible = true;
-            this.gridLocal.VisibleIndex = 48;
+            this.gridLocal.VisibleIndex = 54;
             // 
             // colFrName
             // 
@@ -506,7 +506,7 @@
             this.colFrName.FieldName = "Nomfrns";
             this.colFrName.Name = "colFrName";
             this.colFrName.Visible = true;
-            this.colFrName.VisibleIndex = 35;
+            this.colFrName.VisibleIndex = 41;
             // 
             // colVoir
             // 
@@ -526,8 +526,8 @@
             this.colPrice.AppearanceCell.Options.UseBackColor = true;
             this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
             this.colPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colPrice.Caption = "A ENTRER";
-            this.colPrice.FieldName = "VoirEntre";
+            this.colPrice.Caption = "Ent. interne";
+            this.colPrice.FieldName = "C5";
             this.colPrice.Name = "colPrice";
             this.colPrice.Visible = true;
             this.colPrice.VisibleIndex = 27;
@@ -542,7 +542,7 @@
             this.colopAch.FieldName = "Pachat";
             this.colopAch.Name = "colopAch";
             this.colopAch.Visible = true;
-            this.colopAch.VisibleIndex = 12;
+            this.colopAch.VisibleIndex = 13;
             // 
             // colCMD
             // 
@@ -559,7 +559,7 @@
             this.colCMD.OptionsColumn.AllowFocus = false;
             this.colCMD.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colCMD.Visible = true;
-            this.colCMD.VisibleIndex = 41;
+            this.colCMD.VisibleIndex = 47;
             // 
             // colTT
             // 
@@ -591,7 +591,7 @@
             this.colRUPT.OptionsColumn.AllowEdit = false;
             this.colRUPT.OptionsColumn.AllowFocus = false;
             this.colRUPT.Visible = true;
-            this.colRUPT.VisibleIndex = 43;
+            this.colRUPT.VisibleIndex = 49;
             // 
             // colSTOP
             // 
@@ -607,7 +607,7 @@
             this.colSTOP.OptionsColumn.AllowEdit = false;
             this.colSTOP.OptionsColumn.AllowFocus = false;
             this.colSTOP.Visible = true;
-            this.colSTOP.VisibleIndex = 44;
+            this.colSTOP.VisibleIndex = 50;
             // 
             // Familier
             // 
@@ -617,7 +617,7 @@
             this.Familier.FieldName = "Categorie";
             this.Familier.Name = "Familier";
             this.Familier.Visible = true;
-            this.Familier.VisibleIndex = 47;
+            this.Familier.VisibleIndex = 53;
             // 
             // RefCol
             // 
@@ -627,7 +627,7 @@
             this.RefCol.FieldName = "Refuse";
             this.RefCol.Name = "RefCol";
             this.RefCol.Visible = true;
-            this.RefCol.VisibleIndex = 39;
+            this.RefCol.VisibleIndex = 45;
             // 
             // cataCol
             // 
@@ -653,7 +653,7 @@
             this.colMtestime.UnboundExpression = "[PEstime] * [QEstime]";
             this.colMtestime.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.colMtestime.Visible = true;
-            this.colMtestime.VisibleIndex = 38;
+            this.colMtestime.VisibleIndex = 44;
             // 
             // coLumn
             // 
@@ -696,7 +696,7 @@
             this.gridColCheck.FieldName = "CheckCommande";
             this.gridColCheck.Name = "gridColCheck";
             this.gridColCheck.Visible = true;
-            this.gridColCheck.VisibleIndex = 42;
+            this.gridColCheck.VisibleIndex = 48;
             this.gridColCheck.Width = 53;
             // 
             // colPlacer
@@ -744,7 +744,7 @@
             this.colVers.FieldName = "Nomvers";
             this.colVers.Name = "colVers";
             this.colVers.Visible = true;
-            this.colVers.VisibleIndex = 11;
+            this.colVers.VisibleIndex = 12;
             // 
             // colSign
             // 
@@ -805,12 +805,12 @@
             // 
             // gridCMD
             // 
-            this.gridCMD.Caption = "Ent-H";
+            this.gridCMD.Caption = "Ent Fact";
             this.gridCMD.FieldName = "CMD";
             this.gridCMD.Name = "gridCMD";
             this.gridCMD.Visible = true;
             this.gridCMD.VisibleIndex = 0;
-            this.gridCMD.Width = 41;
+            this.gridCMD.Width = 58;
             // 
             // colQ5
             // 
@@ -818,8 +818,82 @@
             this.colQ5.FieldName = "Q5";
             this.colQ5.Name = "colQ5";
             this.colQ5.Visible = true;
-            this.colQ5.VisibleIndex = 18;
+            this.colQ5.VisibleIndex = 8;
             this.colQ5.Width = 52;
+            // 
+            // selectCMD
+            // 
+            this.selectCMD.AppearanceHeader.Options.UseTextOptions = true;
+            this.selectCMD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.selectCMD.Caption = "Select. CMD";
+            this.selectCMD.FieldName = "Q1N";
+            this.selectCMD.Name = "selectCMD";
+            this.selectCMD.Visible = true;
+            this.selectCMD.VisibleIndex = 34;
+            // 
+            // cmdEnvoye
+            // 
+            this.cmdEnvoye.AppearanceHeader.Options.UseTextOptions = true;
+            this.cmdEnvoye.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmdEnvoye.Caption = "CMD Envoyé";
+            this.cmdEnvoye.FieldName = "Q2N";
+            this.cmdEnvoye.Name = "cmdEnvoye";
+            this.cmdEnvoye.Visible = true;
+            this.cmdEnvoye.VisibleIndex = 35;
+            // 
+            // factFRS
+            // 
+            this.factFRS.AppearanceHeader.Options.UseTextOptions = true;
+            this.factFRS.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.factFRS.Caption = "Fact FRS";
+            this.factFRS.FieldName = "Q3";
+            this.factFRS.Name = "factFRS";
+            this.factFRS.Visible = true;
+            this.factFRS.VisibleIndex = 36;
+            // 
+            // colEnfact
+            // 
+            this.colEnfact.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.colEnfact.AppearanceCell.Options.UseBackColor = true;
+            this.colEnfact.Caption = "Ent.Fact";
+            this.colEnfact.FieldName = "CMD";
+            this.colEnfact.Name = "colEnfact";
+            this.colEnfact.Visible = true;
+            this.colEnfact.VisibleIndex = 29;
+            // 
+            // selectcmds
+            // 
+            this.selectcmds.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.selectcmds.AppearanceCell.Options.UseBackColor = true;
+            this.selectcmds.Caption = "Select. CMD";
+            this.selectcmds.FieldName = "C1N";
+            this.selectcmds.Name = "selectcmds";
+            this.selectcmds.Visible = true;
+            this.selectcmds.VisibleIndex = 30;
+            // 
+            // cmmdenvoi
+            // 
+            this.cmmdenvoi.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.cmmdenvoi.AppearanceCell.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.cmmdenvoi.AppearanceCell.Options.UseBackColor = true;
+            this.cmmdenvoi.AppearanceCell.Options.UseForeColor = true;
+            this.cmmdenvoi.Caption = "CMD. Envoyé";
+            this.cmmdenvoi.FieldName = "C2";
+            this.cmmdenvoi.Name = "cmmdenvoi";
+            this.cmmdenvoi.Visible = true;
+            this.cmmdenvoi.VisibleIndex = 31;
+            // 
+            // factfrns
+            // 
+            this.factfrns.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.factfrns.AppearanceCell.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.factfrns.AppearanceCell.Options.UseBackColor = true;
+            this.factfrns.AppearanceCell.Options.UseForeColor = true;
+            this.factfrns.Caption = "Fact. FRS";
+            this.factfrns.FieldName = "C3";
+            this.factfrns.Name = "factfrns";
+            this.factfrns.Visible = true;
+            this.factfrns.VisibleIndex = 32;
             // 
             // myNum
             // 
@@ -875,7 +949,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colMessage;
         private DevExpress.XtraGrid.Columns.GridColumn colReponse;
-        private DevExpress.XtraGrid.Columns.GridColumn colQte;
         private DevExpress.XtraGrid.Columns.GridColumn colComptage;
         private DevExpress.XtraEditors.LabelControl myNum;
         private DevExpress.XtraGrid.Columns.GridColumn colPlace;
@@ -915,5 +988,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFourniss;
         private DevExpress.XtraGrid.Columns.GridColumn gridCMD;
         private DevExpress.XtraGrid.Columns.GridColumn colQ5;
+        private DevExpress.XtraGrid.Columns.GridColumn selectCMD;
+        private DevExpress.XtraGrid.Columns.GridColumn cmdEnvoye;
+        private DevExpress.XtraGrid.Columns.GridColumn factFRS;
+        private DevExpress.XtraGrid.Columns.GridColumn colEnfact;
+        private DevExpress.XtraGrid.Columns.GridColumn selectcmds;
+        private DevExpress.XtraGrid.Columns.GridColumn cmmdenvoi;
+        private DevExpress.XtraGrid.Columns.GridColumn factfrns;
     }
 }

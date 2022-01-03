@@ -17,6 +17,7 @@ namespace gescom.data.Models
         {
             var repository = new OperationRepository();
             var item = repository.Get(id);
+            item.Init();
             var model = new OperationModel();
             model.Copy(item);
             return model;
@@ -95,28 +96,28 @@ namespace gescom.data.Models
                 switch (g)
                 {
                     case 0:
-                        element.Px = model.Pachat;
+                        element.Px = (float)model.Pachat;
                         element.Rx = 0;
                         break;
 
                     case 1:
-                        element.Px = model.PGros;
-                        element.Rx = model.PrimGros;
+                        element.Px = (float)model.PGros;
+                        element.Rx = (float)model.PrimGros;
                         break;
 
                     case 2:
-                        element.Px = model.PDetail;
-                        element.Rx = model.PrimDetail;
+                        element.Px = (float)model.PDetail;
+                        element.Rx = (float)model.PrimDetail;
                         break;
 
                     case 3:
-                        element.Px = model.PSpecial;
-                        element.Rx = model.PrimSpecial;
+                        element.Px = (float)model.PSpecial;
+                        element.Rx = (float)model.PrimSpecial;
                         break;
 
                     case 4:
-                        element.Px = model.PExtra;
-                        element.Rx = model.PrimExtra;
+                        element.Px = (float)model.PExtra;
+                        element.Rx = (float)model.PrimExtra;
                         break;
                 }
 
@@ -287,7 +288,7 @@ namespace gescom.data.Models
             {
                 var model = new OperationModel();
                 model.Copy(item);
-                model.Px = model.PDetail;
+                model.Px = (float)model.PDetail;
                 result.Add(model);
             }
 
@@ -564,98 +565,15 @@ namespace gescom.data.Models
             var n = CompleteCode.Length;
             var suffix = "-" + CompleteCode.Substring(n - 1, 1);
             var arr = CompleteCode.Substring(n - 3).Split('-');
-            NewCode = arr[0] + Ndx + arr[1];
+            //NewCode = arr[0] + Ndx + "-"+ arr[1];
+            NewCode = Fcode+ "-" + arr[1];
             SupCode = Fcode + suffix;
         }
     }
 
-    public class OperationModel
+    public class OperationModel:OperationItem
     {
-        public long AEntre { get; set; }
-        public long APrix { get; set; }
-        public string B1 { get; set; }
-        public string B2 { get; set; }
-        public string Categorie { get; set; }
-        public string Clt { get; set; }
-        public string Codage { get; set; }
-        public string Cview { get; set; }
-        public DateTime D1 { get; set; }
-        public DateTime D2 { get; set; }
-        public DateTime DateAchat { get; set; }
-        public DateTime DateVente { get; set; }
-        public string Designation { get; set; }
-        public bool DuplicateError { get; set; }
-        public string Fcode { get; set; }
-        public long Forme { get; set; }
-        public bool Formel { get; set; }
-        public string Frs { get; set; }
-        public long Id { get; set; }
-        public long IdCat { get; set; }
-        public long IdPlace { get; set; }
-        public long IdUnit { get; set; }
-        public bool IsValid { get; set; }
-        public string Magpref { get; set; }
-        public long Ndx { get; set; }
-        public string Nomfrns { get; set; }
-        public string Nomvers { get; set; }
-        public string Observation { get; set; }
-        public string Operateur { get; set; }
-        public string OtherInfo { get; set; }
-        public float Pachat { get; set; }
-        public float PDetail { get; set; }
-        public float PEstime { get; set; }
-        public float PExtra { get; set; }
-        public float PGros { get; set; }
-        public long Pid { get; set; }
-        public string Place { get; set; }
-        public float Previent { get; set; }
-        public float PrimDetail { get; set; }
-        public float PrimExtra { get; set; }
-        public float PrimGros { get; set; }
-        public float PrimSpecial { get; set; }
-        public float PSpecial { get; set; }
-        public float Px { get; set; }
-        public float Q { get; set; }
-        public float Q1 { get; set; }
-        public float Q2 { get; set; }
-        public float Qachat { get; set; }
-        public float Qavoir { get; set; }
-        public double Qcder { get; set; }
-        public float Qdefect { get; set; }
-        public float Qercpt { get; set; }
-        public float QEstime { get; set; }
-        public float Qrebut { get; set; }
-        public float QSeuil { get; set; }
-        public float QStock { get; set; }
-        public float Qte { get; set; }
-        public float Qvente { get; set; }
-        public float Qvol { get; set; }
-        public string Refers { get; set; }
-        public string Remark { get; set; }
-        public string Remarque { get; set; }
-        public float Rx { get; set; }
-        public string S1 { get; set; }
-        public string S2 { get; set; }
-        public bool Signal { get; set; }
-        public bool SignCmd { get; set; }
-        public string StateCommande { get; set; }
-        public string T1 { get; set; }
-        public int Taxable { get; set; }
-        public bool Taxed { get; set; }
-        public string Unite { get; set; }
-        public float Vachat { get; set; }
-        public float Vavoir { get; set; }
-        public float Vdefect { get; set; }
-        public float Vercpt { get; set; }
-        public bool VoirEntre { get; set; }
-        public bool VoirPrix { get; set; }
-        public float Vrebut { get; set; }
-        public float Vstock { get; set; }
-        public float Vvente { get; set; }
-        public float Vvol { get; set; }
-        public long Wid { get; set; }
-        public string CompleteCode { get; set; }
-        public string NewCode { get; set; }
+       
 
         public void Copy(OperationEntry item)
         {
@@ -674,6 +592,10 @@ namespace gescom.data.Models
             S2 = item.S2;
             T1 = item.T1;
             Q = item.Q;
+            Q4 = item.Q4;
+            Q6 = item.Q6;
+            H4 = item.H4;
+            Q6 = item.Q6;
             Q1 = item.Q1;
             Q2 = item.Q2;
             D1 = item.D1;
@@ -746,8 +668,12 @@ namespace gescom.data.Models
 
             QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
-            Qrebut = Qvol + Qdefect;
-            Vrebut = Vvol + Vdefect;
+            if(Qvol is null) { Qvol = 0; }
+            if(Qdefect is null) { Qdefect = 0; }
+            Qrebut = (float)(Qvol + Qdefect);
+            if (Vvol is null) { Vvol = 0; }
+            if (Vdefect is null) { Vdefect = 0; }
+            Vrebut = (float)(Vvol + Vdefect);
             IdCat = (long) item.IdCat;
             if (item.IdUnit == null) item.IdUnit = 20;
 
@@ -776,18 +702,18 @@ namespace gescom.data.Models
             Fcode = item.Fcode;
             StateCommande = item.StateCommande;
             OtherInfo = item.OtherInfo;
-            Ndx = item.Ndx;
+            Ndx = (long)item.Ndx;
             Codage = item.Codage;
             Place = item.Place;
             Designation = item.Designation;
             S1 = item.S1;
             S2 = item.S2;
             T1 = item.T1;
-            Q = item.Q;
-            Q1 = item.Q1;
-            Q2 = item.Q2;
-            D1 = item.D1;
-            D2 = item.D2;
+            Q = (long)item.Q;
+            Q1=(long) item.Q1;
+            Q2 = (long)item.Q2;
+            D1 = (DateTime)item.D1;
+            D2 = (DateTime)item.D2;
             B1 = item.B1;
             if (item.Pid != null) Pid = (long) item.Pid;
             Remark = item.Remark;
@@ -859,8 +785,24 @@ namespace gescom.data.Models
 
             QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
-            Qrebut = Qvol + Qdefect;
-            Vrebut = Vvol + Vdefect;
+            if(Qvol is null)
+            {
+                Qvol = 0;
+            }
+            if(Qdefect is null)
+            {
+                Qdefect = 0;
+            }
+            Qrebut = (float)(Qvol + Qdefect);
+            if (Vvol is null)
+            {
+                Vvol = 0;
+            }
+            if (Vdefect is null)
+            {
+                Vdefect = 0;
+            }
+            Vrebut = (float)(Vvol + Vdefect);
             IdCat = (long) item.IdCat;
             if (item.IdUnit == null) item.IdUnit = 20;
 
@@ -977,8 +919,8 @@ namespace gescom.data.Models
 
             QSeuil = (float) item.QSeuil;
             Refers = item.Refers;
-            Qrebut = Qvol + Qdefect;
-            Vrebut = Vvol + Vdefect;
+            Qrebut = (float)(Qvol + Qdefect);
+            Vrebut = (float)(Vvol + Vdefect);
             IdCat = (long) item.IdCat;
             if (item.IdUnit == null) item.IdUnit = 20;
 
@@ -1255,8 +1197,8 @@ namespace gescom.data.Models
             Categorie = model.Categorie;
             Clt = model.Clt;
             Codage = model.Codage;
-            DateAchat = model.DateAchat;
-            DateVente = model.DateVente;
+            DateAchat = (DateTime)model.DateAchat;
+            DateVente = (DateTime)model.DateVente;
             Designation = model.Designation;
             Frs = model.Frs;
             IsValid = model.IsValid;
@@ -1266,36 +1208,36 @@ namespace gescom.data.Models
             Place = model.Place;
             Refers = model.Refers;
             Unite = model.Unite;
-            Pachat = StdCalcul.DoubleToSpaceFormat(model.Pachat);
-            PDetail = StdCalcul.DoubleToSpaceFormat(model.PDetail);
-            PEstime = StdCalcul.DoubleToSpaceFormat(model.PEstime);
-            PExtra = StdCalcul.DoubleToSpaceFormat(model.PExtra);
-            PGros = StdCalcul.DoubleToSpaceFormat(model.PGros);
-            Previent = StdCalcul.DoubleToSpaceFormat(model.Previent);
-            PSpecial = StdCalcul.DoubleToSpaceFormat(model.PSpecial);
-            Px = StdCalcul.DoubleToSpaceFormat(model.Px);
-            Qachat = StdCalcul.DoubleToSpaceFormat(model.Qachat);
-            Qavoir = StdCalcul.DoubleToSpaceFormat(model.Qavoir);
-            Qdefect = StdCalcul.DoubleToSpaceFormat(model.Qdefect);
-            Qercpt = StdCalcul.DoubleToSpaceFormat(model.Qercpt);
-            QEstime = StdCalcul.DoubleToSpaceFormat(model.QEstime);
-            QStock = StdCalcul.DoubleToSpaceFormat(model.QStock);
+            Pachat = StdCalcul.DoubleToSpaceFormat((float)model.Pachat);
+            PDetail = StdCalcul.DoubleToSpaceFormat((float)model.PDetail);
+            PEstime = StdCalcul.DoubleToSpaceFormat((float)model.PEstime);
+            PExtra = StdCalcul.DoubleToSpaceFormat((float)model.PExtra);
+            PGros = StdCalcul.DoubleToSpaceFormat((float)model.PGros);
+            Previent = StdCalcul.DoubleToSpaceFormat((float)model.Previent);
+            PSpecial = StdCalcul.DoubleToSpaceFormat((float)model.PSpecial);
+            Px = StdCalcul.DoubleToSpaceFormat((float)model.Px);
+            Qachat = StdCalcul.DoubleToSpaceFormat((float)model.Qachat);
+            Qavoir = StdCalcul.DoubleToSpaceFormat((float)model.Qavoir);
+            Qdefect = StdCalcul.DoubleToSpaceFormat((float)model.Qdefect);
+            Qercpt = StdCalcul.DoubleToSpaceFormat((float)model.Qercpt);
+            QEstime = StdCalcul.DoubleToSpaceFormat((float)model.QEstime);
+            QStock = StdCalcul.DoubleToSpaceFormat((float)model.QStock);
             Qte = StdCalcul.DoubleToSpaceFormat(model.Qte);
-            Qvente = StdCalcul.DoubleToSpaceFormat(model.Qvente);
-            Qvol = StdCalcul.DoubleToSpaceFormat(model.Qvol);
-            Qrebut = StdCalcul.DoubleToSpaceFormat(model.Qrebut);
-            Vachat = StdCalcul.DoubleToSpaceFormat(model.Vachat);
-            Vavoir = StdCalcul.DoubleToSpaceFormat(model.Vavoir);
-            Vdefect = StdCalcul.DoubleToSpaceFormat(model.Vdefect);
-            Vercpt = StdCalcul.DoubleToSpaceFormat(model.Vercpt);
-            Vstock = StdCalcul.DoubleToSpaceFormat(model.Vstock);
-            Vvente = StdCalcul.DoubleToSpaceFormat(model.Vvente);
-            Vvol = StdCalcul.DoubleToSpaceFormat(model.Vvol);
-            QSeuil = StdCalcul.DoubleToSpaceFormat(model.QSeuil);
-            Vrebut = StdCalcul.DoubleToSpaceFormat(model.Vrebut);
-            Ndx = StdCalcul.DoubleToSpaceFormat(model.Ndx);
-            IdCat = StdCalcul.DoubleToSpaceFormat(model.IdCat);
-            IdPlace = StdCalcul.DoubleToSpaceFormat(model.IdPlace);
+            Qvente = StdCalcul.DoubleToSpaceFormat((float)model.Qvente);
+            Qvol = StdCalcul.DoubleToSpaceFormat((float)model.Qvol);
+            Qrebut = StdCalcul.DoubleToSpaceFormat((float)model.Qrebut);
+            Vachat = StdCalcul.DoubleToSpaceFormat((float)model.Vachat);
+            Vavoir = StdCalcul.DoubleToSpaceFormat((float)model.Vavoir);
+            Vdefect = StdCalcul.DoubleToSpaceFormat((float)model.Vdefect);
+            Vercpt = StdCalcul.DoubleToSpaceFormat((float)model.Vercpt);
+            Vstock = StdCalcul.DoubleToSpaceFormat((float)model.Vstock);
+            Vvente = StdCalcul.DoubleToSpaceFormat((float)model.Vvente);
+            Vvol = StdCalcul.DoubleToSpaceFormat((float)model.Vvol);
+            QSeuil = StdCalcul.DoubleToSpaceFormat((float)model.QSeuil);
+            Vrebut = StdCalcul.DoubleToSpaceFormat((float)model.Vrebut);
+            Ndx = StdCalcul.DoubleToSpaceFormat((float)model.Ndx);
+            IdCat = StdCalcul.DoubleToSpaceFormat((float)model.IdCat);
+            IdPlace = StdCalcul.DoubleToSpaceFormat((float)model.IdPlace);
             S1 = model.S1;
             S2 = model.S2;
             Q = StdCalcul.DoubleToSpaceFormat(model.Q);

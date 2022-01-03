@@ -61,7 +61,7 @@ namespace gescom.create.Views
             var item = OperationHelpers.GetShortCode(_myList, text);
             var element = new ElementModel(item.Ndx);
             element.Copy(item);
-            element.Pid = item.Pid;
+            element.Pid = (long)item.Pid;
             var newElement = ElementHelpers.Get(_elements, item.Ndx);
             ElementHelpers.Remove(_elements, item.Ndx);
             txtNum.DataBindings.Clear();
@@ -129,8 +129,10 @@ namespace gescom.create.Views
         private void OnCodeChange()
         {
             txtUnite.Visible = false;
-            textQuest.Visible = false;
-            textRep.Visible = false;
+            Q4.Visible = false;
+            Q6.Visible = false;
+            H4.Visible = false;
+            H6.Visible = false;
             txtNom.Visible = false;
             txtPrix.Visible = false;
             txtStock.Visible = false;
@@ -138,8 +140,10 @@ namespace gescom.create.Views
             var text = txtCode.Text;
             var item = OperationHelpers.GetShortCode(_myList, text);
             if (item.Designation == null) return;
-            textQuest.Visible = true;
-            textRep.Visible = true;
+            Q4.Visible = true;
+            Q6.Visible = true;
+            H4.Visible = true;
+            H6.Visible = true;
             txtUnite.Visible = true;
             txtNom.Visible = true;
             txtPrix.Visible = true;
@@ -147,10 +151,12 @@ namespace gescom.create.Views
             txtQte.Visible = true;
             txtNom.Text = item.Designation;
             txtUnite.Text = item.Unite;
-            textQuest.Text = item.Q1.ToString(CultureInfo.InvariantCulture);
-            textRep.Text = item.Q2.ToString(CultureInfo.InvariantCulture);
+            Q4.Text = item.Q4.ToString();
+            Q6.Text = item.Q6.ToString();
+            H4.Text = item.H4.ToString();
+            H6.Text = item.H6.ToString();
             txtPrix.Text = item.Px.ToString(CultureInfo.InvariantCulture);
-            txtStock.Text = item.QStock.ToString(CultureInfo.InvariantCulture);
+            txtStock.Text = item.QStock.ToString();
             //txtQte.Focus();
         }
 

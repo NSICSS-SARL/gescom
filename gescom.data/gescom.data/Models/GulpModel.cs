@@ -7,7 +7,21 @@ namespace gescom.data.Models
 {
     public static class GulpHelpers
     {
-
+      /*  public static void UpdateQ()
+        {
+           var duos = ArticleHelpers.GetDuos();
+            var repository = new GulpRepository();
+            foreach (var item in duos)
+            {
+                var model = new GulpModel()
+                {
+                    Id = item.Id
+                };
+                model.Q1 = (long)item.Q1;
+                model.Q2 = (long)item.Q2;
+                repository.Update(model);
+            }
+        }*/
 
         // item selon son identifiant id.
         public static GulpItem Get(long id)
@@ -108,7 +122,15 @@ namespace gescom.data.Models
 
     public class GulpModel : GulpItem
     {
-        
+        public GulpModel(GulpItem item)
+        {
+            Copy(item);
+        }
+
+        public GulpModel()
+        {
+            //
+        }
 
     }
 

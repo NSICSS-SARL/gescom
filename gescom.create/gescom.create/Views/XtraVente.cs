@@ -129,7 +129,7 @@ namespace gescom.create.Views
                     if (_item.QStock < quantite)
                         if (_index > -6 && _index != -1)
                         {
-                            ErrorHelpers.ShowDepassError(quantite, _item.QStock, element.Quantite, element.Nom);
+                            ErrorHelpers.ShowDepassError(quantite,(float) _item.QStock, element.Quantite, element.Nom);
                             _elements.Add(element);
                             txtQte.Focus();
                             txtQte.SelectAll();
@@ -152,7 +152,7 @@ namespace gescom.create.Views
                         gridActions.DataSource = _elements;
                         txtQte.Focus();
                         txtQte.SelectAll();
-                        ErrorHelpers.ShowDepassError(quantite, _item.QStock, newElement.Quantite, element.Nom);
+                        ErrorHelpers.ShowDepassError(quantite,(float) _item.QStock, newElement.Quantite, element.Nom);
                         return;
                     }
 
@@ -237,7 +237,8 @@ namespace gescom.create.Views
             txtNom.Text = _item.Designation;
             txtUnite.Text = _item.Unite;
             txtPrix.Text = _item.Px.ToString(CultureInfo.InvariantCulture);
-            txtStock.Text = _item.QStock.ToString(CultureInfo.InvariantCulture);
+            var x = (float)_item.QStock;
+            txtStock.Text = x.ToString(CultureInfo.InvariantCulture);
         }
 
         private void RefreshData()

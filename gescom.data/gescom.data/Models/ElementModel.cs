@@ -129,6 +129,11 @@ namespace gescom.data.Models
         public float Produit { get; set; }
 
         public float Q1 { get; set; }
+        public long Q6 { get; set; }
+        public long H4 { get; set; }
+        public long H6 { get; set; }
+        public long Q4 { get; set; }
+
 
         public float Q2 { get; set; }
 
@@ -155,6 +160,10 @@ namespace gescom.data.Models
             QStock = model.QStock;
             Q1 = model.Q1;
             Q2 = model.Q2;
+            Q4 = model.Q4;
+            Q6 = model.Q6;
+            H4 = model.H4;
+            H6 = model.H6;
             Wid = model.Wid;
             Rx = model.Rx;
             Forme = model.Forme;
@@ -171,33 +180,54 @@ namespace gescom.data.Models
             Code = model.Codage;
             Unite = model.Unite;
             Nom = model.Designation;
-            QStock = model.QStock;
+            QStock = (float)model.QStock;
             Q1 = model.Q1;
             Q2 = model.Q2;
             Wid = model.Wid;
             Rx = model.Rx;
-            Forme = model.Forme;
-            Taxable = model.Taxable;
-            Pid = model.Pid;
+            Forme = (long)model.Forme;
+            Taxable = (int)model.Taxable;
+            Pid = (long)model.Pid;
             Fcode = model.Fcode;
+            if(model.Q4 is null)
+            {
+                model.Q4 = 0;
+            }
+            if (model.Q6 is null)
+            {
+                model.Q6 = 0;
+            }
+            if (model.H4 is null)
+            {
+                model.H4 = 0;
+            }
+            if (model.H6 is null)
+            {
+                model.H6 = 0;
+            }
+            Q4 = (long)model.Q4;
+            Q6 = (long)model.Q6;
+            H4 = (long)model.H4;
+            H6 =(long) model.H6;
         }
 
         public void Copy(OperationItem item)
         {
-            Id = item.Ndx;
+            Id = (long)item.Ndx;
             Quantite = item.Qte;
             Prix = item.Px;
             Code = item.Codage;
             Unite = item.Unite;
             Nom = item.Designation;
             if (item.QStock != null) QStock = (float) item.QStock;
-            Q1 = item.Q1;
-            Q2 = item.Q2;
+            Q1 = (float)item.Q1;
+            Q2 = (float)item.Q2;
             Wid = item.Wid;
             Rx = item.Rx;
             if (item.Forme != null) Forme = (long) item.Forme;
             if (item.Taxable != null) Taxable = (int) item.Taxable;
             Fcode = item.Fcode;
+
         }
 
         public override string ToString()

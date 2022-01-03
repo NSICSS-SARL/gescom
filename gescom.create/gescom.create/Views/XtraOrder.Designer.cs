@@ -51,8 +51,8 @@
             this.colomL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlacer = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVerif = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.myNum = new System.Windows.Forms.Label();
             this.gridC5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.myNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridActions)).BeginInit();
             this.clicDroit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilleView)).BeginInit();
@@ -143,7 +143,7 @@
             this.obs.FieldName = "B1";
             this.obs.Name = "obs";
             this.obs.Visible = true;
-            this.obs.VisibleIndex = 8;
+            this.obs.VisibleIndex = 9;
             this.obs.Width = 89;
             // 
             // place
@@ -165,7 +165,7 @@
             this.rmq.FieldName = "S2";
             this.rmq.Name = "rmq";
             this.rmq.Visible = true;
-            this.rmq.VisibleIndex = 16;
+            this.rmq.VisibleIndex = 17;
             this.rmq.Width = 215;
             // 
             // nom
@@ -187,7 +187,7 @@
             this.coliPr.FieldName = "VoirPrix";
             this.coliPr.Name = "coliPr";
             this.coliPr.Visible = true;
-            this.coliPr.VisibleIndex = 13;
+            this.coliPr.VisibleIndex = 14;
             // 
             // prix
             // 
@@ -200,7 +200,7 @@
             this.prix.Name = "prix";
             this.prix.OptionsColumn.AllowFocus = false;
             this.prix.Visible = true;
-            this.prix.VisibleIndex = 6;
+            this.prix.VisibleIndex = 5;
             this.prix.Width = 87;
             // 
             // unite
@@ -211,7 +211,7 @@
             this.unite.FieldName = "Unite";
             this.unite.Name = "unite";
             this.unite.Visible = true;
-            this.unite.VisibleIndex = 17;
+            this.unite.VisibleIndex = 7;
             this.unite.Width = 72;
             // 
             // disponible
@@ -231,7 +231,7 @@
             this.disponible.Name = "disponible";
             this.disponible.OptionsColumn.AllowFocus = false;
             this.disponible.Visible = true;
-            this.disponible.VisibleIndex = 5;
+            this.disponible.VisibleIndex = 6;
             this.disponible.Width = 86;
             // 
             // colQ1
@@ -247,7 +247,7 @@
             this.colQ1.Name = "colQ1";
             this.colQ1.OptionsColumn.AllowFocus = false;
             this.colQ1.Visible = true;
-            this.colQ1.VisibleIndex = 9;
+            this.colQ1.VisibleIndex = 10;
             this.colQ1.Width = 68;
             // 
             // colQ2
@@ -261,7 +261,7 @@
             this.colQ2.Name = "colQ2";
             this.colQ2.OptionsColumn.AllowFocus = false;
             this.colQ2.Visible = true;
-            this.colQ2.VisibleIndex = 10;
+            this.colQ2.VisibleIndex = 11;
             this.colQ2.Width = 68;
             // 
             // colB2
@@ -272,7 +272,7 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 15;
+            this.colB2.VisibleIndex = 16;
             this.colB2.Width = 156;
             // 
             // colEnt
@@ -283,7 +283,7 @@
             this.colEnt.FieldName = "VoirEntre";
             this.colEnt.Name = "colEnt";
             this.colEnt.Visible = true;
-            this.colEnt.VisibleIndex = 7;
+            this.colEnt.VisibleIndex = 8;
             // 
             // gridRapide
             // 
@@ -294,7 +294,7 @@
             this.gridRapide.Name = "gridRapide";
             this.gridRapide.OptionsColumn.AllowEdit = false;
             this.gridRapide.Visible = true;
-            this.gridRapide.VisibleIndex = 11;
+            this.gridRapide.VisibleIndex = 12;
             // 
             // colomL
             // 
@@ -304,12 +304,12 @@
             this.colomL.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colomL.AppearanceHeader.Options.UseTextOptions = true;
             this.colomL.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colomL.Caption = "CMD";
+            this.colomL.Caption = "Ent Fact.";
             this.colomL.FieldName = "CMD";
             this.colomL.Name = "colomL";
             this.colomL.Visible = true;
             this.colomL.VisibleIndex = 0;
-            this.colomL.Width = 39;
+            this.colomL.Width = 64;
             // 
             // colPlacer
             // 
@@ -319,7 +319,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 14;
+            this.colPlacer.VisibleIndex = 15;
             // 
             // colVerif
             // 
@@ -329,7 +329,16 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 12;
+            this.colVerif.VisibleIndex = 13;
+            // 
+            // gridC5
+            // 
+            this.gridC5.Caption = "Ent interne";
+            this.gridC5.FieldName = "C5";
+            this.gridC5.Name = "gridC5";
+            this.gridC5.Visible = true;
+            this.gridC5.VisibleIndex = 1;
+            this.gridC5.Width = 67;
             // 
             // myNum
             // 
@@ -340,15 +349,6 @@
             this.myNum.Size = new System.Drawing.Size(35, 13);
             this.myNum.TabIndex = 3;
             this.myNum.Text = "label1";
-            // 
-            // gridC5
-            // 
-            this.gridC5.Caption = "C5";
-            this.gridC5.FieldName = "C5";
-            this.gridC5.Name = "gridC5";
-            this.gridC5.Visible = true;
-            this.gridC5.VisibleIndex = 1;
-            this.gridC5.Width = 46;
             // 
             // XtraOrder
             // 

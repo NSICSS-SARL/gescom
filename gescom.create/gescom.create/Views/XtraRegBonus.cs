@@ -40,7 +40,7 @@ namespace gescom.create.Views
 
         public XtraRegBonus(long id)
         {
-            InitializeComponent();           
+            InitializeComponent();            
             _prodId = id;
             _vendors = PersonHelpers.GetVendorsList();
             _articleRepository = new ArticleRepository();
@@ -390,11 +390,11 @@ namespace gescom.create.Views
                 _voir.VoirPrix = true;
             }
 
-            if (entreCours.Checked)
+          /*  if (entreCours.Checked)
             {
                 _acte.Entrer = -1;
                 _voir.VoirEntre = true;
-            }
+            }*/
 
             if (prixNorme.Checked)
             {
@@ -402,11 +402,11 @@ namespace gescom.create.Views
                 _voir.VoirPrix = false;
             }
 
-            if (entreNorme.Checked)
+           /* if (entreNorme.Checked)
             {
                 _acte.Entrer = 0;
                 _voir.VoirEntre = false;
-            }
+            }*/
           
             _voir.CheckCommande = false;
             if (chkCommande.Checked) _voir.CheckCommande = true;
@@ -584,7 +584,7 @@ namespace gescom.create.Views
             if (state == "STOP") dangerBtn.Checked = true;
             if (state == "Lent") questionBtn.Checked = true;
             if (state == "Super") superBtn.Checked = true;
-            if (_acte.Entrer > 0) entreFini.Checked = true;
+           // if (_acte.Entrer > 0) entreFini.Checked = true;
             if (_acte.Priter > 0) prixFini.Checked = true;
             //
             chkCommande.Checked = false;
@@ -593,7 +593,7 @@ namespace gescom.create.Views
                 checkPrior.Checked = true;
             else
                 checkPrior.Checked = false;
-            if (_voir.VoirEntre) entreCours.Checked = true;
+            //if (_voir.VoirEntre) entreCours.Checked = true;
             if (_voir.VoirPrix) prixCours.Checked = true;
             rienButton.Checked = _commande.Etat0;
             CheckSituation(id);
@@ -711,34 +711,34 @@ namespace gescom.create.Views
 
         private void OperInit()
         {         
-            cumAchat.Text = _operation.Qachat.ToString("#,#");
-            cumVente.Text = _operation.Qvente.ToString("#,#");
-            cumDispo.Text = _operation.QStock.ToString("#,#");
-            DateAchat.DateTime = _operation.DateAchat;
-            DateVente.DateTime = _operation.DateVente;           
+            cumAchat.Text = _operation.Qachat.ToString();
+            cumVente.Text = _operation.Qvente.ToString();
+            cumDispo.Text = _operation.QStock.ToString();
+            DateAchat.DateTime = (DateTime)_operation.DateAchat;
+            DateVente.DateTime = (DateTime)_operation.DateVente;           
             D3.Text = _operation.T1;
             D4.Text = _operation.B1;
-            Q4.Text = _operation.Q2.ToString("####");
+           
             distObs.Text = _operation.B2;           
-            Q6.Text = _operation.Q1.ToString("####");
+           
             s1.Text = _operation.S1;
             if (_duo.Faster == 1)
-                checkPrior.Checked = true;
+            { checkPrior.Checked = true; }
             else
-                checkPrior.Checked = false;
-            if (_duo.AEntre == null)
-                entreNorme.Checked = true;
-            else
-                _x = _operation.AEntre;
+            { checkPrior.Checked = false; }
+            /* if (_duo.AEntre == null)
+                 entreNorme.Checked = true;
+             else
+                 _x = _operation.AEntre;*/
             if (_duo.APrix == null)
                 prixNorme.Checked = true;
             else
-                _y = _operation.APrix;
-            if (_x == 0) entreCours.Checked = true;
+                _y = (long)_operation.APrix;
+            //if (_x == 0) entreCours.Checked = true;
             if (_y == 0) prixCours.Checked = true;
-            if (_x < 0) entreNorme.Checked = true;
+            //if (_x < 0) entreNorme.Checked = true;
             if (_y < 0) prixNorme.Checked = true;
-            if (_x == 1) entreFini.Checked = true;
+            //if (_x == 1) entreFini.Checked = true;
             if (_y == 1) prixFini.Checked = true;
         }
 
@@ -761,13 +761,13 @@ namespace gescom.create.Views
             }
 
             if (prixNorme.Checked) _voir.VoirPrix = false;
-            if (entreCours.Checked)
+           /* if (entreCours.Checked)
             {
                 y = 0;
                 _voir.VoirEntre = true;
-            }
+            }*/
 
-            if (entreNorme.Checked) _voir.VoirEntre = false;
+            //if (entreNorme.Checked) _voir.VoirEntre = false;
             long? z = null;
             if (radioHaute.Checked) z = 2;
             if (radioMoyen.Checked) z = 0;
@@ -826,7 +826,7 @@ namespace gescom.create.Views
             var item = ProdHelpers.Get(_prodId);
             prodNom.Text = item.Nom;
             prodRefce.Text = item.Refce;
-            Q1.Text = item.Quantite.ToString();
+            //Q1.Text = item.Quantite.ToString();
             //prodPrix.Text = item.Prix.ToString();
             P2.Text = item.Prix.ToString();
             prodDesk.Text = item.Description;
@@ -1049,6 +1049,8 @@ namespace gescom.create.Views
             Q1.Text = gulp.Q1.ToString();
             Q2.Text = gulp.Q2.ToString();
             Q3.Text = gulp.Q3.ToString();
+            Q4.Text = gulp.Q4.ToString();
+            Q6.Text = gulp.Q6.ToString();
             Q5.Text = gulp.Q5.ToString();            
             L1.Text = gulp.L1;
             L2.Text = gulp.L2;
@@ -1065,14 +1067,7 @@ namespace gescom.create.Views
             if (gulp.D5 != null) { D5.DateTime = (DateTime)gulp.D5; }
             if (gulp.D6 != null) { D6.DateTime = (DateTime)gulp.D6; }
             if (gulp.D7 != null) { D7.DateTime = (DateTime)gulp.D7; }
-            if (gulp.Q4 > 0)
-            {
-                Q4.Text = gulp.Q4.ToString();
-            }
-            if (gulp.Q6 > 0)
-            {
-                Q6.Text = gulp.Q6.ToString();
-            }
+           
             SetUnity(ref U2, gulp.U2);
             SetUnity(ref U3, gulp.U3);
             SetUnity(ref U4, gulp.U4);

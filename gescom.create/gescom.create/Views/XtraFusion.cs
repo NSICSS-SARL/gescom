@@ -44,7 +44,8 @@ namespace gescom.create.Views
             _voir = VoirHelpers.Get(id);
             _gulp = GulpHelpers.Get(id);
             var operation = OperationHelpers.Get(id);
-            cumDispo.Text = operation.QStock.ToString("#,#");
+            unitCtrl.Text = operation.Unite;
+            cumDispo.Text = operation.QStock.ToString();
             _id = id;
             Init();
         }
@@ -145,7 +146,7 @@ namespace gescom.create.Views
             {               
                 if(arrivage == quantite)
                 {
-                    model.C4=false;
+                    //model.C4=false;
                     
                 } 
             }

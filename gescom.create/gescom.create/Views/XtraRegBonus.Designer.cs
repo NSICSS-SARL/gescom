@@ -135,10 +135,6 @@
             this.prixFini = new System.Windows.Forms.RadioButton();
             this.prixCours = new System.Windows.Forms.RadioButton();
             this.prixNorme = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.entreFini = new System.Windows.Forms.RadioButton();
-            this.entreCours = new System.Windows.Forms.RadioButton();
-            this.entreNorme = new System.Windows.Forms.RadioButton();
             this.verifBox = new System.Windows.Forms.GroupBox();
             this.verifFini = new System.Windows.Forms.RadioButton();
             this.verifCours = new System.Windows.Forms.RadioButton();
@@ -207,7 +203,6 @@
             this.Q2 = new DevExpress.XtraEditors.TextEdit();
             this.L1 = new DevExpress.XtraEditors.TextEdit();
             this.D1 = new DevExpress.XtraEditors.DateEdit();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
@@ -258,7 +253,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).BeginInit();
             this.dernier.SuspendLayout();
             this.prixBox.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.verifBox.SuspendLayout();
             this.placeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).BeginInit();
@@ -302,8 +296,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.L1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tete
@@ -323,7 +315,7 @@
             this.tete.LookAndFeel.SkinName = "Office 2013";
             this.tete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tete.Name = "tete";
-            this.tete.Size = new System.Drawing.Size(1392, 52);
+            this.tete.Size = new System.Drawing.Size(1109, 52);
             this.tete.TabIndex = 0;
             // 
             // DateVente
@@ -602,17 +594,18 @@
             // 
             // formel
             // 
-            this.formel.Location = new System.Drawing.Point(8, 121);
+            this.formel.Location = new System.Drawing.Point(242, 97);
             this.formel.Name = "formel";
             this.formel.Properties.Caption = "&Formel";
             this.formel.Size = new System.Drawing.Size(60, 20);
             this.formel.TabIndex = 8;
             this.formel.ToolTip = "Rendre l\'article taxable";
+            this.formel.Visible = false;
             this.formel.CheckedChanged += new System.EventHandler(this.formel_CheckedChanged);
             // 
             // taxable
             // 
-            this.taxable.Location = new System.Drawing.Point(74, 122);
+            this.taxable.Location = new System.Drawing.Point(303, 97);
             this.taxable.Name = "taxable";
             this.taxable.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxable.Properties.Appearance.Options.UseFont = true;
@@ -620,6 +613,7 @@
             this.taxable.Size = new System.Drawing.Size(80, 20);
             this.taxable.TabIndex = 7;
             this.taxable.ToolTip = "Rendre l\'article taxable";
+            this.taxable.Visible = false;
             // 
             // tarifBox
             // 
@@ -1117,11 +1111,9 @@
             this.prodCadre.Controls.Add(this.labelControl13);
             this.prodCadre.Controls.Add(this.b2);
             this.prodCadre.Controls.Add(this.prodDesk);
-            this.prodCadre.Controls.Add(this.formel);
             this.prodCadre.Controls.Add(this.prodVend);
             this.prodCadre.Controls.Add(this.prodLabelS);
             this.prodCadre.Controls.Add(this.codeF);
-            this.prodCadre.Controls.Add(this.taxable);
             this.prodCadre.Controls.Add(this.distRemark);
             this.prodCadre.Controls.Add(this.prodRefce);
             this.prodCadre.Controls.Add(this.prodNom);
@@ -1132,7 +1124,7 @@
             this.prodCadre.Location = new System.Drawing.Point(550, 51);
             this.prodCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.prodCadre.Name = "prodCadre";
-            this.prodCadre.Size = new System.Drawing.Size(591, 191);
+            this.prodCadre.Size = new System.Drawing.Size(560, 191);
             this.prodCadre.TabIndex = 2;
             // 
             // katalog
@@ -1327,7 +1319,7 @@
             // Q1
             // 
             this.Q1.EditValue = "0";
-            this.Q1.Location = new System.Drawing.Point(96, 24);
+            this.Q1.Location = new System.Drawing.Point(97, 24);
             this.Q1.Name = "Q1";
             this.Q1.Size = new System.Drawing.Size(71, 20);
             this.Q1.TabIndex = 8;
@@ -1369,18 +1361,21 @@
             // distCadre
             // 
             this.distCadre.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.distCadre.Controls.Add(this.placeBox);
             this.distCadre.Controls.Add(this.label1);
             this.distCadre.Controls.Add(this.secondPlace);
             this.distCadre.Controls.Add(this.distNewPlace);
             this.distCadre.Controls.Add(this.distNewLabel);
+            this.distCadre.Controls.Add(this.formel);
+            this.distCadre.Controls.Add(this.taxable);
             this.distCadre.Controls.Add(this.distPlace);
             this.distCadre.Controls.Add(this.distPlaceNew);
             this.distCadre.Controls.Add(this.distLabelEvent);
             this.distCadre.Controls.Add(this.distLabelRef);
-            this.distCadre.Location = new System.Drawing.Point(550, 278);
+            this.distCadre.Location = new System.Drawing.Point(616, 289);
             this.distCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.distCadre.Name = "distCadre";
-            this.distCadre.Size = new System.Drawing.Size(398, 84);
+            this.distCadre.Size = new System.Drawing.Size(398, 137);
             this.distCadre.TabIndex = 6;
             // 
             // label1
@@ -1474,13 +1469,13 @@
             this.dernier.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dernier.Location = new System.Drawing.Point(0, 637);
             this.dernier.Name = "dernier";
-            this.dernier.Size = new System.Drawing.Size(1392, 30);
+            this.dernier.Size = new System.Drawing.Size(1109, 30);
             this.dernier.TabIndex = 9;
             // 
             // annuler
             // 
             this.annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.annuler.Location = new System.Drawing.Point(1111, 3);
+            this.annuler.Location = new System.Drawing.Point(1003, 3);
             this.annuler.LookAndFeel.SkinName = "Office 2013";
             this.annuler.LookAndFeel.UseDefaultLookAndFeel = false;
             this.annuler.Name = "annuler";
@@ -1507,7 +1502,7 @@
             this.prixBox.Controls.Add(this.prixFini);
             this.prixBox.Controls.Add(this.prixCours);
             this.prixBox.Controls.Add(this.prixNorme);
-            this.prixBox.Location = new System.Drawing.Point(182, 114);
+            this.prixBox.Location = new System.Drawing.Point(425, 340);
             this.prixBox.Name = "prixBox";
             this.prixBox.Size = new System.Drawing.Size(173, 48);
             this.prixBox.TabIndex = 10;
@@ -1544,66 +1539,18 @@
             this.prixNorme.ForeColor = System.Drawing.Color.Black;
             this.prixNorme.Location = new System.Drawing.Point(7, 20);
             this.prixNorme.Name = "prixNorme";
-            this.prixNorme.Size = new System.Drawing.Size(58, 17);
+            this.prixNorme.Size = new System.Drawing.Size(42, 17);
             this.prixNorme.TabIndex = 0;
             this.prixNorme.TabStop = true;
-            this.prixNorme.Text = "Normal";
+            this.prixNorme.Text = "R.S";
             this.prixNorme.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.entreFini);
-            this.groupBox2.Controls.Add(this.entreCours);
-            this.groupBox2.Controls.Add(this.entreNorme);
-            this.groupBox2.Location = new System.Drawing.Point(179, 63);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(176, 48);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Entrer interne";
-            // 
-            // entreFini
-            // 
-            this.entreFini.AutoSize = true;
-            this.entreFini.ForeColor = System.Drawing.Color.Black;
-            this.entreFini.Location = new System.Drawing.Point(128, 20);
-            this.entreFini.Name = "entreFini";
-            this.entreFini.Size = new System.Drawing.Size(41, 17);
-            this.entreFini.TabIndex = 2;
-            this.entreFini.TabStop = true;
-            this.entreFini.Text = "Fini";
-            this.entreFini.UseVisualStyleBackColor = true;
-            // 
-            // entreCours
-            // 
-            this.entreCours.AutoSize = true;
-            this.entreCours.ForeColor = System.Drawing.Color.Black;
-            this.entreCours.Location = new System.Drawing.Point(63, 20);
-            this.entreCours.Name = "entreCours";
-            this.entreCours.Size = new System.Drawing.Size(66, 17);
-            this.entreCours.TabIndex = 1;
-            this.entreCours.TabStop = true;
-            this.entreCours.Text = "En cours";
-            this.entreCours.UseVisualStyleBackColor = true;
-            // 
-            // entreNorme
-            // 
-            this.entreNorme.AutoSize = true;
-            this.entreNorme.ForeColor = System.Drawing.Color.Black;
-            this.entreNorme.Location = new System.Drawing.Point(3, 20);
-            this.entreNorme.Name = "entreNorme";
-            this.entreNorme.Size = new System.Drawing.Size(58, 17);
-            this.entreNorme.TabIndex = 0;
-            this.entreNorme.TabStop = true;
-            this.entreNorme.Text = "Normal";
-            this.entreNorme.UseVisualStyleBackColor = true;
             // 
             // verifBox
             // 
             this.verifBox.Controls.Add(this.verifFini);
             this.verifBox.Controls.Add(this.verifCours);
             this.verifBox.Controls.Add(this.verifNorme);
-            this.verifBox.Location = new System.Drawing.Point(7, 113);
+            this.verifBox.Location = new System.Drawing.Point(425, 289);
             this.verifBox.Name = "verifBox";
             this.verifBox.Size = new System.Drawing.Size(169, 48);
             this.verifBox.TabIndex = 9;
@@ -1638,12 +1585,12 @@
             // 
             this.verifNorme.AutoSize = true;
             this.verifNorme.ForeColor = System.Drawing.Color.Black;
-            this.verifNorme.Location = new System.Drawing.Point(3, 20);
+            this.verifNorme.Location = new System.Drawing.Point(9, 20);
             this.verifNorme.Name = "verifNorme";
-            this.verifNorme.Size = new System.Drawing.Size(58, 17);
+            this.verifNorme.Size = new System.Drawing.Size(42, 17);
             this.verifNorme.TabIndex = 0;
             this.verifNorme.TabStop = true;
-            this.verifNorme.Text = "Normal";
+            this.verifNorme.Text = "R.S";
             this.verifNorme.UseVisualStyleBackColor = true;
             // 
             // placeBox
@@ -1651,7 +1598,7 @@
             this.placeBox.Controls.Add(this.placeFini);
             this.placeBox.Controls.Add(this.placeCours);
             this.placeBox.Controls.Add(this.placeNorme);
-            this.placeBox.Location = new System.Drawing.Point(8, 64);
+            this.placeBox.Location = new System.Drawing.Point(13, 80);
             this.placeBox.Name = "placeBox";
             this.placeBox.Size = new System.Drawing.Size(168, 48);
             this.placeBox.TabIndex = 7;
@@ -1688,15 +1635,15 @@
             this.placeNorme.ForeColor = System.Drawing.Color.Black;
             this.placeNorme.Location = new System.Drawing.Point(5, 20);
             this.placeNorme.Name = "placeNorme";
-            this.placeNorme.Size = new System.Drawing.Size(58, 17);
+            this.placeNorme.Size = new System.Drawing.Size(42, 17);
             this.placeNorme.TabIndex = 0;
             this.placeNorme.TabStop = true;
-            this.placeNorme.Text = "Normal";
+            this.placeNorme.Text = "R.S";
             this.placeNorme.UseVisualStyleBackColor = true;
             // 
             // checkPrior
             // 
-            this.checkPrior.Location = new System.Drawing.Point(10, 164);
+            this.checkPrior.Location = new System.Drawing.Point(426, 394);
             this.checkPrior.Name = "checkPrior";
             this.checkPrior.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkPrior.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
@@ -1792,7 +1739,7 @@
             this.panelAvDern.Controls.Add(this.rienButton);
             this.panelAvDern.Controls.Add(this.chkArret);
             this.panelAvDern.Controls.Add(this.chkEpuise);
-            this.panelAvDern.Location = new System.Drawing.Point(550, 243);
+            this.panelAvDern.Location = new System.Drawing.Point(774, 249);
             this.panelAvDern.Name = "panelAvDern";
             this.panelAvDern.Size = new System.Drawing.Size(305, 34);
             this.panelAvDern.TabIndex = 8;
@@ -1837,13 +1784,14 @@
             // 
             // visibleBox
             // 
+            this.visibleBox.BackColor = System.Drawing.Color.Gainsboro;
             this.visibleBox.Controls.Add(this.radioStop);
             this.visibleBox.Controls.Add(this.radioHaute);
             this.visibleBox.Controls.Add(this.radioMoyen);
             this.visibleBox.Controls.Add(this.radioBas);
-            this.visibleBox.Location = new System.Drawing.Point(13, 13);
+            this.visibleBox.Location = new System.Drawing.Point(425, 243);
             this.visibleBox.Name = "visibleBox";
-            this.visibleBox.Size = new System.Drawing.Size(342, 43);
+            this.visibleBox.Size = new System.Drawing.Size(342, 44);
             this.visibleBox.TabIndex = 4;
             this.visibleBox.TabStop = false;
             this.visibleBox.Text = "Invisibilité";
@@ -1875,7 +1823,7 @@
             // radioMoyen
             // 
             this.radioMoyen.AutoSize = true;
-            this.radioMoyen.Location = new System.Drawing.Point(83, 19);
+            this.radioMoyen.Location = new System.Drawing.Point(58, 19);
             this.radioMoyen.Name = "radioMoyen";
             this.radioMoyen.Size = new System.Drawing.Size(68, 17);
             this.radioMoyen.TabIndex = 1;
@@ -1995,7 +1943,7 @@
             this.cadreNew.LookAndFeel.SkinName = "Office 2013";
             this.cadreNew.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadreNew.Name = "cadreNew";
-            this.cadreNew.Size = new System.Drawing.Size(950, 160);
+            this.cadreNew.Size = new System.Drawing.Size(1016, 160);
             this.cadreNew.TabIndex = 13;
             // 
             // D7
@@ -2186,7 +2134,7 @@
             // 
             this.distObs.Location = new System.Drawing.Point(600, 110);
             this.distObs.Name = "distObs";
-            this.distObs.Size = new System.Drawing.Size(300, 20);
+            this.distObs.Size = new System.Drawing.Size(382, 20);
             this.distObs.TabIndex = 35;
             // 
             // D4
@@ -2219,7 +2167,7 @@
             // 
             this.L3.Location = new System.Drawing.Point(599, 80);
             this.L3.Name = "L3";
-            this.L3.Size = new System.Drawing.Size(300, 20);
+            this.L3.Size = new System.Drawing.Size(397, 20);
             this.L3.TabIndex = 30;
             // 
             // D3
@@ -2269,7 +2217,7 @@
             // 
             this.L2.Location = new System.Drawing.Point(599, 50);
             this.L2.Name = "L2";
-            this.L2.Size = new System.Drawing.Size(300, 20);
+            this.L2.Size = new System.Drawing.Size(397, 20);
             this.L2.TabIndex = 23;
             // 
             // D2
@@ -2334,7 +2282,7 @@
             // 
             this.L1.Location = new System.Drawing.Point(599, 25);
             this.L1.Name = "L1";
-            this.L1.Size = new System.Drawing.Size(300, 20);
+            this.L1.Size = new System.Drawing.Size(397, 20);
             this.L1.TabIndex = 16;
             // 
             // D1
@@ -2351,33 +2299,20 @@
             this.D1.Size = new System.Drawing.Size(90, 20);
             this.D1.TabIndex = 15;
             // 
-            // panelControl1
-            // 
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.checkPrior);
-            this.panelControl1.Controls.Add(this.prixBox);
-            this.panelControl1.Controls.Add(this.placeBox);
-            this.panelControl1.Controls.Add(this.verifBox);
-            this.panelControl1.Controls.Add(this.groupBox2);
-            this.panelControl1.Controls.Add(this.visibleBox);
-            this.panelControl1.Location = new System.Drawing.Point(970, 247);
-            this.panelControl1.LookAndFeel.SkinName = "Office 2013";
-            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(368, 190);
-            this.panelControl1.TabIndex = 14;
-            // 
             // XtraRegBonus
             // 
             this.AcceptButton = this.creer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
-            this.ClientSize = new System.Drawing.Size(1392, 667);
+            this.ClientSize = new System.Drawing.Size(1109, 667);
+            this.Controls.Add(this.checkPrior);
             this.Controls.Add(this.prodRq);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.prixBox);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.verifBox);
             this.Controls.Add(this.reponse);
+            this.Controls.Add(this.visibleBox);
             this.Controls.Add(this.cadreNew);
             this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.Q5);
@@ -2458,8 +2393,6 @@
             this.dernier.ResumeLayout(false);
             this.prixBox.ResumeLayout(false);
             this.prixBox.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.verifBox.ResumeLayout(false);
             this.verifBox.PerformLayout();
             this.placeBox.ResumeLayout(false);
@@ -2509,8 +2442,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.L1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2627,10 +2558,6 @@
         private System.Windows.Forms.RadioButton prixFini;
         private System.Windows.Forms.RadioButton prixCours;
         private System.Windows.Forms.RadioButton prixNorme;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton entreFini;
-        private System.Windows.Forms.RadioButton entreCours;
-        private System.Windows.Forms.RadioButton entreNorme;
         private System.Windows.Forms.GroupBox verifBox;
         private System.Windows.Forms.RadioButton verifFini;
         private System.Windows.Forms.RadioButton verifCours;
@@ -2685,7 +2612,6 @@
         private System.Windows.Forms.CheckBox C2;
         private System.Windows.Forms.CheckBox C4;
         private System.Windows.Forms.CheckBox C3;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.TextEdit Q6;
         private System.Windows.Forms.CheckBox C5;
         private DevExpress.XtraEditors.TextEdit H6;

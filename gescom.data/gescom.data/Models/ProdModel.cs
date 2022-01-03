@@ -104,7 +104,7 @@ namespace gescom.data.Models
             foreach (var item in liste)
             {
                 var oper = OperationHelpers.Get(item.Ndx);
-                var qte = oper.QStock;
+                var qte = (float)oper.QStock;
                 if (qte > 0) repo.UpdateAuto(item.Ndx, qte);
             }
         }

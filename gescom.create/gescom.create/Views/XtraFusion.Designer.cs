@@ -41,12 +41,12 @@
             this.dernier = new DevExpress.XtraEditors.PanelControl();
             this.checkVerif = new DevExpress.XtraEditors.CheckEdit();
             this.checkPlace = new DevExpress.XtraEditors.CheckEdit();
-            this.C4 = new DevExpress.XtraEditors.CheckEdit();
             this.checkPrior = new DevExpress.XtraEditors.CheckEdit();
-            this.C5 = new DevExpress.XtraEditors.CheckEdit();
             this.checkPrix = new DevExpress.XtraEditors.CheckEdit();
             this.fermer = new DevExpress.XtraEditors.SimpleButton();
             this.creer = new DevExpress.XtraEditors.SimpleButton();
+            this.C4 = new DevExpress.XtraEditors.CheckEdit();
+            this.C5 = new DevExpress.XtraEditors.CheckEdit();
             this.tete = new DevExpress.XtraEditors.PanelControl();
             this.d2 = new DevExpress.XtraEditors.LabelControl();
             this.labelCompte = new DevExpress.XtraEditors.LabelControl();
@@ -58,12 +58,13 @@
             this.nombre = new DevExpress.XtraEditors.LabelControl();
             this.labelNums = new DevExpress.XtraEditors.LabelControl();
             this.groupArriv = new DevExpress.XtraEditors.GroupControl();
-            this.cumDispo = new DevExpress.XtraEditors.LabelControl();
-            this.labom = new DevExpress.XtraEditors.LabelControl();
+            this.H6N = new DevExpress.XtraEditors.LabelControl();
             this.H6 = new DevExpress.XtraEditors.SpinEdit();
             this.labelPhys = new DevExpress.XtraEditors.LabelControl();
             this.labelrepo = new DevExpress.XtraEditors.LabelControl();
             this.s1 = new DevExpress.XtraEditors.TextEdit();
+            this.cumDispo = new DevExpress.XtraEditors.LabelControl();
+            this.labom = new DevExpress.XtraEditors.LabelControl();
             this.cadre = new DevExpress.XtraEditors.PanelControl();
             this.secondPlace = new DevExpress.XtraEditors.TextEdit();
             this.distNewPlace = new DevExpress.XtraEditors.LabelControl();
@@ -73,21 +74,21 @@
             this.labelUnite = new DevExpress.XtraEditors.LabelControl();
             this.labelRef = new DevExpress.XtraEditors.LabelControl();
             this.groupInterne = new DevExpress.XtraEditors.GroupControl();
+            this.H4N = new DevExpress.XtraEditors.LabelControl();
+            this.Q4 = new DevExpress.XtraEditors.LabelControl();
             this.labInterne = new DevExpress.XtraEditors.LabelControl();
             this.H4 = new DevExpress.XtraEditors.SpinEdit();
             this.labelphi = new DevExpress.XtraEditors.LabelControl();
-            this.Q4 = new DevExpress.XtraEditors.LabelControl();
-            this.H6N = new DevExpress.XtraEditors.LabelControl();
-            this.H4N = new DevExpress.XtraEditors.LabelControl();
+            this.unitCtrl = new DevExpress.XtraEditors.LabelControl();
             this.ultrainfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dernier)).BeginInit();
             this.dernier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkVerif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPlace.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrix.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupArriv)).BeginInit();
@@ -185,9 +186,9 @@
             // 
             this.labelarriv.Location = new System.Drawing.Point(10, 48);
             this.labelarriv.Name = "labelarriv";
-            this.labelarriv.Size = new System.Drawing.Size(85, 13);
+            this.labelarriv.Size = new System.Drawing.Size(42, 13);
             this.labelarriv.TabIndex = 3;
-            this.labelarriv.Text = "Quantité arrivage";
+            this.labelarriv.Text = "Quantité";
             // 
             // dernier
             // 
@@ -219,19 +220,6 @@
             this.checkPlace.Size = new System.Drawing.Size(52, 19);
             this.checkPlace.TabIndex = 25;
             // 
-            // C4
-            // 
-            this.C4.Enabled = false;
-            this.C4.Location = new System.Drawing.Point(8, 22);
-            this.C4.Name = "C4";
-            this.C4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C4.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.C4.Properties.Appearance.Options.UseFont = true;
-            this.C4.Properties.Appearance.Options.UseForeColor = true;
-            this.C4.Properties.Caption = "Entrée arrivage";
-            this.C4.Size = new System.Drawing.Size(120, 20);
-            this.C4.TabIndex = 24;
-            // 
             // checkPrior
             // 
             this.checkPrior.Location = new System.Drawing.Point(118, 7);
@@ -243,19 +231,6 @@
             this.checkPrior.Properties.Caption = "Immédiat";
             this.checkPrior.Size = new System.Drawing.Size(66, 19);
             this.checkPrior.TabIndex = 23;
-            // 
-            // C5
-            // 
-            this.C5.Enabled = false;
-            this.C5.Location = new System.Drawing.Point(6, 25);
-            this.C5.Name = "C5";
-            this.C5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C5.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.C5.Properties.Appearance.Options.UseFont = true;
-            this.C5.Properties.Appearance.Options.UseForeColor = true;
-            this.C5.Properties.Caption = "Entrée interne";
-            this.C5.Size = new System.Drawing.Size(112, 19);
-            this.C5.TabIndex = 22;
             // 
             // checkPrix
             // 
@@ -290,6 +265,32 @@
             this.creer.ToolTip = "Modifier l\'article en cours.";
             this.creer.Click += new System.EventHandler(this.creer_Click);
             // 
+            // C4
+            // 
+            this.C4.Enabled = false;
+            this.C4.Location = new System.Drawing.Point(8, 22);
+            this.C4.Name = "C4";
+            this.C4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C4.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.C4.Properties.Appearance.Options.UseFont = true;
+            this.C4.Properties.Appearance.Options.UseForeColor = true;
+            this.C4.Properties.Caption = "Entrée arrivage";
+            this.C4.Size = new System.Drawing.Size(120, 20);
+            this.C4.TabIndex = 24;
+            // 
+            // C5
+            // 
+            this.C5.Enabled = false;
+            this.C5.Location = new System.Drawing.Point(6, 25);
+            this.C5.Name = "C5";
+            this.C5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C5.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.C5.Properties.Appearance.Options.UseFont = true;
+            this.C5.Properties.Appearance.Options.UseForeColor = true;
+            this.C5.Properties.Caption = "Entrée interne";
+            this.C5.Size = new System.Drawing.Size(112, 19);
+            this.C5.TabIndex = 22;
+            // 
             // tete
             // 
             this.tete.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -314,7 +315,7 @@
             this.d2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.d2.Appearance.Options.UseFont = true;
             this.d2.Appearance.Options.UseForeColor = true;
-            this.d2.Location = new System.Drawing.Point(355, 60);
+            this.d2.Location = new System.Drawing.Point(335, 60);
             this.d2.Name = "d2";
             this.d2.Size = new System.Drawing.Size(7, 13);
             this.d2.TabIndex = 9;
@@ -322,7 +323,7 @@
             // 
             // labelCompte
             // 
-            this.labelCompte.Location = new System.Drawing.Point(266, 60);
+            this.labelCompte.Location = new System.Drawing.Point(251, 60);
             this.labelCompte.Name = "labelCompte";
             this.labelCompte.Size = new System.Drawing.Size(73, 13);
             this.labelCompte.TabIndex = 8;
@@ -417,27 +418,15 @@
             this.groupArriv.Size = new System.Drawing.Size(524, 124);
             this.groupArriv.TabIndex = 6;
             // 
-            // cumDispo
+            // H6N
             // 
-            this.cumDispo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cumDispo.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cumDispo.Appearance.Options.UseFont = true;
-            this.cumDispo.Appearance.Options.UseForeColor = true;
-            this.cumDispo.Location = new System.Drawing.Point(474, 233);
-            this.cumDispo.Name = "cumDispo";
-            this.cumDispo.Size = new System.Drawing.Size(15, 29);
-            this.cumDispo.TabIndex = 14;
-            this.cumDispo.Text = "0";
-            // 
-            // labom
-            // 
-            this.labom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labom.Appearance.Options.UseFont = true;
-            this.labom.Location = new System.Drawing.Point(366, 242);
-            this.labom.Name = "labom";
-            this.labom.Size = new System.Drawing.Size(58, 13);
-            this.labom.TabIndex = 13;
-            this.labom.Text = "Disponible";
+            this.H6N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.H6N.Appearance.Options.UseFont = true;
+            this.H6N.Location = new System.Drawing.Point(239, 73);
+            this.H6N.Name = "H6N";
+            this.H6N.Size = new System.Drawing.Size(22, 13);
+            this.H6N.TabIndex = 23;
+            this.H6N.Text = "H6N";
             // 
             // H6
             // 
@@ -480,6 +469,29 @@
             this.s1.Name = "s1";
             this.s1.Size = new System.Drawing.Size(388, 20);
             this.s1.TabIndex = 2;
+            // 
+            // cumDispo
+            // 
+            this.cumDispo.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cumDispo.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cumDispo.Appearance.Options.UseFont = true;
+            this.cumDispo.Appearance.Options.UseForeColor = true;
+            this.cumDispo.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.cumDispo.Location = new System.Drawing.Point(402, 208);
+            this.cumDispo.Name = "cumDispo";
+            this.cumDispo.Size = new System.Drawing.Size(12, 23);
+            this.cumDispo.TabIndex = 14;
+            this.cumDispo.Text = "0";
+            // 
+            // labom
+            // 
+            this.labom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labom.Appearance.Options.UseFont = true;
+            this.labom.Location = new System.Drawing.Point(287, 216);
+            this.labom.Name = "labom";
+            this.labom.Size = new System.Drawing.Size(58, 13);
+            this.labom.TabIndex = 13;
+            this.labom.Text = "Disponible";
             // 
             // cadre
             // 
@@ -580,16 +592,36 @@
             this.groupInterne.Controls.Add(this.labelphi);
             this.groupInterne.Location = new System.Drawing.Point(3, 190);
             this.groupInterne.Name = "groupInterne";
-            this.groupInterne.Size = new System.Drawing.Size(336, 92);
+            this.groupInterne.Size = new System.Drawing.Size(277, 92);
             this.groupInterne.TabIndex = 11;
+            // 
+            // H4N
+            // 
+            this.H4N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.H4N.Appearance.Options.UseFont = true;
+            this.H4N.Location = new System.Drawing.Point(241, 72);
+            this.H4N.Name = "H4N";
+            this.H4N.Size = new System.Drawing.Size(22, 13);
+            this.H4N.TabIndex = 25;
+            this.H4N.Text = "H4N";
+            // 
+            // Q4
+            // 
+            this.Q4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Q4.Appearance.Options.UseFont = true;
+            this.Q4.Location = new System.Drawing.Point(161, 43);
+            this.Q4.Name = "Q4";
+            this.Q4.Size = new System.Drawing.Size(15, 13);
+            this.Q4.TabIndex = 23;
+            this.Q4.Text = "Q4";
             // 
             // labInterne
             // 
             this.labInterne.Location = new System.Drawing.Point(10, 48);
             this.labInterne.Name = "labInterne";
-            this.labInterne.Size = new System.Drawing.Size(79, 13);
+            this.labInterne.Size = new System.Drawing.Size(42, 13);
             this.labInterne.TabIndex = 3;
-            this.labInterne.Text = "Quantité interne";
+            this.labInterne.Text = "Quantité";
             // 
             // H4
             // 
@@ -618,41 +650,25 @@
             this.labelphi.TabIndex = 7;
             this.labelphi.Text = "Quantité physique";
             // 
-            // Q4
+            // unitCtrl
             // 
-            this.Q4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Q4.Appearance.Options.UseFont = true;
-            this.Q4.Location = new System.Drawing.Point(161, 43);
-            this.Q4.Name = "Q4";
-            this.Q4.Size = new System.Drawing.Size(15, 13);
-            this.Q4.TabIndex = 23;
-            this.Q4.Text = "Q4";
-            // 
-            // H6N
-            // 
-            this.H6N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H6N.Appearance.Options.UseFont = true;
-            this.H6N.Location = new System.Drawing.Point(239, 73);
-            this.H6N.Name = "H6N";
-            this.H6N.Size = new System.Drawing.Size(22, 13);
-            this.H6N.TabIndex = 23;
-            this.H6N.Text = "H6N";
-            // 
-            // H4N
-            // 
-            this.H4N.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H4N.Appearance.Options.UseFont = true;
-            this.H4N.Location = new System.Drawing.Point(241, 72);
-            this.H4N.Name = "H4N";
-            this.H4N.Size = new System.Drawing.Size(22, 13);
-            this.H4N.TabIndex = 25;
-            this.H4N.Text = "H4N";
+            this.unitCtrl.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitCtrl.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.unitCtrl.Appearance.Options.UseFont = true;
+            this.unitCtrl.Appearance.Options.UseForeColor = true;
+            this.unitCtrl.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.unitCtrl.Location = new System.Drawing.Point(391, 235);
+            this.unitCtrl.Name = "unitCtrl";
+            this.unitCtrl.Size = new System.Drawing.Size(35, 16);
+            this.unitCtrl.TabIndex = 15;
+            this.unitCtrl.Text = "UNITE";
             // 
             // XtraFusion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 548);
+            this.Controls.Add(this.unitCtrl);
             this.Controls.Add(this.cumDispo);
             this.Controls.Add(this.groupInterne);
             this.Controls.Add(this.cadre);
@@ -674,10 +690,10 @@
             this.dernier.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkVerif.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPlace.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrior.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkPrix.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).EndInit();
             this.tete.ResumeLayout(false);
             this.tete.PerformLayout();
@@ -751,5 +767,6 @@
         private DevExpress.XtraEditors.LabelControl Q4;
         private DevExpress.XtraEditors.LabelControl H6N;
         private DevExpress.XtraEditors.LabelControl H4N;
+        private DevExpress.XtraEditors.LabelControl unitCtrl;
     }
 }

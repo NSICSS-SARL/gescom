@@ -66,3 +66,11 @@ C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.public\gescom.pub
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.public\gescom.public\obj\Debug\gescom.public.Properties.Resources.resources
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.public\gescom.public\obj\Debug\gescom.public.csproj.GenerateResource.Cache
 C:\Users\Patdimby\Documents\Visual Studio 2015\Projects\gescom.public\gescom.public\obj\Debug\gescom.@public.exe.licenses
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.public.FrmPublic.resources
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.public.Properties.Resources.resources
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.public.csproj.GenerateResource.cache
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.@public.exe.licenses
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.public.csproj.CoreCompileInputs.cache
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.public.csproj.CopyComplete
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.@public.exe
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.public\gescom.public\obj\Debug\gescom.@public.pdb

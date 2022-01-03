@@ -50,3 +50,12 @@ C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.back
 C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.backup\gescom.backup\obj\Debug\gescom.backup.exe.licenses
 C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.backup\gescom.backup\obj\Debug\gescom.backup.exe
 C:\Users\patdimby.PHOTO104.001\Documents\Visual Studio 2015\Projects\gescom.backup\gescom.backup\obj\Debug\gescom.backup.pdb
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.csproj.AssemblyReference.cache
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.FrmBackup.resources
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.Properties.Resources.resources
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.csproj.GenerateResource.cache
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.exe.licenses
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.csproj.CoreCompileInputs.cache
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.csproj.CopyComplete
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.exe
+C:\Users\patdimby\Documents\GitHub\gescom\gescom.backup\gescom.backup\obj\Debug\gescom.backup.pdb

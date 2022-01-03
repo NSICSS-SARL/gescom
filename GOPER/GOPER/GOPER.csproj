@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>emblem_money.ico</ApplicationIcon>
+    <ApplicationIcon>man_black.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>GOPER.Program</StartupObject>
@@ -178,7 +178,9 @@
   <ItemGroup>
     <Content Include="coins%281%29.ico" />
     <Content Include="coins.ico" />
+    <Content Include="command.ico" />
     <Content Include="emblem_money.ico" />
+    <Content Include="man_black.ico" />
     <Content Include="personal.ico" />
     <Content Include="personal_256.ico" />
     <Content Include="stats.ico" />

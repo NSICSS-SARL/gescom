@@ -230,4 +230,3 @@ C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debu
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.CopyComplete
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.dll
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.pdb
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.printer\gescom.printer\obj\Debug\gescom.printer.csproj.AssemblyReference.cache

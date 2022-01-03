@@ -13,7 +13,7 @@ namespace GOPER
                 if (app.IsRunning()) return;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm(3));
+                Application.Run(new MainForm(1));
             }
         }
     }

@@ -8,16 +8,14 @@ namespace GOPER
     {
         public MainForm()
         {
-            InitializeComponent();           
-            comptage.Enabled = false;
+            InitializeComponent();
             Init(1);
             CreateHelpers.Init();
         }
 
         public MainForm(int index)
         {
-            InitializeComponent();
-            comptage.Enabled = false;
+            InitializeComponent();            
             Init(index);
             CreateHelpers.Init();
         }
@@ -61,16 +59,12 @@ namespace GOPER
             switch (index)
             {
                 case 2:
-                    Text = @"INVENTAIRE COMPTAGE";
-                    comptage.Enabled = true;
+                    Text = @"INVENTAIRE COMPTAGE";                   
                     break;
 
                 case 3:
-                    Text = @"ADJOINTE";
-                    comptage.Enabled = true;
-                    barVueCaisse.Enabled = true;
-                    vente.Enabled = true;
-                    encaisse.Enabled = true;
+                    Text = @"ADJOINTE";                
+                    vente.Enabled = true;                  
                     vente.Caption = @"VENTE";
                     break;
 

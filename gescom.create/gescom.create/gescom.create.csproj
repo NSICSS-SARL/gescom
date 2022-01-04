@@ -192,12 +192,6 @@
     <Compile Include="Views\ListState.Designer.cs">
       <DependentUpon>ListState.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\XtraAnalyse.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\XtraAnalyse.Designer.cs">
-      <DependentUpon>XtraAnalyse.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\XtraArticle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -408,9 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ListState.resx">
       <DependentUpon>ListState.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\XtraAnalyse.resx">
-      <DependentUpon>XtraAnalyse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\XtraArticle.resx">
       <DependentUpon>XtraArticle.cs</DependentUpon>

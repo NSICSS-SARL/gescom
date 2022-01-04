@@ -128,7 +128,7 @@ namespace GBASE
 
         private void buttonNormal_ItemClick(object sender, ItemClickEventArgs e)
         {
-            CreateHelpers.ShowFormels();
+           // CreateHelpers.ShowFormels();
         }
 
         private void destockBtn_ItemClick(object sender, ItemClickEventArgs e)

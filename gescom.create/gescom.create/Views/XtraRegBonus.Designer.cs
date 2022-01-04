@@ -93,6 +93,7 @@
             this.labelAch = new DevExpress.XtraEditors.LabelControl();
             this.labelCof = new DevExpress.XtraEditors.LabelControl();
             this.prodCadre = new DevExpress.XtraEditors.PanelControl();
+            this.labelPass = new DevExpress.XtraEditors.LabelControl();
             this.katalog = new DevExpress.XtraEditors.TextEdit();
             this.distLabelObs = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -203,7 +204,6 @@
             this.Q2 = new DevExpress.XtraEditors.TextEdit();
             this.L1 = new DevExpress.XtraEditors.TextEdit();
             this.D1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelPass = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
@@ -316,7 +316,7 @@
             this.tete.LookAndFeel.SkinName = "Office 2013";
             this.tete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tete.Name = "tete";
-            this.tete.Size = new System.Drawing.Size(1109, 52);
+            this.tete.Size = new System.Drawing.Size(1090, 52);
             this.tete.TabIndex = 0;
             // 
             // DateVente
@@ -595,7 +595,7 @@
             // 
             // formel
             // 
-            this.formel.Location = new System.Drawing.Point(242, 97);
+            this.formel.Location = new System.Drawing.Point(235, 97);
             this.formel.Name = "formel";
             this.formel.Properties.Caption = "&Formel";
             this.formel.Size = new System.Drawing.Size(60, 20);
@@ -606,7 +606,7 @@
             // 
             // taxable
             // 
-            this.taxable.Location = new System.Drawing.Point(303, 97);
+            this.taxable.Location = new System.Drawing.Point(296, 97);
             this.taxable.Name = "taxable";
             this.taxable.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxable.Properties.Appearance.Options.UseFont = true;
@@ -1126,20 +1126,28 @@
             this.prodCadre.Location = new System.Drawing.Point(550, 51);
             this.prodCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.prodCadre.Name = "prodCadre";
-            this.prodCadre.Size = new System.Drawing.Size(560, 191);
+            this.prodCadre.Size = new System.Drawing.Size(547, 191);
             this.prodCadre.TabIndex = 2;
+            // 
+            // labelPass
+            // 
+            this.labelPass.Location = new System.Drawing.Point(9, 77);
+            this.labelPass.Name = "labelPass";
+            this.labelPass.Size = new System.Drawing.Size(25, 13);
+            this.labelPass.TabIndex = 20;
+            this.labelPass.Text = "PASS";
             // 
             // katalog
             // 
-            this.katalog.Location = new System.Drawing.Point(78, 50);
+            this.katalog.Location = new System.Drawing.Point(73, 50);
             this.katalog.Name = "katalog";
-            this.katalog.Size = new System.Drawing.Size(477, 20);
+            this.katalog.Size = new System.Drawing.Size(464, 20);
             this.katalog.TabIndex = 2;
             this.katalog.ToolTip = "Référence produit du fournisseur";
             // 
             // distLabelObs
             // 
-            this.distLabelObs.Location = new System.Drawing.Point(9, 171);
+            this.distLabelObs.Location = new System.Drawing.Point(5, 168);
             this.distLabelObs.Name = "distLabelObs";
             this.distLabelObs.Size = new System.Drawing.Size(59, 13);
             this.distLabelObs.TabIndex = 19;
@@ -1147,7 +1155,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(14, 54);
+            this.labelControl13.Location = new System.Drawing.Point(9, 54);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(49, 13);
             this.labelControl13.TabIndex = 16;
@@ -1155,14 +1163,14 @@
             // 
             // b2
             // 
-            this.b2.Location = new System.Drawing.Point(78, 166);
+            this.b2.Location = new System.Drawing.Point(72, 166);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(442, 20);
+            this.b2.Size = new System.Drawing.Size(465, 20);
             this.b2.TabIndex = 1;
             // 
             // prodDesk
             // 
-            this.prodDesk.Location = new System.Drawing.Point(79, 73);
+            this.prodDesk.Location = new System.Drawing.Point(74, 73);
             this.prodDesk.Name = "prodDesk";
             this.prodDesk.Size = new System.Drawing.Size(189, 20);
             this.prodDesk.TabIndex = 4;
@@ -1172,14 +1180,14 @@
             this.prodVend.DisplayMember = "NOM";
             this.prodVend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prodVend.FormattingEnabled = true;
-            this.prodVend.Location = new System.Drawing.Point(77, 98);
+            this.prodVend.Location = new System.Drawing.Point(74, 98);
             this.prodVend.Name = "prodVend";
             this.prodVend.Size = new System.Drawing.Size(292, 21);
             this.prodVend.TabIndex = 6;
             // 
             // prodLabelS
             // 
-            this.prodLabelS.Location = new System.Drawing.Point(14, 104);
+            this.prodLabelS.Location = new System.Drawing.Point(9, 102);
             this.prodLabelS.Name = "prodLabelS";
             this.prodLabelS.Size = new System.Drawing.Size(56, 13);
             this.prodLabelS.TabIndex = 12;
@@ -1196,25 +1204,25 @@
             // 
             // distRemark
             // 
-            this.distRemark.Location = new System.Drawing.Point(76, 143);
+            this.distRemark.Location = new System.Drawing.Point(71, 143);
             this.distRemark.Name = "distRemark";
-            this.distRemark.Size = new System.Drawing.Size(444, 20);
+            this.distRemark.Size = new System.Drawing.Size(466, 20);
             this.distRemark.TabIndex = 0;
             this.distRemark.ToolTip = "Nom commun connu du client.";
             // 
             // prodRefce
             // 
-            this.prodRefce.Location = new System.Drawing.Point(79, 27);
+            this.prodRefce.Location = new System.Drawing.Point(74, 27);
             this.prodRefce.Name = "prodRefce";
-            this.prodRefce.Size = new System.Drawing.Size(477, 20);
+            this.prodRefce.Size = new System.Drawing.Size(463, 20);
             this.prodRefce.TabIndex = 1;
             this.prodRefce.ToolTip = "Référence produit du fournisseur";
             // 
             // prodNom
             // 
-            this.prodNom.Location = new System.Drawing.Point(78, 4);
+            this.prodNom.Location = new System.Drawing.Point(73, 4);
             this.prodNom.Name = "prodNom";
-            this.prodNom.Size = new System.Drawing.Size(477, 20);
+            this.prodNom.Size = new System.Drawing.Size(464, 20);
             this.prodNom.TabIndex = 0;
             this.prodNom.ToolTip = "Nom ou désignation produit chez le fournisseur.";
             // 
@@ -1224,9 +1232,9 @@
             this.groupBleu.Controls.Add(this.radioRS);
             this.groupBleu.Controls.Add(this.radioRupt);
             this.groupBleu.Controls.Add(this.radioPuise);
-            this.groupBleu.Location = new System.Drawing.Point(378, 72);
+            this.groupBleu.Location = new System.Drawing.Point(371, 71);
             this.groupBleu.Name = "groupBleu";
-            this.groupBleu.Size = new System.Drawing.Size(178, 69);
+            this.groupBleu.Size = new System.Drawing.Size(166, 65);
             this.groupBleu.TabIndex = 4;
             this.groupBleu.TabStop = false;
             this.groupBleu.Text = "SITUATIONS P/FOURNISSEUR";
@@ -1279,7 +1287,7 @@
             // 
             // distLabelNom
             // 
-            this.distLabelNom.Location = new System.Drawing.Point(8, 145);
+            this.distLabelNom.Location = new System.Drawing.Point(5, 146);
             this.distLabelNom.Name = "distLabelNom";
             this.distLabelNom.Size = new System.Drawing.Size(63, 13);
             this.distLabelNom.TabIndex = 0;
@@ -1287,7 +1295,7 @@
             // 
             // prodLabelRef
             // 
-            this.prodLabelRef.Location = new System.Drawing.Point(13, 32);
+            this.prodLabelRef.Location = new System.Drawing.Point(8, 32);
             this.prodLabelRef.Name = "prodLabelRef";
             this.prodLabelRef.Size = new System.Drawing.Size(50, 13);
             this.prodLabelRef.TabIndex = 9;
@@ -1295,7 +1303,7 @@
             // 
             // prodLabelNom
             // 
-            this.prodLabelNom.Location = new System.Drawing.Point(13, 6);
+            this.prodLabelNom.Location = new System.Drawing.Point(8, 6);
             this.prodLabelNom.Name = "prodLabelNom";
             this.prodLabelNom.Size = new System.Drawing.Size(61, 13);
             this.prodLabelNom.TabIndex = 8;
@@ -1377,7 +1385,7 @@
             this.distCadre.Location = new System.Drawing.Point(616, 289);
             this.distCadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.distCadre.Name = "distCadre";
-            this.distCadre.Size = new System.Drawing.Size(398, 137);
+            this.distCadre.Size = new System.Drawing.Size(383, 137);
             this.distCadre.TabIndex = 6;
             // 
             // placeBox
@@ -1519,7 +1527,7 @@
             this.dernier.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dernier.Location = new System.Drawing.Point(0, 637);
             this.dernier.Name = "dernier";
-            this.dernier.Size = new System.Drawing.Size(1109, 30);
+            this.dernier.Size = new System.Drawing.Size(1090, 30);
             this.dernier.TabIndex = 9;
             // 
             // annuler
@@ -1659,7 +1667,7 @@
             // 
             this.reponse.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reponse.Appearance.Options.UseFont = true;
-            this.reponse.Location = new System.Drawing.Point(638, 600);
+            this.reponse.Location = new System.Drawing.Point(603, 601);
             this.reponse.Name = "reponse";
             this.reponse.Size = new System.Drawing.Size(20, 13);
             this.reponse.TabIndex = 22;
@@ -1748,7 +1756,7 @@
             // 
             // chkCommande
             // 
-            this.chkCommande.Location = new System.Drawing.Point(67, 7);
+            this.chkCommande.Location = new System.Drawing.Point(67, 3);
             this.chkCommande.Name = "chkCommande";
             this.chkCommande.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCommande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -1760,7 +1768,7 @@
             // 
             // rienButton
             // 
-            this.rienButton.Location = new System.Drawing.Point(10, 11);
+            this.rienButton.Location = new System.Drawing.Point(10, 6);
             this.rienButton.Name = "rienButton";
             this.rienButton.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.rienButton.Properties.Appearance.Options.UseForeColor = true;
@@ -1770,7 +1778,7 @@
             // 
             // chkArret
             // 
-            this.chkArret.Location = new System.Drawing.Point(245, 10);
+            this.chkArret.Location = new System.Drawing.Point(236, 6);
             this.chkArret.Name = "chkArret";
             this.chkArret.Properties.Caption = "Stopper";
             this.chkArret.Size = new System.Drawing.Size(63, 19);
@@ -1778,7 +1786,7 @@
             // 
             // chkEpuise
             // 
-            this.chkEpuise.Location = new System.Drawing.Point(150, 10);
+            this.chkEpuise.Location = new System.Drawing.Point(150, 6);
             this.chkEpuise.Name = "chkEpuise";
             this.chkEpuise.Properties.Caption = "En rupture";
             this.chkEpuise.Size = new System.Drawing.Size(75, 19);
@@ -1945,7 +1953,7 @@
             this.cadreNew.LookAndFeel.SkinName = "Office 2013";
             this.cadreNew.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadreNew.Name = "cadreNew";
-            this.cadreNew.Size = new System.Drawing.Size(1016, 160);
+            this.cadreNew.Size = new System.Drawing.Size(1001, 160);
             this.cadreNew.TabIndex = 13;
             // 
             // D7
@@ -2136,7 +2144,7 @@
             // 
             this.distObs.Location = new System.Drawing.Point(600, 110);
             this.distObs.Name = "distObs";
-            this.distObs.Size = new System.Drawing.Size(382, 20);
+            this.distObs.Size = new System.Drawing.Size(396, 20);
             this.distObs.TabIndex = 35;
             // 
             // D4
@@ -2301,21 +2309,13 @@
             this.D1.Size = new System.Drawing.Size(90, 20);
             this.D1.TabIndex = 15;
             // 
-            // labelPass
-            // 
-            this.labelPass.Location = new System.Drawing.Point(14, 77);
-            this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(25, 13);
-            this.labelPass.TabIndex = 20;
-            this.labelPass.Text = "PASS";
-            // 
             // XtraRegBonus
             // 
             this.AcceptButton = this.creer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
-            this.ClientSize = new System.Drawing.Size(1109, 667);
+            this.ClientSize = new System.Drawing.Size(1090, 667);
             this.Controls.Add(this.checkPrior);
             this.Controls.Add(this.prodRq);
             this.Controls.Add(this.prixBox);

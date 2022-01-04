@@ -14,6 +14,7 @@ namespace gescom.create.Views
         private readonly PersonModel _person;
         private List<ElementModel> _elements;
         private long _index;
+      
         private List<OperationModel> _myList;
         private long _pid;
 
@@ -24,12 +25,12 @@ namespace gescom.create.Views
             _person = new PersonModel();
             _person = person;
             Init();
-            _index = 1;
+            _index = 1;          
         }
 
         public XtraEntree()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         public bool IsValid { get; set; }

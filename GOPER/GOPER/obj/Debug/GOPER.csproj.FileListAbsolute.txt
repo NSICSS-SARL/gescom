@@ -93,3 +93,4 @@ C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.Cor
 C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.exe
 C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.pdb
 C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.CopyComplete
+C:\Users\patdimby\Documents\GitHub\gescom\GOPER\GOPER\obj\Debug\GOPER.csproj.AssemblyReference.cache

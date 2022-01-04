@@ -525,7 +525,6 @@ C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListPerson.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListResume.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.ListState.resources
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraAnalyse.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraArticle.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraCaisse.resources
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.Views.XtraChoice.resources
@@ -564,4 +563,3 @@ C:\glite\Bin\gescom.create.pdb
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.CopyComplete
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.dll
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.pdb
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.create\gescom.create\obj\Debug\gescom.create.csproj.AssemblyReference.cache

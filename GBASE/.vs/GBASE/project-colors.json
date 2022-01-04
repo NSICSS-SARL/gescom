@@ -20,7 +20,12 @@
       "ProjectGuid": "aa27e95f-d1d4-411e-a1c4-ba59ae51527b",
       "DisplayName": "GOPER",
       "ColorIndex": 3
+    },
+    "664e0b46-4425-42ad-a8c5-25179ae39c98": {
+      "ProjectGuid": "664e0b46-4425-42ad-a8c5-25179ae39c98",
+      "DisplayName": "gescom.printer",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

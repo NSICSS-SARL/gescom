@@ -182,6 +182,24 @@ namespace gescom.data.Models
 
         public static long DoBuy2(ElementModel elementModel)
         {
+            var _gulp = GulpHelpers.Get(elementModel.Id);
+            var m = new GulpModel()
+            {
+                Id = elementModel.Id
+            };
+            m.Copy(_gulp);
+            var arrivage = elementModel.Q4;
+            var quantite = elementModel.H4;
+            if (arrivage >= quantite)
+            {
+                if (arrivage == quantite)
+                {
+                   m.C4=false;
+
+                }
+            }
+            GulpHelpers.Update(m);
+            //
             var diary = new DiaryModel(0, elementModel.Pid);
             DiaryHelpers.Create(diary);
             float total = 0;

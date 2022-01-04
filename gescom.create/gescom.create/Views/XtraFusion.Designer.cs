@@ -111,9 +111,9 @@
             this.ultrainfo.Controls.Add(this.labeltransp);
             this.ultrainfo.Controls.Add(this.labdatariv);
             this.ultrainfo.Controls.Add(this.labelmsg);
-            this.ultrainfo.Location = new System.Drawing.Point(5, 87);
+            this.ultrainfo.Location = new System.Drawing.Point(0, 125);
             this.ultrainfo.Name = "ultrainfo";
-            this.ultrainfo.Size = new System.Drawing.Size(524, 101);
+            this.ultrainfo.Size = new System.Drawing.Size(490, 101);
             this.ultrainfo.TabIndex = 9;
             this.ultrainfo.TabStop = false;
             this.ultrainfo.Text = "Informations";
@@ -122,7 +122,7 @@
             // 
             this.b2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b2.Appearance.Options.UseFont = true;
-            this.b2.Location = new System.Drawing.Point(115, 77);
+            this.b2.Location = new System.Drawing.Point(97, 77);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(14, 13);
             this.b2.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             this.b1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b1.Appearance.Options.UseFont = true;
-            this.b1.Location = new System.Drawing.Point(115, 50);
+            this.b1.Location = new System.Drawing.Point(97, 50);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(14, 13);
             this.b1.TabIndex = 7;
@@ -142,7 +142,7 @@
             // 
             this.s.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.s.Appearance.Options.UseFont = true;
-            this.s.Location = new System.Drawing.Point(115, 24);
+            this.s.Location = new System.Drawing.Point(97, 24);
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(6, 13);
             this.s.TabIndex = 2;
@@ -199,14 +199,14 @@
             this.dernier.Controls.Add(this.checkPrix);
             this.dernier.Controls.Add(this.fermer);
             this.dernier.Controls.Add(this.creer);
-            this.dernier.Location = new System.Drawing.Point(1, 510);
+            this.dernier.Location = new System.Drawing.Point(0, 540);
             this.dernier.Name = "dernier";
-            this.dernier.Size = new System.Drawing.Size(529, 36);
+            this.dernier.Size = new System.Drawing.Size(494, 36);
             this.dernier.TabIndex = 8;
             // 
             // checkVerif
             // 
-            this.checkVerif.Location = new System.Drawing.Point(300, 7);
+            this.checkVerif.Location = new System.Drawing.Point(185, 7);
             this.checkVerif.Name = "checkVerif";
             this.checkVerif.Properties.Caption = "Vérifier";
             this.checkVerif.Size = new System.Drawing.Size(55, 19);
@@ -214,7 +214,7 @@
             // 
             // checkPlace
             // 
-            this.checkPlace.Location = new System.Drawing.Point(243, 7);
+            this.checkPlace.Location = new System.Drawing.Point(128, 7);
             this.checkPlace.Name = "checkPlace";
             this.checkPlace.Properties.Caption = "Placer";
             this.checkPlace.Size = new System.Drawing.Size(52, 19);
@@ -222,7 +222,7 @@
             // 
             // checkPrior
             // 
-            this.checkPrior.Location = new System.Drawing.Point(118, 7);
+            this.checkPrior.Location = new System.Drawing.Point(3, 7);
             this.checkPrior.Name = "checkPrior";
             this.checkPrior.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkPrior.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
@@ -234,7 +234,7 @@
             // 
             // checkPrix
             // 
-            this.checkPrix.Location = new System.Drawing.Point(190, 7);
+            this.checkPrix.Location = new System.Drawing.Point(75, 7);
             this.checkPrix.Name = "checkPrix";
             this.checkPrix.Properties.Caption = "Prix";
             this.checkPrix.Size = new System.Drawing.Size(42, 19);
@@ -243,7 +243,7 @@
             // fermer
             // 
             this.fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.fermer.Location = new System.Drawing.Point(448, 5);
+            this.fermer.Location = new System.Drawing.Point(407, 5);
             this.fermer.LookAndFeel.SkinName = "Office 2013";
             this.fermer.LookAndFeel.UseDefaultLookAndFeel = false;
             this.fermer.Name = "fermer";
@@ -255,7 +255,7 @@
             // 
             // creer
             // 
-            this.creer.Location = new System.Drawing.Point(361, 5);
+            this.creer.Location = new System.Drawing.Point(320, 5);
             this.creer.LookAndFeel.SkinName = "Office 2013";
             this.creer.LookAndFeel.UseDefaultLookAndFeel = false;
             this.creer.Name = "creer";
@@ -306,7 +306,7 @@
             this.tete.Location = new System.Drawing.Point(0, 3);
             this.tete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tete.Name = "tete";
-            this.tete.Size = new System.Drawing.Size(529, 84);
+            this.tete.Size = new System.Drawing.Size(495, 116);
             this.tete.TabIndex = 7;
             // 
             // d2
@@ -315,7 +315,7 @@
             this.d2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.d2.Appearance.Options.UseFont = true;
             this.d2.Appearance.Options.UseForeColor = true;
-            this.d2.Location = new System.Drawing.Point(335, 60);
+            this.d2.Location = new System.Drawing.Point(102, 90);
             this.d2.Name = "d2";
             this.d2.Size = new System.Drawing.Size(7, 13);
             this.d2.TabIndex = 9;
@@ -323,7 +323,7 @@
             // 
             // labelCompte
             // 
-            this.labelCompte.Location = new System.Drawing.Point(251, 60);
+            this.labelCompte.Location = new System.Drawing.Point(7, 90);
             this.labelCompte.Name = "labelCompte";
             this.labelCompte.Size = new System.Drawing.Size(73, 13);
             this.labelCompte.TabIndex = 8;
@@ -335,7 +335,7 @@
             this.d1.Appearance.ForeColor = System.Drawing.Color.SlateBlue;
             this.d1.Appearance.Options.UseFont = true;
             this.d1.Appearance.Options.UseForeColor = true;
-            this.d1.Location = new System.Drawing.Point(72, 60);
+            this.d1.Location = new System.Drawing.Point(102, 60);
             this.d1.Name = "d1";
             this.d1.Size = new System.Drawing.Size(7, 13);
             this.d1.TabIndex = 7;
@@ -343,7 +343,7 @@
             // 
             // labeordr
             // 
-            this.labeordr.Location = new System.Drawing.Point(14, 60);
+            this.labeordr.Location = new System.Drawing.Point(7, 60);
             this.labeordr.Name = "labeordr";
             this.labeordr.Size = new System.Drawing.Size(52, 13);
             this.labeordr.TabIndex = 6;
@@ -355,7 +355,7 @@
             this.leNom.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
             this.leNom.Appearance.Options.UseFont = true;
             this.leNom.Appearance.Options.UseForeColor = true;
-            this.leNom.Location = new System.Drawing.Point(72, 34);
+            this.leNom.Location = new System.Drawing.Point(102, 34);
             this.leNom.Name = "leNom";
             this.leNom.Size = new System.Drawing.Size(7, 13);
             this.leNom.TabIndex = 5;
@@ -367,7 +367,7 @@
             this.codage.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
             this.codage.Appearance.Options.UseFont = true;
             this.codage.Appearance.Options.UseForeColor = true;
-            this.codage.Location = new System.Drawing.Point(188, 7);
+            this.codage.Location = new System.Drawing.Point(218, 7);
             this.codage.Name = "codage";
             this.codage.Size = new System.Drawing.Size(29, 13);
             this.codage.TabIndex = 3;
@@ -375,7 +375,7 @@
             // 
             // codex
             // 
-            this.codex.Location = new System.Drawing.Point(120, 6);
+            this.codex.Location = new System.Drawing.Point(150, 6);
             this.codex.Name = "codex";
             this.codex.Size = new System.Drawing.Size(25, 13);
             this.codex.TabIndex = 2;
@@ -388,7 +388,7 @@
             this.nombre.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
             this.nombre.Appearance.Options.UseFont = true;
             this.nombre.Appearance.Options.UseForeColor = true;
-            this.nombre.Location = new System.Drawing.Point(72, 6);
+            this.nombre.Location = new System.Drawing.Point(102, 6);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(7, 13);
             this.nombre.TabIndex = 1;
@@ -396,7 +396,7 @@
             // 
             // labelNums
             // 
-            this.labelNums.Location = new System.Drawing.Point(16, 6);
+            this.labelNums.Location = new System.Drawing.Point(7, 6);
             this.labelNums.Name = "labelNums";
             this.labelNums.Size = new System.Drawing.Size(37, 13);
             this.labelNums.TabIndex = 0;
@@ -413,9 +413,9 @@
             this.groupArriv.Controls.Add(this.labelPhys);
             this.groupArriv.Controls.Add(this.labelrepo);
             this.groupArriv.Controls.Add(this.s1);
-            this.groupArriv.Location = new System.Drawing.Point(5, 284);
+            this.groupArriv.Location = new System.Drawing.Point(0, 327);
             this.groupArriv.Name = "groupArriv";
-            this.groupArriv.Size = new System.Drawing.Size(524, 124);
+            this.groupArriv.Size = new System.Drawing.Size(490, 124);
             this.groupArriv.TabIndex = 6;
             // 
             // H6N
@@ -467,7 +467,7 @@
             // 
             this.s1.Location = new System.Drawing.Point(122, 97);
             this.s1.Name = "s1";
-            this.s1.Size = new System.Drawing.Size(388, 20);
+            this.s1.Size = new System.Drawing.Size(359, 20);
             this.s1.TabIndex = 2;
             // 
             // cumDispo
@@ -477,7 +477,7 @@
             this.cumDispo.Appearance.Options.UseFont = true;
             this.cumDispo.Appearance.Options.UseForeColor = true;
             this.cumDispo.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
-            this.cumDispo.Location = new System.Drawing.Point(402, 208);
+            this.cumDispo.Location = new System.Drawing.Point(425, 268);
             this.cumDispo.Name = "cumDispo";
             this.cumDispo.Size = new System.Drawing.Size(12, 23);
             this.cumDispo.TabIndex = 14;
@@ -487,7 +487,7 @@
             // 
             this.labom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labom.Appearance.Options.UseFont = true;
-            this.labom.Location = new System.Drawing.Point(287, 216);
+            this.labom.Location = new System.Drawing.Point(303, 273);
             this.labom.Name = "labom";
             this.labom.Size = new System.Drawing.Size(58, 13);
             this.labom.TabIndex = 13;
@@ -503,17 +503,17 @@
             this.cadre.Controls.Add(this.placement);
             this.cadre.Controls.Add(this.labelUnite);
             this.cadre.Controls.Add(this.labelRef);
-            this.cadre.Location = new System.Drawing.Point(0, 426);
+            this.cadre.Location = new System.Drawing.Point(0, 456);
             this.cadre.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadre.Name = "cadre";
-            this.cadre.Size = new System.Drawing.Size(529, 81);
+            this.cadre.Size = new System.Drawing.Size(495, 81);
             this.cadre.TabIndex = 10;
             // 
             // secondPlace
             // 
             this.secondPlace.EditValue = "seconde place";
             this.secondPlace.Enabled = false;
-            this.secondPlace.Location = new System.Drawing.Point(260, 28);
+            this.secondPlace.Location = new System.Drawing.Point(226, 28);
             this.secondPlace.Name = "secondPlace";
             this.secondPlace.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondPlace.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -528,7 +528,7 @@
             this.distNewPlace.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.distNewPlace.Appearance.Options.UseFont = true;
             this.distNewPlace.Appearance.Options.UseForeColor = true;
-            this.distNewPlace.Location = new System.Drawing.Point(132, 58);
+            this.distNewPlace.Location = new System.Drawing.Point(98, 58);
             this.distNewPlace.Name = "distNewPlace";
             this.distNewPlace.Size = new System.Drawing.Size(7, 13);
             this.distNewPlace.TabIndex = 6;
@@ -549,7 +549,7 @@
             this.labelPlace.Appearance.ForeColor = System.Drawing.Color.DarkMagenta;
             this.labelPlace.Appearance.Options.UseFont = true;
             this.labelPlace.Appearance.Options.UseForeColor = true;
-            this.labelPlace.Location = new System.Drawing.Point(132, 6);
+            this.labelPlace.Location = new System.Drawing.Point(98, 6);
             this.labelPlace.Name = "labelPlace";
             this.labelPlace.Size = new System.Drawing.Size(38, 13);
             this.labelPlace.TabIndex = 4;
@@ -560,7 +560,7 @@
             // 
             this.placement.DisplayMember = "CODE";
             this.placement.FormattingEnabled = true;
-            this.placement.Location = new System.Drawing.Point(128, 26);
+            this.placement.Location = new System.Drawing.Point(94, 26);
             this.placement.Name = "placement";
             this.placement.Size = new System.Drawing.Size(126, 21);
             this.placement.TabIndex = 2;
@@ -590,9 +590,9 @@
             this.groupInterne.Controls.Add(this.C4);
             this.groupInterne.Controls.Add(this.H4);
             this.groupInterne.Controls.Add(this.labelphi);
-            this.groupInterne.Location = new System.Drawing.Point(3, 190);
+            this.groupInterne.Location = new System.Drawing.Point(0, 230);
             this.groupInterne.Name = "groupInterne";
-            this.groupInterne.Size = new System.Drawing.Size(277, 92);
+            this.groupInterne.Size = new System.Drawing.Size(283, 92);
             this.groupInterne.TabIndex = 11;
             // 
             // H4N
@@ -657,7 +657,7 @@
             this.unitCtrl.Appearance.Options.UseFont = true;
             this.unitCtrl.Appearance.Options.UseForeColor = true;
             this.unitCtrl.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
-            this.unitCtrl.Location = new System.Drawing.Point(391, 235);
+            this.unitCtrl.Location = new System.Drawing.Point(402, 297);
             this.unitCtrl.Name = "unitCtrl";
             this.unitCtrl.Size = new System.Drawing.Size(35, 16);
             this.unitCtrl.TabIndex = 15;
@@ -667,7 +667,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 548);
+            this.ClientSize = new System.Drawing.Size(499, 578);
             this.Controls.Add(this.unitCtrl);
             this.Controls.Add(this.cumDispo);
             this.Controls.Add(this.groupInterne);

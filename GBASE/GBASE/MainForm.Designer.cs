@@ -356,6 +356,7 @@
             // 
             this.buttonNormal.Caption = "Normalisme";
             this.buttonNormal.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.buttonNormal.Enabled = false;
             this.buttonNormal.Id = 32;
             this.buttonNormal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonNormal.ImageOptions.Image")));
             this.buttonNormal.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("buttonNormal.ImageOptions.LargeImage")));

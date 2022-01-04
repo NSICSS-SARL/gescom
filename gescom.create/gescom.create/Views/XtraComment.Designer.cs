@@ -674,7 +674,6 @@
             this.coLumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.coLumn.FieldName = "Masquage";
             this.coLumn.Name = "coLumn";
-            this.coLumn.OptionsColumn.AllowEdit = false;
             this.coLumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "L", "{0}")});
             this.coLumn.Visible = true;

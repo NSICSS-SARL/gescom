@@ -10,7 +10,7 @@ namespace gescom.create.Views
         public XtraOrder()
         {
             InitializeComponent();
-            SetRefresh();
+          
         }
 
         private long GetX()
@@ -52,7 +52,7 @@ namespace gescom.create.Views
 
         private void XtraOrder_Load(object sender, EventArgs e)
         {
-            //SetRefresh();
+            
         }
     }
 }

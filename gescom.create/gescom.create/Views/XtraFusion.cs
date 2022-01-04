@@ -101,7 +101,7 @@ namespace gescom.create.Views
             {
                 _gulp.D6 = DateTime.Now;
                 if (H4.Text.Length > 0)
-                {
+                {                  
                     res = int.TryParse(H4.Text, out a);
                     if (!res)
                     {
@@ -132,7 +132,7 @@ namespace gescom.create.Views
                 _gulp.H6 = a;
                 if (a > 0)
                 {
-                    _gulp.C5 = false;
+                    //_gulp.C5 = false;
                 }
             }             
             var model = new GulpModel()

@@ -28,6 +28,10 @@ namespace gescom.data.Models
             var liste = new List<OperationItem>();
             foreach (var item in GetList())
             {
+                if(item.Ndx == 1)
+                {
+                    Console.WriteLine("ok");
+                }
                 item.Init();
                 liste.Add(item);
             }

@@ -88,6 +88,7 @@ namespace gescom.create.Views
             pgros.Text = StdCalcul.AfficherPrix((float)item.PGros);
             pdetail.Text = StdCalcul.AfficherPrix((float)item.PDetail);
             qachat.Text = StdCalcul.AfficherPrix((float)item.Qachat);
+            if(item.Qavoir is null) { item.Qavoir = 0; }
             qavoir.Text = StdCalcul.AfficherPrix((float)item.Qavoir);
             qvente.Text = StdCalcul.AfficherPrix((float)item.Qvente);
             qstock.Text = StdCalcul.AfficherPrix((float)item.QStock);

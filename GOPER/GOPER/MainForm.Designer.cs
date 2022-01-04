@@ -36,7 +36,11 @@
             this.rubanPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rubanOuf = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.recherche = new DevExpress.XtraBars.BarButtonItem();
+            this.demande = new DevExpress.XtraBars.BarButtonItem();
             this.vente = new DevExpress.XtraBars.BarButtonItem();
+            this.encaisse = new DevExpress.XtraBars.BarButtonItem();
+            this.comptage = new DevExpress.XtraBars.BarButtonItem();
+            this.barVueCaisse = new DevExpress.XtraBars.BarButtonItem();
             this.buttonEntre = new DevExpress.XtraBars.BarButtonItem();
             this.buttonAvoir = new DevExpress.XtraBars.BarButtonItem();
             this.buttonErreur = new DevExpress.XtraBars.BarButtonItem();
@@ -76,7 +80,11 @@
             // rubanOuf
             // 
             this.rubanOuf.ItemLinks.Add(this.recherche);
+            this.rubanOuf.ItemLinks.Add(this.demande);
             this.rubanOuf.ItemLinks.Add(this.vente);
+            this.rubanOuf.ItemLinks.Add(this.encaisse);
+            this.rubanOuf.ItemLinks.Add(this.comptage);
+            this.rubanOuf.ItemLinks.Add(this.barVueCaisse);
             this.rubanOuf.Name = "rubanOuf";
             // 
             // recherche
@@ -89,6 +97,17 @@
             this.recherche.Name = "recherche";
             this.recherche.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonSearch_ItemClick);
             // 
+            // demande
+            // 
+            this.demande.Caption = "Demande";
+            this.demande.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.demande.Enabled = false;
+            this.demande.Id = 11;
+            this.demande.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("demande.ImageOptions.Image")));
+            this.demande.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("demande.ImageOptions.LargeImage")));
+            this.demande.Name = "demande";
+            this.demande.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.simulButtonItem_ItemClick);
+            // 
             // vente
             // 
             this.vente.Caption = "Vente";
@@ -99,6 +118,38 @@
             this.vente.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("vente.ImageOptions.LargeImage")));
             this.vente.Name = "vente";
             this.vente.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonVente_ItemClick);
+            // 
+            // encaisse
+            // 
+            this.encaisse.Caption = "Encaissement";
+            this.encaisse.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.encaisse.Enabled = false;
+            this.encaisse.Id = 12;
+            this.encaisse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("encaisse.ImageOptions.Image")));
+            this.encaisse.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("encaisse.ImageOptions.LargeImage")));
+            this.encaisse.Name = "encaisse";
+            this.encaisse.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.encaisse_ItemClick);
+            // 
+            // comptage
+            // 
+            this.comptage.Caption = "Inventaire-Comptage";
+            this.comptage.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.comptage.Enabled = false;
+            this.comptage.Id = 10;
+            this.comptage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("comptage.ImageOptions.Image")));
+            this.comptage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("comptage.ImageOptions.LargeImage")));
+            this.comptage.Name = "comptage";
+            this.comptage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonComp_ItemClick);
+            // 
+            // barVueCaisse
+            // 
+            this.barVueCaisse.Caption = "Caisse";
+            this.barVueCaisse.Enabled = false;
+            this.barVueCaisse.Id = 14;
+            this.barVueCaisse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barVueCaisse.ImageOptions.Image")));
+            this.barVueCaisse.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barVueCaisse.ImageOptions.LargeImage")));
+            this.barVueCaisse.Name = "barVueCaisse";
+            this.barVueCaisse.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barVueCaisse_ItemClick);
             // 
             // buttonEntre
             // 
@@ -159,7 +210,6 @@
             this.rubanControl.ExpandCollapseItem.Id = 0;
             this.rubanControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.rubanControl.ExpandCollapseItem,
-            this.rubanControl.SearchEditItem,
             this.recherche,
             this.buttonEntre,
             this.buttonAvoir,
@@ -167,7 +217,12 @@
             this.buttonErreur,
             this.buttonDefect,
             this.buttonVol,
-            this.buttonCom});
+            this.buttonCom,
+            this.comptage,
+            this.demande,
+            this.encaisse,
+            this.barVueCaisse,
+            this.rubanControl.SearchEditItem});
             this.rubanControl.Location = new System.Drawing.Point(0, 0);
             this.rubanControl.MaxItemId = 15;
             this.rubanControl.Name = "rubanControl";
@@ -176,14 +231,14 @@
             this.rubanControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rubanPage});
             this.rubanControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.rubanControl.Size = new System.Drawing.Size(303, 158);
+            this.rubanControl.Size = new System.Drawing.Size(448, 158);
             // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 222);
+            this.ClientSize = new System.Drawing.Size(448, 232);
             this.Controls.Add(this.rubanControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("MainForm.IconOptions.Icon")));
@@ -207,7 +262,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage rubanPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rubanOuf;
         private DevExpress.XtraBars.BarButtonItem recherche;
+        private DevExpress.XtraBars.BarButtonItem demande;
         private DevExpress.XtraBars.BarButtonItem vente;
+        private DevExpress.XtraBars.BarButtonItem encaisse;
+        private DevExpress.XtraBars.BarButtonItem comptage;
+        private DevExpress.XtraBars.BarButtonItem barVueCaisse;
         private DevExpress.XtraBars.BarButtonItem buttonEntre;
         private DevExpress.XtraBars.BarButtonItem buttonAvoir;
         private DevExpress.XtraBars.BarButtonItem buttonErreur;

@@ -1312,7 +1312,7 @@
             // P1
             // 
             this.P1.EditValue = "0";
-            this.P1.Location = new System.Drawing.Point(329, 25);
+            this.P1.Location = new System.Drawing.Point(318, 25);
             this.P1.Name = "P1";
             this.P1.Size = new System.Drawing.Size(71, 20);
             this.P1.TabIndex = 10;
@@ -1320,7 +1320,7 @@
             // 
             // prodLabelSeuil
             // 
-            this.prodLabelSeuil.Location = new System.Drawing.Point(115, 9);
+            this.prodLabelSeuil.Location = new System.Drawing.Point(123, 9);
             this.prodLabelSeuil.Name = "prodLabelSeuil";
             this.prodLabelSeuil.Size = new System.Drawing.Size(18, 13);
             this.prodLabelSeuil.TabIndex = 13;
@@ -1329,7 +1329,7 @@
             // Q1
             // 
             this.Q1.EditValue = "0";
-            this.Q1.Location = new System.Drawing.Point(97, 24);
+            this.Q1.Location = new System.Drawing.Point(92, 24);
             this.Q1.Name = "Q1";
             this.Q1.Size = new System.Drawing.Size(71, 20);
             this.Q1.TabIndex = 8;
@@ -1337,17 +1337,19 @@
             // 
             // U2
             // 
+            this.U2.BackColor = System.Drawing.SystemColors.Window;
             this.U2.DisplayMember = "NOM";
             this.U2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U2.ForeColor = System.Drawing.Color.Blue;
             this.U2.FormattingEnabled = true;
-            this.U2.Location = new System.Drawing.Point(251, 25);
+            this.U2.Location = new System.Drawing.Point(243, 25);
             this.U2.Name = "U2";
             this.U2.Size = new System.Drawing.Size(72, 21);
             this.U2.TabIndex = 3;
             // 
             // prodLabelUnite
             // 
-            this.prodLabelUnite.Location = new System.Drawing.Point(264, 7);
+            this.prodLabelUnite.Location = new System.Drawing.Point(264, 9);
             this.prodLabelUnite.Name = "prodLabelUnite";
             this.prodLabelUnite.Size = new System.Drawing.Size(25, 13);
             this.prodLabelUnite.TabIndex = 10;
@@ -1525,7 +1527,7 @@
             this.dernier.Controls.Add(this.annuler);
             this.dernier.Controls.Add(this.creer);
             this.dernier.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dernier.Location = new System.Drawing.Point(0, 637);
+            this.dernier.Location = new System.Drawing.Point(0, 613);
             this.dernier.Name = "dernier";
             this.dernier.Size = new System.Drawing.Size(1090, 30);
             this.dernier.TabIndex = 9;
@@ -1667,7 +1669,7 @@
             // 
             this.reponse.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reponse.Appearance.Options.UseFont = true;
-            this.reponse.Location = new System.Drawing.Point(603, 601);
+            this.reponse.Location = new System.Drawing.Point(603, 593);
             this.reponse.Name = "reponse";
             this.reponse.Size = new System.Drawing.Size(20, 13);
             this.reponse.TabIndex = 22;
@@ -1675,7 +1677,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(552, 600);
+            this.labelControl10.Location = new System.Drawing.Point(552, 592);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(42, 13);
             this.labelControl10.TabIndex = 21;
@@ -1683,14 +1685,14 @@
             // 
             // s1
             // 
-            this.s1.Location = new System.Drawing.Point(91, 597);
+            this.s1.Location = new System.Drawing.Point(91, 589);
             this.s1.Name = "s1";
             this.s1.Size = new System.Drawing.Size(443, 20);
             this.s1.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(11, 601);
+            this.labelControl4.Location = new System.Drawing.Point(11, 593);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(42, 13);
             this.labelControl4.TabIndex = 4;
@@ -1810,7 +1812,7 @@
             // 
             this.radioStop.AutoSize = true;
             this.radioStop.ForeColor = System.Drawing.Color.MediumBlue;
-            this.radioStop.Location = new System.Drawing.Point(151, 19);
+            this.radioStop.Location = new System.Drawing.Point(62, 19);
             this.radioStop.Name = "radioStop";
             this.radioStop.Size = new System.Drawing.Size(76, 17);
             this.radioStop.TabIndex = 2;
@@ -1833,7 +1835,7 @@
             // radioMoyen
             // 
             this.radioMoyen.AutoSize = true;
-            this.radioMoyen.Location = new System.Drawing.Point(58, 19);
+            this.radioMoyen.Location = new System.Drawing.Point(154, 19);
             this.radioMoyen.Name = "radioMoyen";
             this.radioMoyen.Size = new System.Drawing.Size(68, 17);
             this.radioMoyen.TabIndex = 1;
@@ -1953,14 +1955,14 @@
             this.cadreNew.LookAndFeel.SkinName = "Office 2013";
             this.cadreNew.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cadreNew.Name = "cadreNew";
-            this.cadreNew.Size = new System.Drawing.Size(1001, 160);
+            this.cadreNew.Size = new System.Drawing.Size(1001, 151);
             this.cadreNew.TabIndex = 13;
             // 
             // D7
             // 
             this.D7.EditValue = null;
             this.D7.Enabled = false;
-            this.D7.Location = new System.Drawing.Point(504, 137);
+            this.D7.Location = new System.Drawing.Point(491, 125);
             this.D7.Name = "D7";
             this.D7.Properties.AllowFocused = false;
             this.D7.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
@@ -1976,7 +1978,7 @@
             // 
             this.D6.EditValue = null;
             this.D6.Enabled = false;
-            this.D6.Location = new System.Drawing.Point(504, 110);
+            this.D6.Location = new System.Drawing.Point(491, 100);
             this.D6.Name = "D6";
             this.D6.Properties.AllowFocused = false;
             this.D6.Properties.Appearance.ForeColor = System.Drawing.Color.Crimson;
@@ -1992,7 +1994,7 @@
             // 
             this.D5.EditValue = null;
             this.D5.Enabled = false;
-            this.D5.Location = new System.Drawing.Point(408, 136);
+            this.D5.Location = new System.Drawing.Point(395, 125);
             this.D5.Name = "D5";
             this.D5.Properties.AllowFocused = false;
             this.D5.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
@@ -2001,14 +2003,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.D5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.D5.Size = new System.Drawing.Size(90, 20);
+            this.D5.Size = new System.Drawing.Size(89, 20);
             this.D5.TabIndex = 50;
             // 
             // H6
             // 
             this.H6.EditValue = "0";
             this.H6.Enabled = false;
-            this.H6.Location = new System.Drawing.Point(178, 136);
+            this.H6.Location = new System.Drawing.Point(168, 125);
             this.H6.Name = "H6";
             this.H6.Size = new System.Drawing.Size(71, 20);
             this.H6.TabIndex = 49;
@@ -2018,7 +2020,7 @@
             // 
             this.H4.EditValue = "0";
             this.H4.Enabled = false;
-            this.H4.Location = new System.Drawing.Point(178, 111);
+            this.H4.Location = new System.Drawing.Point(168, 101);
             this.H4.Name = "H4";
             this.H4.Size = new System.Drawing.Size(71, 20);
             this.H4.TabIndex = 48;
@@ -2027,7 +2029,7 @@
             // H3
             // 
             this.H3.EditValue = "0";
-            this.H3.Location = new System.Drawing.Point(178, 80);
+            this.H3.Location = new System.Drawing.Point(168, 75);
             this.H3.Name = "H3";
             this.H3.Size = new System.Drawing.Size(71, 20);
             this.H3.TabIndex = 47;
@@ -2036,7 +2038,7 @@
             // H2
             // 
             this.H2.EditValue = "0";
-            this.H2.Location = new System.Drawing.Point(177, 50);
+            this.H2.Location = new System.Drawing.Point(168, 50);
             this.H2.Name = "H2";
             this.H2.Size = new System.Drawing.Size(71, 20);
             this.H2.TabIndex = 46;
@@ -2045,7 +2047,7 @@
             // H1
             // 
             this.H1.EditValue = "0";
-            this.H1.Location = new System.Drawing.Point(176, 25);
+            this.H1.Location = new System.Drawing.Point(168, 25);
             this.H1.Name = "H1";
             this.H1.Size = new System.Drawing.Size(71, 20);
             this.H1.TabIndex = 44;
@@ -2062,7 +2064,7 @@
             // C5
             // 
             this.C5.AutoSize = true;
-            this.C5.Location = new System.Drawing.Point(9, 137);
+            this.C5.Location = new System.Drawing.Point(5, 126);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(81, 17);
             this.C5.TabIndex = 43;
@@ -2073,7 +2075,7 @@
             // Q6
             // 
             this.Q6.EditValue = "0";
-            this.Q6.Location = new System.Drawing.Point(100, 136);
+            this.Q6.Location = new System.Drawing.Point(92, 125);
             this.Q6.Name = "Q6";
             this.Q6.Size = new System.Drawing.Size(71, 20);
             this.Q6.TabIndex = 42;
@@ -2082,7 +2084,7 @@
             // C4
             // 
             this.C4.AutoSize = true;
-            this.C4.Location = new System.Drawing.Point(9, 109);
+            this.C4.Location = new System.Drawing.Point(5, 102);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(82, 17);
             this.C4.TabIndex = 40;
@@ -2093,7 +2095,7 @@
             // C3
             // 
             this.C3.AutoSize = true;
-            this.C3.Location = new System.Drawing.Point(9, 81);
+            this.C3.Location = new System.Drawing.Point(5, 75);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(69, 17);
             this.C3.TabIndex = 39;
@@ -2103,7 +2105,7 @@
             // C2
             // 
             this.C2.AutoSize = true;
-            this.C2.Location = new System.Drawing.Point(8, 51);
+            this.C2.Location = new System.Drawing.Point(5, 52);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(87, 17);
             this.C2.TabIndex = 38;
@@ -2114,7 +2116,7 @@
             // C1
             // 
             this.C1.AutoSize = true;
-            this.C1.Location = new System.Drawing.Point(10, 26);
+            this.C1.Location = new System.Drawing.Point(5, 26);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(80, 17);
             this.C1.TabIndex = 37;
@@ -2130,7 +2132,7 @@
             this.pdetail2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pdetail2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pdetail2.IntegerValue = ((long)(0));
-            this.pdetail2.Location = new System.Drawing.Point(329, 110);
+            this.pdetail2.Location = new System.Drawing.Point(318, 100);
             this.pdetail2.MinimumSize = new System.Drawing.Size(4, 18);
             this.pdetail2.Name = "pdetail2";
             this.pdetail2.ReadOnly = true;
@@ -2149,17 +2151,20 @@
             // 
             // D4
             // 
-            this.D4.Location = new System.Drawing.Point(405, 110);
+            this.D4.Location = new System.Drawing.Point(394, 100);
             this.D4.Name = "D4";
-            this.D4.Size = new System.Drawing.Size(94, 20);
+            this.D4.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D4.Properties.Appearance.Options.UseForeColor = true;
+            this.D4.Size = new System.Drawing.Size(90, 20);
             this.D4.TabIndex = 34;
             // 
             // U4
             // 
             this.U4.DisplayMember = "NOM";
             this.U4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4.ForeColor = System.Drawing.Color.Blue;
             this.U4.FormattingEnabled = true;
-            this.U4.Location = new System.Drawing.Point(252, 111);
+            this.U4.Location = new System.Drawing.Point(243, 101);
             this.U4.Name = "U4";
             this.U4.Size = new System.Drawing.Size(72, 21);
             this.U4.TabIndex = 32;
@@ -2167,7 +2172,7 @@
             // Q4
             // 
             this.Q4.EditValue = "0";
-            this.Q4.Location = new System.Drawing.Point(100, 110);
+            this.Q4.Location = new System.Drawing.Point(92, 100);
             this.Q4.Name = "Q4";
             this.Q4.Size = new System.Drawing.Size(71, 20);
             this.Q4.TabIndex = 31;
@@ -2182,15 +2187,17 @@
             // 
             // D3
             // 
-            this.D3.Location = new System.Drawing.Point(405, 80);
+            this.D3.Location = new System.Drawing.Point(395, 76);
             this.D3.Name = "D3";
-            this.D3.Size = new System.Drawing.Size(94, 20);
+            this.D3.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D3.Properties.Appearance.Options.UseForeColor = true;
+            this.D3.Size = new System.Drawing.Size(90, 20);
             this.D3.TabIndex = 29;
             // 
             // P3
             // 
             this.P3.EditValue = "0";
-            this.P3.Location = new System.Drawing.Point(331, 81);
+            this.P3.Location = new System.Drawing.Point(320, 76);
             this.P3.Name = "P3";
             this.P3.Size = new System.Drawing.Size(71, 20);
             this.P3.TabIndex = 27;
@@ -2200,8 +2207,9 @@
             // 
             this.U3.DisplayMember = "NOM";
             this.U3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3.ForeColor = System.Drawing.Color.Blue;
             this.U3.FormattingEnabled = true;
-            this.U3.Location = new System.Drawing.Point(252, 81);
+            this.U3.Location = new System.Drawing.Point(243, 76);
             this.U3.Name = "U3";
             this.U3.Size = new System.Drawing.Size(72, 21);
             this.U3.TabIndex = 26;
@@ -2209,7 +2217,7 @@
             // Q3
             // 
             this.Q3.EditValue = "0";
-            this.Q3.Location = new System.Drawing.Point(100, 79);
+            this.Q3.Location = new System.Drawing.Point(92, 74);
             this.Q3.Name = "Q3";
             this.Q3.Size = new System.Drawing.Size(71, 20);
             this.Q3.TabIndex = 25;
@@ -2234,9 +2242,11 @@
             // 
             this.D2.EditValue = null;
             this.D2.Enabled = false;
-            this.D2.Location = new System.Drawing.Point(407, 50);
+            this.D2.Location = new System.Drawing.Point(395, 50);
             this.D2.Name = "D2";
             this.D2.Properties.AllowFocused = false;
+            this.D2.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D2.Properties.Appearance.Options.UseForeColor = true;
             this.D2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.D2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2247,7 +2257,7 @@
             // P2
             // 
             this.P2.EditValue = "0";
-            this.P2.Location = new System.Drawing.Point(330, 51);
+            this.P2.Location = new System.Drawing.Point(319, 50);
             this.P2.Name = "P2";
             this.P2.Size = new System.Drawing.Size(71, 20);
             this.P2.TabIndex = 21;
@@ -2255,7 +2265,7 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(435, 4);
+            this.labelControl15.Location = new System.Drawing.Point(435, 9);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(23, 13);
             this.labelControl15.TabIndex = 20;
@@ -2263,7 +2273,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(355, 7);
+            this.labelControl14.Location = new System.Drawing.Point(352, 10);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(18, 13);
             this.labelControl14.TabIndex = 19;
@@ -2273,8 +2283,9 @@
             // 
             this.prodUnity.DisplayMember = "NOM";
             this.prodUnity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.prodUnity.ForeColor = System.Drawing.Color.Blue;
             this.prodUnity.FormattingEnabled = true;
-            this.prodUnity.Location = new System.Drawing.Point(251, 51);
+            this.prodUnity.Location = new System.Drawing.Point(242, 50);
             this.prodUnity.Name = "prodUnity";
             this.prodUnity.Size = new System.Drawing.Size(72, 21);
             this.prodUnity.TabIndex = 18;
@@ -2282,7 +2293,7 @@
             // Q2
             // 
             this.Q2.EditValue = "0";
-            this.Q2.Location = new System.Drawing.Point(100, 50);
+            this.Q2.Location = new System.Drawing.Point(92, 50);
             this.Q2.Name = "Q2";
             this.Q2.Size = new System.Drawing.Size(71, 20);
             this.Q2.TabIndex = 17;
@@ -2299,9 +2310,13 @@
             // 
             this.D1.EditValue = null;
             this.D1.Enabled = false;
-            this.D1.Location = new System.Drawing.Point(407, 25);
+            this.D1.Location = new System.Drawing.Point(395, 25);
             this.D1.Name = "D1";
             this.D1.Properties.AllowFocused = false;
+            this.D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
+            this.D1.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D1.Properties.Appearance.Options.UseBackColor = true;
+            this.D1.Properties.Appearance.Options.UseForeColor = true;
             this.D1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.D1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2315,7 +2330,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.annuler;
-            this.ClientSize = new System.Drawing.Size(1090, 667);
+            this.ClientSize = new System.Drawing.Size(1090, 643);
             this.Controls.Add(this.checkPrior);
             this.Controls.Add(this.prodRq);
             this.Controls.Add(this.prixBox);

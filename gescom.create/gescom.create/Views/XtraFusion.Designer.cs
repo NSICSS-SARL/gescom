@@ -206,38 +206,44 @@
             // 
             // checkVerif
             // 
-            this.checkVerif.Location = new System.Drawing.Point(185, 7);
+            this.checkVerif.Location = new System.Drawing.Point(239, 7);
             this.checkVerif.Name = "checkVerif";
+            this.checkVerif.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkVerif.Properties.Appearance.Options.UseFont = true;
             this.checkVerif.Properties.Caption = "Vérifier";
-            this.checkVerif.Size = new System.Drawing.Size(55, 19);
+            this.checkVerif.Size = new System.Drawing.Size(75, 20);
             this.checkVerif.TabIndex = 26;
             // 
             // checkPlace
             // 
-            this.checkPlace.Location = new System.Drawing.Point(128, 7);
+            this.checkPlace.Location = new System.Drawing.Point(162, 8);
             this.checkPlace.Name = "checkPlace";
+            this.checkPlace.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkPlace.Properties.Appearance.Options.UseFont = true;
             this.checkPlace.Properties.Caption = "Placer";
-            this.checkPlace.Size = new System.Drawing.Size(52, 19);
+            this.checkPlace.Size = new System.Drawing.Size(63, 20);
             this.checkPlace.TabIndex = 25;
             // 
             // checkPrior
             // 
             this.checkPrior.Location = new System.Drawing.Point(3, 7);
             this.checkPrior.Name = "checkPrior";
-            this.checkPrior.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkPrior.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkPrior.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
             this.checkPrior.Properties.Appearance.Options.UseFont = true;
             this.checkPrior.Properties.Appearance.Options.UseForeColor = true;
             this.checkPrior.Properties.Caption = "Immédiat";
-            this.checkPrior.Size = new System.Drawing.Size(66, 19);
+            this.checkPrior.Size = new System.Drawing.Size(79, 20);
             this.checkPrior.TabIndex = 23;
             // 
             // checkPrix
             // 
-            this.checkPrix.Location = new System.Drawing.Point(75, 7);
+            this.checkPrix.Location = new System.Drawing.Point(93, 7);
             this.checkPrix.Name = "checkPrix";
+            this.checkPrix.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkPrix.Properties.Appearance.Options.UseFont = true;
             this.checkPrix.Properties.Caption = "Prix";
-            this.checkPrix.Size = new System.Drawing.Size(42, 19);
+            this.checkPrix.Size = new System.Drawing.Size(42, 20);
             this.checkPrix.TabIndex = 21;
             // 
             // fermer
@@ -261,7 +267,7 @@
             this.creer.Name = "creer";
             this.creer.Size = new System.Drawing.Size(75, 23);
             this.creer.TabIndex = 0;
-            this.creer.Text = "&OK";
+            this.creer.Text = "&Modifier";
             this.creer.ToolTip = "Modifier l\'article en cours.";
             this.creer.Click += new System.EventHandler(this.creer_Click);
             // 
@@ -667,6 +673,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.fermer;
             this.ClientSize = new System.Drawing.Size(499, 578);
             this.Controls.Add(this.unitCtrl);
             this.Controls.Add(this.cumDispo);

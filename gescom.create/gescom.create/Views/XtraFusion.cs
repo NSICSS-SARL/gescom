@@ -180,6 +180,7 @@ namespace gescom.create.Views
         {
             var item = ProdHelpers.Get(_id);
             leNom.Text = ArticleHelpers.GetName(_id);
+            Text = ArticleHelpers.GetName(_id);
             nombre.Text = StdCalcul.Spacing(_id.ToString(CultureInfo.InvariantCulture));
             _duo = ArticleHelpers.GetDuo(_id);
             d1.Text = _duo.D1.ToString("f");

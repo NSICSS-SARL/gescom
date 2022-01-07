@@ -180,6 +180,10 @@ namespace gescom.data.Models
             Code = model.Codage;
             Unite = model.Unite;
             Nom = model.Designation;
+            if(model.QStock is null)
+            {
+                QStock = 0;
+            }
             QStock = (float)model.QStock;
             if(model.Q1 is null)
             {
@@ -193,8 +197,20 @@ namespace gescom.data.Models
             Q2 = (float)model.Q2;
             Wid = model.Wid;
             Rx = model.Rx;
+            if(model.Forme is null)
+            {
+                model.Forme= 0;
+            }
             Forme = (long)model.Forme;
+            if(model.Taxable is null)
+            {
+                model.Taxable = 0;
+            }
             Taxable = (int)model.Taxable;
+            if(model.Pid is null)
+            {
+                model.Pid = 0;
+            }
             Pid = (long)model.Pid;
             Fcode = model.Fcode;
             if(model.Q4 is null)

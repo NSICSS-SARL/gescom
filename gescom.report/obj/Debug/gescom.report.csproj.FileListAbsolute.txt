@@ -273,4 +273,3 @@ C:\Users\patdimby\Documents\GitHub\gescom\gescom.report\obj\Debug\gescom.report.
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.report\obj\Debug\gescom.report.csproj.CopyComplete
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.report\obj\Debug\gescom.report.dll
 C:\Users\patdimby\Documents\GitHub\gescom\gescom.report\obj\Debug\gescom.report.pdb
-C:\Users\patdimby\Documents\GitHub\gescom\gescom.report\obj\Debug\gescom.report.csproj.AssemblyReference.cache

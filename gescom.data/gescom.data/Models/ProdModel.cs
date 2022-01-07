@@ -19,6 +19,9 @@ namespace gescom.data.Models
             repository.Save();
         }
 
+
+       
+
         // prod selon son identifiant id.
         public static ProdItem Get(long id)
         {
@@ -402,6 +405,8 @@ namespace gescom.data.Models
             if (item.Arret) return false;
             return true;
         }
+
+       
 
         public IQueryable<ProdItem> Prods()
         {

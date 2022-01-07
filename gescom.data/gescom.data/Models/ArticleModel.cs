@@ -50,6 +50,21 @@ namespace gescom.data.Models
             return reptory.Get(id);
         }
 
+        public static void Rectif()
+        {
+       
+        var count = 0;
+            var reptory = new ProdRepository();
+            foreach(var item in reptory.Prods())
+            {
+               if(item.Iu is null) { count++;
+                    item.Iu = 46;
+                }                
+            }
+            reptory.Save();
+            Console.WriteLine(count); 
+        }
+
 
         //récupération de stock d'un article.
         public static float GetDisponible(long id)

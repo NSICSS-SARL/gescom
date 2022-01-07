@@ -29,7 +29,7 @@ namespace gescom.create.Views
         private long _t;
         private readonly IEnumerable<VendorItem> _vendors;
         private readonly VoirModel _voir;
-        private long _x = -2;
+        //private long _x = -2;
         private long _y = -2;
 
         //
@@ -40,7 +40,8 @@ namespace gescom.create.Views
 
         public XtraRegBonus(long id)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            ArticleHelpers.Rectif();
             _prodId = id;
             _vendors = PersonHelpers.GetVendorsList();
             _articleRepository = new ArticleRepository();
@@ -629,108 +630,108 @@ namespace gescom.create.Views
             {
                 if (taxable.Checked)
                     code = _articleItem.Code + "-T";
-                else
-                    code = _articleItem.Code + "-X";
-            }
+                 else
+                    code = _articleItem.Code + "-I";
+             }
 
-            _articleItem.CompleteCode = code;
-            return _articleRepository.Update();
-        }
+             _articleItem.CompleteCode = code;
+             return _articleRepository.Update();
+         }
 
-        private void coeff_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void coeff_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void creer_Click(object sender, EventArgs e)
-        {
-            var b = false;
-            b = DistCreer();
-            if (!b) return;
-            ArticleVerifier();
-            ArticleCreer();
-            OperSave();
-            SituationSave();
-            DoCommander();
-            ActeSave();
-            b = ProdSave();
-            if (!b) return;
-            if (_prodId > 0)
-            {
-                GulpCheck();
-            }
-            Close();
-        }
+         private void creer_Click(object sender, EventArgs e)
+         {
+             var b = false;
+             b = DistCreer();
+             if (!b) return;
+             ArticleVerifier();
+             ArticleCreer();
+             OperSave();
+             SituationSave();
+             DoCommander();
+             ActeSave();
+             b = ProdSave();
+             if (!b) return;
+             if (_prodId > 0)
+             {
+                 GulpCheck();
+             }
+             Close();
+         }
 
-        private void distPlaceNew_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            distNewLabel.Visible = true;
-            distNewPlace.Text = distPlaceNew.Text;
-        }
+         private void distPlaceNew_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             distNewLabel.Visible = true;
+             distNewPlace.Text = distPlaceNew.Text;
+         }
 
-        private void DoCommander()
-        {
-            ProdHelpers.Update(_prodId, chkArret.Checked, chkEpuise.Checked, chkCommande.Checked, rienButton.Checked);
-        }
+         private void DoCommander()
+         {
+             ProdHelpers.Update(_prodId, chkArret.Checked, chkEpuise.Checked, chkCommande.Checked, rienButton.Checked);
+         }
 
-        private void family_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void family_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void formel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (taxable.Checked) formel.Checked = true;
-            if (formel.Checked && !taxable.Checked) taxable.Checked = true;
-        }
+         private void formel_CheckedChanged(object sender, EventArgs e)
+         {
+             if (taxable.Checked) formel.Checked = true;
+             if (formel.Checked && !taxable.Checked) taxable.Checked = true;
+         }
 
-        private void mdetail_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void mdetail_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void mExtra_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void mExtra_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void mgros_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void mgros_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void mSpecial_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void mSpecial_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void nom_EditValueChanged(object sender, EventArgs e)
-        {
-            ArticleVerifier();
-        }
+         private void nom_EditValueChanged(object sender, EventArgs e)
+         {
+             ArticleVerifier();
+         }
 
-        private void OperInit()
-        {         
-            cumAchat.Text = _operation.Qachat.ToString();
-            cumVente.Text = _operation.Qvente.ToString();
-            cumDispo.Text = _operation.QStock.ToString();
-            DateAchat.DateTime = (DateTime)_operation.DateAchat;
-            DateVente.DateTime = (DateTime)_operation.DateVente;           
-            D3.Text = _operation.T1;
-            D4.Text = _operation.B1;
-           
-            distObs.Text = _operation.B2;           
-           
-            s1.Text = _operation.S1;
-            if (_duo.Faster == 1)
-            { checkPrior.Checked = true; }
-            else
-            { checkPrior.Checked = false; }
-            /* if (_duo.AEntre == null)
-                 entreNorme.Checked = true;
+         private void OperInit()
+         {         
+             cumAchat.Text = _operation.Qachat.ToString();
+             cumVente.Text = _operation.Qvente.ToString();
+             cumDispo.Text = _operation.QStock.ToString();
+             DateAchat.DateTime = (DateTime)_operation.DateAchat;
+             DateVente.DateTime = (DateTime)_operation.DateVente;           
+             D3.Text = _operation.T1;
+             D4.Text = _operation.B1;
+
+             distObs.Text = _operation.B2;           
+
+             s1.Text = _operation.S1;
+             if (_duo.Faster == 1)
+             { checkPrior.Checked = true; }
              else
-                 _x = _operation.AEntre;*/
-            if (_duo.APrix == null)
+             { checkPrior.Checked = false; }
+             /* if (_duo.AEntre == null)
+                  entreNorme.Checked = true;
+              else
+                  _x = _operation.AEntre;*/
+                if (_duo.APrix == null)
                 prixNorme.Checked = true;
             else
                 _y = (long)_operation.APrix;
@@ -825,9 +826,7 @@ namespace gescom.create.Views
         {
             var item = ProdHelpers.Get(_prodId);
             prodNom.Text = item.Nom;
-            prodRefce.Text = item.Refce;
-            //Q1.Text = item.Quantite.ToString();
-            //prodPrix.Text = item.Prix.ToString();
+         
             P2.Text = item.Prix.ToString();
             prodDesk.Text = item.Description;
             prodRq.Text = item.Rq;
@@ -901,6 +900,14 @@ namespace gescom.create.Views
             model.H1 = H1.Text;
             model.H2 = H2.Text;
             model.H3 = H3.Text;
+            model.E1 = E1.Checked;
+            model.E2 = E2.Checked;
+            model.E3 = E3.Checked;
+            model.E4 = E4.Checked;
+            model.E5 = E5.Checked;
+            model.L5 = L5.Text;
+            model.L6= L6.Text;
+            model.L7 = L7.Text;
             bool res;
             int a=0;
             if (Q1.Text.Length > 0)
@@ -1030,9 +1037,9 @@ namespace gescom.create.Views
             if (!string.IsNullOrEmpty(U4.Text)) { model.U4 = StdCalcul.GetUnityId(U4.Text); }
             if (!string.IsNullOrEmpty(D1.Text)) { model.D1 = D1.DateTime; }
             if (!string.IsNullOrEmpty(D2.Text)) { model.D2 = D2.DateTime; }
-            if (!string.IsNullOrEmpty(D5.Text)) { model.D5 = D5.DateTime; }
-            if (!string.IsNullOrEmpty(D6.Text)) { model.D6 = D6.DateTime; }
-            if (!string.IsNullOrEmpty(D7.Text)) { model.D7 = D7.DateTime; }
+            if (!string.IsNullOrEmpty(D3.Text)) { model.D3 = D3.DateTime; }
+            if (!string.IsNullOrEmpty(D4.Text)) { model.D3 = D3.DateTime; }
+            if (!string.IsNullOrEmpty(D5.Text)) { model.D5 = D5.DateTime; }          
             model.C4 = C4.Checked;
             model.C5 = C5.Checked;
             return GulpHelpers.Update(model);
@@ -1044,6 +1051,11 @@ namespace gescom.create.Views
            C1.Checked = gulp.C1; 
            C2.Checked = gulp.C2;
             C3.Checked = gulp.C3;
+            E1.Checked = gulp.E1;
+            E2.Checked = gulp.E2;
+            E3.Checked = gulp.E3;
+            E4.Checked = gulp.E4;
+            E5.Checked = gulp.E5;
             C4.Checked = gulp.C4;
             C5.Checked = gulp.C5;
             Q1.Text = gulp.Q1.ToString();
@@ -1065,9 +1077,11 @@ namespace gescom.create.Views
             if (gulp.D1 != null) { D1.DateTime = (DateTime)gulp.D1; }
             if (gulp.D2 != null) { D2.DateTime = (DateTime)gulp.D2; }
             if (gulp.D5 != null) { D5.DateTime = (DateTime)gulp.D5; }
-            if (gulp.D6 != null) { D6.DateTime = (DateTime)gulp.D6; }
-            if (gulp.D7 != null) { D7.DateTime = (DateTime)gulp.D7; }
-           
+            if (gulp.D4 != null) { D4.DateTime = (DateTime)gulp.D4; }
+            if (gulp.D3 != null) { D3.DateTime = (DateTime)gulp.D3; }
+            L5.Text = gulp.L5;
+            L6.Text = gulp.L6;
+            L7.Text = gulp.L7;
             SetUnity(ref U2, gulp.U2);
             SetUnity(ref U3, gulp.U3);
             SetUnity(ref U4, gulp.U4);
@@ -1075,12 +1089,22 @@ namespace gescom.create.Views
 
         private void C1_CheckedChanged(object sender, EventArgs e)
         {
-           D1.DateTime = DateTime.Now;
+          
+        }
+
+        private void E1_CheckedChanged(object sender, EventArgs e)
+        {
+            D1.DateTime = DateTime.Now;
         }
 
         private void C2_CheckedChanged(object sender, EventArgs e)
         {
-            D2.DateTime = DateTime.Now; 
+          
+        }
+
+        private void E2_CheckedChanged(object sender, EventArgs e)
+        {
+            D2.DateTime = DateTime.Now;
         }
 
         private void C4_CheckedChanged(object sender, EventArgs e)
@@ -1092,5 +1116,21 @@ namespace gescom.create.Views
         {
             D5.DateTime= DateTime.Now;
         }
+
+        private void E3_CheckedChanged(object sender, EventArgs e)
+        {
+            D3.DateTime = DateTime.Now;
+        }
+
+        private void E4_CheckedChanged(object sender, EventArgs e)
+        {
+            D4.DateTime = DateTime.Now;
+        }
+
+        private void E5_CheckedChanged(object sender, EventArgs e)
+        {
+            D5.DateTime = DateTime.Now;
+        }
     }
+    
 }

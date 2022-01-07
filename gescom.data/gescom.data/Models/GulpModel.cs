@@ -87,6 +87,9 @@ namespace gescom.data.Models
             C1 = item.C1;
             C2 = item.C2;
             C3 = item.C3;
+            E1 = item.E1;
+            E2 = item.E2;
+            E3 = item.E3;
             C4 = item.C4;
             C5 = item.C5;            
             Q1 = item.Q1;
@@ -111,7 +114,10 @@ namespace gescom.data.Models
             L1 = item.L1;
             L2 = item.L2;
             L3 = item.L3;
-            L4 = item.L4;          
+            L4 = item.L4;
+            L5= item.L5;
+            L6 = item.L6;
+            L7= item.L7;
             H1 = item.H1;
             H2 = item.H2;
             H3 = item.H3;

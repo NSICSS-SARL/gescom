@@ -1210,44 +1210,6 @@
       <Column Name="Q5" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.GulpItem" Member="GulpItems">
-    <Type Name="GulpItem">
-      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="C1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="C2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="C3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="C4" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Q1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="Q2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="Q3" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="Q4" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="U2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="U3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="U4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="P2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="P3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="D1" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="D2" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="D3" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="D4" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="L1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="L2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="L3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="L4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="P1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Q5" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="C5" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="H1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="H2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="H3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="H4" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="H6" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="Q6" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="D5" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="D6" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-      <Column Name="D7" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.OperationEntry" Member="OperationEntries">
     <Type Name="OperationEntry">
       <Column Name="Ndx" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
@@ -1348,6 +1310,52 @@
       <Column Name="Q6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="H4" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="H6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GulpItem" Member="GulpItems">
+    <Type Name="GulpItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="C2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="C3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="C4" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Q1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Q2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Q3" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Q4" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="U2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="U3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="U4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="P2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="P3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D1" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="D2" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="D3" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="D4" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="L1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="P1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Q5" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="C5" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="H1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="H2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="H3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="H4" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="H6" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Q6" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="D5" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="D6" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="D7" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="E1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="E2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="E3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="L5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="E4" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="E5" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.OperationItem" Member="OperationItems">
@@ -1480,6 +1488,14 @@
       <Column Name="C2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="C3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="Masquage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="E1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="L5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="L7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="E4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

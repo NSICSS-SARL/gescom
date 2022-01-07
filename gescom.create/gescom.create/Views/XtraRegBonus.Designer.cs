@@ -159,16 +159,19 @@
             this.chkArret = new DevExpress.XtraEditors.CheckEdit();
             this.chkEpuise = new DevExpress.XtraEditors.CheckEdit();
             this.visibleBox = new System.Windows.Forms.GroupBox();
-            this.radioStop = new System.Windows.Forms.RadioButton();
-            this.radioHaute = new System.Windows.Forms.RadioButton();
-            this.radioMoyen = new System.Windows.Forms.RadioButton();
-            this.radioBas = new System.Windows.Forms.RadioButton();
+            this.Liquidat = new System.Windows.Forms.RadioButton();
+            this.maskTotal = new System.Windows.Forms.RadioButton();
+            this.stkMag = new System.Windows.Forms.RadioButton();
+            this.rsBas = new System.Windows.Forms.RadioButton();
             this.groupSuspend = new System.Windows.Forms.GroupBox();
             this.commRS = new System.Windows.Forms.RadioButton();
             this.radioSPD = new System.Windows.Forms.RadioButton();
             this.dangerBtn = new System.Windows.Forms.RadioButton();
             this.Q5 = new System.Windows.Forms.TextBox();
             this.cadreNew = new DevExpress.XtraEditors.PanelControl();
+            this.E5 = new System.Windows.Forms.CheckBox();
+            this.E4 = new System.Windows.Forms.CheckBox();
+            this.D4 = new DevExpress.XtraEditors.DateEdit();
             this.D3 = new DevExpress.XtraEditors.DateEdit();
             this.L7 = new DevExpress.XtraEditors.TextEdit();
             this.E3 = new System.Windows.Forms.CheckBox();
@@ -207,9 +210,6 @@
             this.Q2 = new DevExpress.XtraEditors.TextEdit();
             this.L1 = new DevExpress.XtraEditors.TextEdit();
             this.D1 = new DevExpress.XtraEditors.DateEdit();
-            this.D4 = new DevExpress.XtraEditors.DateEdit();
-            this.E5 = new System.Windows.Forms.CheckBox();
-            this.E4 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tete)).BeginInit();
             this.tete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateVente.Properties.CalendarTimeProperties)).BeginInit();
@@ -275,6 +275,8 @@
             this.groupSuspend.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).BeginInit();
             this.cadreNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D3.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L7.Properties)).BeginInit();
@@ -302,8 +304,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.L1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tete
@@ -1804,10 +1804,10 @@
             // visibleBox
             // 
             this.visibleBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.visibleBox.Controls.Add(this.radioStop);
-            this.visibleBox.Controls.Add(this.radioHaute);
-            this.visibleBox.Controls.Add(this.radioMoyen);
-            this.visibleBox.Controls.Add(this.radioBas);
+            this.visibleBox.Controls.Add(this.Liquidat);
+            this.visibleBox.Controls.Add(this.maskTotal);
+            this.visibleBox.Controls.Add(this.stkMag);
+            this.visibleBox.Controls.Add(this.rsBas);
             this.visibleBox.Location = new System.Drawing.Point(425, 243);
             this.visibleBox.Name = "visibleBox";
             this.visibleBox.Size = new System.Drawing.Size(342, 44);
@@ -1815,51 +1815,51 @@
             this.visibleBox.TabStop = false;
             this.visibleBox.Text = "Invisibilité";
             // 
-            // radioStop
+            // Liquidat
             // 
-            this.radioStop.AutoSize = true;
-            this.radioStop.ForeColor = System.Drawing.Color.MediumBlue;
-            this.radioStop.Location = new System.Drawing.Point(62, 19);
-            this.radioStop.Name = "radioStop";
-            this.radioStop.Size = new System.Drawing.Size(76, 17);
-            this.radioStop.TabIndex = 2;
-            this.radioStop.TabStop = true;
-            this.radioStop.Text = "Liquidation";
-            this.radioStop.UseVisualStyleBackColor = true;
+            this.Liquidat.AutoSize = true;
+            this.Liquidat.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Liquidat.Location = new System.Drawing.Point(62, 19);
+            this.Liquidat.Name = "Liquidat";
+            this.Liquidat.Size = new System.Drawing.Size(76, 17);
+            this.Liquidat.TabIndex = 2;
+            this.Liquidat.TabStop = true;
+            this.Liquidat.Text = "Liquidation";
+            this.Liquidat.UseVisualStyleBackColor = true;
             // 
-            // radioHaute
+            // maskTotal
             // 
-            this.radioHaute.AutoSize = true;
-            this.radioHaute.ForeColor = System.Drawing.Color.Red;
-            this.radioHaute.Location = new System.Drawing.Point(228, 19);
-            this.radioHaute.Name = "radioHaute";
-            this.radioHaute.Size = new System.Drawing.Size(89, 17);
-            this.radioHaute.TabIndex = 3;
-            this.radioHaute.TabStop = true;
-            this.radioHaute.Text = "Masqué Total";
-            this.radioHaute.UseVisualStyleBackColor = true;
+            this.maskTotal.AutoSize = true;
+            this.maskTotal.ForeColor = System.Drawing.Color.Red;
+            this.maskTotal.Location = new System.Drawing.Point(228, 19);
+            this.maskTotal.Name = "maskTotal";
+            this.maskTotal.Size = new System.Drawing.Size(89, 17);
+            this.maskTotal.TabIndex = 3;
+            this.maskTotal.TabStop = true;
+            this.maskTotal.Text = "Masqué Total";
+            this.maskTotal.UseVisualStyleBackColor = true;
             // 
-            // radioMoyen
+            // stkMag
             // 
-            this.radioMoyen.AutoSize = true;
-            this.radioMoyen.Location = new System.Drawing.Point(154, 19);
-            this.radioMoyen.Name = "radioMoyen";
-            this.radioMoyen.Size = new System.Drawing.Size(68, 17);
-            this.radioMoyen.TabIndex = 1;
-            this.radioMoyen.TabStop = true;
-            this.radioMoyen.Text = "STK MAG";
-            this.radioMoyen.UseVisualStyleBackColor = true;
+            this.stkMag.AutoSize = true;
+            this.stkMag.Location = new System.Drawing.Point(154, 19);
+            this.stkMag.Name = "stkMag";
+            this.stkMag.Size = new System.Drawing.Size(68, 17);
+            this.stkMag.TabIndex = 1;
+            this.stkMag.TabStop = true;
+            this.stkMag.Text = "STK MAG";
+            this.stkMag.UseVisualStyleBackColor = true;
             // 
-            // radioBas
+            // rsBas
             // 
-            this.radioBas.AutoSize = true;
-            this.radioBas.Location = new System.Drawing.Point(7, 19);
-            this.radioBas.Name = "radioBas";
-            this.radioBas.Size = new System.Drawing.Size(42, 17);
-            this.radioBas.TabIndex = 0;
-            this.radioBas.TabStop = true;
-            this.radioBas.Text = "R.S";
-            this.radioBas.UseVisualStyleBackColor = true;
+            this.rsBas.AutoSize = true;
+            this.rsBas.Location = new System.Drawing.Point(7, 19);
+            this.rsBas.Name = "rsBas";
+            this.rsBas.Size = new System.Drawing.Size(42, 17);
+            this.rsBas.TabIndex = 0;
+            this.rsBas.TabStop = true;
+            this.rsBas.Text = "R.S";
+            this.rsBas.UseVisualStyleBackColor = true;
             // 
             // groupSuspend
             // 
@@ -1970,6 +1970,44 @@
             this.cadreNew.Name = "cadreNew";
             this.cadreNew.Size = new System.Drawing.Size(1001, 151);
             this.cadreNew.TabIndex = 13;
+            // 
+            // E5
+            // 
+            this.E5.AutoSize = true;
+            this.E5.Location = new System.Drawing.Point(94, 125);
+            this.E5.Name = "E5";
+            this.E5.Size = new System.Drawing.Size(49, 17);
+            this.E5.TabIndex = 62;
+            this.E5.Text = "Date";
+            this.E5.UseVisualStyleBackColor = true;
+            this.E5.CheckedChanged += new System.EventHandler(this.E5_CheckedChanged);
+            // 
+            // E4
+            // 
+            this.E4.AutoSize = true;
+            this.E4.Location = new System.Drawing.Point(94, 102);
+            this.E4.Name = "E4";
+            this.E4.Size = new System.Drawing.Size(49, 17);
+            this.E4.TabIndex = 61;
+            this.E4.Text = "Date";
+            this.E4.UseVisualStyleBackColor = true;
+            this.E4.CheckedChanged += new System.EventHandler(this.E4_CheckedChanged);
+            // 
+            // D4
+            // 
+            this.D4.EditValue = null;
+            this.D4.Enabled = false;
+            this.D4.Location = new System.Drawing.Point(475, 102);
+            this.D4.Name = "D4";
+            this.D4.Properties.AllowFocused = false;
+            this.D4.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.D4.Properties.Appearance.Options.UseForeColor = true;
+            this.D4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.D4.Size = new System.Drawing.Size(90, 20);
+            this.D4.TabIndex = 60;
             // 
             // D3
             // 
@@ -2361,44 +2399,6 @@
             this.D1.Size = new System.Drawing.Size(90, 20);
             this.D1.TabIndex = 15;
             // 
-            // D4
-            // 
-            this.D4.EditValue = null;
-            this.D4.Enabled = false;
-            this.D4.Location = new System.Drawing.Point(475, 102);
-            this.D4.Name = "D4";
-            this.D4.Properties.AllowFocused = false;
-            this.D4.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.D4.Properties.Appearance.Options.UseForeColor = true;
-            this.D4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.D4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.D4.Size = new System.Drawing.Size(90, 20);
-            this.D4.TabIndex = 60;
-            // 
-            // E5
-            // 
-            this.E5.AutoSize = true;
-            this.E5.Location = new System.Drawing.Point(94, 125);
-            this.E5.Name = "E5";
-            this.E5.Size = new System.Drawing.Size(49, 17);
-            this.E5.TabIndex = 62;
-            this.E5.Text = "Date";
-            this.E5.UseVisualStyleBackColor = true;
-            this.E5.CheckedChanged += new System.EventHandler(this.E5_CheckedChanged);
-            // 
-            // E4
-            // 
-            this.E4.AutoSize = true;
-            this.E4.Location = new System.Drawing.Point(94, 102);
-            this.E4.Name = "E4";
-            this.E4.Size = new System.Drawing.Size(49, 17);
-            this.E4.TabIndex = 61;
-            this.E4.Text = "Date";
-            this.E4.UseVisualStyleBackColor = true;
-            this.E4.CheckedChanged += new System.EventHandler(this.E4_CheckedChanged);
-            // 
             // XtraRegBonus
             // 
             this.AcceptButton = this.creer;
@@ -2514,6 +2514,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cadreNew)).EndInit();
             this.cadreNew.ResumeLayout(false);
             this.cadreNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D3.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L7.Properties)).EndInit();
@@ -2541,8 +2543,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.L1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.D4.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2673,10 +2673,10 @@
         private System.Windows.Forms.RadioButton radioPuise;
         private DevExpress.XtraEditors.PanelControl panelAvDern;
         private DevExpress.XtraEditors.CheckEdit chkEpuise;
-        private System.Windows.Forms.RadioButton radioBas;
-        private System.Windows.Forms.RadioButton radioMoyen;
-        private System.Windows.Forms.RadioButton radioHaute;
-        private System.Windows.Forms.RadioButton radioStop;
+        private System.Windows.Forms.RadioButton rsBas;
+        private System.Windows.Forms.RadioButton stkMag;
+        private System.Windows.Forms.RadioButton maskTotal;
+        private System.Windows.Forms.RadioButton Liquidat;
         private System.Windows.Forms.GroupBox visibleBox;
         private DevExpress.XtraEditors.CheckEdit chkArret;
         private DevExpress.XtraEditors.CheckEdit rienButton;

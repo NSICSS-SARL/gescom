@@ -46,7 +46,6 @@
             this.colQ1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQ2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colB2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEnt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridRapide = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colomL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlacer = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,7 +104,6 @@
             this.colQ1,
             this.colQ2,
             this.colB2,
-            this.colEnt,
             this.gridRapide,
             this.colomL,
             this.colPlacer,
@@ -147,7 +145,7 @@
             this.obs.FieldName = "B1";
             this.obs.Name = "obs";
             this.obs.Visible = true;
-            this.obs.VisibleIndex = 7;
+            this.obs.VisibleIndex = 6;
             this.obs.Width = 89;
             // 
             // place
@@ -169,7 +167,7 @@
             this.rmq.FieldName = "S2";
             this.rmq.Name = "rmq";
             this.rmq.Visible = true;
-            this.rmq.VisibleIndex = 19;
+            this.rmq.VisibleIndex = 18;
             this.rmq.Width = 215;
             // 
             // nom
@@ -191,7 +189,7 @@
             this.coliPr.FieldName = "VoirPrix";
             this.coliPr.Name = "coliPr";
             this.coliPr.Visible = true;
-            this.coliPr.VisibleIndex = 16;
+            this.coliPr.VisibleIndex = 15;
             // 
             // prix
             // 
@@ -240,10 +238,14 @@
             // 
             // colQ1
             // 
-            this.colQ1.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.colQ1.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.colQ1.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
             this.colQ1.AppearanceCell.Options.UseBackColor = true;
             this.colQ1.AppearanceCell.Options.UseForeColor = true;
+            this.colQ1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.colQ1.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Critical;
+            this.colQ1.AppearanceHeader.Options.UseBackColor = true;
+            this.colQ1.AppearanceHeader.Options.UseForeColor = true;
             this.colQ1.AppearanceHeader.Options.UseTextOptions = true;
             this.colQ1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colQ1.Caption = "Qté-Arrivage";
@@ -253,13 +255,15 @@
             this.colQ1.Name = "colQ1";
             this.colQ1.OptionsColumn.AllowFocus = false;
             this.colQ1.Visible = true;
-            this.colQ1.VisibleIndex = 9;
+            this.colQ1.VisibleIndex = 8;
             this.colQ1.Width = 79;
             // 
             // colQ2
             // 
-            this.colQ2.AppearanceCell.BackColor = System.Drawing.Color.FloralWhite;
+            this.colQ2.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.colQ2.AppearanceCell.Options.UseBackColor = true;
+            this.colQ2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.colQ2.AppearanceHeader.Options.UseBackColor = true;
             this.colQ2.AppearanceHeader.Options.UseTextOptions = true;
             this.colQ2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colQ2.Caption = "Qté-Interne";
@@ -269,7 +273,7 @@
             this.colQ2.Name = "colQ2";
             this.colQ2.OptionsColumn.AllowFocus = false;
             this.colQ2.Visible = true;
-            this.colQ2.VisibleIndex = 12;
+            this.colQ2.VisibleIndex = 11;
             this.colQ2.Width = 68;
             // 
             // colB2
@@ -280,18 +284,8 @@
             this.colB2.FieldName = "B2";
             this.colB2.Name = "colB2";
             this.colB2.Visible = true;
-            this.colB2.VisibleIndex = 18;
+            this.colB2.VisibleIndex = 17;
             this.colB2.Width = 156;
-            // 
-            // colEnt
-            // 
-            this.colEnt.AppearanceHeader.Options.UseTextOptions = true;
-            this.colEnt.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEnt.Caption = "A ENTRER";
-            this.colEnt.FieldName = "VoirEntre";
-            this.colEnt.Name = "colEnt";
-            this.colEnt.Visible = true;
-            this.colEnt.VisibleIndex = 6;
             // 
             // gridRapide
             // 
@@ -302,23 +296,27 @@
             this.gridRapide.Name = "gridRapide";
             this.gridRapide.OptionsColumn.AllowEdit = false;
             this.gridRapide.Visible = true;
-            this.gridRapide.VisibleIndex = 14;
+            this.gridRapide.VisibleIndex = 13;
             // 
             // colomL
             // 
-            this.colomL.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.colomL.AppearanceCell.BackColor = System.Drawing.Color.Cyan;
             this.colomL.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colomL.AppearanceCell.Options.UseBackColor = true;
             this.colomL.AppearanceCell.Options.UseFont = true;
             this.colomL.AppearanceCell.Options.UseTextOptions = true;
             this.colomL.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colomL.AppearanceHeader.BackColor = System.Drawing.Color.Cyan;
+            this.colomL.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.colomL.AppearanceHeader.Options.UseBackColor = true;
+            this.colomL.AppearanceHeader.Options.UseForeColor = true;
             this.colomL.AppearanceHeader.Options.UseTextOptions = true;
             this.colomL.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colomL.Caption = "Ent Fact.";
             this.colomL.FieldName = "CMD";
             this.colomL.Name = "colomL";
             this.colomL.Visible = true;
-            this.colomL.VisibleIndex = 8;
+            this.colomL.VisibleIndex = 7;
             this.colomL.Width = 64;
             // 
             // colPlacer
@@ -329,7 +327,7 @@
             this.colPlacer.FieldName = "VoirPlace";
             this.colPlacer.Name = "colPlacer";
             this.colPlacer.Visible = true;
-            this.colPlacer.VisibleIndex = 17;
+            this.colPlacer.VisibleIndex = 16;
             // 
             // colVerif
             // 
@@ -339,15 +337,15 @@
             this.colVerif.FieldName = "VoirVerif";
             this.colVerif.Name = "colVerif";
             this.colVerif.Visible = true;
-            this.colVerif.VisibleIndex = 15;
+            this.colVerif.VisibleIndex = 14;
             // 
             // gridC5
             // 
-            this.gridC5.AppearanceCell.BackColor = System.Drawing.Color.FloralWhite;
+            this.gridC5.AppearanceCell.BackColor = System.Drawing.Color.Yellow;
             this.gridC5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridC5.AppearanceCell.Options.UseBackColor = true;
             this.gridC5.AppearanceCell.Options.UseFont = true;
-            this.gridC5.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.gridC5.AppearanceHeader.BackColor = System.Drawing.Color.Yellow;
             this.gridC5.AppearanceHeader.Options.UseBackColor = true;
             this.gridC5.AppearanceHeader.Options.UseTextOptions = true;
             this.gridC5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -355,32 +353,38 @@
             this.gridC5.FieldName = "C5";
             this.gridC5.Name = "gridC5";
             this.gridC5.Visible = true;
-            this.gridC5.VisibleIndex = 11;
+            this.gridC5.VisibleIndex = 10;
             this.gridC5.Width = 67;
             // 
             // colCPtArr
             // 
-            this.colCPtArr.AppearanceCell.BackColor = System.Drawing.Color.LightCyan;
+            this.colCPtArr.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.colCPtArr.AppearanceCell.Options.UseBackColor = true;
+            this.colCPtArr.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.colCPtArr.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.colCPtArr.AppearanceHeader.Options.UseBackColor = true;
+            this.colCPtArr.AppearanceHeader.Options.UseForeColor = true;
             this.colCPtArr.AppearanceHeader.Options.UseTextOptions = true;
             this.colCPtArr.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCPtArr.Caption = "Count-Arr";
             this.colCPtArr.FieldName = "H4";
             this.colCPtArr.Name = "colCPtArr";
             this.colCPtArr.Visible = true;
-            this.colCPtArr.VisibleIndex = 10;
+            this.colCPtArr.VisibleIndex = 9;
             // 
             // colInter
             // 
-            this.colInter.AppearanceCell.BackColor = System.Drawing.Color.FloralWhite;
+            this.colInter.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.colInter.AppearanceCell.Options.UseBackColor = true;
+            this.colInter.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colInter.AppearanceHeader.Options.UseBackColor = true;
             this.colInter.AppearanceHeader.Options.UseTextOptions = true;
             this.colInter.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colInter.Caption = "Count-Inter";
             this.colInter.FieldName = "H6";
             this.colInter.Name = "colInter";
             this.colInter.Visible = true;
-            this.colInter.VisibleIndex = 13;
+            this.colInter.VisibleIndex = 12;
             // 
             // myNum
             // 
@@ -432,7 +436,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colQ2;
         private System.Windows.Forms.ContextMenuStrip clicDroit;
         private DevExpress.XtraGrid.Columns.GridColumn colB2;
-        private DevExpress.XtraGrid.Columns.GridColumn colEnt;
         private DevExpress.XtraGrid.Columns.GridColumn coliPr;
         private System.Windows.Forms.ToolStripMenuItem modifStripMenuItem;
         private System.Windows.Forms.Label myNum;

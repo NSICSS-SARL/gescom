@@ -128,7 +128,7 @@ namespace gescom.data.Models
         {
             var result = new List<OperationModel>();
             var context = new DataGescomDataContext();
-            var liste = context.OperationEntries.ToList().Where(p =>p.L > 0);
+            var liste = context.OperationEntries.ToList().Where(p =>p.L == 0 & p.QStock > 0);
             foreach (var item in liste)
             {
                 

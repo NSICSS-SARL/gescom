@@ -29,7 +29,7 @@ namespace gescom.create.Views
         private long _t;
         private readonly IEnumerable<VendorItem> _vendors;
         private readonly VoirModel _voir;
-        //private long _x = -2;
+     
         private long _y = -2;
 
         //
@@ -58,8 +58,8 @@ namespace gescom.create.Views
             _etatPrix = _voir.VoirPrix;
             _etatEntre = _voir.VoirEntre;          
             DistInit();
-            ArticleInit(id);
             ProdInit();
+            ArticleInit(id);            
             OperInit();
             CheckInit();
             CheckState(id);
@@ -115,7 +115,11 @@ namespace gescom.create.Views
             }
 
             double taux = PriceHelpers.GetTaxe() / 100;
-            if (taxable.Checked)
+            _forme = 0;
+            foreach (var p in _vendors)
+                if (p.Nom == prodVend.Text)
+                    _forme = (long)p.Forme;
+            if (_forme == 1)
             {
                 prGros = (1 + taux) * prGros;
                 prDetail = (1 + taux) * prDetail;
@@ -262,8 +266,7 @@ namespace gescom.create.Views
                 ErrorHelpers.ShowError("Le fournisseur de préférence doit être renseigné.");
                 prodVend.Focus();
                 return false;
-            }
-
+            }           
             if (string.IsNullOrEmpty(QcomEdit.Text))
             {
                 ErrorHelpers.ShowError("La quantité à commander ne peut être nulle.");
@@ -607,33 +610,34 @@ namespace gescom.create.Views
                 var z = (long) _duo.L;
                 if (z > 0)
                 {
-                    if (z == 1) radioStop.Checked = true;
-                    if (z == 2) radioHaute.Checked = true;
+                    if (z == 1) Liquidat.Checked = true;
+                    if (z == 2) maskTotal.Checked = true;
                 }
 
-                if (z == 0) radioMoyen.Checked = true;
+                if (z == 0) stkMag.Checked = true;
             }
             else
             {
-                radioBas.Checked = true;
+                rsBas.Checked = true;
             }
         }
 
         private bool Coder()
         {
-            var code = _articleItem.Code + "-I";
+            string code  = _operation.NewCode; 
             _forme = 0;
             foreach (var p in _vendors)
                 if (p.Nom == prodVend.Text)
                     _forme = (long) p.Forme;
+            var arr = code.Split('-');
             if (_forme == 1)
+            {              
+                    code =arr[0]+ "-T";
+            }
+            else
             {
-                if (taxable.Checked)
-                    code = _articleItem.Code + "-T";
-                 else
-                    code = _articleItem.Code + "-I";
-             }
-
+                code = arr[0] + "-I";
+            }
              _articleItem.CompleteCode = code;
              return _articleRepository.Update();
          }
@@ -770,9 +774,9 @@ namespace gescom.create.Views
 
             //if (entreNorme.Checked) _voir.VoirEntre = false;
             long? z = null;
-            if (radioHaute.Checked) z = 2;
-            if (radioMoyen.Checked) z = 0;
-            if (radioStop.Checked) z = 1;
+            if (maskTotal.Checked) z = 2;
+            if (stkMag.Checked) z = 0;
+            if (Liquidat.Checked) z = 1;
             if (checkPrior.Checked)
             {
                 _t = 1;
@@ -862,6 +866,7 @@ namespace gescom.create.Views
             }
 
             if (count > 0) prodVend.SelectedIndex = index - 1;
+
         }
 
         private void refce_EditValueChanged(object sender, EventArgs e)

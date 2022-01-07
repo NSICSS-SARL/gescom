@@ -166,16 +166,20 @@ namespace gescom.data.Models
             return CashHelpers.Create(model);
         }
 
+        public static long DoErrCount(List<ElementModel> elements)
+        {
+            var diary = new DiaryModel(3);
+            DiaryHelpers.Create(diary);
+            var total = elements.Sum(item => ToDefect(item, diary));
+            var model = new CashModel(diary, total);
+            return CashHelpers.Create(model);
+        }
+
         public static long  DoDestock(List<ElementModel> elements)
         {
-            var diary = new DiaryModel(10, -10);
-            foreach (var elt in elements)
-            {
-                elt.Prix = 0;
-                elt.Pid = -10;                            
-                ToAdd(elt, diary);              
-            }           
+            var diary = new DiaryModel(18, -10);           
             DiaryHelpers.Create(diary);
+            var total = elements.Sum(item => ToDestock(item, diary));
             var model = new CashModel(diary, -10, 0) { Groupe = 10 };
             return CashHelpers.Create(model);
         }
@@ -231,14 +235,7 @@ namespace gescom.data.Models
             return CashHelpers.Create(model);
         }
 
-        public static long DoErrCount(List<ElementModel> elements)
-        {
-            var diary = new DiaryModel(3);
-            DiaryHelpers.Create(diary);
-            var total = elements.Sum(item => ToDefect(item, diary));
-            var model = new CashModel(diary, total);
-            return CashHelpers.Create(model);
-        }
+        
 
         public static long DoReturn(List<ElementModel> elements)
         {
@@ -426,6 +423,14 @@ namespace gescom.data.Models
             return repository.RemoveDefect(model, element);
         }
 
+        private static float ToDestock(ElementModel element, DiaryModel diary)
+        {
+            var model = new ActionModel(diary);
+            var repository = new ExitRepository();
+            model.Prix = 0;
+            return repository.RemoveDestock(model, element);
+        }
+
         private static float ToSell(ElementModel element, DiaryModel diary)
         {
             element.Cid = diary.Pid;
@@ -587,6 +592,11 @@ namespace gescom.data.Models
                 case 17:
                     Tache = "RP";
                     Titre = "PAIE BONUS";
+                    break;
+               
+                case 18:
+                    Tache = "DS";
+                    Titre = "DESTOCKAGE";
                     break;
 
                 default:
@@ -997,8 +1007,8 @@ namespace gescom.data.Models
 
         public void Create(ActionModel model)
         {
-            if (model.Groupe < 0) return;
-            if (model.Groupe > 5) return;
+            if (model.Groupe < 0 & model.Groupe !=18 ) return;
+            if (model.Groupe > 5 & model.Groupe != 18) return;
             var item = new DetailItem();
             item.Copy(model);
             item.Id = Count() + 1;
@@ -1009,8 +1019,14 @@ namespace gescom.data.Models
                 _context.SubmitChanges();
                 return;
             }
-
-            item.QSort = model.Quantite;
+            if (item.Groupe ==18)
+            {
+                item.Montant = 0;
+                item.QEntre = 0;
+                item.Prix = 0;
+               //
+            }
+                item.QSort = model.Quantite;
             Add(item);
             _context.SubmitChanges();
         }
@@ -1189,6 +1205,15 @@ namespace gescom.data.Models
             }
 
             return true;
+        }
+
+        public float Transfert(ActionModel model, ElementModel element)
+        {           
+            element.Prix = 0;            
+            Create(model, element);
+            var moveRepository = new MoveRepository();
+            moveRepository.Create(model, element);          
+            return 0;
         }
 
         public float Add(ActionModel model, ElementModel element)
@@ -1372,11 +1397,21 @@ namespace gescom.data.Models
             // crée la sortie
             Create(model, element);
             // crée le mouvement.
-            var moveRepository = new MoveRepository();
-            var quantite = element.Quantite;
-            element.Quantite = quantite;
+            var moveRepository = new MoveRepository();         
             moveRepository.Create(model, element);
-            return quantite * element.Prix;
+            return element.Quantite * element.Prix;
+        }
+
+       
+        public float RemoveDestock(ActionModel model, ElementModel element)
+        {           
+            ArticleHelpers.Remove(element.Id, element.Quantite);
+            // crée la sortie
+            Create(model, element);
+            // crée le mouvement.
+            var moveRepository = new MoveRepository();             
+            moveRepository.Create(model, element);
+            return 0;
         }
 
         // demande prix.

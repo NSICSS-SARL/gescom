@@ -237,6 +237,10 @@ namespace gescom.create.Views
             txtNom.Text = _item.Designation;
             txtUnite.Text = _item.Unite;
             txtPrix.Text = _item.Px.ToString(CultureInfo.InvariantCulture);
+            if(_item.QStock is null)
+            {
+                _item.QStock = 0;
+            }
             var x = (float)_item.QStock;
             txtStock.Text = x.ToString(CultureInfo.InvariantCulture);
         }

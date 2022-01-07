@@ -141,7 +141,6 @@ namespace gescom.data.Models
             repository.Save();
         }
 
-
         public static void UpdateDuo(long id, string message, float quantite)
         {
             var repository = new DuoRepository();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraReports.UI;
 using gescom.create.Views;
@@ -17,6 +18,17 @@ namespace gescom.create.Models
         {
             var f = new XtraPerson();
             f.ShowDialog();
+        }
+
+        public static void FormatDateDisplay(this DateEdit dateEdit, DateTime? date)
+        {
+            if(date != null)
+            {
+                dateEdit.DateTime = (DateTime)date;
+                dateEdit.Properties.EditMask = "yyyy-MM-dd";
+                dateEdit.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+                dateEdit.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            }
         }
 
         public static void ActionCommande()

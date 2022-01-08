@@ -1079,11 +1079,21 @@ namespace gescom.create.Views
             H6.Text = gulp.H6.ToString();
             P1.Text = gulp.P1.ToString();
             P3.Text = gulp.P3.ToString();
-            if (gulp.D1 != null) { D1.DateTime = (DateTime)gulp.D1; }
-            if (gulp.D2 != null) { D2.DateTime = (DateTime)gulp.D2; }
-            if (gulp.D5 != null) { D5.DateTime = (DateTime)gulp.D5; }
-            if (gulp.D4 != null) { D4.DateTime = (DateTime)gulp.D4; }
-            if (gulp.D3 != null) { D3.DateTime = (DateTime)gulp.D3; }
+            CreateHelpers.FormatDateDisplay(D1, gulp.D1);
+            CreateHelpers.FormatDateDisplay(D2, gulp.D2);
+            CreateHelpers.FormatDateDisplay(D3, gulp.D3);
+            CreateHelpers.FormatDateDisplay(D4, gulp.D4);
+            CreateHelpers.FormatDateDisplay(D5, gulp.D5);
+            /* if (gulp.D1 != null) {
+                 D1.DateTime = (DateTime)gulp.D1;
+                D1.Properties.EditMask = "dd/MM/yyyy";
+                 D1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+                 D1.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+             }
+             if (gulp.D2 != null) { D2.DateTime = (DateTime)gulp.D2; }
+             if (gulp.D5 != null) { D5.DateTime = (DateTime)gulp.D5; }
+             if (gulp.D4 != null) { D4.DateTime = (DateTime)gulp.D4; }
+             if (gulp.D3 != null) { D3.DateTime = (DateTime)gulp.D3; }*/
             L5.Text = gulp.L5;
             L6.Text = gulp.L6;
             L7.Text = gulp.L7;
@@ -1094,22 +1104,24 @@ namespace gescom.create.Views
 
         private void C1_CheckedChanged(object sender, EventArgs e)
         {
-          
+          //
         }
 
         private void E1_CheckedChanged(object sender, EventArgs e)
         {
-            D1.DateTime = DateTime.Now;
+            CreateHelpers.FormatDateDisplay(D1, DateTime.Now);
+            //D1.DateTime = DateTime.Now;
         }
 
         private void C2_CheckedChanged(object sender, EventArgs e)
         {
-          
+          //
         }
 
         private void E2_CheckedChanged(object sender, EventArgs e)
         {
-            D2.DateTime = DateTime.Now;
+            CreateHelpers.FormatDateDisplay(D2, DateTime.Now);           
+            //D2.DateTime = DateTime.Now;
         }
 
         private void C4_CheckedChanged(object sender, EventArgs e)
@@ -1119,22 +1131,25 @@ namespace gescom.create.Views
 
         private void C5_CheckedChanged(object sender, EventArgs e)
         {
-            D5.DateTime= DateTime.Now;
+           //
         }
 
         private void E3_CheckedChanged(object sender, EventArgs e)
         {
-            D3.DateTime = DateTime.Now;
+            CreateHelpers.FormatDateDisplay(D3, DateTime.Now);          
+            //D3.DateTime = DateTime.Now;
         }
 
         private void E4_CheckedChanged(object sender, EventArgs e)
         {
-            D4.DateTime = DateTime.Now;
+            CreateHelpers.FormatDateDisplay(D4, DateTime.Now);          
+            //D4.DateTime = DateTime.Now;
         }
 
         private void E5_CheckedChanged(object sender, EventArgs e)
         {
-            D5.DateTime = DateTime.Now;
+            CreateHelpers.FormatDateDisplay(D5, DateTime.Now);            
+            //D5.DateTime = DateTime.Now;
         }
     }
     
